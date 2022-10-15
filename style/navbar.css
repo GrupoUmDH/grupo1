@@ -1,0 +1,76 @@
+html {
+    background-color: gray;
+    font-size: 1rem;
+
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white; 
+}
+
+header {
+    width: 100%;
+}
+
+#navbar .navlogo {
+    width: 6rem;
+    margin-right: 1rem;
+}
+
+#navbar {
+    background-color: black;
+    padding: .8rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px; 
+
+}
+
+#navbar .paginas > a {
+    padding: 0 2rem 0 0;
+}
+
+#content {
+    display: inline-flex;
+    float: left;
+}
+
+#navbar #content img{
+    width: 2rem;
+    height: 2rem;
+    padding: .3rem;
+}
+
+#content .navbusca {
+    display: flex;
+    align-items: center;
+}
+
+#content .navuser {
+    display: inline-flex;
+    float: left;
+}
+
+#content > div > button {
+    background-color: transparent;
+    border-color: transparent;
+    width: auto;
+}
+
+#content > div > input {
+    background-color: rgb(180, 180, 180);
+    width: 8rem;
+    height:  1.5rem;
+    border-radius: 1.5rem;
+    color: black;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    box-sizing: border-box;
+}
