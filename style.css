@@ -158,5 +158,29 @@ button {
     width: 100%;     
 }
 
+/* CONFIGURAÇÃO CATEGORIAS */
+.categorias {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;         
+}
 
+.categorias .acao {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around; 
+    width: 100%;     
+}
 
+.categorias .guerra {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around; 
+    width: 100%;     
+}
