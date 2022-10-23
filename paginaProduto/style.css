@@ -8,9 +8,12 @@
 
 *{
     background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* CONTEÚDO DO HEADER */
+/* <CONTEÚDO DO HEADER> */
 header{
     display: flex;
     justify-content: center;
@@ -32,8 +35,8 @@ header{
 }
 
 .navlogo{
-    width: 7rem;
-    padding: .5rem 2rem;
+    width: 15rem;
+    padding: 1.5rem 2rem;
 }
 
 .paginas ul{
@@ -126,10 +129,56 @@ header{
     align-items: baseline;
 }
 
-/* CONTEUDO MAIN */
+/* </CONTEÚDO HEADER> */
+
+
+/* <CONTEUDO MAIN> */
+
+/*BANNER */
+
+main > section .content-banner{
+    display: flex;
+}
+
+main > section > .container{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2rem;
+}
+
+.container img{
+    display: flex;
+    width: 70rem;
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* </CONTEÚDO MAIN> */
 
 
 
