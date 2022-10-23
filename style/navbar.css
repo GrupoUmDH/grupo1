@@ -1,7 +1,6 @@
 html {
+    width: 100%;
     background-color: gray;
-    font-size: 1rem;
-
 }
 
 body {
@@ -16,7 +15,7 @@ header {
 }
 
 #navbar .navlogo {
-    width: 6rem;
+    width: 8vh;
     margin-right: 1rem;
 }
 
