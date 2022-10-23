@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
- 
 :root{
     --background-color:#0C0C0C;
     --background-2:#131313;
@@ -75,7 +74,7 @@ header{
     color: white;
     flex-wrap: nowrap;
 }
-
+ 
  
 .content{
     align-items: center;
@@ -112,7 +111,8 @@ header{
     background-color: var(--cores-chaves) ;
     border-radius: 0 10px 10px 0;
     border: none;
-} 
+}
+ 
 .navbusca > button svg{
     display: flex;
     position: relative;
@@ -147,153 +147,19 @@ header{
     align-items: baseline;
 }
  
+/* CONTEUDO MAIN */
  
-/* CONFIGURAÇÃO IMAGEM CENTRAL*/
  
- main{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
- }
 
-.central{
-    width: 70%;
-    display: flex;
-    flex-direction: row;
-}
-
-.central div{
-    width: 100%;
-}
-  
-.central img{
-    width: 100%;
-    border-radius:6rem;
-}
-
- 
-/* CONFIGURAÇÃO OS MAIS POPULARES*/
-.container {
-    justify-content: space-around;
-    align-items: stretch;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: .2rem;    
-}
-.container > h1{
-    text-align: left;
-    justify-content: center;
-}
-.titulos{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-left: 10rem;
-       
-}
-
-.titulos a{
-    text-align: end;
-    flex-direction:row;
-    justify-content: end;
-    margin-top: 2rem;
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: row;
-    align-self: end;
-}
-.populares{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    flex-direction: row;
-    flex-wrap: nowrap;
- }
-
-.populares img{
-    width: 25rem;
-    border-radius: 17px;
-    margin-top: 2rem;
-    align-items: stretch;
-    justify-content: space-between;
-}
-
-/* CONFIGURAÇÃO CONTAINER*/
- 
-h1 {
-    font-family: 'Jost', Arial, Helvetica, sans-serif;
-    color: white;
-    margin:  2rem;
-    font-size: 2rem;
-}
- 
-h1 .container{
-    align-self: flex-start;
-    text-align: center;
-}
- 
-h5 {
-    flex-direction:row;
-    justify-content: end;
-    margin-top: 2rem;
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: row;
-    align-self: end;
-}
- 
-hr {
-    background-color: #B30006;
-    color: red;
-    border: #B30006;
-    width: 100%;
-    display: flex;
-    flex-direction:row;
-    padding: .06rem;
-}
-
-
- 
-.container .filmes-home{
-    align-items: stretch;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content:space-around;
-    width: 100%;  
-    margin-top: 2rem;  
-}
- 
-/* CONFIGURAÇÃO SERIES*/
- 
-.container .series-home{
-    align-items: stretch;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content:space-around;
-    width: 100%;  
-    margin-top: 2rem;    
-}
- 
 /*CONFIGURAÇÃO FOOTER*/
 footer{
     padding-top: 6rem;
     margin-bottom: 4rem;
-    background-color: black;
     font-family: Arial, Helvetica, sans-serif;
     color: red;
-
-}
-
-
  
- 
+} 
+
 /* RESPONSIVE */
  
 @media (max-width: 600px) {
@@ -311,3 +177,5 @@ footer{
  
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) {}
+ 
+
