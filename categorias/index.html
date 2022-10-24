@@ -1,52 +1,128 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/grupo1/categorias/style.css">
-    <script src="https://kit.fontawesome.com/138c897f29.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/categorias/style.css">
     <title>Lumiere</title>
 </head>
-
 <body>
+    <!--CONTEÚDO HEADER/NAVBAR-->
     <header>
-
         <nav id="navbar">
-            <img class="navlogo" src="/grupo1/img/logo.svg" alt="">
+            <img class="navlogo" src="/img/Logo_Lumiere.jpg" alt="">
             <div class="paginas">
             <ul>
-                <img src="/img/Logo_Lumiere.jpg" alt="">
-                <li> <a href="/grupo1/home/index.html">Home</a> </li>
-                <li> <a href="/grupo1/categorias/index.html">Categorias</a> </li>
-                <li> <a href="/grupo1/suporte/index.html">Suporte</a> </li>
-                <li> <a href="/grupo1/sobre-nos/index.html">Sobre Nós</a> </li>
+                <!--<img src="/img/Logo_Lumiere.jpg" alt="">-->
+                <li> <a href="/home/index.html">Home</a> </li>
+                <li> <a href="/categorias/categorias.html">Categorias</a> </li>
+                <li> <a href="/suporte/index.html">Suporte</a> </li>
+                <li> <a href="/sobre-nos/index.html">Sobre Nós</a> </li>
             </ul>
         </div>
 
         <div class="content">
-            <div class="navbusca">
-                <input type="text" name="search" id="search">
-                <a href="">
-                    <img type="button" src="/grupo1/img/ico/busca.png" alt="">
-                </a>
-            </div>
-
+              <form class="column" action="" method="get">
+                    <div class="navbusca">
+                        <input type="text" name="search" id="search">
+                        <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 
+                            457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7
+                            376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1
+                            0 208 0S416 93.1 416 208zM208 352c79.5
+                            0 144-64.5 144-144s-64.5-144-144-144S64
+                            128.5 64 208s64.5 144 144 144z"/></svg></i></button>
+                    </div>
+               </form>
             <div class="navuser">
                <a href="">
-                    <img src="/grupo1/img/ico/carrinho.png" />
+                    <img src="/img/ico/carrinho.png" />
                </a>
                <a href="">
-                    <img src="/grupo1/img/ico/user.png"/>
+                    <img src="/img/ico/user.png"/>
                </a>
             </div>
         </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
+    <!--CONTEÚDO MAIN -->
+    <main>
+        <main>
+            <section class="container">
+                <div class="titulos">
+                    <h1>Ação</h1>              
+                </div>
+    
+                <hr>
+                <section class="filmes-acao">            
+                    <div>
+                        <img src="/img/1.jpg" alt="">
+                        <p>BLACK PANTHER</p>
+                        <span>R$19,90</span>
+                    </div>
+                    <div>
+                        <img src="/img/3.jpg" alt="">
+                        <p>DEADPOOL 2</p>
+                        <span>R$19,90</span>
+                    </div>
+                    <div>
+                        <img src="/img/2.jpg" alt="">
+                        <p>HOMEM ARANHA LONGE DE CASA</p>
+                        <span>R$19,90</span>
+                    </div>
+                </section>
+    
+                <div class="titulos">
+                    <h1>Herói</h1>              
+                </div>
+    
+                <hr>
+                <section class="filmes-heroi">            
+                    <div>
+                        <img src="/img/1.jpg" alt="">
+                        <p>BLACK PANTHER</p>
+                        <span>R$19,90</span>
+                    </div>
+                    <div>
+                        <img src="/img/3.jpg" alt="">
+                        <p>DEADPOOL 2</p>
+                        <span>R$19,90</span>
+                    </div>
+                    <div>
+                        <img src="/img/2.jpg" alt="">
+                        <p>HOMEM ARANHA LONGE DE CASA</p>
+                        <span>R$19,90</span>
+                    </div>
+                </section>
+    
+                <div class="titulos">
+                    <h1>Guerra</h1>              
+                </div>
+    
+                <hr>
+                <section class="filmes-guerra">            
+                    <div>
+                        <img src="/img/1.jpg" alt="">
+                        <p>BLACK PANTHER</p>
+                        <span>R$19,90</span>
+                    </div>
+                    <div>
+                        <img src="/img/3.jpg" alt="">
+                        <p>DEADPOOL 2</p>
+                        <span>R$19,90</span>
+                    </div>
+                    <div>
+                        <img src="/img/2.jpg" alt="">
+                        <p>HOMEM ARANHA LONGE DE CASA</p>
+                        <span>R$19,90</span>
+                    </div>
+                </section>
+            </section>
+        </main>   
+    </main>
 <footer>
-    <p>2022. LUMIERE © TODOS OS DIREITOS RESERVADOS </p>
+    <p> 2022. LUMIERE © TODOS OS DIREITOS RESERVADOS </p>
 </footer>
 </body>
 </html>
