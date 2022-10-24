@@ -31,7 +31,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
 }
  
 body * {
@@ -304,7 +303,6 @@ hr {
 footer{
     padding-top: 6rem;
     margin-bottom: 4rem;
-
     font-family: Arial, Helvetica, sans-serif;
     color: red;
 
