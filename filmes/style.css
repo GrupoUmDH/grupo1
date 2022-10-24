@@ -111,6 +111,60 @@ header{
     align-items: baseline;
 }
 
+ 
+/* CONFIGURAÇÃO IMAGEM CENTRAL*/
+ 
+ /* CONFIGURAÇÃO OS MAIS POPULARES*/
+
+/* CONFIGURAÇÃO CONTAINER*/
+ 
+h1 {
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    color: white;
+    margin:  2rem;
+    font-size: 2rem;
+}
+ 
+h1 .container{
+    align-self: flex-start;
+    text-align: center;
+}
+ 
+h5 {
+    flex-direction:row;
+    justify-content: end;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-self: end;
+}
+ 
+hr {
+    background-color: #B30006;
+    color: red;
+    border: #B30006;
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    padding: .06rem;
+}
+
+
+ 
+.container .filmes-home{
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around;
+    width: 100%;  
+    margin-top: 2rem;  
+}
+ 
+/* CONFIGURAÇÃO SERIES*/
+ 
+
 /*CONFIGURAÇÃO FOOTER*/
 footer{
     padding-top: 6rem;
@@ -119,4 +173,34 @@ footer{
     font-family: Arial, Helvetica, sans-serif;
     color: red;
 
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (max-width: 600px) {
+    .paginas ul{
+        display: none;
+    }
+   }
+ 
+  
+ 
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media (min-width: 768px) {
+   
+  }
+ 
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media (min-width: 992px) {
+    
+  }
 }
