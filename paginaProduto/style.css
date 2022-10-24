@@ -152,7 +152,7 @@ main > section > .container{
     display: flex;
     background-image:
     linear-gradient(180deg, var(--background-color) 1.38%, rgba(5, 5, 5, 0.61) 43.8%, var(--background-color) 101.48%),
-    url('/grupo1/img/homem-aranha-NWH.png');
+    url('/grupo1/img/banners/FILMES/homem-aranha-NWH.png');
     width: 85%;
     height: 45em;
     background-size: cover;
