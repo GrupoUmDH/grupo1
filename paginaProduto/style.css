@@ -1,0 +1,150 @@
+:root{
+    --background-color:#0C0C0C;
+    --background-2:#131313;
+    --cores-chaves:#B30006;
+    --cores-letra:  #FFFFFF;
+    --cores-objetos: #580003;
+}
+
+*{
+    background-color: var(--background-color);
+}
+
+/* CONTEÚDO DO HEADER */
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    font-size: 1.5rem;
+  
+}
+
+
+/* NAVBAR */
+#navbar{
+    height:100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navlogo{
+    width: 7rem;
+    padding: .5rem 2rem;
+}
+
+.paginas ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 3rem;
+    padding: 0;
+    list-style: none;
+
+}
+
+.paginas a{
+    text-decoration: none;
+    font: 1em 'Inter';
+    text-align: center;
+    color: white;
+    flex-wrap: nowrap;
+}
+
+
+.content{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: space-around;
+
+}
+.content a{
+    margin-top: 5px;
+    margin-right: 2rem;
+
+}
+.content img{
+    width: 1.5rem; 
+}
+
+.navbusca{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.navbusca button{
+    display: flex;
+    position: relative;
+    left: -1.7rem;
+    width: 4rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cores-chaves) ;
+    border-radius: 0 10px 10px 0;
+    border: none;
+}
+
+.navbusca > button svg{
+    display: flex;
+    position: relative;
+    width: 1.3rem;
+    font-size: 15px;
+    background-color: var(--cores-chaves);
+    fill: var(--cores-letra);
+
+}
+
+.navbusca > input{
+    background-color: var(--cores-letra);
+    width: 16rem;
+    outline: none;
+    padding: 0 10px;
+    height: 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    color: var(--background-2);
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    position: relative;
+    left: -1rem;
+  
+}
+
+.navuser{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: .8rem;
+    align-items: baseline;
+}
+
+/* CONTEUDO MAIN */
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .paginas ul{
+        display: none;
+    }
+   }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {}
