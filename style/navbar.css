@@ -30,8 +30,22 @@ header {
 
 }
 
-#navbar .paginas > a {
-    padding: 0 2rem 0 0;
+.paginas ul{
+    list-style-type: '';
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 2px´´k] };
+    margin: 2px;
+
+}
+
+.paginas a{
+    text-decoration: none;
+    font: 1em 'Inter';
+    text-align: center;
+    color: white;
+    flex-wrap: nowrap;
 }
 
 #content {
