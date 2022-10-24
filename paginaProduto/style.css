@@ -5,41 +5,16 @@
     --cores-letra:  #FFFFFF;
     --cores-objetos: #580003;
 }
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
- 
-:root{
-    --background-color:#0C0C0C;
-    --background-2:#131313;
-    --cores-chaves:#B30006;
-    --cores-letra:  #FFFFFF;
-    --cores-objetos: #580003;
-}
- 
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--background-color);
 }
- 
-body{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   
-}
- 
-body * {
-    font-family: 'Inter',Arial, Helvetica, sans-serif;
-    font-size: 100%;
-   }
 
-/* CONTEÚDO DO HEADER */
+
+
+/* <CONTEÚDO DO HEADER> */
 header{
     display: flex;
     justify-content: center;
@@ -47,11 +22,13 @@ header{
     flex-direction: row;
     width: 100%;
     font-size: 1.5rem;
-    height:8rem;
-    padding: 0 2rem;
+  
 }
- 
- 
+
+body{
+    background-color: var(--background-color);
+}
+
 /* NAVBAR */
 #navbar{
     height:100%;
@@ -60,11 +37,12 @@ header{
     align-items: center;
     justify-content: space-between;
 }
- 
+
 .navlogo{
-    width: 7rem;
+    width: 15rem;
+    padding: 1.5rem 2rem;
 }
- 
+
 .paginas ul{
     display: flex;
     flex-direction: row;
@@ -72,9 +50,9 @@ header{
     gap: 3rem;
     padding: 0;
     list-style: none;
- 
+
 }
- 
+
 .paginas a{
     text-decoration: none;
     font: 1em 'Inter';
@@ -83,7 +61,7 @@ header{
     flex-wrap: nowrap;
 }
 
- 
+
 .content{
     align-items: center;
     display: flex;
@@ -91,23 +69,23 @@ header{
     flex-wrap: nowrap;
     gap: 1rem;
     justify-content: space-around;
- 
+
 }
 .content a{
     margin-top: 5px;
     margin-right: 2rem;
- 
+
 }
 .content img{
-    width: 1.5rem;
+    width: 1.5rem; 
 }
- 
+
 .navbusca{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
- 
+
 .navbusca button{
     display: flex;
     position: relative;
@@ -119,7 +97,8 @@ header{
     background-color: var(--cores-chaves) ;
     border-radius: 0 10px 10px 0;
     border: none;
-} 
+}
+
 .navbusca > button svg{
     display: flex;
     position: relative;
@@ -127,9 +106,9 @@ header{
     font-size: 15px;
     background-color: var(--cores-chaves);
     fill: var(--cores-letra);
- 
+
 }
- 
+
 .navbusca > input{
     background-color: var(--cores-letra);
     width: 16rem;
@@ -143,9 +122,9 @@ header{
     box-sizing: border-box;
     position: relative;
     left: -1rem;
- 
+  
 }
- 
+
 .navuser{
     display: flex;
     flex-direction: row;
@@ -153,69 +132,113 @@ header{
     gap: .8rem;
     align-items: baseline;
 }
- /* CONFIGURAÇÃO CONTAINER*/
- 
-h1 {
-    font-family: 'Jost', Arial, Helvetica, sans-serif;
-    color:var( --cores-chaves) ;
-    margin:  2rem;
-    font-size: 2rem;
+
+/* </CONTEÚDO HEADER> */
+
+
+/* <CONTEUDO MAIN> */
+
+/*BANNER */
+
+main > section .content-banner{
+    display: flex;
 }
- 
-h1 .container{
-    align-self: flex-start;
-    text-align: center;
-}
- 
-p{
-    color: var(--cores-letra);
-    text-align: justify;
+
+main > section > .container{
+    display: flex;
     justify-content: center;
-    display: flex;
-    flex-direction: row;
+    padding-top: 3rem;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
-    box-sizing: border-box;
-    margin: 2rem;
-    
 
 }
 
-
-hr {
-    background-color: #B30006;
-    color: red;
-    border: #B30006;
-    width: 100%;
+.banner {
     display: flex;
-    flex-direction:row;
-    padding: .06rem;
-}
-/*CONFIGURAÇÃO FOOTER*/
-footer{
-    padding-top: 6rem;
-    margin-bottom: 4rem;
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
+    justify-content: flex-start;
+    background-image:
+    linear-gradient(180deg, var(--background-color) 1.38%, rgba(5, 5, 5, 0.61) 43.8%, var(--background-color) 101.48%),
+    url('/grupo1/img/banners/FILMES/homem-aranha-NWH.png');
+    width: 85%;
+    height: 45em;
+    background-size: cover;
 
 }
 
+.banner > .descricao-container{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
 
- 
+.banner > .descricao-container > div:first-child {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.banner > .descricao-container > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--cores-letra);
+    margin-top: 2rem;
+    padding-right: 5rem;
+}
+
+/* CAPA FILME */
+
+section img.cover-filme{
+    display: flex;
+    width: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* </CONTEÚDO MAIN> */
+
+
+
+
+
 /* RESPONSIVE */
- 
+
 @media (max-width: 600px) {
     .paginas ul{
         display: none;
     }
-    .navlogo{
-        width: 7rem;
-        padding: .5rem 2rem;
-    }
    }
- 
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) {}
- 
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) {}
