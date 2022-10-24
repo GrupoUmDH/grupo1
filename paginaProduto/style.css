@@ -13,6 +13,8 @@
     box-sizing: border-box;
 }
 
+
+
 /* <CONTEÚDO DO HEADER> */
 header{
     display: flex;
@@ -143,13 +145,21 @@ main > section .content-banner{
 main > section > .container{
     display: flex;
     justify-content: flex-end;
-    padding-top: 2rem;
+    padding-top: 3rem;
 }
 
-.container img{
+.banner {
     display: flex;
-    width: 70rem;
+    background-image:
+    linear-gradient(180deg, var(--background-color) 1.38%, rgba(5, 5, 5, 0.61) 43.8%, var(--background-color) 101.48%),
+    url('/grupo1/img/homem-aranha-NWH.png');
+    width: 85%;
+    height: 45em;
+    background-size: cover;
+
 }
+
+
 
 
 
