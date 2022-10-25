@@ -208,6 +208,24 @@ main > section > .container{
     padding-right: 5rem;
 }
 
+.banner > .descricao-container > div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 19.3rem;
+    align-items: flex-start;
+    
+
+}
+
+
+
+.classificacao{
+   display: flex;
+   background-image: url(/img/classificação-indicativa/SELO\ +12.png);
+   background-size: cover;
+    width: 90px;
+    height: 90px;
+}
 
 
 
