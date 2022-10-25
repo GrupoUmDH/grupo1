@@ -146,10 +146,10 @@ main > section .content-banner{
 
 main > section > .container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     padding-top: 3rem;
     flex-direction: column;
-    align-items: center;
+    align-items:flex-end;
 
 }
 
@@ -158,24 +158,42 @@ main > section > .container{
     justify-content: flex-start;
     background-image:
     linear-gradient(180deg, var(--background-color) 1.38%, rgba(5, 5, 5, 0.61) 43.8%, var(--background-color) 101.48%),
-    url('/grupo1/img/banners/FILMES/homem-aranha-NWH.png');
-    width: 85%;
-    height: 45em;
+    url('/img/banners/FILMES/homem-aranha-NWH.png');
+    width: 94%;
+    height: 20%;
     background-size: cover;
 
+}
+
+.banner img{
+    position: relative;
+    width: 35%;
+    display: flex;
 }
 
 .banner > .descricao-container{
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    flex-grow: 2;
+    flex-grow: 3;
 }
 
 .banner > .descricao-container > div:first-child {
     display: flex;
     justify-content: flex-end;
-    margin-top: 2rem;
+    
+}
+
+.descricao-container button{
+    color: white;
+    background-color: var(--cores-chaves);
+    border: none;
+    border-radius: 10px;
+    width: 23.4%;
+    height: 120%;
+    font-size: 1.11rem;
+    cursor: pointer;
+    
 }
 
 .banner > .descricao-container > div:nth-child(2) {
@@ -185,13 +203,6 @@ main > section > .container{
     color: var(--cores-letra);
     margin-top: 2rem;
     padding-right: 5rem;
-}
-
-/* CAPA FILME */
-
-section img.cover-filme{
-    display: flex;
-    width: 30%;
 }
 
 
