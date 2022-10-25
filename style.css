@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body * {
+    font-family: Arial, Helvetica, sans-serif;
+    flex-flow: column;
+    align-items: center;
+    font-size: 100%;
+    color: #B30006;
+}
+
+footer{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    text-align: center;
+    font-size: 80%;
+}
+
+/* CONFIGURAÇÃO CABEÇALHO*/
+
+header {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 100px;
+    background-color: rgb(0, 0, 0);
+}
+
+header nav {
+    display: flex;
+    align-items: stretch;
+}
+
+header nav ul {
+    display: flex;
+    flex-flow: row;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #B30006;
+    display: block;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60%;  
+}
+
+.logo {
+    
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    width: 5rem;
+}
+
+button {
+    
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    
+    cursor: pointer;
+    border-radius: 1px 10px 10px 2px;
+    width: 50px;
+}
+
+.buscar {
+    
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    border-radius: 10px 1px 1px 10px;
+    width: 200px;
+}
+
+.fa-user {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    color: #B30006;
+}
+
+.fa-cart-shopping {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    color: #B30006;
+}
+
+/* CONFIGURAÇÃO IMAGEM CENTRAL*/
+
+.central img {
+    padding: 10px;
+    border-radius: 17px;
+    display: flex;
+    max-width: 70%;
+  }
+ 
+/* CONFIGURAÇÃO OS MAIS POPULARES*/
+
+.container {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;      
+}
+
+.container .populares img{
+    width: 20%;     
+}
+
+/* CONFIGURAÇÃO CONTAINER*/
+
+
+.container .filmes-home{
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around; 
+    width: 100%;     
+}
+
+/* CONFIGURAÇÃO SERIES*/
+
+
+.container .series-home{
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around; 
+    width: 100%;     
+}
+
+/* CONFIGURAÇÃO CATEGORIAS */
+.categorias {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;         
+}
+
+.categorias .acao {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around; 
+    width: 100%;     
+}
+
+.categorias .guerra {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around; 
+    width: 100%;     
+}
