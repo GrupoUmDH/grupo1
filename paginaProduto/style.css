@@ -7,10 +7,14 @@
 }
 
 *{
-    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* CONTEÚDO DO HEADER */
+
+
+/* <CONTEÚDO DO HEADER> */
 header{
     display: flex;
     justify-content: center;
@@ -21,6 +25,9 @@ header{
   
 }
 
+body{
+    background-color: var(--background-color);
+}
 
 /* NAVBAR */
 #navbar{
@@ -32,8 +39,8 @@ header{
 }
 
 .navlogo{
-    width: 7rem;
-    padding: .5rem 2rem;
+    width: 15rem;
+    padding: 1.5rem 2rem;
 }
 
 .paginas ul{
@@ -126,10 +133,97 @@ header{
     align-items: baseline;
 }
 
-/* CONTEUDO MAIN */
+/* </CONTEÚDO HEADER> */
+
+
+/* <CONTEUDO MAIN> */
+
+/*BANNER */
+
+main > section .content-banner{
+    display: flex;
+}
+
+main > section > .container{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.banner {
+    display: flex;
+    justify-content: flex-start;
+    background-image:
+    linear-gradient(180deg, var(--background-color) 1.38%, rgba(5, 5, 5, 0.61) 43.8%, var(--background-color) 101.48%),
+    url('/grupo1/img/banners/FILMES/homem-aranha-NWH.png');
+    width: 85%;
+    height: 45em;
+    background-size: cover;
+
+}
+
+.banner > .descricao-container{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+.banner > .descricao-container > div:first-child {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.banner > .descricao-container > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--cores-letra);
+    margin-top: 2rem;
+    padding-right: 5rem;
+}
+
+/* CAPA FILME */
+
+section img.cover-filme{
+    display: flex;
+    width: 30%;
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* </CONTEÚDO MAIN> */
 
 
 
