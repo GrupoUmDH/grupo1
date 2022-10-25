@@ -154,11 +154,19 @@ header{
 
 /* CONFIGURAÇÃO CONTAINER*/
  
-.container h1 {
+h1{
+    border: 0.1rem;
+    margin: none;
     justify-content: center;
     align-self:center;
     text-align: center;
-    margin: 1px;
+}
+.container  h1 {
+    justify-content: center;
+    align-self:center;
+    text-align: center;
+    margin: none;
+    border: .1rem;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     font-size: 2rem;
 }
