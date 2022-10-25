@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
- 
+:root{
+    --background-color:#0C0C0C;
+    --background-2:#131313;
+    --cores-chaves:#B30006;
+    --cores-letra:  #FFFFFF;
+    --cores-objetos: #580003;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -173,7 +182,7 @@ footer{
     font-family: Arial, Helvetica, sans-serif;
     color: red;
 
-
+}
 
 
 
@@ -185,22 +194,25 @@ footer{
 
  
  
-/* Small devices (portrait tablets and large phones, 600px and up) */
+ 
+/* RESPONSIVE */
+ 
 @media (max-width: 600px) {
     .paginas ul{
         display: none;
     }
+    .navlogo{
+        width: 7rem;
+        padding: .5rem 2rem;
+    }
    }
  
-  
- 
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media (min-width: 768px) {
-   
-  }
- 
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media (min-width: 992px) {
-    
-  }
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+    .paginas ul{
+         font-size: 1rem;
+    }
 }
+ 
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {}

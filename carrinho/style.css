@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
- 
 :root{
     --background-color:#0C0C0C;
     --background-2:#131313;
@@ -65,7 +64,6 @@ header{
     gap: 3rem;
     padding: 0;
     list-style: none;
- 
 }
  
 .paginas a{
@@ -75,7 +73,7 @@ header{
     color: white;
     flex-wrap: nowrap;
 }
-
+ 
  
 .content{
     align-items: center;
@@ -112,7 +110,8 @@ header{
     background-color: var(--cores-chaves) ;
     border-radius: 0 10px 10px 0;
     border: none;
-} 
+}
+ 
 .navbusca > button svg{
     display: flex;
     position: relative;
@@ -146,54 +145,19 @@ header{
     gap: .8rem;
     align-items: baseline;
 }
- /* CONFIGURAÇÃO CONTAINER*/
  
-h1 {
-    font-family: 'Jost', Arial, Helvetica, sans-serif;
-    color:var( --cores-chaves) ;
-    margin:  2rem;
-    font-size: 2rem;
-}
+/* CONTEUDO MAIN */
  
-h1 .container{
-    align-self: flex-start;
-    text-align: center;
-}
  
-p{
-    color: var(--cores-letra);
-    text-align: justify;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
-    box-sizing: border-box;
-    margin: 2rem;
-    
 
-}
-
-
-hr {
-    background-color: #B30006;
-    color: red;
-    border: #B30006;
-    width: 100%;
-    display: flex;
-    flex-direction:row;
-    padding: .06rem;
-}
 /*CONFIGURAÇÃO FOOTER*/
 footer{
     padding-top: 6rem;
     margin-bottom: 4rem;
     font-family: Arial, Helvetica, sans-serif;
     color: red;
-
-}
-
-
+ 
+} 
 
  
 /* RESPONSIVE */
