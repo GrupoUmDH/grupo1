@@ -192,6 +192,7 @@ span{
     background-color: var(--cores-letra);
     display: block;
     border: 2px;
+    cursor: pointer;
 }
 
 /*CONFIGURAÇÃO FOOTER*/
