@@ -8,5 +8,4 @@ Anna Paula Pedrussi
 Davi de Siqueira Silva
 Lucas Afonso
 Mateus Dias
-Silvano Augusto Pereira
 Vagner Bezerra

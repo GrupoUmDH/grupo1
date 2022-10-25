@@ -156,14 +156,50 @@ hr {
     flex-direction:row;
     padding: .06rem;
 }
+
+/* CONFIGURAÇÃO MAIN*/
+
+h1{
+    color: var(--cores-letra);
+}
+
+h2{
+    color: var(--cores-chaves);
+}
+
+span{
+    margin-top: 2rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--cores-chaves);
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'American Captain',Arial, Helvetica, sans-serif ;
+}
  
+.perguntas input{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 2rem;
+    width: 30rem;
+    margin: 2rem;
+    color: var(--cores-letra);
+    background-color: var(--cores-letra);
+    display: block;
+    border: 2px;
+}
+
 /*CONFIGURAÇÃO FOOTER*/
 footer{
-    padding-top: 6rem;
+    padding-top: 1rem;
     margin-bottom: 4rem;
-
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
+    font-family:'Inter' Arial, Helvetica, sans-serif;
+    color: var(--cores-chaves);
 
 }
 

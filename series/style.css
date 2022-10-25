@@ -154,21 +154,15 @@ header{
 
 /* CONFIGURAÇÃO CONTAINER*/
  
-h1{
-    border: 0.1rem;
-    margin: none;
-    justify-content: center;
-    align-self:center;
-    text-align: center;
-}
-.container  h1 {
-    justify-content: center;
-    align-self:center;
-    text-align: center;
-    margin: none;
-    border: .1rem;
+h1{ 
     font-family: 'Jost', Arial, Helvetica, sans-serif;
+    color: var(--cores-letra) ;
+    margin:  2rem;
     font-size: 2rem;
+}
+h1 .container{
+    align-self: flex-start;
+    text-align: center;
 }
  
 h5 {
@@ -182,9 +176,9 @@ h5 {
 }
  
 hr {
-    background-color: #B30006;
+    background-color: var(--cores-chaves);
     color:var(--cores-chaves);
-    border: #B30006;
+    border:var(--cores-chaves);
     width: 100%;
     display: flex;
     flex-direction:row;
@@ -204,14 +198,22 @@ hr {
     width: 100%;  
     margin-top: 2rem;
 }
- 
+
+.series-home> span{
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around;
+    margin-top: 2rem;
+    text-align: center;
+}
 /*CONFIGURAÇÃO FOOTER*/
 footer{
-    padding-top: 6rem;
+    padding-top: 1rem;
     margin-bottom: 4rem;
-    background-color: black;
-    font-family:'Inter', Arial, Helvetica, sans-serif;
-    color:var(--cores-chaves) ;
+    font-family:'Inter' Arial, Helvetica, sans-serif;
+    color: var(--cores-chaves);
 
 }
 
