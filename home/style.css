@@ -134,6 +134,7 @@ header{
     box-sizing: border-box;
     position: relative;
     left: -1rem;
+    display: block;
  
 }
  
@@ -160,7 +161,6 @@ main{
 .central{
     width: 50%;
     height: 50%;
-    
     flex-direction: row;   
 }
 
@@ -178,6 +178,7 @@ main{
     position: relative;
     left:-0px;
     animation: slide 20s infinite ease-out;   
+   
 }
 
 @keyframes slide{
@@ -188,7 +189,7 @@ main{
     100% { left: 0px}
 }
 
-/* CONFIGURAÇÃO POPULARES*/
+/* CONFIGURAÇÃO SLIDE POPULARES*/
 
 .caixa-filmes .mais-visitados{
     height: 350px;
@@ -224,12 +225,18 @@ main{
     border-radius: 10px;
 }
 
+.slides >input{
+    display:none;
+}
+
 .navigation{
     display: flex;
     position: absolute;
-    bottom: -300px;
-    left: 50px;
-    transform: translate(580px);
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 1rem;
 }
 
 .bar{
@@ -246,9 +253,7 @@ main{
     background-color: white;
 }
 
-input{
-    display: none;
-} 
+
 /* CONFIGURAÇÃO OS MAIS POPULARES*/
 .container {
     justify-content: space-around;
@@ -268,20 +273,17 @@ input{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-left: 10rem;
-       
+    margin-left: 10rem;   
 }
 
-.titulos a{
-    text-align: end;
-    flex-direction:row;
-    justify-content: end;
-    margin-top: 2rem;
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: row;
-    align-self: end;
+.titulos  a{    
+    color: var(--cores-letra);
+  margin-right: 10rem;
+ margin-top: 4.5rem;
+ margin-bottom: .2rem;
+
 }
+
 .populares{
     width: 100%;
     display: grid;
@@ -349,6 +351,16 @@ hr {
     width: 15rem;
 }
  
+.filmes-home p {
+    text-align: center;
+    color: var(--cores-letra);
+}
+
+
+.filmes-home span{
+    color: var(--cores-letra);
+
+}
 /* CONFIGURAÇÃO SERIES*/
  
 .container .series-home{
@@ -364,6 +376,18 @@ hr {
 
 .series-home img{
     width: 15rem;
+}
+
+
+.series-home p {
+    text-align: center;
+    color: var(--cores-letra);
+}
+
+
+.series-home span{
+    color: var(--cores-letra);
+
 }
  
 /*CONFIGURAÇÃO FOOTER*/
@@ -391,7 +415,11 @@ footer{
    }
  
 /* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .paginas ul{
+         font-size: 1rem;
+    }
+}
  
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) {}

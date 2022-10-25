@@ -225,6 +225,7 @@ footer{
  
 } 
 
+ 
 /* RESPONSIVE */
  
 @media (max-width: 600px) {
@@ -238,9 +239,11 @@ footer{
    }
  
 /* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .paginas ul{
+         font-size: 1rem;
+    }
+}
  
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) {}
- 
-
