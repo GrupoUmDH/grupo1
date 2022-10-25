@@ -1,3 +1,11 @@
+:root{
+    --background-color:#0C0C0C;
+    --background-2:#131313;
+    --cores-chaves:#B30006;
+    --cores-letra:  #FFFFFF;
+    --cores-objetos: #580003;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
@@ -118,7 +126,6 @@ header{
 /* CONFIGURAÇÃO OS MAIS POPULARES*/
 
 /* CONFIGURAÇÃO CONTAINER*/
- 
 h1 {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     color: white;
