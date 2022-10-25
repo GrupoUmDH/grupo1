@@ -179,7 +179,7 @@ span{
     font-family: 'American Captain',Arial, Helvetica, sans-serif ;
 }
  
-.perguntas input{
+.perguntas > input{
     display: flex;
     text-align: center;
     align-items: center;
