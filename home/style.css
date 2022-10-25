@@ -44,6 +44,7 @@ header{
   
 }
 
+/* NAVBAR */
 #navbar{
     height:100%;
     width: 100%;
@@ -54,6 +55,7 @@ header{
 
 .navlogo{
     width: 7rem;
+    padding: .5rem 2rem;
 }
 
 .paginas ul{
@@ -86,9 +88,11 @@ header{
 }
 .content a{
     margin-top: 5px;
+    margin-right: 2rem;
+
 }
 .content img{
-    width: 1.5rem;  
+    width: 1.5rem; 
 }
 
 .navbusca{
@@ -96,16 +100,44 @@ header{
     flex-direction: row;
     flex-wrap: nowrap;
 }
+
+.navbusca button{
+    display: flex;
+    position: relative;
+    left: -1.7rem;
+    width: 4rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cores-chaves) ;
+    border-radius: 0 10px 10px 0;
+    border: none;
+}
+
+.navbusca > button svg{
+    display: flex;
+    position: relative;
+    width: 1.3rem;
+    font-size: 15px;
+    background-color: var(--cores-chaves);
+    fill: var(--cores-letra);
+
+}
+
 .navbusca > input{
-    background-color: gray;
-    width: 10rem;
+    background-color: var(--cores-letra);
+    width: 16rem;
+    outline: none;
+    padding: 0 10px;
     height: 1.5rem;
-    border-radius: 1.5rem;
-    color: black;
+    border: none;
+    border-radius: 1rem;
+    color: var(--background-2);
     font-size: 1.2rem;
     box-sizing: border-box;
     position: relative;
-   left: -1rem;
+    left: -1rem;
+    display: block;
   
 }
 
