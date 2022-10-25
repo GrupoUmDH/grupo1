@@ -141,6 +141,11 @@ body{
 
 /* <CONTEUDO MAIN> */
 
+main{
+    display: flex;
+    flex-direction: column;
+}
+
 /*BANNER */
 
 main > section .content-banner{
@@ -162,15 +167,15 @@ main > section > .container{
     background-image:
     linear-gradient(180deg, var(--background-color) 1.38%, rgba(5, 5, 5, 0.61) 43.8%, var(--background-color) 101.48%),
     url('/img/banners/FILMES/homem-aranha-NWH.png');
-    width: 94%;
-    height: 20%;
     background-size: cover;
+    width: 100%;
 
 }
 
 .banner img{
     position: relative;
-    width: 35%;
+    width: 34%;
+    padding: 3%;
     display: flex;
 }
 
@@ -187,7 +192,7 @@ main > section > .container{
     
 }
 
-.descricao-container button{
+.descricao-container > div:first-child button{
     color: white;
     background-color: var(--cores-chaves);
     border: none;
@@ -208,24 +213,101 @@ main > section > .container{
     padding-right: 5rem;
 }
 
+.genero :first-of-type{
+    color: var(--cores-chaves);
+    font-weight: 600;
+    margin-right: 3%;
+}
+
+/* CLASSIFICAÇÃO INDICATIVA */
+
 .banner > .descricao-container > div:nth-child(3) {
     display: flex;
-    flex-direction: column;
-    margin-top: 19.3rem;
-    align-items: flex-start;
-    
-
+    flex-direction: row;
+    margin-top: 30%;
+    align-items: flex-end;
+    width: 100%;
 }
 
+/* BOTÕES ASSISTIR\COMPRAR\ALUGAR */
 
+.botoes-compra{
+    display: flex;
+    width: 100%;
+    margin-right: 3%;
+    justify-content: flex-end;
+    flex-direction: row;
+    color: var(--cores-letra);
+    text-align: center;
+    gap: 5rem;
+}
 
-.classificacao{
+.botoes-compra button{
    display: flex;
-   background-image: url(/img/classificação-indicativa/SELO\ +12.png);
-   background-size: cover;
-    width: 90px;
-    height: 90px;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.2rem;
+   background-color: var(--cores-objetos);
+   color: var(--cores-letra);
+   border: none;
+   border-radius: 10px;
+   width: 150%;
+   height: 100%;
+   cursor: pointer;
 }
+.botoes-compra p{
+   display: flex;
+   font-size: 1rem;
+   right: -11%;
+   position: relative;
+}
+
+
+/* FAIXAS IMDB */
+
+.imdb{
+    display: flex;
+    width: 100%;
+    height: 10rem;
+}
+section .faixas{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+section .faixas .f1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--cores-letra);
+    background-color: var(--cores-chaves);
+    margin-left: 3%;
+    border-radius: 10%;
+    width: 19%;
+    height: 80%;
+    box-shadow: 10px 5px 30px -1px var(--background-color);
+    z-index: 1;
+
+
+}
+
+section .faixas .f2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--cores-letra);
+    background-color: var(--cores-chaves);
+    width: 100%;
+    height: 60%;
+}
+
+
 
 
 
