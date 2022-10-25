@@ -340,7 +340,14 @@ section .faixas .f2{
 /* </CONTEÚDO MAIN> */
 
 
+/*CONFIGURAÇÃO FOOTER*/
+footer{
+    padding-top: 1rem;
+    margin-bottom: 4rem;
+    font-family:'Inter' Arial, Helvetica, sans-serif;
+    color: var(--cores-chaves);
 
+}
 
  
 /* RESPONSIVE */

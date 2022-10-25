@@ -186,10 +186,10 @@ hr {
 }
 /*CONFIGURAÇÃO FOOTER*/
 footer{
-    padding-top: 6rem;
+    padding-top: 1rem;
     margin-bottom: 4rem;
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
+    font-family:'Inter' Arial, Helvetica, sans-serif;
+    color: var(--cores-chaves);
 
 }
 
