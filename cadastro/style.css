@@ -218,73 +218,75 @@ label{
     justify-content: center;
     border-radius: 10px;
     color: #FFFFFF;
-    background-color: #B30006;
+    border: var(--cores-chaves);
+    background-color: var(--cores-chaves);
     width: 15rem;
     height: 2.5rem;
     margin-bottom: 5rem;
 
-} */
+} 
 
-
+ 
 hr {
-    background-color: #B30006;
-    color: red;
-    border: #B30006;
+    background-color: var(--cores-chaves);
+    color: var(--cores-chaves);
+    border: var(--cores-chaves);
     width: 100%;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     padding: .06rem;
 }
 
 /*CONFIGURAÇÃO FOOTER*/
-footer{
+footer {
     padding-top: 1rem;
     margin-bottom: 4rem;
-    font-family:'Inter' Arial, Helvetica, sans-serif;
+    font-family: 'Inter' Arial, Helvetica, sans-serif;
     color: var(--cores-chaves);
 
 }
- 
+
 /* RESPONSIVE */
- 
+
 @media (max-width: 600px) {
-    .paginas ul{
+    .paginas ul {
         display: none;
     }
 
-    .navbusca input{
+    .navbusca input {
         display: none;
     }
 
-    .navbusca button{
+    .navbusca button {
         border-radius: 50rem;
     }
 
-    .navlogo{
+    .navlogo {
         width: 7rem;
         padding: .5rem 2rem;
     }
 
-    .mais-populares{
+    .mais-populares {
         font-size: 1.7rem;
     }
 
-    .titulos h1{
+    .titulos h1 {
         font-size: 1.7rem;
     }
 }
 
 @media (max-width: 602px) {
-    
-    .paginas ul{
+
+    .paginas ul {
         font-size: .9rem;
         padding-left: 1rem;
     }
-    .navbusca{
+
+    .navbusca {
         padding-left: 1.5rem;
     }
 
-    .navbusca input{
+    .navbusca input {
         width: 10rem;
     }
 
