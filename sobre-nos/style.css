@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 :root{
     --background-color:#0C0C0C;
     --background-2:#131313;
@@ -5,8 +8,6 @@
     --cores-letra:  #FFFFFF;
     --cores-objetos: #580003;
 }
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 
 * {
@@ -163,6 +164,7 @@ header {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     color: red;
     font-size: 2rem;
+    margin: 2rem;
     
 }
 .quem-somos> p {
@@ -171,27 +173,54 @@ header {
     position: relative;
     justify-content: center;
     width: 0 auto;
-   
-
-    /* display: flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
-    max-width: 80%;
-    
-    
-   
-    border-right: 0; */
-
+    margin: 2rem;
 
 }
 
+hr {
+    background-color: var(--cores-chaves);
+    color: var(--cores-chaves);
+    border: var(--cores-chaves);
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    padding: .06rem;
+}
+
+  
 /*CONFIGURAÇÃO FOOTER*/
-footer {
-    padding-top: 6rem;
+footer{
+    padding-top: 1rem;
     margin-bottom: 4rem;
-    background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
+    font-family:'Inter' Arial, Helvetica, sans-serif;
+    color: var(--cores-chaves);
 
 }
+
+
+ 
+ 
+/* RESPONSIVE */
+ 
+@media (max-width: 600px) {
+    .paginas ul{
+        display: none;
+    }
+    .navlogo{
+        width: 7rem;
+        padding: .5rem 2rem;
+    }
+   }
+ 
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+    .paginas ul{
+         font-size: 1rem;
+    }
+}
+ 
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {}
