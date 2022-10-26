@@ -40,11 +40,13 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-
+ 
 .navlogo{
-    width: 15rem;
-    padding: 1.5rem 2rem;
+    display: flex;
+    width: 7rem;
 }
+ 
+
 
 .paginas ul{
     display: flex;
@@ -53,9 +55,10 @@ body{
     gap: 3rem;
     padding: 0;
     list-style: none;
-
+    padding-left: 3rem;
+ 
 }
-
+ 
 .paginas a{
     text-decoration: none;
     font: 1em 'Inter';
@@ -63,32 +66,36 @@ body{
     color: white;
     flex-wrap: nowrap;
 }
+.paginas li{
+    font-size: 1.3rem;
+}
 
-
+ 
 .content{
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 1rem;
+    gap: 0.1rem;
     justify-content: space-around;
-
+ 
 }
 .content a{
     margin-top: 5px;
     margin-right: 2rem;
-
+ 
 }
 .content img{
-    width: 1.5rem; 
+    width: 1.5rem;
 }
-
+ 
 .navbusca{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    padding-left: 3rem;
 }
-
+ 
 .navbusca button{
     display: flex;
     position: relative;
@@ -100,8 +107,7 @@ body{
     background-color: var(--cores-chaves) ;
     border-radius: 0 10px 10px 0;
     border: none;
-}
-
+} 
 .navbusca > button svg{
     display: flex;
     position: relative;
@@ -109,12 +115,12 @@ body{
     font-size: 15px;
     background-color: var(--cores-chaves);
     fill: var(--cores-letra);
-
+ 
 }
-
+ 
 .navbusca > input{
     background-color: var(--cores-letra);
-    width: 16rem;
+    width: 14rem;
     outline: none;
     padding: 0 10px;
     height: 1.5rem;
@@ -125,9 +131,10 @@ body{
     box-sizing: border-box;
     position: relative;
     left: -1rem;
-  
+    display: block;
+ 
 }
-
+ 
 .navuser{
     display: flex;
     flex-direction: row;
@@ -135,7 +142,7 @@ body{
     gap: .8rem;
     align-items: baseline;
 }
-
+ 
 /* </CONTEÚDO HEADER> */
 
 
@@ -308,42 +315,28 @@ section .faixas .f2{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* </CONTEÚDO MAIN> */
 
 
 /*CONFIGURAÇÃO FOOTER*/
+
+hr {
+    background-color: var(--cores-chaves);
+    color: var(--cores-chaves);
+    border: var(--cores-chaves);
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    padding: .06rem;
+}
+
+
 footer{
-    padding-top: 1rem;
-    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 4rem 0 2rem;
     font-family:'Inter' Arial, Helvetica, sans-serif;
     color: var(--cores-chaves);
 
