@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 :root{
     --background-color:#0C0C0C;
     --background-2:#131313;
@@ -5,9 +8,6 @@
     --cores-letra:  #FFFFFF;
     --cores-objetos: #580003;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 *{
     background-color: var(--background-color);
@@ -226,27 +226,39 @@ span {
 }
 
 
+
 /*CONFIGURAÇÃO FOOTER*/
 footer{
-    padding-top: 6rem;
+    text-align: center;
+    align-items: center;
+    padding-top: 1rem;
     margin-bottom: 4rem;
-    background-color: #0C0C0C;
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
-    margin-left: 28rem;
+    font-family:'Inter' Arial, Helvetica, sans-serif;
+    color: var(--cores-chaves);
+
 }
 
 
+ 
+ 
 /* RESPONSIVE */
-
+ 
 @media (max-width: 600px) {
     .paginas ul{
         display: none;
     }
+    .navlogo{
+        width: 7rem;
+        padding: .5rem 2rem;
+    }
    }
-
+ 
 /* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 768px) {}
-
+@media (min-width: 768px) {
+    .paginas ul{
+         font-size: 1rem;
+    }
+}
+ 
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) {}
