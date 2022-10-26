@@ -55,6 +55,7 @@ header{
 .navlogo{
     display: flex;
     width: 7rem;
+    padding: .5rem 2rem;
 }
  
 
@@ -318,7 +319,7 @@ main{
 h1 {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     color: white;
-    margin:  2rem;
+    margin:  1rem;
     font-size: 2rem;
 }
  
@@ -327,20 +328,11 @@ h1 .container{
     text-align: center;
 }
  
-h5 {
-    flex-direction:row;
-    justify-content: end;
-    margin-top: 2rem;
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: row;
-    align-self: end;
-}
  
 hr {
-    background-color: #B30006;
-    color: red;
-    border: #B30006;
+    background-color: var(--cores-chaves);
+    color: var(--cores-chaves);
+    border: var(--cores-chaves);
     width: 100%;
     display: flex;
     flex-direction:row;
@@ -371,6 +363,7 @@ hr {
 
 
 .filmes-home span{
+    text-align: end;
     color: var(--cores-letra);
 
 }
@@ -397,6 +390,10 @@ hr {
     color: var(--cores-letra);
 }
 
+.preco{
+    display: flex;
+    justify-content: center;
+}
 
 .series-home span{
     color: var(--cores-letra);
