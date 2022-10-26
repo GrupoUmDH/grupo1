@@ -57,9 +57,16 @@ header {
 }
 
 .navlogo{
+
+    display: flex;
+    width: 7rem;
+}
+ 
+
     width: 12rem;
     padding: .5rem 2rem;
 }
+
 
 .paginas ul{
     display: flex;
@@ -68,6 +75,10 @@ header {
     gap: 3rem;
     padding: 0;
     list-style: none;
+
+    padding-left: 3rem;
+ 
+
 
 }
 
@@ -78,6 +89,9 @@ header {
     color: white;
     flex-wrap: nowrap;
 }
+.paginas li{
+    font-size: 1.3rem;
+}
 
 
 .content{
@@ -85,7 +99,7 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 1rem;
+    gap: 0.1rem;
     justify-content: space-around;
 
 }
@@ -102,6 +116,7 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    padding-left: 3rem;
 }
 
 .navbusca button{
@@ -129,7 +144,7 @@ header {
 
 .navbusca > input{
     background-color: var(--cores-letra);
-    width: 16rem;
+    width: 14rem;
     outline: none;
     padding: 0 10px;
     height: 1.5rem;
@@ -140,7 +155,12 @@ header {
     box-sizing: border-box;
     position: relative;
     left: -1rem;
+
+    display: block;
+ 
+
   
+
 }
 
 .navuser{
@@ -150,6 +170,13 @@ header {
     gap: .8rem;
     align-items: baseline;
 }
+
+ 
+
+ /* CONFIGURAÇÃO CONTAINER*/
+ 
+h1 {
+
 
 /*CONFIGURACAO QUEM SOMOS*/
 
@@ -209,18 +236,41 @@ footer{
     .paginas ul{
         display: none;
     }
+
+    .navbusca input{
+        display: none;
+    }
+
+    .navbusca button{
+        border-radius: 50rem;
+    }
+
     .navlogo{
         width: 7rem;
         padding: .5rem 2rem;
     }
-   }
- 
-/* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 768px) {
-    .paginas ul{
-         font-size: 1rem;
+
+    .mais-populares{
+        font-size: 1.7rem;
+    }
+
+    .titulos h1{
+        font-size: 1.7rem;
     }
 }
- 
-/* Large devices (laptops/desktops, 992px and up) */
-@media (min-width: 992px) {}
+
+@media (max-width: 602px) {
+    
+    .paginas ul{
+        font-size: .9rem;
+        padding-left: 1rem;
+    }
+    .navbusca{
+        padding-left: 1.5rem;
+    }
+
+    .navbusca input{
+        width: 10rem;
+    }
+
+}
