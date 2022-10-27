@@ -40,6 +40,11 @@ header{
     padding: .5rem 2rem;
 }
 
+
+
+
+
+
 .paginas ul{
     display: flex;
     flex-direction: row;
@@ -47,7 +52,12 @@ header{
     gap: 3rem;
     padding: 0;
     list-style: none;
+
     padding-left: 3rem;
+ 
+
+
+
 }
 
 .paginas a{
@@ -60,6 +70,7 @@ header{
 .paginas li{
     font-size: 1.3rem;
 }
+
 
 .content{
     align-items: center;
@@ -123,6 +134,10 @@ header{
     position: relative;
     left: -1rem;
     display: block;
+
+ 
+
+  
 }
 
 .navuser{
@@ -135,177 +150,97 @@ header{
 
 /* CONTEUDO MAIN */
 
-main{
-    font-family: 'Jost', Arial, Helvetica, sans-serif;
-
-}
-.container {
-    justify-content: space-around;
-    align-items: stretch;
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    margin: .2rem;
-    margin-bottom: 5rem;
-}
-
-.container > h1 {
-    text-align: left;
-    justify-content: center;
-}
-
-.titulos {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-left: 10rem;
-}
-
-.titulos a {
-    color: var(--cores-letra);
-    margin-right: 10rem;
-    margin-top: 4.5rem;
-    margin-bottom: .2rem;
-}
-
 h1 {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
-    color: var(--cores-letra);
-    margin: 1rem;
-    font-size: 2rem;
+    color: white;
+    margin:  1.5rem;
+    font-size: 1.5rem;
 }
-
-h1 .container {
+ 
+h1 .container{
     align-self: flex-start;
     text-align: center;
 }
-
-
+ 
+h5 {
+    flex-direction:row;
+    justify-content: end;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-self: end;
+}
+ 
 hr {
-    background-color: var(--cores-chaves);
-    color: var(--cores-chaves);
-    border: var(--cores-chaves);
+    background-color: #B30006;
+    color: red;
+    border: #B30006;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     padding: .06rem;
- }
+}
 
-/*AÇÃO*/
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #B30006;
+}
 
-.container .filmes-acao {
+span {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #B30006;
+}
+
+ 
+.container .filmes-acao{
     align-items: stretch;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+    justify-content:space-around;
+    width: 100%;  
+    margin-top: 2rem;  
 }
 
-.filmes-acao img {
-    width: 15rem;
-}
-
-.filmes-acao p {
-    text-align: center;
-      color: var(--cores-letra);
-}
-
-.filmes-acao span {
-    font-family: 'Jost', Arial, Helvetica, sans-serif;
-    text-align: end;
-    color: var(--cores-chaves);
-    display: flex;
-    justify-content: center;
-}
-
-/*DRAMA*/
-.container .filmes-drama {
+.container .filmes-drama{
     align-items: stretch;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+    justify-content:space-around;
+    width: 100%;  
+    margin-top: 2rem;  
 }
 
-.filmes-drama img {
-    width: 15rem;
-}
-
-.filmes-drama p {
-    text-align: center;
-      color: var(--cores-letra);
-}
-
-.filmes-drama span {
-    text-align: end;
-    color: var(--cores-chaves);
-    display: flex;
-    justify-content: center;
-}
-
-/*COMÉDIA*/
-
-.container .filmes-comedia {
+.container .filmes-comedia{
     align-items: stretch;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+    justify-content:space-around;
+    width: 100%;  
+    margin-top: 2rem;  
 }
 
-.filmes-comedia img {
-    width: 15rem;
-}
-
-.filmes-comedia p {
-    text-align: center;
-      color: var(--cores-letra);
-}
-
-.filmes-comedia span {
-    text-align: end;
-    color: var(--cores-chaves);
-    display: flex;
-    justify-content: center;
-}
-
-
-/*SUSPENSE*/
-.container .filmes-suspense {
+.container .filmes-suspense{
     align-items: stretch;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-}
-
-.filmes-suspense img {
-    width: 15rem;
-}
-
-.filmes-suspense p {
-    text-align: center;
-    color: var(--cores-letra);
-}
-
-.filmes-suspense span {
-    text-align: end;
-    color: var(--cores-chaves);
-    display: flex;
-    justify-content: center;
+    justify-content:space-around;
+    width: 100%;  
+    margin-top: 2rem;  
 }
 
 
@@ -322,6 +257,7 @@ footer{
 }
 
 
+ 
  
 /* RESPONSIVE */
  

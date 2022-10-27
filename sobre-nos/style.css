@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-:root {
-    --background-color: #0C0C0C;
-    --background-2: #131313;
-    --cores-chaves: #B30006;
-    --cores-letra: #FFFFFF;
+:root{
+    --background-color:#0C0C0C;
+    --background-2:#131313;
+    --cores-chaves:#B30006;
+    --cores-letra:  #FFFFFF;
     --cores-objetos: #580003;
 }
 
@@ -48,23 +48,23 @@ header {
 }
 
 /* NAVBAR */
-#navbar {
-    height: 100%;
+#navbar{
+    height:100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
-.navlogo {
+ 
+.navlogo{
     display: flex;
     width: 7rem;
-    padding: .5rem .5rem;
+    padding: .5rem 2rem;
 }
+ 
 
 
-
-.paginas ul {
+.paginas ul{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -72,50 +72,47 @@ header {
     padding: 0;
     list-style: none;
     padding-left: 3rem;
-
+ 
 }
-
-.paginas a {
+ 
+.paginas a{
     text-decoration: none;
     font: 1em 'Inter';
     text-align: center;
     color: white;
     flex-wrap: nowrap;
 }
-
-.paginas li {
+.paginas li{
     font-size: 1.3rem;
 }
 
-
-.content {
+ 
+.content{
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 0.1rem;
     justify-content: space-around;
-
+ 
 }
-
-.content a {
+.content a{
     margin-top: 5px;
     margin-right: 2rem;
-
+ 
 }
-
-.content img {
+.content img{
     width: 1.5rem;
 }
-
-.navbusca {
+ 
+.navbusca{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     padding-left: 3rem;
 }
-
-.navbusca button {
+ 
+.navbusca button{
     display: flex;
     position: relative;
     left: -1.7rem;
@@ -123,22 +120,21 @@ header {
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    background-color: var(--cores-chaves);
+    background-color: var(--cores-chaves) ;
     border-radius: 0 10px 10px 0;
     border: none;
-}
-
-.navbusca>button svg {
+} 
+.navbusca > button svg{
     display: flex;
     position: relative;
     width: 1.3rem;
     font-size: 15px;
     background-color: var(--cores-chaves);
     fill: var(--cores-letra);
-
+ 
 }
-
-.navbusca>input {
+ 
+.navbusca > input{
     background-color: var(--cores-letra);
     width: 14rem;
     outline: none;
@@ -152,10 +148,10 @@ header {
     position: relative;
     left: -1rem;
     display: block;
-
+ 
 }
-
-.navuser {
+ 
+.navuser{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -163,102 +159,102 @@ header {
     align-items: baseline;
 }
 
+ /* CONFIGURAÇÃO CONTAINER*/
+ 
+
+
 /*CONFIGURACAO QUEM SOMOS*/
 
 .quem-somos {
     display: flex;
     text-align: center;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
-.quem-somos> h1 {
+.quem-somos > h1 {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     color: red;
     font-size: 2rem;
     margin: 2rem;
+    
 }
-
-.quem-somos>p {
-    color: var(--cores-letra);
+.quem-somos> p {
+    color: white;
     text-align: justify;
+    position: relative;
     justify-content: center;
+    width: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    line-height: 3rem;
-    max-width: 900px;
-    text-indent: 50px;
-    word-break: normal;
-    font-size: 1.3rem;
+    margin: 2rem;
+
 }
 
-/* */
 hr {
-    margin-top: 2rem;
     background-color: var(--cores-chaves);
     color: var(--cores-chaves);
     border: var(--cores-chaves);
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     padding: .06rem;
 }
 
-
+  
 /*CONFIGURAÇÃO FOOTER*/
-footer {
+footer{
     padding-top: 1rem;
     margin-bottom: 4rem;
-    font-family: 'Inter' Arial, Helvetica, sans-serif;
+    font-family:'Inter' Arial, Helvetica, sans-serif;
     color: var(--cores-chaves);
 
 }
 
 
-
-
+ 
+ 
 /* RESPONSIVE */
-
+ 
 @media (max-width: 600px) {
-    .paginas ul {
+    .paginas ul{
         display: none;
     }
 
-    .navbusca input {
+    .navbusca input{
         display: none;
     }
 
-    .navbusca button {
+    .navbusca button{
         border-radius: 50rem;
     }
 
-    .navlogo {
+    .navlogo{
         width: 7rem;
         padding: .5rem 2rem;
     }
 
-    .mais-populares {
+    .mais-populares{
         font-size: 1.7rem;
     }
 
-    .titulos h1 {
+    .titulos h1{
         font-size: 1.7rem;
     }
 }
 
 @media (max-width: 602px) {
-
-    .paginas ul {
+    
+    .paginas ul{
         font-size: .9rem;
         padding-left: 1rem;
     }
-
-    .navbusca {
+    .navbusca{
         padding-left: 1.5rem;
     }
 
-    .navbusca input {
+    .navbusca input{
         width: 10rem;
     }
 
