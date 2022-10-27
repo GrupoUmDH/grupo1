@@ -386,21 +386,32 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    
 }
 
 .filmes-home > .filme-show .descri{
     display: none;
     position: relative;
+
 }
 .filmes-home > .filme-show:hover .descri{
     display: block;
     position: absolute;
     background-color: transparent;
+    flex-direction: column;
+    display: flex;
+    height: 40%;
 }
 
-.filmes-home > .filme-show:hover .descri div p {
+.filmes-home > .filme-show:hover .descri div #valor {
     padding: 3px;
     margin: 6px;
+    font-weight: bold;
+    font-size: 14pt;
+    
+}
+.filmes-home > .filme-show:hover img {
+    opacity: 0.3;
 }
 
 .filmes-home > .filme-show .descri #filme-pay  div p {
@@ -408,10 +419,19 @@ hr {
     height: 1.5rem;
     text-align: center;
     align-items: center;
-    padding: 3px;
-    margin: 3px;
+    padding: 4px;
+    margin: 4px;
     border-radius: 10px;
     background-color: rgb(192, 21, 21);
+    font-weight: bold;
+    font-size: 12pt;
+    
+}
+
+.filmes-home > .filme-show .descri #descri-filme{
+    font-weight: bold;
+    padding: 4px;
+    margin: 4px;
 }
 
 
