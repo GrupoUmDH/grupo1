@@ -357,34 +357,46 @@ hr {
 /*  CONFIGURANDO AO PASSAR O MOUSE */
 
 .filmes-home >.filme-show h3 {
-    color: #FFFFFF;
+    color: red;
+    padding: auto;
+    margin: 3px;
     text-align: center;
+    background-color: transparent;
 }
 
 .filmes-home >.filme-show #filme-pay {
     display: flex;
-    justify-content: space-around;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
 }
 
 .filmes-home >.filme-show .descri {
     width: 15rem;
     font-size: .8rem;
     text-align: left;
+    background-color: transparent;
+
 }
 
 .filmes-home > .filme-show {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-color: #B30006;
-
+    background-color: transparent;
 }
 
-.filmes-home > .filme-show:hover {
-    display: nome;
+.filmes-home > .filme-show .descri{
+    display: none;
+}
+.filmes-home > .filme-show:hover .descri{
+    display: block;
+    position: absolute;
+    background-color: transparent;
 }
 
-    
+
 
 /* CONFIGURAÇÃO SERIES*/
  
