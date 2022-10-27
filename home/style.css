@@ -327,8 +327,6 @@ hr {
     padding: .06rem;
 }
 
-
- 
 .container .filmes-home{
     align-items: stretch;
     display: flex;
@@ -344,17 +342,50 @@ hr {
     width: 15rem;
 }
  
+
 .filmes-home p {
-    text-align: center;
+    
     color: var(--cores-letra);
 }
-
 
 .filmes-home span{
     text-align: end;
     color: var(--cores-letra);
 
 }
+
+/*  CONFIGURANDO AO PASSAR O MOUSE */
+
+.filmes-home >.filme-show h3 {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.filmes-home >.filme-show #filme-pay {
+    display: flex;
+    justify-content: space-around;
+}
+
+.filmes-home >.filme-show .descri {
+    width: 15rem;
+    font-size: .8rem;
+    text-align: left;
+}
+
+.filmes-home > .filme-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #B30006;
+
+}
+
+.filmes-home > .filme-show:hover {
+    display: nome;
+}
+
+    
+
 /* CONFIGURAÇÃO SERIES*/
  
 .container .series-home{
