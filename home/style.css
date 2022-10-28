@@ -9,13 +9,6 @@
     --cores-objetos: #580003;
 }
  
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
- 
 body{
     width: 100%;
     display: flex;
@@ -23,27 +16,23 @@ body{
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
-}
- 
-body * {
     font-family: 'Inter',Arial, Helvetica, sans-serif;
-    font-size: 100%;
-   }
+}
 
 /* CONTEÚDO DO HEADER */
 header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
     width: 100%;
-    font-size: 1.5rem;
-    height:8rem;
-    padding: 0 2rem;
+    height: 12vh;
+    display: flex;
 }
  
  
 /* NAVBAR */
+
+#navbar-mobile {
+    display: none;
+}
+
 #navbar{
     height:100%;
     width: 100%;
@@ -54,7 +43,6 @@ header{
  
 .navlogo{
     width: 7rem;
-    padding: .5rem 2rem;
 }
  
 .paginas ul{
@@ -147,6 +135,10 @@ header{
     align-items: baseline;
 }
  
+.navlogo{
+    width: 12vh;
+}
+
  
 /* CONFIGURAÇÃO IMAGEM CENTRAL*/
 main{
@@ -483,22 +475,27 @@ footer{
  
 /* RESPONSIVE */
  
-@media (max-width: 600px) {
-    .paginas ul{
+@media (max-width: 450px) {
+
+    #navbar {
         display: none;
     }
-    .navlogo{
-        width: 7rem;
-        padding: .5rem 2rem;
+    
+    #navbar-mobile {
+        width: 94%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center ;
     }
-   }
- 
-/* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 768px) {
-    .paginas ul{
-         font-size: 1rem;
+
+    #navbar-mobile > div img {
+        width: 4vh;
+        margin: 0 0 0 15px;
+        
     }
+
+    #navbar-mobile > div .navlogo {
+        width: 10vh;
+    }
+
 }
- 
-/* Large devices (laptops/desktops, 992px and up) */
-@media (min-width: 992px) {}
