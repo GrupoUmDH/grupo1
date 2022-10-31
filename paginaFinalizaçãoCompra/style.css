@@ -7,17 +7,24 @@
     --cores-chaves:#B30006;
     --cores-letra:  #FFFFFF;
     --cores-objetos: #580003;
+    --font-family_1: american captain;
+    --font-family_2: Inter;
 }
  
+html{
+    width: 100%;
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body{
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,7 +33,6 @@ body{
 }
  
 body * {
-    font-family: 'Inter',Arial, Helvetica, sans-serif;
     font-size: 100%;
    }
 
@@ -72,10 +78,12 @@ header{
  
 .paginas a{
     text-decoration: none;
-    font: 1em 'Inter';
+    font-family: var(--font-family_2);
+    font-weight: thin;
     text-align: center;
-    color: white;
+    color: var(--cores-letra);
     flex-wrap: nowrap;
+
 }
 .paginas li{
     font-size: 1.3rem;
@@ -157,7 +165,51 @@ header{
 /* formulario */
 
 .content-1{
+    display: flex;
     background-color: green;
-    width: 90rem;
-    height: 100rem;
+    width: 0 auto;
+    width: 92rem;
+    height: 90rem;
+    margin-top: 2rem;
+}
+
+.content-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 53%;
+    height: 90%;
+    border-radius: 1rem;
+    background-color: var(--background-2);
+}
+.content-form h1{
+    display: flex;
+    color: var(--cores-chaves);
+    font-size: 3.5rem;
+    position: relative;
+    top: -8rem;
+    padding-top: 4rem;
+    padding-left: 1rem;
+    font-family: var(--font-family_1);
+}
+
+.content-input{
+    display: flex;
+    width: 80%;
+    border-radius: 10px;
+    outline: none;
+    margin: 5rem;
+    height: 2rem;
+    padding: 0 2rem;
+}
+
+.checkboxe{
+    display: flex;
+    flex-direction: row;
+}
+
+.checkboxe input{
+    display: flex;
+    
+
 }
