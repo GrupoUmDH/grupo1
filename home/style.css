@@ -423,24 +423,19 @@ footer {
     .paginas ul {
         display: none;
     }
-
     .navbusca input {
         display: none;
     }
-
     .navbusca button {
         border-radius: 50rem;
     }
-
     .navlogo {
         width: 7rem;
         padding: .5rem 2rem;
     }
-
     .mais-populares {
         font-size: 1.7rem;
     }
-
     .titulos h1 {
         font-size: 1.7rem;
     }
