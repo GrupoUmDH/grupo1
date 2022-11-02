@@ -113,6 +113,10 @@ header{
     flex-wrap: nowrap;
     padding-left: 3rem;
 }
+
+#navbar-mobile {
+    display: none;
+}
  
 .navbusca button{
     display: flex;
@@ -159,10 +163,6 @@ header{
     flex-wrap: nowrap;
     gap: .8rem;
     align-items: baseline;
-}
- 
-.navlogo{
-    width: 12vh;
 }
 
  
@@ -650,7 +650,6 @@ footer{
     #navbar{
         justify-content: space-between;
     }
-
 
     /* .navbusca input {
         display: none;
