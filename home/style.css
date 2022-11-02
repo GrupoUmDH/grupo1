@@ -8,8 +8,10 @@
     --cores-letra:  #FFFFFF;
     --cores-objetos: #580003;
 }
- 
+
 body{
+    padding: 0;
+    margin: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -215,7 +217,7 @@ main{
 .slides img{
     display: flex;
     height: 100%;
-    width: 105%;
+    width: 100%;
     border-radius: 10px;
 }
 
@@ -266,16 +268,11 @@ main{
 .titulos{
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    margin-left: 10rem;   
+    margin-left: 8rem;   
 }
 
 .titulos  a{    
     color: var(--cores-letra);
-  margin-right: 10rem;
- margin-top: 4.5rem;
- margin-bottom: .2rem;
-
 }
 
 .populares{
@@ -476,26 +473,92 @@ footer{
 /* RESPONSIVE */
  
 @media (max-width: 450px) {
+    
+    header{
+        height: 15vh;
+    }
+    .navlogo{
+        width: 5rem;
+    }
 
     #navbar {
         display: none;
     }
     
     #navbar-mobile {
-        width: 94%;
+        width: 100%;
+        background-color: #131313;
         display: flex;
+        flex-direction: column;
+        position: fixed;
+    }
+    #ativo-menu{
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center ;
+        padding: 1em;
     }
 
-    #navbar-mobile > div img {
-        width: 4vh;
-        margin: 0 0 0 15px;
-        
+    /* controlando o checkbox menu hamburguer */
+    #menu-moblie {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #check-menu{
+        position: absolute;
+        opacity: 0;
+    }
+    #menu-mobile > label {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        height: 40px;
+        width: 40px;
+    }
+    #menu-mobile > label span{
+        position: absolute;
+        display: block;
+        height: 5px;
+        width: 100%;
+        border-radius: 30px;
+        background: #B30006;
+        transition: .2seg ease-in-out;        
+    }
+    #menu-mobile > label span:nth-child(1){top: 10px}
+    #menu-mobile > label span:nth-child(2){top: 20px}
+    #menu-mobile > label span:nth-child(3){top: 30px}
+
+    #check-menu:checked + label span:nth-child(1){
+        transform: rotate(-45deg);
+        top: 20px;
+    }
+    #check-menu:checked + label span:nth-child(2){
+        opacity: 0;
+    }
+    #check-menu:checked + label span:nth-child(3){
+        transform: rotate(45deg);
+        top: 20px;
     }
 
-    #navbar-mobile > div .navlogo {
-        width: 10vh;
+    /* Conteudo do menu-mobile */
+    
+
+    /* Estou ocultando na versão mobile o slide- pois ele ainda
+        esta com conflico com a responsividade.. precisa de MODIFICAR DEPOIS */
+    .caixa-filmes {
+        display: none;
+    }
+    .navigation {
+        display: none;
+    }
+
+    .titulos{
+        align-items: center;
+        margin-left: 3%;
+        justify-content: space-between; 
     }
 
 }
