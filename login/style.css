@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root{
+    --background-color:#0C0C0C;
+    --background-2:#131313;
+    --cores-chaves:#B30006;
+    --cores-letra:  #FFFFFF;
+    --cores-objetos: #580003;
+}
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+}
+ 
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    background-color: gray;
+}
+ 
+body * {
+    font-family: 'Inter',Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    
+   }
+
+ 
+/* CONTEUDO MAIN */
+main{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+ }
+
+ div.login {
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    height: 370px;
+    border-radius: 15px;
+    border-color: #FFFFFF;   
+}
+
+form{
+    margin: 2rem;
+    border-radius: 15px;
+}
+.title{
+    margin-top: 3rem;
+    color: var(--cores-chaves);
+    text-decoration: none;
+}
+
+span{ 
+    color: #FFFFFF;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+label{
+    color: #FFFFFF;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+ 
+.login-formulario input{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    border-radius: 15px;
+    background-color: white;
+    height: 2rem;
+    width: 15rem;
+    margin: .5rem;  
+}
+
+.login-formulario button{
+    margin: 2rem;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    color: var(--cores-letra);
+    border: var(--cores-chaves);
+    background-color: var(--cores-chaves);
+    width: 15rem;
+    height: 2.5rem;
+    margin-bottom: 2rem;
+} 
+
+.cadastro{
+    gap: 1rem;
+    margin-top: 1rem;   
+}
+
+a{
+    margin-top: 1rem;
+    color: var(--cores-chaves);
+    text-align: center;
+}
+ 
+hr {
+    background-color: var(--cores-chaves);
+    color: var(--cores-chaves);
+    border: var(--cores-chaves);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: .06rem;
+} 
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .paginas ul {
+        display: none;
+    }
+
+    .navbusca input {
+        display: none;
+    }
+
+    .navbusca button {
+        border-radius: 50rem;
+    }
+
+    .navlogo {
+        width: 7rem;
+        padding: .5rem 2rem;
+    }
+
+    .mais-populares {
+        font-size: 1.7rem;
+    }
+
+    .titulos h1 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 602px) {
+
+    .paginas ul {
+        font-size: .9rem;
+        padding-left: 1rem;
+    }
+
+    .navbusca {
+        padding-left: 1.5rem;
+    }
+
+    .navbusca input {
+        width: 10rem;
+    }
+
+}
