@@ -11,6 +11,28 @@
 
 <body>
     <header>
+        
+        <nav id="navbar-mobile">
+            <div id="ativo-menu">
+                <div id="menu-mobile">
+                    <input type="checkbox" id="check-menu">
+                    <label for="check-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+                <img class="navlogo" src="/img/logo.svg" />
+            </div>
+            <div id="op-menu">
+                <div id="menu-content">
+
+                </div>
+                <div id="background-menu"></div>
+            </div>
+            
+        </nav>
+
         <nav id="navbar">
             <img class="navlogo" src="/img/logo.svg" alt="">
             <div class="paginas">
@@ -21,7 +43,6 @@
                     <li> <a href="/sobre-nos/index.html">Sobre Nós</a> </li>
                 </ul>
             </div>
-
             <div class="content">
                 <form class="column" action="" method="get">
                     <div class="navbusca">
@@ -53,9 +74,9 @@
         <section class="central">
             <div>
                 <img src="/img/central0.jpg" alt="">
-                <img src="/img/central00.jpg" alt="">
+                <!-- <img src="/img/central00.jpg" alt="">
                 <img src="/img/central.jpg" alt="">
-                <img src="/img/central0.jpg" alt="">
+                <img src="/img/central0.jpg" alt=""> -->
             </div>
         </section>
 
@@ -64,7 +85,7 @@
         <section class="caixa-filmes">
             <div class="mais-visitados">
                 <div class="slides">
-                    <input type="radio" name="slide s1" id="slide1" checked>
+                    <input type="radio" name="slide" id="slide1" checked>
                     <input type="radio" name="slide" id="slide2">
                     <input type="radio" name="slide" id="slide3">
                     <input type="radio" name="slide" id="slide4">
@@ -73,7 +94,7 @@
                     <div class="slide s1">
                         <img src="/img/Pop1.jpg" alt="">
                     </div>
-                    <div class="slide">
+                    <!-- <div class="slide">
                         <img src="/img/Pop2.jpg" alt="">
                     </div>
                     <div class="slide">
@@ -83,7 +104,7 @@
                         <img src="/img/Pop4.jpg" alt="">
                     </div>
                     <div class="slide">
-                        <img src="/img/Pop5.jpg" alt="">
+                        <img src="/img/Pop5.jpg" alt=""> -->
                     </div>
                 </div>
             </div>
@@ -104,36 +125,105 @@
 
             <hr>
             <section class="filmes-home">
-                <div>
-                    <img src="/img/filmes-home/1.png" alt="">
-                    <p>BLACK PANTHER</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
+                
+                <div class="filme-show" >
                     <a href="/paginaProduto/index.html"><img src="/img/filmes-home/2.png" alt=""></a>
-                    <p>BLACK PANTHER</p>
-                    <div class="preco"><span>R$19,90</span></div>
+                    <div class="descri">
+                        <div id="filme-pay">
+                            <p id="valor"> R$ 9,90 </p>
+                            <div>
+                               <p>Alugar</p>
+                               <p>Comprar</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>SPIDER-MAN - NO WAY HOME</h3>
+                            <p id="descri-filme">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="/img/filmes-home/3.png" alt="">
-                    <p>BLACK PANTHER</p>
-                    <div class="preco"><span>R$19,90</span></div>
+                <div class="filme-show" >
+                    <a href="/paginaProduto/index.html"><img src="/img/filmes-home/1.png" alt=""></a>
+                    <div class="descri">
+                        <div id="filme-pay">
+                            <p id="valor"> R$ 9,90 </p>
+                            <div>
+                               <p>Alugar</p>
+                               <p>Comprar</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>TOP GUN - MAVERICK</h3>
+                            <p id="descri-filme">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="/img/filmes-home/4.png" alt="">
-                    <p>BLACK PANTHER</p>
-                    <div class="preco"><span>R$19,90</span></div>
+                <div class="filme-show" >
+                    <a href="/paginaProduto/index.html"><img src="/img/filmes-home/3.png" alt=""></a>
+                    <div class="descri">
+                        <div id="filme-pay">
+                            <p id="valor"> R$ 9,90 </p>
+                            <div>
+                               <p>Alugar</p>
+                               <p>Comprar</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>SORRIA</h3>
+                            <p id="descri-filme">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="/img/filmes-home/5.png" alt="">
-                    <p>BLACK PANTHER</p>
-                    <div class="preco"><span>R$19,90</span></div>
+                <div class="filme-show" >
+                    <a href="/paginaProduto/index.html"><img src="/img/filmes-home/4.png" alt=""></a>
+                    <div class="descri">
+                        <div id="filme-pay">
+                            <p id="valor"> R$ 9,90 </p>
+                            <div>
+                               <p>Alugar</p>
+                               <p>Comprar</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>ANT-MAN WASP</h3>
+                            <p id="descri-filme">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="/img/filmes-home/6.png" alt="">
-                    <p>BLACK PANTHER</p>
-                    <div class="preco"><span>R$19,90</span></div>
+                <div class="filme-show" >
+                    <a href="/paginaProduto/index.html"><img src="/img/filmes-home/5.png" alt=""></a>
+                    <div class="descri">
+                        <div id="filme-pay">
+                            <p id="valor"> R$ 9,90 </p>
+                            <div>
+                               <p>Alugar</p>
+                               <p>Comprar</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>BLOND</h3>
+                            <p id="descri-filme">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!</p>
+                        </div>
+                    </div>
                 </div>
+                <div class="filme-show" >
+                    <a href="/paginaProduto/index.html"><img src="/img/filmes-home/6.png" alt=""></a>
+                    <div class="descri">
+                        <div id="filme-pay">
+                            <p id="valor"> R$ 9,90 </p>
+                            <div>
+                               <p>Alugar</p>
+                               <p>Comprar</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>HANIBAL</h3>
+                            <p id="descri-filme">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
             </section>
 
             <div class="titulos">

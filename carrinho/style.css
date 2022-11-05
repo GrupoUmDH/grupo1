@@ -1,52 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-:root{
-    --background-color:#0C0C0C;
-    --background-2:#131313;
-    --cores-chaves:#B30006;
-    --cores-letra:  #FFFFFF;
+:root {
+    --background-color: #0C0C0C;
+    --background-2: #131313;
+    --cores-chaves: #B30006;
+    --cores-letra: #FFFFFF;
     --cores-objetos: #580003;
 }
- 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--background-color);
 }
- 
-body{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   
-}
- 
-body * {
-    font-family: 'Inter',Arial, Helvetica, sans-serif;
-    font-size: 100%;
-   }
 
-/* CONTEÚDO DO HEADER */
-header{
+
+
+/* <CONTEÚDO DO HEADER> */
+header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     width: 100%;
     font-size: 1.5rem;
-    height:8rem;
-    padding: 0 2rem;
+
 }
- 
- 
+
+body {
+    background-color: var(--background-color);
+}
+
 /* NAVBAR */
-#navbar{
-    height:100%;
+#navbar {
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -70,8 +58,8 @@ header{
     padding-left: 3rem;
  
 }
- 
-.paginas a{
+
+.paginas a {
     text-decoration: none;
     font: 1em 'Inter';
     text-align: center;
@@ -90,25 +78,27 @@ header{
     flex-wrap: nowrap;
     gap: 0.1rem;
     justify-content: space-around;
- 
+
 }
-.content a{
+
+.content a {
     margin-top: 5px;
     margin-right: 2rem;
- 
+
 }
-.content img{
+
+.content img {
     width: 1.5rem;
 }
- 
-.navbusca{
+
+.navbusca {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     padding-left: 3rem;
 }
- 
-.navbusca button{
+
+.navbusca button {
     display: flex;
     position: relative;
     left: -1.7rem;
@@ -116,7 +106,7 @@ header{
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    background-color: var(--cores-chaves) ;
+    background-color: var(--cores-chaves);
     border-radius: 0 10px 10px 0;
     border: none;
 } 
@@ -127,10 +117,10 @@ header{
     font-size: 15px;
     background-color: var(--cores-chaves);
     fill: var(--cores-letra);
- 
+
 }
- 
-.navbusca > input{
+
+.navbusca>input {
     background-color: var(--cores-letra);
     width: 14rem;
     outline: none;
@@ -146,8 +136,8 @@ header{
     display: block;
  
 }
- 
-.navuser{
+
+.navuser {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
