@@ -57,37 +57,69 @@
                 </div>
                 <form action="">
                         <div>
-                            <input class="content-input" type="text" placeholder="NOME*" required>
+                            
+                            <input class="content-input" type="text" placeholder="NOME*" name="nome" required>
                         </div>
 
                         <div>
-                            <input class="content-input" type="text" placeholder="SOBRENOME*" required>
+                            <input class="content-input" type="text" placeholder="SOBRENOME*" name="sobrenome" required>
                         </div>
 
                         <div>
-                            <input class="content-input" type="text" placeholder="ENDEREÇO*" required>
+                            <input class="content-input" type="text" placeholder="CPF/CNPJ*" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \ required>
                         </div>
 
                         <div>
-                            <input class="content-input" type="text" placeholder="CÓDIGO POSTAL*" required>
+                            <input class="content-input" type="email" placeholder="EMAIL*" name="email" required>
                         </div>
 
                         <div>
-                            <input class="content-input" type="text" placeholder="ESTADO*" required>
+                            <input class="content-input" type="text" placeholder="ENDEREÇO*" name="endereço" required>
                         </div>
 
                         <div>
-                            <input class="content-input" type="text" placeholder="CIDADE*" required>
+                            <input class="content-input" type="text" placeholder="CÓDIGO POSTAL*" name="codigo-postal" required>
                         </div>
 
                         <div>
-                            <input class="content-input" type="text" placeholder="PAÍS*" required>
+                            <input class="content-input" type="text" placeholder="ESTADO*" name="estado" required>
+                        </div>
+
+                        <div>
+                            <input class="content-input" type="text" placeholder="CIDADE*" name="cidade" required>
+                        </div>
+
+                        <div>
+                            <input class="content-input" type="text" placeholder="PAÍS*" name="país" required>
                         </div>
 
                         <div class="checkboxe">
                             <input type="checkbox">
                             <p>Salvar para pedidos futuros
                             </p>
+                        </div>
+
+                        <div class="payment">
+                            <div class="input-pay">
+                                <input type="radio" name="pay">
+                                <img src="/img/ico/credit-card.svg" alt="">
+                            </div>
+                            <div class="input-pay">
+                                <input type="radio" name="pay">
+                                <img src="/img/ico/pagseguro1.svg" alt="">
+                            </div>
+                            <div class="input-pay">
+                                <input type="radio" name="pay">
+                                <img class="pic" src="/img/ico/pix.svg" alt="">
+                            </div>
+                            <div class="input-pay">
+                                <input type="radio" name="pay">
+                                <img src="/img/ico/boleto.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="pay-button">
+                            <button type="submit">Confirmar</button>
                         </div>
 
                 </form>
