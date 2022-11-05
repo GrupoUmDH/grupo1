@@ -360,7 +360,7 @@ main{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding-left: 10rem;
+    padding-left: 5rem;
 }
 
 .titulos a {
@@ -543,10 +543,10 @@ footer{
 
 /* RESPONSIVE */
  
-@media (max-width: 450px) {
+@media (max-width: 770px) {
     
     header{
-        height: 15vh;
+        height: 5rem;
     }
     .navlogo{
         width: 5rem;
