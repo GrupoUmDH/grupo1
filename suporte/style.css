@@ -14,8 +14,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: var(--background-color);
 }
  
 body{
@@ -24,12 +22,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
+    background-color: var(--background-color);
 }
  
 body * {
     font-family: 'Inter',Arial, Helvetica, sans-serif;
-    font-size: 100%;
    }
 
 /* CONTEÚDO DO HEADER */
@@ -39,9 +36,6 @@ header{
     align-items: center;
     flex-direction: row;
     width: 100%;
-    font-size: 1.5rem;
-    height:8rem;
-    padding: 0 2rem;
 }
  
  
@@ -168,7 +162,6 @@ hr {
     width: 100%;
     display: flex;
     flex-direction:row;
-    padding: .06rem;
 }
 
 /* CONFIGURAÇÃO MAIN*/
@@ -182,7 +175,6 @@ h2{
 }
 
 span{
-    margin-top: 2rem;
     display: flex;
     text-align: center;
     align-items: center;
@@ -192,7 +184,11 @@ span{
     font-weight: bold;
     font-family: 'American Captain',Arial, Helvetica, sans-serif ;
 }
- 
+
+.perguntas {
+    display: flex;
+    flex-direction: column;
+}
 .perguntas > input{
     display: flex;
     text-align: center;
@@ -200,7 +196,7 @@ span{
     justify-content: center;
     border-radius: 10px;
     height: 2rem;
-    width: 30rem;
+    width: 75%;
     margin: 2rem;
     color: var(--cores-letra);
     background-color: var(--cores-letra);
@@ -211,15 +207,11 @@ span{
 
 /*CONFIGURAÇÃO FOOTER*/
 footer{
-    padding-top: 1rem;
-    margin-bottom: 4rem;
     font-family:'Inter' Arial, Helvetica, sans-serif;
     color: var(--cores-chaves);
 
 }
 
-
- 
 
 /* RESPONSIVE */
  
