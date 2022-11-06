@@ -13,11 +13,13 @@
 
 *{
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
  
 body{
-    width: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,6 +29,7 @@ body{
  
 body * {
     font-family: 'Inter',Arial, Helvetica, sans-serif;
+    font-size: 100%;
    }
 
 /* CONTEÚDO DO HEADER */
@@ -36,15 +39,11 @@ header{
     align-items: center;
     flex-direction: row;
     width: 100%;
+    font-size: 1.5rem;
+    height: 5rem;
 }
- 
  
 /* NAVBAR */
-
-#navbar-mobile {
-    display: none;
-}
-
 #navbar{
     height:100%;
     width: 100%;
@@ -55,10 +54,9 @@ header{
  
 .navlogo{
     display: flex;
-    width: 7rem;
+    width: 5rem;
+    padding-left: 10px;
 }
- 
-
 
 .paginas ul{
     display: flex;
@@ -67,13 +65,13 @@ header{
     gap: 3rem;
     padding: 0;
     list-style: none;
-    padding-left: 3rem;
+    padding-left: 2rem;
  
 }
  
 .paginas a{
     text-decoration: none;
-    font: 1em 'Inter';
+    font: .9em 'Inter';
     text-align: center;
     color: white;
     flex-wrap: nowrap;
@@ -81,21 +79,19 @@ header{
 .paginas li{
     font-size: 1.3rem;
 }
-
  
 .content{
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 0.1rem;
+    padding-right: 10px;
     justify-content: space-around;
  
 }
 .content a{
     margin-top: 5px;
-    margin-right: 2rem;
- 
+   
 }
 .content img{
     width: 1.5rem;
@@ -105,7 +101,11 @@ header{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding-left: 3rem;
+    padding-left: 1.5rem;
+}
+
+#navbar-mobile {
+    display: none;
 }
  
 .navbusca button{
@@ -154,27 +154,20 @@ header{
     gap: .8rem;
     align-items: baseline;
 }
- 
-hr {
-    background-color: #B30006;
-    color: red;
-    border: #B30006;
-    width: 100%;
-    display: flex;
-    flex-direction:row;
-}
+
 
 /* CONFIGURAÇÃO MAIN*/
 
-h1{
+main > h1{
     color: var(--cores-letra);
+    font-size: 2rem;
 }
 
-h2{
+main > h2{
     color: var(--cores-chaves);
 }
 
-span{
+main > span{
     display: flex;
     text-align: center;
     align-items: center;
@@ -203,6 +196,16 @@ span{
     display: block;
     border: 2px;
     cursor: pointer;
+}
+
+hr {
+    background-color: var(--cores-chaves);
+    color: var(--cores-chaves);
+    border: var(--cores-chaves);
+    width: 100%;
+    height: 2px;
+    display: flex;
+    flex-direction:row;
 }
 
 /*CONFIGURAÇÃO FOOTER*/
