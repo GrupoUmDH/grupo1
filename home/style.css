@@ -52,8 +52,13 @@ header{
  
 .navlogo{
     display: flex;
+<<<<<<< HEAD
     width: 5rem;
     padding-left: 10px;
+=======
+    width: 8rem;
+    padding: .5rem 2rem;
+>>>>>>> c66d7f8 (atualizando responsividade home)
 }
 
 .paginas ul{
@@ -329,19 +334,6 @@ main{
     justify-content: center;
 }
 
-.titulos {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.titulos a {
-    color: var(--cores-letra);
-    margin-right: 10rem;
-    margin-top: 4.5rem;
-    margin-bottom: .2rem;
-}
-
 h1 {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     color: white;
@@ -520,12 +512,13 @@ footer{
     header{
         height: 5rem;
         width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
     #logo-mobile{
         width: 5rem;
-        padding: 0;
-        margin: 0;
+        padding-right: 10px;
     }
 
     #navbar {
@@ -557,6 +550,7 @@ footer{
         display: flex;
         align-items: center;
         justify-content: center;
+        
     }
     #check-menu{
         opacity: 0;
