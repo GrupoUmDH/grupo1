@@ -158,6 +158,10 @@ header{
 
 /* CONFIGURAÇÃO MAIN*/
 
+main {
+    padding-top: 20px;
+}
+
 main > h1{
     color: var(--cores-letra);
     font-size: 2rem;

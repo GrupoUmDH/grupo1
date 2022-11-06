@@ -9,37 +9,41 @@
     --cores-objetos: #580003;
 }
 
-* {
+*{
     margin: 0;
+    padding: 0; 
+}
+ 
+body{
     padding: 0;
-    box-sizing: border-box;
+    margin: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
 }
+ 
+body * {
+    font-family: 'Inter',Arial, Helvetica, sans-serif;
+    font-size: 100%;
+   }
 
-
-
-/* <CONTEÚDO DO HEADER> */
-
-#navbar-mobile {
-    display: none;
-}
-
-header {
+/* CONTEÚDO DO HEADER */
+header{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     width: 100%;
     font-size: 1.5rem;
-
+    height: 5rem;
 }
-
-body {
-    background-color: var(--background-color);
-}
-
+ 
 /* NAVBAR */
-#navbar {
-    height: 100%;
+#navbar{
+    height:100%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -48,10 +52,9 @@ body {
  
 .navlogo{
     display: flex;
-    width: 7rem;
+    width: 5rem;
+    padding-left: 10px;
 }
- 
-
 
 .paginas ul{
     display: flex;
@@ -60,13 +63,12 @@ body {
     gap: 3rem;
     padding: 0;
     list-style: none;
-    padding-left: 3rem;
  
 }
-
-.paginas a {
+ 
+.paginas a{
     text-decoration: none;
-    font: 1em 'Inter';
+    font: .9em 'Inter';
     text-align: center;
     color: white;
     flex-wrap: nowrap;
@@ -74,36 +76,36 @@ body {
 .paginas li{
     font-size: 1.3rem;
 }
-
  
 .content{
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 0.1rem;
+    padding-right: 10px;
     justify-content: space-around;
-
+ 
 }
-
-.content a {
+.content a{
     margin-top: 5px;
-    margin-right: 2rem;
-
+   
 }
-
-.content img {
+.content img{
     width: 1.5rem;
 }
-
-.navbusca {
+ 
+.navbusca{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding-left: 3rem;
+    padding-left: 1.5rem;
 }
 
-.navbusca button {
+#navbar-mobile {
+    display: none;
+}
+ 
+.navbusca button{
     display: flex;
     position: relative;
     left: -1.7rem;
@@ -111,7 +113,7 @@ body {
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    background-color: var(--cores-chaves);
+    background-color: var(--cores-chaves) ;
     border-radius: 0 10px 10px 0;
     border: none;
 } 
@@ -122,10 +124,10 @@ body {
     font-size: 15px;
     background-color: var(--cores-chaves);
     fill: var(--cores-letra);
-
+ 
 }
-
-.navbusca>input {
+ 
+.navbusca > input{
     background-color: var(--cores-letra);
     width: 14rem;
     outline: none;
@@ -141,8 +143,8 @@ body {
     display: block;
  
 }
-
-.navuser {
+ 
+.navuser{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
