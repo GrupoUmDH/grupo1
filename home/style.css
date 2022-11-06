@@ -329,6 +329,19 @@ main{
     justify-content: center;
 }
 
+.titulos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.titulos a {
+    color: var(--cores-letra);
+    margin-right: 10rem;
+    margin-top: 4.5rem;
+    margin-bottom: .2rem;
+}
+
 h1 {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     color: white;
@@ -527,6 +540,7 @@ footer{
         flex-direction: column;
         position: fixed;
         z-index: 100;
+        top: 1;
     }
     #ativo-menu{
         height: 5rem;
