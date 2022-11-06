@@ -52,13 +52,8 @@ header{
  
 .navlogo{
     display: flex;
-<<<<<<< HEAD
-    width: 5rem;
-    padding-left: 10px;
-=======
     width: 8rem;
     padding: .5rem 2rem;
->>>>>>> c66d7f8 (atualizando responsividade home)
 }
 
 .paginas ul{
