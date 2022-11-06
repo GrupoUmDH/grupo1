@@ -33,6 +33,11 @@ body{
 }
 
 /* NAVBAR */
+
+#navbar-mobile {
+    display: none;
+}
+
 #navbar{
     height:100%;
     width: 100%;
