@@ -11,13 +11,26 @@
 
 *{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    padding: 0; 
 }
+ 
+body{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+ 
+body * {
+    font-family: 'Inter',Arial, Helvetica, sans-serif;
+    font-size: 100%;
+   }
 
-
-
-/* <CONTEÚDO DO HEADER> */
+/* CONTEÚDO DO HEADER */
 header{
     display: flex;
     justify-content: center;
@@ -25,19 +38,10 @@ header{
     flex-direction: row;
     width: 100%;
     font-size: 1.5rem;
-  
+    height: 5rem;
 }
-
-body{
-    background-color: var(--background-color);
-}
-
+ 
 /* NAVBAR */
-
-#navbar-mobile {
-    display: none;
-}
-
 #navbar{
     height:100%;
     width: 100%;
@@ -48,10 +52,9 @@ body{
  
 .navlogo{
     display: flex;
-    width: 7rem;
+    width: 5rem;
+    padding-left: 10px;
 }
- 
-
 
 .paginas ul{
     display: flex;
@@ -60,13 +63,13 @@ body{
     gap: 3rem;
     padding: 0;
     list-style: none;
-    padding-left: 3rem;
+    padding-left: 2rem;
  
 }
  
 .paginas a{
     text-decoration: none;
-    font: 1em 'Inter';
+    font: .9em 'Inter';
     text-align: center;
     color: white;
     flex-wrap: nowrap;
@@ -74,21 +77,19 @@ body{
 .paginas li{
     font-size: 1.3rem;
 }
-
  
 .content{
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 0.1rem;
+    padding-right: 10px;
     justify-content: space-around;
  
 }
 .content a{
     margin-top: 5px;
-    margin-right: 2rem;
- 
+   
 }
 .content img{
     width: 1.5rem;
@@ -98,7 +99,11 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding-left: 3rem;
+    padding-left: 1.5rem;
+}
+
+#navbar-mobile {
+    display: none;
 }
  
 .navbusca button{
@@ -147,8 +152,6 @@ body{
     gap: .8rem;
     align-items: baseline;
 }
- 
-/* </CONTEÚDO HEADER> */
 
 
 /* <CONTEUDO MAIN> */
@@ -156,51 +159,46 @@ body{
 main{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 /*BANNER */
 
 main > section .content-banner{
-    display: flex;
+    width: 100%;
 }
 
 main > section > .container{
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 3rem;
-    flex-direction: column;
-    align-items:flex-end;
+    padding: 3em 0 0 0;
 
 }
 
 .banner {
     display: flex;
-    justify-content: flex-start;
     background-image:
     linear-gradient(180deg, var(--background-color) 1.38%, rgba(5, 5, 5, 0.61) 43.8%, var(--background-color) 101.48%),
     url('/img/banners/FILMES/homem-aranha-NWH.png');
     background-size: cover;
     width: 100%;
+    padding: 0;
+    margin: 0;
 
 }
 
 .banner img{
-    position: relative;
-    width: 34%;
-    padding: 3%;
-    display: flex;
+    width: 28%;
+    padding: 1em;
 }
 
 .banner > .descricao-container{
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 3;
+    width: 72%;
 }
 
 .banner > .descricao-container > div:first-child {
+    position: relative;
     display: flex;
     justify-content: flex-end;
+    width: 90%;
     
 }
 
@@ -222,12 +220,11 @@ main > section > .container{
     gap: 1rem;
     color: var(--cores-letra);
     margin-top: 2rem;
-    padding-right: 5rem;
+    width: 80%;
 }
 
 .genero :first-of-type{
     color: var(--cores-chaves);
-    font-weight: 600;
     margin-right: 3%;
 }
 
@@ -235,18 +232,16 @@ main > section > .container{
 
 .banner > .descricao-container > div:nth-child(3) {
     display: flex;
-    flex-direction: row;
     margin-top: 30%;
-    align-items: flex-end;
-    width: 100%;
+    width: 80%;
 }
+
 
 /* BOTÕES ASSISTIR\COMPRAR\ALUGAR */
 
 .botoes-compra{
     display: flex;
     width: 100%;
-    margin-right: 3%;
     justify-content: flex-end;
     flex-direction: row;
     color: var(--cores-letra);
@@ -258,20 +253,17 @@ main > section > .container{
    display: flex;
    justify-content: center;
    align-items: center;
-   font-size: 1.2rem;
    background-color: var(--cores-objetos);
    color: var(--cores-letra);
    border: none;
    border-radius: 10px;
-   width: 150%;
+   width: 10em;
    height: 100%;
    cursor: pointer;
 }
 .botoes-compra p{
    display: flex;
    font-size: 1rem;
-   right: -11%;
-   position: relative;
 }
 
 
@@ -315,7 +307,7 @@ section .faixas .f2{
     font-weight: 600;
     color: var(--cores-letra);
     background-color: var(--cores-chaves);
-    width: 100%;
+    width: 90%;
     height: 60%;
 }
 
