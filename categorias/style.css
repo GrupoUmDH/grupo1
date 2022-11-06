@@ -9,8 +9,10 @@
     --cores-objetos: #580003;
 }
 
-*{
+body {
     background-color: var(--background-color);
+    padding: 0;
+    margin: 0;
 }
 
 /* CONTEÚDO DO HEADER */
@@ -21,16 +23,10 @@ header{
     flex-direction: row;
     width: 100%;
     font-size: 1.5rem;
-  
+    height: 5rem;
 }
-
-
+ 
 /* NAVBAR */
-
-#navbar-mobile {
-    display: none;
-}
-
 #navbar{
     height:100%;
     width: 100%;
@@ -38,17 +34,12 @@ header{
     align-items: center;
     justify-content: space-between;
 }
-
+ 
 .navlogo{
     display: flex;
-    width: 7rem;
-    padding: .5rem 2rem;
+    width: 5rem;
+    padding-left: 10px;
 }
-
-
-
-
-
 
 .paginas ul{
     display: flex;
@@ -57,17 +48,13 @@ header{
     gap: 3rem;
     padding: 0;
     list-style: none;
-
-    padding-left: 3rem;
+    padding-left: 2rem;
  
-
-
-
 }
-
+ 
 .paginas a{
     text-decoration: none;
-    font: 1em 'Inter';
+    font: .9em 'Inter';
     text-align: center;
     color: white;
     flex-wrap: nowrap;
@@ -75,33 +62,35 @@ header{
 .paginas li{
     font-size: 1.3rem;
 }
-
-
+ 
 .content{
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 0.1rem;
+    padding-right: 10px;
     justify-content: space-around;
-
+ 
 }
 .content a{
     margin-top: 5px;
-    margin-right: 2rem;
-
+   
 }
 .content img{
-    width: 1.5rem; 
+    width: 1.5rem;
 }
-
+ 
 .navbusca{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding-left: 3rem;
+    padding-left: 1.5rem;
 }
 
+#navbar-mobile {
+    display: none;
+}
+ 
 .navbusca button{
     display: flex;
     position: relative;
@@ -113,8 +102,7 @@ header{
     background-color: var(--cores-chaves) ;
     border-radius: 0 10px 10px 0;
     border: none;
-}
-
+} 
 .navbusca > button svg{
     display: flex;
     position: relative;
@@ -122,9 +110,9 @@ header{
     font-size: 15px;
     background-color: var(--cores-chaves);
     fill: var(--cores-letra);
-
+ 
 }
-
+ 
 .navbusca > input{
     background-color: var(--cores-letra);
     width: 14rem;
@@ -139,12 +127,9 @@ header{
     position: relative;
     left: -1rem;
     display: block;
-
  
-
-  
 }
-
+ 
 .navuser{
     display: flex;
     flex-direction: row;
@@ -187,7 +172,7 @@ hr {
     padding: .06rem;
 }
 
-p {
+.titulos > p {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -197,7 +182,7 @@ p {
     color: #B30006;
 }
 
-span {
+.titulos > span {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
