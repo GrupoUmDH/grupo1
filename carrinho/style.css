@@ -18,6 +18,11 @@
 
 
 /* <CONTEÚDO DO HEADER> */
+
+#navbar-mobile {
+    display: none;
+}
+
 header {
     display: flex;
     justify-content: center;
