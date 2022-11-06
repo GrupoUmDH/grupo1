@@ -520,13 +520,12 @@ footer{
     header{
         height: 5rem;
         width: 100%;
-        padding: 0;
-        margin: 0;
     }
 
     #logo-mobile{
         width: 5rem;
-        padding-right: 10px;
+        padding: 0;
+        margin: 0;
     }
 
     #navbar {
@@ -540,7 +539,6 @@ footer{
         flex-direction: column;
         position: fixed;
         z-index: 100;
-        top: 1;
     }
     #ativo-menu{
         height: 5rem;
@@ -559,7 +557,6 @@ footer{
         display: flex;
         align-items: center;
         justify-content: center;
-        
     }
     #check-menu{
         opacity: 0;
