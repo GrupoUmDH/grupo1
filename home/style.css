@@ -294,20 +294,16 @@ main{
 }
 
 .titulos  a{    
-<<<<<<< HEAD
     display: flex;
     text-decoration: none;
     padding-bottom: .2rem;
     color: var(--cores-chaves);
     font-size: 1.2rem;
-=======
     display: flex;
     text-decoration: none;
     padding-bottom: .2rem;
     color: var(--cores-chaves);
     font-size: 1.2rem;
->>>>>>> 3df79d6 (atualizando)
-
 }
 
 .populares{
@@ -520,21 +516,14 @@ footer{
 
     header{
         height: 5rem;
-<<<<<<< HEAD
->>>>>>> 3e4e0c6 (atualizando)
-=======
         width: 100%;
->>>>>>> 3df79d6 (atualizando)
     }
 
     #logo-mobile{
         width: 5rem;
-<<<<<<< HEAD
         padding-right: 10px;
-=======
         padding: 0;
         margin: 0;
->>>>>>> 3df79d6 (atualizando)
     }
 
     #logo-mobile{
@@ -629,8 +618,4 @@ footer{
         align-items: center;
         justify-content: space-between; 
     }
-
-<<<<<<< HEAD
-}
-=======
 }
