@@ -52,11 +52,9 @@ header{
  
 .navlogo{
     display: flex;
-    width: 8rem;
-    padding: .5rem 2rem;
+    width: 5rem;
+    padding-left: 10px;
 }
- 
-
 
 .paginas ul{
     display: flex;
@@ -65,13 +63,13 @@ header{
     gap: 3rem;
     padding: 0;
     list-style: none;
-    padding-left: 3rem;
+    padding-left: 2rem;
  
 }
  
 .paginas a{
     text-decoration: none;
-    font: 1em 'Inter';
+    font: .9em 'Inter';
     text-align: center;
     color: white;
     flex-wrap: nowrap;
@@ -79,14 +77,13 @@ header{
 .paginas li{
     font-size: 1.3rem;
 }
-
  
 .content{
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 0.5rem;
+    padding-right: 10px;
     justify-content: space-around;
  
 }
@@ -102,7 +99,7 @@ header{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding-left: 3rem;
+    padding-left: 1.5rem;
 }
 
 #navbar-mobile {
