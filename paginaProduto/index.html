@@ -5,44 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/paginaProduto/style.css">
-    <title>Lumiere</title>
+    <title>PRODUTO</title>
 </head>
 <body>
     <!--CONTEÚDO HEADER/NAVBAR-->
     <header>
+        
+        <nav id="navbar-mobile">
+            <div id="ativo-menu">
+                <div id="menu-mobile">
+                    <input type="checkbox" id="check-menu">
+                    <label for="check-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+                <img id="logo-mobile" src="/img/logo.svg" />
+            </div>
+            <div id="op-menu">
+                <div id="menu-content">
+
+                </div>
+                <div id="background-menu"></div>
+            </div>
+            
+        </nav>
+
         <nav id="navbar">
             <img class="navlogo" src="/img/logo.svg" alt="">
             <div class="paginas">
-            <ul>
-                <li> <a href="/home/index.html">Home</a> </li>
-                <li> <a href="/categorias/index.html">Categorias</a> </li>
-                <li> <a href="/suporte/index.html">Suporte</a> </li>
-                <li> <a href="/sobre-nos/index.html">Sobre Nós</a> </li>
-            </ul>
-        </div>
-
-        <div class="content">
-              <form class="column" action="" method="get">
+                <ul>
+                    <li> <a href="/home/index.html">Home</a> </li>
+                    <li> <a href="/categorias/index.html">Categorias</a> </li>
+                    <li> <a href="/suporte/index.html">Suporte</a> </li>
+                    <li> <a href="/sobre-nos/index.html">Sobre Nós</a> </li>
+                </ul>
+            </div>
+            <div class="content">
+                <form class="column" action="" method="get">
                     <div class="navbusca">
                         <input type="text" name="search" id="search">
-                        <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 
+                        <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 
                             457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7
                             376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1
                             0 208 0S416 93.1 416 208zM208 352c79.5
                             0 144-64.5 144-144s-64.5-144-144-144S64
-                            128.5 64 208s64.5 144 144 144z"/></svg></i></button>
+                            128.5 64 208s64.5 144 144 144z" />
+                            </svg></i></button>
                     </div>
-               </form>
-            <div class="navuser">
-               <a href="/carrinho/index.html">
-                    <img src="/img/ico/carrinho.png" />
-               </a>
-               <a href="/cadastro/index.html">
-                    <img src="/img/ico/user.png"/>
-               </a>
+                </form>
+                <div class="navuser">
+                    <a href="/carrinho/index.html">
+                        <img src="/img/ico/carrinho.png" />
+                    </a>
+                    <a href="/cadastro/index.html">
+                        <img src="/img/ico/user.png" />
+                    </a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     </header>
 
     <!--CONTEÚDO MAIN -->
@@ -83,11 +107,17 @@
                             
                             <div class="botoes-compra">
                                
-                                <div class="assitir"><button>Assitir</button></div>
-                                <p>R$19,99</p>
-                                <div class="assitir"><button>Comprar</button></div>
-                                <p>R$19,99</p>
-                                <div class="assitir"><button>Alugar</button></div>
+                                <div class="assitir">
+                                    <button>Assitir</button>
+                                </div>
+                                <div class="assitir">
+                                    <p>R$9,99</p>
+                                    <button>Comprar</button>
+                                </div>
+                                <div class="assitir">
+                                    <p>R$9,99</p>
+                                    <button>Alugar</button>
+                                </div>
                             </div>
 
                         </div>
