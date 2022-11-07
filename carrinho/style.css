@@ -25,6 +25,7 @@ html{
  
 body{
     width: 100%;
+    min-height: 100vh ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,18 +166,22 @@ header{
  
 /* CONFIGURAÇÃO IMAGEM CENTRAL*/
 main{
-    width: 100%;
+
+    max-width: 95%;
+    justify-content: space-around;
     height: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 4rem;
+    align-items: flex-start;
+    gap: 8rem;
  }
 
  /*SECTION CARRINHO*/
 
  .itens{
-    width: 50%;
+    margin: 3rem 0;
+
+    max-width: 50%;
 
  }
  .item{
@@ -215,7 +220,7 @@ main{
 
  .descricao-produto .container-preco{
     display: flex;
-    justify-content: space-between;
+    gap: 2rem;
     align-items: center;
  }
 
@@ -226,7 +231,6 @@ main{
     display: flex;
     gap: .5rem;
     align-items: center;
-
  }
 
  .descricao-produto img{
@@ -247,17 +251,24 @@ main{
  .descricao-produto button{ 
     background-color: var(--cores-objetos);
     border: none;
-    border-radius: 3rem;
-    font-weight: 700;
+    border-radius: 2rem;
+    font-weight: 600;
     padding: .5rem 1rem;
     color: white;
  }
 
+ .descricao-produto p{
+    color: var(--cores-letra);
+    align-items: center;
+ }
+
 .pagamento{
-    margin-top: 2rem;
-    font-size: 2rem;
+    align-self: center;
+    width: 30%;
+    margin-top: -10rem;
+    font-size: 1.5rem;
     gap: 2rem;
-    width: 40%;
+    flex-shrink: 0;
     color: var(--cores-chaves);
     display: flex;
     flex-direction: column;
@@ -267,7 +278,14 @@ main{
     gap: 3rem;
     padding: 1rem;
     background-color: var(--background-2);
-    border-radius: 15%;
+    border-radius: 10%;
+    
+}
+
+.resumo div span{
+    color: var(--cores-letra);
+    font-weight: 900;
+
 }
 
 .resumo *:not(hr){
@@ -280,19 +298,29 @@ main{
 }
 
 .resumo >div h2{
-    font-weight: 800;
+    font-weight: 900;
+    font-size: 2.1rem;
 }
 
 .resumo >div:first-child{
+    margin-bottom: -1rem;
+    align-items: center;
     padding-top: 1rem;
-    padding-left: 1rem;
+    padding-left: 2rem;
     padding-bottom: .5rem;
     text-transform: uppercase;
 }
 
-.resumo >div:nth-of-type(2){
+.resumo >div{
     padding: 1rem;
+}
 
+button{
+    color: var(--cores-letra);
+    background-color: var(--cores-chaves);
+    border: none;
+    border-radius: 1rem;
+    font-weight: 700;
 }
 
 
@@ -325,7 +353,15 @@ footer{
  
 /* RESPONSIVE */
 
-
+@media (max-width:1500px){
+    main{
+        max-width: 100%;
+        gap: 1rem;
+    } 
+    .pagamento{
+        width: 35%;
+    }
+}
 
 @media (max-width: 1024px){
     .paginas ul {
