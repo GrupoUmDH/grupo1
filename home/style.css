@@ -534,15 +534,16 @@ footer{
     
     #navbar-mobile {
         width: 100%;
-        background-color: #131313;
         display: flex;
         flex-direction: column;
         position: fixed;
         z-index: 100;
+        top: 0;
     }
     #ativo-menu{
         height: 5rem;
         width: 100%;
+        background-color: #131313;
         padding: 0;
         margin: 0;
         display: flex;
@@ -576,7 +577,7 @@ footer{
         width: 100%;
         border-radius: 30px;
         background: #B30006;
-        transition: .2seg ease-in-out;        
+        transition: .7seg ease-in-out;        
     }
     #menu-mobile > label span:nth-child(1){top: 10px}
     #menu-mobile > label span:nth-child(2){top: 20px}
@@ -595,6 +596,30 @@ footer{
     }
 
     /* Conteudo do menu-mobile */
+    #op-menu {
+        background-color: #131313;
+        opacity: .9;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: .5s;
+    }
+
+    #menu-content > ul {
+        color: white;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        background-color: #0C0C0C;
+    }
+
+    #menu-content > ul a {
+        text-decoration: none;
+        font: .7em 'Inter';
+        text-align: center;
+        color: white;
+        padding: 1rem;
+    }
     
 
     /* Estou ocultando na versão mobile o slide- pois ele ainda
@@ -610,4 +635,9 @@ footer{
         align-items: center;
         justify-content: space-between; 
     }
+}
+
+@keyframes deslizar {
+    0%      { transform: translateX(-100%); }
+    100%    { transform: translateX(0%); } 
 }
