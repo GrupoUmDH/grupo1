@@ -359,6 +359,14 @@ footer{
         flex-direction: column-reverse;
         align-items: flex-start;
     }
+    
+    .pagamento{
+        align-self: center;
+        margin-top: 2rem;
+        width: 60%;
+        margin-bottom: 3rem;
+        
+    }
 }
 
 @media (max-width: 1024px){
@@ -373,13 +381,13 @@ footer{
         align-items: center;
     }
     .itens {
-        max-width: 100%;
+        max-width: 90%;
     }
 
     .pagamento{
         margin-top: 0;
         margin-bottom: 2rem;
-        width: 100%;
+        width: 60%;
     
     }
 
