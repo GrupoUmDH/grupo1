@@ -537,7 +537,7 @@ footer{
         display: flex;
         flex-direction: column;
         position: fixed;
-        z-index: 100;
+        z-index: 10;
         top: 0;
     }
     #ativo-menu{
@@ -572,7 +572,6 @@ footer{
     }
     #menu-mobile > label span{
         position: absolute;
-        display: block;
         height: 5px;
         width: 100%;
         border-radius: 30px;
@@ -597,6 +596,7 @@ footer{
 
     /* Conteudo do menu-mobile */
     #op-menu {
+        
         background-color: #131313;
         opacity: .9;
         height: 100vh;
