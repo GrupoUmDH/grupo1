@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
+
 
 :root{
     --background-color:#0C0C0C;
@@ -32,7 +32,7 @@ body{
     align-items: center;
 }
  
-body {
+body * {
     font-family: 'Inter',Arial, Helvetica, sans-serif;
     font-size: 100%;
 }
@@ -271,15 +271,12 @@ main{
     gap: 3rem;
     padding: 1rem;
     background-color: var(--background-2);
-    border-radius: 10%;
-    font-family: 'Rajdhani', sans-serif;
-    
+    border-radius: 10%;   
 }
 
 .resumo div span{
     color: var(--cores-letra);
-    font-weight: 700;
-    font-size: 2.5rem;
+    font-weight: 900;
 }
 
 .resumo *:not(hr){
@@ -292,14 +289,8 @@ main{
 }
 
 .resumo >div h2{
-    font-weight: 700;
-    font-size: 3rem;
-}
-
-
-.resumo >div h3{
-    font-weight:600;
-    font-size: 2rem;
+    font-weight: 900;
+    font-size: 2.1rem;
 }
 
 .resumo >div:first-child{
@@ -309,17 +300,10 @@ main{
     padding-left: 2rem;
     padding-bottom: .5rem;
     text-transform: uppercase;
-    border-radius: 45%;
 }
 
 .resumo >div{
-    padding: 1.5rem 1rem;
-}
-
-.pagamento button{
-    padding: .7rem 0;
-    font-size: 3rem;
-    font-family: 'Rajdhani', sans-serif;
+    padding: 1rem;
 }
 
 button{
@@ -357,53 +341,26 @@ footer{
     } 
     .pagamento{
         width: 35%;
-        align-self: flex-start;
-        margin-top: 4rem;
-    }
-    
-    .resumo >div h2{
-        font-size: 2.2rem;
-    }
-
-
-    .resumo >div h3{
-        font-size: 1.5rem;
-    }
-    .resumo div span{     
-        font-size: 2.1rem;
-    }
-    
-    .resumo >div{
-        padding: 1.5rem 1rem;
-    }
-
-    .pagamento button{
-        padding: .7rem 0;
-        font-size: 1.8rem;
     }
 }
 
-@media (max-width:1280px){
-    main{
-        flex-direction: column;
-        align-items: center;
+@media (max-width:1300px){
+    .descricao-produto{
+        justify-content: center;
+    }
+
+    .descricao-produto p{
+        display: none;
     }
     
-    .pagamento{
-        margin-top: 2rem;
-        width: 60%;
-        margin-bottom: 3rem;
-        
+    .descricao-produto .container-preco {
+        display: flex;
+        gap: .5rem;
+        flex-direction: column-reverse;
+        align-items: flex-start;
     }
-    .resumo{
-        padding-top: 2rem ;
-    }
-    .itens{
-        max-width: 90%;
-
-    }
-
 }
+
 @media (max-width: 1024px){
     .paginas ul {
         display: none;
