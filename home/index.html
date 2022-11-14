@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/home/style.css">
+    <script src="/script/menu_mobile.js" defer></script>
     <title>LUMIERE</title>
 </head>
 
@@ -15,7 +16,7 @@
         <nav id="navbar-mobile">
             <div id="ativo-menu">
                 <div id="menu-mobile">
-                    <input type="checkbox" id="check-menu">
+                    <input type="checkbox" id="check-menu" >
                     <label for="check-menu">
                         <span></span>
                         <span></span>
@@ -26,9 +27,16 @@
             </div>
             <div id="op-menu">
                 <div id="menu-content">
-
+                    <hr>
+                    <ul>
+                        <li> <a href="/home/index.html">Home</a> </li>
+                        <li> <a href="/categorias/index.html">Categorias</a> </li>
+                        <li> <a href="/suporte/index.html">Suporte</a> </li>
+                        <li> <a href="/sobre-nos/index.html">Sobre Nós</a> </li>
+                    </ul>
+                    <hr>
+                    <span id="linha"></span>
                 </div>
-                <div id="background-menu"></div>
             </div>
             
         </nav>
@@ -71,14 +79,29 @@
     </header>
 
     <main>
-        <section class="central">
-            <div>
-                <img src="/img/central0.jpg" alt="">
-                <!-- <img src="/img/central00.jpg" alt="">
-                <img src="/img/central.jpg" alt="">
-                <img src="/img/central0.jpg" alt=""> -->
+        <section class="container-central">
+            <button id="prev">&lArr;</button>
+            <div class="carrossel-container">
+               <div class="carrossel">
+                    <div class="slide1">
+                        <img src="/img/banner1.jpg" alt="">
+                    </div>
+                    <div class="slide2">
+                        <img src="/img/banner2.jpg" alt="">
+                    </div>
+                    <div class="slide3">
+                        <img src="/img/banner3.jpg" alt="">
+                    </div>
+                    <div class="slide4">
+                        <img src="/img/banner4.jpg" alt="">
+                    </div>
+                </div>           
             </div>
+            <button id="next">&rArr;</button>
         </section>
+
+
+
 
         <h1 class="mais-populares">OS MAIS POPULARES</h1>
         <hr>
@@ -269,6 +292,8 @@
     <footer>
         <p>2022. LUMIERE © TODOS OS DIREITOS RESERVADOS </p>
     </footer>
+
+    
 </body>
 
 </html>
