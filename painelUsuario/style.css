@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root{
+    --background-color:#0C0C0C;
+    --background-2:#131313;
+    --cores-chaves:#B30006;
+    --cores-letra:  #FFFFFF;
+    --cores-objetos: #580003;
+}
+
+*{
+    background-color: var(--background-color);
+}
+
+/* CONTEÚDO DO HEADER */
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    font-size: 1.5rem;
+  
+}
+
+
+/* NAVBAR */
+#navbar{
+    height:100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navlogo{
+    display: flex;
+    width: 7rem;
+    padding: .5rem 2rem;
+}
+
+
+.paginas ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 3rem;
+    padding: 0;
+    list-style: none;
+    padding-left: 3rem;
+
+}
+
+.paginas a{
+    text-decoration: none;
+    font: 1em 'Inter';
+    text-align: center;
+    color: white;
+    flex-wrap: nowrap;
+}
+.paginas li{
+    font-size: 1.3rem;
+}
+
+
+.content{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.1rem;
+    justify-content: space-around;
+
+}
+.content a{
+    margin-top: 5px;
+    margin-right: 2rem;
+
+}
+.content img{
+    width: 1.5rem; 
+}
+
+.navbusca{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 3rem;
+}
+
+.navbusca button{
+    display: flex;
+    position: relative;
+    left: -1.7rem;
+    width: 4rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cores-chaves) ;
+    border-radius: 0 10px 10px 0;
+    border: none;
+}
+
+.navbusca > button svg{
+    display: flex;
+    position: relative;
+    width: 1.3rem;
+    font-size: 15px;
+    background-color: var(--cores-chaves);
+    fill: var(--cores-letra);
+
+}
+
+.navbusca > input{
+    background-color: var(--cores-letra);
+    width: 14rem;
+    outline: none;
+    padding: 0 10px;
+    height: 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    color: var(--background-2);
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    position: relative;
+    left: -1rem;
+    display: block;  
+}
+
+.navuser{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: .8rem;
+    align-items: baseline;
+}
+
+/* CONTEUDO MAIN */
+
+h1 {
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    color: white;
+    margin:  1.5rem;
+    font-size: 1.5rem;
+}
+ 
+h1 .container{
+    align-self: flex-start;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    color: white;
+    margin:  1.5rem;
+    font-size: 1.5rem;
+}
+ 
+h5 {
+    flex-direction:row;
+    justify-content: end;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-self: end;
+}
+ 
+hr {
+    background-color: #B30006;
+    color: red;
+    border: #B30006;
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    padding: .06rem;
+}
+
+.container p  {
+    display: block;
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.5rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;    
+}
+
+ 
+.container .historico{
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around;
+  
+    margin-top: 2rem;  
+}
+
+.container .historico img {
+    width: 150px;
+}
+
+.dados-usuario button {
+    margin: 2rem;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #B30006;
+    width: 10rem;
+    height: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.dados-usuario input {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: white;
+    height: 2rem;
+    width: 30rem;
+    margin: 2rem;
+}
+
+.alterar {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:space-around;
+    width: 100%;  
+    margin-top: 1rem;  
+    align-self: flex-start;
+}
+
+
+.btn {
+	display: inline-flex;
+	padding: 1rem;
+	background-color: var(--cores-chaves);
+	color: var(--cores-letra);
+	justify-content: center;
+	border-radius: 4px;
+}
+
+.modal {	
+	width: 100%;
+	height: 100%;
+	background-color: var(--background-color);
+	display: grid;
+	place-content: center;
+	visibility: hidden;
+	opacity:0;
+	transition: 1.3s;	
+}
+
+.modal:target{
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal_content {
+	background-color: var(--background-color);
+	width: 300px;
+	padding: 2rem 2rem 1rem;
+	border-radius: 4px;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+}
+
+.modal_link {
+	display: flex;
+	justify-content: center;
+	background-color: var(--cores-chaves);
+	padding: 0.7rem 1rem;
+	margin-top: 1rem;
+	border-radius: 4px;
+    color: var(--cores-letra);
+}
+
+.modal_link:hover{
+	background-color: var(--cores-chaves);
+}
+
+.modal_link:active{
+	background-color: var(--cores-chaves);
+}
+
+
+/*CONFIGURAÇÃO FOOTER*/
+footer{
+    text-align: center;
+    align-items: center;
+    padding-top: 1rem;
+    margin-bottom: 4rem;
+    font-family:'Inter' Arial, Helvetica, sans-serif;
+    color: var(--cores-chaves);
+
+}
+
+ 
+ 
+/* RESPONSIVE */
+ 
+@media (max-width: 600px) {
+    .paginas ul{
+        display: none;
+    }
+
+    .navbusca input{
+        display: none;
+    }
+
+    .navbusca button{
+        border-radius: 50rem;
+    }
+
+    .navlogo{
+        width: 7rem;
+        padding: .5rem 2rem;
+    }
+
+    .mais-populares{
+        font-size: 1.7rem;
+    }
+
+    .titulos h1{
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 602px) {
+    
+    .paginas ul{
+        font-size: .9rem;
+        padding-left: 1rem;
+    }
+    .navbusca{
+        padding-left: 1.5rem;
+    }
+
+    .navbusca input{
+        width: 10rem;
+    }
+
+}
