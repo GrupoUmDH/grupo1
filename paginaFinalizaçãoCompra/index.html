@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/paginaFinalizaçãoCompra/style.css">
-        <title>Lumiere</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/paginaFinalizaçãoCompra/style.css">
+    <title>Lumiere</title>
+</head>
 
 <body>
     <header>
@@ -56,84 +57,115 @@
                     <h1>Pagamento</h1>
                 </div>
                 <form action="">
-                        <div>
-                            
-                            <input class="content-input" type="text" placeholder="NOME*" name="nome" required>
-                        </div>
+                    <div>
 
-                        <div>
-                            <input class="content-input" type="text" placeholder="SOBRENOME*" name="sobrenome" required>
-                        </div>
+                        <input class="content-input" type="text" placeholder="NOME*" name="nome" required>
+                    </div>
 
-                        <div>
-                            <input class="content-input" type="text" placeholder="CPF/CNPJ*" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \ required>
-                        </div>
+                    <div>
+                        <input class="content-input" type="text" placeholder="SOBRENOME*" name="sobrenome" required>
+                    </div>
 
-                        <div>
-                            <input class="content-input" type="email" placeholder="EMAIL*" name="email" required>
-                        </div>
+                    <div>
+                        <input class="content-input" type="text" placeholder="CPF/CNPJ*" name="cpf"
+                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \ required>
+                    </div>
 
-                        <div>
-                            <input class="content-input" type="text" placeholder="ENDEREÇO*" name="endereço" required>
-                        </div>
+                    <div>
+                        <input class="content-input" type="email" placeholder="EMAIL*" name="email" required>
+                    </div>
 
-                        <div>
-                            <input class="content-input" type="text" placeholder="CÓDIGO POSTAL*" name="codigo-postal" required>
-                        </div>
+                    <div>
+                        <input class="content-input" type="text" placeholder="ENDEREÇO*" name="endereço" required>
+                    </div>
 
-                        <div>
-                            <input class="content-input" type="text" placeholder="ESTADO*" name="estado" required>
-                        </div>
+                    <div>
+                        <input class="content-input" type="text" placeholder="CÓDIGO POSTAL*" name="codigo-postal"
+                            required>
+                    </div>
 
-                        <div>
-                            <input class="content-input" type="text" placeholder="CIDADE*" name="cidade" required>
-                        </div>
+                    <div>
+                        <input class="content-input" type="text" placeholder="ESTADO*" name="estado" required>
+                    </div>
 
-                        <div>
-                            <input class="content-input" type="text" placeholder="PAÍS*" name="país" required>
-                        </div>
+                    <div>
+                        <input class="content-input" type="text" placeholder="CIDADE*" name="cidade" required>
+                    </div>
 
-                        <div class="checkboxe">
-                            <input type="checkbox">
-                            <p>Salvar para pedidos futuros
-                            </p>
-                        </div>
+                    <div>
+                        <input class="content-input" type="text" placeholder="PAÍS*" name="país" required>
+                    </div>
 
-                        <div class="payment">
-                            <div class="input-pay">
-                                <input type="radio" name="pay">
-                                <img src="/img/ico/credit-card.svg" alt="">
-                            </div>
-                            <div class="input-pay">
-                                <input type="radio" name="pay">
-                                <img src="/img/ico/pagseguro1.svg" alt="">
-                            </div>
-                            <div class="input-pay">
-                                <input type="radio" name="pay">
-                                <img class="pic" src="/img/ico/pix.svg" alt="">
-                            </div>
-                            <div class="input-pay">
-                                <input type="radio" name="pay">
-                                <img src="/img/ico/boleto.svg" alt="">
-                            </div>
-                        </div>
+                    <div class="checkboxe">
+                        <input type="checkbox">
+                        <p>Salvar para pedidos futuros
+                        </p>
+                    </div>
 
-                        <div class="pay-button">
-                            <button type="submit">Confirmar</button>
+                    <div class="payment">
+                        <div class="input-pay">
+                            <input type="radio" name="pay">
+                            <img src="/img/ico/credit-card.svg" alt="">
                         </div>
+                        <div class="input-pay">
+                            <input type="radio" name="pay">
+                            <img src="/img/ico/pagseguro1.svg" alt="">
+                        </div>
+                        <div class="input-pay">
+                            <input type="radio" name="pay">
+                            <img class="pic" src="/img/ico/pix.svg" alt="">
+                        </div>
+                        <div class="input-pay">
+                            <input type="radio" name="pay">
+                            <img src="/img/ico/boleto.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="pay-button">
+                        <button type="submit">Confirmar</button>
+                    </div>
 
                 </form>
             </div>
-            
-            <div class="content-pagamento">
 
+            <div class="content-pagamento">
+                <section class="resumo">
+                    <div>
+                        <h2>RESUMO DO PEDIDO</h2>
+                    </div>
+                    <br>
+                    <hr>
+                    <div>
+                        <h3>CARRINHO: X ITENS</h3>
+                        <span>R$19,90</span>
+                    </div>
+                    <br>
+                    <hr>
+                    <div>
+                        <h3>DESCONTO</h3>
+                        <span>R$19,90</span>
+                    </div>
+                    <br>
+                    <hr>
+                    <div>
+                        <h2>TOTAL</h2>
+                        <span>R$19,90</span>
+                    </div>
+                    <br>
+                </section>
+                <button>finalizar pedido</button>
             </div>
 
         </section>
     </main>
 
 
+    <hr>
+    <footer>
+        <p>2022. LUMIERE © TODOS OS DIREITOS RESERVADOS </p>
+    </footer>
 
 
 </body>
+
 </html>
