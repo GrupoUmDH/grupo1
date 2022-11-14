@@ -40,6 +40,7 @@ nextBtn.onclick = () => {
 prevBtn.onclick = () => {
     if(counter <=0) return
     counter--
+    carrossel.style.transition= ".6s"
     carrossel.style.transform = "translateX(" + -width * counter + "px)"
 }
 
