@@ -75,7 +75,7 @@ header{
     align-items: center;
     justify-content: space-between;
 }
-
+ 
 .navlogo {
     width: 8.3rem;
     padding: .5rem 2rem;
@@ -112,8 +112,13 @@ header{
 }
 .content a{
     margin-top: 5px;
+   
     gap: 0.5rem;
     justify-content: space-around; 
+}
+
+.content a{
+    margin-top: 5px;   
 }
 
 .content img{
@@ -882,4 +887,3 @@ footer{
         align-items: center;
         justify-content: space-between; 
     }
-}
