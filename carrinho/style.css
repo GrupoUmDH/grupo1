@@ -75,21 +75,10 @@ header{
     align-items: center;
     justify-content: space-between;
 }
- 
-<<<<<<< HEAD
-.navlogo{
-    display: flex;
-<<<<<<< HEAD
-    width: 5rem;
-    padding-left: 10px;
-=======
-    width: 7rem;
-=======
+
 .navlogo {
     width: 8.3rem;
->>>>>>> 59eb47da9227a69b03d2709e3da45c9fed20e7d3
     padding: .5rem 2rem;
->>>>>>> main
 }
 .paginas ul{
     display: flex;
@@ -97,12 +86,7 @@ header{
     flex-wrap: nowrap;
     gap: 3rem;
     padding: 0;
-<<<<<<< HEAD
     list-style: none;
- 
-=======
-    list-style: none; 
->>>>>>> main
 }
  
 .paginas a{
@@ -122,25 +106,16 @@ header{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-<<<<<<< HEAD
     padding-right: 10px;
     justify-content: space-around;
  
 }
 .content a{
     margin-top: 5px;
-   
-}
-=======
     gap: 0.5rem;
     justify-content: space-around; 
 }
 
-.content a{
-    margin-top: 5px;   
-}
-
->>>>>>> main
 .content img{
     width: 1.5rem;
 }
@@ -175,12 +150,7 @@ header{
     width: 1.3rem;
     font-size: 15px;
     background-color: var(--cores-chaves);
-<<<<<<< HEAD
     fill: var(--cores-letra);
- 
-=======
-    fill: var(--cores-letra); 
->>>>>>> main
 }
  
 .navbusca > input{
@@ -282,11 +252,11 @@ main{
 
  .descricao-produto h2{
     font-size: 1.5rem;
-    color: white;  
+    color: var(--cores-letra);
  } 
 
  .descricao-produto span{ 
-    color: white;  
+    color: var(--cores-letra);
  }
 
  .descricao-produto button{ 
@@ -295,7 +265,7 @@ main{
     border-radius: 2rem;
     font-weight: 600;
     padding: .5rem 1rem;
-    color: white;
+    color: var(--cores-letra);
  }
 
  .descricao-produto p{
@@ -505,10 +475,6 @@ footer{
 }
  
 @media (max-width: 820px) {
-<<<<<<< HEAD
-
-=======
->>>>>>> main
     header{
         height: 5rem;
         width: 100%;
@@ -522,7 +488,6 @@ footer{
     }
 
     #navbar {
-<<<<<<< HEAD
         display: none;
     }
     
@@ -603,7 +568,6 @@ footer{
     .titulos{
         align-items: center;
         justify-content: space-between; 
-=======
         display: none;
     }
     
@@ -645,7 +609,7 @@ footer{
         width: 80%;
     }
 
-}
+
  @media (max-width: 768px) {
     main{
         align-items: stretch;
@@ -863,7 +827,6 @@ footer{
 
     #check-menu{
         opacity: 0;
->>>>>>> main
     }
 
     #menu-mobile > label {
@@ -919,3 +882,4 @@ footer{
         align-items: center;
         justify-content: space-between; 
     }
+}

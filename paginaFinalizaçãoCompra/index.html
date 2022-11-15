@@ -11,6 +11,25 @@
 
 <body>
     <header>
+        <nav id="navbar-mobile">
+            <div id="ativo-menu">
+                <div id="menu-mobile">
+                    <input type="checkbox" id="check-menu">
+                    <label for="check-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+                <img id="logo-mobile" src="/img/logo.svg" />
+            </div>
+            <div id="op-menu">
+                <div id="menu-content">
+                </div>
+                <div id="background-menu"></div>
+            </div>
+        </nav>
+        
         <nav id="navbar">
             <img class="navlogo" src="/img/logo.svg" alt="">
             <div class="paginas">
@@ -50,15 +69,15 @@
     </header>
 
     <main>
+        <span class="pag-seguro">PAGAMENTO SEGURO</span>
         <section class="content-1">
 
             <div class="content-form">
                 <div>
-                    <h1>Pagamento</h1>
+                    <h1>Comprar</h1>
                 </div>
                 <form action="">
                     <div>
-
                         <input class="content-input" type="text" placeholder="NOME*" name="nome" required>
                     </div>
 
@@ -101,6 +120,7 @@
                         <p>Salvar para pedidos futuros
                         </p>
                     </div>
+                 </form>
 
                     <div class="payment">
                         <div class="input-pay">
@@ -125,7 +145,7 @@
                         <button type="submit">Confirmar</button>
                     </div>
 
-                </form>
+               
             </div>
 
             <div class="content-pagamento">
