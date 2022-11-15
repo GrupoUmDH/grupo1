@@ -8,6 +8,7 @@
     --cores-letra:  #FFFFFF;
     --cores-objetos: #580003;
 }
+
 *{
     margin: 0;
     padding: 0; 
@@ -161,9 +162,9 @@ main{
     justify-content: center;
     align-items: center;
     gap: 4rem;
- }
+}
 
- .cadastro {
+.cadastro {
     display: block;
     text-align: center;
     align-items: center;
@@ -182,14 +183,15 @@ h5{ color: #FFFFFF;
     justify-content: center;
 }
 
-label{
-    color: #FFFFFF;
+.form-card {
+    width: 100%;
     display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
- 
+
 .cadastro-formulario input{
     display: flex;
     text-align: left;
@@ -216,7 +218,13 @@ label{
     height: 2.5rem;
     margin-bottom: 5rem;
 
-} */
+} 
+
+.error {
+    color: #B30006;
+    padding: 0;
+    margin: 0;
+}
 
 
 hr {
