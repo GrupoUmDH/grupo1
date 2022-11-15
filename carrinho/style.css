@@ -75,11 +75,9 @@ header{
     align-items: center;
     justify-content: space-between;
 }
-
-.navlogo{
-    display: flex;
-    width: 5rem;
-    padding-left: 10px;
+ 
+.navlogo {
+    width: 8.3rem;
     padding: .5rem 2rem;
 }
 .paginas ul{
@@ -114,6 +112,7 @@ header{
 }
 .content a{
     margin-top: 5px;
+   
     gap: 0.5rem;
     justify-content: space-around; 
 }
@@ -258,11 +257,11 @@ main{
 
  .descricao-produto h2{
     font-size: 1.5rem;
-    color: white;  
+    color: var(--cores-letra);
  } 
 
  .descricao-produto span{ 
-    color: white;  
+    color: var(--cores-letra);
  }
 
  .descricao-produto button{ 
@@ -271,7 +270,7 @@ main{
     border-radius: 2rem;
     font-weight: 600;
     padding: .5rem 1rem;
-    color: white;
+    color: var(--cores-letra);
  }
 
  .descricao-produto p{
@@ -341,7 +340,6 @@ button{
     border: none;
     border-radius: 1rem;
     font-weight: 700;
-    
 }
 
 hr {
@@ -616,7 +614,7 @@ footer{
         width: 80%;
     }
 
-}
+
  @media (max-width: 768px) {
     main{
         align-items: stretch;
