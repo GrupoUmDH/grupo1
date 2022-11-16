@@ -20,7 +20,6 @@ window.addEventListener('load', function () {
         let hasError = false;
 
         event.preventDefault();
-        console.log("testando...");
         removeErros();
 
         inputList.forEach(input => {
@@ -35,4 +34,9 @@ window.addEventListener('load', function () {
         }
 
     });
+
+    const verificaUser = function(input){
+        
+    }
+
 });
