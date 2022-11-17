@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 :root{
-    /* --background-color:#0C0C0C;
-    --background-2:#131313; */
+    --background-color:#0C0C0C;
+    --background-2:#131313;
     --cores-chaves:#B30006;
     --cores-letra:  #FFFFFF;
     --cores-objetos: #580003;
@@ -163,6 +163,16 @@ header{
 }
  
 /* formulario */
+.error{
+    color: white;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.invisible{
+    display: none;
+}
 
 .content-1{
     display: flex;
