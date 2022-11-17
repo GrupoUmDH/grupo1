@@ -62,7 +62,6 @@ header{
     gap: 3rem;
     padding: 0;
     list-style: none;
- 
 }
  
 .paginas a{
@@ -182,15 +181,15 @@ h5{ color: #FFFFFF;
     justify-content: center;
 }
 
-label{
+/* label{
     color: #FFFFFF;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
- 
-.cadastro-formulario input{
+  */
+.cadastro-produto input{
     display: flex;
     text-align: left;
     align-items: center;
