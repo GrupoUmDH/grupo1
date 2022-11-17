@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/cadastro/style.css">
+    <script src="/script/valida.js" defer></script>
     <title>CADASTRO</title>
 </head>
 
@@ -73,25 +74,19 @@
 
     <!--CONTEÚDO MAIN -->
     <main>
-        <div class="cadastro">
-            <form action="registro" method="POST">
-                <a href="">
+        <div class="cadastro cadastro-formulario">
+            <form class="form-card" action="/registro" method="post">
+                <a>
                     <img src="/img/ico/user.png" />
                     <h5>Editar</h5>
-                    <!--<label>Editar</label>
-                     <input type="file" name="avatar" accept=".jpg" multiple>-->
                 </a>
-                <div class="cadastro-formulario">
-                    <label for="e-mail"></label>
-                    <input placeholder="COLOQUE SEU EMAIL..." type="email" name="email" id="email">
-                    <label for="e-mail"></label>
-                    <input placeholder="NOME USUÁRIO.." type="text" name="name" id="name" Coloque seu nome>
-                    <label for="e-mail"></label>
-                    <input placeholder="SENHA" type="password" name="password" id="password">
-                    <button type="submit">CRIAR A MINHA CONTA</button>
-                </div>
+                <input placeholder="COLOQUE SEU EMAIL..." type="email" name="email">
+                <input placeholder="NOME USUÁRIO.." type="text" name="name">
+                <input placeholder="SENHA" type="password" name="password">
+                <button type="submit">
+                    CRIAR A MINHA CONTA
+                </button>
             </form>
-
         </div>
       
     </main>
