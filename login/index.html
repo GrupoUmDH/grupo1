@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/login/style.css">
+    <script src="/script/valida.js" defer></script>
     <title>LOGIN</title>
 </head>
 
@@ -13,26 +14,25 @@
     <!--CONTEÚDO MAIN -->
     <main>
         <div class="login">
-            <form action="login" method="POST">
-                <img src="/img/ico/user-login.png" />
-                <hr>
-                <span class="title">LOGIN</span>
+            <img src="/img/ico/user-login.png" />
+            <hr>
+            <h4>LOGIN</h4>
 
-                <div class="login-formulario">
-                    <label for="name"></label>
-                    <input placeholder="NOME USUÁRIO..." type="text" name="name" id="name" Coloque seu nome>
-                    <label for="password"></label>
-                    <input placeholder="SENHA" type="password" name="password" id="password">
-                    <button type="submit">LOGIN</button>
-                    <hr>
-                </div>
-                <div class="cadastro">
-                    <span>Ainda não tem cadastro? </span>
-                    <br>
-                    <a href="/cadastro/index.html"> Cadastre-se aqui</a>
-                </div>
-            </form>
-
+            <div class="login-formulario">
+                <form class="form-card" method="post" action="">
+                    <input placeholder="USUÁRIO..." type="text" name="name">
+                    <input placeholder="SENHA" type="password" name="password">
+                    <button type="submit">
+                        LOGIN
+                    </button>
+                </form>
+            </div>
+            <hr>
+            <div class="cadastro">
+                <h4>Ainda não tem cadastro? </h4>
+                <br>
+                <a href="/cadastro/index.html"> Cadastre-se aqui</a>
+            </div>
         </div>
     </main>
 
