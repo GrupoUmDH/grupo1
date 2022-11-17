@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/paginaFinalizaçãoCompra/style.css">
-        <title>Lumiere</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/paginaFinalizaçãoCompra/style.css">
+    <link rel="stylesheet" href="/css/menu-mobile.css">
+    <script src="/script/menu_mobile.js" defer></script>
+    <title>Lumiere</title>
+</head>
 
 <body>
     <header>
+        <nav id="navbar-mobile">
+            <div id="ativo-menu">
+                <div id="menu-mobile">
+                    <input type="checkbox" id="check-menu">
+                    <label for="check-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+                <img id="logo-mobile" src="/img/logo.svg" />
+            </div>
+            <div id="op-menu">
+                <div id="menu-content">
+                    <hr>
+                    <ul>
+                        <li> <a href="/home/index.html">Home</a> </li>
+                        <li> <a href="/categorias/index.html">Categorias</a> </li>
+                        <li> <a href="/suporte/index.html">Suporte</a> </li>
+                        <li> <a href="/sobre-nos/index.html">Sobre Nós</a> </li>
+                    </ul>
+                    <hr>
+                    <span id="linha"></span>
+                </div>
+            </div>
+        </nav>
+
         <nav id="navbar">
             <img class="navlogo" src="/img/logo.svg" alt="">
             <div class="paginas">
@@ -56,75 +86,77 @@
                     <h1>Pagamento</h1>
                 </div>
                 <form action="">
-                        <div>
-                            
-                            <input class="content-input" type="text" placeholder="NOME*" name="nome" required>
-                        </div>
+                    <div>
 
-                        <div>
-                            <input class="content-input" type="text" placeholder="SOBRENOME*" name="sobrenome" required>
-                        </div>
+                        <input class="content-input" type="text" placeholder="NOME*" name="nome" required>
+                    </div>
 
-                        <div>
-                            <input class="content-input" type="text" placeholder="CPF/CNPJ*" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \ required>
-                        </div>
+                    <div>
+                        <input class="content-input" type="text" placeholder="SOBRENOME*" name="sobrenome" required>
+                    </div>
 
-                        <div>
-                            <input class="content-input" type="email" placeholder="EMAIL*" name="email" required>
-                        </div>
+                    <div>
+                        <input class="content-input" type="text" placeholder="CPF/CNPJ*" name="cpf"
+                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \ required>
+                    </div>
 
-                        <div>
-                            <input class="content-input" type="text" placeholder="ENDEREÇO*" name="endereço" required>
-                        </div>
+                    <div>
+                        <input class="content-input" type="email" placeholder="EMAIL*" name="email" required>
+                    </div>
 
-                        <div>
-                            <input class="content-input" type="text" placeholder="CÓDIGO POSTAL*" name="codigo-postal" required>
-                        </div>
+                    <div>
+                        <input class="content-input" type="text" placeholder="ENDEREÇO*" name="endereço" required>
+                    </div>
 
-                        <div>
-                            <input class="content-input" type="text" placeholder="ESTADO*" name="estado" required>
-                        </div>
+                    <div>
+                        <input class="content-input" type="text" placeholder="CÓDIGO POSTAL*" name="codigo-postal"
+                            required>
+                    </div>
 
-                        <div>
-                            <input class="content-input" type="text" placeholder="CIDADE*" name="cidade" required>
-                        </div>
+                    <div>
+                        <input class="content-input" type="text" placeholder="ESTADO*" name="estado" required>
+                    </div>
 
-                        <div>
-                            <input class="content-input" type="text" placeholder="PAÍS*" name="país" required>
-                        </div>
+                    <div>
+                        <input class="content-input" type="text" placeholder="CIDADE*" name="cidade" required>
+                    </div>
 
-                        <div class="checkboxe">
-                            <input type="checkbox">
-                            <p>Salvar para pedidos futuros
-                            </p>
-                        </div>
+                    <div>
+                        <input class="content-input" type="text" placeholder="PAÍS*" name="país" required>
+                    </div>
 
-                        <div class="payment">
-                            <div class="input-pay">
-                                <input type="radio" name="pay">
-                                <img src="/img/ico/credit-card.svg" alt="">
-                            </div>
-                            <div class="input-pay">
-                                <input type="radio" name="pay">
-                                <img src="/img/ico/pagseguro1.svg" alt="">
-                            </div>
-                            <div class="input-pay">
-                                <input type="radio" name="pay">
-                                <img class="pic" src="/img/ico/pix.svg" alt="">
-                            </div>
-                            <div class="input-pay">
-                                <input type="radio" name="pay">
-                                <img src="/img/ico/boleto.svg" alt="">
-                            </div>
-                        </div>
+                    <div class="checkboxe">
+                        <input type="checkbox">
+                        <p>Salvar para pedidos futuros
+                        </p>
+                    </div>
 
-                        <div class="pay-button">
-                            <button type="submit">Confirmar</button>
+                    <div class="payment">
+                        <div class="input-pay">
+                            <input type="radio" name="pay">
+                            <img src="/img/ico/credit-card.svg" alt="">
                         </div>
+                        <div class="input-pay">
+                            <input type="radio" name="pay">
+                            <img src="/img/ico/pagseguro1.svg" alt="">
+                        </div>
+                        <div class="input-pay">
+                            <input type="radio" name="pay">
+                            <img class="pic" src="/img/ico/pix.svg" alt="">
+                        </div>
+                        <div class="input-pay">
+                            <input type="radio" name="pay">
+                            <img src="/img/ico/boleto.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="pay-button">
+                        <button type="submit">Confirmar</button>
+                    </div>
 
                 </form>
             </div>
-            
+
             <div class="content-pagamento">
 
             </div>
@@ -136,4 +168,5 @@
 
 
 </body>
+
 </html>
