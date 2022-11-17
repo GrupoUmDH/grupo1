@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/painelUsuario/style.css">
+    <link rel="stylesheet" href="/css/menu-mobile.css">
+    <script src="/script/menu_mobile.js" defer></script>
     <script src="https://kit.fontawesome.com/138c897f29.js" crossorigin="anonymous"></script>
     <title>Lumiere</title>
 </head>
+
 <body>
     <!--CONTEÚDO HEADER/NAVBAR-->
     <header>
+        <nav id="navbar-mobile">
+            <div id="ativo-menu">
+                <div id="menu-mobile">
+                    <input type="checkbox" id="check-menu">
+                    <label for="check-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+                <img id="logo-mobile" src="/img/logo.svg" />
+            </div>
+            <div id="op-menu">
+                <div id="menu-content">
+                    <hr>
+                    <ul>
+                        <li> <a href="/home/index.html">Home</a> </li>
+                        <li> <a href="/categorias/index.html">Categorias</a> </li>
+                        <li> <a href="/suporte/index.html">Suporte</a> </li>
+                        <li> <a href="/sobre-nos/index.html">Sobre Nós</a> </li>
+                    </ul>
+                    <hr>
+                    <span id="linha"></span>
+                </div>
+            </div>
+        </nav>
         <nav id="navbar">
             <img class="navlogo" src="/img/logo.svg" alt="">
             <div class="paginas">
@@ -51,118 +81,120 @@
 
     <main>
         <section class="container">
-        <div class="titulos">
-            <h1>Histórico de Pedidos</h1>              
-        </div>
+            <div class="titulos">
+                <h1>Histórico de Pedidos</h1>
+            </div>
 
-        <hr>
-        <section class="historico">            
-            <div>
-                <img src="/img/1.jpg" alt="">
-                <p>PANTERA NEGRA</p>                
-            </div>
-            <div>
-                <img src="/img/2.jpg" alt="">
-                <p>HOMEM ARANHA</p>                
-            </div>
-            <div>
-                <img src="/img/3.jpg" alt="">
-                <p>DEAD POOL 2</p>                
-            </div>
-            <div>
-                <img src="/img/4.jpg" alt="">
-                <p>VINGADORES</p>                
-            </div>
-            <div>
-                <img src="/img/5.jpg" alt="">
-                <p>HOMEM FORMIGA</p>                
-            </div>
-            <div>
-                <img src="/img/6.jpg" alt="">
-                <p>CORINGA</p>                
-            </div>
-            <div>
-                <img src="/img/filmes-home/2.png" alt="">
-                <p>HOMEM ARANHA</p>                
-            </div>
-            <div>
-                <img src="/img/filmes-home/1.png" alt="">
-                <p>TOP GUN</p>                
-            </div>
-            <div>
-                <img src="/img/filmes-home/3.png" alt="">
-                <p>SORRIA</p>                
-            </div>
-            <div>
-                <img src="/img/series-home/2.png" alt="">
-                <p>OBI-WAN KENOBI</p>                
-            </div>
-            <div>
-                <img src="/img/filmes-home/5.png" alt="">
-                <p>BLENDE</p>                
-            </div>
-            <div>
-                <img src="/img/filmes-home/6.png" alt="">
-                <p>HANNIBAL</p>                
-            </div>
-            <div>
-                <img src="/img/series-home/1.png" alt="">
-                <p>THE BOYS</p>                
-            </div>
-            <div>
-                <img src="/img/series-home/3.png" alt="">
-                <p>SANDMAN</p>                
-            </div>
-            <div>
-                <img src="/img/series-home/4.png" alt="">
-                <p>RAIO NEGRO</p>                
-            </div>
-            <div>
-                <img src="/img/series-home/5.png" alt="">
-                <p>RAIO NEGRO</p>                
-            </div>
-        </section>
+            <hr>
+            <section class="historico">
+                <div>
+                    <img src="/img/1.jpg" alt="">
+                    <p>PANTERA NEGRA</p>
+                </div>
+                <div>
+                    <img src="/img/2.jpg" alt="">
+                    <p>HOMEM ARANHA</p>
+                </div>
+                <div>
+                    <img src="/img/3.jpg" alt="">
+                    <p>DEAD POOL 2</p>
+                </div>
+                <div>
+                    <img src="/img/4.jpg" alt="">
+                    <p>VINGADORES</p>
+                </div>
+                <div>
+                    <img src="/img/5.jpg" alt="">
+                    <p>HOMEM FORMIGA</p>
+                </div>
+                <div>
+                    <img src="/img/6.jpg" alt="">
+                    <p>CORINGA</p>
+                </div>
+                <div>
+                    <img src="/img/filmes-home/2.png" alt="">
+                    <p>HOMEM ARANHA</p>
+                </div>
+                <div>
+                    <img src="/img/filmes-home/1.png" alt="">
+                    <p>TOP GUN</p>
+                </div>
+                <div>
+                    <img src="/img/filmes-home/3.png" alt="">
+                    <p>SORRIA</p>
+                </div>
+                <div>
+                    <img src="/img/series-home/2.png" alt="">
+                    <p>OBI-WAN KENOBI</p>
+                </div>
+                <div>
+                    <img src="/img/filmes-home/5.png" alt="">
+                    <p>BLENDE</p>
+                </div>
+                <div>
+                    <img src="/img/filmes-home/6.png" alt="">
+                    <p>HANNIBAL</p>
+                </div>
+                <div>
+                    <img src="/img/series-home/1.png" alt="">
+                    <p>THE BOYS</p>
+                </div>
+                <div>
+                    <img src="/img/series-home/3.png" alt="">
+                    <p>SANDMAN</p>
+                </div>
+                <div>
+                    <img src="/img/series-home/4.png" alt="">
+                    <p>RAIO NEGRO</p>
+                </div>
+                <div>
+                    <img src="/img/series-home/5.png" alt="">
+                    <p>RAIO NEGRO</p>
+                </div>
+            </section>
 
-        <div class="titulos">
-            <h1>Alterar Dados</h1>              
-        </div>  
-        <hr>
-        <section class="alterar">               
+            <div class="titulos">
+                <h1>Alterar Dados</h1>
+            </div>
+            <hr>
+            <section class="alterar">
                 <div class="formulario">
-                 <form action="dados" method="post">
+                    <form action="dados" method="post">
                         <div class="dados-usuario">
-                         <label for="e-mail"></label>
-                         <input placeholder="ALTERAR EMAIL..." type="email" name="email" id="email">
-                         <label for="nome"></label>
-                         <input placeholder="ALTERAR NOME DO USUÁRIO.." type="text" name="name" id="name" Coloque seu nome>
-                         <label for="senha"></label>
-                         <input placeholder="ALTERAR SENHA" type="password" name="password" id="password">
-                         <button type="submit">Confirmar alterações</button>
+                            <label for="e-mail"></label>
+                            <input placeholder="ALTERAR EMAIL..." type="email" name="email" id="email">
+                            <label for="nome"></label>
+                            <input placeholder="ALTERAR NOME DO USUÁRIO.." type="text" name="name" id="name" Coloque seu
+                                nome>
+                            <label for="senha"></label>
+                            <input placeholder="ALTERAR SENHA" type="password" name="password" id="password">
+                            <button type="submit">Confirmar alterações</button>
                         </div>
                     </form>
                 </div>
-            </section>    
-       
-        <div class="titulos">
-            <h1>Deseja cancelar a assinatura?</h1>              
-        </div>
-        <hr>
-        <section>
-            <a href="#modal" class="btn">Clique aqui para cancelar</a>
-            <div id="modal" class="modal">
-	        <div class="modal_content">
-		    <p>Assinatura cancelada com sucesso!</p>
-		    <a href="#" class="modal_link">Ok</a>
-	        </div>
-            </div>
-        </section>         
-    </section>
-</main>
+            </section>
 
-    
-<footer>
-    <hr>
-    <p> 2022. LUMIERE © TODOS OS DIREITOS RESERVADOS </p>
-</footer>
+            <div class="titulos">
+                <h1>Deseja cancelar a assinatura?</h1>
+            </div>
+            <hr>
+            <section>
+                <a href="#modal" class="btn">Clique aqui para cancelar</a>
+                <div id="modal" class="modal">
+                    <div class="modal_content">
+                        <p>Assinatura cancelada com sucesso!</p>
+                        <a href="#" class="modal_link">Ok</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+
+    <footer>
+        <hr>
+        <p> 2022. LUMIERE © TODOS OS DIREITOS RESERVADOS </p>
+    </footer>
 </body>
+
 </html>
