@@ -265,9 +265,9 @@ hr {
     color: var(--cores-chaves);
     border: var(--cores-chaves);
     width: 100%;
+    height: 2px;
     display: flex;
-    flex-direction:row;
-    padding: .06rem;
+    flex-direction: row;
 }
 
 /*menu mobile*/

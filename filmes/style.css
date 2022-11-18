@@ -187,9 +187,8 @@ hr {
     width: 100%;
     height: 2px;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
 }
-
 
 .container .filmes-home{
     align-items: stretch;
