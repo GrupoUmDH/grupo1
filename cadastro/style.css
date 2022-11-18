@@ -226,13 +226,14 @@ h5{ color: #FFFFFF;
     margin: 0;
 }
 
-
 hr {
-    background-color: #B30006;
-    color: red;
-    border: #B30006;
+    background-color: var(--cores-chaves);
+    color: var(--cores-chaves);
+    border: var(--cores-chaves);
     width: 100%;
-    
+    height: 2px;
+    display: flex;
+    flex-direction: row;
 }
 
 /*CONFIGURAÇÃO FOOTER*/
