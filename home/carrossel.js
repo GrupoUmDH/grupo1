@@ -14,6 +14,11 @@ slides = document.querySelectorAll(".carrossel>div")
 
 let counter = 1
 let width = slides[1].clientWidth
+    window.onresize = () =>{
+    width = slides[1].clientWidth
+    carrossel.style.transition= ".6s"
+    carrossel.style.transform = "translateX(" + -width * counter + "px)" 
+}
 
 
 carrossel.style.transform = "translateX(" + -width * counter + "px)"
@@ -45,3 +50,14 @@ prevBtn.onclick = () => {
 }
 
 setInterval(nextBtn.onclick , 4000)
+
+//MAIS POPULARES
+
+document.querySelector("#items")
+.addEventListener("wheel", event =>{
+    if(event.deltaY > 0){
+        event.target.scroolBy(300 , 0)
+    }else{
+        event.target.scroolBy(-300 , 0)
+    }
+})

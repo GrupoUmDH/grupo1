@@ -316,8 +316,7 @@ hr {
     box-sizing: border-box;
     position: relative;
     left: -1rem;
-    display: block;
- 
+    display: block; 
 }
  
 .navuser{
