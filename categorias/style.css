@@ -161,15 +161,14 @@ h5 {
     flex-direction: row;
     align-self: end;
 }
- 
 hr {
-    background-color: #B30006;
-    color: red;
-    border: #B30006;
+    background-color: var(--cores-chaves);
+    color: var(--cores-chaves);
+    border: var(--cores-chaves);
     width: 100%;
+    height: 2px;
     display: flex;
-    flex-direction:row;
-    padding: .06rem;
+    flex-direction: row;
 }
 
 .titulos > p {
