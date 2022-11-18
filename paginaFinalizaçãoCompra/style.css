@@ -169,7 +169,6 @@ main{
     color: white;
     text-align: center;
     font-weight: 600;
-
 }
 
 .invisible{
@@ -188,6 +187,7 @@ main{
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+
 }
 
 .content-form{
@@ -197,7 +197,7 @@ main{
     height: 90%;
     border-radius: 3rem;
     background-color: var(--background-2);
-    margin-bottom: 3rem;
+    margin-bottom: 0.8rem;
 }
 .content-form h1{
     font-weight: 600;
@@ -255,10 +255,13 @@ padding: 2rem 3rem 3rem 3rem;
     margin-left: .6rem;
 }
 
+.payment{
+    margin-top: 2rem;
+}
 .payment .input-pay{
     display: flex;
     flex-direction: row;
-    margin-left: 1rem;
+    margin-left: .4rem;
     margin-right: 2rem;
 }
 
@@ -273,13 +276,12 @@ padding: 2rem 3rem 3rem 3rem;
     align-items: center;
     color: var(--cores-letra);
     background-color: var(--cores-objetos);
-    margin: 2rem 0;
     border: none;
     border-radius: .4rem;
     font: var(--font-family_2);
     font-size: 1.3rem;
-    width: 50%;
     height: 2rem;
+    margin-top: 2rem;
 }
 .pay-button button:hover{
     transition-duration: .5s;
@@ -640,7 +642,7 @@ footer{
         font-size: 1.2rem;
     }
     .resumo> div h3{
-        font-size: .9rem;
+        font-size: .7rem;
     }
     .resumo div span{
         font-weight: 500;
@@ -712,18 +714,17 @@ footer{
 
 
     /* controlando o checkbox menu hamburguer */
-
-    #menu-mobile {
+    #menu-moblie {
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;        
+        justify-content: center;
+        
     }
-
     #check-menu{
         opacity: 0;
+        z-index: 10;
     }
-
     #menu-mobile > label {
         cursor: pointer;
         position: relative;
@@ -731,17 +732,14 @@ footer{
         height: 40px;
         padding: 1rem;
     }
-
     #menu-mobile > label span{
         position: absolute;
-        display: block;
         height: 5px;
         width: 100%;
         border-radius: 30px;
         background: #B30006;
-        transition: .2seg ease-in-out;        
+        transition: .7seg ease-in-out;        
     }
-
     #menu-mobile > label span:nth-child(1){top: 10px}
     #menu-mobile > label span:nth-child(2){top: 20px}
     #menu-mobile > label span:nth-child(3){top: 30px}
@@ -750,17 +748,43 @@ footer{
         transform: rotate(-45deg);
         top: 20px;
     }
-
     #check-menu:checked + label span:nth-child(2){
         opacity: 0;
     }
-
     #check-menu:checked + label span:nth-child(3){
         transform: rotate(45deg);
         top: 20px;
     }
 
     /* Conteudo do menu-mobile */
+    #op-menu {
+        background-color: #131313;
+        opacity: .9;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: .5s;
+        z-index: 2;
+        width: 100%;
+        position: absolute;
+        top: 5rem;
+    }
+
+    #menu-content > ul {
+        color: white;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        background-color: #0C0C0C;
+    }
+
+    #menu-content > ul a {
+        text-decoration: none;
+        font: .7em 'Inter';
+        text-align: center;
+        color: white;
+        padding: 1rem;
+    }
     
 
     /* Estou ocultando na versão mobile o slide- pois ele ainda
@@ -768,7 +792,6 @@ footer{
     .caixa-filmes {
         display: none;
     }
-
     .navigation {
         display: none;
     }
@@ -777,3 +800,10 @@ footer{
         align-items: center;
         justify-content: space-between; 
     }
+
+
+@keyframes deslizar {
+    0%      { transform: translateX(-100%); }
+    100%    { transform: translateX(0%); } 
+}
+
