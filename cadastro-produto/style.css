@@ -82,26 +82,195 @@ header{
 .paginas li{
     font-size: 1.3rem;
 }
-
- 
 .content{
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 0.1rem;
+    padding-right: 10px;
     justify-content: space-around;
- 
 }
+
 .content a{
     margin-top: 5px;
-    gap: 0.5rem;
-    justify-content: space-around; 
+   
 }
+
 .content img{
     width: 1.5rem;
 }
  
+.navbusca{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 1.5rem;
+}
+
+#navbar-mobile {
+    display: none;
+}
+ 
+.navbusca button{
+    display: flex;
+    position: relative;
+    left: -1.7rem;
+    width: 4rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cores-chaves) ;
+    border-radius: 0 10px 10px 0;
+    border: none;
+} 
+
+.navbusca > button svg{
+    display: flex;
+    position: relative;
+    width: 1.3rem;
+    font-size: 15px;
+    background-color: var(--cores-chaves);
+    fill: var(--cores-letra);
+}
+ 
+.navbusca > input{
+    background-color: var(--cores-letra);
+    width: 14rem;
+    outline: none;
+    padding: 0 10px;
+    height: 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    color: var(--background-2);
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    position: relative;
+    left: -1rem;
+    display: block; 
+}
+ 
+.navuser{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: .8rem;
+    align-items: baseline;
+}
+
+/*main*/
+.content-1{
+    flex-direction: row;
+    background-color: var(--background-2);
+    border-radius: 9%;
+
+}
+span.new-product{
+    font-size: 2rem;
+    margin-top: 2rem;
+    position: relative;
+    left: -0.2rem;
+}
+
+#left{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    width: 40%;
+}
+#foto{
+    width: 270px;
+    height: 270px;
+    background: #B30006;
+    border-radius: 9%;
+}
+#avatar{
+    margin-top: .5rem;
+}
+
+/* formulario */
+.error{
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
+
+.invisible{
+    display: none;
+} 
+
+.new-product{
+    font-weight: 800;
+    font-size: 3rem;
+    display: flex;
+    color: var(--cores-chaves);
+    justify-content: center;
+    align-self: center;
+}
+.content-1{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+}
+
+.content-form{
+    display: flex;
+    flex-direction: column;
+    width: 53%;
+    height: 90%;
+    border-radius: 3rem;
+    background-color: var(--background-2);
+    margin-bottom: 0.8rem;
+    margin-top: 3rem;
+}
+
+.content-input{
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 2rem;
+    height: 2rem;
+    padding: 0 2rem;
+}
+
+.salvar{
+    display: flex;
+    justify-content: center;
+}
+
+.salvar button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cores-letra);
+    background-color: var(--cores-objetos);
+    border: none;
+    border-radius: .9rem;
+    font: var(--font-family_2);
+    font-size: 1.3rem;
+    height: 3rem;
+    width: 6rem;
+    margin: .6rem 2rem;
+
+}
+.salvar button:hover{
+    transition-duration: .5s;
+    background-color: var(--cores-chaves);
+}
+
+
+hr {
+    background-color: var(--cores-chaves);
+    color: var(--cores-chaves);
+    border: var(--cores-chaves);
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    padding: .06rem;
+}
+
+/*menu mobile*/
 .navbusca{
     display: flex;
     flex-direction: row;
@@ -162,211 +331,7 @@ header{
 main{
     max-width: 1500px;
     margin: auto;
-}
- 
-/* formulario */
-.error{
-    color: white;
-    text-align: center;
-    font-weight: 600;
-}
-
-.invisible{
-    display: none;
-}
-
-.pag-seguro{
-    font-weight: 900;
-    font-size: 3rem;
-    display: flex;
-    color: var(--cores-chaves);
-    justify-content: center;
-    align-self: center;
-}
-.content-1{
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-
-}
-
-.content-form{
-    display: flex;
-    flex-direction: column;
-    width: 53%;
-    height: 90%;
-    border-radius: 3rem;
-    background-color: var(--background-2);
-    margin-bottom: 0.8rem;
-}
-.content-form h1{
-    font-weight: 600;
-    font-size: 2rem;
-    display: flex;
-    color: var(--cores-chaves);
-    position: relative;
-    padding-left: 3rem;
-    padding-top: 1rem;
-    font-family: var(--font-family_1);
-} 
-
-.content-form form{
-padding: 2rem 3rem 3rem 3rem;
-}
-
-
-.content-input{
-    display: flex;
     width: 100%;
-    border-radius: 10px;
-    outline: none;
-    margin-bottom: 2rem;
-    height: 2rem;
-    padding: 0 2rem;
-}
-
-.checkboxe{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    color: var(--cores-letra);
-}
-
-.checkboxe .checkbox{
-    display: flex;
-    color: var(--cores-chaves);
-    background-color: var(--cores-chaves);
-}
-
-.payment{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 12%;
-    margin-top: .5rem;
-}
-
-.input-pay img{
-    width: 5rem;
-    height: 4rem;
-    margin-left: .6rem;
-}
-
-.payment{
-    margin-top: 2rem;
-}
-.payment .input-pay{
-    display: flex;
-    flex-direction: row;
-    margin-left: .4rem;
-    margin-right: 2rem;
-}
-
-.pay-button{
-    display: flex;
-    justify-content: center;
-}
-
-.pay-button button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--cores-letra);
-    background-color: var(--cores-objetos);
-    border: none;
-    border-radius: .4rem;
-    font: var(--font-family_2);
-    font-size: 1.3rem;
-    height: 2rem;
-    margin-top: 2rem;
-}
-.pay-button button:hover{
-    transition-duration: .5s;
-    background-color: var(--cores-chaves);
-}
-
-
-/*PAGAMENTO*/
-
-.pagamento{
-    align-self: flex-start;
-    width: 35%;
-    margin-top: 6rem;
-    font-size: 1.5rem;
-    gap: 2rem;
-    color: var(--cores-chaves);
-    display: flex;
-    flex-direction: column;
-}
-
-.resumo{
-    margin: 3rem;
-    margin-bottom: 1.5rem;
-    gap: 3rem;
-    padding: 1rem;
-    background-color: var(--background-2);
-    border-radius: 10%;   
-    color: var(--cores-chaves);
-}
-
-.resumo div span{
-    color: var(--cores-letra);
-    font-weight: 900;
-}
-
-.resumo *:not(hr){
-    background-color: var(--background-2);
-}
-
-.resumo div{
-    display: flex;
-    justify-content: space-between;
-}
-
-.resumo >div h2{
-    font-weight: 900;
-    font-size: 2rem;
-}
-
-.resumo >div:first-child{
-    margin-bottom: -1rem;
-    align-items: center;
-    padding-top: 1rem;
-    padding-left: 2rem;
-    padding-bottom: .5rem;
-    text-transform: uppercase;
-}
-
-.resumo >div{
-    padding: .5rem;
-}
-
-.content-pagamento >button{
-    height: 50px;
-    width: 80%;
-    flex-shrink: 0;
-    text-transform: uppercase;
-    margin-left: 3rem;
-}
-button{
-    color: var(--cores-letra);
-    background-color: var(--cores-chaves);
-    border: none;
-    border-radius: 1rem;
-    font-weight: 700;
-}
-
-hr {
-    background-color: var(--cores-chaves);
-    color: var(--cores-chaves);
-    border: var(--cores-chaves);
-    width: 100%;
-    display: flex;
-    flex-direction:row;
-    padding: .06rem;
 }
 
 /*CONFIGURAÇÃO FOOTER*/
@@ -378,7 +343,8 @@ footer{
 }
  
 /* RESPONSIVE */
- @media (max-width:1500px){
+ 
+@media (max-width:1500px){
     .navlogo {
         width: 8.3rem;
         padding: .5rem 2rem;
@@ -709,7 +675,7 @@ footer{
         font-size: 1.6rem;
     }
     
-}
+} 
 
 
 
