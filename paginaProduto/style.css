@@ -240,7 +240,6 @@ main{
     padding-bottom: 2rem;
 }
 
-
 .botoes-compra {
     float: right;
     display: flex;
@@ -255,6 +254,7 @@ main{
     text-align: center;
     padding: 3px;
 }
+
 .botoes-compra > div button {
     padding: .7rem;
     background-color: var(--cores-chaves);
@@ -263,6 +263,36 @@ main{
     border: 0;
     border-radius: 10px;
     margin: 3px;
+    width: 100px;
+}
+/* IMDB - pontuação do filme*/
+
+.faixas {
+    width: 100vw;
+    height: 6rem;
+    align-content: center;
+    position: relative;
+}
+
+.f1 > p {
+    font-size: 3rem;
+    width: 100px;
+    background-color: #B30006;
+    border: solid rgba(1,1,1,.5);
+    box-shadow: 4px black;
+    border-radius: 10px;
+    padding-left: 10px;
+    color: var(--cores-letra);
+    position: absolute;
+    z-index: 1;
+}
+.f2 {
+    width: 100vw;
+    height: 3rem;
+    background-color: var(--cores-objetos);
+    position: absolute;
+    top: 10%;
+    
 }
 
 /*CONFIGURAÇÃO FOOTER*/
@@ -277,7 +307,6 @@ hr {
     padding: 0;
     height: 3px;
 }
-
 
 footer{
     height: 6rem;
@@ -345,6 +374,11 @@ footer{
         flex-direction: column;
         align-items: center;
         align-content: center;
+        padding-bottom: 2rem;
+    }
+
+    .botoes-compra{
+        padding-right: 0;
     }
 }
 @media (max-width: 980px) {
