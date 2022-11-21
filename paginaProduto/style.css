@@ -536,6 +536,7 @@ footer{
         align-items: center;
         justify-content: space-between;
     }
+
 }
 
 @keyframes deslizar {
@@ -546,4 +547,5 @@ footer{
     100% {
         transform: translateX(0%);
     }
+
 }

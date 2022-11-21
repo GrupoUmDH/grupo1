@@ -191,7 +191,11 @@ hr {
     color: #B30006;
 }
 
- 
+.container{
+    color: var(--cores-letra);
+
+}
+
 .container .filmes-acao{
     align-items: stretch;
     display: flex;
@@ -242,7 +246,7 @@ footer{
     margin-bottom: 4rem;
     font-family:'Inter' Arial, Helvetica, sans-serif;
     color: var(--cores-chaves);
-
+    align-items: center;
 }
 
 

@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/cadastro-produto/style.css">
+    <script src="/cadastro-produto/cadastro.js" defer></script>
     <link rel="stylesheet" href="../menu-mobile/menu-mobile.css">
     <script src="../menu-mobile/menu_mobile.js" defer></script>
     <script src="./script.js" defer></script>
@@ -102,37 +103,35 @@
                 <form action="">
                     
                     <div>
-                        <div class="invisible err-nome error">Campo obrigatório!</div>
+                        <div class="invisible err-nome-do-produto error">Campo obrigatório!</div>
                         <input class="content-input" type="text" placeholder="NOME DO PRODUTO*" name="nome-do-produto"
                             minlength="3" maxlength="20">
                     </div>
 
                     <div>
-                        <div class="invisible err-sobrenome error">Campo obrigatório!</div>
+                        <div class="invisible err-descricao-do-produto error">Campo obrigatório!</div>
                         <input class="content-input" type="text" placeholder="DESCRICAO DO PRODUTO*"
                             name="descricao-do-produto" minlength="3" maxlength="20">
                     </div>
 
                     <div>
-                        <div class="invisible err-cpf error">Campo obrigatório!</div>
-                        <input class="content-input" type="text" placeholder="CLASSIFICAÇÃO*" name="classificacao"
-                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                        <div class="invisible err-classificacao error">Campo obrigatório!</div>
+                        <input class="content-input" type="text" placeholder="CLASSIFICAÇÃO*" name="classificacao" minlength="1" maxlength="2">
                     </div>
 
                     <div>
-                        <div class="invisible err-email error">Campo obrigatório!</div>
-                        <input class="content-input" type="email" placeholder="PREÇO ALUGUEL*" name="aluguel">
+                        <div class="invisible err-aluguel error">Campo obrigatório!</div>
+                        <input class="content-input" type="text" placeholder="PREÇO ALUGUEL*" name="aluguel" minlength="2" maxlength="4">
                     </div>
 
                     <div>
-                        <div class="invisible err-endereco error">Campo obrigatório!</div>
-                        <input class="content-input" type="text" placeholder="PREÇO COMPRA*" name="compra">
+                        <div class="invisible err-compra error">Campo obrigatório!</div>
+                        <input class="content-input" type="text" placeholder="PREÇO COMPRA*" name="compra" minlength="2" maxlength="4">
                     </div>
 
                     <div>
-                        <div class="invisible err-codigo-postal error">Campo obrigatório!</div>
-                        <input class="content-input" type="text" placeholder="CATEGORIA*" name="categoria"
-                            maxlength="8">
+                        <div class="invisible err-categoria error">Campo obrigatório!</div>
+                        <input class="content-input" type="text" placeholder="CATEGORIA*" name="categoria" minlength="4" maxlength="12">
                     </div>
 
 
