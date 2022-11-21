@@ -438,28 +438,18 @@ footer{
 } 
 
  @media (max-width: 1024px){
-    .paginas ul {
-        display: none;
-    }
     #navbar{
         justify-content: space-between;
     }
-   
+    .navbusca input {
+        display: block;
+    }
+    .navbusca button {
+        border-radius: 0 50rem 50rem 0;
+    }
     .navlogo {
         width: 8.2rem;
         padding: .5rem 2rem;
-    }
-
-    .mais-populares {
-        font-size: 1.7rem;
-    }
-
-    .titulos h1 {
-        font-size: 1.7rem;
-    }
-    
-    .paginas {
-        display: none;
     }
 
     .navbusca {
