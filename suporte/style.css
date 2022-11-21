@@ -214,9 +214,11 @@ hr {
 
 /*CONFIGURAÇÃO FOOTER*/
 footer{
-    font-family:'Inter' Arial, Helvetica, sans-serif;
+    padding-top: 1rem;
+    margin-bottom: 4rem;
+    font-family: 'Inter' Arial, Helvetica, sans-serif;
     color: var(--cores-chaves);
-
+    text-align: center;
 }
 
 

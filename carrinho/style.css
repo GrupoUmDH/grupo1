@@ -351,6 +351,7 @@ footer {
     margin-bottom: 4rem;
     font-family: 'Inter' Arial, Helvetica, sans-serif;
     color: var(--cores-chaves);
+    text-align: center;
 }
 
 
@@ -418,7 +419,7 @@ footer {
     }
 
     .navbusca button {
-        border-radius: 50rem;
+        border-radius: 0 50rem 50rem 0;
     }
 
     .navlogo {

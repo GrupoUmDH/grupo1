@@ -445,7 +445,7 @@ footer{
         display: block;
     }
     .navbusca button {
-        border-radius: 50rem;
+        border-radius: 0 50rem 50rem 0;
     }
     .navlogo {
         width: 8.2rem;

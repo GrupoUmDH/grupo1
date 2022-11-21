@@ -241,10 +241,10 @@ footer{
 
 @media (max-width:1300px){
    .header{
-    width: 90%;
-    margin: 0;
-    align-items: flex-start;
-    justify-content: flex-start;
+        width: 90%;
+        margin: 0;
+        align-items: flex-start;
+        justify-content: flex-start;
    }
     .navlogo {
         width: 8.3rem;
@@ -262,8 +262,8 @@ footer{
     }
 
    .quem-somos{
-    align-items: center;
-    margin: 2rem auto;
+        align-items: center;
+        margin: 2rem auto;
    }
   
 } 
@@ -276,7 +276,7 @@ footer{
         display: block;
     }
     .navbusca button {
-        border-radius: 50rem;
+        border-radius: 0 50rem 50rem 0;
     }
     .navlogo {
         width: 8.2rem;
