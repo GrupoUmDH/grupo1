@@ -33,17 +33,17 @@
                     <hr>
                     <ul>
                         <li> <a href="/home/index.html">
-                            <img src="/img/ico/silhueta-de-icone-de-casa.png"/>
-                            Home</a> </li>
+                                <img src="/img/ico/silhueta-de-icone-de-casa.png" />
+                                Home</a> </li>
                         <li> <a href="/categorias/index.html">
-                            <img src="/img/ico/cardapio.png"/>
-                            Categorias</a> </li>
+                                <img src="/img/ico/cardapio.png" />
+                                Categorias</a> </li>
                         <li> <a href="/suporte/index.html">
-                            <img src="/img/ico/suporte-online.png"/>
-                            Suporte</a> </li>
+                                <img src="/img/ico/suporte-online.png" />
+                                Suporte</a> </li>
                         <li> <a href="/sobre-nos/index.html">
-                            <img src="/img/ico/sobre-nos.png"/>
-                            Sobre Nós</a> </li>
+                                <img src="/img/ico/sobre-nos.png" />
+                                Sobre Nós</a> </li>
                     </ul>
                     <hr>
                     <span id="linha"></span>
@@ -94,7 +94,7 @@
                 <h1>Minha Conta</h1>
                 <hr>
                 <ul>
-                    <li><a href="#hitorico">Histórico de pedidos</a></li>
+                    <li><a href="#historico">Histórico de pedidos</a></li>
                     <li><a href="#alterar">Alterar cadastro</a></li>
                     <li><a href="#cadastrar">Cadastrar cartão</a></li>
                     <li><a href="#cancelar">Cancelar assinatura</a></li>
@@ -167,7 +167,7 @@
                     </div>
                     <div>
                         <img src="/img/filmes-home/5.png" alt="">
-                        <p>BLENDE</p>
+                        <p>BLONDE</p>
                     </div>
                     <div>
                         <img src="/img/filmes-home/6.png" alt="">
@@ -204,25 +204,27 @@
                     <form action="dados" method="post">
                         <div class="dados-usuario">
                             <label for="e-mail"></label>
+                            <div class="invisible err-email">Campo obrigatório!</div>
                             <input placeholder="DIGITE NOVO E-MAIL" type="email" name="email" id="email">
                             <label for="e-mail"></label>
-                            <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email" id="email">
-                            <button  type="submit" id="alterar">Alterar</button>
-
+                            <div class="invisible err-email">Campo obrigatório!</div>
+                            <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email1" id="email">
+                            <button type="submit" id="alterar">Alterar</button>
                             <label for="nome"></label>
+                            <div class="invisible err-name">Campo obrigatório!</div>
                             <input placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text" name="name" id="name">
                             <button type="submit" id="alterar">Alterar</button>
-
                             <label for="senha"></label>
+                            <div class="invisible err-password">Campo obrigatório!</div>
                             <input placeholder="DIGITE NOVA SENHA" type="password" name="password" id="password">
                             <label for="senha"></label>
-                            <input placeholder="DIGITE NOVA SENHA NOVAMENTE" type="password" name="password"
-                                id="password">
+                            <div class="invisible err-password">Campo obrigatório!</div>
+                            <input placeholder="DIGITE NOVA SENHA NOVAMENTE" type="password" name="password1" id="password">
                             <button type="submit" id="alterar">Alterar</button>
-
                             <button type="submit">Confirmar alterações</button>
                         </div>
-                    </form>
+                </div>
+                </form>
                 </div>
             </section>
         </section>
@@ -259,11 +261,15 @@
                 <hr>
                 <div class="form-container active">
                     <form class="formulario">
-                        <input placeholder="Número do cartão" type="tel" name="number">
-                        <input placeholder="Nome completo" type="text" name="name">
-                        <input placeholder="MM/AA" type="tel" name="expiry">
-                        <input placeholder="CVC" type="number" name="cvc">
-                        <input type="button" class="btn-cadastrar" value="cadastrar">
+                        <div class="invisible err-number">Campo obrigatório!</div>
+                        <input placeholder="Número do cartão" type="text" name="number">
+                        <div class="invisible err-name">Campo obrigatório!</div>
+                        <input placeholder="Nome completo" type="text" name="name1">
+                        <div class="invisible err-expiry">Campo obrigatório!</div>
+                        <input placeholder="MM/AA" type="text" name="expiry">
+                        <div class="invisible err-cvc">Campo obrigatório!</div>
+                        <input placeholder="CVC" type="text" name="cvc">
+                        <button type="submit">Cadastrar</button>
                     </form>
                 </div>
             </div>

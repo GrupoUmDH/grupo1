@@ -1,6 +1,5 @@
 
-
-   
+  
 const form = document.querySelector('main .content-form form')
 const inputList = document.querySelectorAll(`main .content-1 input:not(.check)`)
 const cep = document.querySelector("input[name='codigo-postal']")
