@@ -210,7 +210,7 @@ footer{
     margin-bottom: 4rem;
     font-family:'Inter' Arial, Helvetica, sans-serif;
     color: var(--cores-chaves);
-
+    text-align: center;
 }
 
 
