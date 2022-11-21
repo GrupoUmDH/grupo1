@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="../menu-mobile/menu-mobile.css">
     <script src="../menu-mobile/menu_mobile.js" defer></script>
-    <script src="./script.js" defer></script>
+    <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/138c897f29.js" crossorigin="anonymous"></script>
     <title>Lumiere - Painel Usuário</title>
 </head>
@@ -203,27 +203,26 @@
                 <div class="formulario">
                     <form action="dados" method="post">
                         <div class="dados-usuario">
-                            <form>
-                                <label for="e-mail"></label>
+                            <form id="form-email">
+                                
                                 <div class="invisible err-email">Campo obrigatório!</div>
                                 <input placeholder="DIGITE NOVO E-MAIL" type="email" name="email" id="email">
-                                <label for="e-mail"></label>
                                 <div class="invisible err-email">Campo obrigatório!</div>
                                 <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email1"
                                     id="email-1">
                                 <button type="submit" id="alterar-email">Alterar</button>
                             </form>
                             <form>
-                                <label for="nome"></label>
+                                
                                 <div class="invisible err-name">Campo obrigatório!</div>
                                 <input placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text" name="name" id="name">
                                 <button type="submit" id="alterar-nome">Alterar</button>
                             </form>
                             <form>
-                                <label for="senha"></label>
+                                
                                 <div class="invisible err-password">Campo obrigatório!</div>
                                 <input placeholder="DIGITE NOVA SENHA" type="password" name="password" id="password">
-                                <label for="senha"></label>
+                                
                                 <div class="invisible err-password">Campo obrigatório!</div>
                                 <input placeholder="DIGITE NOVA SENHA NOVAMENTE" type="password" name="password1"
                                     id="password-1">
