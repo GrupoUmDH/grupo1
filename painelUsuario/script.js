@@ -21,7 +21,8 @@ form.addEventListener('submit', function(event){
 
 //ALTERAR DADOS//
 
-const dados = document.querySelector('main .alterar form')
+const dados = document.querySelector('main .alterar form'); // printcipal
+
 const inputLista = document.querySelectorAll('main .alterar .form input:not(.check)')
 const email = document.querySelector("input[name='email']")
 const confEmail = document.querySelector("input[name='email1']")
@@ -39,4 +40,8 @@ dados.addEventListener('submit', function(event){
             document.querySelector('.err-'+ input.name).classList.add('invisible')
         }
     })
+});
+
+email.addEventListener('submit', function() {
+    
 });
