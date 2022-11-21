@@ -9,10 +9,15 @@
     --cores-objetos: #580003;
 }
 
-
+html {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
 *{
-    margin: 0;
-    padding: 0; 
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
 }
  
 body{
@@ -158,12 +163,26 @@ header{
 
 
 /*CONFIGURACAO QUEM SOMOS*/
+main {
+    max-width: 1500px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    gap: .5rem;
+  
+}
 
 .quem-somos {
     display: flex;
     text-align: center;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 2rem;
+    background-color: var(--background-2);
+    border-radius: 2%;  
+    width: 80%;
+    height: 80%;
 }
 
 .quem-somos > h1 {
@@ -203,16 +222,84 @@ footer{
     margin-bottom: 4rem;
     font-family:'Inter' Arial, Helvetica, sans-serif;
     color: var(--cores-chaves);
-
+    text-align: center;
 }
 
 
  
  
 /* RESPONSIVE */
+@media (max-width:1500px){
+    #navbar{
+       margin-right: 3rem ;
+    }
+    .navlogo {
+        width: 8.3rem;
+        padding: .5rem 2rem;
+    }
+} 
+
+@media (max-width:1300px){
+   .header{
+    width: 90%;
+    margin: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+   }
+    .navlogo {
+        width: 8.3rem;
+        padding: .5rem 2rem;
+    }
+    #navbar{
+        width: 90%;
+        border: none;
+        margin: 0;
+    }
+    
+    .paginas ul{
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+   .quem-somos{
+    align-items: center;
+    margin: 2rem auto;
+   }
+  
+} 
+
+ @media (max-width: 1024px){
+    #navbar{
+        justify-content: space-between;
+    }
+    .navbusca input {
+        display: block;
+    }
+    .navbusca button {
+        border-radius: 50rem;
+    }
+    .navlogo {
+        width: 8.2rem;
+        padding: .5rem 2rem;
+    }
+
+    .navbusca {
+        padding-left: 1.5rem;
+    }
+
+    .navbusca input {
+        width: 10rem;
+    }
+    
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+       
+} 
+
  
 @media (max-width: 820px) {
-
     header{
         height: 5rem;
         width: 100%;
@@ -237,6 +324,7 @@ footer{
         position: fixed;
         z-index: 100;
     }
+
     #ativo-menu{
         height: 5rem;
         width: 100%;
@@ -247,6 +335,52 @@ footer{
         justify-content: space-between;
         align-items: center ;
     }
+    
+    #menu-mobile>label{
+       right: 17rem;
+       bottom: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    main{
+       max-width: 97%;
+    }
+    
+    .navlogo {
+        width: 7rem;
+        padding: .5rem 2rem;
+    }
+    #menu-mobile>label{
+        right: 10rem;
+        bottom: 1.3rem;
+     }
+     .quem-somos{
+        margin: .5rem;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .navlogo{
+        width: 7rem;
+        padding: .5rem 2rem;
+    }
+.quem-somos{
+    margin: .5rem;
+    width: 100%;
+    height: 100%;
+}
+}
+
+
+@media (max-width: 380px) {
+    footer p{
+        text-align: center;
+    }
+}
 
     /* controlando o checkbox menu hamburguer */
     #menu-moblie {
@@ -258,6 +392,7 @@ footer{
     }
     #check-menu{
         opacity: 0;
+        z-index: 10;
     }
     #menu-mobile > label {
         cursor: pointer;
@@ -268,12 +403,11 @@ footer{
     }
     #menu-mobile > label span{
         position: absolute;
-        display: block;
         height: 5px;
         width: 100%;
         border-radius: 30px;
         background: #B30006;
-        transition: .2seg ease-in-out;        
+        transition: .7seg ease-in-out;        
     }
     #menu-mobile > label span:nth-child(1){top: 10px}
     #menu-mobile > label span:nth-child(2){top: 20px}
@@ -292,6 +426,34 @@ footer{
     }
 
     /* Conteudo do menu-mobile */
+    #op-menu {
+        background-color: #131313;
+        opacity: .9;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: .5s;
+        z-index: 2;
+        width: 100%;
+        position: absolute;
+        top: 5rem;
+    }
+
+    #menu-content > ul {
+        color: white;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        background-color: #0C0C0C;
+    }
+
+    #menu-content > ul a {
+        text-decoration: none;
+        font: .7em 'Inter';
+        text-align: center;
+        color: white;
+        padding: 1rem;
+    }
     
 
     /* Estou ocultando na versão mobile o slide- pois ele ainda
@@ -308,4 +470,8 @@ footer{
         justify-content: space-between; 
     }
 
+
+@keyframes deslizar {
+    0%      { transform: translateX(-100%); }
+    100%    { transform: translateX(0%); } 
 }
