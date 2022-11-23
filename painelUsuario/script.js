@@ -1,5 +1,5 @@
 //DADOS NOVO CARTÃO//
-
+/*
 const form = document.querySelector('main .active .formulario')
 const inputList = document.querySelectorAll('main .new card input:not(.check)')
 const number = document.querySelector("input[name='number']")
@@ -18,53 +18,55 @@ form.addEventListener('submit', function(event){
         }
     })
 });
+*/
 
 //ALTERAR DADOS//
 
-const dados = document.querySelector('main .alterar form'); // printcipal
 
-const inputLista = document.querySelectorAll('main .alterar .form input:not(.check)')
+const form_email = document.getElementById('form-email');
 const email = document.querySelector("form input[name='email']");
-const confEmail = document.querySelector("input[name='email1']")
+const confEmail = document.querySelector("input[name='email1']");
+
+const form_nome = document.getElementById('form-nome');
 const nome = document.querySelector("input[name='name']")
+
+const form_passwprd = document.getElementById('form-password');
 const password = document.querySelector("input[name='password']")
 const confpassword = document.querySelector("input[name='password1']")
 
 
-
-email.addEventListener('blur', function() {
-    err_vazio(this);
+form_email.addEventListener('submit', function (event) {
+    err_form(event, email);
+    err_form(event, confEmail);
 });
 
-confEmail.addEventListener('blur', function() {
-    err_vazio(this);
+form_nome.addEventListener('submit', function (event) {
+    err_form(event, nome);
 });
 
-nome.addEventListener('blur', function() {
-    err_vazio(this);
-});
-
-password.addEventListener('blur', function() {
-    err_vazio(this);
-});
-
-confpassword.addEventListener('blur', function() {
-    err_vazio(this);
+form_passwprd.addEventListener('submit', function (event) {
+    err_form(event, password);
+    err_form(event, confpassword);
 });
 
 
-const err_vazio = (iden) => {
-
-    const err_mostrar = document.getElementsByClassName(iden.name);
-    console.log(err_mostrar);
-
-    err_mostrar.forEach(iden => {
-        if(!iden.value){
-            iden.style.border = "2px solid red";
-        } else {
-            iden.style.border = "";
-        }
-    })
-
+const err_form = (event, iden) => {
     
+    const nome = iden.name;
+    const err_div = document.querySelector('.err-'+nome);
+
+    if (!iden.value) {
+        event.preventDefault();
+
+        console.log('nao tem nada escrito - retorna erro')
+        err_div.classList.remove('invisible');
+        err_div.style.cssText = "color: red; text-align: center;";
+        iden.style.border = "2px solid red";
+    } else {
+        event.preventDefault();
+
+        err_div.classList.add('invisible');
+        iden.style.border = "";
+        console.log('retorno positivo');
+    }
 }
