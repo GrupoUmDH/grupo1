@@ -327,7 +327,16 @@ main {
     display: flex;
     flex-direction: column;
 }
-.dados-usuario #alterar{
+.dados-usuario #alterar-name{
+        margin: 0;
+        width: 5rem;
+        height: 2rem;
+        align-self: flex-end;
+        border: none;
+        background-color: var(--cores-objetos);
+    }
+
+.dados-usuario #alterar-email{
     margin: 0;
     width: 5rem;
     height: 2rem;
@@ -335,6 +344,16 @@ main {
     border: none;
     background-color: var(--cores-objetos);
 }
+
+.dados-usuario #alterar-senha{
+    margin: 0;
+    width: 5rem;
+    height: 2rem;
+    align-self: flex-end;
+    border: none;
+    background-color: var(--cores-objetos);
+}
+
 .dados-usuario button {
     margin: 2rem;
     text-align: center;
