@@ -1,24 +1,18 @@
 //DADOS NOVO CARTÃO//
-/*
-const form = document.querySelector('main .active .formulario')
-const inputList = document.querySelectorAll('main .new card input:not(.check)')
-const number = document.querySelector("input[name='number']")
-const name = document.querySelector("input[name='name1']")
-const expiry = document.querySelector("input[name='expiry']")
-const cvc = document.querySelector("input[name='cvc']")
 
-form.addEventListener('submit', function(event){   
+const form = document.querySelector('main .active .formulario');
+const inputList = document.querySelectorAll('main .new card input:not(.check)');
+const number = document.querySelector("input[name='number']");
+const name_card = document.querySelector("input[name='name1']");
+const expiry = document.querySelector("input[name='expiry']");
+const cvc = document.querySelector("input[name='cvc']");
 
-    inputList.forEach(input => {
-        if (!input.value){
-            event.preventDefault();
-            document.querySelector('.err-'+ input.name).classList.remove('invisible');
-        } else{
-            document.querySelector('.err-'+ input.name).classList.add('invisible')
-        }
-    })
+form.addEventListener('submit', function(event){
+    err_form(event, number);
+    err_form(event, name_card);
+    err_form(event, expiry);
+    err_form(event, cvc);
 });
-*/
 
 //ALTERAR DADOS//
 
@@ -49,7 +43,7 @@ form_passwprd.addEventListener('submit', function (event) {
     err_form(event, confpassword);
 });
 
-
+// FUNÇÃO DE VERIFICAÇÃO
 const err_form = (event, iden) => {
     
     const nome = iden.name;
@@ -58,7 +52,7 @@ const err_form = (event, iden) => {
     if (!iden.value) {
         event.preventDefault();
 
-        console.log('nao tem nada escrito - retorna erro')
+        console.log('nao tem nada escrito - retorna erro');
         err_div.classList.remove('invisible');
         err_div.style.cssText = "color: red; text-align: center;";
         iden.style.border = "2px solid red";
