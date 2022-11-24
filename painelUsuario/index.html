@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="../menu-mobile/menu-mobile.css">
     <script src="../menu-mobile/menu_mobile.js" defer></script>
-    <script src="./script.js" defer></script>
-    <script src="https://kit.fontawesome.com/138c897f29.js" crossorigin="anonymous"></script>
+    <script src="/painelUsuario/script.js" defer></script>
     <title>Lumiere - Painel Usuário</title>
 </head>
 
@@ -201,39 +200,40 @@
             <hr>
             <section class="alterar">
                 <div class="formulario">
-                    <form action="dados" method="post">
+                    
                         <div class="dados-usuario">
-                            <label for="e-mail"></label>
-                            <form action="">
+
+
+                            <form method="post" id="form-email">
+
                                 <div class="invisible err-email">Campo obrigatório!</div>
                                 <input placeholder="DIGITE NOVO E-MAIL" type="email" name="email" id="email">
-                                <label for="e-mail"></label>
-                                <div class="invisible err-email">Campo obrigatório!</div>
-                                <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email1" id="email">
-                                <button type="submit" id="alterar-email">Alterar</button>
+                                <div class="invisible err-email1">Confirme o novo e-mail Digitado.</div>
+                                <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email1"
+                                    id="email1">
+                                <button id="alterar-email">Alterar</button>
                             </form>
-                            <form action=""><label for="nome"></label>
+                            <form method="post" id="form-nome">
+
                                 <div class="invisible err-name">Campo obrigatório!</div>
                                 <input placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text" name="name" id="name">
-                                <button type="submit" id="alterar-nome">Alterar</button>
+                                <button id="alterar-nome">Alterar</button>
                             </form>
-                            <form action=""><label for="senha"></label>
+                            <form method="post" id="form-password">
+
                                 <div class="invisible err-password">Campo obrigatório!</div>
                                 <input placeholder="DIGITE NOVA SENHA" type="password" name="password" id="password">
-                                <label for="senha"></label>
-                                <div class="invisible err-password">Campo obrigatório!</div>
+
+                                <div class="invisible err-password1">Campo obrigatório!</div>
                                 <input placeholder="DIGITE NOVA SENHA NOVAMENTE" type="password" name="password1"
-                                    id="password">
-                                <button type="submit" id="alterar-senha">Alterar</button>
+                                    id="password-1">
+                                <button id="alterar-senha">Alterar</button>
                             </form>
-                            <button type="submit">Confirmar alterações</button>
+
+                            <button id="confirme-alterar">Confirmar alterações</button>
                         </div>
-                    </form>
+                   
                 </div>
-
-                </form>
-                </div>
-
             </section>
         </section>
 
@@ -271,7 +271,7 @@
                     <form class="formulario">
                         <div class="invisible err-number">Campo obrigatório!</div>
                         <input placeholder="Número do cartão" type="text" name="number">
-                        <div class="invisible err-name">Campo obrigatório!</div>
+                        <div class="invisible err-name1">Campo obrigatório!</div>
                         <input placeholder="Nome completo" type="text" name="name1">
                         <div class="invisible err-expiry">Campo obrigatório!</div>
                         <input placeholder="MM/AA" type="text" name="expiry">
