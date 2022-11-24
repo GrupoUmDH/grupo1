@@ -204,27 +204,31 @@
                     <form action="dados" method="post">
                         <div class="dados-usuario">
                             <label for="e-mail"></label>
-
-                            <div class="invisible err-email">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVO E-MAIL" type="email" name="email" id="email">
-                            <label for="e-mail"></label>
-                            <div class="invisible err-email">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email1" id="email">
-                            <button type="submit" id="alterar">Alterar</button>
-                            <label for="nome"></label>
-                            <div class="invisible err-name">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text" name="name" id="name">
-                            <button type="submit" id="alterar">Alterar</button>
-                            <label for="senha"></label>
-                            <div class="invisible err-password">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVA SENHA" type="password" name="password" id="password">
-                            <label for="senha"></label>
-                            <div class="invisible err-password">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVA SENHA NOVAMENTE" type="password" name="password1" id="password">
-                            <button type="submit" id="alterar">Alterar</button>
-
+                            <form action="">
+                                <div class="invisible err-email">Campo obrigatório!</div>
+                                <input placeholder="DIGITE NOVO E-MAIL" type="email" name="email" id="email">
+                                <label for="e-mail"></label>
+                                <div class="invisible err-email">Campo obrigatório!</div>
+                                <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email1" id="email">
+                                <button type="submit" id="alterar-email">Alterar</button>
+                            </form>
+                            <form action=""><label for="nome"></label>
+                                <div class="invisible err-name">Campo obrigatório!</div>
+                                <input placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text" name="name" id="name">
+                                <button type="submit" id="alterar-nome">Alterar</button>
+                            </form>
+                            <form action=""><label for="senha"></label>
+                                <div class="invisible err-password">Campo obrigatório!</div>
+                                <input placeholder="DIGITE NOVA SENHA" type="password" name="password" id="password">
+                                <label for="senha"></label>
+                                <div class="invisible err-password">Campo obrigatório!</div>
+                                <input placeholder="DIGITE NOVA SENHA NOVAMENTE" type="password" name="password1"
+                                    id="password">
+                                <button type="submit" id="alterar-senha">Alterar</button>
+                            </form>
                             <button type="submit">Confirmar alterações</button>
                         </div>
+                    </form>
                 </div>
 
                 </form>
