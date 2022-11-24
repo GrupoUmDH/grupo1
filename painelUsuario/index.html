@@ -30,19 +30,13 @@
             <div id="op-menu">
                 <div id="menu-content">
                     <hr>
+                    <h1>Minha Conta</h1>
+                    <hr>
                     <ul>
-                        <li> <a href="/home/index.html">
-                                <img src="/img/ico/silhueta-de-icone-de-casa.png" />
-                                Home</a> </li>
-                        <li> <a href="/categorias/index.html">
-                                <img src="/img/ico/cardapio.png" />
-                                Categorias</a> </li>
-                        <li> <a href="/suporte/index.html">
-                                <img src="/img/ico/suporte-online.png" />
-                                Suporte</a> </li>
-                        <li> <a href="/sobre-nos/index.html">
-                                <img src="/img/ico/sobre-nos.png" />
-                                Sobre Nós</a> </li>
+                        <li><a href="#historico">Histórico de pedidos</a></li>
+                        <li><a href="#alterar">Alterar cadastro</a></li>
+                        <li><a href="#cadastrar">Cadastrar cartão</a></li>
+                        <li><a href="#cancelar">Cancelar assinatura</a></li>
                     </ul>
                     <hr>
                     <span id="linha"></span>
@@ -85,9 +79,7 @@
                 </div>
             </div>
         </nav>
-    </header>
 
-    <main>
         <aside class="container-side">
             <nav id="menu">
                 <h1>Minha Conta</h1>
@@ -100,7 +92,9 @@
                 </ul>
             </nav>
         </aside>
+    </header>
 
+    <main>
         <section class="container">
             <div class="titulos">
                 <h1 id="historico">Histórico de Pedidos</h1>
@@ -200,37 +194,36 @@
             <hr>
             <section class="alterar">
                 <div class="formulario">
-                    
-                        <div class="dados-usuario">
-                            <form method="post" id="form-email">
 
-                                <div class="invisible err-email">Campo obrigatório!</div>
-                                <input placeholder="DIGITE NOVO E-MAIL" type="email" name="email" id="email">
-                                <div class="invisible err-email1">Confirme o novo e-mail Digitado.</div>
-                                <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email1"
-                                    id="email1">
-                                <button id="alterar-email">Alterar</button>
-                            </form>
-                            <form method="post" id="form-nome">
+                    <div class="dados-usuario">
+                        <form method="post" id="form-email">
 
-                                <div class="invisible err-name">Campo obrigatório!</div>
-                                <input placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text" name="name" id="name">
-                                <button id="alterar-nome">Alterar</button>
-                            </form>
-                            <form method="post" id="form-password">
+                            <div class="invisible err-email">Campo obrigatório!</div>
+                            <input placeholder="DIGITE NOVO E-MAIL" type="email" name="email" id="email">
+                            <div class="invisible err-email1">Confirme o novo e-mail Digitado.</div>
+                            <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email1" id="email1">
+                            <button id="alterar-email">Alterar</button>
+                        </form>
+                        <form method="post" id="form-nome">
 
-                                <div class="invisible err-password">Campo obrigatório!</div>
-                                <input placeholder="DIGITE NOVA SENHA" type="password" name="password" id="password">
+                            <div class="invisible err-name">Campo obrigatório!</div>
+                            <input placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text" name="name" id="name">
+                            <button id="alterar-nome">Alterar</button>
+                        </form>
+                        <form method="post" id="form-password">
 
-                                <div class="invisible err-password1">Campo obrigatório!</div>
-                                <input placeholder="DIGITE NOVA SENHA NOVAMENTE" type="password" name="password1"
-                                    id="password-1">
-                                <button id="alterar-senha">Alterar</button>
-                            </form>
+                            <div class="invisible err-password">Campo obrigatório!</div>
+                            <input placeholder="DIGITE NOVA SENHA" type="password" name="password" id="password">
 
-                            <button id="confirme-alterar">Confirmar alterações</button>
-                        </div>
-                   
+                            <div class="invisible err-password1">Campo obrigatório!</div>
+                            <input placeholder="DIGITE NOVA SENHA NOVAMENTE" type="password" name="password1"
+                                id="password-1">
+                            <button id="alterar-senha">Alterar</button>
+                        </form>
+
+                        <button id="confirme-alterar">Confirmar alterações</button>
+                    </div>
+
                 </div>
             </section>
         </section>
