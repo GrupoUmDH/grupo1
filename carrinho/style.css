@@ -79,7 +79,7 @@ header {
     text-decoration: none;
     font: .9em 'Inter';
     text-align: center;
-    color: white;
+    color:var(--cores-letra);
     flex-wrap: nowrap;
 }
 
@@ -99,13 +99,8 @@ header {
 
 .content a {
     margin-top: 5px;
-
     gap: 0.5rem;
     justify-content: space-around;
-}
-
-.content a {
-    margin-top: 5px;
 }
 
 .content img {
