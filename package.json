@@ -1,21 +1,9 @@
 {
-<<<<<<< HEAD
-  "name": "grupo1",
-=======
-<<<<<<< HEAD
   "name": "lumiere",
-=======
-  "name": "grupo1",
->>>>>>> vagner
->>>>>>> 156b73a34967ff9e3d5ef5159f02e2724772bddd
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "nodemon ./src/bin/www"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 156b73a34967ff9e3d5ef5159f02e2724772bddd
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -26,19 +14,6 @@
     "morgan": "~1.9.1"
   },
   "devDependencies": {
-<<<<<<< HEAD
-=======
-=======
-  },
-  "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "ejs": "~2.6.1",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
->>>>>>> vagner
->>>>>>> 156b73a34967ff9e3d5ef5159f02e2724772bddd
     "nodemon": "^2.0.20"
   }
 }

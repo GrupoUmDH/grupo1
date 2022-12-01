@@ -544,17 +544,8 @@ footer{
         transform: translateX(-100%);
     }
 
-<<<<<<< HEAD:paginaProduto/style.css
-<<<<<<< HEAD
-=======
-    100% {
-        transform: translateX(0%);
-    }
->>>>>>> cb36c9bbc6cd369f9236f12eba3bfe511b94ede3
-=======
     100% {
         transform: translateX(0%);
     }
 
->>>>>>> fcade5e7c31d320c0e8abcf34404a439b7cdef06:backup/paginaProduto/style.css
 }
