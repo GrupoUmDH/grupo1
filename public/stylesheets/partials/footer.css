@@ -1,4 +1,3 @@
-
 hr {
     background-color: var(--cores-chaves);
     color: var(--cores-chaves);
@@ -14,5 +13,10 @@ footer {
     margin-bottom: 4rem;
     font-family: 'Inter' Arial, Helvetica, sans-serif;
     color: var(--cores-chaves);
-    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+footer>p {
+    text-align: center;
 }
