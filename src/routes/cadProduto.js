@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET Cadastro de Produto */
 router.get('/', function(req, res, next) {
-    res.render('cadastro-produto', { title: 'Novo Produto' });
+    res.render('cadastro-produto', { title: 'Novo Produto', js:"adicionarAoCarrinho" });
 
 });
 

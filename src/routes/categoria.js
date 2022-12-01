@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET Categorias */
 router.get('/', function(req, res, next) {
-    res.render('categoria', { title: 'Categoria' });
+    res.render('categoria', { title: 'Categoria', js:"adicionarAoCarrinho" });
 
 });
 
