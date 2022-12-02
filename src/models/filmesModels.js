@@ -1,6 +1,6 @@
 module.exports = {
-    dadosFilmes: () => {
-        returt[
+    index: () => {
+        return [
             {
                 id: 1,
                 nome: 'TOP GUN - MAVERICK',
@@ -14,6 +14,27 @@ module.exports = {
                 valor: 'R$ 9,90',
                 descricao: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!',
                 imagem: '2'
+            },
+            {
+                id: 3,
+                nome: 'SORRIA',
+                valor: 'R$ 9,90',
+                descricao: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!',
+                imagem: '3'
+            },
+            {
+                id: 3,
+                nome: 'SORRIA',
+                valor: 'R$ 9,90',
+                descricao: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!',
+                imagem: '3'
+            },
+            {
+                id: 3,
+                nome: 'SORRIA',
+                valor: 'R$ 9,90',
+                descricao: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!',
+                imagem: '3'
             },
             {
                 id: 3,
