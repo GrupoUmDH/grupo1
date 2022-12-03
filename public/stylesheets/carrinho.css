@@ -25,7 +25,7 @@ html {
 body {
     padding: 0;
     margin: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,48 +41,39 @@ body * {
 /* CONFIGURAÇÃO IMAGEM CENTRAL*/
 main {
     max-width: 1500px;
-    margin: auto;
     justify-content: space-around;
-    height: 100%;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    gap: 8rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 /*SECTION CARRINHO*/
 
 .itens {
-    margin: 3rem 0;
-    max-width: 50%;
+    margin: 0 1rem 2rem 1rem;
 }
 
 .item {
     gap: 1rem;
-    padding-right: 2rem;
-    margin: 1rem;
+    margin: 0 1.2rem;
     align-items: center;
-    background: var(--background-2);
-    border-radius: 5rem;
-    width: 100%;
     display: flex;
+    margin-bottom: 2rem;
 }
 
-.imagem-produto {
-
-    background-size: 100% 100%;
+.imagem-produto img {
+    width: 1ren;
     border-radius: 2rem;
     min-width: 9rem;
     height: 15rem;
-    background-image: url("../img/2-5.png");
 }
 
 .descricao-produto {
-
-    border-radius: 0 10rem 10rem 0;
+    border-radius: 0 1rem 1rem 0;
     padding: 1rem;
     width: 100%;
-    height: 15rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -90,13 +81,11 @@ main {
 }
 
 .descricao-produto .container-preco {
+    width: 100%;
     display: flex;
-    gap: 2rem;
+    gap: 10rem;
     align-items: center;
-}
-
-.descricao-produto * {
-    background-color: var(--background-2);
+    align-content: space-between;
 }
 
 .container-preco div {
@@ -105,10 +94,13 @@ main {
     align-items: center;
 }
 
-.descricao-produto img {
-    border-radius: 1rem;
-    width: 3rem;
-    height: 3rem;
+#remover {
+    margin-left: 2rem;
+}
+
+#indicacao {
+    width: 2rem;
+    margin: .5rem;
 }
 
 .descricao-produto h2 {
@@ -118,6 +110,7 @@ main {
 
 .descricao-produto span {
     color: var(--cores-letra);
+    font-size: 1.5rem;
 }
 
 .descricao-produto button {
@@ -132,34 +125,36 @@ main {
 .descricao-produto p {
     color: var(--cores-letra);
     align-items: center;
+    text-align: justify;
 }
 
 .pagamento {
     align-self: flex-start;
     width: 35%;
-    margin-top: 6rem;
     font-size: 1.5rem;
     gap: 2rem;
     flex-shrink: 0;
     color: var(--cores-chaves);
     display: flex;
     flex-direction: column;
+    padding-right: 2rem;
 }
 
 .resumo {
     gap: 3rem;
     padding: 1rem;
     background-color: var(--background-2);
-    border-radius: 10%;
+    border-radius: 1rem;
+    width: 100%;
 }
 
+.resumo h3 {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
 .resumo div span {
     color: var(--cores-letra);
     font-weight: 900;
-}
-
-.resumo *:not(hr) {
-    background-color: var(--background-2);
 }
 
 .resumo div {
@@ -169,7 +164,6 @@ main {
 
 .resumo>div h2 {
     font-weight: 900;
-    font-size: 2.1rem;
 }
 
 .resumo>div:first-child {
@@ -182,7 +176,7 @@ main {
 }
 
 .resumo>div {
-    padding: 1rem;
+    padding: 0 1rem 0 1rem;
 }
 
 .pagamento>button {
@@ -210,7 +204,7 @@ hr {
     background-color: var(--cores-chaves);
     color: var(--cores-chaves);
     border: var(--cores-chaves);
-    width: 100vw;
+    width: 100%;
     height: 2px;
     display: flex;
     flex-direction: row;
@@ -225,3 +219,4 @@ footer {
     align-items: center;
     text-align: center;
 }
+
