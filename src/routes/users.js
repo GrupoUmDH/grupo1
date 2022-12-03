@@ -3,7 +3,13 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.render('cadastro', { title: 'cadastro' });
 });
+
+router.get('/painel-user', function(req, res, next) {
+  res.render('painel-user', { title: 'painel-user' });
+});
+
+
 
 module.exports = router;
