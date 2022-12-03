@@ -7,11 +7,11 @@ const filmesConrollers = require('../controllers/filmesControllers')
 router.get('/', filmesConrollers.listaFilmes);
 
 router.get('/sobre', function(req, res, next) {
-    res.render('sobre-nos', { title: 'Sobre' });
+    res.render('sobre', { title: 'sobre' });
 });
 
 router.get('/suporte', function(req, res, next) {
-    res.render('suporte', { title: 'Suporte' });
+    res.render('suporte', { title: 'suporte' });
 });
 
 module.exports = router;
