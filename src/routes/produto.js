@@ -22,5 +22,4 @@ router.get('/cadastro-produto', function(req, res, next) {
 });
 
 
-
 module.exports = router;

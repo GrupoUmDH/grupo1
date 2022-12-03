@@ -489,3 +489,26 @@ hr {
         transform: translateX(0%);
     }
 }
+
+
+/*CONFIGURAÇÃO FOOTER*/
+
+hr {
+    background-color: var(--cores-chaves);
+    color: var(--cores-chaves);
+    border: var(--cores-chaves);
+    width: 100vw;
+    height: 2px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+footer {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    font-family: 'Inter' Arial, Helvetica, sans-serif;
+    color: var(--cores-chaves);
+    align-items: center;
+    text-align: center;
+}

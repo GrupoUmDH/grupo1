@@ -1,7 +1,7 @@
 hr {
-    background-color: var(--cores-chaves);
-    color: var(--cores-chaves);
-    border: var(--cores-chaves);
+    background-color: #B30006;
+    color: #B30006;
+    border: #B30006;
     width: 100%;
     height: 2px;
     display: flex;
@@ -11,8 +11,7 @@ hr {
 footer {
    margin-top: 3rem;
     margin-bottom: 4rem;
-    font-family: 'Inter' Arial, Helvetica, sans-serif;
-    color: var(--cores-chaves);
+    color: #B30006;
     width: 100%;
     text-align: center;
 }
