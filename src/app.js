@@ -4,32 +4,38 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var homeRouter = require('./routes/home');
+var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var cadProduto = require('./routes/cadProduto');
-var categoria = require('./routes/categoria');
-var produto = require('./routes/produto');
-var carrinho = require ('./routes/carrinho');
+var categorias = require('./routes/categorias');
+const { dirname } = require('path');
+var produtos = require('./routes/produtos');
+// var carrinho = require ('./routes/carrinho');
+// var filmes = require ('./routes/filmes');
+// var series = require ('./routes/series');
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, './views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, '../public')));
 
 //app.use(express.favicon(__dirname + '/public/images/ico/favicon.ico'));
 
-app.use('/', homeRouter);
+app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/cadProduto', cadProduto);
-app.use('/categoria', categoria);
-app.use('/produto', produto);
-app.use('/carrinho' , carrinho);
+app.use('/categorias', categorias);
+app.use('/produtos', produtos);
+// app.use('/carrinho' , carrinho);
+// app.use('/filmes' , filmes);
+// app.use('/series' , series);
 
 app.use(express.static(path.join(__dirname, '../public')));
 

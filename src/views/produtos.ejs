@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/public/stylesheets/categoria.css' />
+</head>
+<%- include('partials/header') %>
+
+    <body>
+
+        <!--CONTEÚDO MAIN -->
+        <main>
+            <section class="content-banner">
+                <img id="bk-filme" src="/img/banners/FILMES/homem-aranha-NWH.png">
+                <div class="container">
+                    <div class="banner">
+                        <img class="cover-filme" src="/img/2-5.png" alt="">
+                        <div class="descricao-container">
+                            <!-- primeiro filho -->
+                            <div id="bt-add-car">
+                                <button type="submit" id="add-carrinho">Adicionar ao carrinho</button>
+                            </div>
+                            <!-- segundo filho -->
+                            <div id="descri-filme">
+                                <h1 id="nome-filme">Homem aranha: Sem volta pra casa</h1>
+                                <div class="genero">
+
+                                    <span>2021</span>
+
+                                    <span>Ação/Aventura</span>
+
+                                </div>
+                                <p>Peter Parker tem a sua identidade secreta revelada e pede ajuda ao Doutor Estranho.
+                                    Quando um feitiço para reverter o evento não sai como o esperado,
+                                    o Homem-Aranha e seu companheiro dos Vingadores precisam enfrentar
+                                    inimigos de todo o multiverso.</p>
+                            </div>
+                            <!-- terceiro filho -->
+                            <div id="bts-compra">
+
+                                <div class="classificacao">
+                                    <img src="/img/classificação-indicativa/SELO +12.png" alt="">
+                                </div>
+
+                                <div class="botoes-compra">
+
+                                    <div class="assitir">
+                                        <button>Assitir</button>
+                                    </div>
+                                    <div class="comprar">
+                                        <p>R$9,99</p>
+                                        <button>Comprar</button>
+                                    </div>
+                                    <div class="alugar">
+                                        <p>R$9,99</p>
+                                        <button>Alugar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faixas">
+                        <div class="f1">
+                            <p>8.3</p>
+                        </div>
+                        <div class="f2"></div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <%- include('partials/footer')%>
+    </body>
+
+</html>

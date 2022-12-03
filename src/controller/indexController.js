@@ -1,8 +1,8 @@
-const CategoriasModel = require('../models.CategoriasModel');
+const IndexModel = require('../models/IndexModel');
 
 module.exports = {
     index: (req, res) =>{
-        const categorias = CategoriasModel.index();
-        return res.render('index', {categorias})
+        const index = IndexModel.index();
+        return res.render('index', { pageName: 'index' })
     }
 }

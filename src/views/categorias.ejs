@@ -1,18 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="../menu-mobile/menu-mobile.css">
-    <script src="../menu-mobile/menu_mobile.js" defer></script>
-    <script src="./script.js" defer></script>
-    <script src="https://kit.fontawesome.com/138c897f29.js" crossorigin="anonymous" defer></script>
-    <title>Lumiere - Categorias</title>
-</head>
-
+<html>
+  <head>
+      <link rel='stylesheet' href='/public/stylesheets/categorias.css' />
+  </head>
 <body>
 
     <%- include('partials/header') %>
@@ -25,21 +15,20 @@
 
                 <hr>
                 <section class="filmes-acao">
-                    <div>
-                        <img src="/img/filme5.jpg" alt="">
-                        <p>ALERTA VERMELHO</p>
-                        <span>R$19,90</span>
-                    </div>
-                    <div>
-                        <img src="/img/filme4.jpg" alt="">
-                        <p>O PROTETOR</p>
-                        <span>R$19,90</span>
-                    </div>
-                    <div>
-                        <img src="/img/filme6.jpg" alt="">
-                        <p>CORAÇÕES DE FERRO</p>
-                        <span>R$19,90</span>
-                    </div>
+                    <% for(const categoria of categorias) { %>
+                        <div>
+                            <img src="img/filmes/<%=categoria.imagem%>.jpg">
+                            <p>
+                                <%= categoria.nome %>
+                            </p>
+                            <span>
+                                <%= categoria.valor_aluguel %>
+                            </span>
+                            <span>
+                                <%= categoria.valor_compra %>
+                            </span>
+                        </div>
+                        <% }%>
                 </section>
 
                 <div class="titulos">
