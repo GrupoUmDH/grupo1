@@ -1,9 +1,9 @@
 window.addEventListener('load', function () {
-    let form = document.querySelector('main form.form-card');
-    let inputList = document.querySelectorAll('main form.form-card input');
+    let form = document.getElementsByClassName('main form.form-cad');
+    let inputList = document.querySelectorAll('main form.form-cad input');
 
     const removeErros = function () {
-        const errorSpan = document.querySelectorAll('main form.form-card span.error');
+        const errorSpan = document.querySelectorAll('main form.form-cad span.error');
         errorSpan.forEach(span => span.remove());
     }
 
