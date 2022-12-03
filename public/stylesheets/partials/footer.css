@@ -9,7 +9,7 @@ hr {
 }
 
 footer {
-    padding-top: 1rem;
+   margin-top: 3rem;
     margin-bottom: 4rem;
     font-family: 'Inter' Arial, Helvetica, sans-serif;
     color: var(--cores-chaves);

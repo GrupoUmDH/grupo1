@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var homeRouter = require('./routes/index');
 var userRouter = require('./routes/users');
-var produtoRouter = require('./routes/produtos');
+var produtoRouter = require('./routes/produto');
 var categoriasRouter = require('./routes/categorias');
 var carrinhoRouter = require('./routes/carrinho');
 
