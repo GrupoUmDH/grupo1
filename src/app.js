@@ -26,6 +26,10 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/', homeRouter);
 app.use('/index', homeRouter);
+
+app.use('/painel-user', userRouter);
+app.use('/cadastro', userRouter);
+
 app.use('/carrinho', carrinhoRouter);
 app.use('/categorias', categoriasRouter);
 app.use('/produto', produtoRouter);
