@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/suporte.css">
-    <link rel="stylesheet" href="/stylesheets/menu-mobile.css">
-    <script src="/javascripts/menu_mobile.js" defer></script>
-    <script src="./script.js" defer></script>
+    <script src="/javascripts/suporte.js" defer></script>
+    <link rel="stylesheet" href="stylesheets/menu-mobile.css">
     <title>Lumiere - Suporte</title>
 </head>
+
+<%- include('partials/header') %>
 
 <body>
 
@@ -20,9 +14,7 @@
         <div class="centralizar">
             <h1>OLÁ</h1>
             <h2>COMO PODEMOS LHE AJUDAR?</h2>
-
             <span>PERGUNTAS FREQUENTES</span>
-
             <div class="perguntas">
                 <div class="container-perguntas">
                     <button class="btn">O QUE É A LUMIERE?</button>
@@ -67,4 +59,4 @@
 
 </body>
 
-</html>
+<%- include('partials/footer') %>

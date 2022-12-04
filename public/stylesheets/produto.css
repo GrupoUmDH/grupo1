@@ -27,144 +27,18 @@ body{
  
 body * {
     font-family: 'Inter',Arial, Helvetica, sans-serif;
-    font-size: 100%;
    }
-
-/* CONTEÚDO DO HEADER */
-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    font-size: 1.5rem;
-    height: 5rem;
-}
- 
-/* NAVBAR */
-#navbar{
-    height:100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
- 
-.navlogo{
-    display: flex;
-    width: 5rem;
-    padding-left: 10px;
-    margin-left: 1rem;
-}
-
-.paginas ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 3rem;
-    padding: 0;
-    list-style: none;
-    padding-left: 2rem;
- 
-}
- 
-.paginas a{
-    text-decoration: none;
-    font: .9em 'Inter';
-    text-align: center;
-    color: white;
-    flex-wrap: nowrap;
-}
-.paginas li{
-    font-size: 1.3rem;
-}
- 
-.content{
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding-right: 10px;
-    justify-content: space-around;
- 
-}
-.content a{
-    margin-top: 5px;
-   
-}
-.content img{
-    width: 1.5rem;
-}
- 
-.navbusca{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding-left: 1.5rem;
-}
-
-#navbar-mobile {
-    display: none;
-}
- 
-.navbusca button{
-    display: flex;
-    position: relative;
-    left: -1.7rem;
-    width: 4rem;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--cores-chaves) ;
-    border-radius: 0 10px 10px 0;
-    border: none;
-} 
-.navbusca > button svg{
-    display: flex;
-    position: relative;
-    width: 1.3rem;
-    font-size: 15px;
-    background-color: var(--cores-chaves);
-    fill: var(--cores-letra);
- 
-}
- 
-.navbusca > input{
-    background-color: var(--cores-letra);
-    width: 14rem;
-    outline: none;
-    padding: 0 10px;
-    height: 1.5rem;
-    border: none;
-    border-radius: 1rem;
-    color: var(--background-2);
-    font-size: 1.2rem;
-    box-sizing: border-box;
-    position: relative;
-    left: -1rem;
-    display: block;
- 
-}
- 
-.navuser{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: .8rem;
-    align-items: baseline;
-}
 
 
 /* <CONTEUDO MAIN> */
 
 main{
-    margin-top: 2rem;
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    align-content: center;
-    margin-bottom: 5rem;
+    margin-top: 3rem;
 }
 
 .content-banner {
@@ -296,6 +170,7 @@ main{
     
 }
 
+
 /*CONFIGURAÇÃO FOOTER*/
 
 hr {
@@ -303,258 +178,17 @@ hr {
     color: var(--cores-chaves);
     border: var(--cores-chaves);
     width: 100vw;
+    height: 2px;
     display: flex;
-    flex-direction:row;
-    padding: 0;
-    height: 3px;
+    flex-direction: row;
+    margin-bottom: 2rem;
 }
 
-footer{
-    height: 6rem;
+footer {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    font-family: 'Inter' Arial, Helvetica, sans-serif;
     color: var(--cores-chaves);
-    margin-top: 1rem;
+    align-items: center;
     text-align: center;
-}
-
- 
-/* RESPONSIVE */
-
-@media (max-width: 900px) { 
-
-    main {
-        height: 100%;
-    }
-
-    .banner {
-        flex-direction: column;
-    }
-
-    .cover-filme {
-        width: 50%;
-        margin: .1rem;
-    }
-
-    .content-banner {
-        width: 100%;
-        
-    }
-
-    #bk-filme {
-        display: none;
-    }
-
-    #add-carrinho {
-        float: none;
-    }
-
-    .descricao-container {
-        align-items: center;
-    }
-
-    #descri-filme > h1 {
-        font-size: 1.6rem;
-    }
-    #descri-filme > p {
-        padding: 1rem;
-        text-align: start;
-        font-size: .8rem;
-    }
-    #descri-filme {
-        padding: 1rem;
-    }
-
-    .classificacao > img {
-        float: left;
-        width: 32px;
-        padding-bottom: .8rem;;
-    }
-
-    #bts-compra {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        padding-bottom: 2rem;
-    }
-
-    .botoes-compra{
-        padding-right: 0;
-    }
-}
-@media (max-width: 980px) {
-
-    header {
-        height: 5rem;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-
-    #logo-mobile {
-        width: 5rem;
-        padding-right: 10px;
-        padding: 0;
-        margin: 0;
-    }
-
-    #logo-mobile {
-        width: 5rem;
-        padding-right: 10px;
-    }
-
-    #logo-mobile {
-        width: 5rem;
-        padding-right: 10px;
-    }
-
-    #navbar {
-        display: none;
-    }
-
-    #navbar-mobile {
-        width: 100%;
-        height: 5rem;
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        z-index: 2;
-        top: 0;
-    }
-
-    #ativo-menu {
-        height: 5rem;
-        width: 100%;
-        background-color: #131313;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    /* controlando o checkbox menu hamburguer */
-    #menu-moblie {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-    }
-
-    #check-menu {
-        opacity: 0;
-        z-index: 10;
-    }
-
-    #menu-mobile>label {
-        cursor: pointer;
-        position: relative;
-        display: block;
-        height: 40px;
-        padding: 1rem;
-    }
-
-    #menu-mobile>label span {
-        position: absolute;
-        height: 5px;
-        width: 100%;
-        border-radius: 30px;
-        background: #B30006;
-        transition: .7seg ease-in-out;
-    }
-
-    #menu-mobile>label span:nth-child(1) {
-        top: 10px
-    }
-
-    #menu-mobile>label span:nth-child(2) {
-        top: 20px
-    }
-
-    #menu-mobile>label span:nth-child(3) {
-        top: 30px
-    }
-
-    #check-menu:checked+label span:nth-child(1) {
-        transform: rotate(-45deg);
-        top: 20px;
-    }
-
-    #check-menu:checked+label span:nth-child(2) {
-        opacity: 0;
-    }
-
-    #check-menu:checked+label span:nth-child(3) {
-        transform: rotate(45deg);
-        top: 20px;
-    }
-
-    /* Conteudo do menu-mobile */
-    #op-menu {
-        background-color: #131313;
-        opacity: .9;
-        height: 100vh;
-        transform: translateX(-100%);
-        transition: .5s;
-        z-index: 2;
-        width: 100%;
-        position: absolute;
-        top: 5rem;
-    }
-
-    #menu-content>ul {
-        color: white;
-        list-style-type: none;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        background-color: #0C0C0C;
-    }
-
-    #menu-content>ul a {
-        text-decoration: none;
-        font: .7em 'Inter';
-        text-align: center;
-        color: white;
-        padding: 1rem;
-    }
-
-
-    /* Estou ocultando na versão mobile o slide- pois ele ainda
-        esta com conflico com a responsividade.. precisa de MODIFICAR DEPOIS */
-    .caixa-filmes {
-        display: none;
-    }
-
-    .navigation {
-        display: none;
-    }
-
-    .titulos {
-        align-items: center;
-        justify-content: space-between;
-    }
-
-}
-
-@keyframes deslizar {
-    0% {
-        transform: translateX(-100%);
-    }
-
-<<<<<<< HEAD:paginaProduto/style.css
-<<<<<<< HEAD
-=======
-    100% {
-        transform: translateX(0%);
-    }
->>>>>>> cb36c9bbc6cd369f9236f12eba3bfe511b94ede3
-=======
-    100% {
-        transform: translateX(0%);
-    }
-
->>>>>>> fcade5e7c31d320c0e8abcf34404a439b7cdef06:backup/paginaProduto/style.css
 }
