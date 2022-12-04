@@ -24,96 +24,14 @@
 
             <hr>
             <section class="series-home">
+                <% for(const series of series) { %>
                 <div>
-                    <img src="/img/serie1.jpg" alt="">
+                    <img src="img/series/<%=series.img%>.jpg">
                     <p>Dahmer</p>
-                    <div class="preco"><span>R$19,90</span></div>
+                    <div class="preco"><span>><%-serie.valor_aluguel%></span></div>
+                    <div class="preco"><span>><%-serie.valor_compra%></span></div>
                 </div>
-                <div>
-                    <img src="/img/serie2.jpg" alt="">
-                    <p>Cobra Kai</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie3.jpg" alt="">
-                    <p>Stranger Things</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie4.jpg" alt="">
-                    <p>Suits</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie5.jpg" alt="">
-                    <p>Peaky Blinders</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie6.jpg" alt="">
-                    <p>Lucifer</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie7.jpg" alt="">
-                    <p>Anne - With an "E"</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie8.jpg" alt="">
-                    <p>Breaking Bad</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie9.jpg" alt="">
-                    <p>Better call Saul</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie10.jpg" alt="">
-                    <p>Round 6</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie11.jpg" alt="">
-                    <p>La Casa de Papel</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie12.jpg" alt="">
-                    <p>Crown</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie13.jpg" alt="">
-                    <p>A lista Negra</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie14.jpg" alt="">
-                    <p>Vikings</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie15.jpg" alt="">
-                    <p>Sandman</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie16.jpg" alt="">
-                    <p>Gotham</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie17.jpg" alt="">
-                    <p>Dark</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
-                <div>
-                    <img src="/img/serie18.jpg" alt="">
-                    <p>O Gambito da Rainha</p>
-                    <div class="preco"><span>R$19,90</span></div>
-                </div>
+                <% }%>                                    
             </section>
         </section>
     </main>
