@@ -19,12 +19,11 @@ const filme = {
 btnCarrinho.addEventListener('click', function(){
     
     if(localStorage.getItem('carrinho')==null){
-        localStorage.setItem('carrinho', JSON.stringify(carrinho))
+       localStorage.setItem('carrinho', JSON.stringify(carrinho))
     }else{
         carrinho=localStorage.getItem('carrinho')
         carrinho=JSON.parse(carrinho)
         carrinho.push(filme)
         localStorage.setItem('carrinho', JSON.stringify(carrinho))
     }
-
 })
