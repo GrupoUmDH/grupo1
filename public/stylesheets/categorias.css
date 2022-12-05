@@ -38,7 +38,75 @@ h5 {
     flex-direction: row;
     align-self: end;
 }
+.sub-header{
+    z-index:1;
+    position: relative;
+    letter-spacing: 0!important;
+}
 
+.content-genero{
+    opacity: 1;
+    transition-duration: 150ms;
+    padding-left: 2rem;
+
+}
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--background-2);
+    border: 1px solid hsla(0,0%,100%,.9);
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    height: 2.5rem;
+    letter-spacing: 1px;
+    line-height: 2.5rem;
+    padding-left: 10px;
+    padding-right: 50px;
+    position: relative;
+}
+
+select> .arrow {
+    border-color: #fff transparent transparent;
+    border-style: solid;
+    border-width: 5px 5px 0;
+    height: 0;
+    position: absolute;
+    right: 10px;
+    top: 44%;
+    width: 0;
+}
+
+.menu{ 
+    display: flex;
+    flex-direction: row;
+    /* width: 15rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin:2rem 0 ;
+    padding: 0;
+    margin-top: 7.2rem;
+    max-width: 25%;
+    height: 100%;
+    background-color: var(--background-2);  */
+}
+.menu ul li a {
+    font-size: 1rem;
+    line-height: 3;
+    color: var(--cores-letra);
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    transition: .3s;
+}
 .titulos > p {
     display: block;
     margin-block-start: 1em;
