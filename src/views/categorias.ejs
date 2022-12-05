@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <link rel='stylesheet' href='/public/stylesheets/categorias.css' />
-  </head>
+
+<head>
+    <link rel='stylesheet' href='/public/stylesheets/categorias.css' />
+</head>
+
 <body>
 
     <%- include('partials/header') %>
 
         <main>
+            <div class="sub-header">
+                <div class="content-genero">
+                    <select name="genero" id="genero">
+                        <div class="label" role="button">
+                            <span class="arrow"></span>
+                        </div>
+                        <option value="" disabled selected hidden>Selecione</option>
+                        <option value="">Ação</option>
+                        <option value="">Aventura</option>
+                        <option value="">Comédia</option>
+                        <option value="">Dança</option>
+                        <option value="">Documentário</option>
+                        <option value="">Drama</option>
+                        <option value="">Faroeste</option>
+                        <option value="">Ficção</option>
+                        <option value="">Guerra</option>
+                        <option value="">Musical</option>
+                        <option value="">Policial</option>
+                        <option value="">Romance</option>
+                        <option value="">Suspense</option>
+                        <option value="">Terror</option>
+                    </select>
+                </div>
+            </div>
+            
+
+            <nav class="menu">
+                <!-- <ul>
+                    <li><a href="">Ação</a></li>
+                    <li><a href="">Aventura</a></li>
+                    <li><a href="">Comédia</a></li>
+                    <li><a href="">Dança</a></li>
+                    <li><a href="">Documentário</a></li>
+                    <li><a href="">Drama</a></li>
+                    <li><a href="">Faroeste</a></li>
+                    <li><a href="">Ficção</a></li>
+                    <li><a href="">Guerra</a></li>
+                    <li><a href="">Musical</a></li>
+                    <li><a href="">Policial</a></li>
+                    <li><a href="">Romance</a></li>
+                    <li><a href="">Suspense</a></li>
+                    <li><a href="">Terror</a></li>
+                </ul> -->
+
+            </nav>
             <section class="container">
                 <div class="titulos">
                     <h1>Ação</h1>
