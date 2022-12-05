@@ -2,10 +2,9 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="stylesheets/<%= pageName %>.css">
+    <link rel="stylesheet" href="stylesheets/<%= title %>.css">
     <link rel="stylesheet" href="stylesheets/partials/header.css">
     <link rel="stylesheet" href="stylesheets/menu-mobile.css">
-
     <script src="javascripts/menu_mobile.js" defer></script>
     <script src="javascripts/<%= js %>.js" defer></script>
 </head>
@@ -29,22 +28,22 @@
                 <hr>
                 <ul>
                     <li>
-                        <a href="/home/index.html">
+                        <a href="<%= 'index' %>">
                             <img src="img/ico/silhueta-de-icone-de-casa.png" /> Home
                         </a>
                     </li>
                     <li>
-                        <a href="/categorias/index.html">
+                        <a href="<%= 'categorias' %>">
                             <img src="img/ico/cardapio.png" /> Categorias
                         </a>
                     </li>
                     <li>
-                        <a href="/suporte/index.html">
+                        <a href="<%= 'suporte' %>">
                             <img src="img/ico/suporte-online.png" /> Suporte
                         </a>
                     </li>
                     <li>
-                        <a href="/sobre-nos/index.html">
+                        <a href="<%= 'sobre' %>">
                             <img src="/img/ico/sobre-nos.png" /> Sobre Nós</a>
                     </li>
                 </ul>
@@ -59,10 +58,10 @@
         <img class="navlogo" src="/img/logo.svg" alt="">
         <div class="paginas">
             <ul>
-                <li> <a href="/home/index.html">Home</a> </li>
-                <li> <a href="/categorias/index.html">Categorias</a> </li>
-                <li> <a href="/suporte/index.html">Suporte</a> </li>
-                <li> <a href="/sobre-nos/index.html">Sobre Nós</a> </li>
+                <li> <a href="<%= '/' %>">Home</a> </li>
+                <li> <a href="<%= 'categorias' %>">Categorias</a> </li>
+                <li> <a href="<%= 'suporte' %>">Suporte</a> </li>
+                <li> <a href="<%= 'sobre' %>">Sobre Nós</a> </li>
             </ul>
         </div>
         <div class="content">
@@ -81,13 +80,14 @@
                 </div>
             </form>
             <div class="navuser">
-                <a href="/carrinho/index.html">
+                <a href="<%= 'carrinho' %>">
                     <img src="/img/ico/carrinho.png" />
                 </a>
-                <a href="/cadastro/index.html">
+                <a href="<%= 'cadastro' %>">
                     <img src="/img/ico/user.png" />
                 </a>
             </div>
         </div>
     </nav>
 </header>
+</html>

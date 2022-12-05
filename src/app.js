@@ -4,34 +4,36 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var homeRouter = require('./routes/home');
-var usersRouter = require('./routes/users');
-var cadProduto = require('./routes/cadProduto');
-var categoria = require('./routes/categoria');
-var produto = require('./routes/produto');
-var carrinho = require ('./routes/carrinho');
+var homeRouter = require('./routes/index');
+var userRouter = require('./routes/users');
+var produtoRouter = require('./routes/produto');
+var categoriasRouter = require('./routes/categorias');
+var carrinhoRouter = require('./routes/carrinho');
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, './views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, '../public')));
 
 //app.use(express.favicon(__dirname + '/public/images/ico/favicon.ico'));
 
 app.use('/', homeRouter);
-app.use('/users', usersRouter);
-app.use('/cadProduto', cadProduto);
-app.use('/categoria', categoria);
-app.use('/produto', produto);
-app.use('/carrinho' , carrinho);
+app.use('/index', homeRouter);
 
-app.use(express.static(path.join(__dirname, '../public')));
+app.use('/painel-user', userRouter);
+app.use('/cadastro', userRouter);
+
+app.use('/carrinho', carrinhoRouter);
+app.use('/categorias', categoriasRouter);
+app.use('/produto', produtoRouter);
+app.use('/cadastro', userRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
