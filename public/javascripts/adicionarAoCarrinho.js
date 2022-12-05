@@ -1,4 +1,4 @@
-const btnCarrinho = document.getElementById('add-carrinho')
+let btnAddCarrinho = document.getElementById('add-carrinho')
 const nomeFilme = document.getElementById('nome-filme')
 const descrFilme = document.querySelector('#descri-filme>p')
 const coverFilme = document.querySelector('.cover-filme')
@@ -16,9 +16,10 @@ const filme = {
     imagem: coverFilme.src
 }
 
-btnCarrinho.addEventListener('click', function(){
+btnAddCarrinho.addEventListener('click', function(){
     
     if(localStorage.getItem('carrinho')==null){
+        carrinho.push(filme)
        localStorage.setItem('carrinho', JSON.stringify(carrinho))
     }else{
         carrinho=localStorage.getItem('carrinho')

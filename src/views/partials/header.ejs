@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="stylesheets/<%= title %>.css">
+    <link rel="stylesheet" href="stylesheets/<%= pageName %>.css">
     <link rel="stylesheet" href="stylesheets/partials/header.css">
     <link rel="stylesheet" href="stylesheets/menu-mobile.css">
+    <script src="javascripts/montarCarrinho.js" defer></script>
     <script src="javascripts/menu_mobile.js" defer></script>
     <script src="javascripts/<%= js %>.js" defer></script>
 </head>
@@ -80,9 +81,13 @@
                 </div>
             </form>
             <div class="navuser">
-                <a href="<%= 'carrinho' %>">
+                <form action="/carrinho" method="GET" id="montarCarrinho">
+                    <input type="hidden" name="itensCarrinho">
+                    <button type="submit" >
                     <img src="/img/ico/carrinho.png" />
-                </a>
+                </button>
+                </form>
+                
                 <a href="<%= 'cadastro' %>">
                     <img src="/img/ico/user.png" />
                 </a>
@@ -90,4 +95,5 @@
         </div>
     </nav>
 </header>
-</html>
+
+<body>
