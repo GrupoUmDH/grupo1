@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="stylesheets/<%= pageName %>.css">
+    <link rel="stylesheet" href="stylesheets/<%= title %>.css">
     <link rel="stylesheet" href="stylesheets/partials/header.css">
     <link rel="stylesheet" href="stylesheets/menu-mobile.css">
     <script src="javascripts/menu_mobile.js" defer></script>
@@ -54,7 +54,7 @@
     </nav>
 
     <nav id="navbar">
-        <img class="navlogo" src="/img/logo.svg" alt="">
+        <a href="<%= 'index' %>"><img class="navlogo" src="/img/logo.svg" alt=""></a>
         <div class="paginas">
             <ul>
                 <li> <a href="<%= '/' %>">Home</a> </li>
