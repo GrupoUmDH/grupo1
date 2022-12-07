@@ -24,16 +24,25 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 //app.use(express.favicon(__dirname + '/public/images/ico/favicon.ico'));
 
+//INDEX - (HOME, SUPORTE, SOBRE NÓS)
 app.use('/', homeRouter);
 app.use('/index', homeRouter);
 
+//USERS - (PAINEL USUÁRIO, LOGIN, CADASTRO)
 app.use('/painel-user', userRouter);
 app.use('/cadastro', userRouter);
-app.use('/carrinho', carrinhoRouter);
-app.use('/categorias', categoriasRouter);
-app.use('/compra',carrinhoRouter);
-app.use('/produto', produtoRouter);
 
+//CARRINHO - (CARRINHO, COMPRA, PAGAMENTO)
+app.use('/carrinho', carrinhoRouter);
+app.use('/compra',carrinhoRouter);
+
+//CATEGORIAS - (ADD/EXCLUI CATEGORIAS)
+app.use('/categorias', categoriasRouter);
+
+//PRODUTOS - (FILMES, SÉRIES -ADD/EXCLUI PRODUTOS)
+app.use('/filmes', produtoRouter);
+app.use('/produto', produtoRouter);
+app.use('/cadastroProduto', produtoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

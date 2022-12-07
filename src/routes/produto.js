@@ -16,8 +16,8 @@ router.get('/series', function(req, res, next) {
     res.render('series', { title: 'series' });
 });
 
-router.get('/cadastro-produto', function(req, res, next) {
-    res.render('cadastro-produto', { title: 'cadastro-produto' });
+router.get('/cadastroProduto', function(req, res, next) {
+    res.render('cadastroProduto', { title: 'cadastroProduto' });
 
 });
 
