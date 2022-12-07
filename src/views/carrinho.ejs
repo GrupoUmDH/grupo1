@@ -3,28 +3,26 @@
     <!--CONTEÚDO MAIN -->
     <main>
         <section class="itens">
-            <% for(filme of filmes ) { %>
+            <% console.log("Filmes", filmes) %>
+            <!-- <% for( const filme of filmes ) { %> -->
                 <section class="item">
                     <img class="imagem-produto" src="/img/2-5.png"/>
                     <div class="descricao-produto">
                         <div>
-                            <h2>Homem-Aranha: Sem Volta para Casa</h2>
+                            <h2><%= filmes.name %><h2>
                             <br>
-                            <p>Peter Parker tem a sua identidade secreta revelada e pede ajuda ao Doutor Estranho. 
-                                Quando um feitiço para reverter o evento não sai como o esperado, 
-                                o Homem-Aranha e seu companheiro dos Vingadores precisam enfrentar inimigos 
-                                de todo o multiverso.</p>
+                            <p><%= filmes.descricao %></p>
                         </div>
                         <div class="container-preco">
                             <img id="indicacao" src="img/classificação-indicativa/SELO +12.png" >
                             <div>
-                                <span>R$19,90</span>
+                                <span><%= filmes.valor %></span>
                                 <img id="remover" type="button" src="/img/ico/lixo.png"/>
                             </div>
                         </div>
                     </div>
                 </section>
-            <% } %>
+            <!-- <% } %> -->
            
 
         </section>

@@ -18,5 +18,6 @@ formMontarCarrinho.addEventListener('submit', function (event) {
     event.preventDefault()
     const itensCarrinho = document.querySelector('[name="itensCarrinho"]')
     itensCarrinho.value = localStorage.getItem("carrinho")
+    console.log(itensCarrinho)
     this.submit()
 })
