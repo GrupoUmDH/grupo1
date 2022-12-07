@@ -1,4 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
 
+:root{
+    --background-color:#0C0C0C;
+    --background-2:#131313;
+    --cores-chaves:#B30006;
+    --cores-letra:  #FFFFFF;
+    --cores-objetos: #580003;
+}
 header {
     display: flex;
     justify-content: center;
@@ -9,7 +18,17 @@ header {
     height: 5rem;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+main{
+    max-width: 1500px;
+    width: 100%;
+    margin: auto;
+}
 /* NAVBAR */
 
 #navbar {

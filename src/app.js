@@ -29,11 +29,11 @@ app.use('/index', homeRouter);
 
 app.use('/painel-user', userRouter);
 app.use('/cadastro', userRouter);
-
 app.use('/carrinho', carrinhoRouter);
 app.use('/categorias', categoriasRouter);
+app.use('/compra',carrinhoRouter);
 app.use('/produto', produtoRouter);
-app.use('/cadastro', userRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
