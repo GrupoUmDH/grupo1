@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="stylesheets/<%= title %>.css">
-    <link rel="stylesheet" href="stylesheets/partials/header.css">
-    <link rel="stylesheet" href="stylesheets/menu-mobile.css">
-    <script src="javascripts/menu_mobile.js" defer></script>
+    <link rel="stylesheet" href="/stylesheets/<%= pageName %>.css">
+    <link rel="stylesheet" href="/stylesheets/partials/header.css">
+    <link rel="stylesheet" href="/stylesheets/menu-mobile.css">
+    <script src="/javascripts/menu_mobile.js" defer></script>
 </head>
 
 
@@ -20,7 +20,7 @@
                         <span></span>
                     </label>
             </div>
-            <img id="logo-mobile" src="img/logo.svg" />
+            <img id="logo-mobile" src="/img/logo.svg" />
         </div>
         <div id="op-menu">
             <div id="menu-content">
@@ -28,17 +28,17 @@
                 <ul>
                     <li>
                         <a href="<%= 'index' %>">
-                            <img src="img/ico/silhueta-de-icone-de-casa.png" /> Home
+                            <img src="/img/ico/silhueta-de-icone-de-casa.png" /> Home
                         </a>
                     </li>
                     <li>
-                        <a href="<%= 'categorias' %>">
-                            <img src="img/ico/cardapio.png" /> Categorias
+                        <a href="<%= '/produtos/categorias' %>">
+                            <img src="/img/ico/cardapio.png" /> Categorias
                         </a>
                     </li>
                     <li>
                         <a href="<%= 'suporte' %>">
-                            <img src="img/ico/suporte-online.png" /> Suporte
+                            <img src="/img/ico/suporte-online.png" /> Suporte
                         </a>
                     </li>
                     <li>
@@ -58,7 +58,7 @@
         <div class="paginas">
             <ul>
                 <li> <a href="<%= '/' %>">Home</a> </li>
-                <li> <a href="<%= 'categorias' %>">Categorias</a> </li>
+                <li> <a href="<%= '/produtos/categorias' %>">Categorias</a> </li>
                 <li> <a href="<%= 'suporte' %>">Suporte</a> </li>
                 <li> <a href="<%= 'sobre' %>">Sobre Nós</a> </li>
             </ul>

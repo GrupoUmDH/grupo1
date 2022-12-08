@@ -1,23 +1,13 @@
+const produtos = require('../database/produtos.json');
+
 module.exports = {
-    filmes: () => {
-        return [
-            {
-                id: 1,
-                categoria: 'acao',
-                imagem: 'alertaVermelho',
-                nome: 'Alerta Vermelho',
-                valor_aluguel: 'R$ 19,90',
-                valor_compra: 'R$ 59,90',
-            },
-            {
-                id: 2,
-                categoria: 'acao',
-                imagem: 'alertavermelho',
-                nome: 'Alerta Vermelho',
-                valor_aluguel: 'R$ 19,90',
-                valor_compra: 'R$ 59,90',
-            }
-        ]
+    listar: (categoria) => {
+        if(categoria){
+            return produtos.filter(produto => produto.categoria == categoria)
+        }else{
+            return produtos
+        }
+       
     }
   
 }

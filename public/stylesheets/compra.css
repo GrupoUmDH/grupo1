@@ -169,7 +169,7 @@ main{
 /* formulario */
 
  .error{
-    color: white;
+    color: var(--cores-letra);
     text-align: center;
     font-weight: 600;
 }
@@ -190,7 +190,6 @@ main{
     display: flex;
     justify-content: center;
     margin-top: 2rem;
-
 }
 
 .content-form{

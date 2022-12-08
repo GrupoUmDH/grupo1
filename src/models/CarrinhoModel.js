@@ -6,5 +6,13 @@ module.exports = {
             { img: 'pix'},
             { img: 'boleto'},
         ]
+    },
+    resumo:()=>{
+        return[
+            {qtdItens:''},
+            {valor: ''},
+            {valorDesconto: ''},
+            {valorTotal: ''}
+        ]
     }
 }

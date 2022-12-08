@@ -105,20 +105,20 @@
                     <br>
                     <hr>
                     <div>
-                        <h3>CARRINHO: X ITENS</h3>
-                        <span>R$19,90</span>
+                        <h3>CARRINHO: <%= qtdItens %> ITENS</h3>
+                        <span><%compra.valor%></span>
                     </div>
                     <br>
                     <hr>
                     <div>
                         <h3>DESCONTO</h3>
-                        <span>R$19,90</span>
+                        <span><%compra.valorDesconto%></span>
                     </div>
                     <br>
                     <hr>
                     <div>
                         <h2>TOTAL</h2>
-                        <span>R$19,90</span>
+                        <span><%compra.valorTotal%></span>
                     </div>
                     <br>
                 </section>
@@ -127,4 +127,4 @@
 
         </section>
     </main>
-<%- include('partials/footer') %>
+    <%- include('partials/footer') %>
