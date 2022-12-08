@@ -1,17 +1,20 @@
+<head>
+    <script src="javascripts/<%= js %>.js" defer></script>
+</head>
+
 <%- include('partials/header') %>
 
     <!--CONTEÚDO MAIN -->
     <main>
         <section class="itens">
-            
-             <% for( const filme of carrinho ) { %> 
+            <% for(const filme of filmes ) { %>
                 <section class="item">
                     <img class="imagem-produto" src="/img/2-5.png"/>
                     <div class="descricao-produto">
                         <div>
-                            <h2><%= filmes.name %><h2>
+                            <h2 id="nome-filme"><%= filme.nome %></h2>
                             <br>
-                            <p><%= filmes.descricao %></p>
+                            <p></p>
                         </div>
                         <div class="container-preco">
                             <img id="indicacao" src="img/classificação-indicativa/SELO +12.png" >
@@ -22,11 +25,9 @@
                         </div>
                     </div>
                 </section>
-             <% } %> 
-           
+            <% } %>
 
         </section>
-
 
         <section class="pagamento">
 
@@ -60,4 +61,3 @@
 </body>
 
 <%- include('partials/footer') %>
-</html>

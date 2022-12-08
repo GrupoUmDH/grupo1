@@ -1,10 +1,12 @@
 let btnAddCarrinho = document.getElementById('add-carrinho')
+
 const nomeFilme = document.getElementById('nome-filme')
 const descrFilme = document.querySelector('#descri-filme>p')
 const coverFilme = document.querySelector('.cover-filme')
 const classificacao = document.querySelector('.classificacao>img')
 const precoAlugar = document.querySelector('.alugar>p')
 const precoComprar = document.querySelector('.comprar>p')
+
 let carrinho = []
 
 const filme = {
@@ -30,5 +32,4 @@ btnAddCarrinho.addEventListener('click', function(){
 
 })
 
-module.exports = carrinho;
 
