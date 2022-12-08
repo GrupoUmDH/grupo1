@@ -5,9 +5,11 @@ const coverFilme = document.querySelector('.cover-filme')
 const classificacao = document.querySelector('.classificacao>img')
 const precoAlugar = document.querySelector('.alugar>p')
 const precoComprar = document.querySelector('.comprar>p')
+const id = document.getElementById('id').value
 let carrinho = []
 
 const filme = {
+    id,
     nome: nomeFilme.innerText,
     descricao: descrFilme.innerText,
     classificacao: classificacao.src,

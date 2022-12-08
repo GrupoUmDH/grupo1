@@ -7,6 +7,7 @@ let itemsContainer = document.querySelector('.itens')
     itensCarrinho.forEach(filme => {
         itemsContainer.innerHTML += `
                 <section class="item">
+                    <input type="hidden" value="${filme.id}" id="id" name="id">
                     <img class="imagem-produto" src="${filme.imagem}"/>
                     <div class="descricao-produto">
                         <div>
@@ -19,6 +20,7 @@ let itemsContainer = document.querySelector('.itens')
                             <div>
                                 <span class="filme-valor"></span>
                                 <img class="remover" type="button" src="/img/ico/lixo.png"/>
+                                <input type="hidden" value="${filme.id}" id="id" name="id">
                             </div>
                         </div>
                     </div>
@@ -31,7 +33,12 @@ let itemsContainer = document.querySelector('.itens')
         console.log(removeBtns)
         removeBtns.forEach(btn => {
             btn.addEventListener('click' , function(){
+                const idFilme = this.nextElementSibling.value
+                let carrinho = JSON.parse(localStorage.getItem('carrinho'))
+                carrinho = carrinho.filter( item => item.id != idFilme)
+                localStorage.setItem('carrinho' , JSON.stringify(carrinho))    
                 btn.parentElement.parentElement.parentElement.parentElement.remove()
+
                 
             })
         }
