@@ -6,7 +6,8 @@ var CarrinhoModel = require('../models/Produto');
 
 /* GET Carrinho */
 router.get('/', function(req, res, next) {
-    res.render('carrinho', { title: 'carrinho' , js:"adicionarAoCarrinho" /*, filmes: JSON.parse(req.query)*/});
+    let carrinhoModel = CarrinhoModel.index();
+    res.render('carrinho', { title: 'carrinho' , js:"adicionarAoCarrinho" , filmes: carrinhoModel});
 });
 
 module.exports = router;
