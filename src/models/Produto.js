@@ -2,10 +2,9 @@ const listaFilmes = require('../database/filmesCarrinho.json')
 
 module.exports = {
     index: () => {
-    return listaFilmes
-    },
-    filmesCarrinho: (req) =>{
-        let 
-    } 
+        //const lista = localStorage.getItem('carrinho');
+        const lista = JSON.parse(listaFilmes);
+        return listaFilmes;
+    }
 }
 

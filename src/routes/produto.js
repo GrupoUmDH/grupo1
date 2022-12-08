@@ -7,9 +7,8 @@ const ProdutosController = require('../controllers/ProdutosController')
 // router.get('/series', ProdutoController.series);
 
 router.get('/', function(req, res, next) {
-    res.render('produto', { pageName: 'produto', js:"adicionarAoCarrinho"});
+    res.render('produto', { title: 'produto', js:"adicionarAoCarrinho"});
 })
-
 
 router.get('/filmes', ProdutosController.filmes);
 
