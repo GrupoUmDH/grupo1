@@ -29,7 +29,6 @@ btnAddCarrinho.addEventListener('click', function(){
         carrinho.push(filme)
         localStorage.setItem('carrinho', JSON.stringify(carrinho))
     }
-
 })
 
 

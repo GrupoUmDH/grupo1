@@ -1,6 +1,9 @@
 module.exports = {
     index: () => {
-    return [
+        let carrinho = localStorage.getItem('carrinho');
+        return JSON.parse(carrinho);
+     
+    /*[
     {
     id: 1,
     nome: 'Homem Aranha',
@@ -40,7 +43,7 @@ module.exports = {
     descricao: 'Documentário',
     imagem: '/'
     },
-    
+
 
     {
     id: 5,
@@ -49,5 +52,7 @@ module.exports = {
     descricao: 'Suspense',
     imagem: '/'
     },
+    ]
+    */
     
-}
+}}
