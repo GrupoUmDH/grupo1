@@ -13,7 +13,7 @@ module.exports = {
     listar: (req, res) => {
         const categoria = req.query.categoria || 'acao';
         const produtos = ProdutosModel.listar(categoria);
-        return res.render('categorias', { pageName: 'categorias', produtos, categoria});
+        return res.render('categorias', { pageName: 'categorias', produtos, categoria, js:''});
 
     }
 }

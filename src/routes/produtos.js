@@ -6,9 +6,9 @@ const ProdutosController = require('../controllers/ProdutosController')
 
 // router.get('/series', ProdutoController.series);
 
-// router.get('/', function(req, res, next) {
-//     res.render('produtos', { pageName: 'produtos' });
-// });
+router.get('/', function(req, res, next) {
+    res.render('produtos', { pageName: 'produtos', js:'adicionarAoCarrinho' });
+});
 
 router.get('/filmes', ProdutosController.filmes);
 
@@ -20,7 +20,7 @@ router.get('/cadastroProduto', function(req, res, next) {
     res.render('cadastroProduto', { pageName: 'cadastroProduto' });
 
 });
-router.get('/produtos/categorias', ProdutosController.listar);
+router.get('/categorias', ProdutosController.listar);
 
 
 module.exports = router;

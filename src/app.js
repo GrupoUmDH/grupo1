@@ -7,7 +7,6 @@ var logger = require('morgan');
 var homeRouter = require('./routes/index');
 var userRouter = require('./routes/users');
 var produtosRouter = require('./routes/produtos');
-var categoriasRouter = require('./routes/categorias');
 var carrinhoRouter = require('./routes/carrinho');
 
 var app = express();
@@ -34,10 +33,6 @@ app.use('/cadastro', userRouter);
 
 //CARRINHO - (CARRINHO, COMPRA, PAGAMENTO)
 app.use('/carrinho', carrinhoRouter);
-app.use('/compra',carrinhoRouter);
-
-//CATEGORIAS - (ADD/EXCLUI CATEGORIAS)
-app.use('/produtos/categorias', categoriasRouter);
 
 //PRODUTOS - (FILMES, SÉRIES -ADD/EXCLUI PRODUTOS)
 app.use('/filmes', produtosRouter);
