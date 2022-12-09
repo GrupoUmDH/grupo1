@@ -14,5 +14,8 @@ router.get('/', function(req, res, next) {
     descricao: "descricao", valor: "valor"}]});
     
 });
-
+router.get('/compra', function(req, res, next) {
+    res.render('compra', { pageName: 'compra' , js:"finalizaCompra" })
+});
+    
 module.exports = router;

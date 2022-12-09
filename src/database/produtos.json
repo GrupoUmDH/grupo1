@@ -2,28 +2,174 @@
     {
         "id": 1,
         "tipo": "filme",
-        "categoria": "acao",
-        "nome": "TOP GUN - MAVERICK",
-        "valor": "R$ 9,90",
+        "categoria": "terror",
+        "nome": "A MULHER NA JANELA",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "top"
+        "imagem": "aMulherNaJanela"
     },
     {
         "id": 2,
         "tipo": "filme",
         "categoria": "aventura",
         "nome": "SPIDER-MAN - NO WAY HOME",
-        "valor": "R$ 9,90",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "homemAranha"
     },
     {
         "id": 3,
         "tipo": "filme",
-        "categoria": "terror",
-        "nome": "SORRIA",
-        "valor": "R$ 9,90",
+        "categoria": "comedia",
+        "nome": "ARREMESSANDO ALTO",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "3"
+        "imagem": "arremessandoAlto"
+    },
+    
+    {
+        "id": 4,
+        "tipo": "filme",
+        "categoria": "comedia",
+        "nome": "AS BRANQUELAS",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "asBranquelas"
+    },
+    {
+        "id": 5,
+        "tipo": "filme",
+        "categoria": "guerra",
+        "nome": "CORAÇÕES DE FERRO",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "coracoesDeFerro"
+    },
+    {
+        "id": 6,
+        "tipo": "filme",
+        "categoria": "guerra",
+        "nome": "BELEZA AVASSALADORA",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "belezaAvassaladora"
+    },
+    
+    {
+        "id": 7,
+        "tipo": "filme",
+        "categoria": "suspense",
+        "nome": "ESCOLA BEM OU MAL",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "escolaBemOuMal"
+    },
+    {
+        "id": 8,
+        "tipo": "filme",
+        "categoria": "aventura",
+        "nome": "GUERRA MUNDIAL Z",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "guerraMundialZ"
+    },
+    {
+        "id": 9,
+        "tipo": "filme",
+        "categoria": "acao",
+        "nome": "O CULPADO",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "oCulpado"
+    },
+    
+    {
+        "id": 10,
+        "tipo": "filme",
+        "categoria": "acao",
+        "nome": "O DIABO DE CADA DIA",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "oDiaboDeCadaDia"
+    },
+    {
+        "id":11,
+        "tipo": "filme",
+        "categoria": "aventura",
+        "nome": "ONDE ESTA SEGUNDA",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "ondeEstaSegunda"
+    },
+    {
+        "id": 12,
+        "tipo": "filme",
+        "categoria": "terror",
+        "nome": "O PROTETOR",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "oProtetor"
+    },
+    {
+        "id": 13,
+        "tipo": "filme",
+        "categoria": "acao",
+        "nome": "RESIDENT EVIL",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "ResidentEvil"
+    },
+    {
+        "id": 14,
+        "tipo": "filme",
+        "categoria": "terror",
+        "nome": "SEGREDOS NAS PAREDES",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "segredosNasParedes"
+    },
+    {
+        "id": 15,
+        "tipo": "filme",
+        "categoria": "drama",
+        "nome": "UMA GAROTA DE MUITA SORTE",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "umaGarotaDeMuitaSorte"
+    },
+    {
+        "id": 16,
+        "tipo": "filme",
+        "categoria": "aventura",
+        "nome": "UM LUGAR SILENCIOSO",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "umLugarSilencioso"
+    },
+    {
+        "id": 17,
+        "tipo": "filme",
+        "categoria": "romance",
+        "nome": "ESPOSA DE ALUGUEL",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "esposaDeAluguel"
     }
 ]
