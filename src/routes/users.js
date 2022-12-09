@@ -3,11 +3,11 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('cadastro', { title: 'cadastro' });
+  res.render('cadastro', { pageName: 'cadastro', js: 'cadastro' });
 });
 
 router.get('/painel-user', function(req, res, next) {
-  res.render('painel-user', { title: 'painel-user' });
+  res.render('painel-user', { pageName: 'painel-user', js:'' });
 });
 
 

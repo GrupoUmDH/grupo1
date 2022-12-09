@@ -7,19 +7,20 @@ const ProdutosController = require('../controllers/ProdutosController')
 // router.get('/series', ProdutoController.series);
 
 router.get('/', function(req, res, next) {
-    res.render('produto', { title: 'produto', js:"adicionarAoCarrinho"});
-})
+    res.render('produtos', { title: 'produtos', js:'adicionarAoCarrinho' });
+});
 
 router.get('/filmes', ProdutosController.filmes);
 
 router.get('/series', function(req, res, next) {
-    res.render('series', { title: 'series' });
+    res.render('series', { pageName: 'series' });
 });
 
-router.get('/cadastro-produto', function(req, res, next) {
-    res.render('cadastro-produto', { title: 'cadastro-produto' });
+router.get('/cadastroProduto', function(req, res, next) {
+    res.render('cadastroProduto', { pageName: 'cadastroProduto' });
 
 });
+router.get('/categorias', ProdutosController.listar);
 
 
 module.exports = router;

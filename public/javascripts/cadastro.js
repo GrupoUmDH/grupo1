@@ -35,8 +35,8 @@ window.addEventListener('load', function () {
 
     });
 
-    const verificaUser = function(input){
-        
+    const verificaUser = function (input) {
+
     }
 
 });

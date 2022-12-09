@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <head>
     <script src="/javascripts/cadastro.js" defer></script>
     <title>Lumiere - Cadastro</title>
 </head>
 
 <%- include('partials/header') %>
-<body>
 
     <!--CONTEÚDO MAIN -->
     <main>
-
+        <div class="login-cadastro">
         <div class="login">
             <img src="/img/ico/user-login.png" />
             <hr>
@@ -31,6 +27,8 @@
 
         <div class="cadastro cadastro-formulario">
             <form class="form-cad" method="post">
+                <span>Cadastre-se</span>
+                <hr>
                 <a>
                     <img src="/img/ico/user.png" />
                     <h5>Editar</h5>
@@ -41,14 +39,7 @@
                 <button type="submit" id="#">CRIAR A MINHA CONTA </button>
             </form>
         </div>
-      
+      </div>
     </main>
-   
-      <hr>
     
-    <footer>
-        <p>2022. LUMIERE © TODOS OS DIREITOS RESERVADOS </p>
-    </footer>
-</body>
-
-</html>
+    <%- include('partials/footer')%>

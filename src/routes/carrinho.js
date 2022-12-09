@@ -2,7 +2,12 @@ const { json, query } = require('express');
 var express = require('express');
 var router = express.Router();
 
-var CarrinhoModel = require('../models/Produto');
+const CarrinhoController=require('../controllers/CarrinhoController')
+
+
+router.get('/', CarrinhoController.carrinho);
+router.get('/compra', CarrinhoController.compra);
+
 
 /* GET Carrinho */
 router.get('/', function(req, res, next) {
@@ -10,5 +15,8 @@ router.get('/', function(req, res, next) {
     descricao: "descricao", valor: "valor"}]});
     
 });
-
+router.get('/compra', function(req, res, next) {
+    res.render('compra', { pageName: 'compra' , js:"finalizaCompra" })
+});
+    
 module.exports = router;
