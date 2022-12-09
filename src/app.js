@@ -6,8 +6,7 @@ var logger = require('morgan');
 
 var homeRouter = require('./routes/index');
 var userRouter = require('./routes/users');
-var produtoRouter = require('./routes/produto');
-var categoriasRouter = require('./routes/categorias');
+var produtosRouter = require('./routes/produtos');
 var carrinhoRouter = require('./routes/carrinho');
 
 var app = express();
@@ -24,16 +23,21 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 //app.use(express.favicon(__dirname + '/public/images/ico/favicon.ico'));
 
+//INDEX - (HOME, SUPORTE, SOBRE NÓS)
 app.use('/', homeRouter);
 app.use('/index', homeRouter);
 
+//USERS - (PAINEL USUÁRIO, LOGIN, CADASTRO)
 app.use('/painel-user', userRouter);
 app.use('/cadastro', userRouter);
 
+//CARRINHO - (CARRINHO, COMPRA, PAGAMENTO)
 app.use('/carrinho', carrinhoRouter);
-app.use('/categorias', categoriasRouter);
-app.use('/produto', produtoRouter);
-app.use('/cadastro', userRouter);
+
+//PRODUTOS - (FILMES, SÉRIES -ADD/EXCLUI PRODUTOS)
+app.use('/filmes', produtosRouter);
+app.use('/produtos', produtosRouter);
+app.use('/cadastroProduto', produtosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

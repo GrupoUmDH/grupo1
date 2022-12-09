@@ -9,11 +9,11 @@ const filmesControllers = require('../controllers/filmesControllers')
 router.get('/', filmesControllers.listaFilmes);
 
 router.get('/sobre', function(req, res, next) {
-    res.render('sobre', { title: 'sobre' });
+    res.render('sobre', { pageName: 'sobre' });
 });
 
 router.get('/suporte', function(req, res, next) {
-    res.render('suporte', { title: 'suporte' });
+    res.render('suporte', { pageName: 'suporte' });
 });
 
 module.exports = router;

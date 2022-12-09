@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="stylesheets/<%= pageName %>.css">
-    <link rel="stylesheet" href="stylesheets/partials/header.css">
-    <link rel="stylesheet" href="stylesheets/menu-mobile.css">
-    <script src="javascripts/menu_mobile.js" defer></script>
+    <link rel="stylesheet" href="/stylesheets/<%= pageName %>.css">
+    <link rel="stylesheet" href="/stylesheets/partials/header.css">
+    <link rel="stylesheet" href="/stylesheets/menu-mobile.css">
+    <script src="/javascripts/montarCarrinho.js" defer></script>
+    <script src="/javascripts/menu_mobile.js" defer></script>
+    <script src="/javascripts/<%= js %>.js" defer></script>
 </head>
 
 
@@ -20,29 +22,29 @@
                         <span></span>
                     </label>
             </div>
-            <img id="logo-mobile" src="img/logo.svg" />
+            <img id="logo-mobile" src="/img/logo.svg" />
         </div>
         <div id="op-menu">
             <div id="menu-content">
                 <hr>
                 <ul>
                     <li>
-                        <a href="<%= 'index' %>">
-                            <img src="img/ico/silhueta-de-icone-de-casa.png" /> Home
+                        <a href="<%= '/index' %>">
+                            <img src="/img/ico/silhueta-de-icone-de-casa.png" /> Home
                         </a>
                     </li>
                     <li>
-                        <a href="<%= 'categorias' %>">
-                            <img src="img/ico/cardapio.png" /> Categorias
+                        <a href="<%= '/produtos/categorias' %>">
+                            <img src="/img/ico/cardapio.png" /> Categorias
                         </a>
                     </li>
                     <li>
-                        <a href="<%= 'suporte' %>">
-                            <img src="img/ico/suporte-online.png" /> Suporte
+                        <a href="<%= '/suporte' %>">
+                            <img src="/img/ico/suporte-online.png" /> Suporte
                         </a>
                     </li>
                     <li>
-                        <a href="<%= 'sobre' %>">
+                        <a href="<%= '/sobre' %>">
                             <img src="/img/ico/sobre-nos.png" /> Sobre Nós</a>
                     </li>
                 </ul>
@@ -54,13 +56,13 @@
     </nav>
 
     <nav id="navbar">
-        <img class="navlogo" src="/img/logo.svg" alt="">
+        <a href="<%= '/index' %>"><img class="navlogo" src="/img/logo.svg" alt=""></a>
         <div class="paginas">
             <ul>
                 <li> <a href="<%= '/' %>">Home</a> </li>
-                <li> <a href="<%= 'categorias' %>">Categorias</a> </li>
-                <li> <a href="<%= 'suporte' %>">Suporte</a> </li>
-                <li> <a href="<%= 'sobre' %>">Sobre Nós</a> </li>
+                <li> <a href="<%= '/produtos/categorias' %>">Categorias</a> </li>
+                <li> <a href="<%= '/suporte' %>">Suporte</a> </li>
+                <li> <a href="<%= '/sobre' %>">Sobre Nós</a> </li>
             </ul>
         </div>
         <div class="content">
@@ -79,10 +81,14 @@
                 </div>
             </form>
             <div class="navuser">
-                <a href="<%= 'carrinho' %>">
+                <form action="/carrinho" method="GET" id="montarCarrinho">
+                    <input type="hidden" name="itensCarrinho">
+                    <button type="submit" >
                     <img src="/img/ico/carrinho.png" />
-                </a>
-                <a href="<%= 'cadastro' %>">
+                </button>
+                </form>
+                
+                <a href="<%= '/cadastro' %>">
                     <img src="/img/ico/user.png" />
                 </a>
             </div>

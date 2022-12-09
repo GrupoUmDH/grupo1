@@ -1,5 +1,4 @@
-<body>
-    <%- include('partials/header') %>
+<%- include('partials/header') %>
         <main>
 
             <section class="container">
@@ -11,15 +10,15 @@
                 <section class="filmes-home">
                     <% for(const filmes of filmes) { %>
                         <div>
-                            <img src="img/filmes/<%=filmes.imagem%>.jpg">
+                            <img src="/img/filmes/<%=filmes.imagem%>.jpg">
                             <p>
                                 <%= filmes.nome %>
                             </p>
                             <div class="preco"><span>
-                                    <%= categorias.valor_aluguel %>
+                                    <%= filmes.valor_aluguel %>
                                 </span></div>
                             <div class="preco"><span>
-                                    <%= categorias.valor_compra %>
+                                    <%= filmes.valor_compra %>
                                 </span></div>
                         </div>
                         <% }%>
@@ -28,6 +27,3 @@
         </main>
         <%- include('partials/footer')%>
 
-</body>
-
-</html>

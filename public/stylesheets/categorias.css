@@ -116,6 +116,9 @@ select> .arrow {
     font-family: Arial, Helvetica, sans-serif;
     color: #B30006;
 }
+.titulos > h1{
+    text-transform: capitalize;
+}
 
 .titulos > span {
     display: block;

@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "tipo": "filme",
+        "categoria": "acao",
+        "nome": "TOP GUN - MAVERICK",
+        "valor": "R$ 9,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "top"
+    },
+    {
+        "id": 2,
+        "tipo": "filme",
+        "categoria": "aventura",
+        "nome": "SPIDER-MAN - NO WAY HOME",
+        "valor": "R$ 9,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "homemAranha"
+    },
+    {
+        "id": 3,
+        "tipo": "filme",
+        "categoria": "terror",
+        "nome": "SORRIA",
+        "valor": "R$ 9,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "3"
+    }
+]

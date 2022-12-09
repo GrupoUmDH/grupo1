@@ -1,155 +1,65 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <link rel='stylesheet' href='/public/stylesheets/categorias.css' />
-</head>
-
-<body>
-
     <%- include('partials/header') %>
 
         <main>
             <div class="sub-header">
-                <div class="content-genero">
-                    <select name="genero" id="genero">
+                <form action="/produtos/categorias" class="content-genero" method="get">
+                    <select name="categoria" id="genero">
+
                         <div class="label" role="button">
                             <span class="arrow"></span>
                         </div>
-                        <option value="" disabled selected hidden>Selecione</option>
-                        <option value="">Ação</option>
-                        <option value="">Aventura</option>
-                        <option value="">Comédia</option>
-                        <option value="">Dança</option>
-                        <option value="">Documentário</option>
-                        <option value="">Drama</option>
-                        <option value="">Faroeste</option>
-                        <option value="">Ficção</option>
-                        <option value="">Guerra</option>
-                        <option value="">Musical</option>
-                        <option value="">Policial</option>
-                        <option value="">Romance</option>
-                        <option value="">Suspense</option>
-                        <option value="">Terror</option>
+                        <option value="selecione" disabled selected hidden>Selecione</option>
+                        <option value="acao">Ação</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="comedia">Comédia</option>
+                        <option value="danca">Dança</option>
+                        <option value="documentario">Documentário</option>
+                        <option value="drama">Drama</option>
+                        <option value="faroeste">Faroeste</option>
+                        <option value="ficcao">Ficção</option>
+                        <option value="guerra">Guerra</option>
+                        <option value="musical">Musical</option>
+                        <option value="policial">Policial</option>
+                        <option value="romance">Romance</option>
+                        <option value="suspense">Suspense</option>
+                        <option value="terror">Terror</option>
                     </select>
-                </div>
+                    <div class="navbusca"><button  type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 
+                    457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7
+                    376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1
+                    0 208 0S416 93.1 416 208zM208 352c79.5
+                    0 144-64.5 144-144s-64.5-144-144-144S64
+                    128.5 64 208s64.5 144 144 144z" />
+                    </svg></i></button></div>
+                </form>
             </div>
-            
 
-            <nav class="menu">
-                <!-- <ul>
-                    <li><a href="">Ação</a></li>
-                    <li><a href="">Aventura</a></li>
-                    <li><a href="">Comédia</a></li>
-                    <li><a href="">Dança</a></li>
-                    <li><a href="">Documentário</a></li>
-                    <li><a href="">Drama</a></li>
-                    <li><a href="">Faroeste</a></li>
-                    <li><a href="">Ficção</a></li>
-                    <li><a href="">Guerra</a></li>
-                    <li><a href="">Musical</a></li>
-                    <li><a href="">Policial</a></li>
-                    <li><a href="">Romance</a></li>
-                    <li><a href="">Suspense</a></li>
-                    <li><a href="">Terror</a></li>
-                </ul> -->
-
-            </nav>
             <section class="container">
                 <div class="titulos">
-                    <h1>Ação</h1>
+                    <h1><%= categoria%></h1>
                 </div>
 
                 <hr>
                 <section class="filmes-acao">
-                    <% for(const categoria of categorias) { %>
+                    <% for(const produto of produtos) { %>
                         <div>
-                            <img src="img/filmes/<%=categoria.imagem%>.jpg">
+                            <img src="/img/filmes/<%=produto.imagem%>.jpg">
                             <p>
-                                <%= categoria.nome %>
+                                <%= produto.nome %>
                             </p>
-                            <span>
-                                <%= categoria.valor_aluguel %>
+                            <span id=" aluguel">Aluguel
+                                <%= produto.valor_aluguel %>
                             </span>
-                            <span>
-                                <%= categoria.valor_compra %>
+                            <span id="compra">Compra
+                                <%= produto.valor_compra %>
                             </span>
                         </div>
                         <% }%>
                 </section>
 
-                <div class="titulos">
-                    <h1>Drama</h1>
-                </div>
-
-                <hr>
-                <section class="filmes-drama">
-                    <div>
-                        <img src="/img/filme2.jpg" alt="">
-                        <p>ESCOLA DO BEM E DO MAL</p>
-                        <span>R$19,90</span>
-                    </div>
-                    <div>
-                        <img src="/img/filme6.jpg" alt="">
-                        <p>CORAÇÕES DE FERRO</p>
-                        <span>R$19,90</span>
-                    </div>
-                    <div>
-                        <img src="/img/filme12.jpg" alt="">
-                        <p>O DIABO DE CADA DIA</p>
-                        <span>R$19,90</span>
-                    </div>
-                </section>
-
-                <div class="titulos">
-                    <h1>Comédia</h1>
-                </div>
-
-                <hr>
-                <section class="filmes-comedia">
-                    <div>
-                        <img src="/img/filme10.jpg" alt="">
-                        <p>ARREMESSANDO ALTO</p>
-                        <span>R$19,90</span>
-                    </div>
-                    <div>
-                        <img src="/img/filme9.jpg" alt="">
-                        <p>AS BRANQUELAS</p>
-                        <span>R$19,90</span>
-                    </div>
-                    <div>
-                        <img src="/img/filme3.jpg" alt="">
-                        <p>ESPOSA DE ALUGUEL</p>
-                        <span>R$19,90</span>
-                    </div>
-                </section>
-
-                <div class="titulos">
-                    <h1>Suspense</h1>
-                </div>
-
-                <hr>
-                <section class="filmes-suspense">
-                    <div>
-                        <img src="/img/filme12.jpg" alt="">
-                        <p>O DIABO DE CADA DIA</p>
-                        <span>R$19,90</span>
-                    </div>
-                    <div>
-                        <img src="/img/filme11.jpg" alt="">
-                        <p>BELEZA AVASSALADORA</p>
-                        <span>R$19,90</span>
-                    </div>
-                    <div>
-                        <img src="/img/filme8.jpg" alt="">
-                        <p>ONDE ESTÁ SEGUNDA?</p>
-                        <span>R$19,90</span>
-                    </div>
-                </section>
             </section>
         </main>
 
         <%- include('partials/footer')%>
-</body>
-
-</html>
