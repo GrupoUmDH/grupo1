@@ -12,9 +12,9 @@ router.get('/', function(req, res, next) {
 
 router.get('/filmes', ProdutosController.filmes);
 
-router.get('/series', function(req, res, next) {
-    res.render('series', { title: 'series' });
-});
+router.get('/series', ProdutosController.series);
+    
+
 
 router.get('/cadastro-produto', function(req, res, next) {
     res.render('cadastro-produto', { title: 'cadastro-produto' });

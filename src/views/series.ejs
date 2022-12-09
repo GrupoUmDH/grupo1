@@ -1,45 +1,36 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/series.css">
-    <link rel="stylesheet" href="/stylesheets/menu-mobile.css">
-    <script src="/javascripts/menu_mobile.js" defer></script>
-    <script src="./script.js" defer></script>
-    <title>Lumiere - Series</title>
+    <link rel="stylesheet" href="/stylesheets/series.css">    
 </head>
 
-<%- include('partials/header') %>
-<body>
-    <%- include('partials/header') %>
 
+<%- include('partials/header') %>
+  
+    
     <main>
         <section class="container">
             <div class="titulos">
-                <h1>SÉRIES</h1>
+                <h1>Séries</h1>
             </div>
 
             <hr>
             <section class="series-home">
-                <% for(const series of series) { %>
+                <% for(const serie of series) { %>
                 <div>
-                    <img src="img/series/<%=series.img%>.jpg">
-                    <p>Dahmer</p>
-                    <div class="preco"><span>><%-serie.valor_aluguel%></span></div>
-                    <div class="preco"><span>><%-serie.valor_compra%></span></div>
+                    <img src="/img/series/<%=serie.img%>.jpg">
+                    <p><%=serie.nome%></p>
+                    <div class="preco"><span><%=serie.valor_aluguel%></span></div>
+                    <div class="preco"><span><%=serie.valor_compra%></span></div>
                 </div>
                 <% }%>                                    
             </section>
         </section>
-    </main>
+    </main>       
 
-    <hr>
 
-    <%- include('partials/footer')%>
+<%- include('partials/footer')%>
 
-</body>
-
-</html>
