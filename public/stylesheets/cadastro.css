@@ -11,7 +11,8 @@
 
 *{
     margin: 0;
-    padding: 0; 
+    padding: 0 auto; 
+    justify-content: center;
 }
  
 body{
@@ -41,7 +42,11 @@ main{
     align-items: center;
     gap: 4rem;
 }
-
+/* .login-cadastro{
+    display: flex;
+    position: relative;
+    width: 90%;
+} */
 /* Login */
 
 h4 {
@@ -56,9 +61,24 @@ div.login {
     display: block;
     text-align: center;
     width: 360px;
-    height: 460px;
+    height: 390px;
     border-radius: 15px;
     padding: 2rem;
+    background-color: var(--background-2);
+    position: absolute;
+    left: 5rem;
+    top: 10rem;
+}
+
+div.login > hr {
+    background-color: var(--cores-chaves);
+    color: var(--cores-chaves);
+    border: var(--cores-chaves);
+    width: 360px;
+    height: 2px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
 }
 
 
@@ -77,9 +97,9 @@ div.login {
     justify-content: center;
     align-self: center;
     border-radius: 15px;
-    background-color: white;
+    background-color: var(--cores-letra);
     height: 2rem;
-    width: 15rem;
+    width: 90%;
     margin: .5rem;
 }
 
@@ -98,21 +118,41 @@ div.login {
     margin-bottom: 2rem;
 }
 
-
+/*cadastro*/
 .cadastro {
     display: block;
     text-align: center;
     align-items: center;
     justify-content: center;
+    background-color: var(--background-2);
+    width: 40rem;
+    border-radius: 15px;
+    padding-bottom: 2rem;
+    position: absolute;
+    left: 33rem;
+    top: 10rem;
+}
 
+.cadastro > form> span{
+    margin: 1rem .5rem 0 .5rem;
+    color: var(--cores-chaves);
+    font-size: 3rem;
+    font-weight: 700;
+}
+.cadastro > form > hr{
+    width: 30rem;
+    background-color: var(--cores-chaves);
+    color: var(--cores-chaves);
+    border: var(--cores-chaves);
 }
 
 .cadastro a > img{
-    margin-top: 5rem;
+    margin-top: 1.5rem;
     width: 10rem;
 }
 
-h5{ color: #FFFFFF;
+h5{ 
+    color: var(--cores-letra);
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -133,10 +173,11 @@ h5{ color: #FFFFFF;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    background-color: white;
+    background-color: var(--cores-letra);
     height: 2rem;
     width: 30rem;
     margin: 2rem .5rem .5rem 0;
+     
 }
 
 
@@ -147,38 +188,17 @@ h5{ color: #FFFFFF;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    color: #FFFFFF;
-    background-color: #B30006;
+    color: var(--cores-letra);
+    background-color:var(--cores-chaves);
     width: 15rem;
     height: 2.5rem;
     margin-bottom: 5rem;
+    border-color: var(--cores-chaves);
 
 } 
 
 .error {
-    color: #B30006;
+    color: var(--cores-chaves);
     padding: 0;
     margin: 0;
-}
-
-/*CONFIGURAÇÃO FOOTER*/
-
-hr {
-    background-color: var(--cores-chaves);
-    color: var(--cores-chaves);
-    border: var(--cores-chaves);
-    width: 100vw;
-    height: 2px;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 2rem;
-}
-
-footer {
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-    font-family: 'Inter' Arial, Helvetica, sans-serif;
-    color: var(--cores-chaves);
-    align-items: center;
-    text-align: center;
 }

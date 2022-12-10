@@ -1,12 +1,5 @@
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
 <%- include('partials/header') %>
 
-    <body>
         <main>
             <section class="container-central">
                 <button id="prev">&lArr;</button>
@@ -51,7 +44,7 @@
                 <section class="filmes-home">
                     <% for (const filme of listaFilmes) { %>
                         <div class="filme-show">
-                            <a><img src="/img/filmes-home/<%=filme.imagem%>.png" alt=""></a>
+                            <a><img src="/img/filmes-home/<%= filme.imagem %>.png" alt=""></a>
                             <div class="descri">
                                 <div id="filme-pay">
                                     <p id="valor"><%= filme.valor %> </p>
@@ -87,7 +80,7 @@
                                 </div>
                             </div>
                             <div>
-                                <h3 id="nome-filme">TTHE BOYS</h3>
+                                <h3 id="nome-filme">THE BOYS</h3>
                                 <p id="descri-filme">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
                                     perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur
                                     error
@@ -179,6 +172,6 @@
                 </section>
             </section>
         </main>
-    </body>
+
 
 <%- include('partials/footer')%>
