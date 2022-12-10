@@ -20,7 +20,7 @@ router.get('/cadastroProduto', function(req, res, next) {
     res.render('cadastroProduto', { pageName: 'cadastroProduto' });
 
 });
-router.get('/categorias', ProdutosController.listar);
+//router.get('/categorias', ProdutosController.listar);
 
 
 module.exports = router;

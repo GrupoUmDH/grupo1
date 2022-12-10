@@ -4,9 +4,6 @@ const { categorias } = require('./categoriasController');
 module.exports = {
     filmes: (req, res) => {
         const filmes = ProdutosModel.filmes();
-<<<<<<< HEAD
-        return res.render('filmes', { title: 'Filmes' })
-=======
         return res.render('filmes', { pageName: 'Filmes' })
     },
     cadastro: (req, res) => {
@@ -18,6 +15,5 @@ module.exports = {
         const produtos = ProdutosModel.listar(categoria);
         return res.render('categorias', { pageName: 'categorias', produtos, categoria, js:''});
 
->>>>>>> origin
     }
 }
