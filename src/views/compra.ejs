@@ -1,7 +1,3 @@
-<head>
-    <link rel='stylesheet' href='/stylesheets/compra.css' />
-</head>
-
 <%- include('partials/header') %>
 
     <main>
@@ -96,8 +92,7 @@
 
 
             </div>
-
-            <div class="content-pagamento">
+ <div class="content-pagamento">
                 <section class="resumo">
                     <div>
                         <h2>RESUMO DO PEDIDO</h2>
@@ -105,26 +100,25 @@
                     <br>
                     <hr>
                     <div>
-                        <h3>CARRINHO: <%= qtdItens %> ITENS</h3>
-                        <span><%compra.valor%></span>
+                        <h3>CARRINHO: X ITENS</h3>
+                        <span>R$19,90</span>
                     </div>
                     <br>
                     <hr>
                     <div>
                         <h3>DESCONTO</h3>
-                        <span><%compra.valorDesconto%></span>
+                        <span>R$19,90</span>
                     </div>
                     <br>
                     <hr>
                     <div>
                         <h2>TOTAL</h2>
-                        <span><%compra.valorTotal%></span>
+                        <span>R$19,90</span>
                     </div>
                     <br>
                 </section>
                 <button>finalizar pedido</button>
             </div>
-
-        </section>
+ </section>
     </main>
-    <%- include('partials/footer') %>
+<%- include('partials/footer') %>

@@ -6,14 +6,14 @@ module.exports = {
         const filmes = ProdutosModel.filmes();
         return res.render('filmes', { pageName: 'Filmes' })
     },
+    series: (req, res) =>{
+        const listaSeries = ProdutosModel.index();
+        return res.render('series', { series: listaSeries, title: 'series' })
+       
+    },
     cadastro: (req, res) => {
         const cadastro = ProdutosModel.cadastroProduto();
         return res.render('cadastro', { pageName: 'cadastroProduto' });
-    },
-    listar: (req, res) => {
-        const categoria = req.query.categoria || 'acao';
-        const produtos = ProdutosModel.listar(categoria);
-        return res.render('categorias', { pageName: 'categorias', produtos, categoria, js:''});
-
     }
 }
+

@@ -122,11 +122,6 @@ select {
     color: var(--cores-letra);
 }
 
-#filme-pay {
-    display: block;
-    color: var(--cores-letra);
-}
-
 .container .filmes {
     align-items: stretch;
     display: flex;
@@ -144,7 +139,7 @@ select {
 .descri #nome-filme {
     color: var(--cores-letra);
     padding: auto;
-    margin: 3px;
+    margin: 2px;
     text-align: center;
     background-color: transparent;
 }
@@ -153,6 +148,9 @@ select {
     flex-direction: column;
     justify-content: space-around;
     z-index: 1;
+    align-items: center;
+    justify-content: center;
+    
 }
 .filme-show .descri {
     display: flex;
@@ -160,7 +158,7 @@ select {
     background-color: transparent;
     width: 15rem;
     font-size: .8rem;
-    text-align: left;
+    text-align: justify;
     justify-content: space-around;
     flex-direction: row;
 }
@@ -173,7 +171,7 @@ select {
     display: block;
     position: absolute;
     background-color: transparent;
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
     height: 20%;
     width: 15rem;
@@ -190,32 +188,11 @@ select {
     opacity: 0.3;
 }
 
-#filme-pay div #bt-produto {
-    display: block;
-    width: 7rem;
-    height: 1.5rem;
-    text-align: center;
-    align-items: center;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: row;
-    padding: 4px;
-    margin: 4px;
-    border-radius: 12px;
-    border: none;
-    background-color: rgb(192, 21, 21);
-    color: var(--cores-letra);
-    font-weight: bold;
-    font-size: 12pt;
-    
 
-}
-
-#filme-pay #descri-filme {
+ #descri-filme {
     color: var(--cores-letra);
     padding: 4px;
     margin: 4px;
     align-items: center;
- 
 }
 

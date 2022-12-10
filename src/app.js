@@ -8,6 +8,7 @@ var homeRouter = require('./routes/index');
 var userRouter = require('./routes/users');
 var produtosRouter = require('./routes/produtos');
 var carrinhoRouter = require('./routes/carrinho');
+var categoriaRouter = require('./routes/categorias')
 
 var app = express();
 
@@ -21,7 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 
-//app.use(express.favicon(__dirname + '/public/images/ico/favicon.ico'));
+
 
 //INDEX - (HOME, SUPORTE, SOBRE NÓS)
 app.use('/', homeRouter);
@@ -36,6 +37,7 @@ app.use('/carrinho', carrinhoRouter);
 
 //PRODUTOS - (FILMES, SÉRIES -ADD/EXCLUI PRODUTOS)
 app.use('/filmes', produtosRouter);
+app.use('/categorias', categoriaRouter);
 app.use('/produtos', produtosRouter);
 app.use('/cadastroProduto', produtosRouter);
 
