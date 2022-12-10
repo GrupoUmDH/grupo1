@@ -46,6 +46,30 @@ h5 {
     position: relative;
     letter-spacing: 0 !important;
     background-color: var(--background-2);
+    display: flex;
+    align-items: center;
+}
+
+.sub-header .escolher #submit {
+    background-color: var(--cores-chaves);
+    color: var(--cores-letra);
+    border-radius: 10%;
+    padding: .5rem;
+    width: 5rem;
+    flex-direction: row;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    margin: 5rem;
+    /* 
+    
+  
+    height: 2.5rem;
+    font-size: 15px;
+   
+ */
+
 }
 
 .content-genero {
@@ -55,7 +79,6 @@ h5 {
     padding-left: 4rem;
     height: 9rem;
     text-align: center;
-
     align-items: center;
     display: flex;
     padding: 1.8rem;
@@ -106,17 +129,19 @@ select {
     background-color: var(--cores-chaves);
     fill: var(--cores-letra);
 }
+
 .titulos h1 {
     text-transform: uppercase;
     color: var(--cores-chaves);
 }
 
-.filmes{
+.filmes {
     text-align: center;
     display: flex;
     flex-direction: row;
 
 }
+
 .filmes p {
     display: block;
     color: var(--cores-letra);
@@ -131,7 +156,8 @@ select {
     width: 100%;
     margin-top: 2rem;
 }
-.filme-show img{
+
+.filme-show img {
     padding: 2rem;
 }
 
@@ -143,6 +169,7 @@ select {
     text-align: center;
     background-color: transparent;
 }
+
 .filme-show {
     display: flex;
     flex-direction: column;
@@ -150,8 +177,9 @@ select {
     z-index: 1;
     align-items: center;
     justify-content: center;
-    
+
 }
+
 .filme-show .descri {
     display: flex;
     align-items: center;
@@ -189,10 +217,9 @@ select {
 }
 
 
- #descri-filme {
+#descri-filme {
     color: var(--cores-letra);
     padding: 4px;
     margin: 4px;
     align-items: center;
 }
-

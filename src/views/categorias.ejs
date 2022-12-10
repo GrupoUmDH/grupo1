@@ -2,6 +2,10 @@
 
     <main>
         <div class="sub-header">
+            <div class="escolher">
+                <button type="submit" id="submit">SÉRIES</button>
+                <button type="submit" id="submit">FILMES</button>
+            </div>
             <form action="/produtos/categorias" class="content-genero" method="get">
                 <h1>Categoria: </h1>
                 <select name="categoria" id="genero">
@@ -46,7 +50,7 @@
                 <% for(const produto of produtos) { %>
                     <div class="filme-show">
                         <img src="/img/filmes/<%=produto.imagem%>.jpg">
-                        <div class="descri"> 
+                        <div class="descri">
                             <h3 id="nome-filme">
                                 <%= produto.nome %>
                             </h3>

@@ -1,5 +1,4 @@
 const ProdutosModel = require('../models/ProdutosModel');
-const CategoriasModel = require('../models/CategoriasModel');
 
 
 module.exports = {
