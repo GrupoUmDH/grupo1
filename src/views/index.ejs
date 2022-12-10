@@ -37,25 +37,25 @@
             <section class="container">
                 <div class="titulos">
                     <h1>FILMES</h1>
-                    <a href="/filmes/index.html">Mais Filmes...</a>
+                    <a href="<%= '/produtos/filmes' %>">Mais Filmes...</a>
                 </div>
 
                 <hr>
                 <section class="filmes-home">
-                    <% for (const filme of listaFilmes) { %>
+                    <% for (var i =0; i<6; i++) { %>
                         <div class="filme-show">
-                            <a><img src="/img/filmes-home/<%= filme.imagem %>.png" alt=""></a>
+                            <a><img src="/img/filmes/<%= listaFilmes[i].background %>.jpg" alt=""></a>
                             <div class="descri">
                                 <div id="filme-pay">
-                                    <p id="valor"><%= filme.valor %> </p>
+                                    <p id="valor"><%= listaFilmes[i].valor_aluguel %></p>
                                     <div>
                                         <p id="bt-produto">Alugar</p>
                                         <p id="bt-produto">Comprar</p>
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 id="nome-filme"><%= filme.nome %></h3>
-                                    <p id="descri-filme"><%= filme.descricao %></p>
+                                    <h3 id="nome-filme"><%= listaFilmes[i].nome %></h3>
+                                    <p id="descri-filme"><%= listaFilmes[i].descricao %></p>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@
 
                 <div class="titulos">
                     <h1>SÉRIES</h1>
-                    <a href="/series/index.html">Mais Séries...</a>
+                    <a href="<%= '/produtos/series' %>">Mais Séries...</a>
                 </div>
                 <hr>
                 <section class="series-home">

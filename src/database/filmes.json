@@ -7,7 +7,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "aMulherNaJanela"
+        "imagem": "aMulherNaJanela",
+        "background": 1
     },
     {
         "id": 2,
@@ -17,7 +18,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "homemAranha"
+        "imagem": "homemAranha",
+        "background": 2
     },
     {
         "id": 3,
@@ -27,7 +29,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "arremessandoAlto"
+        "imagem": "arremessandoAlto",
+        "background": 3
     },
     
     {
@@ -38,7 +41,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "asBranquelas"
+        "imagem": "asBranquelas",
+        "background": 4
     },
     {
         "id": 5,
@@ -48,7 +52,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "coracoesDeFerro"
+        "imagem": "coracoesDeFerro",
+        "background": 5
     },
     {
         "id": 6,
@@ -58,7 +63,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "belezaAvassaladora"
+        "imagem": "belezaAvassaladora",
+        "background": 6
     },
     
     {
@@ -69,7 +75,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "escolaBemOuMal"
+        "imagem": "escolaBemOuMal",
+        "background": 7
     },
     {
         "id": 8,
@@ -79,7 +86,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "guerraMundialZ"
+        "imagem": "guerraMundialZ",
+        "background": 8
     },
     {
         "id": 9,
@@ -89,7 +97,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "oCulpado"
+        "imagem": "oCulpado",
+        "background": 9
     },
     
     {
@@ -100,7 +109,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "oDiaboDeCadaDia"
+        "imagem": "oDiaboDeCadaDia",
+        "background": 10
     },
     {
         "id":11,
@@ -110,7 +120,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "ondeEstaSegunda"
+        "imagem": "ondeEstaSegunda",
+        "background": 11
     },
     {
         "id": 12,
@@ -120,7 +131,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "oProtetor"
+        "imagem": "oProtetor",
+        "background": 12
     },
     {
         "id": 13,
@@ -130,7 +142,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "ResidentEvil"
+        "imagem": "ResidentEvil",
+        "background": 13
     },
     {
         "id": 14,
@@ -140,7 +153,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "segredosNasParedes"
+        "imagem": "segredosNasParedes",
+        "background": 14
     },
     {
         "id": 15,
@@ -150,7 +164,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "umaGarotaDeMuitaSorte"
+        "imagem": "umaGarotaDeMuitaSorte",
+        "background": 15
     },
     {
         "id": 16,
@@ -160,7 +175,8 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "umLugarSilencioso"
+        "imagem": "umLugarSilencioso",
+        "background": 16
     },
     {
         "id": 17,
@@ -170,6 +186,7 @@
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "esposaDeAluguel"
+        "imagem": "esposaDeAluguel",
+        "background": 17
     }
 ]
