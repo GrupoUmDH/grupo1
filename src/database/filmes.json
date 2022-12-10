@@ -8,7 +8,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "aMulherNaJanela",
-        "background": 1
+        "background": "aMulherNaJanela_01"
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "homemAranha",
-        "background": 2
+        "background": "homemAranha_01"
     },
     {
         "id": 3,
@@ -30,7 +30,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "arremessandoAlto",
-        "background": 3
+        "background": "arremessandoAlto_01"
     },
     
     {
@@ -42,7 +42,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "asBranquelas",
-        "background": 4
+        "background": "asBranquelas_01"
     },
     {
         "id": 5,
@@ -53,7 +53,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "coracoesDeFerro",
-        "background": 5
+        "background": "coracoesDeFerro_01"
     },
     {
         "id": 6,
@@ -64,7 +64,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "belezaAvassaladora",
-        "background": 6
+        "background": "belezaAvassaladora_01"
     },
     
     {
@@ -76,7 +76,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "escolaBemOuMal",
-        "background": 7
+        "background": "escolaBemOuMal_01"
     },
     {
         "id": 8,
@@ -87,7 +87,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "guerraMundialZ",
-        "background": 8
+        "background": "guerraMundialZ_01"
     },
     {
         "id": 9,

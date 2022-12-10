@@ -199,7 +199,7 @@ hr {
 }
 
 .filmes-home img {
-    width: 15rem;
+    width: 100%;
 }
 
 .filmes-home p {
@@ -240,11 +240,20 @@ hr {
     justify-content: space-around;
 }
 
+.filme-show > a {
+    position: relative;
+}
+
 .filme-show {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     z-index: 1;
+    width: 15rem;
+    height: 20rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
 }
 
 .filme-show .descri {
@@ -258,6 +267,9 @@ hr {
     flex-direction: column;
     display: flex;
     height: 40%;
+    justify-content: flex-end;
+    top: 3rem;
+    
 }
 
 .filme-show:hover .descri div #valor {

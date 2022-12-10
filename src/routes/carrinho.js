@@ -12,7 +12,7 @@ router.get('/', CarrinhoController.carrinho);
 
 /* GET Carrinho */
 router.get('/', function(req, res, next) {
-    res.render('carrinho', { title: 'carrinho' , js:"paginaDoCarrinho" , filmes: [{ nome: "nome",
+    res.render('carrinho', { pageName : 'carrinho' , js:"paginaDoCarrinho" , filmes: [{ nome: "nome",
     descricao: "descricao", valor: "valor"}]});
     
 });
