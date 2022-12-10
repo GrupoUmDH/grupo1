@@ -37,17 +37,17 @@
             <section class="container">
                 <div class="titulos">
                     <h1>FILMES</h1>
-                    <a href=<%= '/produtos/filmes' %>>Mais Filmes...</a>
+                    <a href="<%= '/produtos/filmes' %>">Mais Filmes...</a>
                 </div>
 
                 <hr>
                 <section class="filmes-home">
-                    <% for (var i = 0; i< 6; i++) { %>
+                    <% for (var i =0; i<6; i++) { %>
                         <div class="filme-show">
-                            <a><img src="/img/filmes/<%= listaFilmes[i].imagem %>.jpg"></a>
+                            <a><img src="/img/filmes/<%= listaFilmes[i].background %>.jpg" alt=""></a>
                             <div class="descri">
                                 <div id="filme-pay">
-                                    <p id="valor"><%= listaFilmes[i].valor %> </p>
+                                    <p id="valor"><%= listaFilmes[i].valor_aluguel %></p>
                                     <div>
                                         <p id="bt-produto">Alugar</p>
                                         <p id="bt-produto">Comprar</p>
@@ -64,7 +64,7 @@
 
                 <div class="titulos">
                     <h1>SÉRIES</h1>
-                    <a href=<%= '/produtos/series' %> >Mais Séries...</a>
+                    <a href="<%= '/produtos/series' %>">Mais Séries...</a>
                 </div>
                 <hr>
                 <section class="series-home">
