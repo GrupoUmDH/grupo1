@@ -12,15 +12,17 @@
                                 <button type="submit" id="add-carrinho">Adicionar ao carrinho</button>
                             </div>
                             <!-- segundo filho -->
-                            <div id="descri-filme">
-                                <h1 id="nome-filme">Homem aranha: Sem volta pra casa</h1>
-                                <div class="genero">
-                                    <span>2021</span>
+                            <% for (const filmes of Filme)  { %>
+                                <div id="descri-filme">
+                                    <h1 id="nome-filme"> <%= filmes.nome %></h1>
+                                    <div class="genero">
+                                    <span id="ano-filme">2021</span>
 
-                                    <span>Ação/Aventura</span>
+                                    <span id="genero-filme">Ação/Aventura</span>
 
-                                </div>
-                                <p>Peter Parker tem a sua identidade secreta revelada e pede ajuda ao Doutor Estranho.
+                                    </div>
+                            <% } %>
+                                <p id="descri-filme">Peter Parker tem a sua identidade secreta revelada e pede ajuda ao Doutor Estranho.
                                     Quando um feitiço para reverter o evento não sai como o esperado,
                                     o Homem-Aranha e seu companheiro dos Vingadores precisam enfrentar
                                     inimigos de todo o multiverso.</p>

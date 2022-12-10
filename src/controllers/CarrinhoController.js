@@ -10,4 +10,9 @@ module.exports = {
         // const compras = CarrinhoModel.compra();
         return res.render('compra', { pageName: 'compra', js: 'finalizaCompra' })
     },
+    addCarrinho: (req, res) => {
+        //const listafilme = FilmesCarrinho.index();
+        //console.log(listafilme)
+        return res.render('carrinho', { pageName: 'carrinho', js: 'adicionarAoCarrinho' })
+    }
 }
