@@ -1,8 +1,8 @@
-const FilmesModel = require('../models/filmesModels');
+const ProdutosModel = require('../models/ProdutosModel');
 
 module.exports = {
-    listaFilmes: (req, res) => {
-        const filmes = FilmesModel.index();
+    index: (req, res) => {
+        const filmes = ProdutosModel.filmes();
         //res.render('VIEW', {OBJETO })
         return res.render('index', {listaFilmes: filmes, pageName: 'home', js: ''})
     }

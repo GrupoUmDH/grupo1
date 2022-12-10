@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "nome": "Dahmer",
+        "img": "serie1"
+    },
+    {
+        "id": 2,
+        "nome": "Cobra Kai",
+        "img": "serie2"
+    },
+    {
+        "id": 3,
+        "nome": "Stranger Things",
+        "img": "serie3"
+    },
+    {
+        "id": 4,
+        "nome": "Suits",
+        "img": "serie4"
+    },
+    {
+        "id": 5,
+        "nome": "Peaky Blinders",
+        "img": "serie5"
+    },
+    {
+        "id": 6,
+        "nome": "Lucifer",
+        "img": "serie6"
+    },
+    {
+        "id": 7,
+        "nome": "Anne",
+        "img": "serie7"
+    },
+    {
+        "id": 8,
+        "nome": "Breaking Bad",
+        "img": "serie8"
+    },
+    {
+        "id": 9,
+        "nome": "Better Call",
+        "img": "serie9"
+    },
+    {
+        "id": 10,
+        "nome": "Round 6",
+        "img": "serie10"
+    },
+    {
+        "id": 11,
+        "nome": "La Casa de Papel",
+        "img": "serie11"
+    },
+    {
+        "id": 12,
+        "nome": "Crow",
+        "img": "serie12"
+    },
+    {
+        "id": 13,
+        "nome": "A Lista Negra",
+        "img": "serie13"
+    },
+    {
+        "id": 14,
+        "nome": "Vikings",
+        "img": "serie14"
+    },
+    {
+        "id": 15,
+        "nome": "Sandman",
+        "img": "serie15"
+    },
+    {
+        "id": 16,
+        "nome": "Gotham",
+        "img": "serie16"
+    },
+    {
+        "id": 17,
+        "nome": "Dark",
+        "img": "serie17"
+    },
+    {
+        "id": 18,
+        "nome": "O Gambito da Rainha",
+        "img": "serie18"
+    },
+    {
+        "id": 19,
+        "nome": "Black Mirror",
+        "img": "serie19"
+    },
+    {
+        "id": 20,
+        "nome": "Orange Black",
+        "img": "serie20"
+    },
+    {
+        "id": 21,
+        "nome": "The Good Place",
+        "img": "serie21"
+    },
+    {
+        "id": 22,
+        "nome": "Grace and Frankie",
+        "img": "serie22"
+    },
+    {
+        "id": 23,
+        "nome": "Desventuras em Série",
+        "img": "serie23"
+    },
+    {
+        "id": 24,
+        "nome": "The 100",
+        "img": "serie24"
+    }
+]
