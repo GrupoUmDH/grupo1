@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
 
-:root{
-    --background-color:#0C0C0C;
-    --background-2:#131313;
-    --cores-chaves:#B30006;
-    --cores-letra:  #FFFFFF;
+:root {
+    --background-color: #0C0C0C;
+    --background-2: #131313;
+    --cores-chaves: #B30006;
+    --cores-letra: #FFFFFF;
     --cores-objetos: #580003;
 }
+
 header {
     margin: 0 auto;
     padding: 0 auto;
@@ -21,17 +22,18 @@ header {
     max-width: 1500px;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-main{
+main {
     max-width: 1500px;
     width: 100%;
     margin: auto;
 }
+
 /* NAVBAR */
 
 #navbar {
@@ -144,6 +146,11 @@ main{
     align-items: baseline;
 }
 
+button  {
+    background: var(--background-color);
+    border: none;
+}
+
 #menu-content>ul li a {
     display: flex;
     padding: .6rem;
@@ -161,42 +168,49 @@ main{
 /* RESPONSIVE */
 
 @media (max-width: 1300px) {
-    .carrossel-container{
-        max-width: 700px; 
+    .carrossel-container {
+        max-width: 700px;
     }
 
-    .slide1, .slide2, .slide3, .slide4{
+    .slide1,
+    .slide2,
+    .slide3,
+    .slide4 {
         width: 700px;
     }
 
-    .carrossel img{
+    .carrossel img {
         object-fit: fill;
         width: 900px;
         height: 360px;
     }
-   
-}
-
-@media (max-width: 1080px){
-    #items-wrapper{
-        display: none;
-    }
-    .mais-populares{
-        display: none;
-    }
 
 }
 
-@media (max-width: 760px){
-    .carrossel-container{
-        max-width: 480px; 
+@media (max-width: 1080px) {
+    #items-wrapper {
+        display: none;
     }
 
-    .slide1, .slide2, .slide3, .slide4{
+    .mais-populares {
+        display: none;
+    }
+
+}
+
+@media (max-width: 760px) {
+    .carrossel-container {
+        max-width: 480px;
+    }
+
+    .slide1,
+    .slide2,
+    .slide3,
+    .slide4 {
         width: 480px;
     }
 
-    .carrossel img{
+    .carrossel img {
         object-fit: fill;
         width: 700px;
         height: 360px;
@@ -204,16 +218,19 @@ main{
 
 }
 
-@media (max-width: 550px){
-    .carrossel-container{
-        max-width: 320px; 
+@media (max-width: 550px) {
+    .carrossel-container {
+        max-width: 320px;
     }
 
-    .slide1, .slide2, .slide3, .slide4{
+    .slide1,
+    .slide2,
+    .slide3,
+    .slide4 {
         width: 320px;
     }
 
-    .carrossel img{
+    .carrossel img {
         object-fit: fill;
         width: 460px;
         height: 240px;
@@ -221,8 +238,8 @@ main{
 
 }
 
-@media (max-width: 480px){
-    .carrossel-container{
+@media (max-width: 480px) {
+    .carrossel-container {
         display: none;
     }
 }
