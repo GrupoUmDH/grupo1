@@ -1,6 +1,7 @@
 const produtos = require('../database/filmes.json');
 const series = require('../database/series.json')
 
+
 module.exports = {
     filmes: () => {
         return produtos
@@ -14,6 +15,10 @@ module.exports = {
     },
     series: () => {
         return series
+    },
+    produtos:() =>{
+        return produtos
     }
+
 }
 

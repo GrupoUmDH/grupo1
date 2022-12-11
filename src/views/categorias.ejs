@@ -1,13 +1,14 @@
 <%- include('partials/header') %>
-
+    <link rel="stylesheet" href="/public/stylesheets/categorias.css">
     <main>
         <div class="sub-header">
             <div class="escolher">
-                <button type="submit" id="submit">SÉRIES</button>
-                <button type="submit" id="submit">FILMES</button>
+                <input type="button" value="SÉRIES" name="series" id="submit" src="<%='/produtos/filmes' %>">
+                <input type="button" value="FILMES" name="filmes" id="submit" src="<%= '/produtos/series' %>">
+               
             </div>
             <form action="/produtos/categorias" class="content-genero" method="get">
-                <h1>Categoria: </h1>
+
                 <select name="categoria" id="genero">
                     <option value="selecione" disabled selected hidden>Selecione</option>
                     <option value="acao">Ação</option>
@@ -64,4 +65,7 @@
             </section>
         </section>
     </main>
+
+
+
     <%- include('partials/footer')%>

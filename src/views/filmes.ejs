@@ -1,29 +1,27 @@
 <%- include('partials/header') %>
-        <main>
+    <main>
 
-            <section class="container">
-                <div class="titulos">
-                    <h1>FILMES</h1>
-                </div>
+        <section class="container">
+            <div class="titulos">
+                <h1>FILMES</h1>
+            </div>
 
-                <hr>
-                <section class="filmes-home">
-                    <% for(const filmes of Filmes) { %>
-                        <div>
-                            <img src="/img/filmes/<%=filmes.imagem%>.jpg">
-                            <p>
+            <hr>
+            <section class="filmes-home">
+                <% for(const filmes of Filmes) { %>
+                    <div class="filme-show">
+                        <img src="/img/filmes/<%=filmes.imagem%>.jpg">
+                        <div class="descri">
+                            <p id="nome">
                                 <%= filmes.nome %>
                             </p>
-                            <div class="preco"><span>
-                                    <%= filmes.valor_aluguel %>
-                                </span></div>
-                            <div class="preco"><span>
-                                    <%= filmes.valor_compra %>
-                                </span></div>
+                            <p id="descri-filme">
+                                <%= filmes.descricao %>
+                            </p>
                         </div>
-                        <% }%>
-                </section>
+                    </div>
+                    <% }%>
             </section>
-        </main>
-<%- include('partials/footer')%>
-
+        </section>
+    </main>
+    <%- include('partials/footer')%>

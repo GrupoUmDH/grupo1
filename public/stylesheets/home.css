@@ -216,7 +216,7 @@ hr {
 /*  CONFIGURANDO AO PASSAR O MOUSE */
 
 .filme-show h3 {
-    color: #FFFFFF;
+    color: var(--cores-chaves);
     padding: auto;
     margin: 3px;
     text-align: center;
@@ -253,7 +253,7 @@ hr {
     height: 20rem;
     border-radius: 1.5rem;
     overflow: hidden;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 .filme-show .descri {
@@ -268,8 +268,7 @@ hr {
     display: flex;
     height: 40%;
     justify-content: flex-end;
-    top: 3rem;
-    
+    top: 5.5rem;
 }
 
 .filme-show:hover .descri div #valor {

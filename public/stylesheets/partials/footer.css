@@ -3,6 +3,7 @@ hr {
     color: var(--cores-chaves);
     border: var(--cores-chaves);
     width: 100%;
+    max-width: 1500px;
     height: 2px;
     display: flex;
     flex-direction: row;

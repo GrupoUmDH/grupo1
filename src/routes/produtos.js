@@ -3,7 +3,7 @@ var router = express.Router();
 
 const ProdutosController = require('../controllers/ProdutosController');
 
-router.get('/', ProdutosController.produto);
+router.get('/', ProdutosController.produtos);
 
 router.get('/filmes', ProdutosController.filmes);
 
@@ -16,4 +16,4 @@ router.get('/cadastroProduto', function(req, res, next) {
 router.get('/categorias', ProdutosController.listar);
 
 
-module.exports = router;
+module.exports = router; 

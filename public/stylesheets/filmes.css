@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
 
 :root{
     --background-color:#0C0C0C;
@@ -26,9 +26,8 @@ body{
 }
  
 body * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
     font-size: 100%;
-    color: #B30006;
 }
 
 /* CONFIGURAÇÃO CONTAINER*/
@@ -36,8 +35,8 @@ body * {
 h1 {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     color: var(--cores-letra) ;
-    margin:  2rem;
-    font-size: 2rem;
+    margin: 1.5rem;
+    font-size: 1.5rem;
 }
  
 h1 .container{
@@ -64,17 +63,80 @@ h5 {
     width: 100%;  
     margin-top: 2rem;  
 }
-
-.filmes-home span{
-    align-items: stretch;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content:space-around;
-    width: 100%;  
-    margin-top: 2rem; 
+.filmes-home{
+    color: var(--cores-letra);
+    text-align: center;
+    align-items: center;
 }
- 
+.filmes-home span{
+    display: flex;
+    justify-content: center;
+    width: 100%;  
+    color: var(--cores-letra);
+}
+.filmes-home div img{
+    padding: 1rem 1rem 0 1rem;
+}
+.filmes-home > div .preco{
+    color: var(--cores-chaves);
+    display: flex;
+    align-items:flex-end;
+    justify-content: flex-end;
+}
+
+/*  CONFIGURANDO AO PASSAR O MOUSE */
+
+.filme-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+
+}
+.filme-show .descri> #nome{
+    color: var(--cores-chaves);
+    padding: auto;
+    font-weight: 600;
+    margin: .5rem 0 0 .5rem;
+    text-align: center;
+    background-color: transparent;
+}
+.filme-show .descri {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    font-weight: 400;
+    width: 15rem;
+    font-size: .8rem;
+    text-align: justify;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.filme-show .descri {
+    display: none;
+}
+
+.filme-show:hover .descri {
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    flex-direction: column;
+    display: flex;
+    height: 10rem;
+    width: 18rem;
+}
+.filme-show:hover img{
+    opacity: 0.3;
+}
+#descri-filme {
+    color: var(--cores-letra);
+    padding: .5rem;
+    align-items: center;
+}
+
+
 /* CONFIGURAÇÃO SERIES*/
  
 

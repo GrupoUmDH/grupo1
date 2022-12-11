@@ -2,121 +2,145 @@
     {
         "id": 1,
         "nome": "Dahmer",
-        "img": "serie1"
+        "img": "serie1",
+        "tipo":"serie"
     },
     {
         "id": 2,
         "nome": "Cobra Kai",
-        "img": "serie2"
+        "img": "serie2",
+        "tipo":"serie"
     },
     {
         "id": 3,
         "nome": "Stranger Things",
-        "img": "serie3"
+        "img": "serie3",
+        "tipo":"serie"
     },
     {
         "id": 4,
         "nome": "Suits",
-        "img": "serie4"
+        "img": "serie4",
+        "tipo":"serie"
     },
     {
         "id": 5,
         "nome": "Peaky Blinders",
-        "img": "serie5"
+        "img": "serie5",
+        "tipo":"serie"
     },
     {
         "id": 6,
         "nome": "Lucifer",
-        "img": "serie6"
+        "img": "serie6",
+        "tipo":"serie"
     },
     {
         "id": 7,
         "nome": "Anne",
-        "img": "serie7"
+        "img": "serie7",
+        "tipo":"serie"
     },
     {
         "id": 8,
         "nome": "Breaking Bad",
-        "img": "serie8"
+        "img": "serie8",
+        "tipo":"serie"
     },
     {
         "id": 9,
         "nome": "Better Call",
-        "img": "serie9"
+        "img": "serie9",
+        "tipo":"serie"
     },
     {
         "id": 10,
         "nome": "Round 6",
-        "img": "serie10"
+        "img": "serie10",
+        "tipo":"serie"
     },
     {
         "id": 11,
         "nome": "La Casa de Papel",
-        "img": "serie11"
+        "img": "serie11",
+        "tipo":"serie"
     },
     {
         "id": 12,
         "nome": "Crow",
-        "img": "serie12"
+        "img": "serie12",
+        "tipo":"serie"
     },
     {
         "id": 13,
         "nome": "A Lista Negra",
-        "img": "serie13"
+        "img": "serie13",
+        "tipo":"serie"
     },
     {
         "id": 14,
         "nome": "Vikings",
-        "img": "serie14"
+        "img": "serie14",
+        "tipo":"serie"
     },
     {
         "id": 15,
         "nome": "Sandman",
-        "img": "serie15"
+        "img": "serie15",
+        "tipo":"serie"
     },
     {
         "id": 16,
         "nome": "Gotham",
-        "img": "serie16"
+        "img": "serie16",
+        "tipo":"serie"
     },
     {
         "id": 17,
         "nome": "Dark",
-        "img": "serie17"
+        "img": "serie17",
+        "tipo":"serie"
     },
     {
         "id": 18,
         "nome": "O Gambito da Rainha",
-        "img": "serie18"
+        "img": "serie18",
+        "tipo":"serie"
     },
     {
         "id": 19,
         "nome": "Black Mirror",
-        "img": "serie19"
+        "img": "serie19",
+        "tipo":"serie"
     },
     {
         "id": 20,
         "nome": "Orange Black",
-        "img": "serie20"
+        "img": "serie20",
+        "tipo":"serie"
     },
     {
         "id": 21,
         "nome": "The Good Place",
-        "img": "serie21"
+        "img": "serie21",
+        "tipo":"serie"
     },
     {
         "id": 22,
         "nome": "Grace and Frankie",
-        "img": "serie22"
+        "img": "serie22",
+        "tipo":"serie"
     },
     {
         "id": 23,
         "nome": "Desventuras em Série",
-        "img": "serie23"
+        "img": "serie23",
+        "tipo":"serie"
     },
     {
         "id": 24,
         "nome": "The 100",
-        "img": "serie24"
+        "img": "serie24",
+        "tipo":"serie"
     }
 ]
