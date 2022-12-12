@@ -219,7 +219,7 @@ div #dados-filme {
 /*  CONFIGURANDO AO PASSAR O MOUSE */
 
 .filme-show h3 {
-    color: var(--cores-chaves);
+    color: #FFFFFF;
     padding: auto;
     margin: 3px;
     text-align: center;
@@ -256,7 +256,7 @@ div #dados-filme {
     height: 20rem;
     border-radius: 1.5rem;
     overflow: hidden;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
 .filme-show .descri {

@@ -1,8 +1,7 @@
 <%- include('partials/header') %>
     <main>
-        <section class="content-banner">
-            <% for (const produtos of Filmes) { %>
-                <img id="bk-filme" src="/img/filmes/<%=filmes.imagem%>.jpg">
+            <section class="content-banner">
+                <img id="bk-filme" src="/img/banners/FILMES/homem-aranha-NWH.png">
                 <input type="hidden" value="1" id="id" name="id">
                 <div class="container">
                     <div class="banner">
@@ -13,22 +12,6 @@
                                 <button type="submit" id="add-carrinho">Adicionar ao carrinho</button>
                             </div>
                             <!-- segundo filho -->
-<<<<<<< HEAD
-
-                            <div id="descri-filme">
-                                <h1 id="nome-filme">
-                                    <%= filmes.nome %>
-                                </h1>
-                                <div class="genero">
-                                    <span id="ano-filme">2021</span>
-                                    <span id="genero-filme">
-                                        <%= filmes.categoria %>
-                                    </span>
-                                </div>
-                                <p id="descri-filme">
-                                    <%= filmes.descricao %>
-                                </p>
-=======
                             
                                 <div id="descri-filme">
                                     <h1 id="nome-filme"></h1>
@@ -40,27 +23,24 @@
                                     </div>
                            
                                 <p id="descri-filme">000</p>
->>>>>>> lucas
                             </div>
                             <!-- terceiro filho -->
                             <div id="bts-compra">
                                 <div class="classificacao">
                                     <img id="indicacao" src="/img/classificação-indicativa/SELO +12.png" alt="">
                                 </div>
+
                                 <div class="botoes-compra">
+
                                     <div class="assitir">
                                         <button>Assitir</button>
                                     </div>
                                     <div class="comprar">
-                                        <p id="valor-compra">
-                                            <%=filmes.valor_compra%>
-                                        </p>
+                                        <p id="valor-compra">R$9,99</p>
                                         <button>Comprar</button>
                                     </div>
                                     <div class="alugar">
-                                        <p id="valor-aluga">
-                                            <%=filmes.valor_aluguel%>
-                                        </p>
+                                        <p id="valor-aluga">R$9,99</p>
                                         <button>Alugar</button>
                                     </div>
                                 </div>
@@ -74,9 +54,9 @@
                         <div class="f2"></div>
                     </div>
                 </div>
-            <% } %>
-        </section>
+            </section>
 
-    </main>
+        </main>
 
-    <%- include('partials/footer') %>
+<%- include('partials/footer') %>
+
