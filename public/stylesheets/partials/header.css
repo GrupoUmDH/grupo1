@@ -141,6 +141,13 @@ main{
     align-items: baseline;
 }
 
+
+button  {
+    background: var(--background-color);
+    border: none;
+    cursor: pointer;
+}
+
 #menu-content>ul li a {
     display: flex;
     padding: .6rem;

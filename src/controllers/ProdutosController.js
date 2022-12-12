@@ -21,7 +21,7 @@ module.exports = {
     },
     produto: (req, res) => {
         const filme = ProdutosModel.filmes();
-        return res.render('produtos', { pageName: 'produtos',Filme: filme , js: 'adicionarAoCarrinho' });
-    } 
+        return res.render('produtos', { pageName: 'produtos', Filme: filme , js: 'adicionarAoCarrinho' });
+    }
 }
 
