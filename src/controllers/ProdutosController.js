@@ -22,7 +22,7 @@ module.exports = {
     },
     produto: (req, res) => {
         const filme = filmeModel.index();
-        return res.render('produtos', { pageName: 'produtos', Filme: filme, js: 'adicionarAoCarrinho' });
+        return res.render('produtos', { pageName: 'produtos',Filme: filme , js: 'adicionarAoCarrinho' });
     } 
 }
 
