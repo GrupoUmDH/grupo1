@@ -15,5 +15,6 @@ router.get('/cadastroProduto', function(req, res, next) {
 
 router.get('/categorias', ProdutosController.listar);
 
+// router.get('/categorias', ProdutosController.escolher)
 
 module.exports = router;

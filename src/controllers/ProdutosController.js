@@ -19,9 +19,14 @@ module.exports = {
         const produtos = ProdutosModel.listar(categoria);
         return res.render('categorias', { pageName: 'categorias', produtos, categoria, js:'categorias'});
     },
-    produto: (req, res) => {
-        const filme = ProdutosModel.filmes();
-        return res.render('produtos', { pageName: 'produtos',Filme: filme , js: 'adicionarAoCarrinho' });
-    } 
+    produtos: (req, res) => {
+        const filmes = ProdutosModel.produtos();
+        return res.render('produtos', { pageName: 'produtos',Filme: filmes , js: 'adicionarAoCarrinho' });
+    }, 
+    // escolher: (req, res) => {
+    //     const todosFilmes = req.query.tipo || 'acao';
+    //     const todasSeries = ProdutosModel.escolher(tipo);
+    //     return res.render('categorias', { pageName: 'categorias', tipo:tipo  });
+    // }
 }
 
