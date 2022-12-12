@@ -1,146 +1,79 @@
 [
     {
         "id": 1,
-        "nome": "Dahmer",
-        "img": "serie1",
-        "tipo":"serie"
+        "tipo": "filme",
+        "categoria": "terror",
+        "nome": "A MULHER NA JANELA",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "aMulherNaJanela",
+        "background": "aMulherNaJanela_01"
     },
     {
         "id": 2,
-        "nome": "Cobra Kai",
-        "img": "serie2",
-        "tipo":"serie"
+        "tipo": "filme",
+        "categoria": "aventura",
+        "nome": "SPIDER-MAN - NO WAY HOME",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "homemAranha",
+        "background": "homemAranha_01"
     },
     {
         "id": 3,
-        "nome": "Stranger Things",
-        "img": "serie3",
-        "tipo":"serie"
+        "tipo": "filme",
+        "categoria": "comedia",
+        "nome": "ARREMESSANDO ALTO",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "arremessandoAlto",
+        "background": "arremessandoAlto_01"
     },
     {
         "id": 4,
-        "nome": "Suits",
-        "img": "serie4",
-        "tipo":"serie"
+        "tipo": "filme",
+        "categoria": "comedia",
+        "nome": "AS BRANQUELAS",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "asBranquelas",
+        "background": "asBranquelas_01"
     },
     {
         "id": 5,
-        "nome": "Peaky Blinders",
-        "img": "serie5",
-        "tipo":"serie"
+        "tipo": "filme",
+        "categoria": "guerra",
+        "nome": "CORAÇÕES DE FERRO",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "coracoesDeFerro",
+        "background": "coracoesDeFerro_01"
     },
     {
         "id": 6,
-        "nome": "Lucifer",
-        "img": "serie6",
-        "tipo":"serie"
+        "tipo": "filme",
+        "categoria": "guerra",
+        "nome": "BELEZA AVASSALADORA",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "belezaAvassaladora",
+        "background": "belezaAvassaladora_01"
     },
     {
         "id": 7,
-        "nome": "Anne",
-        "img": "serie7",
-        "tipo":"serie"
-    },
-    {
-        "id": 8,
-        "nome": "Breaking Bad",
-        "img": "serie8",
-        "tipo":"serie"
-    },
-    {
-        "id": 9,
-        "nome": "Better Call",
-        "img": "serie9",
-        "tipo":"serie"
-    },
-    {
-        "id": 10,
-        "nome": "Round 6",
-        "img": "serie10",
-        "tipo":"serie"
-    },
-    {
-        "id": 11,
-        "nome": "La Casa de Papel",
-        "img": "serie11",
-        "tipo":"serie"
-    },
-    {
-        "id": 12,
-        "nome": "Crow",
-        "img": "serie12",
-        "tipo":"serie"
-    },
-    {
-        "id": 13,
-        "nome": "A Lista Negra",
-        "img": "serie13",
-        "tipo":"serie"
-    },
-    {
-        "id": 14,
-        "nome": "Vikings",
-        "img": "serie14",
-        "tipo":"serie"
-    },
-    {
-        "id": 15,
-        "nome": "Sandman",
-        "img": "serie15",
-        "tipo":"serie"
-    },
-    {
-        "id": 16,
-        "nome": "Gotham",
-        "img": "serie16",
-        "tipo":"serie"
-    },
-    {
-        "id": 17,
-        "nome": "Dark",
-        "img": "serie17",
-        "tipo":"serie"
-    },
-    {
-        "id": 18,
-        "nome": "O Gambito da Rainha",
-        "img": "serie18",
-        "tipo":"serie"
-    },
-    {
-        "id": 19,
-        "nome": "Black Mirror",
-        "img": "serie19",
-        "tipo":"serie"
-    },
-    {
-        "id": 20,
-        "nome": "Orange Black",
-        "img": "serie20",
-        "tipo":"serie"
-    },
-    {
-        "id": 21,
-        "nome": "The Good Place",
-        "img": "serie21",
-        "tipo":"serie"
-    },
-    {
-        "id": 22,
-        "nome": "Grace and Frankie",
-        "img": "serie22",
-        "tipo":"serie"
-    },
-    {
-        "id": 23,
-        "nome": "Desventuras em Série",
-        "img": "serie23",
-        "tipo":"serie"
-    },
-    {
-        "id": 24,
-        "nome": "The 100",
-        "img": "serie24",
-        "tipo":"serie"
+        "tipo": "filme",
+        "categoria": "suspense",
+        "nome": "ESCOLA BEM OU MAL",
+        "valor_aluguel": "R$ 9,90",
+        "valor_compra": "R$ 49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "escolaBemOuMal",
+        "background": "escolaBemOuMal_01"
     }
 ]
