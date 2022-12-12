@@ -21,3 +21,5 @@ formMontarCarrinho.addEventListener('submit', function (event) {
     console.log(itensCarrinho)
     this.submit()
 })
+
+//console.log(JSON.parse(localStorage.getItem('carrinho')));

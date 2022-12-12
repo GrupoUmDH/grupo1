@@ -171,7 +171,7 @@ hr {
     flex-direction: row;
 }
 
-.titulos > p {
+.container > p {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -181,7 +181,7 @@ hr {
     color: #B30006;
 }
 
-.titulos > span {
+.container > span {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;

@@ -199,7 +199,7 @@ hr {
 }
 
 .filmes-home img {
-    width: 15rem;
+    width: 100%;
 }
 
 .filmes-home p {
@@ -212,6 +212,9 @@ hr {
     color: var(--cores-letra);
 }
 
+div #dados-filme {
+    display: none;
+}
 
 /*  CONFIGURANDO AO PASSAR O MOUSE */
 
@@ -240,17 +243,30 @@ hr {
     justify-content: space-around;
 }
 
+.filme-show > a {
+    position: relative;
+}
+
 .filme-show {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     z-index: 1;
+    width: 15rem;
+    height: 20rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
 }
 
 .filme-show .descri {
     display: none;
+    height: 100%;
 }
 
+.filme-show:hover div #dados-filmes {
+    display: none;
+}
 .filme-show:hover .descri {
     display: block;
     position: absolute;
@@ -258,6 +274,9 @@ hr {
     flex-direction: column;
     display: flex;
     height: 40%;
+    justify-content: flex-end;
+    top: 10rem;
+    
 }
 
 .filme-show:hover .descri div #valor {
@@ -288,6 +307,11 @@ hr {
     font-weight: bold;
     padding: 4px;
     margin: 4px;
+}
+
+#nome-filme {
+    color: red;
+    font-size: 1.3rem;
 }
 
 

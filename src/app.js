@@ -21,7 +21,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 
-//app.use(express.favicon(__dirname + '/public/images/ico/favicon.ico'));
 
 //INDEX - (HOME, SUPORTE, SOBRE NÓS)
 app.use('/', homeRouter);
