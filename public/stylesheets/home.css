@@ -212,6 +212,9 @@ hr {
     color: var(--cores-letra);
 }
 
+div #dados-filme {
+    display: none;
+}
 
 /*  CONFIGURANDO AO PASSAR O MOUSE */
 
@@ -260,6 +263,9 @@ hr {
     display: none;
 }
 
+.filme-show:hover div #dados-filmes {
+    display: none;
+}
 .filme-show:hover .descri {
     display: block;
     position: absolute;
