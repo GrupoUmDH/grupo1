@@ -1,5 +1,5 @@
 const produtos = require('../database/filmes.json');
-const series = require('../database/series.json')
+const series = require('../database/series.json');
 
 module.exports = {
     filmes: () => {

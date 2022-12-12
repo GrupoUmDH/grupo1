@@ -1,3 +1,5 @@
+// ENVIA OS DADOS DO FILME PARA A PÁGINA DO PRODUTO...
+
 const itemFilme = document.querySelectorAll('section section .filme-show');
 
 const id_Filme = document.querySelectorAll('h1 #id-filmes');

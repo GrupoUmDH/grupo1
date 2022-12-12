@@ -261,6 +261,7 @@ div #dados-filme {
 
 .filme-show .descri {
     display: none;
+    height: 100%;
 }
 
 .filme-show:hover div #dados-filmes {
@@ -274,7 +275,7 @@ div #dados-filme {
     display: flex;
     height: 40%;
     justify-content: flex-end;
-    top: 3rem;
+    top: 10rem;
     
 }
 
@@ -306,6 +307,11 @@ div #dados-filme {
     font-weight: bold;
     padding: 4px;
     margin: 4px;
+}
+
+#nome-filme {
+    color: red;
+    font-size: 1.3rem;
 }
 
 
