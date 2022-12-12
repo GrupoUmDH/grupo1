@@ -1,12 +1,12 @@
 <%- include('partials/header') %>
     <main>
         <section class="content-banner">
-            <% for (const produtos of Filmes) { %>
-                <img id="bk-filme" src="/img/filmes/<%=filmes.imagem%>.jpg">
+            <% for (const product of filme) { %>
+                <img id="bk-filme" src="/img/filmes/<%=filme.background%>.jpg">
                 <input type="hidden" value="1" id="id" name="id">
                 <div class="container">
                     <div class="banner">
-                        <img class="cover-filme" src="/img/2-5.png" alt="">
+                        <img class="cover-filme" src="/img/filmes/<%=filme.imagem%>.jpg alt="">
                         <div class="descricao-container">
                             <!-- primeiro filho -->
                             <div id="bt-add-car">
@@ -16,16 +16,16 @@
 
                             <div id="descri-filme">
                                 <h1 id="nome-filme">
-                                    <%= filmes.nome %>
+                                    <%= filme.nome %>
                                 </h1>
                                 <div class="genero">
                                     <span id="ano-filme">2021</span>
                                     <span id="genero-filme">
-                                        <%= filmes.categoria %>
+                                        <%= filme.categoria %>
                                     </span>
                                 </div>
                                 <p id="descri-filme">
-                                    <%= filmes.descricao %>
+                                    <%= filme.descricao %>
                                 </p>
                             </div>
                             <!-- terceiro filho -->
@@ -39,13 +39,13 @@
                                     </div>
                                     <div class="comprar">
                                         <p id="valor-compra">
-                                            <%=filmes.valor_compra%>
+                                            <%=filme.valor_compra%>
                                         </p>
                                         <button>Comprar</button>
                                     </div>
                                     <div class="alugar">
                                         <p id="valor-aluga">
-                                            <%=filmes.valor_aluguel%>
+                                            <%=filme.valor_aluguel%>
                                         </p>
                                         <button>Alugar</button>
                                     </div>
