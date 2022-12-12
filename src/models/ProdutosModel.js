@@ -19,6 +19,15 @@ module.exports = {
     produtos:() =>{
         return produtos
     }
+    // ,
+    // escolher:(tipo) =>{
+    //     if(filmes){
+    //         return produtos.filter(produtos => produtos.tipo == tipo)
+    //     }if(series){
+    //         return series
+    //     }
+
+    // }
 
 }
 
