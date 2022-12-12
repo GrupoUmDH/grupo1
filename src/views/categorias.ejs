@@ -2,6 +2,10 @@
 
     <main>
         <div class="sub-header">
+            <div class="escolher">
+                <input type="button" value="SÉRIES" name="series" id="submit" src="<%='/produtos/filmes' %>">
+                <input type="button" value="FILMES" name="filmes" id="submit" src="<%= '/produtos/series' %>">
+            </div>
             <form action="/produtos/categorias" class="content-genero" method="get">
                 <h1>Categoria: </h1>
                 <select name="categoria" id="genero">

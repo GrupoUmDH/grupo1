@@ -173,7 +173,7 @@ main {
 .pagamento>button {
     height: 50px;
     text-transform: uppercase;
-
+    background: var(--cores-chaves);
 }
 
 button {
