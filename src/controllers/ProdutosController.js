@@ -1,6 +1,5 @@
 const ProdutosModel = require('../models/ProdutosModel');
 
-
 module.exports = {
     filmes: (req, res) => {
         const filmes = ProdutosModel.filmes();
@@ -20,17 +19,9 @@ module.exports = {
         const produtos = ProdutosModel.listar(categoria);
         return res.render('categorias', { pageName: 'categorias', produtos, categoria, js: 'categorias' });
     },
-<<<<<<< HEAD
-    produtos: (req, res) => {
-        const filmes = ProdutosModel.produtos();
-        return res.render('produtos', { pageName: 'produtos', Filme: filmes, js: 'adicionarAoCarrinho' });
-    }
-   
-=======
     produto: (req, res) => {
-        const filme = filmeModel.index();
+        const filme = ProdutosModel.filmes();
         return res.render('produtos', { pageName: 'produtos',Filme: filme , js: 'adicionarAoCarrinho' });
     } 
->>>>>>> lucas
 }
 

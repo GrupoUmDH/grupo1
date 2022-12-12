@@ -23,7 +23,7 @@ bkFilme.src = data[0].img;
 
 const filme = {
     id,
-    nome: produto.nome,
+    nome: nomeFilme.innerText,
     descricao: descrFilme.innerText,
     classificacao: classificacao.src,
     precoAlugar: precoAlugar.innerText,
