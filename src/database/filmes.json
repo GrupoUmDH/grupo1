@@ -98,7 +98,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "oCulpado",
-        "background": 9
+        "background": "oCulpado_01"
     },
     
     {
@@ -110,7 +110,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "oDiaboDeCadaDia",
-        "background": 10
+        "background": "oDiaboDeCadaDia_01"
     },
     {
         "id":11,
@@ -121,7 +121,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "ondeEstaSegunda",
-        "background": 11
+        "background": "ondeEstaSegunda_01"
     },
     {
         "id": 12,
@@ -132,7 +132,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "oProtetor",
-        "background": 12
+        "background": "oProtetor_01"
     },
     {
         "id": 13,
@@ -143,7 +143,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "ResidentEvil",
-        "background": 13
+        "background": "ResidentEvil_01"
     },
     {
         "id": 14,
@@ -154,7 +154,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "segredosNasParedes",
-        "background": 14
+        "background": "segredosNasParedes_01"
     },
     {
         "id": 15,
@@ -165,7 +165,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "umaGarotaDeMuitaSorte",
-        "background": 15
+        "background": "umaGarotaDeMuitaSorte_01"
     },
     {
         "id": 16,
@@ -176,7 +176,7 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "umLugarSilencioso",
-        "background": 16
+        "background": "umLugarSilencioso_01"
     },
     {
         "id": 17,
@@ -187,6 +187,6 @@
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "esposaDeAluguel",
-        "background": 17
+        "background": "esposaDeAluguel_01"
     }
 ]

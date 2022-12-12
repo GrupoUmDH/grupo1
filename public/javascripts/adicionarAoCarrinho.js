@@ -1,13 +1,25 @@
-let btnAddCarrinho = document.getElementById('add-carrinho')
+const btnAddCarrinho = document.getElementById('add-carrinho');
 
-const nomeFilme = document.getElementById('nome-filme')
-const descrFilme = document.querySelector('#descri-filme>p')
+const nomeFilme = document.getElementById('nome-filme');
+const descrFilme = document.querySelector('#descri-filme>p');
 const coverFilme = document.querySelector('.cover-filme')
-const classificacao = document.querySelector('.classificacao>img')
-const precoAlugar = document.querySelector('.alugar>p')
-const precoComprar = document.querySelector('.comprar>p')
-const id = document.getElementById('id').value
+const classificacao = document.querySelector('.classificacao>img');
+const precoAlugar = document.querySelector('.alugar>p');
+const precoComprar = document.querySelector('.comprar>p');
+const bkFilme = document.querySelector('#bk-filme');
+const id = document.getElementById('id').value ;
+
 let carrinho = []
+let produto = sessionStorage.getItem('carrinho');
+let data = JSON.parse(produto);
+
+nomeFilme.innerText = data[0].nome;
+descrFilme.innerText = data[0].descri_Filme;
+classificacao.src = data[0].categoria;
+precoAlugar.innerText = data[0].aluga;
+precoComprar.innerText = data[0].compra_Filme;
+coverFilme.src = data[0].background;
+bkFilme.src = data[0].img;
 
 const filme = {
     id,

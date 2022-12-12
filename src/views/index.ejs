@@ -45,7 +45,7 @@
                     <% for (var i =0; i<6; i++) { %>
                         <div class="filme-show">
                             <a href="<%= '/produtos' %>\">
-                                <img src="/img/filmes/<%= listaFilmes[i].background %>.jpg" alt="" id="img-filme">
+                                <img src="/img/filmes/<%= listaFilmes[i].background %>.jpg" alt="" id="back-filme">
                                 <div class="descri">
                                     <div>
                                         <h3 id="nome-filme">
@@ -54,6 +54,23 @@
                                         <p id="descri-filme">
                                             <%= listaFilmes[i].descricao %>
                                         </p>
+                                    </div>
+                                    <div id="dados-filmes">
+                                        <h1 id="id-filmes"><%= listaFilmes[i].id %></h1>
+                                        <h1 id="categoria-filmes">
+                                            <%= listaFilmes[i].id %>
+                                        </h1>
+                                        <h1 id="tipo-filmes">
+                                            <%= listaFilmes[i].tipo %>
+                                        </h1>
+                                        <h1 id="aluga-filmes">
+                                            <%= listaFilmes[i].valor_aluguel %>
+                                        </h1>
+                                        <h1 id="compra-filmes">
+                                            <%= listaFilmes[i].valor_compra %>
+                                        </h1>
+                                        <img src="/img/filmes/<%= listaFilmes[i].imagem %>.jpg" id="img-filmes">
+                                            <%= listaFilmes[i].imagem %>
                                     </div>
                                 </div>
                             </a>
@@ -67,107 +84,42 @@
                 </div>
                 <hr>
                 <section class="series-home">
-
-                    <div class="filme-show">
-                        <a><img src="/img/series-home/1.png" alt=""></a>
-                        <div class="descri">
-                            <div id="filme-pay">
-                                <p id="valor"> R$ 9,90 </p>
-                                <div>
-                                    <p id="bt-produto">Alugar</p>
-                                    <p id="bt-produto">Comprar</p>
+                    <% for (var i=0; i<6; i++) { %>
+                        <div class="filme-show">
+                            <a href="<%= '/produtos' %>\">
+                                <img src="/img/filmes/<%= listaSeries[i].background %>.jpg" alt="" id="back-filme">
+                                <div class="descri">
+                                    <div>
+                                        <h3 id="nome-filme">
+                                            <%= listaSeries[i].nome %>
+                                        </h3>
+                                        <p id="descri-filme">
+                                            <%= listaSeries[i].descricao %>
+                                        </p>
+                                    </div>
+                                    <div id="dados-filmes">
+                                        <h1 id="id-filmes">
+                                            <%= listaSeries[i].id %>
+                                        </h1>
+                                        <h1 id="categoria-filmes">
+                                            <%= listaSeries[i].id %>
+                                        </h1>
+                                        <h1 id="tipo-filmes">
+                                            <%= listaSeries[i].tipo %>
+                                        </h1>
+                                        <h1 id="aluga-filmes">
+                                            <%= listaSeries[i].valor_aluguel %>
+                                        </h1>
+                                        <h1 id="compra-filmes">
+                                            <%= listaSeries[i].valor_compra %>
+                                        </h1>
+                                        <img src="/img/filmes/<%= listaSeries[i].imagem %>.jpg" id="img-filmes">
+                                        <%= listaSeries[i].imagem %>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <h3 id="nome-filme">THE BOYS</h3>
-                                <p id="descri-filme">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
-                                    perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur
-                                    error
-                                    mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate
-                                    nesciunt doloremque ratione!</p>
-                            </div>
+                            </a>
                         </div>
-                    </div>
-                    <div class="filme-show">
-                        <a><img src="/img/series-home/2.png" alt=""></a>
-                        <div class="descri">
-                            <div id="filme-pay">
-                                <p id="valor"> R$ 9,90 </p>
-                                <div>
-                                    <p id="bt-produto">Alugar</p>
-                                    <p id="bt-produto">Comprar</p>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 id="nome-filme">OBI-WAN KENOBI</h3>
-                                <p id="descri-filme">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
-                                    perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur
-                                    error
-                                    mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate
-                                    nesciunt doloremque ratione!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filme-show">
-                        <a><img src="/img/series-home/3.png" alt=""></a>
-                        <div class="descri">
-                            <div id="filme-pay">
-                                <p id="valor"> R$ 9,90 </p>
-                                <div>
-                                    <p id="bt-produto">Alugar</p>
-                                    <p id="bt-produto">Comprar</p>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 id="nome-filme">SANDMAN</h3>
-                                <p id="descri-filme">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
-                                    perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur
-                                    error
-                                    mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate
-                                    nesciunt doloremque ratione!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filme-show">
-                        <a><img src="/img/series-home/4.png" alt=""></a>
-                        <div class="descri">
-                            <div id="filme-pay">
-                                <p id="valor"> R$ 9,90 </p>
-                                <div>
-                                    <p id="bt-produto">Alugar</p>
-                                    <p id="bt-produto">Comprar</p>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 id="nome-filme">TTHE BOYS</h3>
-                                <p id="descri-filme">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
-                                    perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur
-                                    error
-                                    mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate
-                                    nesciunt doloremque ratione!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filme-show">
-                        <a><img src="/img/series-home/5.png" alt=""></a>
-                        <div class="descri">
-                            <div id="filme-pay">
-                                <p id="valor"> R$ 9,90 </p>
-                                <div>
-                                    <p id="bt-produto">Alugar</p>
-                                    <p id="bt-produto">Comprar</p>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 id="nome-filme">DAHMER</h3>
-                                <p id="descri-filme">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
-                                    perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur
-                                    error
-                                    mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate
-                                    nesciunt doloremque ratione!</p>
-                            </div>
-                        </div>
-                    </div>
+                    <% } %>
                 </section>
             </section>
         </main>

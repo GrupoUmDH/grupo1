@@ -56,10 +56,10 @@ main {
     transition: .7s;
 }
 
-div.login {
+.login {
     display: block;
     text-align: center;
-    width: 360px;
+    width: 30rem;
     height: 460px;
     border-radius: 15px;
     padding: 2rem;
