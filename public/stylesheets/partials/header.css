@@ -167,12 +167,9 @@ button  {
     padding-right: 10px;
 }
 
-#qtd-item {
-    color: var(--cores-chaves);
-    width: 5px;
-    height: 5px;
-    background-color: var(--cores-letra);
-    border-radius: 50%;
+button {
+    background-color: transparent;
+    border: 0;
 }
 
 
