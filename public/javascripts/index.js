@@ -16,7 +16,7 @@ const back_Filme = document.querySelectorAll('#back-filme');
 itemFilme.forEach( (item, index) => {
     item.addEventListener('click', function(event){
         //console.log(item);
-        console.log(nome_Filme[index].innerText);
+        //console.log(nome_Filme[index].innerText);
 
         let filmeContent = []
 

@@ -23,6 +23,10 @@ header {
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    display: flex;
+    flex-direction: column;
+}
 
 main{
     max-width: 1500px;
@@ -161,6 +165,14 @@ button  {
 #menu-content>ul li a img {
     width: 25px;
     padding-right: 10px;
+}
+
+#qtd-item {
+    color: var(--cores-chaves);
+    width: 5px;
+    height: 5px;
+    background-color: var(--cores-letra);
+    border-radius: 50%;
 }
 
 
