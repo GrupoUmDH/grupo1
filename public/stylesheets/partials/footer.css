@@ -1,3 +1,7 @@
+p {
+    margin-top: 2rem;
+}
+
 hr {
     background-color: var(--cores-chaves);
     color: var(--cores-chaves);
