@@ -9,17 +9,14 @@ module.exports = {
                 dados = {
                     id : e.id,
                     nome : e.nome,
-                    pass : e.password
+                    pass : e.password,
+                    email: e.email,
+                    tipo: e.tipo
                 };
-                console.log(dados);
-            } else if (!user) {
-                console.log("usuario vazio!!!")
-            } else {
-                console.log("faça cadastro.");
             }
             
         })
-        
+
         return dados;
     }
 }

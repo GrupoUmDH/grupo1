@@ -2,6 +2,8 @@
     {
         "id": 1,
         "nome": "user",
-        "password": "000000"
+        "password": "000000",
+        "email": "exemple@exemple.com",
+        "tipo": "adm"
     }
 ]
