@@ -36,7 +36,7 @@ app.use('/carrinho', carrinhoRouter);
 //PRODUTOS - (FILMES, SÉRIES -ADD/EXCLUI PRODUTOS)
 app.use('/filmes', produtosRouter);
 app.use('/produtos', produtosRouter);
-app.use('/cadastroProduto', produtosRouter);
+//app.use('/cadastroProduto', produtosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

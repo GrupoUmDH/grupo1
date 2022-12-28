@@ -1,4 +1,5 @@
 window.addEventListener('load', function () {
+    
     let form = document.getElementsByClassName('main form.form-cad');
     let inputList = document.querySelectorAll('main form.form-cad input');
 

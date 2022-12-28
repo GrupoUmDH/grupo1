@@ -10,7 +10,7 @@ router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
 
 router.get('/cadastroProduto', function(req, res, next) {
-    res.render('cadastroProduto', { pageName: 'cadastroProduto' });
+    res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'cadastroProduto' });
 });
 
 router.get('/categorias', ProdutosController.listar);
