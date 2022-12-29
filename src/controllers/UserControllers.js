@@ -26,6 +26,10 @@ module.exports = {
 
         userModel.novo(req);
 
-        //res.send("testando...");
+        //res.send("novo usuário criado");
+        res.render("painel-user", {
+            pageName: "painel-user",
+            js: "painel-user"
+        });
     }
 };

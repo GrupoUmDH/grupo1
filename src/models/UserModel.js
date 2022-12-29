@@ -24,14 +24,17 @@ module.exports = {
     novo: (dados) => {
         let novoUser = {
             id: login[login.length - 1].id + 1,
-            nome: dados.body.nome,
+            nome: dados.body.name,
             password: dados.body.password,
             email: dados.body.email,
-            tipo: dados.body.tipo,
+            tipo: login.tipo,
         };
 
         login.push(novoUser);
 
-        fs.writeFileSync(path.join(__dirname, "../database/user.json"), JSON.stringfy(login, null, 4));
+        fs.writeFileSync(
+            path.join(__dirname, "../database/user.json"),
+            JSON.stringify(login, null, 4)
+        );
     }
 }

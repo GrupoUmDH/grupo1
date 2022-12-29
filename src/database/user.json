@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "nome": "user",
+        "name": "user",
         "password": "000000",
         "email": "exemple@exemple.com",
         "tipo": "adm"
