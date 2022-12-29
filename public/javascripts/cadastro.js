@@ -1,21 +1,31 @@
 const form_cadastro = document.querySelector(".form-cad");
 const inputList = document.querySelectorAll("form.form-cad input");
-const div_erro = document.querySelectorAll('.invisible');
+const erro_cad = document.querySelectorAll("form.form-cad .invisible");
+
+const form_login = document.querySelector('.form-login');
+const inputLogin = document.querySelectorAll(".form-login input");
+const erro_log = document.querySelectorAll("form.form-login .invisible");
 
 form_cadastro.addEventListener("submit", (event) => {
+    
+    dadosPreenchidos(inputList, erro_cad, this.event);
+});
 
-    inputList.forEach((input, index) => {
+form_login.addEventListener('submit', (event) => {
+    dadosPreenchidos(inputLogin, erro_log, this.event);
+})
+
+const dadosPreenchidos = (input, erro, event) => {
+    input.forEach((input, index) => {
         if (!input.value) {
             //onsole.log(div_erro[index]);
             event.preventDefault();
-            div_erro[index].style.display = "block";
-            
+            erro[index].style.display = "block";
         } else {
-            div_erro[index].style.display = "none";
+            erro[index].style.display = "none";
         }
     });
-
-});
+}
 
 /*
 

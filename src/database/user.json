@@ -5,5 +5,17 @@
         "password": "000000",
         "email": "exemple@exemple.com",
         "tipo": "adm"
+    },
+    {
+        "id": 2,
+        "nome": "lucas",
+        "password": "123456",
+        "email": "lucasafonsob@hotmail.com"
+    },
+    {
+        "id": 3,
+        "nome": "lucas",
+        "password": "123456",
+        "email": "lucasafonsob@hotmail.com"
     }
 ]

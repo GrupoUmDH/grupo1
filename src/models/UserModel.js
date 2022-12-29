@@ -30,11 +30,14 @@ module.exports = {
             tipo: login.tipo,
         };
 
+        // VERIFICAR SE ESISTE USUÁRIO COM O MESMO E-MAIL ...
+        
         login.push(novoUser);
 
         fs.writeFileSync(
             path.join(__dirname, "../database/user.json"),
             JSON.stringify(login, null, 4)
         );
+        
     }
 }
