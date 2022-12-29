@@ -1,45 +1,59 @@
-<head>
-    <script src="/javascripts/cadastro.js" defer></script>
-    <title>Lumiere - Cadastro</title>
-</head>
-
 <%- include('partials/header') %>
 
-    <!--CONTEÚDO MAIN -->
-    <main>
-        <div class="login-cadastro">
+<!--CONTEÚDO MAIN -->
+<main>
+    <div class="login-cadastro">
         <div class="login">
             <img src="/img/ico/user-login.png" />
-            <hr>
+            <hr />
             <h4>LOGIN</h4>
 
             <div class="login-formulario">
                 <form class="form-login" method="POST" action="/cadastro/login">
-                    <input placeholder="USUÁRIO..." type="text" name="name">
-                    <input placeholder="SENHA" type="password" name="password">
-                    <button type="submit">
-                        LOGIN
-                    </button>
+                    <input placeholder="USUÁRIO..." type="text" name="name" />
+                    <input
+                        placeholder="SENHA"
+                        type="password"
+                        name="password"
+                    />
+                    <button type="submit">LOGIN</button>
                 </form>
             </div>
-            <hr>
+            <hr />
         </div>
 
         <div class="cadastro cadastro-formulario">
             <form class="form-cad" method="post" action="/cadastro/novo">
                 <span>Cadastre-se</span>
-                <hr>
+                <hr />
                 <a>
                     <img src="/img/ico/user.png" />
                 </a>
-                <input placeholder="COLOQUE SEU EMAIL..." type="email" name="email">
-                <input placeholder="NOME USUÁRIO.." type="text" name="name" id="user">
-                <input placeholder="SENHA" type="password" name="password">
-                <button type="submit" id="#">CRIAR A MINHA CONTA </button>
+                <input
+                    placeholder="COLOQUE SEU EMAIL..."
+                    type="email"
+                    name="email"
+                />
+                <div class="invisible">
+                    Campo obrigatório!
+                </div>
+                <input
+                    placeholder="NOME USUÁRIO.."
+                    type="text"
+                    name="name"
+                    id="user"
+                />
+                <div class="invisible">
+                    Campo obrigatório!
+                </div>
+                <input placeholder="SENHA" type="password" name="password" />
+                <div class="invisible">
+                    Campo obrigatório!
+                </div>
+                <button type="submit">CRIAR A MINHA CONTA</button>
             </form>
         </div>
+    </div>
+</main>
 
-      </div>
-    </main>
-    
-    <%- include('partials/footer')%>
+<%- include('partials/footer')%>

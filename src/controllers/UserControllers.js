@@ -14,15 +14,18 @@ module.exports = {
         let dados = userModel.user(user, pass);
 
         if (!dados.nome) {
-        res.send("usuário inexistente!!");
+            res.send("usuário inexistente!!");
         } else {
-        res.send("logado");
+            res.send("logado");
         }
 
         //res.render('painel-user', { pageName: 'painel-user', js: 'painel-user' , User: dados});
     },
     novoUsuario: (req, res, next) => {
-        
+        console.log(req.body);
 
+        userModel.novo(req);
+
+        //res.send("testando...");
     }
 };

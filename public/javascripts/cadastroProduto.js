@@ -1,6 +1,3 @@
-
-
-   
 const form = document.querySelector('main .content-form form')
 const inputList = document.querySelectorAll(`main .content-form input:not(.check)`)
 const nomeProd = document.querySelector("input[name='nome-do-produto']")
