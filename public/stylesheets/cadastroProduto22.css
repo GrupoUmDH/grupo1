@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
+
+:root{
+    --background-color:#0C0C0C;
+    --background-2:#131313;
+    --cores-chaves:#B30006;
+    --cores-letra:  #FFFFFF;
+    --cores-objetos: #580003;
+}
+ main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:space-between;
+      margin: 2rem auto;
+      gap: 1rem;
+    }
+
+form {
+    height: 35rem;
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: .1rem;
+    background: rgb(118, 118, 155);
+    }
+
+h2 {
+      text-align: center;
+    }
+
+button {
+      font-weight: bold;
+      margin-top: auto;
+      color: rgba(0, 0, 0, .8);
+      cursor: pointer;
+    }
+
+input {
+      cursor: pointer;
+}
+
+.check{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: .1rem;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh ;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    background-color: var(--background-color);
+}
+ 
+body * {
+    font-family: 'Inter',Arial, Helvetica, sans-serif;
+    font-size: 100%;
+   } 

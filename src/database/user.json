@@ -4,7 +4,8 @@
         "name": "user",
         "password": "000000",
         "email": "exemple@exemple.com",
-        "tipo": "adm"
+        "tipo": "adm",
+        "assinatura": "paga"
     },
     {
         "id": 2,
@@ -16,6 +17,12 @@
         "id": 3,
         "nome": "lucas",
         "password": "123456",
+        "email": "lucasafonsob@hotmail.com"
+    },
+    {
+        "id": 4,
+        "nome": "lucas",
+        "password": "12345685",
         "email": "lucasafonsob@hotmail.com"
     }
 ]

@@ -13,9 +13,9 @@ module.exports = {
 
         //let dados = userModel.user(user, pass);
 
-        res.send("logado");
+        //res.send("logado");
 
-        //res.render('painel-user', { pageName: 'painel-user', js: 'painel-user' , User: dados});
+        res.render('painel-user', { pageName: 'painel-user', js: 'painel-user' });
     },
     novoUsuario: (req, res, next) => {
         //console.log(req.body);

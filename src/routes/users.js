@@ -7,7 +7,7 @@ let userController = require('../controllers/UserControllers')
 router.get('/', userController.index);
 
 router.post('/login', userController.login);
-router.post('/novo', userController.novoUsuario)
+router.post('/novo', userController.novoUsuario);
 
 router.get('/painel-user', function(req, res, next) {
   res.render('painel-user', { pageName: 'painel-user', js:'' });
