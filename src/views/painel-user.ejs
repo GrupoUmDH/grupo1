@@ -5,13 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/painel-user.css">
-    <script src="/painelUsuario/script.js" defer></script>
     <title>Lumiere - Painel Usuário</title>
 </head>
 
 <%- include('partials/header') %>
 <body>
+    <aside class="container-side">
+            <nav id="menu">
+                <h1>Minha Conta</h1>
+                <hr>
+                <ul>
+                    <li><a href="#historico">Histórico de pedidos</a></li>
+                    <li><a href="#alterar">Alterar cadastro</a></li>
+                    <li><a href="#cadastrar">Cadastrar cartão</a></li>
+                    <li><a href="#cancelar">Cancelar assinatura</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
     <main>
         <section class="container">
             <div class="titulos">

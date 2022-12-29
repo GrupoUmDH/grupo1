@@ -1,21 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-:root{
-    --background-color:#0C0C0C;
-    --background-2:#131313;
-    --cores-chaves:#B30006;
-    --cores-letra:  #FFFFFF;
+:root {
+    --background-color: #0C0C0C;
+    --background-2: #131313;
+    --cores-chaves: #B30006;
+    --cores-letra: #FFFFFF;
     --cores-objetos: #580003;
 }
 
-*{
+* {
     margin: 0;
-    padding: 0 auto; 
-    justify-content: center;
+    padding: 0 auto;
 }
- 
-body{
+
+body {
     padding: 0;
     margin: 0;
     width: 100vw;
@@ -25,29 +24,20 @@ body{
     align-items: center;
     background-color: var(--background-color);
 }
- 
-body * {
-    font-family: 'Inter',Arial, Helvetica, sans-serif;
-    font-size: 100%;
-   }
 
- 
+body * {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 100%;
+}
+
+
 /* CONTEUDO MAIN */
-main{
-    width: 100%;
-    height: 100%;
+#main_cadastro {
+    width: 100vw;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
 }
-/* .login-cadastro{
-    display: flex;
-    position: relative;
-    width: 90%;
-} */
-/* Login */
 
 h4 {
     color: #FFFFFF;
@@ -60,27 +50,27 @@ h4 {
 div.login {
     display: block;
     text-align: center;
-    width: 360px;
-    height: 390px;
     border-radius: 15px;
-    padding: 2rem;
+    padding: .3rem;
     background-color: var(--background-2);
-    position: absolute;
-    left: 5rem;
-    top: 10rem;
+    height: 60%;
 }
 
-div.login > hr {
+div.login>hr {
     background-color: var(--cores-chaves);
     color: var(--cores-chaves);
     border: var(--cores-chaves);
-    width: 360px;
     height: 2px;
     display: flex;
     flex-direction: row;
     margin-bottom: 2rem;
 }
 
+.login-cadastro {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+}
 
 .login-formulario {
     display: flex;
@@ -88,70 +78,46 @@ div.login > hr {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: .8rem;
 }
 
 .login-formulario input {
-    display: flex;
-    text-align: left;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
     border-radius: 15px;
     background-color: var(--cores-letra);
     height: 2rem;
-    width: 90%;
     margin: .5rem;
 }
 
 .login-formulario button {
-    margin: 2rem;
-    display: inline-block;
+    margin: 1rem;
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
+    border-radius: 10px;
     color: var(--cores-letra);
     border: var(--cores-chaves);
     background-color: var(--cores-chaves);
-    width: 15rem;
+    width: 80%;
     height: 2.5rem;
-    margin-bottom: 2rem;
 }
 
 /*cadastro*/
 .cadastro {
-    display: block;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
     background-color: var(--background-2);
-    width: 40rem;
     border-radius: 15px;
-    padding-bottom: 2rem;
-    position: absolute;
-    left: 33rem;
-    top: 10rem;
 }
 
-.cadastro > form> span{
+.cadastro>form>span {
     margin: 1rem .5rem 0 .5rem;
     color: var(--cores-chaves);
     font-size: 3rem;
     font-weight: 700;
 }
-.cadastro > form > hr{
-    width: 30rem;
-    background-color: var(--cores-chaves);
-    color: var(--cores-chaves);
-    border: var(--cores-chaves);
-}
 
-.cadastro a > img{
+.cadastro a>img {
     margin-top: 1.5rem;
     width: 10rem;
 }
 
-h5{ 
+h5 {
     color: var(--cores-letra);
     text-align: center;
     align-items: center;
@@ -165,40 +131,99 @@ h5{
     text-align: center;
     align-items: center;
     justify-content: center;
+    padding: .8rem;
 }
 
-.cadastro-formulario input{
-    display: flex;
-    text-align: left;
-    align-items: center;
-    justify-content: center;
+.cadastro-formulario input {
+    
     border-radius: 10px;
     background-color: var(--cores-letra);
     height: 2rem;
-    width: 30rem;
-    margin: 2rem .5rem .5rem 0;
-     
+    margin: 1rem;
+    width: 90%;
+
 }
 
-
-.cadastro-formulario button{
+.cadastro-formulario button {
     margin: 2rem;
-    display: inline-block;
     text-align: center;
-    align-items: center;
-    justify-content: center;
     border-radius: 10px;
     color: var(--cores-letra);
-    background-color:var(--cores-chaves);
-    width: 15rem;
+    background-color: var(--cores-chaves);
+    width: 80%;
     height: 2.5rem;
-    margin-bottom: 5rem;
     border-color: var(--cores-chaves);
 
-} 
+}
 
 .error {
     color: var(--cores-chaves);
     padding: 0;
     margin: 0;
+}
+
+.invisible {
+    display: none;
+    color: var(--cores-chaves);
+    padding: 0;
+    margin: 0;
+}
+
+/* responsivo*/
+@media (max-width: 960px) {
+    main .login-cadastro {
+        flex-direction: column;
+        align-items: center;;
+        width: 60vw;
+    }
+
+    .cadastro {
+        margin-top: 2rem;
+    }
+
+    .cadastro>form>span {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 530px) {
+    div .login {
+        width: 20rem;
+        padding: 1rem;
+        margin: 2rem;
+    }
+
+    .cadastro {
+        width: 90%;
+    }
+    
+}
+
+@media (min-width: 980px) {
+    .cadastro {
+        max-width: 40rem;
+    }
+}
+
+/*footer*/
+
+hr {
+    background-color: var(--cores-chaves);
+    color: var(--cores-chaves);
+    border: var(--cores-chaves);
+    width: 100%;
+
+    height: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    color: var(--cores-chaves);
+    width: 100%;
+    text-align: center;
+
 }

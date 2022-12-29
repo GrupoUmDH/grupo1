@@ -78,7 +78,7 @@ h5 {
     padding-left: 4rem;
     height: 9rem;
     text-align: center;
-
+justify-content: center;
     align-items: center;
     display: flex;
     padding: 1.8rem;
