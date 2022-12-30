@@ -15,7 +15,7 @@ module.exports = {
         return res.render('cadastro', { pageName: 'cadastroProduto', js:'' });
     },
     listar: (req, res) => {
-        const categoria = req.query.categoria || 'acao';
+        const categoria = req.query.categoria || 'ação';
         const produtos = ProdutosModel.listar(categoria);
         return res.render('categorias', { pageName: 'categorias', produtos, categoria, js:'categorias'});
     },

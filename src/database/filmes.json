@@ -24,7 +24,7 @@
     {
         "id": 3,
         "tipo": "filme",
-        "categoria": "comedia",
+        "categoria": "comédia",
         "nome": "ARREMESSANDO ALTO",
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
@@ -36,7 +36,7 @@
     {
         "id": 4,
         "tipo": "filme",
-        "categoria": "comedia",
+        "categoria": "comédia",
         "nome": "AS BRANQUELAS",
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
@@ -92,7 +92,7 @@
     {
         "id": 9,
         "tipo": "filme",
-        "categoria": "acao",
+        "categoria": "ação",
         "nome": "O CULPADO",
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
@@ -104,7 +104,7 @@
     {
         "id": 10,
         "tipo": "filme",
-        "categoria": "acao",
+        "categoria": "ação",
         "nome": "O DIABO DE CADA DIA",
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
@@ -137,7 +137,7 @@
     {
         "id": 13,
         "tipo": "filme",
-        "categoria": "acao",
+        "categoria": "ação",
         "nome": "RESIDENT EVIL",
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
