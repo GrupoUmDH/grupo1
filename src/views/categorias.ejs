@@ -2,16 +2,16 @@
 
     <main>
         <div class="sub-header">
-            <div class="escolher">
-                <input type="submmt" value="SÉRIES" name="series" id="submit" src="<%='/produtos/filmes' %>">
-                <input type="button" value="FILMES" name="filmes" id="submit" src="<%= '/produtos/series' %>">
-            </div>
-            <form action="/produtos/categorias" class="content-genero" method="get">
+            <form class="escolher" action="/produtos/categorias/:<%= tipo %> " method="get">
+                <input type="submit" value="series" name="tipo" id="submit">
+                <input type="submit" value="filmes" name="tipo" id="submit">
+            </form>
+            <form action="/produtos/categorias/:<%= tipo %> " class="content-genero" method="get">
                 <h1>Categoria: </h1>
                 <select name="categoria" id="genero">
                     <option value="selecione" disabled selected hidden>Selecione</option>
                     <option value="ação">Ação</option>
-                    <option value="aventura">Aventura</git option>
+                    <option value="aventura">Aventura</option>
                     <option value="comédia">Comédia</option>
                     <option value="dança">Dança</option>
                     <option value="documentário">Documentário</option>
@@ -49,7 +49,7 @@
 
                 <% for(const produto of produtos) { %>
                     <div class="filme-show">
-                        <img src="/img/filmes/<%=produto.imagem%>.jpg">
+                        <img src="/img/<%= tipo %>/<%=produto.imagem%>.jpg">
                         <div class="descri"> 
                             <h3 id="nome-filme">
                                 <%= produto.nome %>

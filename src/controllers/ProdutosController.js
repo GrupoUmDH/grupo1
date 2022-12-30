@@ -15,9 +15,11 @@ module.exports = {
         return res.render('cadastro', { pageName: 'cadastroProduto', js:'' });
     },
     listar: (req, res) => {
+        const tipo = req.query.tipo || 'filmes';
         const categoria = req.query.categoria || 'ação';
-        const produtos = ProdutosModel.listar(categoria);
-        return res.render('categorias', { pageName: 'categorias', produtos, categoria, js:'categorias'});
+        const produtos = ProdutosModel.listar(tipo, categoria);
+        console.log(tipo, categoria)
+        return res.render('categorias', { pageName: 'categorias', produtos, tipo, categoria, js:'categorias'});
     },
     produto: (req, res) => {
         const filme = ProdutosModel.filmes();
