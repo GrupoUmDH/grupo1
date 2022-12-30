@@ -32,7 +32,6 @@
         "imagem": "arremessandoAlto",
         "background": "arremessandoAlto_01"
     },
-    
     {
         "id": 4,
         "tipo": "filme",
@@ -66,7 +65,6 @@
         "imagem": "belezaAvassaladora",
         "background": "belezaAvassaladora_01"
     },
-    
     {
         "id": 7,
         "tipo": "filme",
@@ -100,7 +98,6 @@
         "imagem": "oCulpado",
         "background": "oCulpado_01"
     },
-    
     {
         "id": 10,
         "tipo": "filme",
@@ -113,7 +110,7 @@
         "background": "oDiaboDeCadaDia_01"
     },
     {
-        "id":11,
+        "id": 11,
         "tipo": "filme",
         "categoria": "aventura",
         "nome": "ONDE ESTA SEGUNDA",
@@ -188,5 +185,14 @@
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "esposaDeAluguel",
         "background": "esposaDeAluguel_01"
+    },
+    {
+        "id": 18,
+        "nome": "Entre Facas e Segredos",
+        "descricao": "assbjfa",
+        "categoria": "suspense",
+        "classificacao": "14 anos",
+        "valor": "9,90",
+        "imagem": "1672433140219.jfif"
     }
 ]
