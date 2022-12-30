@@ -1,40 +1,40 @@
 [
     {
         "id": 1,
-        "tipo": "filme",
-        "categoria": "terror",
-        "nome": "A MULHER NA JANELA",
+        "tipo": "serie",
+        "categoria": "romance",
+        "nome": "ANNE WITH AN 'E'",
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "aMulherNaJanela",
-        "background": "aMulherNaJanela_01"
+        "imagem": "anne",
+        "background": "anne_01"
     },
     {
         "id": 2,
-        "tipo": "filme",
-        "categoria": "aventura",
-        "nome": "SPIDER-MAN - NO WAY HOME",
+        "tipo": "serie",
+        "categoria": "policial",
+        "nome": "A LISTA NEGRA",
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "homemAranha",
-        "background": "homemAranha_01"
+        "imagem": "aListaNegra",
+        "background": "aListaNegra_01"
     },
     {
         "id": 3,
-        "tipo": "filme",
-        "categoria": "comedia",
-        "nome": "ARREMESSANDO ALTO",
+        "tipo": "serie",
+        "categoria": "policial",
+        "nome": "BETTER CALL SAUL",
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "arremessandoAlto",
-        "background": "arremessandoAlto_01"
+        "imagem": "betterCallSaul",
+        "background": "betterCallSaul_01"
     },
     {
         "id": 4,
-        "tipo": "filme",
+        "tipo": "serie",
         "categoria": "comedia",
         "nome": "AS BRANQUELAS",
         "valor_aluguel": "R$ 9,90",
@@ -45,9 +45,10 @@
     },
     {
         "id": 5,
-        "tipo": "filme",
+        "tipo": "serie",
         "categoria": "guerra",
-        "nome": "CORAÇÕES DE FERRO",
+        "nome": "auishdi",
+        
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
@@ -56,8 +57,8 @@
     },
     {
         "id": 6,
-        "tipo": "filme",
-        "categoria": "guerra",
+        "tipo": "serie",
+        "categoria": "ação",
         "nome": "BELEZA AVASSALADORA",
         "valor_aluguel": "R$ 9,90",
         "valor_compra": "R$ 49,90",
@@ -67,7 +68,7 @@
     },
     {
         "id": 7,
-        "tipo": "filme",
+        "tipo": "serie",
         "categoria": "suspense",
         "nome": "ESCOLA BEM OU MAL",
         "valor_aluguel": "R$ 9,90",
