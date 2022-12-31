@@ -5,34 +5,30 @@ module.exports = {
     filmes: () => {
         return produtos
     },
-    listar: (tipo, categoria) => {
-        if(tipo == 'series'){
-          if(categoria){
-            return series.filter(serie => serie.categoria == categoria)
-          }else{
-            return series
-          }
-        }
-
-        if(tipo == 'filmes'){
-            if(categoria){
-                return produtos.filter(produto => produto.categoria == categoria)
-              }else{
-                return produtos
-              }
-        }
-        
-        // if (categoria) {
-            
-        // } else {
-        //     return produtos
-        // }
-    },
     series: () => {
         return series
     },
-    escolher: (tipo) => {
-        
+    listar: (tipo, categoria) => {
+
+        if(tipo == 'series'){
+            if(categoria){
+                return series.filter((serie) => serie.categoria == categoria);
+            } else {
+                return series
+            }
+            
+        } else if (tipo == "filmes") {
+            if (categoria) {
+                return produtos.filter(
+                    (produto) => produto.categoria == categoria
+                );
+            } else {
+                return produto;
+            }
+            
+        } else {
+            return [{}];
+        }
     }
 }
 

@@ -35,29 +35,6 @@
     {
         "id": 4,
         "tipo": "serie",
-        "categoria": "comedia",
-        "nome": "AS BRANQUELAS",
-        "valor_aluguel": "R$ 9,90",
-        "valor_compra": "R$ 49,90",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "asBranquelas",
-        "background": "asBranquelas_01"
-    },
-    {
-        "id": 5,
-        "tipo": "serie",
-        "categoria": "guerra",
-        "nome": "auishdi",
-        
-        "valor_aluguel": "R$ 9,90",
-        "valor_compra": "R$ 49,90",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "coracoesDeFerro",
-        "background": "coracoesDeFerro_01"
-    },
-    {
-        "id": 6,
-        "tipo": "serie",
         "categoria": "ação",
         "nome": "BELEZA AVASSALADORA",
         "valor_aluguel": "R$ 9,90",
@@ -67,7 +44,7 @@
         "background": "belezaAvassaladora_01"
     },
     {
-        "id": 7,
+        "id": 5,
         "tipo": "serie",
         "categoria": "suspense",
         "nome": "ESCOLA BEM OU MAL",
