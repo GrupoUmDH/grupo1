@@ -1,18 +1,16 @@
+let carrinho = require('../database/carrinho.json');
+
 module.exports = {
     index: () => {
         return [
-            { img: 'credit-card'},
-            { img: 'pag-seguro'},
-            { img: 'pix'},
-            { img: 'boleto'},
-        ]
+            { img: "credit-card" },
+            { img: "pag-seguro" },
+            { img: "pix" },
+            { img: "boleto" },
+        ];
     },
-    resumo:()=>{
-        return[
-            {qtdItens:''},
-            {valor: ''},
-            {valorDesconto: ''},
-            {valorTotal: ''}
-        ]
-    }
-}
+    itens: (itens) => {
+        //let itensCarrinho = JSON.parse(localStorage.getItem("carrinho"));
+        return itens;
+    },
+};

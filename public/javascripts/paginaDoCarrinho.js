@@ -1,11 +1,23 @@
+const removeBtns = document.querySelectorAll(".remover");
+console.log(removeBtns);
 
+removeBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+        const idFilme = this.nextElementSibling.value;
+        let carrinho = JSON.parse(localStorage.getItem("carrinho"));
+        carrinho = carrinho.filter((item) => item.id != idFilme);
+        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+        btn.parentElement.parentElement.parentElement.parentElement.remove();
+    });
+});
 
-let itensCarrinho = JSON.parse(localStorage.getItem("carrinho"))
-    console.log(itensCarrinho)
+/*
+let itensCarrinho = JSON.parse(localStorage.getItem("carrinho"));
+console.log(itensCarrinho);
 
-let itemsContainer = document.querySelector('.itens')
-    itensCarrinho.forEach(filme => {
-        itemsContainer.innerHTML += `
+let itemsContainer = document.querySelector(".itens");
+itensCarrinho.forEach((filme) => {
+    itemsContainer.innerHTML += `
                 <section class="item">
                     <input type="hidden" value="${filme.id}" id="id" name="id">
                     <img class="imagem-produto" src="${filme.imagem}"/>
@@ -24,23 +36,21 @@ let itemsContainer = document.querySelector('.itens')
                             </div>
                         </div>
                     </div>
-                </section>`
+                </section>`;
+});
 
+window.onload = function () {
+    const removeBtns = document.querySelectorAll(".remover");
+    console.log(removeBtns);
+    removeBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+            const idFilme = this.nextElementSibling.value;
+            let carrinho = JSON.parse(localStorage.getItem("carrinho"));
+            carrinho = carrinho.filter((item) => item.id != idFilme);
+            localStorage.setItem("carrinho", JSON.stringify(carrinho));
+            btn.parentElement.parentElement.parentElement.parentElement.remove();
+        });
     });
+};
 
-    window.onload = function (){
-        const removeBtns = document.querySelectorAll('.remover')
-        console.log(removeBtns)
-        removeBtns.forEach(btn => {
-            btn.addEventListener('click' , function(){
-                const idFilme = this.nextElementSibling.value
-                let carrinho = JSON.parse(localStorage.getItem('carrinho'))
-                carrinho = carrinho.filter( item => item.id != idFilme)
-                localStorage.setItem('carrinho' , JSON.stringify(carrinho))    
-                btn.parentElement.parentElement.parentElement.parentElement.remove()
-
-                
-            })
-        }
-            
-            )}
+*/

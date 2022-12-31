@@ -1,4 +1,9 @@
-const btnAddCarrinho = document.getElementById('add-carrinho');
+const btnAddCarrinho = document.getElementById('btn-comprar');
+
+const div_popUp = document.querySelector('div.pop-Up');
+
+// CONTROLE DE POP-UP
+div_popUp.style.display = "none";
 
 const nomeFilme = document.getElementById('nome-filme');
 const descrFilme = document.querySelector('#descri-filme>p');
@@ -32,6 +37,8 @@ const filme = {
 }
 
 btnAddCarrinho.addEventListener('click', function(){
+
+    div_popUp.style.display = "flex";
     
     if(localStorage.getItem('carrinho')==null){
         carrinho.push(filme)
@@ -43,5 +50,3 @@ btnAddCarrinho.addEventListener('click', function(){
         localStorage.setItem('carrinho', JSON.stringify(carrinho))
     }
 })
-
-

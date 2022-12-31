@@ -1,10 +1,21 @@
 const CarrinhoModel = require('../models/CarrinhoModel');
-
+const fs = require("fs");
+const path = require("path");
 
 module.exports = {
     carrinho: (req, res) => {
-        // const carrinho = CarrinhoModel.carrinho();
-        return res.render('carrinho', { pageName: 'carrinho', js:"paginaDoCarrinho" })
+
+        //const itensCarrinho = JSON.parse(req.query.itensCarrinho);
+
+        const carrinho = JSON.parse(req.query.itensCarrinho)
+
+        res.render("carrinho", {
+            pageName: "carrinho",
+            js: "paginaDoCarrinho",
+            Itens : carrinho
+        });
+
+        console.log(itensCarrinho);
     },
     compra: (req, res) => {
         // const compras = CarrinhoModel.compra();
