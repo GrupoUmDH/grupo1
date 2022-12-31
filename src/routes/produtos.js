@@ -25,12 +25,15 @@ const storage = multer.diskStorage({
 })
 
 const upload = multer({storage: storage, limits: {fileSize: 10000000}})
-
+//criar produto
 router.post('/create',upload.single('imagem'), ProdutosController.createProduto);
+//buscar produto
+router.get('/search', ProdutosController.buscaProduto);
+// deletar produto
+router.delete('/remove', ProdutosController.deletaProduto);
+// atualização de produto
+router.put('/edit', ProdutosController.atualizaProduto);
 
-// router.post('/criar', ProdutosController.salvarProduto);
-
-// router.get('/sucesso', ProdutosController.sucesso);
 
 router.get('/categorias', ProdutosController.listar);
 

@@ -31,5 +31,20 @@ module.exports = {
         }
         ProdutosModel.createOne(req)
             res.send("O produto " + req.body.nome + " foi criado com sucesso")
+    }, 
+    buscaProduto: (req, res) => {
+        res.send(ProdutosModel.findOne(req))
+    },
+    listaProduto: (req, res) => {
+        res.send(ProdutosModel.findByParams(req))
+    },
+    deletaProduto: (req, res) => {
+        ProdutosModel.deleteOne(req)
+        res.send("O produto de id " + req.body.id + " foi deletado com sucesso")
+    },
+    atualizaProduto: (req, res) => {
+        ProdutosModel.updateOne(req)
+        res.send("O produto de id " + req.body.id + " foi atualizado com sucesso")
     }
+
 }
