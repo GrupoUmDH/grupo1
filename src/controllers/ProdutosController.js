@@ -17,7 +17,8 @@ module.exports = {
     listar: (req, res) => {
         const tipo = req.query.tipo || 'filmes';
         const categoria = req.query.categoria || 'ação';
-        const produtos = ProdutosModel.listar(tipo, categoria);
+        const produtos= ProdutosModel.listar(tipo, categoria);
+ 
         console.log(tipo, categoria);
         return res.render('categorias', { pageName: 'categorias', produtos, tipo, categoria, js:'categorias'});
     },
