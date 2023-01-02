@@ -1,6 +1,9 @@
 const removeBtns = document.querySelectorAll(".remover");
 console.log(removeBtns);
 
+let Itens = JSON.parse(localStorage.getItem("carrinho"));
+console.log(Itens);
+
 removeBtns.forEach((btn) => {
     btn.addEventListener("click", function () {
         const idFilme = this.nextElementSibling.value;

@@ -6,16 +6,15 @@ module.exports = {
     carrinho: (req, res) => {
 
         //const itensCarrinho = JSON.parse(req.query.itensCarrinho);
-
-        const carrinho = JSON.parse(req.query.itensCarrinho)
+         console.log(req.query);
+        //const carrinho = req.query
 
         res.render("carrinho", {
             pageName: "carrinho",
             js: "paginaDoCarrinho",
-            Itens : carrinho
+            //Itens : carrinho
         });
 
-        console.log(itensCarrinho);
     },
     compra: (req, res) => {
         // const compras = CarrinhoModel.compra();
