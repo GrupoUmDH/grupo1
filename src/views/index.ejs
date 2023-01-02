@@ -45,7 +45,7 @@
                     <% for (var i =0; i<6; i++) { %>
                         <div class="filme-show">
                             <a href="<%= '/produtos' %>\">
-                                <img src="/img/filmes/<%= listaFilmes[i].background %>.jpg" alt="" id="back-filme">
+                                <img src="/img/filmes/<%= listaFilmes[i].background%>.jpg" alt="" id="back-filme">
                                 <div class="descri">
                                     <div>
                                         <h3 id="nome-filme">
@@ -84,10 +84,10 @@
                 </div>
                 <hr>
                 <section class="series-home">
-                    <% for (var i=0; i<6; i++) { %>
+                    <% for (var i=0; i<5; i++) { %>
                         <div class="filme-show">
                             <a href="<%= '/produtos' %>\">
-                                <img src="/img/filmes/<%= listaSeries[i].background %>.jpg" alt="" id="back-filme">
+                                <img src="/img/series/<%= listaSeries[i].background %>.jpg" alt="" id="back-filme">
                                 <div class="descri">
                                     <div>
                                         <h3 id="nome-filme">
@@ -113,7 +113,7 @@
                                         <h1 id="compra-filmes">
                                             <%= listaSeries[i].valor_compra %>
                                         </h1>
-                                        <img src="/img/filmes/<%= listaSeries[i].imagem %>.jpg" id="img-filmes">
+                                        <img src="/img/series/<%= listaSeries[i].imagem %>.jpg" id="img-filmes">
                                         <%= listaSeries[i].imagem %>
                                     </div>
                                 </div>
@@ -123,6 +123,5 @@
                 </section>
             </section>
         </main>
-
 
 <%- include('partials/footer')%>

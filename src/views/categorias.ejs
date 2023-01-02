@@ -2,45 +2,40 @@
 
     <main>
         <div class="sub-header">
-            <form class="escolher" action="/produtos/categorias/:<%= tipo %> " method="get">
-                <input type="submit" value="series" name="tipo" id="submit">
-                <input type="submit" value="filmes" name="tipo" id="submit">
-            </form>
-            <form action="/produtos/categorias/:<%= tipo %> " class="content-genero" method="get">
+            <form action="/produtos/categorias/" class="content-genero" method="get">
                 <h1>Categoria: </h1>
-                <select name="categoria" id="genero">
+                <select name="tipo" id="tipo">
                     <option value="selecione" disabled selected hidden>Selecione</option>
-                    <option value="ação">Ação</option>
-                    <option value="aventura">Aventura</option>
-                    <option value="comédia">Comédia</option>
-                    <option value="dança">Dança</option>
-                    <option value="documentário">Documentário</option>
-                    <option value="drama">Drama</option>
-                    <option value="faroeste">Faroeste</option>
-                    <option value="ficção">Ficção</option>
-                    <option value="guerra">Guerra</option>
-                    <option value="musical">Musical</option>
-                    <option value="policial">Policial</option>
-                    <option value="romance">Romance</option>
-                    <option value="suspense">Suspense</option>
-                    <option value="terror">Terror</option>
+                    <option value="filmes">Filmes</option>
+                    <option value="series">Series</option>
                 </select>
-                <button id="busca" type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 
-                    457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7
-                    376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1
-                    0 208 0S416 93.1 416 208zM208 352c79.5
-                    0 144-64.5 144-144s-64.5-144-144-144S64
-                    128.5 64 208s64.5 144 144 144z" />
-                    </svg></i></button>
+                <div>
+                    <select name="categoria" id="genero">
+                        <option value="selecione" disabled selected hidden>Selecione</option>
+                        <option value="ação">Ação</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="comédia" >Comédia</option>
+                        <option value="dança">Dança</option>
+                        <option value="documentário">Documentário</option>
+                        <option value="drama">Drama</option>
+                        <option value="faroeste">Faroeste</option>
+                        <option value="ficção">Ficção</option>
+                        <option value="guerra">Guerra</option>
+                        <option value="musical">Musical</option>
+                        <option value="policial">Policial</option>
+                        <option value="romance">Romance</option>
+                        <option value="suspense">Suspense</option>
+                        <option value="terror">Terror</option>
+                    </select>
+                    <button id="busca" type="submit"><img src="/img/ico/lupa.svg"/></button>
+                </div>
             </form>
         </div>
 
         <section class="container">
             <div class="titulos">
                 <h1>
-                    <%= categoria%>
+                    <%= tipo%> - <%= categoria%>
                 </h1>
             </div>
 
@@ -49,7 +44,7 @@
 
                 <% for(const produto of produtos) { %>
                     <div class="filme-show">
-                        <img src="/img/<%= tipo %>/<%=produto.imagem%>.jpg">
+                        <img src="/img/<%= tipo %>/<%=produto.background%>.jpg">
                         <div class="descri"> 
                             <h3 id="nome-filme">
                                 <%= produto.nome %>
@@ -59,6 +54,7 @@
                                 <%= produto.descricao %>
                             </p>
                         </div>
+                        <% console.log(produto)%>
                     </div>
                     <% }%>
             </section>
