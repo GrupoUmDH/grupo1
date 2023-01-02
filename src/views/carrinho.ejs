@@ -6,29 +6,27 @@
 
     <!--CONTEÚDO MAIN -->
     <main>
-        <section class="itens">
-            <!-- <section class="item">
-                <img class="imagem-produto" src="/img/2-5.png"/>
-                <div class="descricao-produto">
-                    <div>
-                        <h2>Homem-Aranha: Sem Volta para Casa</h2>
-                        <br>
-                        <p>Peter Parker tem a sua identidade secreta revelada e pede ajuda ao Doutor Estranho. 
-                            Quando um feitiço para reverter o evento não sai como o esperado, 
-                            o Homem-Aranha e seu companheiro dos Vingadores precisam enfrentar inimigos 
-                            de todo o multiverso.</p>
-                    </div>
-                    <div class="container-preco">
-                        <img id="indicacao" src="/img/classificação-indicativa/SELO +12.png" >
+        <% for(const filme of Itens) { %>
+            <section class="item">
+                    <input type="hidden" value="<%=filme.id%>" id="id" name="id">
+                    <img class="imagem-produto" src="<%=filme.imagem%>"/>
+                    <div class="descricao-produto">
                         <div>
-                            <span>R$19,90</span>
-                            <img id="remover" type="button" src="/img/ico/lixo.png"/>
+                            <h2 class="filme-nome"> <%=filme.nome%></h2>
+                            <br>
+                            <p class="filme-descricao"> <%=filme.descricao%></p>
+                        </div>
+                        <div class="container-preco">
+                            <img id="indicacao" src="<%=filme.classificacao%>">
+                            <div>
+                                <span class="filme-valor"></span>
+                                <img class="remover" type="button" src="/img/ico/lixo.png"/>
+                                <input type="hidden" value="<%=filme.id%>" id="id" name="id">
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section> -->
-
-        </section>
+            </section>
+        <% } %>
 
         <section class="pagamento">
 
