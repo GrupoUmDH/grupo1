@@ -32,7 +32,6 @@
         "imagem": "arremessandoAlto",
         "background": "arremessandoAlto_01"
     },
-    
     {
         "id": 4,
         "tipo": "filme",
@@ -77,7 +76,6 @@
         "imagem": "oCulpado",
         "background": "oCulpado_01"
     },
-    
     {
         "id": 8,
         "tipo": "filme",
@@ -165,5 +163,14 @@
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "esposaDeAluguel",
         "background": "esposaDeAluguel_01"
+    },
+    {
+        "id": 18,
+        "nome": "Entre Facas e Segredos",
+        "descricao": "assbjfa",
+        "categoria": "suspense",
+        "classificacao": "14 anos",
+        "valor": "9,90",
+        "imagem": "1672433140219.jfif"
     }
 ]
