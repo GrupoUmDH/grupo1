@@ -88,7 +88,7 @@
         "background": "oDiaboDeCadaDia_01"
     },
     {
-        "id":9,
+        "id": 9,
         "tipo": "filme",
         "categoria": "aventura",
         "nome": "ONDE ESTA SEGUNDA",
@@ -172,5 +172,14 @@
         "classificacao": "14 anos",
         "valor": "9,90",
         "imagem": "1672433140219.jfif"
+    },
+    {
+        "id": 19,
+        "nome": "Entre Facas e Segredos",
+        "descricao": "fghjnsfgj",
+        "categoria": "suspense",
+        "classificacao": "14 anos",
+        "valor": "9,90",
+        "imagem": "1672685956967.jpg"
     }
 ]

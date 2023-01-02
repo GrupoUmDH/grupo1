@@ -2,7 +2,7 @@ const produtos = require('../database/filmes.json');
 const series = require('../database/series.json');
 const fs = require('fs');
 const path = require('path');
-const { produto } = require('../controllers/ProdutosController');
+
 
 module.exports = {
   filmes: () => {
@@ -11,8 +11,8 @@ module.exports = {
   series: () => {
     return series
   },
-
   listar: (tipo, categoria) => {
+
     if (tipo == 'series') {
       if (categoria) {
         return series.filter((serie) => serie.categoria == categoria);
