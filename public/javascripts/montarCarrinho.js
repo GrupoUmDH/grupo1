@@ -13,13 +13,14 @@
 //     })
 // })
 
-const formMontarCarrinho = document.getElementById('montarCarrinho')
-formMontarCarrinho.addEventListener('submit', function (event) {
-    event.preventDefault()
-    const itensCarrinho = document.querySelector('[name="itensCarrinho"]')
-    itensCarrinho.value = localStorage.getItem("carrinho")
-    console.log(itensCarrinho)
-    this.submit()
-})
+const formMontarCarrinho = document.querySelectorAll("form#montarCarrinho");
 
-//console.log(JSON.parse(localStorage.getItem('carrinho')));
+formMontarCarrinho.forEach((montaCarrinho, index) => {
+    montaCarrinho.addEventListener('submit', function (event) {
+        event.preventDefault()
+        const itensCarrinho = document.querySelectorAll('[name="itensCarrinho"]')
+        itensCarrinho[index].value = localStorage.getItem("carrinho");
+        //console.log(itensCarrinho)
+        this.submit()
+    })
+})

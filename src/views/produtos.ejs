@@ -16,7 +16,7 @@
 
                                     </div>
                            
-                                <p id="descri-filme">000</p>
+                                <p id="descri-filme"></p>
                             </div>
                             <!-- terceiro filho -->
                             <div id="bts-compra">
@@ -27,15 +27,11 @@
                                 <div class="botoes-compra">
 
                                     <div class="assitir">
-                                        <button type="submit" id="btn-assistir">Assitir</button>
+                                        <button>Assitir</button>
                                     </div>
                                     <div class="comprar">
-                                        <p id="valor-compra">R$9,99</p>
+                                        <p id="valor-compra"></p>
                                         <button type="submit" id="btn-comprar">Comprar</button>
-                                    </div>
-                                    <div class="alugar">
-                                        <p id="valor-aluga">R$9,99</p>
-                                        <button>Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -57,7 +53,10 @@
                 <img src="/img/logo.svg" />
                 <div>
                     <a href="<%= '/index' %>"><button> CONTINUAR COMPRANDO</button>  </a>
-                    <a href="<%= '/carrinho' %>"><button> VER CARRINHO </button>  </a>
+                    <form action="/carrinho" method="get" id="montarCarrinho">
+                        <input type="hidden" name="itensCarrinho"/>
+                        <button type="submit"> VER CARRINHO </button>
+                    </form>
                 </div>
             </div>
         </div>

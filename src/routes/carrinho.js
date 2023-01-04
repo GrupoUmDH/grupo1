@@ -7,7 +7,7 @@ let imgPagamento = require('../models/CarrinhoModel')
 
 router.get('/', CarrinhoController.carrinho);
 
-/* GET Carrinho */
+/* GET COMPRA - FINALIZA COMPRA */
 router.get('/compra', function(req, res, next) {
     let img=imgPagamento.index();
     res.render('compra', { pageName: 'compra' , js:"compra", compra:img })

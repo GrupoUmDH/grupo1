@@ -5,14 +5,22 @@ const path = require("path");
 module.exports = {
     carrinho: (req, res) => {
 
-        //const itensCarrinho = JSON.parse(req.query.itensCarrinho);
-         console.log(req.query);
+        const item = CarrinhoModel.itens(req.query.itensCarrinho);
         //const carrinho = req.query
+
+        //console.log(item)
+        let qtd = item.length;
+
+        let valor = CarrinhoModel.valores(req.query.itensCarrinho);
+
+        let desconto = "R$ 0,00"
+        
+        //console.log(valor);
 
         res.render("carrinho", {
             pageName: "carrinho",
             js: "paginaDoCarrinho",
-            //Itens : carrinho
+            Itens : item, qtd, valor,
         });
 
     },

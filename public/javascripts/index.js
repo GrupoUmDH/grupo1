@@ -36,7 +36,7 @@ itemFilme.forEach( (item, index) => {
         //filmeContent = JSON.parse(filme)
         //filmeContent.push(filme);
 
-        sessionStorage.setItem('carrinho', JSON.stringify(filmeContent))
+        sessionStorage.setItem('filme', JSON.stringify(filmeContent))
         console.log(filme)
     })
 })

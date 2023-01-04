@@ -1,4 +1,3 @@
-let carrinho = require('../database/carrinho.json');
 
 module.exports = {
     index: () => {
@@ -10,7 +9,21 @@ module.exports = {
         ];
     },
     itens: (itens) => {
-        //let itensCarrinho = JSON.parse(localStorage.getItem("carrinho"));
-        return itens;
+       
+        if(!itens){
+            return [{}];
+        } else {
+            return JSON.parse(itens);
+        }
     },
-};
+    valores: (item) => {
+        let content = JSON.parse(item);
+        let soma = 0;
+        
+        content.forEach(element => {
+            soma += parseFloat(element.precoComprar.replace(',','.'))
+        })
+        //content = content.filter(a => a.precoComprar);
+        return "R$ " + soma.toFixed(2).replace(".", ",");
+    }
+}

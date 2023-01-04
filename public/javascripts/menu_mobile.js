@@ -4,7 +4,7 @@ let atvMenu = document.getElementById('check-menu');
 
 let navMobile = document.getElementById("navbar-mobile");
 
-console.log(atvMenu.checked);
+//console.log(atvMenu.checked);
 
 atvMenu.addEventListener('click', function () {
     if (atvMenu.checked) {
