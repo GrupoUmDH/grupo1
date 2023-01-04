@@ -1,14 +1,10 @@
-<head>
-    <script src="javascripts/<%= js %>.js" defer></script>
-</head>
-
 <%- include('partials/header') %>
-
     <!--CONTEÚDO MAIN -->
     <main>
+        <div class="content-carrinho">
         <% for(const filme of Itens) { %>
             <section class="item">
-                    <input type="hidden" value="<%=filme.id%>" id="id" name="id">
+                <input type="hidden" value="<%=filme.id%>" id="id" name="id">
                     <img class="imagem-produto" src="<%=filme.imagem%>"/>
                     <div class="descricao-produto">
                         <div>
@@ -16,18 +12,13 @@
                             <br>
                             <p class="filme-descricao"> <%=filme.descricao%></p>
                         </div>
-                        <div class="container-preco">
-                            <img id="indicacao" src="<%=filme.classificacao%>">
-                            <div>
-                                <span class="filme-valor"></span>
-                                <img class="remover" type="button" src="/img/ico/lixo.png"/>
-                                <input type="hidden" value="<%=filme.id%>" id="id" name="id">
-                            </div>
+                        <div>
+                            <img class="remover" value="<%=filme.id%> type="button" src="/img/ico/lixo.png"/>
                         </div>
                     </div>
             </section>
         <% } %>
-
+        </div>
         <section class="pagamento">
 
             <section class="resumo">
@@ -37,20 +28,20 @@
                 <br>
                 <hr>
                 <div>
-                    <h3>CARRINHO: X ITENS</h3>
-                    <span>R$19,90</span>                   
+                    <h3>CARRINHO: <%= qtd %> ITENS</h3>
+                    <span><%= valor %></span>                   
                 </div>
                 <br>
                 <hr>
                 <div>
                     <h3>DESCONTO</h3>
-                    <span>R$19,90</span>                  
+                    <span>R$0,00</span>                  
                 </div>
                 <br>
                 <hr>
                 <div>
                     <h2>TOTAL</h2>
-                    <span>R$19,90</span>               
+                    <span><%= valor %></span>               
                 </div>
                 <br>
             </section>

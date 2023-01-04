@@ -210,6 +210,13 @@ main{
     width: 20%;
 }
 
+.popup-content div {
+    display: flex;
+}
+.popup-content div form {
+    margin-left: 1rem;
+}
+
 /*CONFIGURAÇÃO FOOTER*/
 
 hr {

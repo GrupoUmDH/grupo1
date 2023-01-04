@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const methodOverride = require('method-override');
+
 var homeRouter = require('./routes/index');
 var userRouter = require('./routes/users');
 var produtosRouter = require('./routes/produtos');
@@ -37,6 +39,9 @@ app.use('/carrinho', carrinhoRouter);
 app.use('/filmes', produtosRouter);
 app.use('/produtos', produtosRouter);
 //app.use('/cadastroProduto', produtosRouter);
+
+//METOD-OVERRIDE
+app.use(methodOverride('_method'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

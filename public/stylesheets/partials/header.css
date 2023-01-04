@@ -164,3 +164,11 @@ button {
     background-color: transparent;
     border: 0;
 }
+
+#qtd-item {
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 3rem;
+    color: var(--cores-letra);
+}
