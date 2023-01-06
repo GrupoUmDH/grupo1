@@ -13,7 +13,7 @@
                             <p class="filme-descricao"> <%=filme.descricao%></p>
                         </div>
                         <div>
-                            <img class="remover" value="<%=filme.id%> type="button" src="/img/ico/lixo.png"/>
+                            <img class="remover" value="<%=filme.id%>" type="button" src="/img/ico/lixo.png"/>
                         </div>
                     </div>
             </section>
@@ -28,20 +28,20 @@
                 <br>
                 <hr>
                 <div>
-                    <h3>CARRINHO: <%= qtd %> ITENS</h3>
-                    <span><%= valor %></span>                   
+                    <h3>CARRINHO: <%= qtd %> itens</h3>
+                    <span> R$ <%= valor %></span>                   
                 </div>
-                <br>
+   
                 <hr>
                 <div>
                     <h3>DESCONTO</h3>
-                    <span>R$0,00</span>                  
+                    <span>R$ 0,00</span>                  
                 </div>
-                <br>
+
                 <hr>
                 <div>
                     <h2>TOTAL</h2>
-                    <span><%= valor %></span>               
+                    <span> R$ <%= valor %> </span>               
                 </div>
                 <br>
             </section>

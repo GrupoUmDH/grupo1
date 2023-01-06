@@ -24,6 +24,6 @@ module.exports = {
             soma += parseFloat(element.precoComprar.replace(',','.'))
         })
         //content = content.filter(a => a.precoComprar);
-        return "R$ " + soma.toFixed(2).replace(".", ",");
+        return soma.toFixed(2).replace(".", ",");
     }
 }

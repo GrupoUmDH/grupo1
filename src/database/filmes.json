@@ -5,6 +5,7 @@
         "categoria": "terror",
         "nome": "A MULHER NA JANELA",
         "valor": "9,90",
+        "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "aMulherNaJanela",
         "background": "aMulherNaJanela_01"
@@ -15,6 +16,7 @@
         "categoria": "aventura",
         "nome": "SPIDER-MAN - NO WAY HOME",
         "valor": "9,90",
+        "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "homemAranha",
         "background": "homemAranha_01"
@@ -25,6 +27,7 @@
         "categoria": "comédia",
         "nome": "ARREMESSANDO ALTO",
         "valor": "9,90",
+        "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "arremessandoAlto",
         "background": "arremessandoAlto_01"
@@ -35,6 +38,7 @@
         "categoria": "comédia",
         "nome": "AS BRANQUELAS",
         "valor": "9,90",
+        "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "asBranquelas",
         "background": "asBranquelas_01"
@@ -45,6 +49,7 @@
         "categoria": "guerra",
         "nome": "CORAÇÕES DE FERRO",
         "valor": "9,90",
+        "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "coracoesDeFerro",
         "background": "coracoesDeFerro_01"
@@ -55,6 +60,7 @@
         "categoria": "aventura",
         "nome": "GUERRA MUNDIAL Z",
         "valor": "9,90",
+        "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "guerraMundialZ",
         "background": "guerraMundialZ_01"
@@ -65,6 +71,7 @@
         "categoria": "ação",
         "nome": "O CULPADO",
         "valor": "9,90",
+        "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "oCulpado",
         "background": "oCulpado_01"
@@ -75,6 +82,7 @@
         "categoria": "ação",
         "nome": "O DIABO DE CADA DIA",
         "valor": "9,90",
+        "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "oDiaboDeCadaDia",
         "background": "oDiaboDeCadaDia_01"
@@ -85,6 +93,7 @@
         "categoria": "aventura",
         "nome": "ONDE ESTA SEGUNDA",
         "valor": "9,90",
+        "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "ondeEstaSegunda",
         "background": "ondeEstaSegunda_01"
@@ -95,6 +104,7 @@
         "categoria": "terror",
         "nome": "O PROTETOR",
         "valor": "9,90",
+        "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "oProtetor",
         "background": "oProtetor_01"
@@ -105,6 +115,7 @@
         "categoria": "ação",
         "nome": "RESIDENT EVIL",
         "valor": "9,90",
+        "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "ResidentEvil",
         "background": "ResidentEvil_01"
@@ -115,6 +126,7 @@
         "categoria": "terror",
         "nome": "SEGREDOS NAS PAREDES",
         "valor": "9,90",
+        "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "segredosNasParedes",
         "background": "segredosNasParedes_01"
@@ -125,6 +137,7 @@
         "categoria": "drama",
         "nome": "UMA GAROTA DE MUITA SORTE",
         "valor": "9,90",
+        "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "umaGarotaDeMuitaSorte",
         "background": "umaGarotaDeMuitaSorte_01"
@@ -135,6 +148,7 @@
         "categoria": "aventura",
         "nome": "UM LUGAR SILENCIOSO",
         "valor": "9,90",
+        "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "umLugarSilencioso",
         "background": "umLugarSilencioso_01"
@@ -145,13 +159,14 @@
         "categoria": "romance",
         "nome": "ESPOSA DE ALUGUEL",
         "valor": "9,90",
+        "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "esposaDeAluguel",
         "background": "esposaDeAluguel_01"
     },
     {
-        "tipo": "filmes",
         "id": 16,
+        "tipo": "filmes",
         "nome": "Entre Facas e Segredos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "categoria": "suspense",
