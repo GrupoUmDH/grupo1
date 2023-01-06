@@ -172,6 +172,7 @@
         "categoria": "suspense",
         "classificacao": "14 anos",
         "valor": "9,90",
-        "imagem": "entreFacasESegredos.jpg"
+        "imagem": "entreFacasESegredos.jpg",
+        "background": "entreFacasESegredos_01"
     }
 ]
