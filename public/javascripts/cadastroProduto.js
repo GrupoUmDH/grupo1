@@ -22,3 +22,15 @@ form.addEventListener('submit', function(event){
 */
 
 
+let conteudo = document.querySelector('div.pop-up')
+const pesquisar = document.getElementById('bt-pesquisa')
+pesquisar.addEventListener('click', () => {
+    console.log('testando');
+    conteudo.style.display = 'block';
+   // conteudo.innerHTML += html;
+
+})
+
+
+
+
