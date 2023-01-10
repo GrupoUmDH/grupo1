@@ -93,12 +93,12 @@ hr {
     width: 15rem;
 }
 
-div #dados-filmes {
+div #dados-series {
     display: none;
 }
 /*  CONFIGURANDO AO PASSAR O MOUSE */
 
-.filme-show h3 {
+.series-show h3 {
     color: #FFFFFF;
     padding: auto;
     margin: 3px;
@@ -106,7 +106,7 @@ div #dados-filmes {
     background-color: transparent;
 }
 
-.filme-show .descri {
+.series-show .descri {
     width: 15rem;
     font-size: .8rem;
     text-align: left;
@@ -117,11 +117,11 @@ div #dados-filmes {
     height: 100%;
 }
 
-.filme-show>a {
+.series-show>a {
     position: relative;
 }
 
-.filme-show {
+.series-show {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -133,11 +133,11 @@ div #dados-filmes {
     margin-bottom: 1rem;
 }
 
-.filme-show:hover div #dados-filmes {
+.series-show:hover div #dados-series {
     display: none;
 }
 
-.filme-show:hover .descri {
+.series-show:hover .descri {
     display: block;
     position: absolute;
     background-color: transparent;
@@ -149,25 +149,25 @@ div #dados-filmes {
 
 }
 
-.filme-show:hover .descri div #valor {
+.series-show:hover .descri div #valor {
     padding: 3px;
     margin: 6px;
     font-weight: bold;
     font-size: 14pt;
 }
 
-.filme-show:hover img {
+.series-show:hover img {
     opacity: 0.3;
 }
 
 
-.filme-show .descri #descri-filme {
+.series-show .descri #descri-series {
     font-weight: bold;
     padding: 4px;
     margin: 4px;
 }
 
-#nome-filme {
+#nome-series {
     color: red;
     font-size: 1.3rem;
 }

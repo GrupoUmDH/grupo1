@@ -3,11 +3,11 @@ const ProdutosModel = require('../models/ProdutosModel');
 module.exports = {
     filmes: (req, res) => {
         const filmes = ProdutosModel.filmes();
-        return res.render('filmes', { pageName: 'Filmes', Filmes:filmes, js:'' })
+        return res.render('filmes', { pageName: 'filmes', Filmes:filmes, js:'' })
     },
     series: (req, res) =>{
-        const listaSeries = ProdutosModel.series();
-        return res.render('series', { series: listaSeries, pageName: 'series' , js:''})
+        const series = ProdutosModel.series();
+        return res.render('series', { series: series, pageName: 'series' , js:''})
        
     },
     cadastro: (req, res) => {
@@ -39,9 +39,9 @@ module.exports = {
         return res.render('cadastroProduto', { pageName: 'cadastroProduto', js:'cadastroProduto', filme });
        // res.send(ProdutosModel.findOne(req));
     },
-    // listaProduto: (req, res) => {
-    //     res.send(ProdutosModel.findByParams(req))
-    // },
+    listaProduto: (req, res) => {
+        res.send(ProdutosModel.findByParams(req))
+    },
     //deletar produto
     deletaProduto: (req, res) => {
         ProdutosModel.deleteOne(req)

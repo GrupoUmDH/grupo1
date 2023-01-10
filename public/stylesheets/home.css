@@ -342,8 +342,92 @@ div #dados-filme {
     justify-content: center;
 }
 
-.series-home span {
-    color: var(--cores-letra);
+div #dados-series {
+    display: none;
+}
+
+/*  CONFIGURANDO AO PASSAR O MOUSE */
+
+.series-show h3 {
+    color: #FFFFFF;
+    padding: auto;
+    margin: 3px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.series-show  {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.series-show .descri {
+    width: 15rem;
+    font-size: .8rem;
+    text-align: left;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+}
+
+.series-show > a {
+    position: relative;
+}
+
+.series-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1;
+    width: 15rem;
+    height: 20rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.series-show .descri {
+    display: none;
+    height: 100%;
+}
+
+.series-show:hover div #dados-seriess {
+    display: none;
+}
+.series-show:hover .descri {
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    flex-direction: column;
+    display: flex;
+    height: 40%;
+    justify-content: flex-end;
+    top: 10rem;  
+}
+
+.series-show:hover .descri div #valor {
+    padding: 3px;
+    margin: 6px;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.series-show:hover img {
+    opacity: 0.3;
+}
+
+.series-show .descri #descri-series {
+    font-weight: bold;
+    padding: 4px;
+    margin: 4px;
+}
+
+#nome-series {
+    color: red;
+    font-size: 1.3rem;
 }
 
 /* RESPONSIVE */
