@@ -23,7 +23,7 @@ id = (JSON.parse(localStorage.carrinho).length) + 1 ;
 nomeFilme.innerText = data[0].nome;
 descrFilme.innerText = data[0].descri_Filme;
 classificacao.src = data[0].categoria;
-precoComprar.innerText = data[0].compra_Filme;
+precoComprar.innerText += data[0].compra_Filme;
 coverFilme.src = data[0].background;
 bkFilme.src = data[0].img;
 
