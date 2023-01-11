@@ -22,6 +22,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 
+app.use((error, req, res, next) => {
+    console.log('This is the rejected field ->', error.field);
+  });
 
 //INDEX - (HOME, SUPORTE, SOBRE NÓS)
 app.use('/', homeRouter);
@@ -38,7 +41,7 @@ app.use('/carrinho', carrinhoRouter);
 app.use('/filmes', produtosRouter);
 app.use('/produtos', produtosRouter);
 
-//METOD-OVERRIDE
+//METHOD-OVERRIDE
 app.use(methodOverride('_method'));
 
 // catch 404 and forward to error handler

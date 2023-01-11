@@ -37,7 +37,7 @@
         "tipo": "serie",
         "categoria": "ação",
         "nome": "BELEZA AVASSALADORA",
-        "valor": "90",
+        "valor": "49,90",
         "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "belezaAvassaladora",
@@ -48,10 +48,20 @@
         "tipo": "serie",
         "categoria": "suspense",
         "nome": "ESCOLA BEM OU MAL",
-        "valor": "90",
+        "valor": "49,90",
         "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "escolaBemOuMal",
         "background": "escolaBemOuMal_01"
+    },
+    {
+        "id": 18,
+        "tipo": "series",
+        "categoria": "suspense",
+        "nome": "series filme",
+        "valor": "9,90",
+        "descricao": "eryyhzrfht",
+        "imagem": "transferir.png_01",
+        "classificacao": "14"
     }
 ]

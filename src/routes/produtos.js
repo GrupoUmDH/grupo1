@@ -19,7 +19,8 @@ router.get('/cadastroProduto', function(req, res, next) {
 //implementar multer
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, "public/img/filmes")
+        const folder =path.join('public/img/filmes')
+        cb(null, folder)
     } ,
     filename: (req, file, cb) => {
         cb(null, file.originalname)

@@ -40,10 +40,8 @@ module.exports = {
       valor: req.body.valor,
       descricao: req.body.descricao,
       imagem: req.file.filename,
-      background: req.file.filename + "_01",
+      imagem: req.file.filename + "_01",
       classificacao: req.body.classificacao,
-      
-      
     };
     // console.log(req)
     if (novoProduto.tipo == "filmes") {
@@ -74,12 +72,25 @@ module.exports = {
 
   //deletar produto
   deleteOne: (req) => {
-    let novoproduto = produtos.filter(produto => produto.id != req.body.id);
-    if (!novoproduto.length) return;
-    fs.writeFileSync(
-      path.join(__dirname, "../database/produtos.json"),
-      JSON.stringify(novoproduto, null, 4)
-    );
+    let newProduct = produtos.filter(produto => produto.id != req.body.id);
+
+    if (newProduct.tipo == "filmes") {
+      produtos.push(newProduct);
+      fs.writeFileSync(
+        path.join(__dirname, "../database/filmes.json"),
+        JSON.stringify(produtos, null, 4));
+    } if (newProduct.tipo == "series")  {
+      series.push(newProduct);
+      fs.writeFileSync(
+        path.join(__dirname, "../database/series.json"),
+        JSON.stringify(series, null, 4));
+    }
+
+    // if (!novoproduto.length) return;
+    // fs.writeFileSync(
+    //   path.join(__dirname, "../database/produtos.json"),
+    //   JSON.stringify(novoproduto, null, 4)
+    // );
   },
   // atualiza produto
   updateOne: (req) => {
