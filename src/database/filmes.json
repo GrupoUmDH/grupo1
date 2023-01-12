@@ -174,25 +174,5 @@
         "valor": "9,90",
         "imagem": "entreFacasESegredos.jpg",
         "background": "entreFacasESegredos_01"
-    },
-    {
-        "id": 17,
-        "tipo": "filmes",
-        "categoria": "suspense",
-        "nome": "teste filme",
-        "valor": "9,90",
-        "descricao": "eryyhzrfht",
-        "imagem": "teste.png_01",
-        "classificacao": "14"
-    },
-    {
-        "id": 18,
-        "tipo": "filmes",
-        "categoria": "ação",
-        "nome": "teste teste",
-        "valor": "9,90",
-        "descricao": "fgbfsbx",
-        "imagem": "teste.png_01",
-        "classificacao": "14"
     }
 ]

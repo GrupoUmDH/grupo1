@@ -37,13 +37,19 @@
                 <p>Imagem</p>
                 <input type="file" name="imagem" placeholder="imagem" />
                 <!-- <p>background</p>
-                <input type="file" name="imagem" placeholder="imagem" /> -->
+                <input type="file" name="imagem_bk" placeholder="background" /> -->
                 <button>Adicionar</button>
             </form>
 
             <!-- GET - READ -->
             <form method="get" action="/produtos/search">
                 <h2>READ</h2>
+                <div class="check">
+                    <input type="radio" name="check" value="filmes" class="check" />
+                    <label for="Filmes">Filmes</label>
+                    <input type="radio" name="check" value="series" class="check" />
+                    <label for="Séries">Séries</label>
+                </div>
                 <input type="text" name="id" placeholder="id" />
                 <button id="bt-pesquisa">Pesquisar</button>
             </form>
@@ -83,6 +89,7 @@
                 <input type="text" name="id" placeholder="id" />
                 <button>Apagar</button>
             </form>
+
         </main>
         <div class="pop-up">
             <section class='item'>
@@ -90,9 +97,7 @@
                 <img class='imagem-produto' src='' />
                 <div class='descricao-produto'>
                     <div>
-                        <h2 class='filme-nome'>
-                           
-                        </h2>
+                        <h2 class='filme-nome'> Criado com sucesso!</h2>
                         <br>
                         <p class='filme-descricao'>
                             

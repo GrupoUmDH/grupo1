@@ -9,32 +9,35 @@
             <hr>
             <section class="series-home">
                 <% for(const listaSeries of series) { %>
-                    <div class="series-show">
+                    <div class="filme-show">
                         <a href="<%= '/produtos' %>\">
-                            <img src="/img/series/<%=listaSeries.background%>.jpg" alt="" id="back-series">
+                            <img src="/img/series/<%= listaSeries.background %>.jpg" alt="" id="back-filme">
                             <div class="descri">
                                 <div>
-                                    <h3 id="nome-series">
-                                        <%=listaSeries.nome%>
+                                    <h3 id="nome-filme">
+                                        <%= listaSeries.nome %>
                                     </h3>
-                                    <p id="descri-series">
+                                    <p id="descri-filme">
                                         <%= listaSeries.descricao %>
                                     </p>
                                 </div>
-                                <div id="dados-series">
-                                    <h1 id="id-series">
+                                <div id="dados-filmes">
+                                    <h1 id="id-filmes">
                                         <%= listaSeries.id %>
                                     </h1>
-                                    <h1 id="categoria-series">
+                                    <h1 id="categoria-filmes">
                                         <%= listaSeries.id %>
                                     </h1>
-                                    <h1 id="tipo-series">
+                                    <h1 id="tipo-filmes">
                                         <%= listaSeries.tipo %>
                                     </h1>
-                                    <h1 id="valor-series">
-                                        <%= listaSeries.valor%>
+                                    <h1 id="aluga-filmes">
+                                        <%= listaSeries.valor_aluguel %>
                                     </h1>
-                                    <img src="/img/series/<%= listaSeries.imagem %>.jpg" id="img-series">
+                                    <h1 id="compra-filmes">
+                                        <%= listaSeries.valor_compra %>
+                                    </h1>
+                                    <img src="/img/series/<%= listaSeries.imagem %>.jpg" id="img-filmes">
                                     <%= listaSeries.imagem %>
                                 </div>
                             </div>

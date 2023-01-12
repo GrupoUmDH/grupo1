@@ -6,13 +6,9 @@ const path = require('path');
 const ProdutosController = require('../controllers/ProdutosController');
 
 router.get('/', ProdutosController.produto);
-
 router.get('/filmes', ProdutosController.filmes);
-
 router.get('/series', ProdutosController.series);
-
 router.get('/categorias', ProdutosController.listar);
-
 router.get('/cadastroProduto', function(req, res, next) {
     res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'cadastroProduto' });
 });
@@ -28,7 +24,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({storage: storage, limits: {fileSize: 10000000}});
 
-
+router.get('/produtos/:id/:nome?', ProdutosController.listaProduto)
 //criar produto
 router.post('/create',upload.single('imagem'), ProdutosController.createProduto);
 

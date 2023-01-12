@@ -12,11 +12,12 @@
 *{
     margin: 0;
     padding: 0; 
-    box-sizing: border-box;
 }
  
 body{
-    width: 100%;
+    padding: 0;
+    margin: -5;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,80 +26,74 @@ body{
 }
  
 body * {
+    font-family: 'Inter',Arial, Helvetica, sans-serif;
+   }
+
+h1{ 
     font-family: 'Jost', Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    color: #B30006;
-   }
-
-main{
-    width: 100%;
-   }
-
-/* CONFIGURAÇÃO CONTAINER*/
- 
-.container {
-    justify-content: space-around;
-    align-items: stretch;
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    margin-bottom: 7rem;
-}
-
-.container>h1 {
-    text-align: left;
-    justify-content: center;
-}
-
-h1 {
-    color: white;
-    margin: 1rem;
+    color: var(--cores-letra) ;
+    margin:  2rem;
     font-size: 2rem;
 }
 
-h1 .container {
-    align-self: flex-start;
-    text-align: center;
-}
+/* CONFIGURAÇÃO SERIES*/
 
-hr {
-    background-color: var(--cores-chaves);
-    color: var(--cores-chaves);
-    border: var(--cores-chaves);
+.container {
     width: 100%;
-    height: 2px;
-    display: flex;
-    flex-direction: row;
 }
 
-.container .series-home {
+
+.container > .series-home{
     align-items: stretch;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
+    justify-content:space-around;
+    width: 100%;  
     margin-top: 2rem;
-    margin-bottom: 5rem;
 }
 
-
+ span{
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around;
+    margin-top: 0.5rem;
+    text-align: center;
+    color: var(--cores-letra);
+}
 .series-home p {
+    margin-top: 0.5rem;
+    text-align: left;
+    color: var(--cores-letra);
+}
+
+.filmes-home img {
+    width: 100%;
+}
+
+.filmes-home p {
     text-align: center;
     color: var(--cores-letra);
 }
 
-.series-home img {
+.filmes-home span {
+    text-align: end;
+    color: var(--cores-letra);
+}
+
+.filmes-home img {
     width: 15rem;
 }
 
-div #dados-series {
+div #dados-filme {
     display: none;
 }
+
 /*  CONFIGURANDO AO PASSAR O MOUSE */
 
-.series-show h3 {
+.filme-show h3 {
     color: #FFFFFF;
     padding: auto;
     margin: 3px;
@@ -106,22 +101,28 @@ div #dados-series {
     background-color: transparent;
 }
 
-.series-show .descri {
+.filme-show #filme-pay {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.filme-show .descri {
     width: 15rem;
     font-size: .8rem;
     text-align: left;
     background-color: transparent;
     display: flex;
     justify-content: space-around;
-    display: none;
-    height: 100%;
 }
 
-.series-show>a {
+.filme-show>a {
     position: relative;
 }
 
-.series-show {
+.filme-show {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -133,11 +134,16 @@ div #dados-series {
     margin-bottom: 1rem;
 }
 
-.series-show:hover div #dados-series {
+.filme-show .descri {
+    display: none;
+    height: 100%;
+}
+
+.filme-show:hover div #dados-filmes {
     display: none;
 }
 
-.series-show:hover .descri {
+.filme-show:hover .descri {
     display: block;
     position: absolute;
     background-color: transparent;
@@ -149,29 +155,40 @@ div #dados-series {
 
 }
 
-.series-show:hover .descri div #valor {
+.filme-show:hover .descri div #valor {
     padding: 3px;
     margin: 6px;
     font-weight: bold;
     font-size: 14pt;
 }
 
-.series-show:hover img {
+.filme-show:hover img {
     opacity: 0.3;
 }
 
+.filme-show .descri #filme-pay div p {
+    width: 5rem;
+    height: 1.5rem;
+    text-align: center;
+    align-items: center;
+    padding: 4px;
+    margin: 4px;
+    border-radius: 10px;
+    background-color: rgb(192, 21, 21);
+    font-weight: bold;
+    font-size: 12pt;
+}
 
-.series-show .descri #descri-series {
+.filme-show .descri #descri-filme {
     font-weight: bold;
     padding: 4px;
     margin: 4px;
 }
 
-#nome-series {
+#nome-filme {
     color: red;
     font-size: 1.3rem;
 }
- 
 
 /*CONFIGURAÇÃO FOOTER*/
 
@@ -193,5 +210,15 @@ footer {
     color: var(--cores-chaves);
     align-items: center;
     text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    font-size: 1.5rem;
+    height: 5rem;
 }
 
