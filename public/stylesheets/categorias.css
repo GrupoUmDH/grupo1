@@ -139,8 +139,11 @@ select {
     text-align: center;
     display: flex;
     flex-direction: row;
-
+    justify-content: space-around;
+    margin: 2rem;
 }
+
+
 .filmes p {
     display: block;
     color: var(--cores-letra);
@@ -163,8 +166,8 @@ div #dados-filme {
 
 .filme-show .descri {
     width: 15rem;
+    margin-bottom: 3rem;
     font-size: .8rem;
-    text-align: left;
     background-color: transparent;
     display: flex;
     justify-content: space-around;
@@ -199,7 +202,8 @@ div #dados-filme {
     background-color: transparent;
     flex-direction: column;
     display: flex;
-    height: 40%;
+    width: 15rem;
+    height: 20rem;
     justify-content: flex-end;
 }
 .filme-show:hover img {
@@ -210,6 +214,7 @@ div #dados-filme {
     font-weight: bold;
     padding: 4px;
     margin: 4px;
+    text-align: center;
 }
 
 #nome-filme {

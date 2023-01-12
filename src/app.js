@@ -3,7 +3,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 const methodOverride = require('method-override');
 
 var homeRouter = require('./routes/index');
@@ -23,6 +22,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 
+app.use((error, req, res, next) => {
+    console.log('This is the rejected field ->', error.field);
+  });
 
 //INDEX - (HOME, SUPORTE, SOBRE NÓS)
 app.use('/', homeRouter);
@@ -38,9 +40,8 @@ app.use('/carrinho', carrinhoRouter);
 //PRODUTOS - (FILMES, SÉRIES -ADD/EXCLUI PRODUTOS)
 app.use('/filmes', produtosRouter);
 app.use('/produtos', produtosRouter);
-//app.use('/cadastroProduto', produtosRouter);
 
-//METOD-OVERRIDE
+//METHOD-OVERRIDE
 app.use(methodOverride('_method'));
 
 // catch 404 and forward to error handler
