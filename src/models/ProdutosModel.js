@@ -72,20 +72,16 @@ module.exports = {
 
   //deletar produto
   deleteOne: (req) => {
-    let newProduct = produtos.filter(produto => 
+    let newProduct = produtos.filter(produto => {
       produto.id != req.body.id
-    );
+  });
 
     if (newProduct.tipo == "filmes") {
       produtos.push(newProduct);
-      fs.writeFileSync(
-        path.join(__dirname, "../database/filmes.json"),
-        JSON.stringify(newProduct, null, 4));
+      fs.writeFileSync(path.join(__dirname, "../database/filmes.json"), JSON.stringify(newProduct, null, 4));
     } if (newProduct.tipo == "series")  {
       produtos.push(newProduct);
-      fs.writeFileSync(
-        path.join(__dirname, "../database/series.json"),
-        JSON.stringify(newProduct, null, 4));
+      fs.writeFileSync(path.join(__dirname, "../database/series.json"), JSON.stringify(newProduct, null, 4));
     }
 
     // if (!novoproduto.length) return;

@@ -32,7 +32,7 @@ router.post('/create',upload.single('imagem'), ProdutosController.createProduto)
 router.get('/search', ProdutosController.buscaProduto);
  
 // deletar produto
-router.delete('/remove', ProdutosController.deletaProduto);
+router.post('/remove', ProdutosController.deletaProduto);
 
 // atualiza produto
 router.put('/edit', ProdutosController.atualizaProduto);
