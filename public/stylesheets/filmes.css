@@ -164,6 +164,7 @@ div #dados-filmes {
 }
 
 #nome-filme {
+    text-transform:uppercase;
     color: red;
     font-size: 1.3rem;
 }

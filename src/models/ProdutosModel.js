@@ -37,11 +37,12 @@ module.exports = {
       tipo: req.body.check,
       categoria: req.body.categoria,
       nome: req.body.nome,
+      classificacao: req.body.classificacao,
       valor: req.body.valor,
       descricao: req.body.descricao,
-      imagem: req.file.filename,
-      // background: req.file.array(fieldname[ filename + '_01' , 2 ]),
-      classificacao: req.body.classificacao,
+      // imagem: req.file.originalname ,
+      imagem: req.file.originalname + '_01',
+      
     };
     // console.log(req)
     if (novoProduto.tipo == "filmes") {
