@@ -3,6 +3,9 @@ const btnAlugar = document.getElementById("btn-alugar");
 
 const div_popUp = document.querySelector('div.pop-Up');
 
+//PAGINA FILMES E SERIES
+const refer = document.querySelectorAll("section div.filme-show a");
+
 // CONTROLE DE POP-UP
 div_popUp.style.display = "none";
 
@@ -45,7 +48,7 @@ const carrinhoLocal = () => {
 
     div_popUp.style.display = "flex"; //chamo o pop-up
 
-    console.log(id);
+    //console.log(id);
 
     if (localStorage.getItem("carrinho") == null) {
         carrinho.push(filme);
@@ -58,9 +61,15 @@ const carrinhoLocal = () => {
         carrinho = carrinho.filter((element) => 
             element.nome != nomeFilme.innerText
         );
-        console.log(carrinho);
+        //console.log(carrinho);
 
         carrinho.push(filme);
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
     }
 }
+
+refer.forEach(element => {
+    element.addEventListener("click", function () {
+        console.log("Testanto");
+    });
+})

@@ -3,11 +3,15 @@ const ProdutosModel = require('../models/ProdutosModel');
 module.exports = {
     filmes: (req, res) => {
         const filmes = ProdutosModel.filmes();
-        return res.render('filmes', { pageName: 'filmes', Filmes:filmes, js:'' })
+        return res.render('filmes', { pageName: 'filmes', Filmes:filmes, js:'adicionarAoCarrinho' })
     },
     series: (req, res) =>{
         const series = ProdutosModel.series();
-        return res.render('series', { series: series, pageName: 'series' , js:''})
+        return res.render("series", {
+            series: series,
+            pageName: "series",
+            js: "adicionarAoCarrinho",
+        });
        
     },
     cadastro: (req, res) => {

@@ -1,3 +1,6 @@
+<head>
+    <script src="/javascripts/filmes.js" defer></script>
+</head>
 <%- include('partials/header') %>
     <main>
 
@@ -10,7 +13,7 @@
             <section class="series-home">
                 <% for(const listaSeries of series) { %>
                     <div class="filme-show">
-                        <a href="<%= '/produtos' %>\">
+                        <a href="<%= '/produtos' %>">
                             <img src="/img/series/<%= listaSeries.background %>.jpg" alt="" id="back-filme">
                             <div class="descri">
                                 <div>
@@ -31,10 +34,7 @@
                                     <h1 id="tipo-filmes">
                                         <%= listaSeries.tipo %>
                                     </h1>
-                                    <h1 id="aluga-filmes">
-                                        <%= listaSeries.valor_aluguel %>
-                                    </h1>
-                                    <h1 id="compra-filmes">
+                                    <h1 id="valor-filmes">
                                         <%= listaSeries.valor_compra %>
                                     </h1>
                                     <img src="/img/series/<%= listaSeries.imagem %>.jpg" id="img-filmes">

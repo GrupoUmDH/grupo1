@@ -149,8 +149,8 @@ select {
     color: var(--cores-letra);
 }
 
-div #dados-filme {
-    display: none;
+.filmes img {
+    width: 15rem;
 }
 
 /*  CONFIGURANDO AO PASSAR O MOUSE */
@@ -163,16 +163,26 @@ div #dados-filme {
     background-color: transparent;
 }
 
+.filme-show #filme-pay {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
 
 .filme-show .descri {
     width: 15rem;
-    margin-bottom: 3rem;
     font-size: .8rem;
+    text-align: left;
     background-color: transparent;
     display: flex;
     justify-content: space-around;
 }
 
+.filme-show>a {
+    position: relative;
+}
 
 .filme-show {
     display: flex;
@@ -184,7 +194,6 @@ div #dados-filme {
     border-radius: 1.5rem;
     overflow: hidden;
     margin-bottom: 1rem;
-    margin: 1rem;
 }
 
 .filme-show .descri {
@@ -202,26 +211,46 @@ div #dados-filme {
     background-color: transparent;
     flex-direction: column;
     display: flex;
-    width: 15rem;
-    height: 20rem;
+    height: 40%;
     justify-content: flex-end;
+    top: 10rem;
+
 }
+
+.filme-show:hover .descri div #valor {
+    padding: 3px;
+    margin: 6px;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
 .filme-show:hover img {
     opacity: 0.3;
+}
+
+.filme-show .descri #filme-pay div p {
+    width: 5rem;
+    height: 1.5rem;
+    text-align: center;
+    align-items: center;
+    padding: 4px;
+    margin: 4px;
+    border-radius: 10px;
+    background-color: rgb(192, 21, 21);
+    font-weight: bold;
+    font-size: 12pt;
 }
 
 .filme-show .descri #descri-filme {
     font-weight: bold;
     padding: 4px;
     margin: 4px;
-    text-align: center;
 }
 
 #nome-filme {
     color: red;
     font-size: 1.3rem;
 }
-
 
 /* RESPONSIVO */
 @media (max-width: 820px) {

@@ -8,12 +8,6 @@
     --cores-letra:  #FFFFFF;
     --cores-objetos: #580003;
 }
- 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body{
     width: 100%;
@@ -22,12 +16,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color:  var(--background-color);
-}
- 
-body * {
-    font-family: 'Jost', Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    color: #B30006;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 /* CONFIGURAÇÃO CONTAINER*/
@@ -167,7 +156,6 @@ div #dados-filmes {
     color: red;
     font-size: 1.3rem;
 }
- 
 
 /*CONFIGURAÇÃO FOOTER*/
 
