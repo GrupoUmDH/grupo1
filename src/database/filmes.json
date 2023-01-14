@@ -4,12 +4,8 @@
         "tipo": "filme",
         "categoria": "terror",
         "nome": "A MULHER NA JANELA",
-<<<<<<< HEAD
-        "valor_compra": "9,90",
-=======
         "valor": "9,90",
         "classificacao": "14 anos",
->>>>>>> origin
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "aMulherNaJanela",
         "background": "aMulherNaJanela_01"
@@ -19,12 +15,8 @@
         "tipo": "filme",
         "categoria": "aventura",
         "nome": "SPIDER-MAN - NO WAY HOME",
-<<<<<<< HEAD
-        "valor_compra": "9,90",
-=======
         "valor": "9,90",
         "classificacao": "14 anos",
->>>>>>> origin
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "homemAranha",
         "background": "homemAranha_01"
@@ -34,12 +26,8 @@
         "tipo": "filme",
         "categoria": "comédia",
         "nome": "ARREMESSANDO ALTO",
-<<<<<<< HEAD
-        "valor_compra": "9,90",
-=======
         "valor": "9,90",
         "classificacao": "14 anos",
->>>>>>> origin
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "arremessandoAlto",
         "background": "arremessandoAlto_01"
@@ -49,12 +37,8 @@
         "tipo": "filme",
         "categoria": "comédia",
         "nome": "AS BRANQUELAS",
-<<<<<<< HEAD
-        "valor_compra": "9,90",
-=======
         "valor": "9,90",
         "classificacao": "14 anos",
->>>>>>> origin
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "asBranquelas",
         "background": "asBranquelas_01"
@@ -64,12 +48,8 @@
         "tipo": "filme",
         "categoria": "guerra",
         "nome": "CORAÇÕES DE FERRO",
-<<<<<<< HEAD
-        "valor_compra": "9,90",
-=======
         "valor": "9,90",
         "classificacao": "14 anos",
->>>>>>> origin
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "coracoesDeFerro",
         "background": "coracoesDeFerro_01"
@@ -79,12 +59,8 @@
         "tipo": "filme",
         "categoria": "aventura",
         "nome": "GUERRA MUNDIAL Z",
-<<<<<<< HEAD
-        "valor_compra": "9,90",
-=======
         "valor": "9,90",
         "classificacao": "14 anos",
->>>>>>> origin
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "guerraMundialZ",
         "background": "guerraMundialZ_01"
@@ -94,12 +70,8 @@
         "tipo": "filme",
         "categoria": "ação",
         "nome": "O CULPADO",
-<<<<<<< HEAD
-        "valor_compra": "9,90",
-=======
         "valor": "9,90",
         "classificacao": "14 anos",
->>>>>>> origin
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "oCulpado",
         "background": "oCulpado_01"
@@ -109,12 +81,8 @@
         "tipo": "filme",
         "categoria": "ação",
         "nome": "O DIABO DE CADA DIA",
-<<<<<<< HEAD
-        "valor_compra": "9,90",
-=======
         "valor": "9,90",
         "classificacao": "14 anos",
->>>>>>> origin
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "oDiaboDeCadaDia",
         "background": "oDiaboDeCadaDia_01"
@@ -124,12 +92,8 @@
         "tipo": "filme",
         "categoria": "aventura",
         "nome": "ONDE ESTA SEGUNDA",
-<<<<<<< HEAD
-        "valor_compra": "9,90",
-=======
         "valor": "9,90",
         "classificacao": "14 anos",
->>>>>>> origin
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "ondeEstaSegunda",
         "background": "ondeEstaSegunda_01"
@@ -139,12 +103,8 @@
         "tipo": "filme",
         "categoria": "terror",
         "nome": "O PROTETOR",
-<<<<<<< HEAD
-        "valor_compra": "9,90",
-=======
         "valor": "9,90",
         "classificacao": "14 anos",
->>>>>>> origin
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "oProtetor",
         "background": "oProtetor_01"
@@ -154,12 +114,8 @@
         "tipo": "filme",
         "categoria": "ação",
         "nome": "RESIDENT EVIL",
-<<<<<<< HEAD
-        "valor_compra": "9,90",
-=======
         "valor": "9,90",
         "classificacao": "14 anos",
->>>>>>> origin
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "ResidentEvil",
         "background": "ResidentEvil_01"
@@ -169,12 +125,8 @@
         "tipo": "filme",
         "categoria": "terror",
         "nome": "SEGREDOS NAS PAREDES",
-<<<<<<< HEAD
-        "valor_compra": "9,90",
-=======
         "valor": "9,90",
         "classificacao": "14 anos",
->>>>>>> origin
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "segredosNasParedes",
         "background": "segredosNasParedes_01"
@@ -184,12 +136,8 @@
         "tipo": "filme",
         "categoria": "drama",
         "nome": "UMA GAROTA DE MUITA SORTE",
-<<<<<<< HEAD
-        "valor_compra": "9,90",
-=======
         "valor": "9,90",
         "classificacao": "14 anos",
->>>>>>> origin
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "umaGarotaDeMuitaSorte",
         "background": "umaGarotaDeMuitaSorte_01"
@@ -199,12 +147,8 @@
         "tipo": "filme",
         "categoria": "aventura",
         "nome": "UM LUGAR SILENCIOSO",
-<<<<<<< HEAD
-        "valor_compra": "9,90",
-=======
         "valor": "9,90",
         "classificacao": "14 anos",
->>>>>>> origin
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "umLugarSilencioso",
         "background": "umLugarSilencioso_01"
@@ -214,12 +158,8 @@
         "tipo": "filme",
         "categoria": "romance",
         "nome": "ESPOSA DE ALUGUEL",
-<<<<<<< HEAD
-        "valor_compra": "9,90",
-=======
         "valor": "9,90",
         "classificacao": "14 anos",
->>>>>>> origin
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "esposaDeAluguel",
         "background": "esposaDeAluguel_01"
