@@ -79,17 +79,12 @@ hr {
     margin-bottom: 5rem;
 }
 
-.filmes-home p {
-    text-align: center;
+.filme-show img {
+    width: 100%;
+}
+
+.filme-show p {
     color: var(--cores-letra);
-}
-
-.filmes-home img {
-    width: 15rem;
-}
-
-div #dados-filmes {
-    display: none;
 }
 
 /*  CONFIGURANDO AO PASSAR O MOUSE */

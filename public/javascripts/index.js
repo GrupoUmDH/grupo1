@@ -6,7 +6,6 @@ const id_Filme = document.querySelectorAll('h1 #id-filmes');
 const tipo_Filme = document.querySelectorAll('h1 #tipo-filmes');
 const categoria_Filme = document.querySelectorAll('div #categoria-filmes');
 const nome_Filme = document.querySelectorAll('div #nome-filme');
-const aluga_Filme = document.querySelectorAll('#aluga-filmes');
 const compra_Filme = document.querySelectorAll('#compra-filmes');
 const descri_Filme = document.querySelectorAll('#descri-filme');
 const img_Filme = document.querySelectorAll('#img-filmes');
@@ -25,8 +24,7 @@ itemFilme.forEach( (item, index) => {
             tipo: tipo_Filme[index],
             categoria: categoria_Filme[index].innerText,
             nome: nome_Filme[index].innerText,
-            aluga: aluga_Filme[index].innerText,
-            compra_Filme: compra_Filme[index].innerText,
+            valor: compra_Filme[index].innerText,
             descri_Filme: descri_Filme[index].innerText,
             img: img_Filme[index].src,
             background: back_Filme[index].src

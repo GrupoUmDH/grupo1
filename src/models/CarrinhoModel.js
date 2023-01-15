@@ -1,4 +1,3 @@
-
 module.exports = {
     index: () => {
         return [
@@ -9,8 +8,7 @@ module.exports = {
         ];
     },
     itens: (itens) => {
-       
-        if(!itens){
+        if (!itens) {
             return [{}];
         } else {
             return JSON.parse(itens);
@@ -19,11 +17,12 @@ module.exports = {
     valores: (item) => {
         let content = JSON.parse(item);
         let soma = 0;
-        
-        content.forEach(element => {
-            soma += parseFloat(element.precoComprar.replace(',','.'))
-        })
+
+        content.forEach((element) => {
+            soma += parseFloat(element.valor.replace(",", "."));
+            //console.log(parseFloat(element.valor.replace(",", ".")));
+        });
         //content = content.filter(a => a.precoComprar);
-        return 'R$' + soma.toFixed(2).replace(".", ",");
-    }
-}
+        return soma.toFixed(2).replace(".", ",");
+    },
+};
