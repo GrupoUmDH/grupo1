@@ -61,8 +61,16 @@ header {
     display: flex;
     width: 5rem;
     padding-left: 10px;
+    position: fixed;
+    z-index: 2;
 }
+.paginas{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
 .paginas ul {
     display: flex;
     flex-direction: row;
@@ -85,12 +93,17 @@ header {
 }
 
 .content {
-    align-items: center;
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
     padding-right: 10px;
     justify-content: space-around;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    margin-top: 1rem;
+    border-radius: 9%;
+    margin: 2rem 5rem 1rem 15rem;
 }
 
 .content a {
@@ -199,12 +212,23 @@ main {
     display: none;
 }
 
+aside {
+    width: 15rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+   
+    max-width: 25%;
+    height: 100%;
+    background-color: var(--background-2); 
+
+}
 #menu{ 
     width: 15rem;
     position: fixed;
     top: 0;
     left: 0;
-    margin:2rem 0 ;
     padding: 0;
     margin-top: 7.2rem;
     max-width: 25%;
@@ -238,12 +262,16 @@ main {
 }
 
 .container {
-    background-color: var(--background-2);
-    display: flex;
-    flex-direction: column;
-    width: 70%;
     border-radius: 9%;
     text-align: center;
+    align-items: stretch;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width:70%;
+    background-color: var(--background-2);
+    border-radius: 9%;
+    margin: 2rem 5rem 1rem 15rem;
 }
 
 .container p {
@@ -260,7 +288,7 @@ main {
     align-items: stretch;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 2rem 0;
+    
 }
 
 .comprados {
@@ -308,10 +336,13 @@ main {
 .titulos {
     flex-direction: row;
     color: var(--cores-chaves);
-    margin: 1rem;
     align-items: center;
     text-transform: uppercase;
     margin-bottom: .5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .dados-usuario{
@@ -376,13 +407,17 @@ main {
 
 .credit-card{
     margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: stretch;
-    width: 75%;
     background-color: var(--background-2);
     border-radius: 9%;
+    align-items: stretch;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width:70%;
+    margin-top: 1rem;
+    background-color: var(--background-2);
+    border-radius: 9%;
+    margin: 2rem 5rem 1rem 15rem;
 }
 #cadastrar{
     text-transform: uppercase;
@@ -404,6 +439,9 @@ main {
     border-radius: 10%;
     background: linear-gradient(135deg, rgba(217, 127, 127, 0.89) 0%, transparent 100%);
     backdrop-filter: blur(10px);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
    
 }
 
@@ -527,14 +565,17 @@ main {
 }
 /*CANCELAR CONTA*/
 .cancelar{
-    background-color: var(--background-2);
     border-radius: 10%;
-    width: 75%;
-    display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 2rem;
+    align-items: stretch;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width:70%;
+    background-color: var(--background-2);
+    border-radius: 9%;
+    margin: 2rem 5rem 1rem 15rem;
 }
 
 .btn {
@@ -548,8 +589,10 @@ main {
     text-align: center;
 }
 .cancel{
-    align-items: center
-    ;
+    align-items: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 .modal {
     width: 100%;

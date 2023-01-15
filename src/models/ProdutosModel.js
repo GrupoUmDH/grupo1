@@ -32,7 +32,7 @@ module.exports = {
 
   //criar produto
   createOne: (req) => {
-    let novoProduto = {
+      let novoProduto = {
       id: produtos[produtos.length - 1].id + 1,
       tipo: req.body.check,
       categoria: req.body.categoria,
@@ -41,9 +41,9 @@ module.exports = {
       valor: req.body.valor,
       descricao: req.body.descricao,
       // imagem: req.file.originalname ,
-      imagem: req.file.originalname + '_01',
-      
+      background: req.file.filename,
     };
+
     // console.log(req)
     if (novoProduto.tipo == "filmes") {
       produtos.push(novoProduto);
