@@ -31,14 +31,13 @@
                     <option value="suspense">Suspense</option>
                     <option value="terror">Terror</option>
                 </select> 
-                <!-- <input type="text" name="categoria" placeholder="categoria" /> -->
                 <input type="number" name="classificacao" placeholder="classificação" />
                 <input type="text" name="valor" placeholder="valor" />
                 <p>Imagem</p>
                 <input type="file" name="imagem" placeholder="imagem" />
                 <!-- <p>background</p>
                 <input type="file" name="imagem_bk" placeholder="background" /> -->
-                <button>Adicionar</button>
+                <button type="submit">Adicionar</button>
             </form>
 
             <!-- GET - READ -->
@@ -70,10 +69,10 @@
                     <input type="radio" name="check" class="check" />
                     <label for="Séries">Séries</label>
                 </div>
-                <p>Imagem</p>
+                <!-- <p>Imagem</p>
                 <input type="file" name="imagem" placeholder="imagem" />
                 <p>background</p>
-                <input type="file" name="background" placeholder="imagem" />
+                <input type="file" name="background" placeholder="imagem" /> -->
                 <button>Editar</button>
             </form>
 
@@ -89,22 +88,15 @@
                 <input type="text" name="id" placeholder="id" />
                 <button>Apagar</button>
             </form>
-
         </main>
+
         <div class="pop-up">
-            <section class='item'>
-                <input type='hidden' value='' id='id' name='id'>
-                <img class='imagem-produto' src='' />
-                <div class='descricao-produto'>
-                    <div>
-                        <h2 class='filme-nome'> Criado com sucesso!</h2>
-                        <br>
-                        <p class='filme-descricao'>
-                            
-                        </p>
-                    </div>
+            <section class='item-popUp'>
+                <div class='descricao-popUp'>
+                    <h1 id="titulo-popUp">TESTE</h1>
                 </div>
             </section>
         </div>
+
     </body>
     <%- include('partials/footer')%>

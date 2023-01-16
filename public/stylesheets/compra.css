@@ -15,12 +15,6 @@ html{
     justify-content: center;   
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{
     width: 100%;
     min-height: 100vh ;
@@ -29,12 +23,8 @@ body{
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
- 
-body * {
-    font-family: 'Inter',Arial, Helvetica, sans-serif;
-    font-size: 100%;
-   }
 
 main{
     max-width: 1500px;

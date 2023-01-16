@@ -1,33 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
- :root{
+:root{
     --background-color:#0C0C0C;
     --background-2:#131313;
     --cores-chaves:#B30006;
     --cores-letra:  #FFFFFF;
     --cores-objetos: #580003;
 }
-
-*{
-    margin: 0;
-    padding: 0; 
-}
  
 body{
     padding: 0;
-    margin: -5;
+    margin: 0;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
- 
-body * {
-    font-family: 'Inter',Arial, Helvetica, sans-serif;
-   }
+
+main {
+    width: 100%;
+}
 
 h1{ 
     font-family: 'Jost', Arial, Helvetica, sans-serif;
@@ -39,52 +35,28 @@ h1{
 /* CONFIGURAÇÃO SERIES*/
 
 .container {
+     justify-content: space-around;
+    align-items: stretch;
     width: 100%;
 }
-
 
 .container > .series-home{
     align-items: stretch;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content:space-around;
-    width: 100%;  
+    justify-content: space-around;
+    width: 100%;
     margin-top: 2rem;
+    margin-bottom: 5rem;
 }
 
- span{
-    align-items: stretch;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content:space-around;
-    margin-top: 0.5rem;
-    text-align: center;
-    color: var(--cores-letra);
-}
-.series-home p {
-    margin-top: 0.5rem;
-    text-align: left;
-    color: var(--cores-letra);
-}
-
-.filmes-home img {
+.series-home img {
     width: 100%;
 }
 
-.filmes-home p {
-    text-align: center;
+.series-home p {
     color: var(--cores-letra);
-}
-
-.filmes-home span {
-    text-align: end;
-    color: var(--cores-letra);
-}
-
-.filmes-home img {
-    width: 15rem;
 }
 
 div #dados-filme {
@@ -212,13 +184,4 @@ footer {
     text-align: center;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    font-size: 1.5rem;
-    height: 5rem;
-}
 

@@ -9,12 +9,6 @@
     --cores-objetos: #580003;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     width: 100%;
     height: 100vh;
@@ -24,14 +18,8 @@ body {
     align-items: center;
     background-color: gray;
     background-color: var(--background-color);
-}
-
-body * {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
-    font-size: 100%;
-
 }
-
 
 /* CONTEUDO MAIN */
 main {

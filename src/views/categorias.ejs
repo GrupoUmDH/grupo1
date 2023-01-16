@@ -1,3 +1,7 @@
+<head>
+    <script src="/javascripts/index.js" defer></script>
+</head>
+
 <%- include('partials/header') %>
 
     <main>
@@ -41,18 +45,36 @@
 
                 <% for(const produto of produtos) { %>
                     <div class="filme-show">
-                        <img src="/img/<%= tipo %>/<%=produto.background%>.jpg">
-                        <div class="descri"> 
-                            <h3 id="nome-filme">
-                                <%= produto.nome %>
-                            </h3>
-
-                            <p id="descri-filme">
-                                <%= produto.descricao %>
-                            </p>
+                            <a href="<%= '/produtos' %>\">
+                                <img src="/img/filmes/<%= produto.background %>.jpg" alt="" id="back-filme">
+                                <div class="descri">
+                                    <div>
+                                        <h3 id="nome-filme">
+                                            <%= produto.nome %>
+                                        </h3>
+                                        <p id="descri-filme">
+                                            <%= produto.descricao %>
+                                        </p>
+                                    </div>
+                                    <div id="dados-filmes">
+                                        <h1 id="id-filmes">
+                                            <%= produto.id %>
+                                        </h1>
+                                        <h1 id="categoria-filmes">
+                                            <%= produto.id %>
+                                        </h1>
+                                        <h1 id="tipo-filmes">
+                                            <%= produto.tipo %>
+                                        </h1>
+                                        <h1 id="compra-filmes"> 
+                                            <%= produto.valor%>
+                                        </h1>
+                                        <img src="/img/filmes/<%= produto.imagem %>.jpg" id="img-filmes">
+                                        <%= produto.imagem %>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <% console.log(produto)%>
-                    </div>
                     <% }%>
             </section>
         </section>

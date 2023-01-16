@@ -10,7 +10,7 @@ const nomeFilme = document.getElementById('nome-filme');
 const descrFilme = document.querySelector('#descri-filme>p');
 const coverFilme = document.querySelector('.cover-filme')
 const classificacao = document.querySelector('.classificacao>img');
-const precoComprar = document.querySelector('.comprar>p');
+const valor = document.querySelector(".comprar>p");
 const bkFilme = document.querySelector('#bk-filme');
 let id = document.getElementById('id').value ;
 
@@ -23,7 +23,7 @@ id = (JSON.parse(localStorage.carrinho).length) + 1 ;
 nomeFilme.innerText = data[0].nome;
 descrFilme.innerText = data[0].descri_Filme;
 classificacao.src = data[0].categoria;
-precoComprar.innerText = data[0].compra_Filme;
+valor.innerText = data[0].valor;
 coverFilme.src = data[0].background;
 bkFilme.src = data[0].img;
 
@@ -32,12 +32,12 @@ const filme = {
     nome: nomeFilme.innerText,
     descricao: descrFilme.innerText,
     classificacao: classificacao.src,
-    precoComprar: precoComprar.innerText,
+    valor: valor.innerText,
     imagem: coverFilme.src,
 };
 
 btnComprar.addEventListener('click', () => {
-    console.log("COMPRANDO");
+    //console.log("COMPRANDO");
     carrinhoLocal();
 });
 
@@ -45,7 +45,7 @@ const carrinhoLocal = () => {
 
     div_popUp.style.display = "flex"; //chamo o pop-up
 
-    console.log(id);
+    //console.log(id);
 
     if (localStorage.getItem("carrinho") == null) {
         carrinho.push(filme);
@@ -58,7 +58,7 @@ const carrinhoLocal = () => {
         carrinho = carrinho.filter((element) => 
             element.nome != nomeFilme.innerText
         );
-        console.log(carrinho);
+        //console.log(carrinho);
 
         carrinho.push(filme);
         localStorage.setItem("carrinho", JSON.stringify(carrinho));

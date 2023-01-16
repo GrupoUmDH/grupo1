@@ -26,12 +26,8 @@ body{
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
- 
-body * {
-    font-family: 'Inter',Arial, Helvetica, sans-serif;
-    font-size: 100%;
-   }
 
 /*CONFIGURACAO QUEM SOMOS*/
 main {

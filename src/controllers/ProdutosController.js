@@ -3,16 +3,27 @@ const ProdutosModel = require('../models/ProdutosModel');
 module.exports = {
     filmes: (req, res) => {
         const filmes = ProdutosModel.filmes();
-        return res.render('filmes', { pageName: 'filmes', Filmes:filmes, js:'' })
+        return res.render("filmes", {
+            pageName: "filmes",
+            Filmes: filmes,
+            js: "montarCarrinho",
+        });
     },
     series: (req, res) =>{
         const series = ProdutosModel.series();
-        return res.render('series', { series: series, pageName: 'series' , js:''})
+        return res.render("series", {
+            series: series,
+            pageName: "series",
+            js: "montarCarrinho",
+        });
        
     },
     cadastro: (req, res) => {
         const cadastro = ProdutosModel.cadastroProduto();
-        return res.render('cadastro', { pageName: 'cadastroProduto', js:'' });
+        return res.render("cadastro", {
+            pageName: "cadastroProduto",
+            js: "montarCarrinho",
+        });
     },
     listar: (req, res) => {
         const tipo = req.query.tipo || 'filmes';
@@ -22,8 +33,8 @@ module.exports = {
         return res.render('categorias', { pageName: 'categorias', produtos, tipo, categoria, js:'categorias'});
     },
     produto: (req, res) => {
-        const filme = ProdutosModel.filmes();
-        return res.render('produtos', { pageName: 'produtos', Filme: filme , js: 'adicionarAoCarrinho' });
+        console.log(req.body);
+        return res.render('produtos', { pageName: 'produtos', js: 'adicionarAoCarrinho' });
     },
      //criar produto
     createProduto: (req, res) => {

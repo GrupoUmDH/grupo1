@@ -172,17 +172,26 @@
         "categoria": "suspense",
         "classificacao": "14 anos",
         "valor": "9,90",
-        "imagem": "entreFacasESegredos.jpg",
+        "imagem": "entreFacasESegredos",
         "background": "entreFacasESegredos_01"
     },
     {
         "id": 17,
         "tipo": "filmes",
+<<<<<<< HEAD
         "categoria": "ação",
         "nome": "Batman",
         "valor": "9,90",
         "descricao": "jajajajja",
         "imagem": "cards-12.png",
         "classificacao": "12"
+=======
+        "categoria": "aventura",
+        "nome": "enola Holmes 2",
+        "classificacao": "14",
+        "valor": "49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "background": "enolaHolmes2_01"
+>>>>>>> origin
     }
 ]

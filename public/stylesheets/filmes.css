@@ -22,12 +22,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color:  var(--background-color);
-}
- 
-body * {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    color: #B30006;
 }
 
 /* CONFIGURAÇÃO CONTAINER*/
@@ -79,17 +74,12 @@ hr {
     margin-bottom: 5rem;
 }
 
-.filmes-home p {
-    text-align: center;
-    color: var(--cores-letra);
-}
-
-.filmes-home img {
+.filme-show img {
     width: 15rem;
 }
 
-div #dados-filmes {
-    display: none;
+.filme-show p {
+    color: var(--cores-letra);
 }
 
 /*  CONFIGURANDO AO PASSAR O MOUSE */
@@ -164,6 +154,7 @@ div #dados-filmes {
 }
 
 #nome-filme {
+    text-transform:uppercase;
     color: red;
     font-size: 1.3rem;
 }

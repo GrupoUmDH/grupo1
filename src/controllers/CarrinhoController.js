@@ -4,11 +4,10 @@ const path = require("path");
 
 module.exports = {
     carrinho: (req, res) => {
-
         const item = CarrinhoModel.itens(req.query.itensCarrinho);
         //const carrinho = req.query
 
-        //console.log(item)
+        console.log(req.query);
         let qtd = item.length;
 
         let valor = CarrinhoModel.valores(req.query.itensCarrinho);

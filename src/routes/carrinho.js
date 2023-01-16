@@ -6,6 +6,7 @@ const CarrinhoController=require('../controllers/CarrinhoController')
 let imgPagamento = require('../models/CarrinhoModel')
 
 router.get('/', CarrinhoController.carrinho);
+router.delete("/:id/excluir", CarrinhoController.carrinho);
 
 /* GET COMPRA - FINALIZA COMPRA */
 router.get('/compra', function(req, res, next) {
