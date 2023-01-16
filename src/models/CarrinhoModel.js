@@ -16,13 +16,18 @@ module.exports = {
     },
     valores: (item) => {
         let content = JSON.parse(item);
-        let soma = 0;
 
-        content.forEach((element) => {
-            soma += parseFloat(element.valor.replace(",", "."));
-            //console.log(parseFloat(element.valor.replace(",", ".")));
-        });
-        //content = content.filter(a => a.precoComprar);
-        return soma.toFixed(2).replace(".", ",");
+        if(content) {
+            let soma = 0;
+            content.forEach((element) => {
+                soma += parseFloat(element.valor.replace(",", "."));
+                //console.log(parseFloat(element.valor.replace(",", ".")));
+            });
+            //content = content.filter(a => a.precoComprar);
+            return soma.toFixed(2).replace(".", ",");
+        } else {
+            return null
+        }
+        
     },
 };

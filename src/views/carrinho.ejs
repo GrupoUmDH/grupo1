@@ -13,7 +13,12 @@
                             <p class="filme-descricao"> <%=filme.descricao%></p>
                         </div>
                         <div>
-                            <img class="remover" value="<%=filme.id%>" type="button" src="/img/ico/lixo.png"/>
+                            <form action="/carrinho/:id/excluir?_methord=DELETE" method="POST" id="montarCarrinho">
+                                <input type="hidden" name="itensCarrinho"/>
+                                <button type="submit">
+                                    <img class="remover" src="/img/ico/lixo.png"/>
+                                </button>
+                            </form>
                         </div>
                     </div>
             </section>
