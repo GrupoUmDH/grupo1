@@ -296,6 +296,7 @@ div #dados-filme {
     font-weight: bold;
     padding: 4px;
     margin: 4px;
+    text-align: center;
 }
 
 #nome-filme {

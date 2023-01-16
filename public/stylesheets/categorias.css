@@ -145,7 +145,7 @@ select {
 
 
 .filme-show img {
-    width: 100%;
+    width: 15rem;
 }
 
 .filme-show p {
@@ -165,7 +165,7 @@ select {
 .filme-show .descri {
     width: 15rem;
     font-size: .8rem;
-    text-align: left;
+    text-align: center;
     background-color: transparent;
     display: flex;
     justify-content: space-around;
@@ -226,6 +226,7 @@ select {
 #nome-filme {
     color: red;
     font-size: 1.3rem;
+    text-transform: uppercase;
 }
 
 
