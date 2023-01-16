@@ -174,5 +174,15 @@
         "valor": "9,90",
         "imagem": "entreFacasESegredos.jpg",
         "background": "entreFacasESegredos_01"
+    },
+    {
+        "id": 17,
+        "tipo": "filmes",
+        "categoria": "ação",
+        "nome": "Batman",
+        "valor": "9,90",
+        "descricao": "jajajajja",
+        "imagem": "cards-12.png",
+        "classificacao": "12"
     }
 ]
