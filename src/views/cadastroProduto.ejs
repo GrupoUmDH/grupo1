@@ -35,8 +35,8 @@
                 <input type="text" name="valor" placeholder="valor" />
                 <p>Imagem</p>
                 <input type="file" name="imagem" placeholder="imagem" />
-                <!-- <p>background</p>
-                <input type="file" name="imagem_bk" placeholder="background" /> -->
+                <p>background</p>
+                <input type="file" name="background" placeholder="background" />
                 <button type="submit">Adicionar</button>
             </form>
 
@@ -56,6 +56,12 @@
             <!-- PUT - UPDATE -->
             <form method="POST" action="/produtos/edit?_method=PUT">
                 <h2>UPDATE</h2>
+                 <div class="check">
+                    <input type="radio" name="check" class="check" />
+                    <label for="Filmes">Filmes</label>
+                    <input type="radio" name="check" class="check" />
+                    <label for="Séries">Séries</label>
+                </div>
                 <input type="text" name="id" placeholder="id" />
               
                 <input type="text" name="nome" placeholder="nome" />
@@ -63,26 +69,21 @@
                 <input type="text" name="valor" placeholder="categoria" />
                 <input type="text" name="classificacao" placeholder="classificação" />
                 <input type="text" name="valor" placeholder="valor" />
-                  <div class="check">
-                    <input type="radio" name="check" class="check" />
-                    <label for="Filmes">Filmes</label>
-                    <input type="radio" name="check" class="check" />
-                    <label for="Séries">Séries</label>
-                </div>
-                <!-- <p>Imagem</p>
+                 
+                <p>Imagem</p>
                 <input type="file" name="imagem" placeholder="imagem" />
                 <p>background</p>
-                <input type="file" name="background" placeholder="imagem" /> -->
+                <input type="file" name="background" placeholder="imagem" />
                 <button>Editar</button>
             </form>
 
             <!-- DELETE -->
-            <form method="POST" action="/produtos/remove">
+            <form method="POST" action="/produtos/remove?_method=DELETE">
                 <h2>DELETE</h2>
                 <div class="check">
-                    <input type="radio" name="check" value="filmes" class="check" />
+                    <input type="radio" name="tipo" value="filmes" class="check" />
                     <label for="Filmes">Filmes</label>
-                    <input type="radio" name="check" value="series" class="check" />
+                    <input type="radio" name="tipo" value="series" class="check" />
                     <label for="Séries">Séries</label>
                 </div>
                 <input type="text" name="id" placeholder="id" />

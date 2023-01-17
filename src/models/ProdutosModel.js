@@ -40,8 +40,8 @@ module.exports = {
       classificacao: req.body.classificacao,
       valor: req.body.valor,
       descricao: req.body.descricao,
-      // imagem: req.file.originalname ,
-      background: req.file.filename,
+      imagem: req.files.imagem[0].filename,
+      background: req.files.background[0].filename,
     };
 
     // console.log(req)
@@ -73,16 +73,14 @@ module.exports = {
 
   //deletar produto
   deleteOne: (req) => {
-    let newProduct = produtos.filter(produto => {
+    let filteredproduct = produtos.filter(produto => {
       produto.id != req.body.id
   });
 
-    if (newProduct.tipo == "filmes") {
-      produtos.push(newProduct);
-      fs.writeFileSync(path.join(__dirname, "../database/filmes.json"), JSON.stringify(newProduct, null, 4));
-    } if (newProduct.tipo == "series")  {
-      produtos.push(newProduct);
-      fs.writeFileSync(path.join(__dirname, "../database/series.json"), JSON.stringify(newProduct, null, 4));
+    if (req.body.tipo == "filmes") {
+      fs.writeFileSync(path.join(__dirname, "../database/filmes.json"), JSON.stringify(filteredproduct, null, 4));
+    } if (req.body.tipo == "series")  {
+      fs.writeFileSync(path.join(__dirname, "../database/series.json"), JSON.stringify(filteredproduct, null, 4));
     }
 
     // if (!novoproduto.length) return;

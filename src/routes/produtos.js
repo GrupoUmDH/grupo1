@@ -30,13 +30,13 @@ router.get('/produtos/:id/:nome?', ProdutosController.listaProduto)
 
 
 //criar produto
-router.post('/create',upload.single('background'), ProdutosController.createProduto);
+router.post('/create',upload.fields([{name:'background'},{name:'imagem'}]), ProdutosController.createProduto);
 
 //buscar produto
 router.get('/search', ProdutosController.buscaProduto);
  
 // deletar produto
-router.post('/remove', ProdutosController.deletaProduto);
+router.delete('/remove', ProdutosController.deletaProduto);
 
 // atualiza produto
 router.put('/edit', ProdutosController.atualizaProduto);

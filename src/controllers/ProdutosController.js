@@ -43,13 +43,6 @@ module.exports = {
         if (errors.length){
             return res.render('produtos/cadastroProduto' , {errors, produtos: null });
         }
-
-
-
-
-        if (!req.file) {
-            return res.send("Por favor, adicione uma imagem")
-        }
         ProdutosModel.createOne(req)
             res.send(`O produto ${req.body.nome} foi criado com sucesso`)
     }, 

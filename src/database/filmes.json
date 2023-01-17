@@ -184,5 +184,34 @@
         "valor": "49,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "background": "enolaHolmes2_01"
+    },
+    {
+        "id": 18,
+        "tipo": "filmes",
+        "categoria": "aventura",
+        "nome": "A10s",
+        "classificacao": "12",
+        "valor": "9,90",
+        "descricao": "blá blá"
+    },
+    {
+        "id": 19,
+        "tipo": "filmes",
+        "categoria": "comédia",
+        "nome": "Vagner",
+        "classificacao": "12",
+        "valor": "9,90",
+        "descricao": "blá blá"
+    },
+    {
+        "id": 20,
+        "tipo": "filmes",
+        "categoria": "aventura",
+        "nome": "Vagner",
+        "classificacao": "12",
+        "valor": "9,90",
+        "descricao": "cvve",
+        "imagem": "scrool1.jpg",
+        "background": "scrool2.jpg"
     }
 ]
