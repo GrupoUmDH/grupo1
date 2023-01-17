@@ -1,4 +1,5 @@
 const ProdutosModel = require('../models/ProdutosModel');
+const {validationResult} = require ('express-validator');
 
 module.exports = {
     filmes: (req, res) => {
@@ -38,6 +39,14 @@ module.exports = {
     },
      //criar produto
     createProduto: (req, res) => {
+        const { errors } = validationResult(req);
+        if (errors.length){
+            return res.render('produtos/cadastroProduto' , {errors, produtos: null });
+        }
+
+
+
+
         if (!req.file) {
             return res.send("Por favor, adicione uma imagem")
         }
