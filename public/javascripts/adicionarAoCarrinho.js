@@ -1,7 +1,3 @@
-const path = require('path');
-const fs = require('fs');
-const jsonCarrinho = require(".../src/database/carrinho.json");
-
 const btnComprar = document.getElementById('btn-comprar');
 
 const div_popUp = document.querySelector('div.pop-Up');
@@ -69,4 +65,5 @@ const carrinhoLocal = () => {
         carrinho.push(filme);
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
     }
+
 }
