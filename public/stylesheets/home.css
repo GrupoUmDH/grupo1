@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 :root {
     --background-color: #0C0C0C;
     --background-2: #131313;
@@ -8,15 +9,9 @@
     --cores-objetos: #580003;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
     padding: 0;
     margin: 0;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +19,6 @@ body {
     background-color: var(--background-color);
     font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
-
 
 /* CONFIGURAÇÃO CONTAINER-CENTRAL*/
 
@@ -203,12 +197,6 @@ hr {
 }
 
 .filmes-home p {
-    text-align: center;
-    color: var(--cores-letra);
-}
-
-.filmes-home span {
-    text-align: end;
     color: var(--cores-letra);
 }
 
@@ -243,7 +231,7 @@ div #dados-filme {
     justify-content: space-around;
 }
 
-.filme-show > a {
+.filme-show>a {
     position: relative;
 }
 
@@ -267,6 +255,7 @@ div #dados-filme {
 .filme-show:hover div #dados-filmes {
     display: none;
 }
+
 .filme-show:hover .descri {
     display: block;
     position: absolute;
@@ -276,7 +265,7 @@ div #dados-filme {
     height: 40%;
     justify-content: flex-end;
     top: 10rem;
-    
+
 }
 
 .filme-show:hover .descri div #valor {
@@ -356,7 +345,7 @@ div #dados-series {
     background-color: transparent;
 }
 
-.series-show  {
+.series-show {
     display: flex;
     padding: 10px;
     justify-content: space-between;
@@ -373,7 +362,7 @@ div #dados-series {
     justify-content: space-around;
 }
 
-.series-show > a {
+.series-show>a {
     position: relative;
 }
 
@@ -397,6 +386,7 @@ div #dados-series {
 .series-show:hover div #dados-seriess {
     display: none;
 }
+
 .series-show:hover .descri {
     display: block;
     position: absolute;
@@ -405,7 +395,7 @@ div #dados-series {
     display: flex;
     height: 40%;
     justify-content: flex-end;
-    top: 10rem;  
+    top: 10rem;
 }
 
 .series-show:hover .descri div #valor {
@@ -436,12 +426,14 @@ div #dados-series {
     .carrossel-container {
         max-width: 700px;
     }
+
     .slide1,
     .slide2,
     .slide3,
     .slide4 {
         width: 700px;
     }
+
     .carrossel img {
         object-fit: fill;
         width: 900px;
@@ -453,6 +445,7 @@ div #dados-series {
     #items-wrapper {
         display: none;
     }
+
     .mais-populares {
         display: none;
     }

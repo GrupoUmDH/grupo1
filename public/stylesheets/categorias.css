@@ -144,13 +144,12 @@ select {
 }
 
 
-.filmes p {
-    display: block;
-    color: var(--cores-letra);
+.filme-show img {
+    width: 100%;
 }
 
-.filmes img {
-    width: 15rem;
+.filme-show p {
+    color: var(--cores-letra);
 }
 
 /*  CONFIGURANDO AO PASSAR O MOUSE */
@@ -163,14 +162,6 @@ select {
     background-color: transparent;
 }
 
-.filme-show #filme-pay {
-    display: flex;
-    padding: 10px;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-}
-
 .filme-show .descri {
     width: 15rem;
     font-size: .8rem;
@@ -178,6 +169,8 @@ select {
     background-color: transparent;
     display: flex;
     justify-content: space-around;
+    display: none;
+    height: 100%;
 }
 
 .filme-show>a {
@@ -194,11 +187,6 @@ select {
     border-radius: 1.5rem;
     overflow: hidden;
     margin-bottom: 1rem;
-}
-
-.filme-show .descri {
-    display: none;
-    height: 100%;
 }
 
 .filme-show:hover div #dados-filmes {
@@ -228,18 +216,6 @@ select {
     opacity: 0.3;
 }
 
-.filme-show .descri #filme-pay div p {
-    width: 5rem;
-    height: 1.5rem;
-    text-align: center;
-    align-items: center;
-    padding: 4px;
-    margin: 4px;
-    border-radius: 10px;
-    background-color: rgb(192, 21, 21);
-    font-weight: bold;
-    font-size: 12pt;
-}
 
 .filme-show .descri #descri-filme {
     font-weight: bold;

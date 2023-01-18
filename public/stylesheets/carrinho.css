@@ -10,12 +10,6 @@
     --cores-objetos: #580003;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    
-}
-
 body {
     padding: 0;
     margin: 0;
@@ -25,9 +19,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
-}
-
-body * {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 

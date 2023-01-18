@@ -1,34 +1,13 @@
-/*
-const form = document.querySelector('main .content-form form')
-const inputList = document.querySelectorAll(`main .content-form input:not(.check)`)
-const nomeProd = document.querySelector("input[name='nome-do-produto']")
-const descricaoProd = document.querySelector("input[name='descricao-do-produto']")
-const classificacao = document.querySelector("input[name='classificacao']")
-const aluguel = document.querySelector("input[name='aluguel']")
-const compra = document.querySelector("input[name='compra']")
-const categoria = document.querySelector("input[name='categoria']")
+const botoes = document.querySelectorAll("main form button");
 
-form.addEventListener('submit', function(event){   
+botoes.forEach((botao, index) => {
 
-    inputList.forEach(input => {
-        if (!input.value){
-            event.preventDefault();
-            document.querySelector('.err-'+ input.name).classList.remove('invisible')
-        } else{
-            document.querySelector('.err-'+ input.name).classList.add('invisible')
-        }
+    botao.addEventListener('submit', function (event) {
+        console.log("Testando")
+
+        event.preventDefault();
+
     })
-});
-*/
-
-
-let conteudo = document.querySelector('div.pop-up')
-const pesquisar = document.getElementById('bt-pesquisa')
-pesquisar.addEventListener('click', () => {
-    console.log('testando');
-    conteudo.style.display = 'block';
-   // conteudo.innerHTML += html;
-
 })
 
 

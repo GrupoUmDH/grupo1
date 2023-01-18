@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride = require('method-override');
 
+var favicon = require('serve-favicon')
+
 var homeRouter = require('./routes/index');
 var userRouter = require('./routes/users');
 var produtosRouter = require('./routes/produtos');
@@ -21,6 +23,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(favicon(path.join(__dirname, '../public/img', 'favicon.ico')));
 
 app.use((error, req, res, next) => {
     console.log('This is the rejected field ->', error.field);
