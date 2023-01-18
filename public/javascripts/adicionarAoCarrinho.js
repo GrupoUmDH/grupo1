@@ -1,5 +1,8 @@
+const path = require('path');
+const fs = require('fs');
+const jsonCarrinho = require(".../src/database/carrinho.json");
+
 const btnComprar = document.getElementById('btn-comprar');
-const btnAlugar = document.getElementById("btn-alugar");
 
 const div_popUp = document.querySelector('div.pop-Up');
 
@@ -67,9 +70,3 @@ const carrinhoLocal = () => {
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
     }
 }
-
-refer.forEach(element => {
-    element.addEventListener("click", function () {
-        console.log("Testanto");
-    });
-})
