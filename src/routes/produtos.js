@@ -26,7 +26,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({storage: storage, limits: {fileSize: 10000000}});
 
-router.get('/produtos/:id/:nome?', ProdutosController.listaProduto)
+router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
 
 
 //criar produto

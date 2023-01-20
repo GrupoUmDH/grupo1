@@ -57,19 +57,19 @@ module.exports = {
         JSON.stringify(series, null, 4));
     }
   },
-  //???
-  findAllById: (ids) => {
-    return produtos.filter((produto) => ids.includes(produto.id));
-  },
   //procurar produto
   findOne: (req) => {
     let found = produtos.find(produto => produto.id == req.query.id);
     return found;
+
+  // findOne: (req) => {
+  //   let found = produtos.find(produto => produto.id == req.query.id);
+  //   return found;
   },
-  findByParams: (req) => {
-    let found = produtos.find((produto) => produto.id == req.params.id);
-    return found;
-  },
+  // findByParams: (req) => {
+  //   let found = produtos.find((produto) => produto.id == req.params.id);
+  //   return found;
+  // },
 
   //deletar produto
   deleteOne: (req) => {

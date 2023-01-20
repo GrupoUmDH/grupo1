@@ -48,8 +48,10 @@ module.exports = {
     }, 
     //procurar produto
     buscaProduto: (req, res) => {
-        let filme = ProdutosModel.findOne(req);
-        return res.render('produtos', { pageName: 'produtos', js:' ', filme });
+        res.send(ProdutosModel.findOne(req,res))
+
+        // let filme = ProdutosModel.findOne(req);
+        // return res.render('produtos', { pageName: 'produtos', js:' ', filme });
        // res.send(ProdutosModel.findOne(req));
     },
     listaProduto: (req, res) => {
