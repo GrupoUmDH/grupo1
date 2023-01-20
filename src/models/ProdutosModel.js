@@ -95,8 +95,11 @@ module.exports = {
       produto.check = req.body.check;
       produto.nome = req.body.nome;
       produto.descricao = req.body.descricao;
+      produto.categoria = req.body.categoria;
+      produto.classificacao = req.body.classificacao;
       produto.valor = req.body.valor;
       produto.imagem = req.body.imagem;
+      produto.background = req.body.background;
     });
     fs.writeFileSync(
       path.join(__dirname, "../database/produtos.json"),
