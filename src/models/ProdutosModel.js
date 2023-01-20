@@ -73,9 +73,8 @@ module.exports = {
 
   //deletar produto
   deleteOne: (req) => {
-    let filteredproduct = produtos.filter(produto => {
-      produto.id != req.body.id
-  });
+    const filteredproduct = produtos.filter((produto) => produto.id != req.body.id)
+    console.log('produtos', filteredproduct)
 
     if (req.body.tipo == "filmes") {
       fs.writeFileSync(path.join(__dirname, "../database/filmes.json"), JSON.stringify(filteredproduct, null, 4));
