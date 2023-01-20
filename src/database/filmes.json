@@ -152,5 +152,16 @@
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "umLugarSilencioso",
         "background": "umLugarSilencioso_01"
+    },
+    {
+        "id": 15,
+        "tipo": "filmes",
+        "categoria": "ação",
+        "nome": "A10s",
+        "classificacao": "12",
+        "valor": "9,89",
+        "descricao": "Teste",
+        "imagem": "cards-10.png",
+        "background": "scrool5.jpg"
     }
 ]

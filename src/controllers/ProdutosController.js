@@ -41,7 +41,7 @@ module.exports = {
     createProduto: (req, res) => {
         const { errors } = validationResult(req);
         if (errors.length){
-            return res.render('produtos/cadastroProduto' , {errors, produtos: null });
+            return res.render('produtos/cadastroProduto' , { errors, produtos: null });
         }
         ProdutosModel.createOne(req)
             res.send(`O produto ${req.body.nome} foi criado com sucesso`)
