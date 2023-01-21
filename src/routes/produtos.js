@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const validadorForm = require('../middlewares/validadorForm')
 
 const ProdutosController = require('../controllers/ProdutosController');
 
@@ -26,10 +27,11 @@ const storage = multer.diskStorage({
 });
 const upload = multer({storage: storage, limits: {fileSize: 10000000}});
 
-router.get('/produtos/:id/:nome?', ProdutosController.listaProduto)
+router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
+
 
 //criar produto
-router.post('/create',upload.single('background'), ProdutosController.createProduto);
+router.post('/create',upload.fields([{name:'background'},{name:'imagem'}]), validadorForm, ProdutosController.createProduto);
 
 //buscar produto
 router.get('/search', ProdutosController.buscaProduto);
