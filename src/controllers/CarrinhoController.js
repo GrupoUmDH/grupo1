@@ -2,10 +2,19 @@ const CarrinhoModel = require('../models/CarrinhoModel');
 const fs = require("fs");
 const path = require("path");
 
+const jsonCarrinho = require("../database/carrinho.json");
+
 module.exports = {
-    carrinho: (req, res) => {
+    carrinho: (req, res) => {   
         
-        const item = CarrinhoModel.itens(req.query.itensCarrinho);
+        let item = [{}];
+
+        if(!req.query.itensCarrinho){
+            item = jsonCarrinho;
+        } else {
+             item = CarrinhoModel.itens(req.query.itensCarrinho);
+        }
+       
         //const carrinho = req.query
 
         let qtd = item.length;
@@ -39,12 +48,22 @@ module.exports = {
             js: "adicionarAoCarrinho",
         });
     },
-    deletar: (req, res) => {
+    deletaItem: (req, res) => {
         //console.log(req.body.itensCarrinho);
-        //console.log(req.params)
 
-        CarrinhoModel.itens(req.body.itensCarrinho);
+        const { id } = req.params;     //return res.send("item deletado... ");
+        const ref  = JSON.parse(req.body.itensCarrinho);
 
-        return res.redirect("/carrinho");
+        const novoCarrinho = CarrinhoModel.deletar(id, ref);
+
+        //console.log(ref)
+
+        //const itens = CarrinhoModel.deletar(id, ref)
+
+        //this.carrinho(itens);
+
+        //const novoCarrinho = CarrinhoModel.deletar(id);
+
+        res.redirect("/carrinho");
     }
 };

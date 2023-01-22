@@ -228,7 +228,6 @@ select {
     font-size: 1.3rem;
 }
 
-
 /* RESPONSIVO */
 @media (max-width: 820px) {
     .content-genero {

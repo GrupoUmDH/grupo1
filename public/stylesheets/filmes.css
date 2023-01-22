@@ -8,12 +8,6 @@
     --cores-letra:  #FFFFFF;
     --cores-objetos: #580003;
 }
- 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body{
     width: 100%;
@@ -158,7 +152,6 @@ hr {
     color: red;
     font-size: 1.3rem;
 }
- 
 
 /*CONFIGURAÇÃO FOOTER*/
 

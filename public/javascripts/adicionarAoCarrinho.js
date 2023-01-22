@@ -2,6 +2,9 @@ const btnComprar = document.getElementById('btn-comprar');
 
 const div_popUp = document.querySelector('div.pop-Up');
 
+//PAGINA FILMES E SERIES
+const refer = document.querySelectorAll("section div.filme-show a");
+
 // CONTROLE DE POP-UP
 div_popUp.style.display = "none";
 
@@ -62,4 +65,5 @@ const carrinhoLocal = () => {
         carrinho.push(filme);
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
     }
+
 }
