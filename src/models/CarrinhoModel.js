@@ -1,3 +1,7 @@
+const fs = require("fs");
+const path = require("path");
+let contentCarrinho = require('../database/filmesCarrinho.json')
+
 module.exports = {
     index: () => {
         return [
@@ -7,7 +11,7 @@ module.exports = {
             { img: "boleto" },
         ];
     },
-    itens: (itens) => {
+    itens(itens) {
         if (!itens) {
             return [{}];
         } else {
@@ -17,7 +21,7 @@ module.exports = {
     valores: (item) => {
         let content = JSON.parse(item);
 
-        if(content) {
+        if (content) {
             let soma = 0;
             content.forEach((element) => {
                 soma += parseFloat(element.valor.replace(",", "."));
@@ -26,8 +30,7 @@ module.exports = {
             //content = content.filter(a => a.precoComprar);
             return soma.toFixed(2).replace(".", ",");
         } else {
-            return null
+            return [{}];
         }
-        
     },
 };

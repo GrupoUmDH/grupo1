@@ -1,5 +1,4 @@
 const btnComprar = document.getElementById('btn-comprar');
-const btnAlugar = document.getElementById("btn-alugar");
 
 const div_popUp = document.querySelector('div.pop-Up');
 
