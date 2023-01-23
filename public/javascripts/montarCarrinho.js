@@ -24,17 +24,15 @@ removeBtns.forEach((btn, index) => {
 
         let carrinho = JSON.parse(localStorage.getItem("carrinho"));
         carrinho.splice(index, 1);
+        console.log(carrinho);
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
         delCarrinho[index].value = carrinho;
-        filmesNoCariinho.value = delCarrinho[index].value;
+        filmesNoCariinho.value = carrinho;
 
         sectionFilme[index].remove();
 
-        //console.log(delCarrinho[index].value);
-        event.submit();
-        console.log(delCarrinho[index].value);
-
-        window.location.reload();
+        this.submit();
+        //window.location.reload();
     });
 });

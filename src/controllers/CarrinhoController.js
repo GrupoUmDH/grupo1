@@ -4,9 +4,17 @@ const path = require("path");
 
 const jsonCarrinho = require("../database/carrinho.json");
 
+const attCarrinho = (conteudo) => {
+        fs.writeFileSync(
+            path.join(__dirname, "../database/filmesCarrinho.json"),
+            JSON.stringify(conteudo, null, 4)
+        );
+    }
+
+
 module.exports = {
-    carrinho: (req, res) => {   
-        
+    carrinho: (req, res) => {  
+
         let item = [{}];
 
         if(!req.query.itensCarrinho){
@@ -14,6 +22,8 @@ module.exports = {
         } else {
              item = CarrinhoModel.itens(req.query.itensCarrinho);
         }
+
+        attCarrinho(item);
        
         //const carrinho = req.query
 
@@ -51,11 +61,10 @@ module.exports = {
     deletaItem: (req, res) => {
         //console.log(req.body.itensCarrinho);
 
-        const { id } = req.params;     //return res.send("item deletado... ");
+        //const { value } = req.params;     
         const ref  = JSON.parse(req.body.itensCarrinho);
 
-        const novoCarrinho = CarrinhoModel.deletar(id, ref);
-
+        //attCarrinho(ref)
         //console.log(ref)
 
         //const itens = CarrinhoModel.deletar(id, ref)
@@ -64,6 +73,6 @@ module.exports = {
 
         //const novoCarrinho = CarrinhoModel.deletar(id);
 
-        res.redirect("/carrinho");
-    }
+        return res.redirect("/carrinho");
+    }, 
 };

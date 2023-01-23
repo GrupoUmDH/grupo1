@@ -39,7 +39,6 @@ const filme = {
 };
 
 btnComprar.addEventListener('click', () => {
-    //console.log("COMPRANDO");
     carrinhoLocal();
 });
 
@@ -47,20 +46,16 @@ const carrinhoLocal = () => {
 
     div_popUp.style.display = "flex"; //chamo o pop-up
 
-    //console.log(id);
-
     if (localStorage.getItem("carrinho") == null) {
         carrinho.push(filme);
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
     } else {
         carrinho = JSON.parse(localStorage.getItem("carrinho"));
-        //carrinho=JSON.parse(carrinho)
 
         // verificar se o item ja esiste no carrinho
         carrinho = carrinho.filter((element) => 
             element.nome != nomeFilme.innerText
         );
-        //console.log(carrinho);
 
         carrinho.push(filme);
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
