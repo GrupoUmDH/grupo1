@@ -1,9 +1,10 @@
-const path = require("path");
 const fs = require("fs");
-const jsonCarrinho = require('../database/carrinho.json');
+const path = require("path");
+
+const jsonCarrinho = require("../database/filmesCarrinho.json");
 
 module.exports = {
-    index ()  {
+    index() {
         return [
             { img: "credit-card" },
             { img: "pag-seguro" },
@@ -11,17 +12,15 @@ module.exports = {
             { img: "boleto" },
         ];
     },
-    itens (itens)  {
+    itens(itens) {
         if (!itens) {
-            return [{}];
+            return jsonCarrinho;
         } else {
             return JSON.parse(itens);
         }
-        //console.log(itens)
     },
-    valores (item) {
-        if(item) {
-            
+    valores(item) {
+        if (item) {
             let content = JSON.parse(item);
 
             if (content) {
@@ -33,29 +32,21 @@ module.exports = {
                 //content = content.filter(a => a.precoComprar);
                 return soma.toFixed(2).replace(".", ",");
             } else {
-                return null;
+                return null
             }
         } else {
-            return "R$ 0,00"
+            return "R$ 0,00";
         }
     },
-    deletar (id, ref)  {
-        const item = ref;
-
-        const attCarrinho = item.filter((item) => item.id != id);
-
-        console.log(attCarrinho);
-
-        this.atualiza(attCarrinho);
-
-        //redirect('/carinho')
-        return attCarrinho;
+    deletar(ref) {
+        //const item = ref;
+        //this.itens(attCarrinho);
     },
-    atualiza (item) {
+    attCarrinho (conteudo) {
+        //JSON.parse(conteudo);
         fs.writeFileSync(
-            path.join(__dirname, "../database/carrinho.json"),
-            JSON.stringify(item, null, 4)
+            path.join(__dirname, "../database/filmesCarrinho.json"),
+            JSON.stringify(conteudo, null, 4)
         );
-    }
-
+    };
 };

@@ -1,10 +1,18 @@
 [
     {
         "id": 2,
-        "nome": "A MULHER NA JANELA",
+        "nome": "SPIDER-MAN - NO WAY HOME",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "classificacao": "http://localhost:3000/produtos/1",
+        "classificacao": "http://localhost:3000/produtos/2",
         "valor": "\n9,90\n",
-        "imagem": "http://localhost:3000/img/filmes/aMulherNaJanela_01.jpg"
+        "imagem": "http://localhost:3000/img/filmes/homemAranha_01.jpg"
+    },
+    {
+        "id": 4,
+        "nome": "AS BRANQUELAS",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "classificacao": "http://localhost:3000/produtos/4",
+        "valor": "\n9,90\n",
+        "imagem": "http://localhost:3000/img/filmes/asBranquelas_01.jpg"
     }
 ]

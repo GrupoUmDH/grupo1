@@ -13,7 +13,7 @@ formMontarCarrinho.forEach((montaCarrinho, index) => {
 const sectionFilme = document.querySelectorAll("section.item");
 const filmesNoCariinho = document.querySelector("form input#itensCarrinho");
 const removeBtns = document.querySelectorAll("main form#montarCarrinho");
-let delCarrinho = document.querySelectorAll("main form input");
+//let delCarrinho = document.querySelectorAll("main form input");
 
 console.log(filmesNoCariinho.value);
 
@@ -27,7 +27,7 @@ removeBtns.forEach((btn, index) => {
         console.log(carrinho);
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
-        delCarrinho[index].value = carrinho;
+        //delCarrinho[index].value = carrinho;
         filmesNoCariinho.value = carrinho;
 
         sectionFilme[index].remove();

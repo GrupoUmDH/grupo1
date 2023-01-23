@@ -1,39 +1,21 @@
 const CarrinhoModel = require('../models/CarrinhoModel');
-const fs = require("fs");
-const path = require("path");
-
-const jsonCarrinho = require("../database/carrinho.json");
-
-const attCarrinho = (conteudo) => {
-        fs.writeFileSync(
-            path.join(__dirname, "../database/filmesCarrinho.json"),
-            JSON.stringify(conteudo, null, 4)
-        );
-    }
-
 
 module.exports = {
     carrinho: (req, res) => {  
 
-        let item = [{}];
-
+        let item = CarrinhoModel.itens(req.query.itensCarrinho);
+        
         if(!req.query.itensCarrinho){
-            item = jsonCarrinho;
-        } else {
-             item = CarrinhoModel.itens(req.query.itensCarrinho);
+            itens = [{}];
         }
-
-        attCarrinho(item);
-       
-        //const carrinho = req.query
 
         let qtd = item.length;
 
-        let valor = CarrinhoModel.valores(req.query.itensCarrinho);
+        let valor = "R$ "+CarrinhoModel.valores(req.query.itensCarrinho);
 
         let desconto = "R$ 0,00";
 
-        //console.log(valor);
+        console.log(item);
 
         res.render("carrinho", {
             pageName: "carrinho",
@@ -58,20 +40,10 @@ module.exports = {
             js: "adicionarAoCarrinho",
         });
     },
-    deletaItem: (req, res) => {
-        //console.log(req.body.itensCarrinho);
+    deletaItem: (req, res) => {  
+        const ref  = req.body.itensCarrinho;
 
-        //const { value } = req.params;     
-        const ref  = JSON.parse(req.body.itensCarrinho);
-
-        //attCarrinho(ref)
-        //console.log(ref)
-
-        //const itens = CarrinhoModel.deletar(id, ref)
-
-        //this.carrinho(itens);
-
-        //const novoCarrinho = CarrinhoModel.deletar(id);
+        
 
         return res.redirect("/carrinho");
     }, 
