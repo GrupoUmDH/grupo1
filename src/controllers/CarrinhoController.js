@@ -40,10 +40,15 @@ module.exports = {
             js: "adicionarAoCarrinho",
         });
     },
+    adiciona: (req, res) => {
+        console.log(req.body.itensCarrinho)
+    },
     deletaItem: (req, res) => {  
         const ref  = req.body.itensCarrinho;
 
-        
+        //console.log(ref);
+
+        CarrinhoModel.attCarrinho(ref);
 
         return res.redirect("/carrinho");
     }, 

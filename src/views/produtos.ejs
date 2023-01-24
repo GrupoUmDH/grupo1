@@ -31,7 +31,10 @@
                                     </div>
                                     <div class="comprar">
                                         <p id="valor-compra"> R$ </p>
-                                        <button type="submit" id="btn-comprar">Comprar</button>
+                                        <form action="/carrinho/adiciona/:id" method="POST" id="addCarrinho">
+                                            <input type="hidden" name="itensCarrinho"/>
+                                            <button type="submit" id="btn-comprar">Comprar</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

@@ -1,18 +1,1 @@
-[
-    {
-        "id": 2,
-        "nome": "SPIDER-MAN - NO WAY HOME",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "classificacao": "http://localhost:3000/produtos/2",
-        "valor": "\n9,90\n",
-        "imagem": "http://localhost:3000/img/filmes/homemAranha_01.jpg"
-    },
-    {
-        "id": 4,
-        "nome": "AS BRANQUELAS",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "classificacao": "http://localhost:3000/produtos/4",
-        "valor": "\n9,90\n",
-        "imagem": "http://localhost:3000/img/filmes/asBranquelas_01.jpg"
-    }
-]
+"[{\"id\":5,\"nome\":\"CORAÇÕES DE FERRO\",\"descricao\":\"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!\",\"classificacao\":\"http://localhost:3000/produtos/5\",\"valor\":\"\\n9,90\\n\",\"imagem\":\"http://localhost:3000/img/filmes/coracoesDeFerro_01.jpg\"},{\"id\":3,\"nome\":\"SPIDER-MAN - NO WAY HOME\",\"descricao\":\"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!\",\"classificacao\":\"http://localhost:3000/produtos/2\",\"valor\":\"\\n9,90\\n\",\"imagem\":\"http://localhost:3000/img/filmes/homemAranha_01.jpg\"},{\"id\":4,\"nome\":\"GUERRA MUNDIAL Z\",\"descricao\":\"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!\",\"classificacao\":\"http://localhost:3000/produtos/6\",\"valor\":\"\\n9,90\\n\",\"imagem\":\"http://localhost:3000/img/filmes/guerraMundialZ_01.jpg\"}]"
