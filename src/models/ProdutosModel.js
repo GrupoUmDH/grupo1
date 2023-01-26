@@ -40,8 +40,8 @@ module.exports = {
       classificacao: req.body.classificacao,
       valor: req.body.valor,
       descricao: req.body.descricao,
-      // imagem: req.file.originalname ,
-      background: req.file.filename,
+      imagem: req.files.imagem[0].filename,
+      background: req.files.background[0].filename,
     };
 
     // console.log(req)
@@ -57,36 +57,29 @@ module.exports = {
         JSON.stringify(series, null, 4));
     }
   },
-  //???
-  findAllById: (ids) => {
-    return produtos.filter((produto) => ids.includes(produto.id));
-  },
   //procurar produto
   findOne: (req) => {
     let found = produtos.find(produto => produto.id == req.query.id);
     return found;
+
+  // findOne: (req) => {
+  //   let found = produtos.find(produto => produto.id == req.query.id);
+  //   return found;
   },
-  findByParams: (req) => {
-    let found = produtos.find((produto) => produto.id == req.params.id);
-    return found;
-  },
+  // findByParams: (req) => {
+  //   let found = produtos.find((produto) => produto.id == req.params.id);
+  //   return found;
+  // },
 
   //deletar produto
   deleteOne: (req) => {
-    let newProduct = produtos.filter(produto => 
-      produto.id != req.body.id
-    );
+    const filteredproduct = produtos.filter((produto) => produto.id != req.body.id)
+    console.log('produtos', filteredproduct)
 
-    if (newProduct.tipo == "filmes") {
-      produtos.push(newProduct);
-      fs.writeFileSync(
-        path.join(__dirname, "../database/filmes.json"),
-        JSON.stringify(newProduct, null, 4));
-    } if (newProduct.tipo == "series")  {
-      produtos.push(newProduct);
-      fs.writeFileSync(
-        path.join(__dirname, "../database/series.json"),
-        JSON.stringify(newProduct, null, 4));
+    if (req.body.tipo == "filmes") {
+      fs.writeFileSync(path.join(__dirname, "../database/filmes.json"), JSON.stringify(filteredproduct, null, 4));
+    } if (req.body.tipo == "series")  {
+      fs.writeFileSync(path.join(__dirname, "../database/series.json"), JSON.stringify(filteredproduct, null, 4));
     }
 
     // if (!novoproduto.length) return;
@@ -102,8 +95,11 @@ module.exports = {
       produto.check = req.body.check;
       produto.nome = req.body.nome;
       produto.descricao = req.body.descricao;
+      produto.categoria = req.body.categoria;
+      produto.classificacao = req.body.classificacao;
       produto.valor = req.body.valor;
       produto.imagem = req.body.imagem;
+      produto.background = req.body.background;
     });
     fs.writeFileSync(
       path.join(__dirname, "../database/produtos.json"),
