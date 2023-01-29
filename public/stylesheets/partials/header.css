@@ -9,7 +9,6 @@
     --cores-objetos: #580003;
 }
 header {
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
@@ -147,7 +146,7 @@ button  {
     cursor: pointer;
 }
 
-#menu-content>ul li a {
+#menu-content>ul li {
     display: flex;
     padding: .6rem;
     margin: 0;
@@ -155,7 +154,7 @@ button  {
     align-content: center;
 }
 
-#menu-content>ul li a img {
+#menu-content>ul li img {
     width: 25px;
     padding-right: 10px;
 }
@@ -163,6 +162,9 @@ button  {
 button {
     background-color: transparent;
     border: 0;
+    padding: .6rem;
+    font: 0.7em 'Inter';
+    color: var(--cores-letra);
 }
 
 #qtd-item {

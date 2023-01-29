@@ -15,7 +15,7 @@ module.exports = {
 
         let desconto = "R$ 0,00";
 
-        console.log(item);
+        //console.log(item);
 
         res.render("carrinho", {
             pageName: "carrinho",
@@ -41,7 +41,8 @@ module.exports = {
         });
     },
     adiciona: (req, res) => {
-        console.log(req.body.itensCarrinho)
+        //console.log("ADICIONANDO: "+req.body.itensCarrinho)
+        CarrinhoModel.attCarrinho(JSON.parse(req.body.itensCarrinho));
     },
     deletaItem: (req, res) => {  
         const ref  = req.body.itensCarrinho;

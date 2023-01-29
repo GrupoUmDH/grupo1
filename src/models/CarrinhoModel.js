@@ -14,7 +14,7 @@ module.exports = {
     },
     itens(itens) {
         if (!itens) {
-            return jsonCarrinho;
+            return JSON.stringify(jsonCarrinho);
         } else {
             return JSON.parse(itens);
         }
@@ -38,15 +38,19 @@ module.exports = {
             return "R$ 0,00";
         }
     },
+    adiciona(req, res){
+
+    },
     deletar(ref) {
         //const item = ref;
         //this.itens(attCarrinho);
     },
     attCarrinho (conteudo) {
-        //JSON.parse(conteudo);
+        //JSON.parse(conteudo)
+
         fs.writeFileSync(
             path.join(__dirname, "../database/filmesCarrinho.json"),
-            JSON.stringify(conteudo, null, 4)
+            JSON.stringify(content, null, 4)
         );
     }
 };

@@ -16,11 +16,10 @@ removeBtns.forEach((btn, index) => {
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
         //delCarrinho[index].value = carrinho;
-        filmesNoCariinho.value = carrinho;
+        filmesNoCariinho.value = JSON.parse(carrinho);
 
         sectionFilme[index].remove();
 
         this.submit();
-        //window.location.reload();
     });
 });
