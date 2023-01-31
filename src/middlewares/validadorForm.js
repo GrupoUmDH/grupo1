@@ -5,7 +5,7 @@ module.exports = [
     // .notEmpty().withMessage('ID obrigatório').bail(),
 
     check('nome')
-    .notEmpty().withMessage('Nome obrigatório').bail(),
+    .notEmpty().withMessage('Campo obrigatório').bail(),
     
     check('descricao')
     .notEmpty().withMessage('Descrição obrigatória').bail(),
