@@ -8,12 +8,12 @@ module.exports = [
     .notEmpty().withMessage('Campo obrigatório').bail(),
     
     check('descricao')
-    .notEmpty().withMessage('Descrição obrigatória').bail(),
+    .notEmpty().withMessage('Campo obrigatório').bail(),
     
     check('classificacao')
-    .notEmpty().withMessage('Classificação obrigatória').bail(),
+    .notEmpty().withMessage('Campo obrigatório').bail(),
 
     check('valor')
-    .notEmpty().withMessage('Valor obrigatório').bail()
+    .notEmpty().withMessage('Campo obrigatório').bail()
         
 ]

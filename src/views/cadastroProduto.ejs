@@ -32,7 +32,8 @@
                     <option value="romance">Romance</option>
                     <option value="suspense">Suspense</option>
                     <option value="terror">Terror</option>
-                </select> 
+                </select>
+                <p class="erro"> <%= errors.nome %> </p>  
                 <input type="number" name="classificacao" placeholder="classificação" />
                 <p class="erro"> <%= errors.classificacao %> </p>
                 <input type="text" name="valor" placeholder="valor" />
@@ -90,8 +91,9 @@
                     <option value="policial">Policial</option>
                     <option value="romance">Romance</option>
                     <option value="suspense">Suspense</option>
-                    <option value="terror">Terror</option>
-                </select> 
+                    <option value="terror">Terror</option>                    
+                </select>
+                <p class="erro"> <%= errors.nome %> </p> 
                 <input type="text" name="classificacao" placeholder="classificação" />
                 <p class="erro"> <%= errors.classificacao %> </p>
                 <input type="text" name="valor" placeholder="valor" />

@@ -152,5 +152,15 @@
         "descricao": "testes",
         "imagem": "cards-10.png",
         "background": "banner3.jpg"
+    },
+    {
+        "id": 15,
+        "tipo": "filmes",
+        "nome": "Batman",
+        "classificacao": "12",
+        "valor": "9,77",
+        "descricao": "Teste 4",
+        "imagem": "cards-08.png",
+        "background": "scrool5.jpg"
     }
 ]

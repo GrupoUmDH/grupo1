@@ -152,5 +152,15 @@
         "descricao": "Cavaleiro das Trevas",
         "imagem": "cards-10.png",
         "background": "banner3.jpg"
+    },
+    {
+        "id": 16,
+        "tipo": "series",
+        "nome": "Alice in Borderland",
+        "classificacao": "12",
+        "valor": "9,22",
+        "descricao": "Teste 5",
+        "imagem": "cards-08.png",
+        "background": "banner3.jpg"
     }
 ]
