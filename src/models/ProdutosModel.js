@@ -45,6 +45,8 @@ module.exports = {
     };
 
     // console.log(req)
+     fs.writeFileSync(path.join(__dirname, "../database/filmes.json"), JSON.stringify(produtos, null, 4));
+
     if (novoProduto.tipo == "filmes") {
       produtos.push(novoProduto);
       fs.writeFileSync(
@@ -101,9 +103,8 @@ module.exports = {
       produto.imagem = req.body.imagem;
       produto.background = req.body.background;
     });
-    fs.writeFileSync(
-      path.join(__dirname, "../database/produtos.json"),
-      JSON.stringify(produtos, null, 4)
-    );
+    
+    
+    fs.writeFileSync(path.join(__dirname, "../database/filmes.json"), JSON.stringify(produtos, null, 4));
   },
 };
