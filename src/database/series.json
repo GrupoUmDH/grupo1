@@ -150,8 +150,8 @@
         "classificacao": "12",
         "valor": "9,23",
         "descricao": "Cavaleiro das Trevas",
-        "imagem": "cards-10.png",
-        "background": "banner3.jpg"
+        "imagem": "cards-10",
+        "background": "banner3"
     },
     {
         "id": 16,
@@ -160,7 +160,18 @@
         "classificacao": "12",
         "valor": "9,22",
         "descricao": "Teste 5",
-        "imagem": "cards-08.png",
-        "background": "banner3.jpg"
+        "imagem": "cards-08",
+        "background": "banner3"
+    },
+    {
+        "id": 17,
+        "tipo": "series",
+        "categoria": "ação",
+        "nome": "Vagner 2",
+        "classificacao": "12",
+        "valor": "9,25",
+        "descricao": "Teste",
+        "imagem": "cards-03",
+        "background": "scrool6"
     }
 ]
