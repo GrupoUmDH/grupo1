@@ -1,4 +1,5 @@
 const ProdutosModel = require('../models/ProdutosModel');
+const {validationResult} = require ('express-validator');
 
 module.exports = {
     filmes: (req, res) => {
@@ -38,16 +39,29 @@ module.exports = {
     },
      //criar produto
     createProduto: (req, res) => {
-        if (!req.file) {
-            return res.send("Por favor, adicione uma imagem")
+        const { errors } = validationResult(req);
+        console.log("errors", errors)
+
+        if (errors.length){
+            console.log("Aqui")
+            const errosFormatados = {
+
+            }
+            errors.forEach(erro => 
+                errosFormatados[erro.param] = erro.msg               
+            );
+            console.log("Aqui 2" , errosFormatados)
+            return res.render('cadastroProduto' , { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
         }
         ProdutosModel.createOne(req)
             res.send(`O produto ${req.body.nome} foi criado com sucesso`)
     }, 
     //procurar produto
     buscaProduto: (req, res) => {
-        let filme = ProdutosModel.findOne(req);
-        return res.render('produtos', { pageName: 'produtos', js:' ', filme });
+        res.send(ProdutosModel.findOne(req,res))
+
+        // let filme = ProdutosModel.findOne(req);
+        // return res.render('produtos', { pageName: 'produtos', js:' ', filme });
        // res.send(ProdutosModel.findOne(req));
     },
     listaProduto: (req, res) => {
@@ -55,6 +69,7 @@ module.exports = {
     },
     //deletar produto
     deletaProduto: (req, res) => {
+        
         ProdutosModel.deleteOne(req)
         res.send(`O produto de id ${req.body.id} foi deletado com sucesso`)
     },
@@ -63,5 +78,6 @@ module.exports = {
         ProdutosModel.updateOne(req)
         res.send(`O produto de id ${req.body.id} foi atualizado com sucesso`)
     }
+    
 
 }

@@ -13,7 +13,9 @@
                 </div>
 
                 <input type="text" name="nome" placeholder="nome" />
+                <p class="erro"> <%= errors.nome %> </p>
                 <textarea type="text" name="descricao" placeholder="descricao"></textarea>
+                <p class="erro"> <%= errors.descricao %> </p>
                  <select name="categoria" id="categoria">
                     <option value="select" selected hidden disabled>categoria</option>
                     <option value="ação" >Ação</option>
@@ -30,13 +32,18 @@
                     <option value="romance">Romance</option>
                     <option value="suspense">Suspense</option>
                     <option value="terror">Terror</option>
-                </select> 
+                </select>
+                <p class="erro"> <%= errors.nome %> </p>  
                 <input type="number" name="classificacao" placeholder="classificação" />
+                <p class="erro"> <%= errors.classificacao %> </p>
                 <input type="text" name="valor" placeholder="valor" />
+                <p class="erro"> <%= errors.valor %> </p>
                 <p>Imagem</p>
                 <input type="file" name="imagem" placeholder="imagem" />
-                <!-- <p>background</p>
-                <input type="file" name="imagem_bk" placeholder="background" /> -->
+                
+                <p>background</p>
+                <input type="file" name="background" placeholder="background" />
+                
                 <button type="submit">Adicionar</button>
             </form>
 
@@ -50,29 +57,51 @@
                     <label for="Séries">Séries</label>
                 </div>
                 <input type="text" name="id" placeholder="id" />
+                <p class="erro"> <%= errors.nome %> </p>
                 <button id="bt-pesquisa">Pesquisar</button>
             </form>
 
             <!-- PUT - UPDATE -->
             <form method="POST" action="/produtos/edit?_method=PUT">
                 <h2>UPDATE</h2>
-                <input type="text" name="id" placeholder="id" />
-              
-                <input type="text" name="nome" placeholder="nome" />
-                <textarea type="text" name="descricao" placeholder="descricao"></textarea>
-                <input type="text" name="valor" placeholder="categoria" />
-                <input type="text" name="classificacao" placeholder="classificação" />
-                <input type="text" name="valor" placeholder="valor" />
-                  <div class="check">
+                 <div class="check">
                     <input type="radio" name="check" class="check" />
                     <label for="Filmes">Filmes</label>
                     <input type="radio" name="check" class="check" />
                     <label for="Séries">Séries</label>
                 </div>
-                <!-- <p>Imagem</p>
+                <input type="text" name="id" placeholder="id" />
+                <p class="erro"> <%= errors.nome %> </p>
+                <input type="text" name="nome" placeholder="nome" />
+                <p class="erro"> <%= errors.nome %> </p>
+                <textarea type="text" name="descricao" placeholder="descricao"></textarea>
+                <p class="erro"> <%= errors.descricao %> </p>
+                <select name="categoria" id="categoria">
+                    <option value="select" selected hidden disabled>categoria</option>
+                    <option value="ação" >Ação</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="comédia" >Comédia</option>
+                    <option value="dança">Dança</option>
+                    <option value="documentário">Documentário</option>
+                    <option value="drama">Drama</option>
+                    <option value="faroeste">Faroeste</option>
+                    <option value="ficção">Ficção</option>
+                    <option value="guerra">Guerra</option>
+                    <option value="musical">Musical</option>
+                    <option value="policial">Policial</option>
+                    <option value="romance">Romance</option>
+                    <option value="suspense">Suspense</option>
+                    <option value="terror">Terror</option>                    
+                </select>
+                <p class="erro"> <%= errors.nome %> </p> 
+                <input type="text" name="classificacao" placeholder="classificação" />
+                <p class="erro"> <%= errors.classificacao %> </p>
+                <input type="text" name="valor" placeholder="valor" />
+                <p class="erro"> <%= errors.valor %> </p>
+                <p>Imagem</p>
                 <input type="file" name="imagem" placeholder="imagem" />
                 <p>background</p>
-                <input type="file" name="background" placeholder="imagem" /> -->
+                <input type="file" name="background" placeholder="imagem" />
                 <button>Editar</button>
             </form>
 
@@ -80,12 +109,13 @@
             <form method="POST" action="/produtos/remove?_method=DELETE">
                 <h2>DELETE</h2>
                 <div class="check">
-                    <input type="radio" name="check" value="filmes" class="check" />
+                    <input type="radio" name="tipo" value="filmes" class="check" />
                     <label for="Filmes">Filmes</label>
-                    <input type="radio" name="check" value="series" class="check" />
+                    <input type="radio" name="tipo" value="series" class="check" />
                     <label for="Séries">Séries</label>
                 </div>
                 <input type="text" name="id" placeholder="id" />
+                <p class="erro"> <%= errors.nome %> </p>
                 <button>Apagar</button>
             </form>
         </main>

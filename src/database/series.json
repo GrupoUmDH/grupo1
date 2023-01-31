@@ -1,253 +1,166 @@
 [
     {
         "id": 1,
-        "tipo": "serie",
-        "categoria": "romance",
-        "nome": "ANNE WITH AN 'E'",
-        "valor": "49,90",
+        "tipo": "filme",
+        "categoria": "terror",
+        "nome": "A MULHER NA JANELA",
+        "valor": "9,90",
         "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "anne",
-        "background": "anne_01"
+        "imagem": "aMulherNaJanela",
+        "background": "aMulherNaJanela_01"
     },
     {
         "id": 2,
-        "tipo": "serie",
-        "categoria": "policial",
-        "nome": "A LISTA NEGRA",
-        "valor": "49,90",
+        "tipo": "filme",
+        "categoria": "aventura",
+        "nome": "SPIDER-MAN - NO WAY HOME",
+        "valor": "9,90",
         "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "aListaNegra",
-        "background": "aListaNegra_01"
+        "imagem": "homemAranha",
+        "background": "homemAranha_01"
     },
     {
         "id": 3,
-        "tipo": "serie",
-        "categoria": "policial",
-        "nome": "BETTER CALL SAUL",
-        "valor": "49,90",
+        "tipo": "filme",
+        "categoria": "comédia",
+        "nome": "ARREMESSANDO ALTO",
+        "valor": "9,90",
         "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "betterCallSaul",
-        "background": "betterCallSaul_01"
+        "imagem": "arremessandoAlto",
+        "background": "arremessandoAlto_01"
     },
     {
         "id": 4,
-        "tipo": "serie",
-        "categoria": "ação",
-        "nome": "BELEZA AVASSALADORA",
-        "valor": "49,90",
+        "tipo": "filme",
+        "categoria": "comédia",
+        "nome": "AS BRANQUELAS",
+        "valor": "9,90",
         "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "belezaAvassaladora",
-        "background": "belezaAvassaladora_01"
+        "imagem": "asBranquelas",
+        "background": "asBranquelas_01"
     },
     {
         "id": 5,
-        "tipo": "serie",
-        "categoria": "suspense",
-        "nome": "ESCOLA BEM OU MAL",
-        "valor": "49,90",
+        "tipo": "filme",
+        "categoria": "guerra",
+        "nome": "CORAÇÕES DE FERRO",
+        "valor": "9,90",
         "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "escolaBemOuMal",
-        "background": "escolaBemOuMal_01"
+        "imagem": "coracoesDeFerro",
+        "background": "coracoesDeFerro_01"
     },
     {
         "id": 6,
-        "tipo": "serie",
-        "categoria": "TERROR",
-        "nome": "BLACK MIRROR",
-        "valor": "49,90",
+        "tipo": "filme",
+        "categoria": "aventura",
+        "nome": "GUERRA MUNDIAL Z",
+        "valor": "9,90",
         "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "blackMirror",
-        "background": "blackMirror_01"
+        "imagem": "guerraMundialZ",
+        "background": "guerraMundialZ_01"
     },
     {
         "id": 7,
-        "tipo": "serie",
+        "tipo": "filme",
         "categoria": "ação",
-        "nome": "COBRA KAI",
-        "valor": "49,90",
+        "nome": "O CULPADO",
+        "valor": "9,90",
         "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "cobraKai",
-        "background": "cobraKai_01"
+        "imagem": "oCulpado",
+        "background": "oCulpado_01"
     },
     {
         "id": 8,
-        "tipo": "serie",
+        "tipo": "filme",
         "categoria": "ação",
-        "nome": "BREAKING BAD",
-        "valor": "49,90",
+        "nome": "O DIABO DE CADA DIA",
+        "valor": "9,90",
         "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "breakingBad",
-        "background": "breakingBad_01"
+        "imagem": "oDiaboDeCadaDia",
+        "background": "oDiaboDeCadaDia_01"
     },
     {
         "id": 9,
-        "tipo": "serie",
-        "categoria": "suspense",
-        "nome": "DAHMER",
-        "valor": "49,90",
+        "tipo": "filme",
+        "categoria": "aventura",
+        "nome": "ONDE ESTA SEGUNDA",
+        "valor": "9,90",
         "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "dahmer",
-        "background": "dahmer_01"
+        "imagem": "ondeEstaSegunda",
+        "background": "ondeEstaSegunda_01"
     },
     {
         "id": 10,
-        "tipo": "serie",
-        "categoria": "suspense",
-        "nome": "DARK",
-        "valor": "49,90",
+        "tipo": "filme",
+        "categoria": "terror",
+        "nome": "O PROTETOR",
+        "valor": "9,90",
         "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "dark",
-        "background": "dark_01"
+        "imagem": "oProtetor",
+        "background": "oProtetor_01"
     },
     {
         "id": 11,
-        "tipo": "serie",
-        "categoria": "aventura",
-        "nome": "DESVENTURAS EM SÉRIES",
-        "valor": "49,90",
+        "tipo": "filme",
+        "categoria": "ação",
+        "nome": "RESIDENT EVIL",
+        "valor": "9,90",
         "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "desventurasEmSerie",
-        "background": "desventurasEmSerie_01"
-    },{
+        "imagem": "ResidentEvil",
+        "background": "ResidentEvil_01"
+    },
+    {
         "id": 12,
-        "tipo": "serie",
-        "categoria": "aventura",
-        "nome": "GOTHAM",
-        "valor": "49,90",
+        "tipo": "filme",
+        "categoria": "terror",
+        "nome": "SEGREDOS NAS PAREDES",
+        "valor": "9,90",
         "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "gotham",
-        "background": "gotham_01"
-    },{
+        "imagem": "segredosNasParedes",
+        "background": "segredosNasParedes_01"
+    },
+    {
         "id": 13,
-        "tipo": "serie",
-        "categoria": "ação",
-        "nome": "LA CASA DE PAPEL",
-        "valor": "49,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "laCasaDePapel",
-        "background": "laCasaDePapel_01"
-    },{
-        "id": 14,
-        "tipo": "serie",
-        "categoria": "AVENTURA",
-        "nome": "O GAMBITO DA RAINHA",
-        "valor": "49,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "oGambitoDaRainha",
-        "background": "oGambitoDaRainha_01"
-    },{
-        "id": 15,
-        "tipo": "serie",
-        "categoria": "COMÉDIA",
-        "nome": "grace And Frankie",
-        "valor": "49,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "graceAndFrankie",
-        "background": "graceAndFrankie_01"
-    },{
-        "id": 16,
-        "tipo": "serie",
-        "categoria": "comédia",
-        "nome": "orange Is The New Black",
-        "valor": "49,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "orangeIsTheNewBlack",
-        "background": "orangeIsTheNewBlack_01"
-    },{
-        "id": 17,
-        "tipo": "serie",
-        "categoria": "aventura",
-        "nome": "peaky Blinders",
-        "valor": "49,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "peakyBlinders",
-        "background": "peakyBlinders_01"
-    },{
-        "id": 18,
-        "tipo": "serie",
-        "categoria": "ação",
-        "nome": "round 6",
-        "valor": "49,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "round6",
-        "background": "round6_01"
-    },{
-        "id": 19,
-        "tipo": "serie",
-        "categoria": "aventura",
-        "nome": "sandman",
-        "valor": "49,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "sandman",
-        "background": "sandman_01"
-    },{
-        "id": 20,
-        "tipo": "serie",
-        "categoria": "suspense",
-        "nome": "stranger Things",
-        "valor": "49,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "strangerThings",
-        "background": "strangerThings_01"
-    },{
-        "id": 21,
-        "tipo": "serie",
-        "categoria": "ação",
-        "nome": "suits",
-        "valor": "49,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "suits",
-        "background": "suits_01"
-    },{
-        "id": 22,
-        "tipo": "serie",
+        "tipo": "filme",
         "categoria": "drama",
-        "nome": "the Crown",
-        "valor": "49,90",
+        "nome": "UMA GAROTA DE MUITA SORTE",
+        "valor": "9,90",
         "classificacao": "14 anos",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "theCrown",
-        "background": "theCrown_01"
-    },{
-        "id": 23,
-        "tipo": "serie",
-        "categoria": "comédia",
-        "nome": "the Good Place",
-        "valor": "49,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "theGoodPlace",
-        "background": "theGoodPlace_01"
-    },{
-        "id": 24,
-        "tipo": "serie",
+        "imagem": "umaGarotaDeMuitaSorte",
+        "background": "umaGarotaDeMuitaSorte_01"
+    },
+    {
+        "id": 14,
+        "tipo": "filmes",
         "categoria": "aventura",
-        "nome": "vikings",
-        "valor": "49,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "vikings",
-        "background": "vikings_01"
+        "nome": "Batman",
+        "classificacao": "12",
+        "valor": "9,23",
+        "descricao": "Cavaleiro das Trevas",
+        "imagem": "cards-10.png",
+        "background": "banner3.jpg"
+    },
+    {
+        "id": 16,
+        "tipo": "series",
+        "nome": "Alice in Borderland",
+        "classificacao": "12",
+        "valor": "9,22",
+        "descricao": "Teste 5",
+        "imagem": "cards-08.png",
+        "background": "banner3.jpg"
     }
 ]

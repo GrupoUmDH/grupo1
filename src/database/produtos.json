@@ -1,0 +1,145 @@
+[
+    {
+        "id": 1,
+        "tipo": "filme",
+        "categoria": "terror",
+        "nome": "A MULHER NA JANELA",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "aMulherNaJanela",
+        "background": "aMulherNaJanela_01"
+    },
+    {
+        "id": 2,
+        "tipo": "filme",
+        "categoria": "aventura",
+        "nome": "SPIDER-MAN - NO WAY HOME",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "homemAranha",
+        "background": "homemAranha_01"
+    },
+    {
+        "id": 3,
+        "tipo": "filme",
+        "categoria": "comédia",
+        "nome": "ARREMESSANDO ALTO",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "arremessandoAlto",
+        "background": "arremessandoAlto_01"
+    },
+    {
+        "id": 4,
+        "tipo": "filme",
+        "categoria": "comédia",
+        "nome": "AS BRANQUELAS",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "asBranquelas",
+        "background": "asBranquelas_01"
+    },
+    {
+        "id": 5,
+        "tipo": "filme",
+        "categoria": "guerra",
+        "nome": "CORAÇÕES DE FERRO",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "coracoesDeFerro",
+        "background": "coracoesDeFerro_01"
+    },
+    {
+        "id": 6,
+        "tipo": "filme",
+        "categoria": "aventura",
+        "nome": "GUERRA MUNDIAL Z",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "guerraMundialZ",
+        "background": "guerraMundialZ_01"
+    },
+    {
+        "id": 7,
+        "tipo": "filme",
+        "categoria": "ação",
+        "nome": "O CULPADO",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "oCulpado",
+        "background": "oCulpado_01"
+    },
+    {
+        "id": 8,
+        "tipo": "filme",
+        "categoria": "ação",
+        "nome": "O DIABO DE CADA DIA",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "oDiaboDeCadaDia",
+        "background": "oDiaboDeCadaDia_01"
+    },
+    {
+        "id": 9,
+        "tipo": "filme",
+        "categoria": "aventura",
+        "nome": "ONDE ESTA SEGUNDA",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "ondeEstaSegunda",
+        "background": "ondeEstaSegunda_01"
+    },
+    {
+        "id": 10,
+        "tipo": "filme",
+        "categoria": "terror",
+        "nome": "O PROTETOR",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "oProtetor",
+        "background": "oProtetor_01"
+    },
+    {
+        "id": 11,
+        "tipo": "filme",
+        "categoria": "ação",
+        "nome": "RESIDENT EVIL",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "ResidentEvil",
+        "background": "ResidentEvil_01"
+    },
+    {
+        "id": 12,
+        "tipo": "filme",
+        "categoria": "terror",
+        "nome": "SEGREDOS NAS PAREDES",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "segredosNasParedes",
+        "background": "segredosNasParedes_01"
+    },
+    {
+        "id": 13,
+        "tipo": "filme",
+        "categoria": "drama",
+        "nome": "UMA GAROTA DE MUITA SORTE",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "umaGarotaDeMuitaSorte",
+        "background": "umaGarotaDeMuitaSorte_01"
+    }
+]

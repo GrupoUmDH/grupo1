@@ -12,5 +12,11 @@
         "nome": "anna",
         "password": "123456",
         "email": "annapaulapedrussi@gmail.com"
+    },
+    {
+        "id": 6,
+        "nome": "Vagner Bezerra",
+        "password": "12345",
+        "email": "spotify.vagner@gmail.com"
     }
 ]

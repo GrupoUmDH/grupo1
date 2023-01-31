@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const validadorForm = require('../middlewares/validadorForm')
 
 const ProdutosController = require('../controllers/ProdutosController');
 
@@ -11,7 +12,7 @@ router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
 router.get('/categorias', ProdutosController.listar);
 router.get('/cadastroProduto', function(req, res, next) {
-    res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'cadastroProduto' });
+    res.render('cadastroProduto', { pageName: 'cadastroProduto', errors: [], js: 'cadastroProduto' });
 });
 
 //implementar multer
@@ -26,10 +27,11 @@ const storage = multer.diskStorage({
 });
 const upload = multer({storage: storage, limits: {fileSize: 10000000}});
 
-router.get('/produtos/:id/:nome?', ProdutosController.listaProduto)
+router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
+
 
 //criar produto
-router.post('/create',upload.single('background'), ProdutosController.createProduto);
+router.post('/create',upload.fields([{name:'background'},{name:'imagem'}]), validadorForm, ProdutosController.createProduto);
 
 //buscar produto
 router.get('/search', ProdutosController.buscaProduto);
@@ -38,7 +40,7 @@ router.get('/search', ProdutosController.buscaProduto);
 router.delete('/remove', ProdutosController.deletaProduto);
 
 // atualiza produto
-router.put('/edit', ProdutosController.atualizaProduto);
+router.put('/edit', validadorForm, ProdutosController.atualizaProduto);
 
 
 module.exports = router;
