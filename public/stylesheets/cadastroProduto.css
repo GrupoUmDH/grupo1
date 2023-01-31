@@ -19,10 +19,10 @@ main {
 
 main>form {
     height: 50rem;
-    width: 18rem;
+    width: 19rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     padding: .1rem;
     background: var(--background-2);
     color: var(--cores-letra);
@@ -90,4 +90,12 @@ body * {
     justify-content: center;
     align-items: center;
     border-radius: 30px;
+}
+
+p.erro {
+    min-height: 1rem;
+    font-style: italic;
+    font-size: small;
+    color: #B30006;
+    margin: .1px;    
 }
