@@ -141,5 +141,28 @@
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "umaGarotaDeMuitaSorte",
         "background": "umaGarotaDeMuitaSorte_01"
+    },
+    {
+        "id": 14,
+        "tipo": "filmes",
+        "categoria": "ação",
+        "nome": "Alice in Borderland",
+        "classificacao": "12",
+        "valor": "9,22",
+        "descricao": "testes",
+        "imagem": "cards-10.png",
+        "background": "banner3.jpg"
+    },
+    {
+        "id": 15,
+        "tipo": "filmes",
+        "nome": "Batman",
+        "classificacao": "12",
+        "valor": "8,78",
+        "descricao": "Teste",
+        "imagem": "cards-03.png",
+        "background": "scrool6.jpg",
+        "categoria": "aventura",
+        "check": "on"
     }
 ]

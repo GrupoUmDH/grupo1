@@ -145,22 +145,36 @@
     {
         "id": 14,
         "tipo": "filmes",
-        "categoria": "ação",
-        "nome": "Alice in Borderland",
+        "categoria": "aventura",
+        "nome": "Vagner",
         "classificacao": "12",
-        "valor": "9,22",
-        "descricao": "testes",
-        "imagem": "cards-10.png",
-        "background": "banner3.jpg"
+        "valor": "8,37",
+        "descricao": "tese 42",
+        "imagem": "cards-03",
+        "background": "scrool6",
+        "check": "on"
     },
     {
         "id": 15,
         "tipo": "filmes",
         "nome": "Batman",
         "classificacao": "12",
-        "valor": "9,77",
-        "descricao": "Teste 4",
-        "imagem": "cards-08.png",
-        "background": "scrool5.jpg"
+        "valor": "8,78",
+        "descricao": "Teste",
+        "imagem": "cards-03",
+        "background": "scrool6",
+        "categoria": "aventura",
+        "check": "on"
+    },
+    {
+        "id": 16,
+        "tipo": "filmes",
+        "categoria": "aventura",
+        "nome": "Vagner 87",
+        "classificacao": "12",
+        "valor": "9,90",
+        "descricao": "TESTE 2001",
+        "imagem": "cards-03.png",
+        "background": "scrool6.jpg"
     }
 ]
