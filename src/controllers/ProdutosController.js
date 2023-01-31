@@ -40,8 +40,18 @@ module.exports = {
      //criar produto
     createProduto: (req, res) => {
         const { errors } = validationResult(req);
+        console.log("errors", errors)
+
         if (errors.length){
-            return res.render('produtos/cadastroProduto' , { errors, produtos: null });
+            console.log("Aqui")
+            const errosFormatados = {
+
+            }
+            errors.forEach(erro => 
+                errosFormatados[erro.param] = erro.msg               
+            );
+            console.log("Aqui 2" , errosFormatados)
+            return res.render('cadastroProduto' , { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
         }
         ProdutosModel.createOne(req)
             res.send(`O produto ${req.body.nome} foi criado com sucesso`)
@@ -59,6 +69,7 @@ module.exports = {
     },
     //deletar produto
     deletaProduto: (req, res) => {
+        
         ProdutosModel.deleteOne(req)
         res.send(`O produto de id ${req.body.id} foi deletado com sucesso`)
     },
@@ -67,5 +78,6 @@ module.exports = {
         ProdutosModel.updateOne(req)
         res.send(`O produto de id ${req.body.id} foi atualizado com sucesso`)
     }
+    
 
 }

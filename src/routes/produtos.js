@@ -12,7 +12,7 @@ router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
 router.get('/categorias', ProdutosController.listar);
 router.get('/cadastroProduto', function(req, res, next) {
-    res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'cadastroProduto' });
+    res.render('cadastroProduto', { pageName: 'cadastroProduto', errors: [], js: 'cadastroProduto' });
 });
 
 //implementar multer
@@ -40,7 +40,7 @@ router.get('/search', ProdutosController.buscaProduto);
 router.delete('/remove', ProdutosController.deletaProduto);
 
 // atualiza produto
-router.put('/edit', ProdutosController.atualizaProduto);
+router.put('/edit', validadorForm, ProdutosController.atualizaProduto);
 
 
 module.exports = router;
