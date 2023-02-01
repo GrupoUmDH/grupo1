@@ -61,8 +61,9 @@ module.exports = {
   },
   //procurar produto
   findOne: (req) => {
-    let found = produtos.find(produto => produto.id == req.query.id);
-    return found;
+    let found = produtos.find(produto => produto.id == req.query.idRead);
+    return found
+    
 
   // findOne: (req) => {
   //   let found = produtos.find(produto => produto.id == req.query.id);
