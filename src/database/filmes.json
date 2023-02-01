@@ -144,37 +144,45 @@
     },
     {
         "id": 14,
-        "tipo": "filmes",
+        "tipo": "filme",
         "categoria": "aventura",
-        "nome": "Vagner",
-        "classificacao": "12",
-        "valor": "8,37",
-        "descricao": "tese 42",
-        "imagem": "cards-03",
-        "background": "scrool6",
-        "check": "on"
+        "nome": "UM LUGAR SILENCIOSO",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "umLugarSilencioso",
+        "background": "umLugarSilencioso_01"
     },
     {
         "id": 15,
-        "tipo": "filmes",
-        "nome": "Batman",
-        "classificacao": "12",
-        "valor": "8,78",
-        "descricao": "Teste",
-        "imagem": "cards-03",
-        "background": "scrool6",
-        "categoria": "aventura",
-        "check": "on"
+        "tipo": "filme",
+        "categoria": "romance",
+        "nome": "ESPOSA DE ALUGUEL",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "esposaDeAluguel",
+        "background": "esposaDeAluguel_01"
     },
     {
         "id": 16,
         "tipo": "filmes",
-        "categoria": "aventura",
-        "nome": "Vagner 87",
-        "classificacao": "12",
+        "nome": "Entre Facas e Segredos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "categoria": "suspense",
+        "classificacao": "14 anos",
         "valor": "9,90",
-        "descricao": "TESTE 2001",
-        "imagem": "cards-03.png",
-        "background": "scrool6.jpg"
+        "imagem": "entreFacasESegredos.jpg",
+        "background": "entreFacasESegredos_01"
+    },
+    {
+        "id": 17,
+        "tipo": "filmes",
+        "categoria": "aventura",
+        "nome": "enola Holmes 2",
+        "classificacao": "14",
+        "valor": "49,90",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "background": "enolaHolmes2_01"
     }
 ]

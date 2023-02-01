@@ -151,7 +151,7 @@ main {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    margin-bottom: 7rem;
+    margin-bottom: 0.2rem;
 }
 
 .container>h1 {
@@ -189,7 +189,7 @@ hr {
     justify-content: space-around;
     width: 100%;
     margin-top: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 .filmes-home img {
@@ -315,7 +315,7 @@ div #dados-filme {
     justify-content: space-around;
     width: 100%;
     margin-top: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 0.5rem;
 }
 
 .series-home img {

@@ -52,7 +52,7 @@ h1{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    margin-bottom: 7rem;
+    margin-bottom: 0.2rem;
 }
 
 .container > .series-home{

@@ -34,7 +34,7 @@ body{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    margin-bottom: 7rem;
+    margin-bottom: 0.2rem;
 }
 
 .container>h1 {
@@ -71,7 +71,7 @@ hr {
     justify-content: space-around;
     width: 100%;
     margin-top: 2rem;
-    margin-bottom: 5rem;
+   
 }
 
 .filme-show img {
