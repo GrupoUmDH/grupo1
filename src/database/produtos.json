@@ -2,14 +2,13 @@
     {
         "id": 1,
         "tipo": "filme",
-        "categoria": "ação",
-        "nome": "SPIDER-MAN - NO WAY HOME",
-        "valor": "9,25",
-        "classificacao": "12",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-        "imagem": "banner3.jpg",
-        "background": "banner4.jpg",
-        "check": "on"
+        "categoria": "terror",
+        "nome": "A MULHER NA JANELA",
+        "valor": "9,90",
+        "classificacao": "14 anos",
+        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
+        "imagem": "aMulherNaJanela",
+        "background": "aMulherNaJanela_01"
     },
     {
         "id": 2,
@@ -145,13 +144,25 @@
     },
     {
         "id": 14,
-        "tipo": "filme",
+        "tipo": "filmes",
+        "categoria": "ação",
+        "nome": "Alice in Borderland",
+        "classificacao": "12",
+        "valor": "9,22",
+        "descricao": "testes",
+        "imagem": "cards-10.png",
+        "background": "banner3.jpg"
+    },
+    {
+        "id": 15,
+        "tipo": "filmes",
+        "nome": "Batman",
+        "classificacao": "12",
+        "valor": "8,78",
+        "descricao": "Teste",
+        "imagem": "cards-03.png",
+        "background": "scrool6.jpg",
         "categoria": "aventura",
-        "nome": "UM LUGAR SILENCIOSO",
-        "valor": "9,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "umLugarSilencioso",
-        "background": "umLugarSilencioso_01"
+        "check": "on"
     }
 ]

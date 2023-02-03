@@ -32,7 +32,9 @@ module.exports = {
 
   //criar produto
   createOne: (req) => {
-      let novoProduto = {
+
+
+    let novoProduto = {
       id: produtos[produtos.length - 1].id + 1,
       tipo: req.body.check,
       categoria: req.body.categoria,
@@ -41,10 +43,12 @@ module.exports = {
       valor: req.body.valor,
       descricao: req.body.descricao,
       imagem: req.files.imagem[0].filename,
-      background: req.files.background[0].filename,
+      background: path.parse(req.files.background[0].filename).name,
     };
-
+// req.files.background[0].filename
     // console.log(req)
+     fs.writeFileSync(path.join(__dirname, "../database/filmes.json"), JSON.stringify(produtos, null, 4));
+
     if (novoProduto.tipo == "filmes") {
       produtos.push(novoProduto);
       fs.writeFileSync(
@@ -59,8 +63,9 @@ module.exports = {
   },
   //procurar produto
   findOne: (req) => {
-    let found = produtos.find(produto => produto.id == req.query.id);
-    return found;
+    let found = produtos.find(produto => produto.id == req.query.idRead);
+    return found
+    
 
   // findOne: (req) => {
   //   let found = produtos.find(produto => produto.id == req.query.id);
@@ -101,9 +106,8 @@ module.exports = {
       produto.imagem = req.body.imagem;
       produto.background = req.body.background;
     });
-    fs.writeFileSync(
-      path.join(__dirname, "../database/produtos.json"),
-      JSON.stringify(produtos, null, 4)
-    );
+    
+    
+    fs.writeFileSync(path.join(__dirname, "../database/filmes.json"), JSON.stringify(produtos, null, 4));
   },
 };

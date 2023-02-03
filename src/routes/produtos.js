@@ -2,7 +2,10 @@ var express = require('express');
 var router = express.Router();
 const multer = require('multer');
 const path = require('path');
-const validadorForm = require('../middlewares/validadorForm')
+const validadorFormCreate = require('../middlewares/validadorFormCreate');
+const validadorFormDelete = require('../middlewares/validadorFormDelete')
+const validadorFormRead = require('../middlewares/validadorFormRead')
+const validadorFormUpdate = require('../middlewares/validadorFormUpdate')
 
 const ProdutosController = require('../controllers/ProdutosController');
 
@@ -12,7 +15,7 @@ router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
 router.get('/categorias', ProdutosController.listar);
 router.get('/cadastroProduto', function(req, res, next) {
-    res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'cadastroProduto' });
+    res.render('cadastroProduto', { pageName: 'cadastroProduto', errors: [], js: 'cadastroProduto' });
 });
 
 //implementar multer
@@ -31,16 +34,16 @@ router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
 
 
 //criar produto
-router.post('/create',upload.fields([{name:'background'},{name:'imagem'}]), validadorForm, ProdutosController.createProduto);
+router.post('/create',upload.fields([{name:'background'},{name:'imagem'}]), validadorFormCreate, ProdutosController.createProduto);
 
 //buscar produto
-router.get('/search', ProdutosController.buscaProduto);
+router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
  
 // deletar produto
-router.delete('/remove', ProdutosController.deletaProduto);
+router.delete('/remove', validadorFormDelete, ProdutosController.deletaProduto);
 
 // atualiza produto
-router.put('/edit', ProdutosController.atualizaProduto);
+router.put('/edit', validadorFormUpdate, ProdutosController.atualizaProduto);
 
 
 module.exports = router;

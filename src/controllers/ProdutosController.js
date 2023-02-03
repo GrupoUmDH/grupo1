@@ -40,15 +40,38 @@ module.exports = {
      //criar produto
     createProduto: (req, res) => {
         const { errors } = validationResult(req);
+        console.log("errors", errors)
+
         if (errors.length){
-            return res.render('produtos/cadastroProduto' , { errors, produtos: null });
+            console.log("Aqui")
+            const errosFormatados = {
+
+            }
+            errors.forEach(erro => 
+            errosFormatados[erro.param] = erro.msg               
+            );
+            console.log("Aqui 2" , errosFormatados)
+            return res.render('cadastroProduto' , { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
         }
-        ProdutosModel.createOne(req)
+            ProdutosModel.createOne(req)
             res.send(`O produto ${req.body.nome} foi criado com sucesso`)
     }, 
     //procurar produto
     buscaProduto: (req, res) => {
+        const { errors } = validationResult(req);
+        console.log("errors", errors)
+
+        if (errors.length){
+            const errosFormatados = {
+
+            }
+            errors.forEach(erro => 
+            errosFormatados[erro.param] = erro.msg               
+            );
+            return res.render('cadastroProduto' , { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
+        }
         res.send(ProdutosModel.findOne(req,res))
+        
 
         // let filme = ProdutosModel.findOne(req);
         // return res.render('produtos', { pageName: 'produtos', js:' ', filme });
@@ -59,13 +82,43 @@ module.exports = {
     },
     //deletar produto
     deletaProduto: (req, res) => {
+        const { errors } = validationResult(req);
+        console.log("errors", errors)
+
+        if (errors.length){
+            console.log("Aqui")
+            const errosFormatados = {
+
+            }
+            errors.forEach(erro => 
+            errosFormatados[erro.param] = erro.msg               
+            );
+            console.log("Aqui 2" , errosFormatados)
+            return res.render('cadastroProduto' , { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
+        }
+        
         ProdutosModel.deleteOne(req)
         res.send(`O produto de id ${req.body.id} foi deletado com sucesso`)
     },
     // atualização de produto
     atualizaProduto: (req, res) => {
+        const { errors } = validationResult(req);
+        console.log("errors", errors)
+
+        if (errors.length){
+            console.log("Aqui")
+            const errosFormatados = {
+
+            }
+            errors.forEach(erro => 
+            errosFormatados[erro.param] = erro.msg               
+            );
+            console.log("Aqui 2" , errosFormatados)
+            return res.render('cadastroProduto' , { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
+        }
         ProdutosModel.updateOne(req)
         res.send(`O produto de id ${req.body.id} foi atualizado com sucesso`)
     }
+    
 
 }

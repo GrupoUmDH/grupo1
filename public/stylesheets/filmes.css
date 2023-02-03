@@ -28,7 +28,7 @@ body{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    margin-bottom: 7rem;
+    margin-bottom: 0.2rem;
 }
 
 .container>h1 {
@@ -65,7 +65,7 @@ hr {
     justify-content: space-around;
     width: 100%;
     margin-top: 2rem;
-    margin-bottom: 5rem;
+   
 }
 
 .filme-show img {
@@ -89,7 +89,7 @@ hr {
 .filme-show .descri {
     width: 15rem;
     font-size: .8rem;
-    text-align: left;
+    text-align: center;
     background-color: transparent;
     display: flex;
     justify-content: space-around; 
@@ -126,7 +126,7 @@ hr {
     height: 40%;
     justify-content: flex-end;
     top: 10rem;
-
+    text-align: center;
 }
 
 .filme-show:hover .descri div #valor {
@@ -145,6 +145,7 @@ hr {
     font-weight: bold;
     padding: 4px;
     margin: 4px;
+    text-align: center;
 }
 
 #nome-filme {
