@@ -1,5 +1,10 @@
+const fs = require("fs");
+const path = require("path");
+
+const jsonCarrinho = require("../database/filmesCarrinho.json");
+
 module.exports = {
-    index: () => {
+    index() {
         return [
             { img: "credit-card" },
             { img: "pag-seguro" },
@@ -7,27 +12,45 @@ module.exports = {
             { img: "boleto" },
         ];
     },
-    itens: (itens) => {
+    itens(itens) {
         if (!itens) {
-            return [{}];
+            return JSON.stringify(jsonCarrinho);
         } else {
             return JSON.parse(itens);
         }
     },
-    valores: (item) => {
-        let content = JSON.parse(item);
+    valores(item) {
+        if (item) {
+            let content = JSON.parse(item);
 
-        if(content) {
-            let soma = 0;
-            content.forEach((element) => {
-                soma += parseFloat(element.valor.replace(",", "."));
-                //console.log(parseFloat(element.valor.replace(",", ".")));
-            });
-            //content = content.filter(a => a.precoComprar);
-            return soma.toFixed(2).replace(".", ",");
+            if (content) {
+                let soma = 0;
+                content.forEach((element) => {
+                    soma += parseFloat(element.valor.replace(",", "."));
+                    //console.log(parseFloat(element.valor.replace(",", ".")));
+                });
+                //content = content.filter(a => a.precoComprar);
+                return soma.toFixed(2).replace(".", ",");
+            } else {
+                return null
+            }
         } else {
-            return null
+            return "R$ 0,00";
         }
-        
     },
+    adiciona(req, res){
+
+    },
+    deletar(ref) {
+        //const item = ref;
+        //this.itens(attCarrinho);
+    },
+    attCarrinho (conteudo) {
+        //JSON.parse(conteudo)
+
+        fs.writeFileSync(
+            path.join(__dirname, "../database/filmesCarrinho.json"),
+            JSON.stringify(content, null, 4)
+        );
+    }
 };
