@@ -9,13 +9,13 @@
     --cores-objetos: #580003;
 }
 header {
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     width: 100%;
     font-size: 1.5rem;
     height: 5rem;
+    
 }
 
 *{
@@ -31,10 +31,10 @@ body {
 /* NAVBAR */
 
 #navbar {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 5rem;
     margin-right: 1rem;
     margin-left: 1rem;
 }
@@ -99,6 +99,7 @@ body {
     position: relative;
     left: -1.7rem;
     width: 4rem;
+    height: 1.5rem;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -147,7 +148,7 @@ button  {
     cursor: pointer;
 }
 
-#menu-content>ul li a {
+#menu-content>ul li {
     display: flex;
     padding: .6rem;
     margin: 0;
@@ -155,7 +156,7 @@ button  {
     align-content: center;
 }
 
-#menu-content>ul li a img {
+#menu-content>ul li img {
     width: 25px;
     padding-right: 10px;
 }
@@ -163,12 +164,15 @@ button  {
 button {
     background-color: transparent;
     border: 0;
+    padding: .6rem;
+    font: 0.7em 'Inter';
+    color: var(--cores-letra);
 }
 
 #qtd-item {
     display: block;
     text-align: center;
     position: absolute;
-    top: 3rem;
+    top: 1.7rem;
     color: var(--cores-letra);
 }

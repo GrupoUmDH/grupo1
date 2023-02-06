@@ -10,7 +10,12 @@
         <script src="/javascripts/header.js" defer></script>
         <script src="/javascripts/<%=js%>.js" defer></script>
 
-        <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.ico" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/img/favicon.ico"
+        />
 
         <title><%=pageName%></title>
     </head>
@@ -47,9 +52,20 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<%= '/produtos/carrinho' %>">
-                                <img src="/img/ico/carrinho.png" /> Meu Carrinho
-                            </a>
+                            <form
+                                action="/carrinho"
+                                method="GET"
+                                id="montarCarrinho"
+                            >
+                                <input
+                                    type="hidden"
+                                    name="itensCarrinho"
+                                    id="itensCarrinho"
+                                />
+                                <button type="submit">
+                                    <img src="/img/ico/carrinho.png" /> Carrinho
+                                </button>
+                            </form>
                         </li>
                         <li>
                             <a href="<%= '/produtos/categorias' %>">
@@ -100,7 +116,11 @@
                 </form>
                 <div class="navuser">
                     <form action="/carrinho" method="GET" id="montarCarrinho">
-                        <input type="hidden" name="itensCarrinho"/>
+                        <input
+                            type="hidden"
+                            name="itensCarrinho"
+                            id="itensCarrinho"
+                        />
                         <button type="submit">
                             <img src="/img/ico/carrinho.png" />
                             <span id="qtd-item">0</span>

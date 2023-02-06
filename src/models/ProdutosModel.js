@@ -33,28 +33,25 @@ module.exports = {
   //criar produto
   createOne: (req) => {
 
-
     let novoProduto = {
       id: produtos[produtos.length - 1].id + 1,
-      tipo: req.body.check,
-      categoria: req.body.categoria,
-      nome: req.body.nome,
-      classificacao: req.body.classificacao,
-      valor: req.body.valor,
-      descricao: req.body.descricao,
-      imagem: req.files.imagem[0].filename,
-      background: path.parse(req.files.background[0].filename).name,
+      tipo: req.body.tipoCreate,
+      categoria: req.body.categoriaCreate,
+      nome: req.body.nomeCreate,
+      classificacao: req.body.classificacaoCreate,
+      valor: req.body.valorCreate,
+      descricao: req.body.descricaoCreate,
+      imagem: req.files.imagemCreate[0].filename,
+      background: path.parse(req.files.backgroundCreate[0].filename).name,
     };
-// req.files.background[0].filename
-    // console.log(req)
-     fs.writeFileSync(path.join(__dirname, "../database/filmes.json"), JSON.stringify(produtos, null, 4));
+    fs.writeFileSync(path.join(__dirname, "../database/filmes.json"), JSON.stringify(produtos, null, 4));
 
     if (novoProduto.tipo == "filmes") {
       produtos.push(novoProduto);
       fs.writeFileSync(
         path.join(__dirname, "../database/filmes.json"),
         JSON.stringify(produtos, null, 4));
-    } if (novoProduto.tipo == "series")  {
+    } if (novoProduto.tipo == "series") {
       series.push(novoProduto);
       fs.writeFileSync(
         path.join(__dirname, "../database/series.json"),
@@ -65,11 +62,11 @@ module.exports = {
   findOne: (req) => {
     let found = produtos.find(produto => produto.id == req.query.idRead);
     return found
-    
 
-  // findOne: (req) => {
-  //   let found = produtos.find(produto => produto.id == req.query.id);
-  //   return found;
+
+    // findOne: (req) => {
+    //   let found = produtos.find(produto => produto.id == req.query.id);
+    //   return found;
   },
   // findByParams: (req) => {
   //   let found = produtos.find((produto) => produto.id == req.params.id);
@@ -78,12 +75,12 @@ module.exports = {
 
   //deletar produto
   deleteOne: (req) => {
-    const filteredproduct = produtos.filter((produto) => produto.id != req.body.id)
+    const filteredproduct = produtos.filter((produto) => produto.id != req.body.idDelete)
     console.log('produtos', filteredproduct)
 
-    if (req.body.tipo == "filmes") {
+    if (req.body.tipoDelete == "filmes") {
       fs.writeFileSync(path.join(__dirname, "../database/filmes.json"), JSON.stringify(filteredproduct, null, 4));
-    } if (req.body.tipo == "series")  {
+    } if (req.body.tipoDelete == "series") {
       fs.writeFileSync(path.join(__dirname, "../database/series.json"), JSON.stringify(filteredproduct, null, 4));
     }
 
@@ -96,18 +93,18 @@ module.exports = {
   // atualiza produto
   updateOne: (req) => {
     produtos.forEach((produto) => {
-      if (produto.id != req.body.id) return;
-      produto.check = req.body.check;
-      produto.nome = req.body.nome;
-      produto.descricao = req.body.descricao;
-      produto.categoria = req.body.categoria;
-      produto.classificacao = req.body.classificacao;
-      produto.valor = req.body.valor;
-      produto.imagem = req.body.imagem;
-      produto.background = req.body.background;
+      if (produto.id != req.body.idUpdate) return;
+      produto.check = req.body.tipoUpdate;
+      produto.nome = req.body.nomeUpdate;
+      produto.descricao = req.body.descricaoUpdate;
+      produto.categoria = req.body.categoriaUpdate;
+      produto.classificacao = req.body.classificacaoUpdate;
+      produto.valor = req.body.valorUpdate;
+      produto.imagem = req.body.imagemUpdate;
+      produto.background = req.body.backgroundUpdate;
     });
-    
-    
+
+
     fs.writeFileSync(path.join(__dirname, "../database/filmes.json"), JSON.stringify(produtos, null, 4));
   },
 };

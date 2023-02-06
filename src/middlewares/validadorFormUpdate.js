@@ -5,7 +5,7 @@ module.exports = [
     check('idUpdate')
     .notEmpty().withMessage('Campo obrigatório').bail(),
 
-    check('tipo')
+    check('tipoUpdate')
     .notEmpty().withMessage('Campo obrigatório').bail(),
 
     check('nomeUpdate')

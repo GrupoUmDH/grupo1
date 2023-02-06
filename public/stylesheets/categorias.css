@@ -141,6 +141,7 @@ select {
     flex-direction: row;
     justify-content: space-around;
     margin: 2rem;
+    flex-wrap: wrap;
 }
 
 
@@ -228,7 +229,6 @@ select {
     font-size: 1.3rem;
     text-transform: uppercase;
 }
-
 
 /* RESPONSIVO */
 @media (max-width: 820px) {
