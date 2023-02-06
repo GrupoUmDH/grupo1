@@ -71,14 +71,14 @@
                     <label for="Filmes">Filmes</label>
                     <input type="radio" name="tipo" class="check" />
                     <label for="Séries">Séries</label>
-                    <p class="erro"> <%= errors.tipo %> </p>
+                    <p class="erro"> <%= errors.tipoUpdate %> </p>
                 </div>
                 <input type="text" name="id" placeholder="id" />
-                <p class="erro"> <%= errors.id %> </p>
+                <p class="erro"> <%= errors.idUpdate %> </p>
                 <input type="text" name="nome" placeholder="nome" />
-                <p class="erro"> <%= errors.nome %> </p>
+                <p class="erro"> <%= errors.nomeUpdate %> </p>
                 <textarea type="text" name="descricao" placeholder="descricao"></textarea>
-                <p class="erro"> <%= errors.descricao %> </p>
+                <p class="erro"> <%= errors.descricaoUpdate %> </p>
                 <select name="categoria" id="categoria">
                     <option value="select" selected hidden disabled>categoria</option>
                     <option value="ação" >Ação</option>
@@ -96,17 +96,17 @@
                     <option value="suspense">Suspense</option>
                     <option value="terror">Terror</option>                    
                 </select>
-                <p class="erro"> <%= errors.categoria %> </p> 
+                <p class="erro"> <%= errors.categoriaUpdate %> </p> 
                 <input type="text" name="classificacao" placeholder="classificação" />
-                <p class="erro"> <%= errors.classificacao %> </p>
+                <p class="erro"> <%= errors.classificacaoUpdate %> </p>
                 <input type="text" name="valor" placeholder="valor" />
-                <p class="erro"> <%= errors.valor %> </p>
+                <p class="erro"> <%= errors.valorUpdate %> </p>
                 <p>Imagem</p>
                 <input type="file" name="imagem" placeholder="imagem" />
-                <p class="erro"> <%= errors.imagem %> </p>
+                <p class="erro"> <%= errors.imagemUpdate %> </p>
                 <p>background</p>
                 <input type="file" name="background" placeholder="imagem" />
-                <p class="erro"> <%= errors.background %> </p>
+                <p class="erro"> <%= errors.backgroundUpdate %> </p>
                 <button type="submit">Editar</button>
             </form>
 
@@ -118,10 +118,10 @@
                     <label for="Filmes">Filmes</label>
                     <input type="radio" name="tipo" value="series" class="check" />
                     <label for="Séries">Séries</label>
-                    <p class="erro"> <%= errors.tipo %> </p>
+                    <p class="erro"> <%= errors.tipoDelete %> </p>
                 </div>
                 <input type="text" name="id" placeholder="id" />
-                <p class="erro"> <%= errors.id %> </p>
+                <p class="erro"> <%= errors.idDelete %> </p>
                 <button type="submit">Apagar</button>
             </form>
         </main>
