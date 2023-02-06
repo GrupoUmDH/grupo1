@@ -34,7 +34,7 @@ router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
 
 
 //criar produto
-router.post('/create',upload.fields([{name:'background'},{name:'imagem'}]), validadorFormCreate, ProdutosController.createProduto);
+router.post('/create',upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), validadorFormCreate, ProdutosController.createProduto);
 
 //buscar produto
 router.get('/search', validadorFormRead, ProdutosController.buscaProduto);

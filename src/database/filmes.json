@@ -206,7 +206,7 @@
         "valor": "9,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "pinoquio.jpg",
-        "background":"pinoquio_01"
+        "background": "pinoquio_01"
     },
     {
         "id": 20,
@@ -217,7 +217,6 @@
         "valor": "9,90",
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "thePaleBlueEye.jpg",
-        "background":"thePaleBlueEye_01"
+        "background": "thePaleBlueEye_01"
     }
-   
 ]

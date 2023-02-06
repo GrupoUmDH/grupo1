@@ -2,31 +2,31 @@ const { check } = require('express-validator');
 
 module.exports = [
     
-    check('id')
+    check('idUpdate')
     .notEmpty().withMessage('Campo obrigatório').bail(),
 
-    check('tipo')
+    check('tipoUpdate')
     .notEmpty().withMessage('Campo obrigatório').bail(),
 
-    check('nome')
+    check('nomeUpdate')
     .notEmpty().withMessage('Campo obrigatório').bail(),
     
-    check('descricao')
+    check('descricaoUpdate')
     .notEmpty().withMessage('Campo obrigatório').bail(),
     
-    check('classificacao')
+    check('classificacaoUpdate')
     .notEmpty().withMessage('Campo obrigatório').bail(),
 
-    check('categoria')
+    check('categoriaUpdate')
     .notEmpty().withMessage('Campo obrigatório').bail(),
 
-    check('valor')
+    check('valorUpdate')
     .notEmpty().withMessage('Campo obrigatório').bail(),
 
-    check('imagem')
+    check('imagemUpdate')
     .notEmpty().withMessage('Campo obrigatório').bail(),
 
-    check('background')
+    check('backgroundUpdate')
     .notEmpty().withMessage('Campo obrigatório').bail()
      
 ]
