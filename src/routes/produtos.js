@@ -6,7 +6,7 @@ const validadorForm = require('../middlewares/validadorForm')
 
 const ProdutosController = require('../controllers/ProdutosController');
 
-const FilmesControllers = require('../controllers/FilmesControllers');
+const FilmesControllers = require('../../controllers/FilmesControllers');
 
 router.get('/', ProdutosController.produto);
 
@@ -46,7 +46,7 @@ router.put('/edit', ProdutosController.atualizaProduto);
 
 
 // SEQUELIZE
-router.get('/categorias', FilmesControllers.index);
+router.get('/categorias2', FilmesControllers.index);
 
 
 module.exports = router;

@@ -6,7 +6,6 @@ const categoriasModel = (sequelize, dataTypes) => {
             autoIncrement: true,
             allowNull: false,
         },
-
         nome: {
             type: dataTypes.STRING,
             allowNull: false,
@@ -18,7 +17,7 @@ const categoriasModel = (sequelize, dataTypes) => {
         timestamps: false,
     };
 
-    const categorias = sequelize.define("Autor", colunas, opcoes);
+    const categorias = sequelize.define("Categorias", colunas, opcoes);
 
     return categorias;
 };
