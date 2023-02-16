@@ -48,5 +48,5 @@ module.exports = {
             path.join(__dirname, "../database/filmesCarrinho.json"),
             JSON.stringify(conteudo, null, 4)
         );
-    };
+    }
 };
