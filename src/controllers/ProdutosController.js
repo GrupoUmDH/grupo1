@@ -1,4 +1,5 @@
 const ProdutosModel = require('../models/ProdutosModel');
+const {validationResult} = require ('express-validator');
 
 module.exports = {
     filmes: (req, res) => {
@@ -38,16 +39,19 @@ module.exports = {
     },
      //criar produto
     createProduto: (req, res) => {
-        if (!req.file) {
-            return res.send("Por favor, adicione uma imagem")
+        const { errors } = validationResult(req);
+        if (errors.length){
+            return res.render('produtos/cadastroProduto' , { errors, produtos: null });
         }
         ProdutosModel.createOne(req)
             res.send(`O produto ${req.body.nome} foi criado com sucesso`)
     }, 
     //procurar produto
     buscaProduto: (req, res) => {
-        let filme = ProdutosModel.findOne(req);
-        return res.render('produtos', { pageName: 'produtos', js:' ', filme });
+        res.send(ProdutosModel.findOne(req,res))
+
+        // let filme = ProdutosModel.findOne(req);
+        // return res.render('produtos', { pageName: 'produtos', js:' ', filme });
        // res.send(ProdutosModel.findOne(req));
     },
     listaProduto: (req, res) => {

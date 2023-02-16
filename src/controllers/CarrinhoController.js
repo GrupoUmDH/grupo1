@@ -15,7 +15,7 @@ module.exports = {
 
         let desconto = "R$ 0,00";
 
-        console.log(item);
+        //console.log(item);
 
         res.render("carrinho", {
             pageName: "carrinho",
@@ -40,10 +40,16 @@ module.exports = {
             js: "adicionarAoCarrinho",
         });
     },
+    adiciona: (req, res) => {
+        //console.log("ADICIONANDO: "+req.body.itensCarrinho)
+        CarrinhoModel.attCarrinho(JSON.parse(req.body.itensCarrinho));
+    },
     deletaItem: (req, res) => {  
         const ref  = req.body.itensCarrinho;
 
-        
+        //console.log(ref);
+
+        CarrinhoModel.attCarrinho(ref);
 
         return res.redirect("/carrinho");
     }, 

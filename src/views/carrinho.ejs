@@ -1,3 +1,7 @@
+<head>
+    <script src="/javascripts/carrinho.js" defer></script>
+</head>
+
 <%- include('partials/header') %>
     <!--CONTEÚDO MAIN -->
     <main>
@@ -13,8 +17,8 @@
                             <p class="filme-descricao"> <%=filme.descricao%></p>
                         </div>
                         <div>
-                            <form action="/carrinho/deletar/:value?_method=DELETE" method="POST" id="montarCarrinho">
-                                
+                            <form action="/carrinho" method="GET" id="montarCarrinho">
+                                <input type="hidden" name="itensCarrinho" id="itensCarrinho"/>
                                 <button type="submit">
                                     <img class="remover" src="/img/ico/lixo.png"/>
                                 </button>
