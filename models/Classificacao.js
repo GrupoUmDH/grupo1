@@ -13,8 +13,11 @@ const classificacaoModel = (sequelize, dataTypes) => {
         info: {
             type: dataTypes.STRING,
             allowNull: false,
-        }
-
+        },
+        imagem: {
+            type: dataTypes.STRING,
+            allowNull: false,
+        },
     };
 
     const opcoes = {

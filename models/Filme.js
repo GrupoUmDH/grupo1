@@ -27,11 +27,11 @@ const filmesModel = (sequelize, dataTypes) => {
             allowNull: false,
         },
         categorias_id: {
-            type: dataTypes.STRING,
+            type: dataTypes.INTEGER,
             allowNull: false,
         },
         classificacoes_id: {
-            type: dataTypes.STRING,
+            type: dataTypes.INTEGER,
             allowNull: false,
         },
     };
@@ -43,13 +43,12 @@ const filmesModel = (sequelize, dataTypes) => {
 
     const filme = sequelize.define("Filme", colunas, opcoes);
 
+
     filme.associate = (models) => {
-        filme.belongsTo( 
-            models.Classificacao, {
-                foreingKey: 'classificacoes_id',
-                as: 'indicacao'
-            }
-        )
+        filme.belongsTo(models.Classificacao, {
+            as: "indicacao",
+            foreignKey: "classificacoes_id",
+        });
     }
 
 
