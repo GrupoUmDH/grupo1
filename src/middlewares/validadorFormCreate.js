@@ -2,8 +2,8 @@ const { check } = require('express-validator');
 
 module.exports = [
     
-    check('idCreate')
-    .notEmpty().withMessage('Campo obrigatório').bail(),
+    // check('idCreate')
+    // .notEmpty().withMessage('Campo obrigatório').bail(),
 
     check('tipoCreate')
     .notEmpty().withMessage('Campo obrigatório').bail(),
@@ -23,10 +23,12 @@ module.exports = [
     check('valorCreate')
     .notEmpty().withMessage('Campo obrigatório').bail(),
 
-    check('imagemCreate')
-    .notEmpty().withMessage('Campo obrigatório').bail(),
+    // check('imagemCreate')
+    // .custom({() => {console.log("teste")}})
+         
+    // .withMessage('Campo obrigatório')
 
-    check('backgroundCreate')
-    .notEmpty().withMessage('Campo obrigatório').bail()
+    // check('backgroundCreate')
+    // .notEmpty().withMessage('Campo obrigatório').bail()
      
 ]

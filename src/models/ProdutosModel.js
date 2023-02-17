@@ -32,7 +32,7 @@ module.exports = {
 
   //criar produto
   createOne: (req) => {
-
+      console.log("Aqui Noixx")
     let novoProduto = {
       id: produtos[produtos.length - 1].id + 1,
       tipo: req.body.tipoCreate,
