@@ -18,5 +18,19 @@ module.exports = {
 
         res.render('teste',{categorias, classificacoes, filmes});
         
-    }
+    },
+
+    buscar: async (req, res) => {
+        const categorias = await Categorias.findAll();
+        const classificacoes = await Classificacao.findAll();
+        const id = req.query.idRead;
+        const filmes = await Filme.findOne({
+            where: { id:id }
+        });
+        console.log(filmes);
+
+        res.render('teste',{categorias, classificacoes, filmes});
+        
+}
+
 }

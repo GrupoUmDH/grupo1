@@ -40,7 +40,7 @@ router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
 router.post('/create',upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), validadorFormCreate, ProdutosController.createProduto);
 
 //buscar produto
-router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
+// router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
  
 // deletar produto
 router.delete('/remove', validadorFormDelete, ProdutosController.deletaProduto);
@@ -52,7 +52,7 @@ router.put('/edit', validadorFormUpdate, ProdutosController.atualizaProduto);
 router.get('/produtos/cadastroProduto/cattegorias', CategoriasController.index);
 
 // SEQUELIZE
-router.get('/categorias2', FilmesControllers.index);
+router.get('/search', FilmesControllers.buscar);
 
 
 module.exports = router;
