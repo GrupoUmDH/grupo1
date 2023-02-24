@@ -8,8 +8,10 @@ const validadorFormRead = require('../middlewares/validadorFormRead')
 const validadorFormUpdate = require('../middlewares/validadorFormUpdate')
 
 const ProdutosController = require('../controllers/ProdutosController');
+const CategoriasController = require('../controllers/CategoriasController');
 
 router.get('/', ProdutosController.produto);
+
 
 router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
@@ -45,5 +47,7 @@ router.delete('/remove', validadorFormDelete, ProdutosController.deletaProduto);
 // atualiza produto
 router.put('/edit', validadorFormUpdate, ProdutosController.atualizaProduto);
 
+// banco de dados
+router.get('/produtos/cadastroProduto/cattegorias', CategoriasController.index);
 
 module.exports = router;
