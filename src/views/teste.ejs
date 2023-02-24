@@ -21,7 +21,9 @@
 
         <ul>
             <% for (const filme of filmes) {%>
-                <li><%= filme.nome %> - <%= filme.indicacao.nome %></li>
+                <li><%= filme.nome %> - <%= filme.indicacao.nome %>
+                    <img src="../../public/img/filmes/<%= filme.imagem %>.jpg"/>
+                </li>
             <% }; %>
         </ul>
     </body>
