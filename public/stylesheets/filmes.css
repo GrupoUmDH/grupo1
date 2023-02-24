@@ -118,6 +118,10 @@ hr {
     margin-bottom: 1rem;
 }
 
+ #dados-filmes {
+     display: none;
+ }
+
 .filme-show:hover div #dados-filmes {
     display: none;
 }

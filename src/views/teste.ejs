@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <ul>
+            <% for (const elemento of categorias) {%>
+                <li><%= elemento.nome %></li>
+            <% }; %>
+        </ul>
+
+        <ul>
+            <% for (const elemento of classificacoes) {%>
+                <li><%= elemento.nome %></li>
+            <% }; %>
+        </ul>
+
+        <ul>
+            <% for (const filme of filmes) {%>
+                <li><%= filme.nome %> - <%= filme.indicacao.nome %>
+                    <img src="../../public/img/filmes/<%= filme.imagem %>.jpg"/>
+                </li>
+            <% }; %>
+        </ul>
+    </body>
+</html>

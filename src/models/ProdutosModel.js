@@ -46,16 +46,15 @@ module.exports = {
     };
     fs.writeFileSync(path.join(__dirname, "../database/filmes.json"), JSON.stringify(produtos, null, 4));
 
-    if (novoProduto.tipo == "filmes") {
+    if (novoProduto.tipoCreate == "filmes") {
       produtos.push(novoProduto);
       fs.writeFileSync(
         path.join(__dirname, "../database/filmes.json"),
         JSON.stringify(produtos, null, 4));
-    } if (novoProduto.tipo == "series") {
+    } if (novoProduto.tipoCreate == "series") {
       series.push(novoProduto);
       fs.writeFileSync(
-        path.join(__dirname, "../database/series.json"),
-        JSON.stringify(series, null, 4));
+        path.join(__dirname, "../database/series.json"), JSON.stringify(series, null, 4));
     }
   },
   //procurar produto
