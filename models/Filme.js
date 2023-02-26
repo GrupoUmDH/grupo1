@@ -34,6 +34,10 @@ const filmesModel = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             allowNull: false,
         },
+        descricao: {
+            type: dataTypes.STRING,
+            allowNull: false,
+        },
     };
 
     const opcoes = {

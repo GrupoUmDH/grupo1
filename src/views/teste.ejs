@@ -1,30 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
-        <ul>
-            <% for (const elemento of categorias) {%>
-                <li><%= elemento.nome %></li>
-            <% }; %>
-        </ul>
+<head>
+    <script src="/javascripts/index.js" defer></script>
+</head>
 
-        <ul>
-            <% for (const elemento of classificacoes) {%>
-                <li><%= elemento.nome %></li>
-            <% }; %>
-        </ul>
-
-        <ul>
-            <% for (const filme of filmes) {%>
-                <li><%= filme.nome %> - <%= filme.indicacao.nome %>
-                    <img src="../../public/img/filmes/<%= filme.imagem %>.jpg"/>
-                </li>
-            <% }; %>
-        </ul>
-    </body>
-</html>
+<%- include('partials/header') %>
+<main>
+    <section class="container">
+        <div class="titulos">
+            <h1>FILMES</h1>
+        </div>
+            <hr>
+                <section class="filmes-home">
+                    <% for (const listaFilmes of filmes) { %>
+                        <div class="filme-show">
+                            <a href="<%= '/produtos' %>\">
+                                <img src="/img/filmes/<%= listaFilmes.background %>.jpg" alt="" id="back-filme">
+                                <div class="descri">
+                                    <div>
+                                        <h3 id="nome-filme">
+                                            <%= listaFilmes.nome %>
+                                        </h3>
+                                        <div id="div-descri-filme">
+                                            <p id="descri-filme">
+                                                <%= listaFilmes.descricao %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="dados-filmes">
+                                        <h1 id="id-filmes">
+                                            <%= listaFilmes.id %>
+                                        </h1>
+                                        <h1 id="categoria-filmes">
+                                            <%= listaFilmes.categorias %>
+                                        </h1>
+                                        <h1 id="tipo-filmes">
+                                            <%= listaFilmes.tipo %>
+                                        </h1>
+                                        <h1 id="compra-filmes"> 
+                                            <%= listaFilmes.valor%>
+                                        </h1>
+                                        <img src="/img/filmes/<%= listaFilmes.imagem %>.jpg" id="img-filmes">
+                                        <%= listaFilmes.imagem %>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="dados-filmes">
+                            <h1 id="id-filmes"><%= listaFilmes.id %></h1>
+                            <h1 id="categoria-filmes"><%= listaFilmes.categorias %></h1>
+                            <h1 id="tipo-filmes"><%= listaFilmes.tipo %></h1>
+                            <h1 id="valor-filmes"><%= listaFilmes.valor%></h1>
+                            <img
+                                src="/img/filmes/<%= listaFilmes.imagem %>.jpg"
+                                id="img-filmes"
+                            />
+                            <%= listaFilmes.imagem %>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <% } %>
+        </section>
+    </section>
+</main>
+<%- include('partials/footer')%>

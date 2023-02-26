@@ -16,7 +16,7 @@ module.exports = {
         });
         console.log(filmes);
 
-        res.render('teste',{categorias, classificacoes, filmes});
+        res.render('teste',{categorias, classificacoes, filmes, pageName: 'filmes', js: 'adicionarAoCarrinho'});
         
     }
 }

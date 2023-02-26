@@ -158,6 +158,11 @@ hr {
     font-size: 1.3rem;
 }
 
+div#div-descri-filme {
+    height: 8rem;
+    overflow: hidden;
+}
+
 /*CONFIGURAÇÃO FOOTER*/
 
 hr {

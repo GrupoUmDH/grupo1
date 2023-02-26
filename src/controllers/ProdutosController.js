@@ -37,6 +37,7 @@ module.exports = {
         console.log(req.body);
         return res.render('produtos', { pageName: 'produtos', js: 'adicionarAoCarrinho' });
     },
+
      //criar produto
     createProduto: (req, res) => {
         const { errors } = validationResult(req);
@@ -56,6 +57,7 @@ module.exports = {
             ProdutosModel.createOne(req)
             res.send(`O produto ${req.body.nome} foi criado com sucesso`)
     }, 
+    
     //procurar produto
     buscaProduto: (req, res) => {
         const { errors } = validationResult(req);
