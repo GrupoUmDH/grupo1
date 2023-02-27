@@ -9,6 +9,8 @@ const validadorFormUpdate = require('../middlewares/validadorFormUpdate')
 
 const ProdutosController = require('../controllers/ProdutosController');
 
+const FilmesControllers = require('../../controllers/FilmesControllers');
+
 router.get('/', ProdutosController.produto);
 
 router.get('/filmes', ProdutosController.filmes);
@@ -43,6 +45,10 @@ router.delete('/remove', validadorFormDelete, ProdutosController.deletaProduto);
 
 // atualiza produto
 router.put('/edit', validadorFormUpdate, ProdutosController.atualizaProduto);
+
+
+// SEQUELIZE
+router.get('/categorias2', FilmesControllers.index);
 
 
 module.exports = router;

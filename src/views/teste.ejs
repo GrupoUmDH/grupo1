@@ -10,7 +10,7 @@
         </div>
             <hr>
                 <section class="filmes-home">
-                    <% for (const listaFilmes of Filmes) { %>
+                    <% for (const listaFilmes of filmes) { %>
                         <div class="filme-show">
                             <a href="<%= '/produtos' %>\">
                                 <img src="/img/filmes/<%= listaFilmes.background %>.jpg" alt="" id="back-filme">
@@ -19,16 +19,18 @@
                                         <h3 id="nome-filme">
                                             <%= listaFilmes.nome %>
                                         </h3>
-                                        <p id="descri-filme">
-                                            <%= listaFilmes.descricao %>
-                                        </p>
+                                        <div id="div-descri-filme">
+                                            <p id="descri-filme">
+                                                <%= listaFilmes.descricao %>
+                                            </p>
+                                        </div>
                                     </div>
                                     <div id="dados-filmes">
                                         <h1 id="id-filmes">
                                             <%= listaFilmes.id %>
                                         </h1>
                                         <h1 id="categoria-filmes">
-                                            <%= listaFilmes.id %>
+                                            <%= listaFilmes.categorias %>
                                         </h1>
                                         <h1 id="tipo-filmes">
                                             <%= listaFilmes.tipo %>
@@ -42,7 +44,21 @@
                                 </div>
                             </a>
                         </div>
-                    <% } %>
+                        <div id="dados-filmes">
+                            <h1 id="id-filmes"><%= listaFilmes.id %></h1>
+                            <h1 id="categoria-filmes"><%= listaFilmes.categorias %></h1>
+                            <h1 id="tipo-filmes"><%= listaFilmes.tipo %></h1>
+                            <h1 id="valor-filmes"><%= listaFilmes.valor%></h1>
+                            <img
+                                src="/img/filmes/<%= listaFilmes.imagem %>.jpg"
+                                id="img-filmes"
+                            />
+                            <%= listaFilmes.imagem %>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <% } %>
         </section>
     </section>
 </main>

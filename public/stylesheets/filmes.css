@@ -118,6 +118,10 @@ hr {
     margin-bottom: 1rem;
 }
 
+ #dados-filmes {
+     display: none;
+ }
+
 .filme-show:hover div #dados-filmes {
     display: none;
 }
@@ -157,6 +161,11 @@ hr {
     text-transform:uppercase;
     color: red;
     font-size: 1.3rem;
+}
+
+div#div-descri-filme {
+    height: 8rem;
+    overflow: hidden;
 }
 
 /*CONFIGURAÇÃO FOOTER*/

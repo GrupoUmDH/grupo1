@@ -37,7 +37,8 @@ module.exports = {
         console.log(req.body);
         return res.render('produtos', { pageName: 'produtos', js: 'adicionarAoCarrinho' });
     },
-    //criar produto
+
+     //criar produto
     createProduto: (req, res) => {
         const { errors } = validationResult(req);
         console.log("errors", errors)
@@ -52,9 +53,10 @@ module.exports = {
 
             return res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
         }
-        ProdutosModel.createOne(req)
-        res.send(`O produto ${req.body.nomeCreate} foi criado com sucesso`)
-    },
+            ProdutosModel.createOne(req)
+            res.send(`O produto ${req.body.nome} foi criado com sucesso`)
+    }, 
+    
     //procurar produto
     buscaProduto: (req, res) => {
         const { errors } = validationResult(req);
