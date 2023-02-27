@@ -3,8 +3,7 @@ const { Categorias, Classificacao, Filme } = require('../models');
 
 module.exports = {
     index: async (req, res) => {
-        const categorias = await Categorias.findAll();
-        const classificacoes = await Classificacao.findAll();
+
         const filmes = await Filme.findAll({
             include: [
                 {
@@ -16,7 +15,20 @@ module.exports = {
         });
         console.log(filmes);
 
-        res.render('teste',{categorias, classificacoes, filmes, pageName: 'filmes', js: 'adicionarAoCarrinho'});
+        res.render('teste',{ filmes, pageName: 'filmes', js: 'adicionarAoCarrinho'});
         
-    }
+    },
+
+    form: async(req, res) => {
+        let filme;
+        const {id} = req.params;
+
+        if (id) filme = await Filme.findByPk(id);
+
+        res.render('testeADD',{ pageName: 'addFilme', js: '', filme});
+    },
+
+    criar: async (req, res) => {
+        
+    },
 }
