@@ -5,6 +5,7 @@ Esse é o projeto final do curso de Desenvolvimento Web FullStack da instituiç�
 <em>Desenvolvedores:</em>
 
 - Anna Paula Pedrussi
+- Carlos Guilherme Klein
 - Davi de Siqueira Silva
 - Lucas Afonso
 - Mateus Dias
