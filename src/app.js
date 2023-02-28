@@ -12,6 +12,7 @@ var userRouter = require('./routes/users');
 var produtosRouter = require('./routes/produtos');
 var carrinhoRouter = require('./routes/carrinho');
 
+
 var app = express();
 
 // view engine setup
