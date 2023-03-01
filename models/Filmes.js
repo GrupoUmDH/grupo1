@@ -4,41 +4,41 @@ const filmesModel = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-            allowNull: false,
+            allowNull: false
         },
         nome: {
             type: dataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         imagem: {
             type: dataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         background: {
             type: dataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         valor: {
             type: dataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         tipo: {
             type: dataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         categorias_id: {
             type: dataTypes.INTEGER,
-            allowNull: false,
+            allowNull: false
         },
         classificacoes_id: {
             type: dataTypes.INTEGER,
-            allowNull: false,
+            allowNull: false
         },
     };
 
     const opcoes = {
         tableName: "filmes",
-        timestamps: false,
+        timestamps: false
     };
 
     const filme = sequelize.define("Filme", colunas, opcoes);

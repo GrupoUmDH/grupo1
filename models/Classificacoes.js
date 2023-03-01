@@ -4,25 +4,25 @@ const classificacaoModel = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-            allowNull: false,
+            allowNull: false
         },
         nome: {
             type: dataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         info: {
             type: dataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         imagem: {
             type: dataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
     };
 
     const opcoes = {
         tableName: "classificacoes",
-        timestamps: false,
+        timestamps: false
     };
 
     const Classificacao = sequelize.define("Classificacao", colunas, opcoes);
