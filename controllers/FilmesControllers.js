@@ -1,5 +1,6 @@
 const { Categorias, Classificacao, Filme } = require('../models');
 const Op = require('sequelize');
+const { validationResult } = require('express-validator');
 
 
 module.exports = {
@@ -39,6 +40,28 @@ module.exports = {
         res.send("teste" + req.query);
     },
 
+    deletaProduto: (req, res) => {
+        const { errors } = validationResult(req);
+        console.log("errors", errors)
+
+        if (errors.length) {
+            const errosFormatados = {
+
+            }
+            errors.forEach(erro =>
+                errosFormatados[erro.param] = erro.msg
+            );
+            return res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
+        }
+
+        Filme.destroy({where: {
+            id: req.body.idDelete
+        }
+        
+        })
+        res.send(`O produto de id ${req.body.idDelete} foi deletado com sucesso`)
+    },
+
     categoriasFilme: async (req, res) => {
         const categorias = await Categorias.findAll({
             order: ["nome"],
@@ -75,6 +98,38 @@ module.exports = {
             categoria,
             classificacao,
         });
+    },
+
+    createProduto: async (req, res) => {
+
+        console.log(req.body);
+
+        const { errors } = validationResult(req);
+        //console.log("errors", errors)
+
+        if (errors.length) {
+            const errosFormatados = {
+
+            }
+            errors.forEach(erro =>
+                errosFormatados[erro.param] = erro.msg
+            );
+
+            return res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
+        } 
+        const params = req.body;
+        const filmes = await Filme.create({
+            nome: params.nomeCreate,
+            imagem: "Alterar posterior", //params.imagemCreate
+            background: "Alterar posterior", //params.backgroundCreate
+            valor: params.valorCreate,
+            tipo: params.tipoCreate,
+            categorias_id: params.categoriaCreate,
+            classificacoes_id: 1, //params.classificacoesCreate
+            descricao: params.descricaoCreate
+        });
+        console.log(req);
+        res.send(`O produto ${req.params.nomeCreate} foi criado com sucesso`)
     },
 
     editar: async (req, res) => {

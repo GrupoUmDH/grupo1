@@ -38,13 +38,13 @@ const upload = multer({storage: storage, limits: {fileSize: 10000000}});
 router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
 
 //criar produto
-router.post('/create', upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), validadorFormCreate, ProdutosController.createProduto);
+router.post('/create', upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), validadorFormCreate, FilmesControllers.createProduto);
 
 //buscar produto
 // router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
  
 // deletar produto
-router.delete('/remove', validadorFormDelete, ProdutosController.deletaProduto);
+router.delete('/remove', validadorFormDelete, FilmesControllers.deletaProduto);
 
 // atualiza produto
 router.put('/edit', validadorFormUpdate, ProdutosController.atualizaProduto);

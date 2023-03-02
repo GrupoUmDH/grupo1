@@ -6,9 +6,9 @@
             <form method="POST" action="/produtos/create" enctype="multipart/form-data">
                 <h2>CREATE</h2>
                 <div class="check">
-                    <input type="radio" name="tipoCreate" value="filmes" class="check" checked />
+                    <input type="radio" name="tipoCreate" value="1" class="check" checked />
                     <label for="Filmes">Filmes</label>
-                    <input type="radio" name="tipoCreate" value="series" class="check" />
+                    <input type="radio" name="tipoCreate" value="2" class="check" />
                     <label for="Séries">Séries</label>
                     <p class="erro">
                         <%= errors.tipoCreate %>
