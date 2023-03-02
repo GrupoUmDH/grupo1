@@ -2,7 +2,6 @@ const { Categorias, Classificacao, Filme } = require('../models');
 const Op = require('sequelize');
 
 
-
 module.exports = {
     index: async (req, res) => {
         const filmes = await Filme.findAll({
@@ -35,9 +34,9 @@ module.exports = {
         const filmes = await Filme.findOne({
             where: { id: id },
         });
-        console.log(filmes);
+        console.log(req);
 
-        res.render("teste", { categorias, classificacoes, filmes });
+        res.send("teste" + req.query);
     },
 
     categoriasFilme: async (req, res) => {
@@ -67,7 +66,7 @@ module.exports = {
             order: ["nome"],
         });
 
-        console.log(categoria);
+        //console.log(categoria);
 
         res.render("testeADD", {
             pageName: "addFilme",
@@ -84,9 +83,7 @@ module.exports = {
 
     addFilme: async (req, res) => {
         
-        const { nome, descricao, categoria, classificacao, valor,  } = req.body;
-
-        res.send(nome);
+        console.log(req);
     },
 };
 

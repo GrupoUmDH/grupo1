@@ -39,8 +39,11 @@ module.exports = {
     },
     //criar produto
     createProduto: (req, res) => {
+
+        console.log(req.body);
+
         const { errors } = validationResult(req);
-        console.log("errors", errors)
+        //console.log("errors", errors)
 
         if (errors.length) {
             const errosFormatados = {
@@ -52,6 +55,7 @@ module.exports = {
 
             return res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
         }
+
         ProdutosModel.createOne(req)
         res.send(`O produto ${req.body.nomeCreate} foi criado com sucesso`)
     },

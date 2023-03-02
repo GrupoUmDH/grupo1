@@ -3,6 +3,7 @@ var router = express.Router();
 const bodyParse = require('body-parser');
 const multer = require('multer');
 const path = require('path');
+
 const validadorFormCreate = require('../middlewares/validadorFormCreate');
 const validadorFormDelete = require('../middlewares/validadorFormDelete')
 const validadorFormRead = require('../middlewares/validadorFormRead')
@@ -52,10 +53,7 @@ router.put('/edit', validadorFormUpdate, ProdutosController.atualizaProduto);
 router.get('/search', FilmesControllers.buscar);
 
 router.get('/testeADD/:id?', FilmesControllers.form);
-router.post(
-    "/adicionaFilme",
-    FilmesControllers.addFilme
-);
+router.post("/adicionaFilme", FilmesControllers.addFilme);
 
 router.post('/editarFilme', FilmesControllers.editar);
 
