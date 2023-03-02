@@ -1,4 +1,6 @@
 const { Categorias, Classificacao, Filme } = require('../models');
+const Op = require('sequelize');
+
 
 
 module.exports = {
@@ -13,7 +15,6 @@ module.exports = {
                 },
             ],
         });
-        console.log(filmes);
 
         res.render('teste',{ filmes, pageName: 'filmes', js: 'adicionarAoCarrinho'});
         
@@ -25,10 +26,31 @@ module.exports = {
 
         if (id) filme = await Filme.findByPk(id);
 
-        res.render('testeADD',{ pageName: 'addFilme', js: '', filme});
+        const categoria = await Categorias.findAll({
+            order: [ 'nome'
+              ]
+        });
+
+        const classificacao = await Classificacao.findAll({
+            order: [ 'nome'
+              ]
+        });
+
+        console.log(categoria);
+
+        res.render('testeADD',{ pageName: 'addFilme', js: '', filme, categoria, classificacao});
     },
 
     criar: async (req, res) => {
-        
+        const { novoFilme } = req.params;
+
+        await Filme.create(novoFilme);
+        //await Filme.create({})
+
+        console.log(req.query);
+    },
+
+    editar: async (req ,res) => {
+
     },
 }

@@ -51,8 +51,9 @@ router.put('/edit', validadorFormUpdate, ProdutosController.atualizaProduto);
 // SEQUELIZE
 router.get('/categorias2', FilmesControllers.index);
 
-router.get('/testeADD', FilmesControllers.form);
-router.post('/adicionaFilme', FilmesControllers.criar)
+router.get('/testeADD/:id?', FilmesControllers.form);
+router.post('/adicionaFilme', FilmesControllers.criar);
+router.post('/editarFilme', FilmesControllers.editar);
 
 
 module.exports = router;
