@@ -8,7 +8,7 @@ const validadorFormRead = require('../middlewares/validadorFormRead')
 const validadorFormUpdate = require('../middlewares/validadorFormUpdate')
 
 const ProdutosController = require('../controllers/ProdutosController');
-const CategoriasController = require('../controllers/CategoriasController');
+const CategoriasController = require('../../controllers/CategoriasController');
 
 const FilmesControllers = require('../../controllers/FilmesControllers');
 
@@ -19,7 +19,7 @@ router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
 router.get('/categorias', ProdutosController.listar);
 router.get('/cadastroProduto', function(req, res, next) {
-    res.render('cadastroProduto', { pageName: 'cadastroProduto', errors: [], js: 'cadastroProduto' });
+    res.render('cadastroProduto', { pageName: 'cadastroProduto', errors: [], js: 'cadastroProduto'}, CategoriasController.index);
 });
 
 //implementar multer
@@ -49,7 +49,7 @@ router.delete('/remove', validadorFormDelete, ProdutosController.deletaProduto);
 router.put('/edit', validadorFormUpdate, ProdutosController.atualizaProduto);
 
 // banco de dados
-router.get('/produtos/cadastroProduto/cattegorias', CategoriasController.index);
+// router.get('/cadastroProduto/categorias', FilmesControllers.categorias);
 
 // SEQUELIZE
 router.get('/search', FilmesControllers.buscar);
