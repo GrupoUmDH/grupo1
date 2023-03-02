@@ -145,35 +145,14 @@
     {
         "id": 14,
         "tipo": "filme",
-        "categoria": "aventura",
-        "nome": "UM LUGAR SILENCIOSO",
-        "valor": "9,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "umLugarSilencioso",
-        "background": "umLugarSilencioso_01"
-    },
-    {
-        "id": 15,
-        "tipo": "filme",
-        "categoria": "romance",
-        "nome": "ESPOSA DE ALUGUEL",
-        "valor": "9,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "esposaDeAluguel",
-        "background": "esposaDeAluguel_01"
-    },
-    {
-        "id": 16,
-        "tipo": "filmes",
-        "nome": "Entre Facas e Segredos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "categoria": "suspense",
-        "classificacao": "14 anos",
-        "valor": "9,90",
-        "imagem": "entreFacasESegredos.jpg",
-        "background": "entreFacasESegredos_01"
+        "categoria": "ação",
+        "nome": "The Pale Blue Eye 2",
+        "valor": "9,87",
+        "classificacao": "16",
+        "descricao": "Teste",
+        "imagem": "cards-03.png",
+        "background": "scrool6.jpg",
+        "check": "on"
     },
     {
         "id": 17,
@@ -218,5 +197,37 @@
         "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
         "imagem": "thePaleBlueEye.jpg",
         "background": "thePaleBlueEye_01"
+    },
+    {
+        "id": 21,
+        "tipo": "filmes",
+        "categoria": "aventura",
+        "nome": "teste50",
+        "classificacao": "16",
+        "valor": "9,80",
+        "descricao": "fewqteq",
+        "imagem": "cards-07.png",
+        "background": "scrool1.jpg",
+        "check": "on"
+    },
+    {
+        "id": 22,
+        "tipo": "filmes",
+        "categoria": "aventura",
+        "nome": "Teste",
+        "classificacao": "12",
+        "valor": "14,10",
+        "descricao": "jdjdjtdj"
+    },
+    {
+        "id": 23,
+        "tipo": "filmes",
+        "categoria": "aventura",
+        "nome": "Teste",
+        "classificacao": "12",
+        "valor": "14,10",
+        "descricao": "abcdef",
+        "imagem": "cards-05.png",
+        "background": "banner1"
     }
 ]

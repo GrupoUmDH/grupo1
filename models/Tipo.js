@@ -1,4 +1,4 @@
-const categoriasModel = (sequelize, dataTypes) => {
+const criarTipoModel = (sequelize, dataTypes) => {
     const colunas = {
         id: {
             type: dataTypes.INTEGER,
@@ -6,20 +6,22 @@ const categoriasModel = (sequelize, dataTypes) => {
             autoIncrement: true,
             allowNull: false
         },
-        nome: {
+
+        descricao_tipo: {
             type: dataTypes.STRING,
             allowNull: false
         },
+
     };
 
     const opcoes = {
-        tableName: "categorias",
+        tableName: 'tipo_produtos',
         timestamps: false
     };
 
-    const categorias = sequelize.define("Categorias", colunas, opcoes);
+    const Tipo = sequelize.define('tipo_produtos', colunas, opcoes)
 
-    return categorias;
+    return Tipo
 };
 
-module.exports = categoriasModel;
+module.exports = criarTipoModel;

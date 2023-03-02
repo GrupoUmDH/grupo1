@@ -16,41 +16,42 @@ module.exports = {
             ],
         });
 
-        res.render('teste',{ filmes, pageName: 'filmes', js: 'adicionarAoCarrinho'});
-        
+        res.render('teste', { categorias, classificacoes, filmes });
+
     },
 
-    form: async(req, res) => {
-        let filme;
-        const {id} = req.params;
-
-        if (id) filme = await Filme.findByPk(id);
-
-        const categoria = await Categorias.findAll({
-            order: [ 'nome'
-              ]
+    buscar: async (req, res) => {
+        const categorias = await Categorias.findAll();
+        const classificacoes = await Classificacao.findAll();
+        const id = req.query.idRead;
+        const filmes = await Filme.findOne({
+            where: { id: id }
         });
+        console.log(filmes);
 
-        const classificacao = await Classificacao.findAll({
-            order: [ 'nome'
-              ]
-        });
+        res.render('teste', { categorias, classificacoes, filmes });
 
-        console.log(categoria);
-
-        res.render('testeADD',{ pageName: 'addFilme', js: '', filme, categoria, classificacao});
     },
 
     criar: async (req, res) => {
-        const { novoFilme } = req.params;
+        const id = req.query.idRead;
+        const filmes = await Filme.findOne({
+            where: { id: id }
+        });
+        console.log(filmes);
 
-        await Filme.create(novoFilme);
-        //await Filme.create({})
-
-        console.log(req.query);
-    },
-
-    editar: async (req ,res) => {
+        res.render('teste', { categorias, classificacoes, filmes });
 
     },
-}
+
+    categoriasFilme: async (req, res) =>{
+
+        const categorias = await Categorias.findAll({
+            order:["nome"]
+        });
+        
+        res.render('cadastroProduto', { pageName: 'cadastroProduto', errors: [], js: 'cadastroProduto', categorias});
+    }
+
+    }
+

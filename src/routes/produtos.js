@@ -8,17 +8,17 @@ const validadorFormRead = require('../middlewares/validadorFormRead')
 const validadorFormUpdate = require('../middlewares/validadorFormUpdate')
 
 const ProdutosController = require('../controllers/ProdutosController');
+const CategoriasController = require('../../controllers/CategoriasController');
 
 const FilmesControllers = require('../../controllers/FilmesControllers');
 
 router.get('/', ProdutosController.produto);
 
+
 router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
 router.get('/categorias', ProdutosController.listar);
-router.get('/cadastroProduto', function(req, res, next) {
-    res.render('cadastroProduto', { pageName: 'cadastroProduto', errors: [], js: 'cadastroProduto' });
-});
+router.get('/cadastroProduto', FilmesControllers.categoriasFilme);
 
 //implementar multer
 const storage = multer.diskStorage({
@@ -38,7 +38,7 @@ router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
 router.post('/create',upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), validadorFormCreate, ProdutosController.createProduto);
 
 //buscar produto
-router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
+// router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
  
 // deletar produto
 router.delete('/remove', validadorFormDelete, ProdutosController.deletaProduto);
@@ -46,9 +46,8 @@ router.delete('/remove', validadorFormDelete, ProdutosController.deletaProduto);
 // atualiza produto
 router.put('/edit', validadorFormUpdate, ProdutosController.atualizaProduto);
 
-
 // SEQUELIZE
-router.get('/categorias2', FilmesControllers.index);
+router.get('/search', FilmesControllers.buscar);
 
 router.get('/testeADD/:id?', FilmesControllers.form);
 router.post('/adicionaFilme', FilmesControllers.criar);
