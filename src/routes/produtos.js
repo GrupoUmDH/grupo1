@@ -18,9 +18,7 @@ router.get('/', ProdutosController.produto);
 router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
 router.get('/categorias', ProdutosController.listar);
-router.get('/cadastroProduto', function(req, res, next) {
-    res.render('cadastroProduto', { pageName: 'cadastroProduto', errors: [], js: 'cadastroProduto'}, CategoriasController.index);
-});
+router.get('/cadastroProduto', FilmesControllers.categoriasFilme);
 
 //implementar multer
 const storage = multer.diskStorage({
@@ -47,9 +45,6 @@ router.delete('/remove', validadorFormDelete, ProdutosController.deletaProduto);
 
 // atualiza produto
 router.put('/edit', validadorFormUpdate, ProdutosController.atualizaProduto);
-
-// banco de dados
-// router.get('/cadastroProduto/categorias', FilmesControllers.categorias);
 
 // SEQUELIZE
 router.get('/search', FilmesControllers.buscar);

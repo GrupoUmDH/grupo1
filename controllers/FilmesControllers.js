@@ -44,16 +44,13 @@ module.exports = {
 
     },
 
-    categorias: async (req, res) =>{
+    categoriasFilme: async (req, res) =>{
+
         const categorias = await Categorias.findAll({
             order:["nome"]
-        }
-            
-        );
+        });
         
-        console.log(categorias);
-    
-        
+        res.render('cadastroProduto', { pageName: 'cadastroProduto', errors: [], js: 'cadastroProduto', categorias});
     }
 
     }

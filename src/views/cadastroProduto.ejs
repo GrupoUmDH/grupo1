@@ -26,9 +26,8 @@
 
                 <select name="categoriaCreate" id="categoria">
                     <option value="select" selected hidden disabled>categoria</option>
-                    <% categorias.dataValues.forEach(categoria => { %>
-                        <option value=<%= categoria.id %>><%= categoria.nome %></option>
-
+                    <% categorias.forEach(element => { %>
+                        <option value=<%= element.id %>><%= element.nome %></option>
                         <% }); %>
 
 
