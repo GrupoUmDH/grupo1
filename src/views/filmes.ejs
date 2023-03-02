@@ -8,7 +8,12 @@
         <div class="titulos">
             <h1>FILMES</h1>
         </div>
+<<<<<<< HEAD
             <hr>
+=======
+
+                <hr>
+>>>>>>> origin
                 <section class="filmes-home">
                     <% for (const listaFilmes of Filmes) { %>
                         <div class="filme-show">
@@ -42,21 +47,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div id="dados-filmes">
-                            <h1 id="id-filmes"><%= listaFilmes.id %></h1>
-                            <h1 id="categoria-filmes"><%= listaFilmes.id %></h1>
-                            <h1 id="tipo-filmes"><%= listaFilmes.tipo %></h1>
-                            <h1 id="valor-filmes"><%= listaFilmes.valor%></h1>
-                            <img
-                                src="/img/filmes/<%= listaFilmes.imagem %>.jpg"
-                                id="img-filmes"
-                            />
-                            <%= listaFilmes.imagem %>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <% } %>
+                    <% } %>
         </section>
     </section>
 </main>

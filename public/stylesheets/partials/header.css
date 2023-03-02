@@ -15,6 +15,7 @@ header {
     width: 100%;
     font-size: 1.5rem;
     height: 5rem;
+    
 }
 
 *{
@@ -33,6 +34,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 5rem;
     margin-right: 1rem;
     margin-left: 1rem;
 }
@@ -97,6 +99,7 @@ body {
     position: relative;
     left: -1.7rem;
     width: 4rem;
+    height: 1.5rem;
     cursor: pointer;
     align-items: center;
     justify-content: center;
