@@ -1,16 +1,19 @@
 var express = require('express');
 var router = express.Router();
+const bodyParse = require('body-parser');
 const multer = require('multer');
 const path = require('path');
+
 const validadorFormCreate = require('../middlewares/validadorFormCreate');
 const validadorFormDelete = require('../middlewares/validadorFormDelete')
 const validadorFormRead = require('../middlewares/validadorFormRead')
 const validadorFormUpdate = require('../middlewares/validadorFormUpdate')
 
 const ProdutosController = require('../controllers/ProdutosController');
-const CategoriasController = require('../../controllers/CategoriasController');
 
 const FilmesControllers = require('../../controllers/FilmesControllers');
+
+router.use(bodyParse.urlencoded({extended: true}));
 
 router.get('/', ProdutosController.produto);
 
@@ -35,7 +38,7 @@ const upload = multer({storage: storage, limits: {fileSize: 10000000}});
 router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
 
 //criar produto
-router.post('/create',upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), validadorFormCreate, ProdutosController.createProduto);
+router.post('/create', upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), validadorFormCreate, ProdutosController.createProduto);
 
 //buscar produto
 // router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
@@ -50,7 +53,8 @@ router.put('/edit', validadorFormUpdate, ProdutosController.atualizaProduto);
 router.get('/search', FilmesControllers.buscar);
 
 router.get('/testeADD/:id?', FilmesControllers.form);
-router.post('/adicionaFilme', FilmesControllers.criar);
+router.post("/adicionaFilme", FilmesControllers.addFilme);
+
 router.post('/editarFilme', FilmesControllers.editar);
 
 

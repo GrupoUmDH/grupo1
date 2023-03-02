@@ -39,8 +39,11 @@ module.exports = {
     },
     //criar produto
     createProduto: (req, res) => {
+
+        console.log(req.body);
+
         const { errors } = validationResult(req);
-        console.log("errors", errors)
+        //console.log("errors", errors)
 
         if (errors.length) {
             const errosFormatados = {
