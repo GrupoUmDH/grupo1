@@ -34,6 +34,7 @@ module.exports = {
     },
 
     criar: async (req, res) => {
+        /*
         const id = req.query.idRead;
         const filmes = await Filme.findOne({
             where: { id: id }
@@ -41,7 +42,7 @@ module.exports = {
         console.log(filmes);
 
         res.render('teste', { categorias, classificacoes, filmes });
-
+        */
     },
 
     categoriasFilme: async (req, res) =>{
@@ -51,7 +52,41 @@ module.exports = {
         });
         
         res.render('cadastroProduto', { pageName: 'cadastroProduto', errors: [], js: 'cadastroProduto', categorias});
-    }
+    },
 
-    }
+    form: async (req, res) => {
+        let filme;
+        const { id } = req.params;
+
+        if (id) filme = await Filme.findByPk(id);
+
+        const categoria = await Categorias.findAll({
+            order: ["nome"],
+        });
+
+        const classificacao = await Classificacao.findAll({
+            order: ["nome"],
+        });
+
+        //console.log(categoria);
+
+        res.render("testeADD", {
+            pageName: "addFilme",
+            js: "addFilme",
+            filme,
+            categoria,
+            classificacao,
+        });
+    },
+
+    editar: async (req, res) => {
+
+    },
+
+    addFilme: async (req, res) => {
+        
+        console.log(req);
+    },
+
+}
 
