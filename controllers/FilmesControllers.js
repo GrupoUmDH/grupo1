@@ -1,7 +1,6 @@
 const { Categorias, Classificacao, Filme } = require('../models');
 const Op = require('sequelize');
 
-
 module.exports = {
     index: async (req, res) => {
         const filmes = await Filme.findAll({
@@ -14,7 +13,7 @@ module.exports = {
             ],
         });
 
-        res.render("teste", { categorias, classificacoes, filmes });
+        res.render("teste", { pageName: "filmes", js:"filmes", filmes });
     },
 
     buscar: async (req, res) => {
@@ -59,7 +58,7 @@ module.exports = {
         if (id) filme = await Filme.findByPk(id);
 
         const categoria = await Categorias.findAll({
-            order: ["nome"],
+
         });
 
         const classificacao = await Classificacao.findAll({
@@ -84,6 +83,24 @@ module.exports = {
     addFilme: async (req, res) => {
         
         console.log(req);
+
+        const obj = req.body;
+
+
+        //const { novofilme } = JSON.stringify(obj);
+
+        //Object.setPrototypeOf(obj, Object.prototype);
+
+
+
+
+        //await Filme.create({ novofilme });
+
+        console.log(obj);
+
+        //res.redirect('/produtos/teste');
     },
+
+
 };
 
