@@ -2,7 +2,7 @@
 <main>
     <div>
         <h2>Adicionar</h2>
-            <form action="/produtos/adicionaFilme" method="POST">
+            <form action="/produtos/adicionaFilme" method="POST"  >
                 <div class="check">
                     <input type="radio" name="tipo" value="filmes" class="check" checked/>
                     <label for="Filmes">Filmes</label>
@@ -12,12 +12,12 @@
                 <div id="div-add-dados">
                     <input type="text" name="nome" placeholder="Filme" value=""></textarea>
                     <textarea type="text" name="descricao" placeholder="Descrição do filme" value=""></textarea>
-                    <select name="categoria" id="categoria">
+                    <select name="categorias_id" id="categorias_id">
                         <% categoria.forEach(element => { %>
                             <option value="<%- element.id %>"><%- element.nome %></option>
                         <% }); %>
                     </select>
-                    <select name="classificacao" id="classificacao">
+                    <select name="classificacoes_id" id="classificacoes_id">
                         <% classificacao.forEach(element => { %>
                             <option value=<%- element.id %> ><%- element.nome %></option>
                         <% }); %>

@@ -81,24 +81,21 @@ module.exports = {
     },
 
     addFilme: async (req, res) => {
-        
-        console.log(req);
 
-        const obj = req.body;
+        //console.log(parseInt(req.body.categoria))
 
+        await Filme.create( {
+            nome : req.body.nome,
+            imagem : req.body.imagem.replace('.jpg', ''),
+            background : req.body.background.replace('.jpg', ''),
+            valor : req.body.valor,
+            tipo : req.body.tipo,
+            categorias_id : parseInt(req.body.categorias_id),
+            classificacoes_id : parseInt(req.body.classificacoes_id),
+            descricao : req.body.descricao,
+        } );
 
-        //const { novofilme } = JSON.stringify(obj);
-
-        //Object.setPrototypeOf(obj, Object.prototype);
-
-
-
-
-        //await Filme.create({ novofilme });
-
-        console.log(obj);
-
-        //res.redirect('/produtos/teste');
+        res.redirect('/produtos/teste');
     },
 
 

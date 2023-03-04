@@ -33,6 +33,7 @@ const storage = multer.diskStorage({
         cb(null, file.originalname)
     } ,
 });
+
 const upload = multer({storage: storage, limits: {fileSize: 10000000}});
 
 router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
@@ -55,7 +56,8 @@ router.get('/search', FilmesControllers.buscar);
 
 router.get("/teste", FilmesControllers.index);
 router.get('/testeADD/:id?', FilmesControllers.form);
-router.post("/adicionaFilme", upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), FilmesControllers.addFilme);
+
+router.post("/adicionaFilme", upload.fields([{name:'background'}, {name:'imagem'}]), FilmesControllers.addFilme);
 
 router.post('/editarFilme', FilmesControllers.editar);
 
