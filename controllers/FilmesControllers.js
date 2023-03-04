@@ -1,11 +1,8 @@
 const { Categorias, Classificacao, Filme } = require('../models');
 const Op = require('sequelize');
 
-
-
 module.exports = {
     index: async (req, res) => {
-
         const filmes = await Filme.findAll({
             include: [
                 {
@@ -16,8 +13,7 @@ module.exports = {
             ],
         });
 
-        res.render('teste', { categorias, classificacoes, filmes });
-
+        res.render("teste", { pageName: "filmes", js:"filmes", filmes });
     },
 
     buscar: async (req, res) => {
@@ -25,33 +21,35 @@ module.exports = {
         const classificacoes = await Classificacao.findAll();
         const id = req.query.idRead;
         const filmes = await Filme.findOne({
-            where: { id: id }
+            where: { id: id },
         });
         console.log(filmes);
 
-        res.render('teste', { categorias, classificacoes, filmes });
-
+        res.render("teste", { categorias, classificacoes, filmes });
     },
 
     criar: async (req, res) => {
         /*
         const id = req.query.idRead;
         const filmes = await Filme.findOne({
-            where: { id: id }
+            where: { id: id },
         });
-        console.log(filmes);
+        console.log(req);
 
-        res.render('teste', { categorias, classificacoes, filmes });
-        */
+        res.send("teste" + req.query);
     },
 
-    categoriasFilme: async (req, res) =>{
-
+    categoriasFilme: async (req, res) => {
         const categorias = await Categorias.findAll({
-            order:["nome"]
+            order: ["nome"],
         });
-        
-        res.render('cadastroProduto', { pageName: 'cadastroProduto', errors: [], js: 'cadastroProduto', categorias});
+
+        res.render("cadastroProduto", {
+            pageName: "cadastroProduto",
+            errors: [],
+            js: "cadastroProduto",
+            categorias,
+        });
     },
 
     form: async (req, res) => {
@@ -61,7 +59,7 @@ module.exports = {
         if (id) filme = await Filme.findByPk(id);
 
         const categoria = await Categorias.findAll({
-            order: ["nome"],
+
         });
 
         const classificacao = await Classificacao.findAll({
@@ -86,7 +84,24 @@ module.exports = {
     addFilme: async (req, res) => {
         
         console.log(req);
+
+        const obj = req.body;
+
+
+        //const { novofilme } = JSON.stringify(obj);
+
+        //Object.setPrototypeOf(obj, Object.prototype);
+
+
+
+
+        //await Filme.create({ novofilme });
+
+        console.log(obj);
+
+        //res.redirect('/produtos/teste');
     },
 
-}
+
+};
 

@@ -8,7 +8,9 @@ botoes.forEach((botao, index) => {
         event.preventDefault();
 
     })
-})
+});
+
+
 
 
 
