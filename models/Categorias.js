@@ -4,17 +4,17 @@ const categoriasModel = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-            allowNull: false,
+            allowNull: false
         },
         nome: {
             type: dataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
     };
 
     const opcoes = {
         tableName: "categorias",
-        timestamps: false,
+        timestamps: false
     };
 
     const categorias = sequelize.define("Categorias", colunas, opcoes);

@@ -29,9 +29,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(favicon(path.join(__dirname, '../public/img', 'favicon.ico')));
 
-//METHOD-OVERRIDE
-app.use(methodOverride('_method'));
-
 app.use((error, req, res, next) => {
     console.log('This is the rejected field ->', error.field);
 });
@@ -50,6 +47,7 @@ app.use('/carrinho', carrinhoRouter);
 //PRODUTOS - (FILMES, SÉRIES -ADD/EXCLUI PRODUTOS)
 app.use('/filmes', produtosRouter);
 app.use('/produtos', produtosRouter);
+
 
 // catch 404 and forward to error handler - MIDDLEWARE DE STATUS 404
 app.use(function(req, res, next) {
