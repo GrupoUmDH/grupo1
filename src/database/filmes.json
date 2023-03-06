@@ -125,13 +125,14 @@
     {
         "id": 12,
         "tipo": "filme",
-        "categoria": "terror",
-        "nome": "SEGREDOS NAS PAREDES",
-        "valor": "9,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "segredosNasParedes",
-        "background": "segredosNasParedes_01"
+        "categoria": "aventura",
+        "nome": "Teste 2024",
+        "valor": "9,87",
+        "classificacao": "16",
+        "descricao": "Teste",
+        "imagem": "cards-03.png",
+        "background": "scrool6.jpg",
+        "check": "on"
     },
     {
         "id": 13,

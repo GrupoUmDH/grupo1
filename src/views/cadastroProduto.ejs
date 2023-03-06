@@ -114,7 +114,13 @@
                     <%= errors.descricaoUpdate %>
                 </p>
                 <select name="categoriaUpdate" id="categoria">
-                    <option value="select" selected hidden disabled>categoria</option>
+                  
+                        <option value="select" selected hidden disabled>categoria</option>
+                        <% categorias.forEach(element => { %>
+                            <option value=<%= element.id %>><%= element.nome %></option>
+                            <% }); %>
+
+                    <!-- <option value="select" selected hidden disabled>categoria</option>
                     <option value="ação">Ação</option>
                     <option value="aventura">Aventura</option>
                     <option value="comédia">Comédia</option>
@@ -128,7 +134,7 @@
                     <option value="policial">Policial</option>
                     <option value="romance">Romance</option>
                     <option value="suspense">Suspense</option>
-                    <option value="terror">Terror</option>
+                    <option value="terror">Terror</option> -->
                 </select>
                 <p class="erro">
                     <%= errors.categoriaUpdate %>

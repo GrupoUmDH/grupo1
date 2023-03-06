@@ -47,7 +47,7 @@ router.post('/create', upload.fields([{name:'backgroundCreate'},{name:'imagemCre
 router.delete('/remove', validadorFormDelete, FilmesControllers.deletaProduto);
 
 // atualiza produto
-router.put('/edit', validadorFormUpdate, ProdutosController.atualizaProduto);
+router.put('/edit', validadorFormUpdate, FilmesControllers.atualizaProduto);
 
 // SEQUELIZE
 router.get('/search', FilmesControllers.buscar);

@@ -26,7 +26,7 @@ module.exports = {
         });
         console.log(filmes);
 
-        res.render("teste", { categorias, classificacoes, filmes });
+        res.render("teste", { pageName: "filmes", js:"filmes", categorias, classificacoes, filmes:[filmes] });
     },
 
     criar: async (req, res) => {
@@ -128,7 +128,8 @@ module.exports = {
             descricao: params.descricaoCreate
         });
         console.log(req);
-        res.send(`O produto ${req.params.nomeCreate} foi criado com sucesso`)
+        res.render("teste", { pageName: "filmes", js:"filmes", categorias:params.categoriaCreate, classificacoes:1, filmes:[req.params] });
+        
     },
 
     editar: async (req, res) => {
@@ -154,6 +155,45 @@ module.exports = {
         console.log(obj);
 
         //res.redirect('/produtos/teste');
+    },
+
+    atualizaProduto: async (req, res) => {
+
+        console.log(req.body);
+
+        const { errors } = validationResult(req);
+        //console.log("errors", errors)
+
+        if (errors.length) {
+            const errosFormatados = {
+
+            }
+            errors.forEach(erro =>
+                errosFormatados[erro.param] = erro.msg
+            );
+
+            return res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
+        } 
+        const params = req.body;
+        console.log(params)
+        const filmes = await Filme.update({
+            nome: params.nomeUpdate,
+            imagem: "Alterar posterior", //params.imagemCreate
+            background: "Alterar posterior", //params.backgroundCreate
+            valor: params.valorUpdate,
+            tipo: params.tipoUpdate,
+            categorias_id: params.categoriaUpdate,
+            classificacoes_id: 1, //params.classificacoesCreate
+            descricao: params.descricaoUpdate
+        },
+            {
+                where: { id:params.idUpdate } 
+            }
+           
+        );
+        console.log(req);
+        res.render("teste", { pageName: "filmes", js:"filmes", categorias:params.categoriaCreate, classificacoes:1, filmes:[req.params] });
+        
     },
 
 
