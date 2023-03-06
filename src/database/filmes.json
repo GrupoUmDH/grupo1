@@ -58,12 +58,13 @@
         "id": 6,
         "tipo": "filme",
         "categoria": "aventura",
-        "nome": "GUERRA MUNDIAL Z",
-        "valor": "9,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "guerraMundialZ",
-        "background": "guerraMundialZ_01"
+        "nome": "Teste 2023",
+        "valor": "9,87",
+        "classificacao": "16",
+        "descricao": "teste update",
+        "imagem": "cards-03.png",
+        "background": "scrool6.jpg",
+        "check": "on"
     },
     {
         "id": 7,
@@ -91,12 +92,13 @@
         "id": 9,
         "tipo": "filme",
         "categoria": "aventura",
-        "nome": "ONDE ESTA SEGUNDA",
-        "valor": "9,90",
-        "classificacao": "14 anos",
-        "descricao": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis nam velit laudantium labore maiores voluptatem ducimus consequuntur error mollitia, alias vero consectetur eveniet similique reprehenderit cupiditate nesciunt doloremque ratione!",
-        "imagem": "ondeEstaSegunda",
-        "background": "ondeEstaSegunda_01"
+        "nome": "Teste 2023",
+        "valor": "9,87",
+        "classificacao": "16",
+        "descricao": "teste update",
+        "imagem": "scrool6.jpg",
+        "background": "cards-03.png",
+        "check": "on"
     },
     {
         "id": 10,
