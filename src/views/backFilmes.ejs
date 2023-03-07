@@ -1,0 +1,53 @@
+<head>
+    <script src="/javascripts/index.js" defer></script>
+</head>
+
+<%- include('partials/header') %>
+<main>
+    <section class="container">
+        <div class="titulo">
+            <h1>FILMES</h1>
+        </div>
+            <hr>
+                <section class="filmes-home">
+                    <% for (const listaFilmes of filmes) { %>
+                        <div class="filme-show">
+                            <a href="<%= '/produtos' %>\">
+                                <div id="dados-filme">
+                                    <img src="/img/filmes/<%= listaFilmes.background %>.jpg" alt="" id="back-filme">
+                                    <h1 id="tipo-filmes">
+                                            <%= listaFilmes.tipo %>
+                                        </h1>
+                                        <% categoria.forEach(element => { %>
+                                            <% if( listaFilmes.categorias_id == element.id) { %>
+                                                <h1><%- element.nome %></h1>
+                                            <% }; %>
+                                        <% }); %>
+                                        <h1 id="compra-filmes"> 
+                                            <%= listaFilmes.valor%>
+                                        </h1>
+                                </div>
+                                
+                                <div class="descri">
+                                    <div>
+                                        <h3 id="nome-filme">
+                                            <%= listaFilmes.nome %>
+                                        </h3>
+                                        <div id="div-descri-filme">
+                                            <textarea disabled="disabled" id="descri-filme">
+                                                <%= listaFilmes.descricao %>
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                    <img src="/img/filmes/<%= listaFilmes.imagem %>.jpg" id="img-filmes">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <% } %>
+        </section>
+    </section>
+</main>
+<%- include('partials/footer')%>

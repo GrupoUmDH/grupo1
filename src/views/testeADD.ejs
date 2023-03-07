@@ -12,21 +12,21 @@
                 <div id="div-add-dados">
                     <input type="text" name="nome" placeholder="Filme" value=""></textarea>
                     <textarea type="text" name="descricao" placeholder="Descrição do filme" value=""></textarea>
-                    <select name="categoria" id="categoria">
+                    <select name="categorias_id" id="categoria">
                         <% categoria.forEach(element => { %>
                             <option value="<%- element.id %>"><%- element.nome %></option>
                         <% }); %>
                     </select>
-                    <select name="classificacao" id="classificacao">
+                    <select name="classificacoes_id" id="classificacao">
                         <% classificacao.forEach(element => { %>
                             <option value=<%- element.id %> ><%- element.nome %></option>
                         <% }); %>
                     </select>
                     <input type="text" name="valor" placeholder="valor"  value=""></textarea>
                     <p>Imagem Widescreen</p>
-                    <input type="file" name="imagem" placeholder="imagem" />
+                    <input type="file" name="fundo" placeholder="imagem" />
                     <p>Capa</p>
-                    <input type="file" name="background" placeholder="background" />
+                    <input type="file" name="capa" placeholder="background" />
                 </div>
                 <button id="bt-add-filme" type="submit">Adicionar</button>
             </form>

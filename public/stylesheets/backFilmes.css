@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    --background-color: #0C0C0C;
+    --background-2: #131313;
+    --cores-chaves: #B30006;
+    --cores-letra: #FFFFFF;
+    --cores-objetos: #580003;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    width: 95%;
+}
+
+.container {
+    width: 95%;
+}
+
+.titulo h1 {
+    color: var(--cores-letra);
+    font-size: 1.5rem;
+}
+
+#nome-filme {
+    color: var(--cores-letra);
+}
+
+.filme-show {
+    background-color: #160808;
+    margin: .5rem;
+    justify-content: space-around;
+    justify-items: center;
+    display: flex;
+    border-radius: 1rem;
+    /* align-content: center; */
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.filme-show p {
+    color: var(--cores-letra);
+}
+
+#back-filme {
+    width: 7rem auto;
+    height: 12rem;
+    padding: .7rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.filme-show a {
+    display: flex;
+    flex-direction: row;
+}
+
+.descri {
+    display: flex;
+    flex-direction: row;
+}
+
+#div-descri-filme textarea{
+    height: 12rem;
+    width: 25rem;
+    background-color: #0C0C0C;
+    border: 0px;
+    color: #FFFFFF;
+    padding: 0 1rem 0 1rem;
+    font-size: large;
+}
+
+.filme-show a {
+    text-decoration: none;
+}
+
+.filme-show .descri {
+
+}
+
+#dados-filme {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+}
+
+#dados-filme h1 {
+    color: var(--cores-letra);
+    ;
+}
