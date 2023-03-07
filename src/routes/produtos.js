@@ -56,8 +56,7 @@ router.get('/search', FilmesControllers.buscar);
 
 router.get("/teste", FilmesControllers.index);
 router.get('/testeADD/:id?', FilmesControllers.form);
-
-router.post("/adicionaFilme", upload.fields([{name:'background'}, {name:'imagem'}]), FilmesControllers.addFilme);
+router.post("/adicionaFilme", FilmesControllers.addFilme);
 
 router.post('/editarFilme', FilmesControllers.editar);
 

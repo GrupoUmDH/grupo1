@@ -13,7 +13,13 @@ module.exports = {
             ],
         });
 
-        res.render("teste", { pageName: "filmes", js:"filmes", filmes });
+        const categoria = await Categorias.findAll({});
+
+        const classificacao = await Classificacao.findAll({
+            order: ["nome"],
+        });
+
+        res.render("backFilmes", { pageName: "backFilmes", js:"filmes", filmes, categoria, classificacao });
     },
 
     buscar: async (req, res) => {
@@ -81,6 +87,7 @@ module.exports = {
     },
 
     addFilme: async (req, res) => {
+<<<<<<< HEAD
 
         //console.log(parseInt(req.body.categoria))
 
@@ -94,6 +101,23 @@ module.exports = {
             classificacoes_id : parseInt(req.body.classificacoes_id),
             descricao : req.body.descricao,
         } );
+=======
+        
+        const novofilme = {
+            nome : req.body.nome,
+            imagem : (req.body.fundo).replace('.jpg',''),
+            background : (req.body.capa.replace('.jpg','')),
+            valor : req.body.valor,
+            tipo : req.body.tipo,
+            categorias_id : parseInt(req.body.categorias_id),
+            classificacoes_id : parseInt(req.body.classificacoes_id),
+            descricao : req.body.descricao
+        };
+
+        console.log(novofilme);
+
+        await Filme.create( novofilme );
+>>>>>>> 208f11ed06622389a3fc41f5981310220b470c99
 
         res.redirect('/produtos/teste');
     },
