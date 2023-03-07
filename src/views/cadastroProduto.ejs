@@ -29,26 +29,19 @@
                     <% categorias.forEach(element => { %>
                         <option value=<%= element.id %>><%= element.nome %></option>
                         <% }); %>
+                    
 
-
-
-                        <!-- <option value="aventura">Aventura</option>
-                        <option value="comédia">Comédia</option>
-                        <option value="dança">Dança</option>
-                        <option value="documentário">Documentário</option>
-                        <option value="drama">Drama</option>
-                        <option value="faroeste">Faroeste</option>
-                        <option value="ficção">Ficção</option>
-                        <option value="guerra">Guerra</option>
-                        <option value="musical">Musical</option>
-                        <option value="policial">Policial</option>
-                        <option value="romance">Romance</option>
-                        <option value="suspense">Suspense</option>
-                        <option value="terror">Terror</option> -->
                 </select>
                 <p class="erro">
                     <%= errors.categoriaCreate %>
                 </p>
+                <select name="classificacaoCreate" id="classificacao">
+                    <option value="select" selected hidden disabled>classificacao</option>
+                    <% classificacao.forEach(element => { %>
+                        <option value=<%= element.dataValues.id %>><%= element.dataValues.nome - element.dataValues.info %></option>
+                        <% }); %>
+
+                </select>
                 <input type="text" name="classificacaoCreate" placeholder="classificação" />
                 <p class="erro">
                     <%= errors.classificacaoCreate %>

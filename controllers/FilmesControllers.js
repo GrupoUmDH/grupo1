@@ -1,6 +1,8 @@
 const { Categorias, Classificacao, Filme } = require('../models');
 const Op = require('sequelize');
 const { validationResult } = require('express-validator');
+const path = require('path');
+
 
 module.exports = {
     index: async (req, res) => {
@@ -61,16 +63,24 @@ module.exports = {
         res.send(`O produto de id ${req.body.idDelete} foi deletado com sucesso`)
     },
 
-    categoriasFilme: async (req, res) => {
+    categoriaclassificacaoFilme: async (req, res) => {
         const categorias = await Categorias.findAll({
             order: ["nome"],
         });
+        const classificacao = await Classificacao.findAll({
+            order: ["id"],
+        });
+
+        console.log(classificacao)
+        console.log(categorias)
+
 
         res.render("cadastroProduto", {
             pageName: "cadastroProduto",
             errors: [],
             js: "cadastroProduto",
             categorias,
+            classificacao,
         });
     },
 
@@ -119,16 +129,16 @@ module.exports = {
         const params = req.body;
         const filmes = await Filme.create({
             nome: params.nomeCreate,
-            imagem: "Alterar posterior", //params.imagemCreate
-            background: "Alterar posterior", //params.backgroundCreate
+            imagem: path.parse(req.files.imagemCreate[0].filename).name,
+            background: path.parse(req.files.backgroundCreate[0].filename).name,
             valor: params.valorCreate,
             tipo: params.tipoCreate,
             categorias_id: params.categoriaCreate,
-            classificacoes_id: 1, //params.classificacoesCreate
+            classificacoes_id: params.classificacoesCreate,
             descricao: params.descricaoCreate
         });
         console.log(req);
-        res.render("teste", { pageName: "filmes", js:"filmes", categorias:params.categoriaCreate, classificacoes:1, filmes:[req.params] });
+        res.render("teste", { pageName: "filmes", js:"filmes", categorias:params.categoriaCreate, classificacoes:1, filmes:[filmes] });
         
     },
 
@@ -195,7 +205,6 @@ module.exports = {
         res.render("teste", { pageName: "filmes", js:"filmes", categorias:params.categoriaCreate, classificacoes:1, filmes:[req.params] });
         
     },
-
 
 };
 

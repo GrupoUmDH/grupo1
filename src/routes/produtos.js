@@ -21,7 +21,7 @@ router.get('/', ProdutosController.produto);
 router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
 router.get('/categorias', ProdutosController.listar);
-router.get('/cadastroProduto', FilmesControllers.categoriasFilme);
+router.get('/cadastroProduto', FilmesControllers.categoriaclassificacaoFilme);
 
 //implementar multer
 const storage = multer.diskStorage({
