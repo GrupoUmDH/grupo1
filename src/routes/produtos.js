@@ -33,6 +33,7 @@ const storage = multer.diskStorage({
         cb(null, file.originalname)
     } ,
 });
+
 const upload = multer({storage: storage, limits: {fileSize: 10000000}});
 
 router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);

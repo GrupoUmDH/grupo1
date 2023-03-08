@@ -48,9 +48,8 @@ app.use('/carrinho', carrinhoRouter);
 app.use('/filmes', produtosRouter);
 app.use('/produtos', produtosRouter);
 
-//PAINEL ADMINISTRATIVO
-app.use("/painel", painelRouter);
-
+//PAINEL ADM
+app.use('/painel', painelRouter);
 
 // catch 404 and forward to error handler - MIDDLEWARE DE STATUS 404
 app.use(function(req, res, next) {

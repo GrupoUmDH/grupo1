@@ -1,7 +1,9 @@
-var express = require("express");
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 
-router.get("/adm", function (req, res, next) {
-    res.render("painelADM", { pageName: "Painel", js: "" });
+router.get('/', function(req, res, next) {
+    res.render('painelADM', { pageName: 'painelAdm', js: ''});
 });
+
+module.exports = router;
