@@ -1,6 +1,7 @@
 const ProdutosModel = require('../models/ProdutosModel');
 const { validationResult } = require('express-validator');
 
+
 module.exports = {
     filmes: (req, res) => {
         const filmes = ProdutosModel.filmes();
@@ -55,7 +56,6 @@ module.exports = {
 
             return res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
         }
-
         ProdutosModel.createOne(req)
         res.send(`O produto ${req.body.nomeCreate} foi criado com sucesso`)
     },

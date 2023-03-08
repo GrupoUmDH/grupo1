@@ -21,7 +21,7 @@ router.get('/', ProdutosController.produto);
 router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
 router.get('/categorias', ProdutosController.listar);
-router.get('/cadastroProduto', FilmesControllers.categoriasFilme);
+router.get('/cadastroProduto', FilmesControllers.categoriaclassificacaoFilme);
 
 //implementar multer
 const storage = multer.diskStorage({
@@ -39,16 +39,16 @@ const upload = multer({storage: storage, limits: {fileSize: 10000000}});
 router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
 
 //criar produto
-router.post('/create', upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), validadorFormCreate, ProdutosController.createProduto);
+router.post('/create', upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), validadorFormCreate, FilmesControllers.createProduto);
 
 //buscar produto
 // router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
  
 // deletar produto
-router.delete('/remove', validadorFormDelete, ProdutosController.deletaProduto);
+router.delete('/remove', validadorFormDelete, FilmesControllers.deletaProduto);
 
 // atualiza produto
-router.put('/edit', validadorFormUpdate, ProdutosController.atualizaProduto);
+router.put('/edit', validadorFormUpdate, FilmesControllers.atualizaProduto);
 
 // SEQUELIZE
 router.get('/search', FilmesControllers.buscar);
