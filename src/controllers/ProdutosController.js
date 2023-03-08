@@ -1,6 +1,7 @@
 const ProdutosModel = require('../models/ProdutosModel');
 const { validationResult } = require('express-validator');
 
+
 module.exports = {
     filmes: (req, res) => {
         const filmes = ProdutosModel.filmes();

@@ -6,9 +6,9 @@
             <form method="POST" action="/produtos/create" enctype="multipart/form-data">
                 <h2>CREATE</h2>
                 <div class="check">
-                    <input type="radio" name="tipoCreate" value="filmes" class="check" checked />
+                    <input type="radio" name="tipoCreate" value="1" class="check" checked />
                     <label for="Filmes">Filmes</label>
-                    <input type="radio" name="tipoCreate" value="series" class="check" />
+                    <input type="radio" name="tipoCreate" value="2" class="check" />
                     <label for="Séries">Séries</label>
                     <p class="erro">
                         <%= errors.tipoCreate %>
@@ -29,26 +29,19 @@
                     <% categorias.forEach(element => { %>
                         <option value=<%= element.id %>><%= element.nome %></option>
                         <% }); %>
+                    
 
-
-
-                        <!-- <option value="aventura">Aventura</option>
-                        <option value="comédia">Comédia</option>
-                        <option value="dança">Dança</option>
-                        <option value="documentário">Documentário</option>
-                        <option value="drama">Drama</option>
-                        <option value="faroeste">Faroeste</option>
-                        <option value="ficção">Ficção</option>
-                        <option value="guerra">Guerra</option>
-                        <option value="musical">Musical</option>
-                        <option value="policial">Policial</option>
-                        <option value="romance">Romance</option>
-                        <option value="suspense">Suspense</option>
-                        <option value="terror">Terror</option> -->
                 </select>
                 <p class="erro">
                     <%= errors.categoriaCreate %>
                 </p>
+                <select name="classificacaoCreate" id="classificacao">
+                    <option value="select" selected hidden disabled>classificacao</option>
+                    <% classificacao.forEach(element => { %>
+                        <option value=<%= element.dataValues.id %>><%= element.dataValues.nome - element.dataValues.info %></option>
+                        <% }); %>
+
+                </select>
                 <input type="text" name="classificacaoCreate" placeholder="classificação" />
                 <p class="erro">
                     <%= errors.classificacaoCreate %>
@@ -114,7 +107,13 @@
                     <%= errors.descricaoUpdate %>
                 </p>
                 <select name="categoriaUpdate" id="categoria">
-                    <option value="select" selected hidden disabled>categoria</option>
+                  
+                        <option value="select" selected hidden disabled>categoria</option>
+                        <% categorias.forEach(element => { %>
+                            <option value=<%= element.id %>><%= element.nome %></option>
+                            <% }); %>
+
+                    <!-- <option value="select" selected hidden disabled>categoria</option>
                     <option value="ação">Ação</option>
                     <option value="aventura">Aventura</option>
                     <option value="comédia">Comédia</option>
@@ -128,7 +127,7 @@
                     <option value="policial">Policial</option>
                     <option value="romance">Romance</option>
                     <option value="suspense">Suspense</option>
-                    <option value="terror">Terror</option>
+                    <option value="terror">Terror</option> -->
                 </select>
                 <p class="erro">
                     <%= errors.categoriaUpdate %>
