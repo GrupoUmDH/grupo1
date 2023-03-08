@@ -88,6 +88,12 @@ header img {
     align-content: center;
     justify-content: flex-start;
     align-items: center;
+     position: fixed;
+    top: 4rem;
+    left: 0;
+}
+.barra-lateral img {
+    width: 20px;
 }
 
 .barra-lateral button {
@@ -98,4 +104,104 @@ header img {
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     border: 0;
+}
+
+section.content {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+div#titulos {
+    display: inline-flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-left: 13rem;
+    padding-top: 1rem;
+}
+
+div#titulos h3{
+    margin-left: .8rem;
+    opacity: .5;
+}
+
+div#itens {
+    border: 1px solid gray;
+    width: 50vw;
+    height: 70vh;
+    overflow: auto;
+}
+
+div#itens div {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+div#itens img {
+    width: 2.5rem;
+    margin: .3rem;
+}
+
+div#filtro {
+    border: 1px solid gray;
+    width: 20vw;
+    height: 50vh;
+    margin-left: 1rem;
+}
+
+div#content-itens {
+    display: flex;
+    padding-left: 13rem;
+    margin-bottom: 1rem;
+}
+
+div#lista-borda {
+    width: 96%;
+    height: 88%;
+    border: .7px solid gray;
+    margin: .5rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+div#itens-menu {
+    border: .5px solid gray;
+    height: 2rem;
+}
+
+div#itens-lista {
+    border: .5px solid gray;
+}
+
+input[type="checkbox"] {
+    margin: .3rem;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--cores-chaves);
+}
+
+div#lista-borda ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+div#lista-borda ul li {
+    text-align: center;
+    width: 5.658rem;
+    font-size: .8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+div#itens-lista ul li img {
+    width: 3rem;
 }

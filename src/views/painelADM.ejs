@@ -24,18 +24,65 @@
             <button>Sair</button>
         </div>
     </div>
-
-    <div class="barra-lateral">
-       <a> <button>Produtos</button></a>
-       <a> <button>Usuários</button></a>
-       <a> <button>Vendas</button></a>
-       <a> <button>Configurações</button></a>
-    </div>
 </header>
 
 <main>
+    <div class="barra-lateral">
+        <a> <button>Produtos</button></a>
+        <a> <button>Usuários</button></a>
+        <a> <button>Vendas</button></a>
+        <a> <button>Configurações</button></a>
+    </div>
+
     <section class="content">
-        <div id=""></div>
+        <div id="titulos">
+            <h1>Produtos</h1>
+            <a><h3>Filmes \</h3></a>
+            <a><h3>Series</h3></a>
+        </div>
+        <div id="content-itens">
+            <div id="itens">
+                <div>
+                    <img src="/img/logo.svg"/>
+                    <h4>Lista de Produtos</h2>
+                </div>
+                <div id="lista-borda">
+                    <div id="itens-menu">
+                        <input type="checkbox">
+                        <hr>
+                        <ul>
+                            <li>Imagem</li>
+                            <hr>
+                            <li>Nome</li>
+                            <hr>
+                            <li>Categoria</li>
+                            <hr>
+                            <li>Classificação</li>
+                            <hr>
+                            <li>Ação</li>
+                        </ul>
+                    </div>
+                    <div id="itens-lista">
+                        <input type="checkbox">
+                        <hr>
+                        <ul>
+                            <li><img src="/public/img/filmes/capa.jpg"/></li>
+                            <hr>
+                            <li>Nome</li>
+                            <hr>
+                            <li>Categoria</li>
+                            <hr>
+                            <li>Classificação</li>
+                            <hr>
+                            <li>
+                                <button>editar</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="filtro"></div>
+        </div>
     </section>
 </main>
 <%- include('partials/footer')%>
