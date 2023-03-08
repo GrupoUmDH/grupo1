@@ -9,7 +9,9 @@ module.exports = {
 
         const categoria = await Categorias.findAll({});
 
-        const classificacoes = await Classificacao.findAll({});
+        const classificacoes = await Classificacao.findAll({
+            order: ["nome"],
+        });
 
         //console.log(categoria);
 

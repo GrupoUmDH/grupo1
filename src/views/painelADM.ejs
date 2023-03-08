@@ -76,9 +76,9 @@
                                 <hr>
                                 <li><%- element.nome %></li>
                                 <hr>
-                                <li><%- categoria[element.id].nome %></li>
+                                <li><%- categoria[parseInt(element.classificacoes_id)].nome %></li>
                                 <hr>
-                                <li><%- classificacoes.nome %></li>
+                                <li><%- classificacoes[parseInt(element.classificacoes_id)].nome %></li>
                                 <hr>
                                 <li>
                                     <button><img src="/img/ico/lapis.png" /></button>
