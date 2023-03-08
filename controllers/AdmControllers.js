@@ -1,4 +1,4 @@
-const { Categorias, Classificacoes, Filme } = require("../models");
+const { Categorias, Classificacao, Filme } = require("../models");
 const Op = require("sequelize");
 
 
@@ -9,7 +9,7 @@ module.exports = {
 
         const categoria = await Categorias.findAll({});
 
-        //const classificacoes = await Classificacoes.findAll({});
+        const classificacoes = await Classificacao.findAll({});
 
         //console.log(categoria);
 
@@ -18,9 +18,11 @@ module.exports = {
             js: "",
             filme,
             categoria,
+            classificacoes,
         });
     },
 
+    /*
     form: async (req, res) => {
         let filme;
         const { id } = req.params;
@@ -29,9 +31,7 @@ module.exports = {
 
         const categoria = await Categorias.findAll({});
 
-        const classificacao = await Classificacao.findAll({
-            order: ["nome"],
-        });
+        const classificacao = await Classificacao.findAll();
 
         //console.log(categoria);
 
@@ -62,4 +62,6 @@ module.exports = {
 
         res.redirect("/produtos/teste");
     },
+
+    */
 };
