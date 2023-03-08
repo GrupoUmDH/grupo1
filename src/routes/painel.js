@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
+const AdmControllers = require('../../controllers/AdmControllers');
 
-router.get('/', function(req, res, next) {
-    res.render('painelADM', { pageName: 'painelAdm', js: ''});
-});
+
+router.get('/', AdmControllers.index);
+
 
 module.exports = router;

@@ -97,31 +97,6 @@ module.exports = {
         });
     },
 
-    form: async (req, res) => {
-        let filme;
-        const { id } = req.params;
-
-        if (id) filme = await Filme.findByPk(id);
-
-        const categoria = await Categorias.findAll({
-
-        });
-
-        const classificacao = await Classificacao.findAll({
-            order: ["nome"],
-        });
-
-        //console.log(categoria);
-
-        res.render("testeADD", {
-            pageName: "addFilme",
-            js: "addFilme",
-            filme,
-            categoria,
-            classificacao,
-        });
-    },
-
     createProduto: async (req, res) => {
 
         console.log(req.body);
@@ -153,30 +128,6 @@ module.exports = {
         console.log(req);
         res.render("teste", { pageName: "filmes", js:"filmes", categorias:params.categoriaCreate, classificacoes:1, filmes:[filmes] });
         
-    },
-
-    editar: async (req, res) => {
-
-    },
-
-    addFilme: async (req, res) => {
-        
-        const novofilme = {
-            nome : req.body.nome,
-            imagem : (req.body.fundo).replace('.jpg',''),
-            background : (req.body.capa.replace('.jpg','')),
-            valor : req.body.valor,
-            tipo : req.body.tipo,
-            categorias_id : parseInt(req.body.categorias_id),
-            classificacoes_id : parseInt(req.body.classificacoes_id),
-            descricao : req.body.descricao
-        };
-
-        console.log(novofilme);
-
-        await Filme.create( novofilme );
-
-        res.redirect('/produtos/teste');
     },
 
     atualizaProduto: async (req, res) => {

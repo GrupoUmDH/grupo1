@@ -139,6 +139,7 @@ div#itens {
 div#itens div {
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
 }
 
 div#itens img {
@@ -195,7 +196,7 @@ div#lista-borda ul {
 div#lista-borda ul li {
     text-align: center;
     width: 5.658rem;
-    font-size: .8rem;
+    font-size: .6rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -204,4 +205,21 @@ div#lista-borda ul li {
 
 div#itens-lista ul li img {
     width: 3rem;
+}
+
+div#action-itens button{
+    background-color: rgba(0,0,0,0);
+    border: 0;
+}
+div#action-itens button img{
+    width: 2rem;
+    height: 2rem;
+}
+
+div#itens-lista button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+}
+div#itens-lista ul li button img {
+    width: 2rem;
 }

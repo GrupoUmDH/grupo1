@@ -45,6 +45,10 @@
                 <div>
                     <img src="/img/logo.svg"/>
                     <h4>Lista de Produtos</h2>
+                    <div id="action-itens">
+                        <a><button><img src="/img/ico/arquivo.png" /></button></a>
+                        <a><button><img src="/img/ico/botao-de-deletar.png" /></button></a>
+                    </div>
                 </div>
                 <div id="lista-borda">
                     <div id="itens-menu">
@@ -62,23 +66,28 @@
                             <li>Ação</li>
                         </ul>
                     </div>
-                    <div id="itens-lista">
-                        <input type="checkbox">
-                        <hr>
-                        <ul>
-                            <li><img src="/public/img/filmes/capa.jpg"/></li>
+
+                    <% filme.forEach(element => { %>
+                        <div id="itens-lista">
+                            <input type="checkbox">
                             <hr>
-                            <li>Nome</li>
-                            <hr>
-                            <li>Categoria</li>
-                            <hr>
-                            <li>Classificação</li>
-                            <hr>
-                            <li>
-                                <button>editar</button>
-                            </li>
-                        </ul>
-                    </div>
+                            <ul>
+                                <li><img src="/img/filmes/<%- element.background %>.jpg"/></li>
+                                <hr>
+                                <li><%- element.nome %></li>
+                                <hr>
+                                <li><%- categoria[element.id].nome %></li>
+                                <hr>
+                                <li><%-  %></li>
+                                <hr>
+                                <li>
+                                    <button><img src="/img/ico/lapis.png" /></button>
+                                </li>
+                            </ul>
+                        </div>
+                    <% }) %>
+
+                    
                 </div>
             </div>
             <div id="filtro"></div>

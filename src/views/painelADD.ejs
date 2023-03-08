@@ -1,6 +1,42 @@
-<%- include('partials/header') %>
+
+<head>
+    <link rel="stylesheet" href="/stylesheets/<%= pageName %>.css" />
+        <script src="/javascripts/<%=js%>.js" defer></script>
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/img/favicon.ico"
+        />
+</head>
+
+<header>
+    <div class="barra-superior">
+        <div>
+            <img src="/img/logo.svg" />
+        </div>
+        <div id="user-menu">
+            <img src="/img/ico/user.png" id="icon-user"/>
+            <div>
+                <h2>Nome do Administrador</h2>
+                <h3>Administrador</h3>
+            </div>
+            <button>Sair</button>
+        </div>
+    </div>
+</header>
+
 <main>
-    <div>
+    <div class="barra-lateral">
+        <a> <button>Produtos</button></a>
+        <a> <button>Usuários</button></a>
+        <a> <button>Vendas</button></a>
+        <a> <button>Configurações</button></a>
+    </div>
+
+    <section class="content">
+        <div>
         <h2>Adicionar</h2>
             <form action="/produtos/adicionaFilme" method="POST"  >
                 <div class="check">
@@ -31,5 +67,6 @@
                 <button id="bt-add-filme" type="submit">Adicionar</button>
             </form>
     </div>
+    </section>
 </main>
 <%- include('partials/footer')%>
