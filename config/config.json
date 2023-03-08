@@ -1,7 +1,7 @@
 {
     "development": {
         "username": "root",
-        "password": null,
+        "password": "APP4358011",
         "database": "lumiere",
         "host": "127.0.0.1",
         "dialect": "mysql"

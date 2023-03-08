@@ -10,7 +10,6 @@ const validadorFormRead = require('../middlewares/validadorFormRead')
 const validadorFormUpdate = require('../middlewares/validadorFormUpdate')
 
 const ProdutosController = require('../controllers/ProdutosController');
-const CategoriasController = require('../controllers/CategoriasController');
 
 const FilmesControllers = require('../../controllers/FilmesControllers');
 
