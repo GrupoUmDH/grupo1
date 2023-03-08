@@ -87,21 +87,6 @@ module.exports = {
     },
 
     addFilme: async (req, res) => {
-<<<<<<< HEAD
-
-        //console.log(parseInt(req.body.categoria))
-
-        await Filme.create( {
-            nome : req.body.nome,
-            imagem : req.body.imagem.replace('.jpg', ''),
-            background : req.body.background.replace('.jpg', ''),
-            valor : req.body.valor,
-            tipo : req.body.tipo,
-            categorias_id : parseInt(req.body.categorias_id),
-            classificacoes_id : parseInt(req.body.classificacoes_id),
-            descricao : req.body.descricao,
-        } );
-=======
         
         const novofilme = {
             nome : req.body.nome,
@@ -117,7 +102,6 @@ module.exports = {
         console.log(novofilme);
 
         await Filme.create( novofilme );
->>>>>>> 208f11ed06622389a3fc41f5981310220b470c99
 
         res.redirect('/produtos/teste');
     },
