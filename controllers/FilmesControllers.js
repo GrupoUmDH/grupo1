@@ -19,7 +19,13 @@ module.exports = {
             order: ["nome"],
         });
 
-        res.render("backFilmes", { pageName: "backFilmes", js:"filmes", filmes, categoria, classificacao });
+        res.render("teste", {
+            pageName: "filmes",
+            js: "filmes",
+            filmes,
+            categoria,
+            classificacao,
+        });
     },
 
     buscar: async (req, res) => {

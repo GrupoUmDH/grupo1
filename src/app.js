@@ -11,7 +11,7 @@ var homeRouter = require('./routes/index');
 var userRouter = require('./routes/users');
 var produtosRouter = require('./routes/produtos');
 var carrinhoRouter = require('./routes/carrinho');
-
+var painelRouter = require('./routes/painel');
 
 var app = express();
 
@@ -47,6 +47,9 @@ app.use('/carrinho', carrinhoRouter);
 //PRODUTOS - (FILMES, SÉRIES -ADD/EXCLUI PRODUTOS)
 app.use('/filmes', produtosRouter);
 app.use('/produtos', produtosRouter);
+
+//PAINEL ADMINISTRATIVO
+app.use("/painel", painelRouter);
 
 
 // catch 404 and forward to error handler - MIDDLEWARE DE STATUS 404
