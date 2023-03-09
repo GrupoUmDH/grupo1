@@ -4,7 +4,6 @@ const Op = require("sequelize");
 
 module.exports = {
     index: async (req, res) => {
-
         const filme = await Filme.findAll({});
 
         const categoria = await Categorias.findAll({});
@@ -25,10 +24,9 @@ module.exports = {
     },
 
     editar: async (req, res) => {
-        
-        const {id} = req.body;
+        const { id } = req.body;
 
-        const  filme = await Filme.findByPk(id);
+        const filme = await Filme.findByPk(id);
 
         const categoria = await Categorias.findAll({});
 
@@ -48,6 +46,26 @@ module.exports = {
 
     atualiza: async (req, res) => {
         console.log(req.body);
+    },
+
+    formCriar: async (req, res) => {
+        const filme = await Filme.findAll({});
+
+        const categoria = await Categorias.findAll({});
+
+        const classificacoes = await Classificacao.findAll({
+        });
+
+        //console.log(categoria);
+
+        res.render("painelADD", {
+            pageName: "painelADD",
+            js: "painelADD",
+            filme,
+            categoria,
+            classificacoes,
+            titulo: "Adicionar",
+        });
     },
 
     /*
