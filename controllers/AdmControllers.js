@@ -17,11 +17,37 @@ module.exports = {
 
         res.render("painelADM", {
             pageName: "painelADM",
-            js: "",
+            js: "painelADM",
             filme,
             categoria,
             classificacoes,
         });
+    },
+
+    editar: async (req, res) => {
+        
+        const {id} = req.body;
+
+        const  filme = await Filme.findByPk(id);
+
+        const categoria = await Categorias.findAll({});
+
+        const classificacoes = await Classificacao.findAll();
+
+        //console.log(filme);
+
+        res.render("painelADD", {
+            pageName: "painelADD",
+            js: "painelADD",
+            filme,
+            categoria,
+            classificacoes,
+            titulo: "Editar",
+        });
+    },
+
+    atualiza: async (req, res) => {
+        console.log(req.body);
     },
 
     /*

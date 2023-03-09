@@ -35,38 +35,72 @@
         <a> <button>Configurações</button></a>
     </div>
 
-    <section class="content">
-        <div>
-        <h2>Adicionar</h2>
-            <form action="/produtos/adicionaFilme" method="POST"  >
-                <div class="check">
-                    <input type="radio" name="tipo" value="filmes" class="check" checked/>
-                    <label for="Filmes">Filmes</label>
-                    <input type="radio" name="tipo" value="series" class="check" />
-                    <label for="Séries">Séries</label>
-                </div>
-                <div id="div-add-dados">
-                    <input type="text" name="nome" placeholder="Filme" value=""></textarea>
-                    <textarea type="text" name="descricao" placeholder="Descrição do filme" value=""></textarea>
-                    <select name="categorias_id" id="categoria">
-                        <% categoria.forEach(element => { %>
-                            <option value="<%- element.id %>"><%- element.nome %></option>
-                        <% }); %>
-                    </select>
-                    <select name="classificacoes_id" id="classificacao">
-                        <% classificacao.forEach(element => { %>
-                            <option value=<%- element.id %> ><%- element.nome %></option>
-                        <% }); %>
-                    </select>
-                    <input type="text" name="valor" placeholder="valor"  value=""></textarea>
-                    <p>Imagem Widescreen</p>
-                    <input type="file" name="fundo" placeholder="imagem" />
-                    <p>Capa</p>
-                    <input type="file" name="capa" placeholder="background" />
-                </div>
-                <button id="bt-add-filme" type="submit">Adicionar</button>
-            </form>
+    <div id="titulos">
+        <h1><%- titulo%></h1>
     </div>
-    </section>
+    <div id="content-itens">
+        <div id="itens">
+            <div id="itens-titulo">
+                <div>
+                    <img src="/img/logo.svg"/>
+                    <h4><%- titulo%> Produto</h2>
+                </div>
+            </div>
+            <div id="lista-borda">
+                <form action="/painel/atualiza" method="POST"  >
+                    <div class="check">
+                        <input type="radio" name="tipo" value="filmes" class="check" checked/>
+                        <label for="Filmes">Filme</label>
+                        <input type="radio" name="tipo" value="series" class="check" />
+                        <label for="Séries">Série</label>
+                        
+                    </div>
+                    <div id="div-select">
+                        <div>
+                        <label for="categorias_id">Categorias </label>
+                        <select name="categorias_id" id="categoria">
+                            <% categoria.forEach(element => { %>
+                                <option value="<%- element.id %>"><%- element.nome %></option>
+                            <% }); %>
+                        </select>
+                        </div>
+                        <div>
+                        <label for="classificacoes_id">Classificação </label>
+                        <select name="classificacoes_id" id="classificacao">
+                            <% classificacoes.forEach(element => { %>
+                                <option value=<%- element.id %> ><%- element.nome %></option>
+                            <% }); %>
+                        </select>
+                        </div>
+                    </div>
+                    <div id="div-add-dados">
+                        <label for="nome">Nome do filme: </label>
+                        <input type="text" name="nome" value=<%- filme.nome%> >
+
+                        <textarea type="text" name="descricao" ><%- filme.descricao %></textarea>
+                        <input type="text" name="valor" value="R$ <%- filme.valor %>" >
+                        
+                        <div id="carregar-img">
+                            <div>
+                            <p>Capa</p>
+                            <img src="/img/filmes/<%- filme.background %>.jpg" alt="" id="previa-capa">
+                            <input type="file" name="capa" id="img-capa"/>
+                            <label for="capa">Enviar Imagem</label>
+                            </div>
+                            <div>
+                            <p>Imagem Widescreen</p>
+                            <img src="/img/filmes/<%- filme.imagem %>.jpg" alt="" id="previa-fundo">
+                            <input type="file" name="fundo" id="img-fundo"/>
+                            <label for="fundo">Enviar Imagem</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button id="bt-confirmar"><img src="/img/ico/confirme.png" /></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 </main>
 <%- include('partials/footer')%>
