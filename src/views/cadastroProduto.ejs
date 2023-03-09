@@ -35,16 +35,16 @@
                 <p class="erro">
                     <%= errors.categoriaCreate %>
                 </p>
-                <select name="classificacaoCreate" id="classificacao">
+                <select name="classificacoesCreate" id="classificacao">
                     <option value="select" selected hidden disabled>classificacao</option>
                     <% classificacao.forEach(element => { %>
-                        <option value=<%= element.dataValues.id %>><%= element.dataValues.nome - element.dataValues.info %></option>
+                        <option value=<%= element.id %>><%= element.nome %> - <%= element.info %></option>
                         <% }); %>
 
                 </select>
-                <input type="text" name="classificacaoCreate" placeholder="classificação" />
+              
                 <p class="erro">
-                    <%= errors.classificacaoCreate %>
+                    <%= errors.classificacoesCreate %>
                 </p>
                 <input type="text" name="valorCreate" placeholder="valor" />
                 <p class="erro">
@@ -132,10 +132,18 @@
                 <p class="erro">
                     <%= errors.categoriaUpdate %>
                 </p>
-                <input type="text" name="classificacaoUpdate" placeholder="classificação" />
+                <select name="classificacaoUpdate" id="classificacao">
+                    <option value="select" selected hidden disabled>classificacao</option>
+                    <% classificacao.forEach(element => { %>
+                        <option value=<%= element.id %>><%= element.nome %> - <%= element.info %></option>
+                        <% }); %>
+
+                </select>
+              
                 <p class="erro">
                     <%= errors.classificacaoUpdate %>
                 </p>
+              
                 <input type="text" name="valorUpdate" placeholder="valor" />
                 <p class="erro">
                     <%= errors.valorUpdate%>
