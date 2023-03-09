@@ -47,7 +47,11 @@
                 </div>
             </div>
             <div id="lista-borda">
-                <form action="/painel/atualiza" method="POST"  >
+                <% if(titulo == "Editar") { %>
+                    <form action="/painel/atualiza" method="POST"  >
+                <% } else { %>
+                    <form action="/painel/criar" method="POST"  >
+                <% } %>
                     <div class="check">
                         <input type="radio" name="tipo" value="filmes" class="check" checked/>
                         <label for="Filmes">Filme</label>

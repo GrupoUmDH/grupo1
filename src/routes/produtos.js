@@ -5,9 +5,9 @@ const multer = require('multer');
 const path = require('path');
 
 const validadorFormCreate = require('../middlewares/validadorFormCreate');
-const validadorFormDelete = require('../middlewares/validadorFormDelete')
-const validadorFormRead = require('../middlewares/validadorFormRead')
-const validadorFormUpdate = require('../middlewares/validadorFormUpdate')
+const validadorFormDelete = require('../middlewares/validadorFormDelete');
+const validadorFormRead = require('../middlewares/validadorFormRead');
+const validadorFormUpdate = require('../middlewares/validadorFormUpdate');
 
 const ProdutosController = require('../controllers/ProdutosController');
 
