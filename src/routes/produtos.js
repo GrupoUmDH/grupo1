@@ -21,6 +21,7 @@ router.get('/', ProdutosController.produto);
 router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
 router.get('/categorias', ProdutosController.listar);
+
 router.get('/cadastroProduto', FilmesControllers.categoriaclassificacaoFilme);
 
 //implementar multer
@@ -43,6 +44,8 @@ router.post('/create', upload.fields([{name:'backgroundCreate'},{name:'imagemCre
 
 //buscar produto
 // router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
+
+router.get('/teste', FilmesControllers.index);
  
 // deletar produto
 router.delete('/remove', validadorFormDelete, FilmesControllers.deletaProduto);
