@@ -70,7 +70,6 @@
                     </div>
                     
                     <% filme.forEach(element => { %>
-                        <form method="POST" action="/painel/editar?_method=PUT" >
                         <div id="itens-lista">
                             <ul>
                                 <li><img src="/img/filmes/<%- element.background %>.jpg"/></li>
@@ -82,13 +81,18 @@
                                 <li><%- classificacoes[parseInt(element.classificacoes_id)].nome %></li>
                                 <hr>
                                 <li>
-                                    <input id="input-value" name="id" value=<%- element.id %> style="display: none" >
-                                    <button id="bt-editar" type="submit" ><img src="/img/ico/lapis.png" /></button>
-                                    <button id="bt-excluir" ><img src="/img/ico/icone-x.png" /></button>
+                                    <form method="POST" action="/painel/editar?_method=PUT" ></form>
+                                        <input id="input-value" name="id" value=<%- element.id %> style="display: none" >
+                                        <button id="bt-editar" type="submit" ><img src="/img/ico/lapis.png" /></button>
+                                    </form>
+                                    <form>
+                                        <input id="inputDelele" name="id" value=<%- element.id %> style="display: none" >
+                                        <button id="bt-excluir" ><img src="/img/ico/icone-x.png" /></button>
+                                    </form>
+                                    
                                 </li>
                             </ul>
                         </div>
-                        </form>
                     <% }) %>
                    
                 </div>
@@ -96,5 +100,17 @@
             <div id="filtro"></div>
         </div>
     </section>
+
+    <div class="pop-up">
+        <div id="pop-up-content">
+            <h2>Deseja realmente EXCLUIR este item?</h2>
+            <h4>Esta ação é irreversível!</h4>
+            <form method="POST" action="/painel/deletar?_method=DELETE">
+                <input id="pup-up-inputValue" name="id" style="display: none" >
+                <button id="pup-up-excluir" >DELETAR</button>
+            </form>
+        </div>
+    </div>
+
 </main>
 <%- include('partials/footer')%>

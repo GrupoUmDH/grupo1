@@ -104,6 +104,16 @@ module.exports = {
         res.redirect("/painel");
     },
 
+    deletar: async (req, res) => {
+        const { id } = req.body;
+
+        await Filme.destroy({
+            where: { id },
+        });
+
+        res.redirect("/painel");
+    },
+
     /*
     form: async (req, res) => {
         let filme;

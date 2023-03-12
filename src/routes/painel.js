@@ -35,7 +35,9 @@ router.post(
 
 router.put('/editar', AdmControllers.editar);
 
-router.post('/atualiza', AdmControllers.atualiza)
+router.post('/atualiza', AdmControllers.atualiza);
+
+router.delete('/deletar', AdmControllers.deletar);
 
 
 module.exports = router;
