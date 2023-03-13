@@ -1,24 +1,28 @@
 var express = require('express');
 var router = express.Router();
+const bodyParse = require('body-parser');
 const multer = require('multer');
 const path = require('path');
+
 const validadorFormCreate = require('../middlewares/validadorFormCreate');
-const validadorFormDelete = require('../middlewares/validadorFormDelete')
-const validadorFormRead = require('../middlewares/validadorFormRead')
-const validadorFormUpdate = require('../middlewares/validadorFormUpdate')
+const validadorFormDelete = require('../middlewares/validadorFormDelete');
+const validadorFormRead = require('../middlewares/validadorFormRead');
+const validadorFormUpdate = require('../middlewares/validadorFormUpdate');
 
 const ProdutosController = require('../controllers/ProdutosController');
 
 const FilmesControllers = require('../../controllers/FilmesControllers');
 
+router.use(bodyParse.urlencoded({extended: true}));
+
 router.get('/', ProdutosController.produto);
+
 
 router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
 router.get('/categorias', ProdutosController.listar);
-router.get('/cadastroProduto', function(req, res, next) {
-    res.render('cadastroProduto', { pageName: 'cadastroProduto', errors: [], js: 'cadastroProduto' });
-});
+
+router.get('/cadastroProduto', FilmesControllers.categoriaclassificacaoFilme);
 
 //implementar multer
 const storage = multer.diskStorage({
@@ -30,25 +34,27 @@ const storage = multer.diskStorage({
         cb(null, file.originalname)
     } ,
 });
+
 const upload = multer({storage: storage, limits: {fileSize: 10000000}});
 
 router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
 
 //criar produto
-router.post('/create',upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), validadorFormCreate, ProdutosController.createProduto);
+router.post('/create', upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), validadorFormCreate, FilmesControllers.createProduto);
 
 //buscar produto
-router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
+// router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
+
+router.get('/teste', FilmesControllers.index);
  
 // deletar produto
-router.delete('/remove', validadorFormDelete, ProdutosController.deletaProduto);
+router.delete('/remove', validadorFormDelete, FilmesControllers.deletaProduto);
 
 // atualiza produto
-router.put('/edit', validadorFormUpdate, ProdutosController.atualizaProduto);
-
+router.put('/edit', validadorFormUpdate, FilmesControllers.atualizaProduto);
 
 // SEQUELIZE
-router.get('/categorias2', FilmesControllers.index);
+router.get('/search', FilmesControllers.buscar);
 
 
 module.exports = router;

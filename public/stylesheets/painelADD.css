@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    --background-color: #0C0C0C;
+    --background-2: #131313;
+    --cores-chaves: #B30006;
+    --cores-letra: #FFFFFF;
+    --cores-objetos: #580003;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cores-letra);
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+main {
+    margin-top: 4rem;
+    margin-left: 4rem;
+}
+
+.barra-superior {
+    height: 4rem;
+    width: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div#user-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--cores-letra);
+    font-size: smaller;
+}
+
+div#user-menu h2 {
+    font-size: 1rem;
+    width: 12rem;
+}
+
+div#user-menu h3 {
+    font-size: .7rem;
+}
+
+div#user-menu button {
+    margin-right: 1rem;
+    background-color: 0;
+    color: var(--cores-letra);
+}
+
+header img {
+    width: 4rem;
+    margin-left: 5rem;
+}
+
+#icon-user {
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+.barra-lateral {
+    width: 220px;
+    height: 100vh;
+    padding-top: 2rem;
+    background-color: var(--background-2);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+     position: fixed;
+    top: 4rem;
+    left: 0;
+}
+.barra-lateral img {
+    width: 20px;
+}
+
+.barra-lateral button {
+    width: 150px;
+    height: 2rem;
+    background-color: var(--cores-objetos);
+    color: var(--cores-letra);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    border: 0;
+}
+
+main h2 {
+    color: var(--background-color);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 90%;
+    margin: 1rem;
+}
+
+.check {
+    margin-left: .5rem;
+    text-transform: uppercase;
+}
+
+
+div#div-select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+select {
+    text-transform: uppercase;
+    margin-left: .5rem;
+}
+
+textarea {
+    width: 90%;
+    height: 8rem;
+    margin-bottom: 1rem;
+    font-size: .8rem;
+    padding-left: .5rem;
+}
+
+
+div#div-add-dados {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input[type="text"] {
+    width: 90%;
+    height: 2.5rem;
+    font-size: 1rem;
+    margin-bottom: .8rem;
+    padding-left: .5rem;
+}
+
+
+
+section.content {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+div#titulos {
+    display: inline-flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-left: 13rem;
+    padding-top: 1rem;
+}
+
+div#titulos h3{
+    margin-left: .8rem;
+    opacity: .5;
+}
+
+div#itens {
+    border: 1px solid gray;
+    width: 50vw;
+    height: 70vh;
+    overflow: auto;
+}
+
+div#itens div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+div#itens img {
+    width: 2.5rem;
+    margin: .3rem;
+}
+
+button#bt-confirmar {
+    background-color: rgba(0,0,0,0);
+    border: 0;
+}
+
+div#content-itens {
+    display: flex;
+    padding-left: 13rem;
+    margin-bottom: 1rem;
+}
+
+div#itens-titulo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+div#lista-borda {
+    width: 96%;
+    height: 88%;
+    border: .7px solid gray;
+    margin: .5rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+div#carregar-img {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+div#carregar-img div {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+div#carregar-img label {
+    padding: .5rem;
+    width: 8rem;
+    font-size: .8rem;
+    background-color: var(--cores-chaves);
+    border-radius: 1rem;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+
+div#carregar-img #previa-capa {
+    width: 8rem;
+    height: 10rem;
+    border: .5px solid gray;
+}
+
+div#carregar-img #previa-fundo {
+    width: 14rem;
+    height: 10rem;
+    border: .5px solid gray;
+}

@@ -1,0 +1,32 @@
+<% if (filme) {%>
+            <h2>Editar</h2>
+            <form method="POST" action="/produtos/editarFilme" enctype="multipart/form-data">
+                <div class="check">
+                    <input type="radio" name="tipo" value="filmes" class="check" checked/>
+                    <label for="Filmes">Filmes</label>
+                    <input type="radio" name="tipo" value="series" class="check" />
+                    <label for="Séries">Séries</label>
+                </div>
+                <div id="div-add-dados">
+                    <input type="text" name="nome" placeholder="<%- filme.nome %>" />
+                    <textarea type="text" name="descricao" placeholder="Descrição do filme"><%- filme.descricao %></textarea>
+                    <select name="categoria" id="categoria">
+                        <% categoria.forEach(element => { %>
+                            <option><%- element.nome %></option>
+                        <% }); %>
+                    </select>
+                    <select name="classificacao" id="classificacao">
+                        <% classificacao.forEach(element => { %>
+                            <option><%- element.nome %></option>
+                        <% }); %>
+                    </select>
+                    <input type="text" name="valor" placeholder="<%- filme.valor%>" />
+                    <p>Imagem Widescreen</p>
+                    <input type="file" name="imagem" placeholder="imagem" />
+                    <p>Capa</p>
+                    <input type="file" name="background" placeholder="background" />
+                </div>
+                
+                <button id="bt-add-filme" type="submit">Finalizar edição</button>
+            </form>
+        <% } else { %>

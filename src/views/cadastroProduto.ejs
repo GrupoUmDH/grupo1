@@ -6,45 +6,60 @@
             <form method="POST" action="/produtos/create" enctype="multipart/form-data">
                 <h2>CREATE</h2>
                 <div class="check">
-                    <input type="radio" name="tipoCreate" value="filmes" class="check" checked/>
+                    <input type="radio" name="tipoCreate" value="1" class="check" checked />
                     <label for="Filmes">Filmes</label>
-                    <input type="radio" name="tipoCreate" value="series" class="check" />
+                    <input type="radio" name="tipoCreate" value="2" class="check" />
                     <label for="Séries">Séries</label>
-                    <p class="erro"> <%= errors.tipoCreate %> </p>
+                    <p class="erro">
+                        <%= errors.tipoCreate %>
+                    </p>
                 </div>
 
                 <input type="text" name="nomeCreate" placeholder="nome" />
-                <p class="erro"> <%= errors.nomeCreate %> </p>
+                <p class="erro">
+                    <%= errors.nomeCreate %>
+                </p>
                 <textarea type="text" name="descricaoCreate" placeholder="descricao"></textarea>
-                <p class="erro"> <%= errors.descricaoCreate %> </p>
-                 <select name="categoriaCreate" id="categoria">
+                <p class="erro">
+                    <%= errors.descricaoCreate %>
+                </p>
+
+                <select name="categoriaCreate" id="categoria">
                     <option value="select" selected hidden disabled>categoria</option>
-                    <option value="ação" >Ação</option>
-                    <option value="aventura">Aventura</option>
-                    <option value="comédia" >Comédia</option>
-                    <option value="dança">Dança</option>
-                    <option value="documentário">Documentário</option>
-                    <option value="drama">Drama</option>
-                    <option value="faroeste">Faroeste</option>
-                    <option value="ficção">Ficção</option>
-                    <option value="guerra">Guerra</option>
-                    <option value="musical">Musical</option>
-                    <option value="policial">Policial</option>
-                    <option value="romance">Romance</option>
-                    <option value="suspense">Suspense</option>
-                    <option value="terror">Terror</option>
+                    <% categorias.forEach(element => { %>
+                        <option value=<%= element.id %>><%= element.nome %></option>
+                        <% }); %>
+                    
+
                 </select>
-                <p class="erro"> <%= errors.categoriaCreate %> </p>  
-                <input type="number" name="classificacaoCreate" placeholder="classificação" />
-                <p class="erro"> <%= errors.classificacaoCreate %> </p>
+                <p class="erro">
+                    <%= errors.categoriaCreate %>
+                </p>
+                <select name="classificacaoCreate" id="classificacao">
+                    <option value="select" selected hidden disabled>classificacao</option>
+                    <% classificacao.forEach(element => { %>
+                        <option value=<%= element.dataValues.id %>><%= element.dataValues.nome - element.dataValues.info %></option>
+                        <% }); %>
+
+                </select>
+                <input type="text" name="classificacaoCreate" placeholder="classificação" />
+                <p class="erro">
+                    <%= errors.classificacaoCreate %>
+                </p>
                 <input type="text" name="valorCreate" placeholder="valor" />
-                <p class="erro"> <%= errors.valorCreate %> </p>
+                <p class="erro">
+                    <%= errors.valorCreate %>
+                </p>
                 <p>Imagem</p>
                 <input type="file" name="imagemCreate" placeholder="imagem" />
-                <p class="erro"> <%= errors.imagemCreate %> </p>
+                <p class="erro">
+                    <%= errors.imagemCreate %>
+                </p>
                 <p>background</p>
                 <input type="file" name="backgroundCreate" placeholder="background" />
-                <p class="erro"> <%= errors.backgroundCreate %> </p>
+                <p class="erro">
+                    <%= errors.backgroundCreate %>
+                </p>
                 <button type="submit">Adicionar</button>
             </form>
 
@@ -52,38 +67,56 @@
             <form method="get" action="/produtos/search">
                 <h2>READ</h2>
                 <div class="check">
-                    <input type="radio" name="tipoRead" value="filmes" class="check" checked/>
-                   <label for="Filmes" >Filmes</label>
+                    <input type="radio" name="tipoRead" value="filmes" class="check" checked />
+                    <label for="Filmes">Filmes</label>
                     <input type="radio" name="tipoRead" value="series" class="check" />
                     <label for="Séries">Séries</label>
-                    <p class="erro"> <%= errors.tipoRead %> </p>
+                    <p class="erro">
+                        <%= errors.tipoRead %>
+                    </p>
                 </div>
                 <input type="text" name="idRead" placeholder="id" />
-                <p class="erro"> <%= errors.idRead %> </p>
+                <p class="erro">
+                    <%= errors.idRead %>
+                </p>
                 <button type="submit" id="bt-pesquisa">Pesquisar</button>
             </form>
 
             <!-- PUT - UPDATE -->
             <form method="POST" action="/produtos/edit?_method=PUT">
                 <h2>UPDATE</h2>
-                 <div class="check">
-                    <input type="radio" name="tipoUpdate" class="check" checked/>
+                <div class="check">
+                    <input type="radio" name="tipoUpdate" class="check" checked />
                     <label for="Filmes">Filmes</label>
                     <input type="radio" name="tipoUpdate" class="check" />
                     <label for="Séries">Séries</label>
-                    <p class="erro"> <%= errors.tipoUpdate %> </p>
+                    <p class="erro">
+                        <%= errors.tipoUpdate %>
+                    </p>
                 </div>
                 <input type="text" name="idUpdate" placeholder="id" />
-                <p class="erro"> <%= errors.idUpdate %> </p>
+                <p class="erro">
+                    <%= errors.idUpdate %>
+                </p>
                 <input type="text" name="nomeUpdate" placeholder="nome" />
-                <p class="erro"> <%= errors.nomeUpdate %> </p>
+                <p class="erro">
+                    <%= errors.nomeUpdate %>
+                </p>
                 <textarea type="text" name="descricaoUpdate" placeholder="descricao"></textarea>
-                <p class="erro"> <%= errors.descricaoUpdate %> </p>
+                <p class="erro">
+                    <%= errors.descricaoUpdate %>
+                </p>
                 <select name="categoriaUpdate" id="categoria">
-                    <option value="select" selected hidden disabled>categoria</option>
-                    <option value="ação" >Ação</option>
+                  
+                        <option value="select" selected hidden disabled>categoria</option>
+                        <% categorias.forEach(element => { %>
+                            <option value=<%= element.id %>><%= element.nome %></option>
+                            <% }); %>
+
+                    <!-- <option value="select" selected hidden disabled>categoria</option>
+                    <option value="ação">Ação</option>
                     <option value="aventura">Aventura</option>
-                    <option value="comédia" >Comédia</option>
+                    <option value="comédia">Comédia</option>
                     <option value="dança">Dança</option>
                     <option value="documentário">Documentário</option>
                     <option value="drama">Drama</option>
@@ -94,19 +127,29 @@
                     <option value="policial">Policial</option>
                     <option value="romance">Romance</option>
                     <option value="suspense">Suspense</option>
-                    <option value="terror">Terror</option>                    
+                    <option value="terror">Terror</option> -->
                 </select>
-                <p class="erro"> <%= errors.categoriaUpdate %> </p> 
+                <p class="erro">
+                    <%= errors.categoriaUpdate %>
+                </p>
                 <input type="text" name="classificacaoUpdate" placeholder="classificação" />
-                <p class="erro"> <%= errors.classificacaoUpdate %> </p>
+                <p class="erro">
+                    <%= errors.classificacaoUpdate %>
+                </p>
                 <input type="text" name="valorUpdate" placeholder="valor" />
-                <p class="erro"> <%= errors.valorUpdate%> </p>
+                <p class="erro">
+                    <%= errors.valorUpdate%>
+                </p>
                 <p>Imagem</p>
                 <input type="file" name="imagemUpdate" placeholder="imagem" />
-                <p class="erro"> <%= errors.imagemUpdate %> </p>
+                <p class="erro">
+                    <%= errors.imagemUpdate %>
+                </p>
                 <p>background</p>
                 <input type="file" name="backgroundUpdate" placeholder="imagem" />
-                <p class="erro"> <%= errors.backgroundUpdate %> </p>
+                <p class="erro">
+                    <%= errors.backgroundUpdate %>
+                </p>
                 <button type="submit">Editar</button>
             </form>
 
@@ -114,14 +157,18 @@
             <form method="POST" action="/produtos/remove?_method=DELETE">
                 <h2>DELETE</h2>
                 <div class="check">
-                    <input type="radio" name="tipoDelete" value="filmes" class="check" checked/>
+                    <input type="radio" name="tipoDelete" value="filmes" class="check" checked />
                     <label for="Filmes">Filmes</label>
                     <input type="radio" name="tipoDelete" value="series" class="check" />
                     <label for="Séries">Séries</label>
-                    <p class="erro"> <%= errors.tipoDelete %> </p>
+                    <p class="erro">
+                        <%= errors.tipoDelete %>
+                    </p>
                 </div>
                 <input type="text" name="idDelete" placeholder="id" />
-                <p class="erro"> <%= errors.idDelete %> </p>
+                <p class="erro">
+                    <%= errors.idDelete %>
+                </p>
                 <button type="submit">Apagar</button>
             </form>
         </main>

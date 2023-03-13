@@ -18,5 +18,11 @@
         "nome": "Vagner Bezerra",
         "password": "12345",
         "email": "spotify.vagner@gmail.com"
+    },
+    {
+        "id": 7,
+        "nome": "Vagner",
+        "password": "12345",
+        "email": "spotify.vagner@gmail.com"
     }
 ]

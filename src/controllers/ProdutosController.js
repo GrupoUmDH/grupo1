@@ -1,6 +1,7 @@
 const ProdutosModel = require('../models/ProdutosModel');
 const { validationResult } = require('express-validator');
 
+
 module.exports = {
     filmes: (req, res) => {
         const filmes = ProdutosModel.filmes();
@@ -37,11 +38,18 @@ module.exports = {
         console.log(req.body);
         return res.render('produtos', { pageName: 'produtos', js: 'adicionarAoCarrinho' });
     },
+<<<<<<<<< Temporary merge branch 1
+    //criar produto
+=========
 
      //criar produto
+>>>>>>>>> Temporary merge branch 2
     createProduto: (req, res) => {
+
+        console.log(req.body);
+
         const { errors } = validationResult(req);
-        console.log("errors", errors)
+        //console.log("errors", errors)
 
         if (errors.length) {
             const errosFormatados = {
@@ -53,10 +61,16 @@ module.exports = {
 
             return res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
         }
+<<<<<<<<< Temporary merge branch 1
+        ProdutosModel.createOne(req)
+        res.send(`O produto ${req.body.nomeCreate} foi criado com sucesso`)
+    },
+=========
             ProdutosModel.createOne(req)
             res.send(`O produto ${req.body.nome} foi criado com sucesso`)
     }, 
     
+>>>>>>>>> Temporary merge branch 2
     //procurar produto
     buscaProduto: (req, res) => {
         const { errors } = validationResult(req);
