@@ -47,12 +47,14 @@ module.exports = {
     atualiza: async (req, res) => {
         const { id } = req.body;
 
-        console.log(req.body);
+        //console.log(req.body);
+
+        const filme = await Filme.findByPk(id);
 
         const updateFilme = await {
             nome: req.body.nome,
-            imagem: req.body.fundo.replace(".jpg", ""),
-            background: req.body.capa.replace(".jpg", ""),
+            imagem: !req.body.capa ? filme.imagem : path.parse(req.files.fundo[0].filename).name,
+            background: !req.body.fundo ? filme.background : path.parse(req.files.capa[0].filename).name,
             valor: req.body.valor,
             tipo: req.body.tipo,
             categorias_id: parseInt(req.body.categorias_id),
@@ -90,8 +92,8 @@ module.exports = {
         
         const novofilme = {
             nome: req.body.nome,
-            imagem: req.body.fundo.replace(".jpg", ""),
-            background: req.body.capa.replace(".jpg", ""),
+            imagem: path.parse(req.files.fundo[0].filename).name,
+            background: path.parse(req.files.capa[0].filename).name,
             valor: req.body.valor,
             tipo: req.body.tipo,
             categorias_id: parseInt(req.body.categorias_id),
