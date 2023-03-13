@@ -1,9 +1,9 @@
 {
     "development": {
-        "username": "sql10601516",
-        "password": "YYj3G2CgkA",
-        "database": "sql10601516",
-        "host": "sql10.freemysqlhosting.net",
+        "username": "root",
+        "password": null,
+        "database": "lumiere",
+        "host": "127.0.0.1",
         "dialect": "mysql"
     }
 }

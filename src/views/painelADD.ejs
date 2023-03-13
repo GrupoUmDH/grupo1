@@ -48,16 +48,16 @@
             </div>
             <div id="lista-borda">
                 <% if(titulo == "Editar") { %>
-                    <form action="/painel/atualiza" method="POST"  >
+                    <form action="/painel/atualiza?_method=PUT" method="POST"  enctype="multipart/form-data">
+                    <input name="id" style="display:none"  value=<%- filme.id %> />
                 <% } else { %>
-                    <form action="/painel/criar" method="POST"  >
+                    <form action="/painel/criar" method="POST" enctype="multipart/form-data" >
                 <% } %>
                     <div class="check">
-                        <input type="radio" name="tipo" value="filmes" class="check" checked/>
+                        <input type="radio" name="tipo" value="filme" class="check" checked />
                         <label for="Filmes">Filme</label>
-                        <input type="radio" name="tipo" value="series" class="check" />
+                        <input type="radio" name="tipo" value="serie" class="check" />
                         <label for="Séries">Série</label>
-                        
                     </div>
                     <div id="div-select">
                         <div>
@@ -79,7 +79,7 @@
                     </div>
                     <div id="div-add-dados">
                         <label for="nome">Nome do filme: </label>
-                        <input type="text" name="nome" placeholder="Tíitulo" value=<%- filme.nome %> >
+                        <input type="text" name="nome" placeholder="Tíitulo" value="<%- filme.nome %>" >
 
                         <textarea type="text" name="descricao" placeholder="Descrição" ><%- filme.descricao %></textarea>
                         <input type="text" name="valor" placeholder="RS Valor" value=<%- filme.valor %> >
@@ -88,14 +88,12 @@
                             <div>
                             <p>Capa</p>
                             <img src="/img/filmes/<%- filme.background %>.jpg" alt="" id="previa-capa">
-                            <input type="file" name="capa" id="img-capa"/>
-                            <label for="capa">Enviar Imagem</label>
+                            <input type="file" name="capa" id="img-capa" value="<%- filme.background %>.jpg"/>
                             </div>
                             <div>
                             <p>Imagem Widescreen</p>
                             <img src="/img/filmes/<%- filme.imagem %>.jpg" alt="" id="previa-fundo">
-                            <input type="file" name="fundo" id="img-fundo"/>
-                            <label for="fundo">Enviar Imagem</label>
+                            <input type="file" name="fundo" id="img-fundo" value="<%- filme.imagem %>.jpg" />
                             </div>
                         </div>
 

@@ -76,12 +76,12 @@
                                 <hr>
                                 <li><%- element.nome %></li>
                                 <hr>
-                                <li><%- categoria[parseInt(element.classificacoes_id)].nome %></li>
+                                <li><%- categoria[element.categorias_id -1].nome %></li>
                                 <hr>
-                                <li><%- classificacoes[parseInt(element.classificacoes_id)].nome %></li>
+                                <li><%- classificacoes[element.classificacoes_id - 1].nome %></li>
                                 <hr>
                                 <li>
-                                    <form method="POST" action="/painel/editar?_method=PUT" ></form>
+                                    <form method="POST" action="/painel/editar?_method=PUT" id="form_editar">
                                         <input id="input-value" name="id" value=<%- element.id %> style="display: none" >
                                         <button id="bt-editar" type="submit" ><img src="/img/ico/lapis.png" /></button>
                                     </form>

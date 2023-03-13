@@ -4,7 +4,7 @@ const bodyParse = require("body-parser");
 const multer = require("multer");
 const path = require("path");
 
-const validadorFormCreate = require("../middlewares/validadorFormCreate");
+const validadorForm = require("../middlewares/validadorForm");
 
 const AdmControllers = require('../../controllers/AdmControllers');
 
@@ -26,16 +26,15 @@ const upload = multer({ storage: storage, limits: { fileSize: 10000000 } });
 router.get('/', AdmControllers.index);
 
 router.get('/criar', AdmControllers.formCriar);
-router.post(
-    "/criar",
+
+router.post('/criar',
     upload.fields([{ name: "capa" }, { name: "fundo" }]),
-    validadorFormCreate,
     AdmControllers.criar
 );
 
 router.put('/editar', AdmControllers.editar);
 
-router.post('/atualiza', AdmControllers.atualiza);
+router.put('/atualiza', upload.fields([{ name: "capa" }, { name: "fundo" }]), AdmControllers.atualiza);
 
 router.delete('/deletar', AdmControllers.deletar);
 

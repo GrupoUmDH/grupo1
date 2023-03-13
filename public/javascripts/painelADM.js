@@ -1,6 +1,7 @@
 const bt_deletar = document.querySelectorAll('[id = "bt-excluir"]');
 
 const bt_editar = document.querySelectorAll('[id = "bt-editar"]');
+const form_Editar = document.querySelectorAll('[id = "form-editar"]');
 
 const inputDelele = document.querySelectorAll('[id = "inputDelele"]');
 
@@ -24,8 +25,9 @@ bt_deletar.forEach((element, position) => {
 });
 
 //BOTÃO DE EDITAR
-bt_editar.forEach((element, position) => {
-    element.addEventListener('submit', (event) =>{
-        event.preventDefault();
-    })
-})
+form_Editar.forEach((element, position) => {
+    element.addEventListener("submit", (event) => {
+        //event.preventDefault();
+        console.log("Testando botão editar");
+    });
+});
