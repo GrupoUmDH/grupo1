@@ -253,19 +253,21 @@ div#itens-lista ul li button img {
 
 div#pop-up-content {
     width: 25rem;
-    height: 15rem;
+    height: 18rem;
     background-color: darkred;
-    padding: 3rem;
+    padding: .7rem;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 div#pop-up-content h2 {
     text-align: center;
     color: white;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 div#pop-up-content h4 {
@@ -283,4 +285,25 @@ button#pup-up-excluir {
     border-radius: .5rem;
     color: white;
     font-size: large;
+    margin-bottom: 2rem;
+}
+
+div.pop-up span button {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: xx-large;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: .5rem;
+}
+
+div.pop-up span {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    flex-direction: row;
 }
