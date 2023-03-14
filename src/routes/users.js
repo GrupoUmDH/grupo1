@@ -8,6 +8,8 @@ router.get('/', userController.index);
 
 router.post('/user', userController.login);
 
+router.post("/cadastro", userController.cadastro);
+
 
 
 module.exports = router;

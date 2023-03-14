@@ -16,10 +16,44 @@ module.exports = {
     login: async (req, res, next) => {
         const { nome_usuario, senha } = req.body;
         
-        const user = await Usuario.findAll({
-            where: { [Op.iLike]: req.body.nome_usuario },
-        });
+        try {
+            const user = await Usuario.findOne({
+                where: { nome_usuario }
+            });
 
-        console.log(user);
+            if(!user){
+                console.log("usuário ou senha errados");
+            }
+
+            const validPassword = bcrypt.compareSync(senha, user.senha);
+            if(!validPassword){
+                console.log("senha inválida");
+            }
+
+        } catch (error) {
+            console.log("usuário ou senha errados");
+            res.redirect('/login');
+        }
     },
+
+    cadastro: async (req, res, next) => {
+        const { nome_usuario, email, senha } = req.body;
+        const hashedPassword = await bcrypt.hash(senha, 10);
+        
+        try {
+            const user = await Usuario.create({
+                nome_usuario: req.body.nome_usuario,
+                email: req.body.email,
+                senha: hashedPassword,
+                tipo_usuario: 'cliente',
+            });
+
+            console.log(user)
+
+            res.status(201).redirect('/login');
+
+        } catch (error) {
+            res.status(400).send("Erro ao cadastrar");
+        }
+    }
 };

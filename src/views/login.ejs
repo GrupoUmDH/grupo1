@@ -29,7 +29,7 @@
         </div>
 
         <div class="cadastro cadastro-formulario">
-            <form class="form-cad" method="post" action="/cadastro/novo">
+            <form class="form-cad" method="post" action="/login/cadastro">
                 <span>Cadastre-se</span>
                 <hr />
                 <a>
@@ -46,16 +46,17 @@
                 <input
                     placeholder="NOME USUÁRIO.."
                     type="text"
-                    name="name"
+                    name="nome_usuario"
                     id="user"
                 />
                 <div class="invisible">
                     Campo obrigatório!
                 </div>
-                <input placeholder="SENHA" type="password" name="password" />
+                <input placeholder="SENHA" type="password" name="senha" />
                 <div class="invisible">
                     Campo obrigatório!
                 </div>
+                <input type="text" style="display: none" nome="tipo_usuario" value="admin"/>
                 <button type="submit">CRIAR A MINHA CONTA</button>
             </form>
         </div>
