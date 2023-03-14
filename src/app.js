@@ -38,8 +38,7 @@ app.use('/', homeRouter);
 app.use('/index', homeRouter);
 
 //USERS - (PAINEL USUÁRIO, LOGIN, CADASTRO)
-app.use('/painel-user', userRouter);
-app.use('/cadastro', userRouter);
+app.use('/login', userRouter);
 
 //CARRINHO - (CARRINHO, COMPRA, PAGAMENTO)
 app.use('/carrinho', carrinhoRouter);
