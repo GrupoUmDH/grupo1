@@ -1,0 +1,116 @@
+<head>
+    <link rel="stylesheet" href="/stylesheets/<%= pageName %>.css" />
+        <script src="/javascripts/<%=js%>.js" defer></script>
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/img/favicon.ico"
+        />
+        <title><%=pageName%></title>
+</head>
+
+<header>
+    <div class="barra-superior">
+        <div>
+            <img src="/img/logo.svg" />
+        </div>
+        <div id="user-menu">
+            <img src="/img/ico/user.png" id="icon-user"/>
+            <div>
+                <h2>Nome do Administrador</h2>
+                <h3>Administrador</h3>
+            </div>
+            <button>Sair</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="barra-lateral">
+        <a> <button>Produtos</button></a>
+        <a> <button>Usuários</button></a>
+        <a> <button>Vendas</button></a>
+        <a> <button>Configurações</button></a>
+    </div>
+
+    <section class="content">
+        <div id="titulos">
+            <h1>Produtos</h1>
+            <a><h3>Filmes \</h3></a>
+            <a><h3>Series</h3></a>
+        </div>
+        <div id="content-itens">
+            <div id="itens">
+                <div id="itens-titulo">
+                    <div>
+                        <img src="/img/logo.svg"/>
+                        <h4>Lista de Produtos</h2>
+                    </div>
+                    <div id="action-itens">
+                        <form method="get" action="/painel/criar">
+                            <button id="bt-adicionar"><img src="/img/ico/adicionar.png" /></button>
+                        </form>
+                    </div>
+                </div>
+                <div id="lista-borda">
+                    <div id="itens-menu">
+                        <ul>
+                            <li>Imagem</li>
+                            <hr>
+                            <li>Nome</li>
+                            <hr>
+                            <li>Categoria</li>
+                            <hr>
+                            <li>Classificação</li>
+                            <hr>
+                            <li>Ação</li>
+                        </ul>
+                    </div>
+                    
+                    <% filme.forEach(element => { %>
+                        <div id="itens-lista">
+                            <ul>
+                                <li><img src="/img/filmes/<%- element.background %>.jpg"/></li>
+                                <hr>
+                                <li><%- element.nome %></li>
+                                <hr>
+                                <li><%- categoria[element.categorias_id -1].nome %></li>
+                                <hr>
+                                <li><%- classificacoes[element.classificacoes_id - 1].nome %></li>
+                                <hr>
+                                <li>
+                                    <form method="POST" action="/painel/editar?_method=PUT" id="form_editar">
+                                        <input id="input-value" name="id" value=<%- element.id %> style="display: none" >
+                                        <button id="bt-editar" type="submit" ><img src="/img/ico/lapis.png" /></button>
+                                    </form>
+                                    <form>
+                                        <input id="inputDelele" name="id" value=<%- element.id %> style="display: none" >
+                                        <button id="bt-excluir" ><img src="/img/ico/icone-x.png" /></button>
+                                    </form>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    <% }) %>
+                   
+                </div>
+            </div>
+            <div id="filtro"></div>
+        </div>
+    </section>
+
+    <div class="pop-up">
+        <div id="pop-up-content">
+            <h2>Deseja realmente EXCLUIR este item?</h2>
+            <h4>Esta ação é irreversível!</h4>
+            <form method="POST" action="/painel/deletar?_method=DELETE">
+                <input id="pup-up-inputValue" name="id" style="display: none" >
+                <button id="pup-up-excluir" >DELETAR</button>
+            </form>
+        </div>
+    </div>
+
+</main>
+<%- include('partials/footer')%>

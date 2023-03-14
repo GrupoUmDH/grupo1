@@ -5,9 +5,9 @@ const multer = require('multer');
 const path = require('path');
 
 const validadorFormCreate = require('../middlewares/validadorFormCreate');
-const validadorFormDelete = require('../middlewares/validadorFormDelete')
-const validadorFormRead = require('../middlewares/validadorFormRead')
-const validadorFormUpdate = require('../middlewares/validadorFormUpdate')
+const validadorFormDelete = require('../middlewares/validadorFormDelete');
+const validadorFormRead = require('../middlewares/validadorFormRead');
+const validadorFormUpdate = require('../middlewares/validadorFormUpdate');
 
 const ProdutosController = require('../controllers/ProdutosController');
 
@@ -21,6 +21,7 @@ router.get('/', ProdutosController.produto);
 router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
 router.get('/categorias', ProdutosController.listar);
+
 router.get('/cadastroProduto', FilmesControllers.categoriaclassificacaoFilme);
 
 //implementar multer
@@ -33,6 +34,7 @@ const storage = multer.diskStorage({
         cb(null, file.originalname)
     } ,
 });
+
 const upload = multer({storage: storage, limits: {fileSize: 10000000}});
 
 router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
@@ -42,6 +44,8 @@ router.post('/create', upload.fields([{name:'backgroundCreate'},{name:'imagemCre
 
 //buscar produto
 // router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
+
+router.get('/teste', FilmesControllers.index);
  
 // deletar produto
 router.delete('/remove', validadorFormDelete, FilmesControllers.deletaProduto);
@@ -51,13 +55,6 @@ router.put('/edit', upload.fields([{name:'backgroundUpdate'},{name:'imagemUpdate
 
 // SEQUELIZE
 router.get('/search', FilmesControllers.buscar);
-
-
-router.get("/teste", FilmesControllers.index);
-router.get('/testeADD/:id?', FilmesControllers.form);
-router.post("/adicionaFilme", upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), FilmesControllers.addFilme);
-
-router.post('/editarFilme', FilmesControllers.editar);
 
 
 module.exports = router;
