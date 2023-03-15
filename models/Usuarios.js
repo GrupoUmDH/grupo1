@@ -11,7 +11,6 @@ const userModel = (sequelize, dataTypes) => {
         nome_usuario: {
             type: dataTypes.STRING,
             allowNull: false,
-            unique: true,
         },
 
         email: {

@@ -6,32 +6,64 @@ const session = require("express-session");
 const bcrypt = require("bcrypt");
 const Sequelize = require("sequelize");
 
+const view = {
+    pageName: "login",
+    js: "login",
+    popUp: false,
+    mensagem: "mensagem",
+    aviso: "aviso",
+};
 
 
 module.exports = {
-    index: (req, res, next) => {
-        res.render("login", { pageName: "login", js: "login" });
+    index: async (req, res, next) => {
+        res.render("login", view);
     },
 
     login: async (req, res, next) => {
-        const { nome_usuario, senha } = req.body;
+        const { email, senha } = req.body;
         
         try {
             const user = await Usuario.findOne({
-                where: { nome_usuario }
-            });
+                where: {
+                    email: req.body.email,
+                },
+            })
+            .then( user => {
+                if (user) {
+                    const validPassword = bcrypt.compareSync(senha, user.senha);
+                    console.log(validPassword);
 
-            if(!user){
-                console.log("usuário ou senha errados");
-            }
+                    if (validPassword) {
+                        //faço login - armazeno a sessão do usuário
+                        req.session = user.email;
 
-            const validPassword = bcrypt.compareSync(senha, user.senha);
-            if(!validPassword){
-                console.log("senha inválida");
-            }
+                        console.log(req.session);
+                        res.redirect('/');
+                    } else {
+                        console.log(validPassword);
+                        view.popUp = true;
+                        view.mensagem = "A senha digitado estão incorreta.";
+                        view.aviso = "Tente novamente.";
+
+                        res.redirect("/login");
+                    }
+                } else {
+                    view.popUp = true;
+                    view.mensagem = "O e-mail digitado estão incorreto.";
+                    view.aviso = "Tente novamente.";
+
+                    res.redirect("/login");
+                }
+            })
+
+            
 
         } catch (error) {
-            console.log("usuário ou senha errados");
+            view.popUp = true;
+            view.mensagem = "O e-mail digitado ou a senha estão incorretos.";
+            view.aviso = "Tente novamente.";
+
             res.redirect('/login');
         }
     },
@@ -41,16 +73,35 @@ module.exports = {
         const hashedPassword = await bcrypt.hash(senha, 10);
         
         try {
-            const user = await Usuario.create({
-                nome_usuario: req.body.nome_usuario,
-                email: req.body.email,
-                senha: hashedPassword,
-                tipo_usuario: 'cliente',
+
+            const user_existe = await Usuario.findOne({
+                where: {
+                    email: email
+                }
+            })
+            .then(user_existe => {
+                if(user_existe){
+                    view.popUp = true;
+                    view.mensagem = "Usuário ja cadastrado com este e-mail..";
+                    view.aviso = "Cadastre um novo e-mail ou faça Login.";
+
+                    res.redirect('/login');
+
+                } else {
+                    const user = Usuario.create({
+                        nome_usuario: req.body.nome_usuario,
+                        email: req.body.email,
+                        senha: hashedPassword,
+                        tipo_usuario: "cliente",
+                    });
+
+                    view.popUp = true;
+                    view.mensagem = "Bem vindo a Lumiere! /n Usuário cadastrado com sucesso!";
+                    view.aviso = "Faça login para continuar.";
+
+                    res.redirect("/login");
+                }
             });
-
-            console.log(user)
-
-            res.status(201).redirect('/login');
 
         } catch (error) {
             res.status(400).send("Erro ao cadastrar");
