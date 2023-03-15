@@ -37,9 +37,10 @@ module.exports = {
                     if (validPassword) {
                         //faço login - armazeno a sessão do usuário
                         req.session = user.email;
-
                         console.log(req.session);
                         res.redirect('/');
+
+                        
                     } else {
                         console.log(validPassword);
                         view.popUp = true;
