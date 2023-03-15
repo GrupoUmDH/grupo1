@@ -1,65 +1,67 @@
 <%- include('partials/header') %>
 
-<!--CONTEÚDO MAIN -->
-<main id="main_cadastro">
-    <div class="login-cadastro">
-        <div class="login">
-            <img src="/img/ico/user-login.png" />
-            <hr />
-            <h4>LOGIN</h4>
-
-            <div class="login-formulario">
-                <form class="form-login" method="POST" action="/cadastro/login">
-                    <input placeholder="USUÁRIO..." type="text" name="name" />
-                    <div class="invisible">
-                        Campo obrigatório!
-                    </div>
-                    <input
-                        placeholder="SENHA"
-                        type="password"
-                        name="password"
-                    />
-                    <div class="invisible">
-                    Campo obrigatório!
-                    </div>
-                    <button type="submit">LOGIN</button>
-                </form>
-            </div>
-            <hr />
-        </div>
-
-        <div class="cadastro cadastro-formulario">
-            <form class="form-cad" method="post" action="/cadastro/novo">
-                <span>Cadastre-se</span>
+    <!--CONTEÚDO MAIN -->
+    <main id="main_cadastro">
+        <div class="login-cadastro">
+            <div class="login">
+                <img src="/img/ico/user-login.png" />
                 <hr />
-                <a>
-                    <img src="/img/ico/user.png" />
-                </a>
-                <input
-                    placeholder="COLOQUE SEU EMAIL..."
-                    type="email"
-                    name="email"
-                />
-                <div class="invisible">
-                    Campo obrigatório!
-                </div>
-                <input
-                    placeholder="NOME USUÁRIO.."
-                    type="text"
-                    name="name"
-                    id="user"
-                />
-                <div class="invisible">
-                    Campo obrigatório!
-                </div>
-                <input placeholder="SENHA" type="password" name="password" />
-                <div class="invisible">
-                    Campo obrigatório!
-                </div>
-                <button type="submit">CRIAR A MINHA CONTA</button>
-            </form>
-        </div>
-    </div>
-</main>
+                <h4>LOGIN</h4>
 
-<%- include('partials/footer')%>
+                <div class="login-formulario">
+                    <form class="form-login" method="POST" action="/cadastro/login">
+                        <input placeholder="USUÁRIO..." type="text" name="name" />
+                        <div class="invisible">
+                            Campo obrigatório!
+                        </div>
+                        <input placeholder="SENHA" type="password" name="password" />
+                        <div class="invisible">
+                            Campo obrigatório!
+                        </div>
+                        <button type="submit">LOGIN</button>
+                    </form>
+                </div>
+                <hr />
+            </div>
+
+            <div class="cadastro cadastro-formulario">
+                <% if (erros) { %>
+                    <ul class="erros">
+                        <% erros.forEach(erro=> { %>
+                            <li>
+                                <%= erro.msg %>
+                            </li>
+                            <% }) %>
+                    </ul>
+                    <% } %>
+
+                        <form class="form-cad" method="post" action="/cadastro/novo">
+                            <% if (user) { %>
+                                <h1>Editar cadastro</h1>
+                                <% } else { %>
+                                    <h1>Cadastre-se</h1>
+                                    <% } %>
+
+                                        <% if (user) { %>
+                                            <form action="/usuarios/editar/<%= user.id %>?_method=PUT" method="POST">
+                                                <% } else { %>
+                                                    <form action="/usuarios/cadastrar" method="POST">
+                                                        <% } %>
+                                                            <hr>
+                                                            <a>
+                                                                <img src="/img/ico/user.png" />
+                                                            </a>
+                                                            <input type="email" placeholder="COLOQUE SEU EMAIL..."  id= "email" name="email" value="<% if (user) { %><%= user.email %><% } %>">
+                                                            <div class="invisible">Campo obrigatório!  </div>
+                                                            <input placeholder="NOME USUÁRIO.." type="text" name="name" id="user" value="<% if (user) { %><%= user.nome %><% } %>">
+                                                            <div class="invisible"> Campo obrigatório!</div>
+                                                            <input placeholder="SENHA" type="password"name="password" />
+                                                            <div class="invisible">Campo obrigatório!</div>
+
+                                                            <a href="/users/criar" class="button">CRIAR MINHA CONTA</a>
+                                                    </form>
+            </div>
+        </div>
+    </main>
+
+    <%- include('partials/footer')%>

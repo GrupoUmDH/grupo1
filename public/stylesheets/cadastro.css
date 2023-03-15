@@ -125,6 +125,12 @@ h5 {
     padding: .8rem;
 }
 
+.form-cad > h1{
+    color: var(--cores-chaves);
+    font-size: 2.5rem;
+}
+
+
 .cadastro-formulario input {
     
     border-radius: 10px;
@@ -135,8 +141,11 @@ h5 {
 
 }
 
-.cadastro-formulario button {
-    margin: 2rem;
+
+
+
+.cadastro-formulario .button {
+    margin: 1rem;
     text-align: center;
     border-radius: 10px;
     color: var(--cores-letra);
@@ -144,7 +153,14 @@ h5 {
     width: 80%;
     height: 2.5rem;
     border-color: var(--cores-chaves);
-
+    text-decoration: none;
+    font-size: 0.8rem;
+    border-top: 1rem;
+    margin-top: .5rem;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 .error {

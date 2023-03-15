@@ -1,14 +1,11 @@
 <%- include('partials/header') %>
 
     <main>
-        <span class="pag-seguro">PAGAMENTO SEGURO</span>
+
         <section class="content-1">
 
             <div class="content-form">
-
-                <div>
-                    <h1>Comprar</h1>
-                </div>
+                <h1>Dados Cadastrais</h1>
                 <form action="">
 
                     <div>
@@ -59,66 +56,32 @@
                         <div class="invisible err-pais error">Campo obrigatório!</div>
                         <input class="content-input" type="text" placeholder="PAÍS*" name="pais">
                     </div>
-
-                    <div class="checkboxe">
-                        <input class="check" type="checkbox">
-                        <p>Salvar para pedidos futuros
-                        </p>
-                    </div>
-
-                    <div class="payment">
-                        <div class="input-pay">
-                            <input class="check" type="radio" name="pay">
-                            <img src="/img/pagamento/<%=compra[0].img%>.svg " alt="">
-                        </div>
-                        <div class="input-pay">
-                            <input class="check" type="radio" name="pay">
-                            <img src="/img/pagamento/<%=compra[1].img%>.svg " alt="">
-                        </div>
-                        <div class="input-pay">
-                            <input class="check" type="radio" name="pay">
-                            <img src="/img/pagamento/<%=compra[2].img%>.svg " alt="">
-                        </div>
-                        <div class="input-pay">
-                            <input class="check" type="radio" name="pay">
-                            <img src="/img/pagamento/<%=compra[3].img%>.svg " alt="">
-                        </div>
-                    </div>
-
                     <div class="pay-button">
                         <button type="submit">Confirmar</button>
                     </div>
             </div>
 
 
-
-            </div>
-            <div class="content-pagamento">
+            <div class="cartao de credito">
                 <section class="resumo">
-                    <div>
-                        <h2>RESUMO DO PEDIDO</h2>
+                    <div class="new-card">
+                        <h1>Dados do novo cartão</h1>
+                        <hr>
+                        <div class="form-container active">
+                            <form class="formulario">
+                                <div class="invisible err-number">Campo obrigatório!</div>
+                                <input placeholder="Número do cartão" type="text" name="number">
+                                <div class="invisible err-name1">Campo obrigatório!</div>
+                                <input placeholder="Nome completo" type="text" name="name1">
+                                <div class="invisible err-expiry">Campo obrigatório!</div>
+                                <input placeholder="MM/AA" type="text" name="expiry">
+                                <div class="invisible err-cvc">Campo obrigatório!</div>
+                                <input placeholder="CVC" type="text" name="cvc">
+                                <button type="submit">Cadastrar</button>
+                            </form>
+                        </div>
                     </div>
-                    <br>
-                    <hr>
-                    <div>
-                        <h3>CARRINHO: X ITENS</h3>
-                        <span>19,90</span>
-                    </div>
-                    <br>
-                    <hr>
-                    <div>
-                        <h3>DESCONTO</h3>
-                        <span>19,90</span>
-                    </div>
-                    <br>
-                    <hr>
-                    <div>
-                        <h2>TOTAL</h2>
-                        <span>19,90</span>
-                    </div>
-                    <br>
                 </section>
-                <button>finalizar pedido</button>
             </div>
         </section>
     </main>
