@@ -17,6 +17,9 @@ const view = {
 
 module.exports = {
     index: async (req, res, next) => {
+
+        console.log(req);
+
         res.render("login", view);
     },
 
@@ -39,7 +42,6 @@ module.exports = {
                         req.session = user.email;
                         console.log(req.session);
                         res.redirect('/');
-
                         
                     } else {
                         console.log(validPassword);
@@ -100,12 +102,21 @@ module.exports = {
                     view.mensagem = "Bem vindo a Lumiere! /n Usuário cadastrado com sucesso!";
                     view.aviso = "Faça login para continuar.";
 
-                    res.redirect("/login");
+                    res.redirect("/login/criar");
                 }
             });
 
         } catch (error) {
             res.status(400).send("Erro ao cadastrar");
         }
-    }
+    },
+
+    dadosUsuario: (req, res, next) => {
+        //console.log(req.body);
+
+        userModel.novo(req);
+
+        res.send("novo usuário criado");
+
+    },
 };

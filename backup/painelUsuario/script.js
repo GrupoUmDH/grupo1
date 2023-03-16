@@ -1,7 +1,7 @@
 //DADOS NOVO CARTÃO//
 
-const form = document.querySelector('main .active .formulario');
-const inputList = document.querySelectorAll('main .new card input:not(.check)');
+const form_cartao = document.querySelector('main .active .formulario');
+const new_card = document.querySelectorAll('main .new card input:not(.check)');
 const number = document.querySelector("input[name='number']");
 const name_card = document.querySelector("input[name='name1']");
 const expiry = document.querySelector("input[name='expiry']");

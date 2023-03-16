@@ -1,19 +1,17 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
+const favicon = require('serve-favicon');
 
-var favicon = require('serve-favicon')
+const homeRouter = require('./routes/index');
+const userRouter = require('./routes/users');
+const produtosRouter = require('./routes/produtos');
+const carrinhoRouter = require('./routes/carrinho');
+const painelRouter = require('./routes/painel');
 
-var homeRouter = require('./routes/index');
-var userRouter = require('./routes/users');
-var produtosRouter = require('./routes/produtos');
-var carrinhoRouter = require('./routes/carrinho');
-var painelRouter = require('./routes/painel');
-
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,8 +19,6 @@ app.set('view engine', 'ejs');
 
 //METHOD-OVERRIDE
 app.use(methodOverride('_method'));
-
-app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
