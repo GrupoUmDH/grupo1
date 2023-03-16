@@ -2,6 +2,7 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const cookieSession = require("cookie-session");
 const methodOverride = require('method-override');
 const favicon = require('serve-favicon');
 
@@ -24,6 +25,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(favicon(path.join(__dirname, '../public/img', 'favicon.ico')));
+
+app.use(cookieSession({
+    name: 'session',
+    keys: ['key1']
+}));
 
 app.use((error, req, res, next) => {
     console.log('This is the rejected field ->', error.field);

@@ -17,14 +17,13 @@ const view = {
 
 module.exports = {
     index: async (req, res, next) => {
-
-        console.log(req);
-
         res.render("login", view);
     },
 
     login: async (req, res, next) => {
         const { email, senha } = req.body;
+
+        const hashedPassword = await bcrypt.hash(senha, 10);
         
         try {
             const user = await Usuario.findOne({
@@ -33,40 +32,29 @@ module.exports = {
                 },
             })
             .then( user => {
-                if (user) {
-                    const validPassword = bcrypt.compareSync(senha, user.senha);
-                    console.log(validPassword);
 
-                    if (validPassword) {
-                        //faço login - armazeno a sessão do usuário
-                        req.session = user.email;
-                        console.log(req.session);
-                        res.redirect('/');
-                        
-                    } else {
-                        console.log(validPassword);
-                        view.popUp = true;
-                        view.mensagem = "A senha digitado estão incorreta.";
-                        view.aviso = "Tente novamente.";
+                const validPassword = bcrypt.compareSync(senha, user.senha);
 
-                        res.redirect("/login");
-                    }
+                if(validPassword){
+                    req.session.name = user.email
+                    req.session.key = hashedPassword;
+
+                    res.redirect('/');
                 } else {
                     view.popUp = true;
-                    view.mensagem = "O e-mail digitado estão incorreto.";
+                    view.mensagem = "O e-mail digitado ou a senha estão incorretos.";
                     view.aviso = "Tente novamente.";
 
                     res.redirect("/login");
                 }
+                
             })
-
-            
 
         } catch (error) {
             view.popUp = true;
             view.mensagem = "O e-mail digitado ou a senha estão incorretos.";
             view.aviso = "Tente novamente.";
-
+            console.log("erro de usuário")
             res.redirect('/login');
         }
     },
@@ -102,21 +90,12 @@ module.exports = {
                     view.mensagem = "Bem vindo a Lumiere! /n Usuário cadastrado com sucesso!";
                     view.aviso = "Faça login para continuar.";
 
-                    res.redirect("/login/criar");
+                    res.redirect("/login");
                 }
             });
 
         } catch (error) {
             res.status(400).send("Erro ao cadastrar");
         }
-    },
-
-    dadosUsuario: (req, res, next) => {
-        //console.log(req.body);
-
-        userModel.novo(req);
-
-        res.send("novo usuário criado");
-
-    },
+    }
 };
