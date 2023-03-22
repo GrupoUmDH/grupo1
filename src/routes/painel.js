@@ -7,6 +7,7 @@ const path = require("path");
 const validadorForm = require("../middlewares/validadorForm");
 
 const AdmControllers = require('../../controllers/AdmControllers');
+const ClienteControllers = require('../../controllers/ClienteControllers');
 
 router.use(bodyParse.urlencoded({ extended: true }));
 
@@ -37,6 +38,10 @@ router.put('/editar', AdmControllers.editar);
 router.put('/atualiza', upload.fields([{ name: "capa" }, { name: "fundo" }]), AdmControllers.atualiza);
 
 router.delete('/deletar', AdmControllers.deletar);
+
+
+//rotas de painel CLIENTES - painel-user.ejs
+router.get('/painel-user', ClienteControllers.index);
 
 
 module.exports = router;

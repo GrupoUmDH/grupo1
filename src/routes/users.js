@@ -1,18 +1,15 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-let userController = require('../controllers/UserControllers')
+const userController = require('../../controllers/UserControllers');
+const loginSession = require('../middlewares/loginSession')
 
-/* GET users listing. */
-router.get('/', userController.index);
 
-router.post('/login', userController.login);
-router.post('/novo', userController.novoUsuario);
+router.get('/', loginSession, userController.index);
 
-router.get('/painel-user', function(req, res, next) {
-  res.render('painel-user', { pageName: 'painel-user', js:'' });
-});
+router.post('/user', userController.login);
 
+router.post("/cadastro", userController.cadastro);
 
 
 

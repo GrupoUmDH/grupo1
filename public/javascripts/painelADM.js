@@ -7,6 +7,8 @@ const inputDelele = document.querySelectorAll('[id = "inputDelele"]');
 
 const popUpDelete = document.querySelector('div.pop-up');
 
+const popUp_sair = document.querySelector('div.pop-up span button');
+
 popUpDelete.style.display = "none";
 
 //BOTÃO DE EXCLUIR
@@ -31,3 +33,8 @@ form_Editar.forEach((element, position) => {
         console.log("Testando botão editar");
     });
 });
+
+//SAIR DO POP-UP 
+popUp_sair.addEventListener('click', event => {
+    popUpDelete.style.display = "none";
+})

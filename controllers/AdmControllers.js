@@ -5,24 +5,25 @@ const path = require("path");
 
 module.exports = {
     index: async (req, res) => {
-        const filme = await Filme.findAll({});
-
-        const categoria = await Categorias.findAll({
-            order: ["nome"],
-        });
-
-        const classificacoes = await Classificacao.findAll({
-        });
-
-        //console.log(filme);
-
-        res.render("painelADM", {
-            pageName: "painelADM",
-            js: "painelADM",
-            filme,
-            categoria,
-            classificacoes,
-        });
+        try {
+            const filme = await Filme.findAll({});
+            const categoria = await Categorias.findAll({
+                order: ["nome"],
+            });
+            const classificacoes = await Classificacao.findAll({
+            });
+            //console.log(filme);
+            res.render("painelADM", {
+                pageName: "painelADM",
+                js: "painelADM",
+                filme,
+                categoria,
+                classificacoes,
+            });
+        } catch (err) {
+            console.log(err)
+            return res.status(500).json({ mensagem: 'erro' });
+        }
     },
 
     editar: async (req, res) => {
@@ -89,7 +90,7 @@ module.exports = {
     },
 
     criar: async (req, res) => {
-        
+
         const novofilme = {
             nome: req.body.nome,
             imagem: path.parse(req.files.fundo[0].filename).name,
