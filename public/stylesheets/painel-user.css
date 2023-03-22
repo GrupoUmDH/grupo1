@@ -9,7 +9,7 @@
     --cores-letra: #FFFFFF;
     --cores-objetos: #580003;
     --cor-cartao: rgba(214, 112, 112, 0.805);
-    
+
 }
 
 html {
@@ -35,6 +35,7 @@ body {
     width: 5rem;
     padding-left: 10px;
 }
+
 /* CONTEUDO MAIN */
 
 h1 {
@@ -43,7 +44,8 @@ h1 {
     margin: 1.5rem;
     font-size: 1.5rem;
 }
-h2{
+
+h2 {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
 
@@ -65,13 +67,14 @@ main {
     gap: .5rem;
     margin-left: 5rem;
 }
-.error{
+
+.error {
     color: white;
     text-align: center;
     font-weight: 600;
 }
 
-.invisible{
+.invisible {
     display: none;
 }
 
@@ -83,10 +86,11 @@ aside {
     padding: 0;
     max-width: 25%;
     height: 100%;
-    background-color: var(--background-2); 
+    background-color: var(--background-2);
     z-index: -1;
 }
-#menu{ 
+
+#menu {
     width: 15rem;
     position: fixed;
     top: 0;
@@ -95,16 +99,18 @@ aside {
     margin-top: 7.2rem;
     max-width: 25%;
     height: 100%;
-    background-color: var(--background-2); 
+    background-color: var(--background-2);
 }
-#menu h1{
+
+#menu h1 {
     font-size: 1.5rem;
     margin-bottom: .5rem;
 }
-#menu ul li{
+
+#menu ul li {
     list-style: none;
     padding: 0;
-    border-bottom:1px solid var(--cores-letra);
+    border-bottom: 1px solid var(--cores-letra);
 }
 
 #menu ul li a {
@@ -123,6 +129,8 @@ aside {
     text-transform: uppercase;
 }
 
+/* Histórico de pedidos */
+
 .container {
     border-radius: 9%;
     text-align: center;
@@ -130,9 +138,9 @@ aside {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    width:70%;
+    width: 70%;
     background-color: var(--background-2);
-    border-radius: 9%;
+    border-radius: 20px;
     margin: 2rem 5rem 1rem 15rem;
 }
 
@@ -150,7 +158,7 @@ aside {
     align-items: stretch;
     flex-wrap: wrap;
     justify-content: space-around;
-    
+
 }
 
 .comprados {
@@ -170,7 +178,7 @@ aside {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     flex-direction: row;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
     flex-wrap: wrap;
@@ -180,18 +188,21 @@ aside {
     width: 50%;
 }
 
+/* Alterar dados */
+
 .altera-dados {
     align-items: stretch;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    width:70%;
+    width: 70%;
     margin-top: 1rem;
     background-color: var(--background-2);
-    border-radius: 9%;
+    border-radius: 20px;
     margin: 2rem 5rem 1rem 15rem;
 }
-.altera-dados #alterar{
+
+.altera-dados #alterar {
     text-align: center;
 }
 
@@ -204,23 +215,15 @@ aside {
     text-align: center;
     align-items: center;
     justify-content: center;
-    
+
 }
 
-.dados-usuario{
+.dados-usuario {
     display: flex;
     flex-direction: column;
 }
-.dados-usuario #alterar-name{
-        margin: 0;
-        width: 5rem;
-        height: 2rem;
-        align-self: flex-end;
-        border: none;
-        background-color: var(--cores-objetos);
-    }
 
-.dados-usuario #alterar-email{
+.dados-usuario #alterar-name {
     margin: 0;
     width: 5rem;
     height: 2rem;
@@ -229,7 +232,16 @@ aside {
     background-color: var(--cores-objetos);
 }
 
-.dados-usuario #alterar-senha{
+.dados-usuario #alterar-email {
+    margin: 0;
+    width: 5rem;
+    height: 2rem;
+    align-self: flex-end;
+    border: none;
+    background-color: var(--cores-objetos);
+}
+
+.dados-usuario #alterar-senha {
     margin: 0;
     width: 5rem;
     height: 2rem;
@@ -239,6 +251,8 @@ aside {
 }
 
 .dados-usuario button {
+    display: flex;
+    align-items: center;
     margin: 2rem;
     text-align: center;
     align-items: center;
@@ -264,34 +278,36 @@ aside {
 }
 
 
-/*CARTAO DE CREDITO*/
+/* Cadastro Cartão */
 
-
-.credit-card{
+.credit-card {
     margin-top: 2rem;
     background-color: var(--background-2);
     border-radius: 9%;
-    align-items: stretch;
+    align-items: center;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    width:70%;
+    width: 70%;
     margin-top: 1rem;
     background-color: var(--background-2);
-    border-radius: 9%;
+    border-radius: 20px;
     margin: 2rem 5rem 1rem 15rem;
 }
-#cadastrar{
+
+#cadastrar {
     text-transform: uppercase;
     text-align: center;
 }
-.card{
-    position: relative; 
+
+.card {
+    position: relative;
     width: 500px;
     height: 300px;
 }
 
-.face-card{
+.face-card {
+    display: flex;
     margin-top: 2rem;
     top: 0;
     left: 0;
@@ -304,7 +320,7 @@ aside {
     text-align: center;
     align-items: center;
     justify-content: center;
-   
+
 }
 
 .active button {
@@ -321,30 +337,31 @@ aside {
     height: 2.5rem;
     margin-bottom: 3rem;
 }
-    
-#chip{
+
+#chip {
     width: 60px;
     height: 60px;
     top: 100px;
-	left: 50px; 
+    left: 50px;
     position: absolute;
 }
 
 
-#signal{
+#signal {
     position: absolute;
     width: 25px;
     height: 25px;
     top: 115px;
-	left: 115px;
+    left: 115px;
     transform: rotate(90deg);
 }
-.label{
+
+.label {
     font-size: .8rem;
     line-height: 1.2rem;
 }
 
-#value{
+#value {
     bottom: 55px;
     left: 140px;
     font-size: 1.35rem;
@@ -352,58 +369,63 @@ aside {
     color: var(--cores-letra);
 }
 
-#card-info:not(span,card-number){
-    width: 100%; 
+#card-info:not(span, card-number) {
+    width: 100%;
     bottom: 15px;
     padding: 0 20px;
     position: absolute;
-	opacity: 0.75;
+    opacity: 0.75;
     margin-left: 3rem;
 }
 
-.flex { 
+.flex {
     display: flex;
     margin: 0;
     justify-content: space-around;
-    align-items:flex-start;
+    align-items: flex-start;
 }
 
-#card-number{
+#card-number {
     letter-spacing: 3px;
     font-size: 1.5rem;
     width: 100%;
     color: var(--cores-letra);
-     line-height: 1.8;
+    line-height: 1.8;
 }
 
-.flex-expiration .label{
-   font-size: 0.6rem;
-   width:30px ;
-   color: var(--background-color);
-}
-.flex-expiration .value{
-  margin-left: .7rem;
-  color: var(--cores-letra);
-}  
-
-.flex-security .label{
+.flex-expiration .label {
     font-size: 0.6rem;
-    width:30px ;
+    width: 30px;
     color: var(--background-color);
- }
- .flex-security .value{
-   margin-left: .7rem;
-   color: var(--cores-letra);
-}  
-.new-card{
+}
+
+.flex-expiration .value {
+    margin-left: .7rem;
+    color: var(--cores-letra);
+}
+
+.flex-security .label {
+    font-size: 0.6rem;
+    width: 30px;
+    color: var(--background-color);
+}
+
+.flex-security .value {
+    margin-left: .7rem;
+    color: var(--cores-letra);
+}
+
+.new-card {
     width: 90%;
     margin-top: 3rem;
 }
-.new-card h1{
+
+.new-card h1 {
     text-align: center;
     color: var(--cores-letra);
     text-transform: uppercase;
 }
+
 .formulario {
     margin: 30px;
     font-family: 'Jost', Arial, Helvetica, sans-serif;
@@ -418,25 +440,35 @@ aside {
     border-radius: 6px;
     height: 41px;
     padding-inline: 1.2rem;
-    color:var(--cores-letra);
+    color: var(--cores-letra);
 }
-.formulario .btn-cadastrar{
+
+.formulario .btn-cadastrar {
     width: 150px;
     text-transform: uppercase;
     background: #323238;
+    
 }
-/*CANCELAR CONTA*/
-.cancelar{
-    border-radius: 10%;
+
+form.formulario button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+/* Cancelar assinatura */
+
+.cancelar {
     align-items: center;
     flex-wrap: wrap;
     align-items: stretch;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    width:70%;
+    width: 70%;
     background-color: var(--background-2);
-    border-radius: 9%;
+    border-radius: 20px;
     margin: 2rem 5rem 1rem 15rem;
 }
 
@@ -447,15 +479,17 @@ aside {
     background-color: var(--cores-chaves);
     color: var(--cores-letra);
     justify-content: center;
-    border-radius: 4px;
+    border-radius: 10px;
     text-align: center;
 }
-.cancel{
+
+.cancel {
     align-items: center;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
+
 .modal {
     width: 100%;
     height: 100%;
@@ -501,12 +535,12 @@ aside {
 }
 
 
-/*CONFIGURAÇÃO FOOTER*/ 
+/*CONFIGURAÇÃO FOOTER*/
 
 footer {
     padding-top: 1rem;
     margin-bottom: 4rem;
-    font-family: 'Inter' Arial, Helvetica, sans-serif;
+    font-family: 'Inter'Arial, Helvetica, sans-serif;
     color: var(--cores-chaves);
 
 }
@@ -515,7 +549,7 @@ footer {
 
 /* RESPONSIVE */
 
-@media (max-width: 1180px){
+@media (max-width: 1180px) {
     .container-side {
         display: none;
     }
@@ -542,7 +576,7 @@ hr {
 footer {
     margin-top: 3rem;
     margin-bottom: 4rem;
-    font-family: 'Inter' Arial, Helvetica, sans-serif;
+    font-family: 'Inter'Arial, Helvetica, sans-serif;
     color: var(--cores-chaves);
     align-items: center;
     text-align: center;
