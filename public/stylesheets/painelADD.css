@@ -20,7 +20,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--cores-letra);
+    background-color: var(--background-color);
     font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
 
@@ -192,15 +192,18 @@ div#titulos h3{
 
 div#itens {
     border: 1px solid gray;
-    width: 50vw;
-    height: 70vh;
+    width:65vw;
+    height: 80vh;
     overflow: auto;
+    background-color: var(--background-2);
+    border-radius: 9px;
 }
 
 div#itens div {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    background-color: var(--cores-letra);
 }
 
 div#itens img {
@@ -225,10 +228,14 @@ div#itens-titulo {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    background-color: var(--background-2);
 }
 
+h1, h4{
+    color: var(--cores-chaves);
+}
 div#lista-borda {
-    width: 96%;
+  
     height: 88%;
     border: .7px solid gray;
     margin: .5rem;
