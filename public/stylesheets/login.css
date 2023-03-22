@@ -10,58 +10,24 @@
 }
 
 body {
-    width: 100%;
-    height: 100vh;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: gray;
     background-color: var(--background-color);
     font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
+
 /* CONTEUDO MAIN */
-main {
-    background-color: #131313;
+#main_cadastro {
+    width: 100vw;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-
-}
-.pop-up{
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: -5rem;
-    width: 100%;
-    background-color: #807c7c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateZ(-100%);
-    transition: .7s;
-}
-
-.login {
-    display: block;
-    text-align: center;
-    width: 30rem;
-    height: 460px;
-    border-radius: 15px;
-    padding: 2rem;
-}
-
-form {
-    margin: 2rem;
-    border-radius: 15px;
-}
-
-.title {
-    margin-top: 3rem;
-    color: var(--cores-chaves);
-    text-decoration: none;
 }
 
 h4 {
@@ -71,13 +37,30 @@ h4 {
     justify-content: center;
 }
 
-.form-card {
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
+
+div.login {
+    display: block;
     text-align: center;
-    align-items: center;
-    justify-content: center;
+    border-radius: 15px;
+    padding: .3rem;
+    background-color: var(--background-2);
+    height: 60%;
+}
+
+div.login>hr {
+    background-color: var(--cores-chaves);
+    color: var(--cores-chaves);
+    border: var(--cores-chaves);
+    height: 2px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+.login-cadastro {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
 }
 
 .login-formulario {
@@ -86,60 +69,213 @@ h4 {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: .8rem;
 }
 
 .login-formulario input {
-    display: flex;
-    text-align: left;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
     border-radius: 15px;
-    background-color: white;
+    background-color: var(--cores-letra);
     height: 2rem;
-    width: 15rem;
     margin: .5rem;
 }
 
 .login-formulario button {
-    margin: 2rem;
-    display: inline-block;
+    margin: 1rem;
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
+    border-radius: 10px;
     color: var(--cores-letra);
     border: var(--cores-chaves);
     background-color: var(--cores-chaves);
-    width: 15rem;
+    width: 80%;
     height: 2.5rem;
-    margin-bottom: 2rem;
 }
 
+/*cadastro*/
 .cadastro {
-    margin-top: 1rem;
+    background-color: var(--background-2);
+    border-radius: 15px;
 }
 
-a {
-    margin-top: 1rem;
+.cadastro>form>span {
+    margin: 1rem .5rem 0 .5rem;
     color: var(--cores-chaves);
-    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
 }
+
+.cadastro a>img {
+    margin-top: 1.5rem;
+    width: 10rem;
+}
+
+h5 {
+    color: var(--cores-letra);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-cad {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: .8rem;
+}
+
+.cadastro-formulario input {
+    
+    border-radius: 10px;
+    background-color: var(--cores-letra);
+    height: 2rem;
+    margin: 1rem;
+    width: 90%;
+
+}
+
+.cadastro-formulario button {
+    margin: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    color: var(--cores-letra);
+    background-color: var(--cores-chaves);
+    width: 80%;
+    height: 2.5rem;
+    border-color: var(--cores-chaves);
+
+}
+
+.error {
+    color: var(--cores-chaves);
+    padding: 0;
+    margin: 0;
+}
+
+.invisible {
+    display: none;
+    color: var(--cores-chaves);
+    padding: 0;
+    margin: 0;
+}
+
+/* responsivo*/
+@media (max-width: 960px) {
+    main .login-cadastro {
+        flex-direction: column;
+        align-items: center;;
+        width: 60vw;
+    }
+
+    .cadastro {
+        margin-top: 2rem;
+    }
+
+    .cadastro>form>span {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 530px) {
+    div .login {
+        width: 20rem;
+        padding: 1rem;
+        margin: 2rem;
+    }
+
+    .cadastro {
+        width: 90%;
+    }
+    
+}
+
+@media (min-width: 980px) {
+    .cadastro {
+        max-width: 40rem;
+    }
+}
+
+/*footer*/
 
 hr {
     background-color: var(--cores-chaves);
     color: var(--cores-chaves);
     border: var(--cores-chaves);
     width: 100%;
+
     height: 2px;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
+    align-items: center;
 }
 
-.error {
-    color: #B30006;
-    padding: 0;
-    margin: 0;
+footer {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    color: var(--cores-chaves);
+    width: 100%;
+    text-align: center;
+
+}
+
+.pop-up {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .6);
+    justify-content: space-evenly;
+}
+
+div#pop-up-content {
+    width: 25rem;
+    height: 18rem;
+    background-color: darkred;
+    padding: .7rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div#pop-up-content h2 {
+    text-align: center;
+    color: white;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+div#pop-up-content h4 {
+    padding: 1rem;
+    text-decoration: overline;
+    font-size: small;
+    color: darkgray;
 }
 
 
+div.pop-up span button {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: xx-large;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: .5rem;
+}
+
+div.pop-up span {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    flex-direction: row;
+}

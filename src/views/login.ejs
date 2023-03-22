@@ -1,0 +1,75 @@
+<%- include('partials/header') %>
+
+<!--CONTEÚDO MAIN -->
+<main id="main_cadastro">
+    <div class="login-cadastro">
+        <div class="login">
+            <img src="/img/ico/user-login.png" />
+            <hr />
+            <h4>LOGIN</h4>
+
+            <div class="login-formulario">
+                <form class="form-login" method="post" action="/login/user">
+                    <input placeholder="E-MAIL..." type="text" name="email" />
+                    <div class="invisible">
+                        Campo obrigatório!
+                    </div>
+                    <input
+                        placeholder="SENHA"
+                        type="password"
+                        name="senha"
+                    />
+                    <div class="invisible">
+                    Campo obrigatório!
+                    </div>
+                    <button type="submit">LOGIN</button>
+                </form>
+            </div>
+            <hr />
+        </div>
+
+        <div class="cadastro cadastro-formulario">
+            <form class="form-cad" method="post" action="/login/cadastro">
+                <span>Cadastre-se</span>
+                <hr />
+                <a>
+                    <img src="/img/ico/user.png" />
+                </a>
+                <input
+                    placeholder="COLOQUE SEU EMAIL..."
+                    type="email"
+                    name="email"
+                />
+                <div class="invisible">
+                    Campo obrigatório!
+                </div>
+                <input
+                    placeholder="NOME USUÁRIO.."
+                    type="text"
+                    name="nome_usuario"
+                    id="user"
+                />
+                <div class="invisible">
+                    Campo obrigatório!
+                </div>
+                <input placeholder="SENHA" type="password" name="senha" />
+                <div class="invisible">
+                    Campo obrigatório!
+                </div>
+                <input type="text" style="display: none" nome="tipo_usuario" value="admin"/>
+                <button type="submit">CRIAR A MINHA CONTA</button>
+            </form>
+        </div>
+    </div>
+    <% if(popUp) { %>
+        <div class="pop-up" style="display: flex">
+            <div id="pop-up-content">
+                <span><button>X</button></span>
+                <h2><%- mensagem%></h2>
+                <h4><%- aviso%></h4>
+            </div>
+        </div>
+    <% } %>
+</main>
+
+<%- include('partials/footer')%>

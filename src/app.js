@@ -2,9 +2,8 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const logger = require('morgan');
+const cookieSession = require("cookie-session");
 const methodOverride = require('method-override');
-const session = require('express-session');
 const favicon = require('serve-favicon');
 
 const homeRouter = require('./routes/index');
@@ -21,13 +20,16 @@ app.set('view engine', 'ejs');
 
 //METHOD-OVERRIDE
 app.use(methodOverride('_method'));
-app.use(session({secret: 'Nosso segredo'}));
-app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(favicon(path.join(__dirname, '../public/img', 'favicon.ico')));
+
+app.use(cookieSession({
+    name: 'session',
+    keys: ['key1']
+}));
 
 app.use((error, req, res, next) => {
     console.log('This is the rejected field ->', error.field);
@@ -38,9 +40,7 @@ app.use('/', homeRouter);
 app.use('/index', homeRouter);
 
 //USERS - (PAINEL USUÁRIO, LOGIN, CADASTRO)
-app.use('/painel-user', userRouter);
-app.use('/cadastro', userRouter);
-app.use('/users',userRouter)
+app.use('/login', userRouter);
 
 //CARRINHO - (CARRINHO, COMPRA, PAGAMENTO)
 app.use('/carrinho', carrinhoRouter);
