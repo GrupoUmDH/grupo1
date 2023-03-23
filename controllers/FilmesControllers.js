@@ -39,19 +39,22 @@ module.exports = {
         // faço uma requisição na minha api mostranho os filmes buscados
         //
         */
-        
-        search.getFilme(req.query.search)
-                .then((response) => {
-                    console.log(response.data.results);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
 
-        res.render("search", {
-            pageName: "Produtos",
-            js: "",
-        });
+        try {
+            search.getFilme(req.query.search)
+                .then((response) => {
+                    const resultado = response.data.results;
+                    res.render('search', {pageName:'pesquisa', js:'', resultado})
+                });
+        } catch (error) {
+            res.render("search", {
+                pageName: "pesquisa",
+                js: "",
+                mensagem: "Não foi encontrato filmes/series",
+            }); 
+        }
+        
+
     },
 
     criar: async (req, res) => {
