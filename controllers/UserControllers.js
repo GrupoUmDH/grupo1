@@ -36,8 +36,11 @@ module.exports = {
                 const validPassword = bcrypt.compareSync(senha, user.senha);
 
                 if(validPassword){
-                    req.session.name = user.email
+                    req.session.id = user.id
+                    req.session.name = user.nome_usuario
+                    req.session.email = user.email
                     req.session.key = hashedPassword;
+                    
 
                     res.redirect('/');
                 } else {
@@ -97,5 +100,18 @@ module.exports = {
         } catch (error) {
             res.status(400).send("Erro ao cadastrar");
         }
-    }
+    },
+
+    update: async (req, res, next) => {
+        const { nome_usuario, email, senha } = req.body;
+        const hashedPassword = await bcrypt.hash(senha, 10);
+        
+        try {
+            const usuarioEdit = await Usuario.update({ nome_usuario, email, senha:hashedPassword }, { where: { id:req.session.id }} )
+
+        } catch (error) {
+            res.status(400).send("Erro ao Alterar");
+        }
+    },
+
 };

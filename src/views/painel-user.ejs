@@ -121,7 +121,7 @@
                         <form method="post" id="form-email">
 
                             <div class="invisible err-email">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVO E-MAIL" type="email" name="email" id="email">
+                            <input value="<%= usuario.email %>" placeholder="DIGITE NOVO E-MAIL" type="email" name="email" id="email">
                             <div class="invisible err-email1">Confirme o novo e-mail Digitado.</div>
                             <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email1" id="email1">
                             <button id="alterar-email">Alterar</button>
@@ -129,7 +129,7 @@
                         <form method="post" id="form-nome">
 
                             <div class="invisible err-name">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text" name="name" id="name">
+                            <input value="<%= usuario.nome %>"placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text" name="name" id="name">
                             <button id="alterar-nome">Alterar</button>
                         </form>
                         <form method="post" id="form-password">
