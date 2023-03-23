@@ -3,6 +3,8 @@ const Op = require('sequelize');
 const { validationResult } = require('express-validator');
 const path = require('path');
 
+const search = require('../src/request/search');
+
 
 module.exports = {
     index: async (req, res) => {
@@ -32,15 +34,27 @@ module.exports = {
     },
 
     buscar: async (req, res) => {
-        const categorias = await Categorias.findAll();
-        const classificacoes = await Classificacao.findAll();
-        const id = req.query.idRead;
-        const filmes = await Filme.findOne({
-            where: { id: id },
-        });
-        console.log(filmes);
 
-        res.render("teste", { pageName: "filmes", js:"filmes", categorias, classificacoes, filmes:[filmes] });
+        /*
+        // faço uma requisição na minha api mostranho os filmes buscados
+        //
+        */
+
+        try {
+            search.getFilme(req.query.search)
+                .then((response) => {
+                    const resultado = response.data.results;
+                    res.render('search', {pageName:'pesquisa', js:'', resultado})
+                });
+        } catch (error) {
+            res.render("search", {
+                pageName: "pesquisa",
+                js: "",
+                mensagem: "Não foi encontrato filmes/series",
+            }); 
+        }
+        
+
     },
 
     criar: async (req, res) => {

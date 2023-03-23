@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+<main>
+    <section class="container">
+        <div class="titulos">
+            <h1>RESULTADO DA PESQUISA</h1>
+        </div>
+        <hr>
+        <section class="filmes-home">
+            <% for (const filme of resultado) { %>
+                <div class="filme-show">
+                    <a href="">
+                        <img src="https://image.tmdb.org/t/p/w500/<%= filme.poster_path%>" alt="" id="back-filme">
+                        <div class="descri">
+                            <div>
+                                <h3 id="nome-filme">
+                                    <%= filme.title %>
+                                </h3>
+                                <p id="descri-filme">
+                                    <%= filme.overview %>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <% } %>
+        </section>
+    </section>
+</main>
+
+<%- include('partials/footer') %>
