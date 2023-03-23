@@ -55,5 +55,9 @@ router.put('/edit', validadorFormUpdate, FilmesControllers.atualizaProduto);
 // SEQUELIZE
 router.get('/search', FilmesControllers.buscar);
 
+router.get('/pesquisa', (req, res) => {
+    res.render('pesquisa', {pageName: 'pesquisa', js: ''});
+})
+
 
 module.exports = router;
