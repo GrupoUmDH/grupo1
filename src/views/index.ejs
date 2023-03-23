@@ -46,16 +46,32 @@
             <section class="filmes-home">
                 <% for (var i=0; i<6; i++) { %>
                     <div class="filme-show">
-                        <a href="">
-                            <img src="https://image.tmdb.org/t/p/w500/<%= listaFilmes[i].poster_path %>" alt="" id="back-filme">
+                        <a href="<%= '/produtos' %>\">
+                            <img src="/img/filmes/<%= listaFilmes[i].background%>.jpg" alt="" id="back-filme">
                             <div class="descri">
                                 <div>
                                     <h3 id="nome-filme">
-                                        <%= listaFilmes[i].title %>
+                                        <%= listaFilmes[i].nome %>
                                     </h3>
                                     <p id="descri-filme">
-                                        <%= listaFilmes[i].overview %>
+                                        <%= listaFilmes[i].descricao %>
                                     </p>
+                                </div>
+                                <div id="dados-filmes">
+                                    <h1 id="id-filmes">
+                                        <%= listaFilmes[i].id %>
+                                    </h1>
+                                    <h1 id="categoria-filmes">
+                                        <%= listaFilmes[i].id %>
+                                    </h1>
+                                    <h1 id="tipo-filmes">
+                                        <%= listaFilmes[i].tipo %>
+                                    </h1>
+                                    <h1 id="compra-filmes">
+                                        <%= listaFilmes[i].valor%>
+                                    </h1>
+                                    <img src="/img/filmes/<%= listaFilmes[i].imagem %>.jpg" id="img-filmes">
+                                    <%= listaFilmes[i].imagem %>
                                 </div>
                             </div>
                         </a>
