@@ -1,12 +1,7 @@
 const ProdutosModel = require('../models/ProdutosModel');
 
-const search = require("../request/search");
-
 module.exports = {
     index: async (req, res) => {
-        /*
-        // faço uma requisição na api mostranho os filmes/series populares
-        */
 
         const filmes = ProdutosModel.filmes();
         const series = ProdutosModel.series();

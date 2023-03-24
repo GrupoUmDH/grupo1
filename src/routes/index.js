@@ -8,7 +8,7 @@ const indexControllers = require('../controllers/indexControllers');
 
 router.get('/', indexControllers.index);
   
-router.get('/cadastro', indexControllers.loginForm);
+//router.get('/cadastro', indexControllers.loginForm);
 
 // router.post('/login', indexControllers.autenticar);
 // router.get('/logout', indexControllers.logout);
