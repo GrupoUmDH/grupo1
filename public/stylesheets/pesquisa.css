@@ -1,22 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-<<<<<<< HEAD
-:root{
-    --background-color:#0C0C0C;
-    --background-2:#131313;
-    --cores-chaves:#B30006;
-    --cores-letra:  #FFFFFF;
-    --cores-objetos: #580003;
-}
-
-*{
-    margin: 0;
-    padding: 0; 
-}
-
-body{
-=======
 :root {
     --background-color: #0C0C0C;
     --background-2: #131313;
@@ -31,15 +15,12 @@ body{
 }
 
 body {
->>>>>>> 520904399902371ba9f61d1e830fa4545760a6bd
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
     font-family: 'Inter', Arial, Helvetica, sans-serif;
-<<<<<<< HEAD
-=======
 }
 
 
@@ -214,5 +195,4 @@ div #dados-filme {
 #nome-filme {
     color: red;
     font-size: 1.3rem;
->>>>>>> 520904399902371ba9f61d1e830fa4545760a6bd
 }

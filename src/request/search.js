@@ -12,15 +12,6 @@ const search = {
             timeout: 4000,
         })
     },
-
-    // getPopular - esta requesição busca os filmes populares
-    getTopFilmes: () =>{
-        return axios({
-            method: "get",
-            url: `${api.url}/movie/popular?${api.key}&${api.language}&page=1`,
-            timeout: 4000,
-        });
-    },
 };
 
 module.exports = search;

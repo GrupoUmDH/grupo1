@@ -5,7 +5,6 @@ const path = require('path');
 
 const search = require('../src/request/search');
 
-
 module.exports = {
     index: async (req, res) => {
         const filmes = await Filme.findAll({
