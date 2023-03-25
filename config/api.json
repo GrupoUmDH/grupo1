@@ -1,5 +1,5 @@
 {
-    "url" : "https://api.themoviedb.org/3",
+    "url": "https://api.themoviedb.org/3",
     "key": "api_key=9fadd1a8985b21fd600bf6f582fd5c8c",
     "language": "language=pt-BR"
 }

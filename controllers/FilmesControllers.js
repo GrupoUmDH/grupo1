@@ -40,8 +40,9 @@ module.exports = {
         */
 
         try {
-            search.getFilme(req.query.search)
+            await search.getFilme(req.query.search)
                 .then((response) => {
+                    console.log(response.data)
                     const resultado = response.data.results;
                     res.render('search', {pageName:'pesquisa', js:'', resultado})
                 });
