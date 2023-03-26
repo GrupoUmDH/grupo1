@@ -1,6 +1,6 @@
 <head>
-    <link rel="stylesheet" href="/stylesheets/<%= pageName %>.css" />
-        <script src="/javascripts/<%=js%>.js" defer></script>
+    <link rel="stylesheet" href="/stylesheets/painelADM.css" />
+        <script src="/javascripts/painelADM.js" defer></script>
 
         <link
             rel="icon"
@@ -8,7 +8,6 @@
             sizes="32x32"
             href="/img/favicon.ico"
         />
-        <title><%=pageName%></title>
 </head>
 
 <%- include('partials/painelHeader')%>
@@ -18,19 +17,17 @@
 
     <section class="content">
         <div id="titulos">
-            <h1>Produtos</h1>
-            <a><h3>Filmes \</h3></a>
-            <a><h3>Series</h3></a>
+            <h1>Usuários</h1>
         </div>
         <div id="content-itens">
             <div id="itens">
                 <div id="itens-titulo">
                     <div>
                         <img src="/img/logo.svg"/>
-                        <h4>Lista de Produtos</h2>
+                        <h4>Lista de Usuários</h2>
                     </div>
                     <div id="action-itens">
-                        <form method="get" action="/painel/criar">
+                        <form method="get" action="/painel/users/criar">
                             <button id="bt-adicionar"><img src="/img/ico/adicionar.png" /></button>
                         </form>
                     </div>
@@ -38,31 +35,27 @@
                 <div id="lista-borda">
                     <div id="itens-menu">
                         <ul>
-                            <li>Imagem</li>
-                            <hr>
                             <li>Nome</li>
                             <hr>
-                            <li>Categoria</li>
+                            <li>Email</li>
                             <hr>
-                            <li>Classificação</li>
+                            <li>Tipo</li>
                             <hr>
                             <li>Ação</li>
                         </ul>
                     </div>
                     
-                    <% filme.forEach(element => { %>
+                    <% users.forEach(element => { %>
                         <div id="itens-lista">
                             <ul>
-                                <li><img src="/img/filmes/<%- element.background %>.jpg"/></li>
+                                <li> <%- element.nome_usuario %> </li>
                                 <hr>
-                                <li><%- element.nome %></li>
+                                <li><%- element.email %></li>
                                 <hr>
-                                <li><%- categoria[element.categorias_id -1].nome %></li>
+                                <li><%- element.tipo_usuario %></li>
                                 <hr>
-                                <li><%- classificacoes[element.classificacoes_id - 1].nome %></li>
-                                <hr>
-                                <li>
-                                    <form method="POST" action="/painel/editar?_method=PUT" id="form_editar">
+                                <li id="br-lista">
+                                    <form method="POST" action="/painel/users/editar?_method=PUT" id="form_editar">
                                         <input id="input-value" name="id" value=<%- element.id %> style="display: none" >
                                         <button id="bt-editar" type="submit" ><img src="/img/ico/lapis.png" /></button>
                                     </form>
@@ -78,16 +71,15 @@
                    
                 </div>
             </div>
-            <!-- <div id="filtro"></div> -->
         </div>
     </section>
 
     <div class="pop-up">
         <div id="pop-up-content">
             <span><button>X</button></span>
-            <h2>Deseja realmente EXCLUIR este item?</h2>
+            <h2>Deseja realmente EXCLUIR este usuário?</h2>
             <h4>Esta ação é irreversível!</h4>
-            <form method="POST" action="/painel/deletar?_method=DELETE">
+            <form method="POST" action="/painel/users/deletar?_method=DELETE">
                 <input id="pup-up-inputValue" name="id" style="display: none" >
                 <button id="pup-up-excluir" >DELETAR</button>
             </form>
@@ -95,4 +87,3 @@
     </div>
 
 </main>
-<%- include('partials/footer')%>

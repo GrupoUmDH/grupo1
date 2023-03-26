@@ -43,5 +43,7 @@ router.delete('/deletar', AdmControllers.deletar);
 //rotas de painel CLIENTES - painel-user.ejs
 router.get('/painel-user', ClienteControllers.index);
 
+router.get('/users', AdmControllers.userConfig);
+
 
 module.exports = router;

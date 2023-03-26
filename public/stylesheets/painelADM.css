@@ -32,7 +32,7 @@ header {
 
 main {
     margin-top: 4rem;
-    margin-left: 4rem;
+    margin-left: 10rem;
 }
 
 .barra-superior {
@@ -117,6 +117,7 @@ section.content {
     flex-wrap: nowrap;
     align-items: flex-start;
     flex-direction: column;
+    width: 60vw;
 }
 
 div#titulos {
@@ -126,7 +127,7 @@ div#titulos {
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: flex-end;
-    margin-left: 13rem;
+    margin-left: 2rem;
     padding-top: 1rem;
 }
 
@@ -145,7 +146,7 @@ div#itens {
 div#itens div {
     display: flex;
     flex-wrap: nowrap;
-    align-items: center;
+    /* align-items: center; */
 }
 
 div#itens img {
@@ -162,7 +163,7 @@ div#filtro {
 
 div#content-itens {
     display: flex;
-    padding-left: 13rem;
+    padding-left: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -185,12 +186,18 @@ div#lista-borda {
 }
 
 div#itens-menu {
+    display: flex;
     border: .5px solid gray;
-    height: 2rem;
+    /* height: 2rem; */
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: column;
+    align-content: stretch;
 }
 
 div#itens-lista {
     border: .5px solid gray;
+    width: 80%;
 }
 
 input[type="checkbox"] {
@@ -209,8 +216,8 @@ div#lista-borda ul {
 }
 div#lista-borda ul li {
     text-align: center;
-    width: 5.658rem;
-    font-size: .6rem;
+    width: 11rem;
+    font-size: .8rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -283,4 +290,14 @@ button#pup-up-excluir {
     border-radius: .5rem;
     color: white;
     font-size: large;
+}
+
+div#itens-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+    flex-direction: column;
+    width: 100%;
 }

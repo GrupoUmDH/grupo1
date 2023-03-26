@@ -21,6 +21,9 @@ module.exports = {
     },
 
     login: async (req, res, next) => {
+
+        console.log(req.session);
+
         const { email, senha } = req.body;
 
         const hashedPassword = await bcrypt.hash(senha, 10);
@@ -29,17 +32,19 @@ module.exports = {
             const user = await Usuario.findOne({
                 where: {
                     email: req.body.email,
-                },
+                }
             })
             .then( user => {
 
                 const validPassword = bcrypt.compareSync(senha, user.senha);
 
                 if(validPassword){
-                    req.session.name = user.email
-                    req.session.key = hashedPassword;
+                    req.session.nome = user.nome;
+                    req.session.email = user.email
+                    req.session.tipo = user.tipo_usuario;
 
-                    res.redirect('/');
+                    res.redirect('/painel');
+                    
                 } else {
                     view.popUp = true;
                     view.mensagem = "O e-mail digitado ou a senha estão incorretos.";
@@ -54,7 +59,6 @@ module.exports = {
             view.popUp = true;
             view.mensagem = "O e-mail digitado ou a senha estão incorretos.";
             view.aviso = "Tente novamente.";
-            console.log("erro de usuário")
             res.redirect('/login');
         }
     },

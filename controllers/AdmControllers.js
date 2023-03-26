@@ -1,4 +1,4 @@
-const { Categorias, Classificacao, Filme } = require("../models");
+const { Categorias, Classificacao, Filme, Usuario } = require("../models");
 const Op = require("sequelize");
 const { validationResult } = require("express-validator");
 const path = require("path");
@@ -6,23 +6,29 @@ const path = require("path");
 module.exports = {
     index: async (req, res) => {
         try {
-            const filme = await Filme.findAll({});
-            const categoria = await Categorias.findAll({
-                order: ["nome"],
-            });
-            const classificacoes = await Classificacao.findAll({
-            });
-            //console.log(filme);
-            res.render("painelADM", {
-                pageName: "painelADM",
-                js: "painelADM",
-                filme,
-                categoria,
-                classificacoes,
-            });
+
+            if (req.session.tipo == 'admin') {
+                const filme = await Filme.findAll({});
+                const categoria = await Categorias.findAll({
+                    order: ["nome"],
+                });
+                const classificacoes = await Classificacao.findAll({
+                });
+                //console.log(filme);
+                res.render("painelADM", {
+                    pageName: "painelADM",
+                    js: "painelADM",
+                    filme,
+                    categoria,
+                    classificacoes,
+                });
+            } else {
+                res.redirect('/');
+            }
+
         } catch (err) {
             console.log(err)
-            return res.status(500).json({ mensagem: 'erro' });
+            return res.status(500).json({ mensagem: 'erro: tentativa de acesso ao Painel Administrativo' });
         }
     },
 
@@ -119,46 +125,23 @@ module.exports = {
         res.redirect("/painel");
     },
 
-    /*
-    form: async (req, res) => {
-        let filme;
-        const { id } = req.params;
+    // CRUD - Painel administrativo - Configurando usuários
 
-        if (id) filme = await Filme.findByPk(id);
-
-        const categoria = await Categorias.findAll({});
-
-        const classificacao = await Classificacao.findAll();
-
-        //console.log(categoria);
-
-        res.render("testeADD", {
-            pageName: "addFilme",
-            js: "addFilme",
-            filme,
-            categoria,
-            classificacao,
-        });
+    userConfig: async (req, res) => {
+        const users = await Usuario.findAll({});
+        res.render('userConfig', { pageName: "painelADD", js: "painelADD", users });
     },
 
-    addFilme: async (req, res) => {
-        const novofilme = {
-            nome: req.body.nome,
-            imagem: req.body.fundo.replace(".jpg", ""),
-            background: req.body.capa.replace(".jpg", ""),
-            valor: req.body.valor,
-            tipo: req.body.tipo,
-            categorias_id: parseInt(req.body.categorias_id),
-            classificacoes_id: parseInt(req.body.classificacoes_id),
-            descricao: req.body.descricao,
-        };
+    userCriar: async (req, res) => {
 
-        console.log(novofilme);
-
-        await Filme.create(novofilme);
-
-        res.redirect("/produtos/teste");
     },
 
-    */
+    userDelete: async (req, res) => {
+
+    },
+
+    userUpdate: async (req, res) => {
+
+    },
+
 };
