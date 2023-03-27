@@ -217,13 +217,14 @@ h1 .container {
     text-align: center;
 }
 
+
 .container .filmes-home {
-    align-items: stretch;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    gap: 1rem;
     margin: 3rem 0;
 }
 
