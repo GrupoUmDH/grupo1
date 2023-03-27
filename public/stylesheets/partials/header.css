@@ -15,7 +15,6 @@ header {
     width: 100%;
     font-size: 1.5rem;
     height: 5rem;
-    
 }
 
 *{
@@ -26,6 +25,8 @@ header {
 body {
     display: flex;
     flex-direction: column;
+    
+    
 }
 
 /* NAVBAR */
@@ -37,11 +38,12 @@ body {
     height: 5rem;
     margin-right: 1rem;
     margin-left: 1rem;
+    
 }
 
 .navlogo {
     display: flex;
-    width: 5rem;
+    width: 6rem;
     padding-left: 10px;
 }
 
