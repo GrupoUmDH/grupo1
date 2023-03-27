@@ -73,7 +73,7 @@ module.exports = {
             .then(user_existe => {
                 if(user_existe){
                     view.popUp = true;
-                    view.mensagem = "Usuário ja cadastrado com este e-mail..";
+                    view.mensagem = "Usuário já cadastrado com este e-mail.";
                     view.aviso = "Cadastre um novo e-mail ou faça Login.";
 
                     res.redirect('/login');
@@ -87,7 +87,7 @@ module.exports = {
                     });
 
                     view.popUp = true;
-                    view.mensagem = "Bem vindo a Lumiere! /n Usuário cadastrado com sucesso!";
+                    view.mensagem = "Bem vindo a Lumiere! Usuário cadastrado com sucesso!";
                     view.aviso = "Faça login para continuar.";
 
                     res.redirect("/login");
