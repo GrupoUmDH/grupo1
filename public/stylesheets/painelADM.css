@@ -32,7 +32,7 @@ header {
 
 main {
     margin-top: 4rem;
-    margin-left: 4rem;
+    margin-left: 10rem;
 }
 
 .barra-superior {
@@ -121,6 +121,8 @@ section.content {
     align-items: flex-start;
     flex-direction: column;
     align-items: center;
+    width: 60vw;
+
 }
 
 div#titulos {
@@ -130,6 +132,7 @@ div#titulos {
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: flex-end;
+    margin-left: 2rem;
     padding-top: 1rem;
     color: var(--cores-chaves);
 }
@@ -144,21 +147,16 @@ div#itens {
     border-radius: 9px;
     overflow: auto;
     background-color: var(--background-2);
-    
+
 }
 
 div#itens div {
     display: flex;
     flex-wrap: nowrap;
-    align-items:center;
-
-
-    justify-content:space-between;
+    align-items: center;
+    justify-content: space-between;
     color: var(--background-color);
     background-color: var(--cores-letra);
-}
-
-div#itens img {
     width: 2.5rem;
     margin: .3rem;
 }
@@ -172,7 +170,7 @@ div#filtro {
 
 div#content-itens {
     display: flex;
-    padding-left: 13rem;
+    padding-left: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -186,7 +184,7 @@ div#itens-titulo {
 }
 
 div#lista-borda {
-    
+
     height: 88%;
     border: .7px solid gray;
     margin: 1.2rem;
@@ -196,12 +194,13 @@ div#lista-borda {
 }
 
 div#itens-menu {
+    display: flex;
     border: .5px solid gray;
-    height: 2rem;
-}
-
-div#itens-lista {
-    border: .5px solid gray;
+    /* height: 2rem; */
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: column;
+    align-content: stretch;
 }
 
 input[type="checkbox"] {
@@ -223,11 +222,24 @@ div#lista-borda ul li {
     text-align: center;
     width: 5.658rem;
     font-size: .7rem;
+    min-width: 11rem;
+    font-size: .8rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
     color: var(--background-color);
+
+}
+
+
+
+li#user-tipo {
+    max-width: 3rem;
+}
+
+li#br-lista {
+    max-width: 6rem;
 }
 
 div#itens-lista ul li img {
@@ -301,7 +313,98 @@ button#pup-up-excluir {
     border-radius: .5rem;
     color: white;
     font-size: large;
-    margin-bottom: 2rem;
+}
+
+div#itens-lista {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+    border: .5px solid gray;
+    align-content: space-around;
+}
+
+div#itens-titulo div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+/* configurações de users/criar - formulario */
+
+div#user-lista {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+    border: .5px solid gray;
+    align-content: space-around;
+}
+
+div#cad-borda div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+form.form-cad {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+form.form-cad input {
+    border-radius: 15px;
+    background-color: var(--cores-letra);
+    height: 2rem;
+    margin: .5rem;
+    padding-left: 1rem;
+}
+
+form.form-cad select {
+    height: 2rem;
+    margin: .5rem;
+    font-size: larger;
+}
+
+form.form-cad button {
+    margin: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    color: var(--cores-letra);
+    border: var(--cores-chaves);
+    background-color: var(--cores-chaves);
+    /* width: 80%; */
+    height: 2.5rem;
+}
+
+div#cad-borda {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div#user-lista button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+}
+
+div.pop-up span {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    flex-direction: row;
 }
 
 div.pop-up span button {
@@ -322,4 +425,9 @@ div.pop-up span {
     justify-content: flex-end;
     width: 100%;
     flex-direction: row;
+    padding-right: .5rem;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: flex-end;
 }

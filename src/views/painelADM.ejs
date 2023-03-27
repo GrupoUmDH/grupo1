@@ -30,12 +30,7 @@
 </header>
 
 <main>
-    <div class="barra-lateral">
-        <a> <button>Produtos</button></a>
-        <a> <button>Usuários</button></a>
-        <a> <button>Vendas</button></a>
-        <a> <button>Configurações</button></a>
-    </div>
+    <%- include('partials/lateralHeader')%>
 
     <section class="content">
         <div id="titulos">
@@ -103,7 +98,7 @@
         </div>
     </section>
 
-    <div class="pop-up">
+    <div class="pop-up" style="display: none;">
         <div id="pop-up-content">
             <span><button>X</button></span>
             <h2>Deseja realmente EXCLUIR este item?</h2>

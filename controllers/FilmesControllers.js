@@ -5,7 +5,6 @@ const path = require('path');
 
 const search = require('../src/request/search');
 
-
 module.exports = {
     index: async (req, res) => {
         const filmes = await Filme.findAll({
@@ -41,8 +40,9 @@ module.exports = {
         */
 
         try {
-            search.getFilme(req.query.search)
+            await search.getFilme(req.query.search)
                 .then((response) => {
+                    console.log(response.data)
                     const resultado = response.data.results;
                     res.render('search', {pageName:'pesquisa', js:'', resultado})
                 });
