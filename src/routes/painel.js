@@ -5,9 +5,11 @@ const multer = require("multer");
 const path = require("path");
 
 const validadorForm = require("../middlewares/validadorForm");
+const userCriar = require('../middlewares/userCriar');
 
 const AdmControllers = require('../../controllers/AdmControllers');
 const ClienteControllers = require('../../controllers/ClienteControllers');
+const userController = require('../../controllers/UserControllers');
 
 router.use(bodyParse.urlencoded({ extended: true }));
 
@@ -23,27 +25,29 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage, limits: { fileSize: 10000000 } });
 
-
 router.get('/', AdmControllers.index);
+router.get('/sair', userController.sair);
+router.get('/users', AdmControllers.userConfig);
 
 router.get('/criar', AdmControllers.formCriar);
-
 router.post('/criar',
     upload.fields([{ name: "capa" }, { name: "fundo" }]),
     AdmControllers.criar
 );
 
 router.put('/editar', AdmControllers.editar);
-
 router.put('/atualiza', upload.fields([{ name: "capa" }, { name: "fundo" }]), AdmControllers.atualiza);
-
 router.delete('/deletar', AdmControllers.deletar);
-
 
 //rotas de painel CLIENTES - painel-user.ejs
 router.get('/painel-user', ClienteControllers.index);
 
-router.get('/users', AdmControllers.userConfig);
+router.get('/users/criar', AdmControllers.userFormCriar);
+router.post('/users/criar', userCriar, AdmControllers.userCriar);
 
+router.post('/users/editar', AdmControllers.userEditar);
+router.put('/users/atualizar', userCriar, AdmControllers.userUpdate);
+
+router.delete('/users/delete', AdmControllers.userDelete);
 
 module.exports = router;

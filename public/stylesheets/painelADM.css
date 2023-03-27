@@ -143,12 +143,6 @@ div#itens {
     overflow: auto;
 }
 
-div#itens div {
-    display: flex;
-    flex-wrap: nowrap;
-    /* align-items: center; */
-}
-
 div#itens img {
     width: 2.5rem;
     margin: .3rem;
@@ -195,11 +189,6 @@ div#itens-menu {
     align-content: stretch;
 }
 
-div#itens-lista {
-    border: .5px solid gray;
-    width: 80%;
-}
-
 input[type="checkbox"] {
     margin: .3rem;
 }
@@ -214,14 +203,23 @@ div#lista-borda ul {
     flex-wrap: nowrap;
     flex-direction: row;
 }
+
 div#lista-borda ul li {
     text-align: center;
-    width: 11rem;
+    min-width: 11rem;
     font-size: .8rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
+}
+
+li#user-tipo {
+    max-width: 3rem;
+}
+
+li#br-lista {
+    max-width: 6rem;
 }
 
 div#itens-lista ul li img {
@@ -260,14 +258,14 @@ div#itens-lista ul li button img {
 
 div#pop-up-content {
     width: 25rem;
-    height: 15rem;
+    height: 18rem;
     background-color: darkred;
-    padding: 3rem;
+    padding: .7rem;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 div#pop-up-content h2 {
@@ -294,10 +292,107 @@ button#pup-up-excluir {
 
 div#itens-lista {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: stretch;
-    align-content: stretch;
     flex-direction: column;
     width: 100%;
+    border: .5px solid gray;
+    align-content: space-around;
+}
+
+div#itens-titulo div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+/* configurações de users/criar - formulario */
+
+div#user-lista {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+    border: .5px solid gray;
+    align-content: space-around;
+}
+
+div#cad-borda div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+form.form-cad {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+form.form-cad input {
+    border-radius: 15px;
+    background-color: var(--cores-letra);
+    height: 2rem;
+    margin: .5rem;
+    padding-left: 1rem;
+}
+
+form.form-cad select {
+    height: 2rem;
+    margin: .5rem;
+    font-size: larger;
+}
+
+form.form-cad button {
+    margin: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    color: var(--cores-letra);
+    border: var(--cores-chaves);
+    background-color: var(--cores-chaves);
+    /* width: 80%; */
+    height: 2.5rem;
+}
+
+div#cad-borda {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div#user-lista button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+}
+
+div.pop-up span {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    flex-direction: row;
+}
+
+div.pop-up span button {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: xx-large;
+    color: white;
+    display: flex;
+    padding-right: .5rem;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: flex-end;
 }

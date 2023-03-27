@@ -1,7 +1,7 @@
 module.exports = [
     login = (req, res, next) => {
 
-        console.log(req.session);
+        //console.log(req.session);
 
         if (req.session.email) {
             if(req.session.tipo == 'admin'){

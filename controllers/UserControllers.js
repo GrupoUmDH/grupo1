@@ -32,14 +32,13 @@ module.exports = {
             const user = await Usuario.findOne({
                 where: {
                     email: req.body.email,
-                }
+                },
             })
             .then( user => {
 
                 const validPassword = bcrypt.compareSync(senha, user.senha);
 
                 if(validPassword){
-                    req.session.nome = user.nome;
                     req.session.email = user.email
                     req.session.tipo = user.tipo_usuario;
 
@@ -101,5 +100,10 @@ module.exports = {
         } catch (error) {
             res.status(400).send("Erro ao cadastrar");
         }
-    }
+    }, 
+
+    sair: async (req, res) => {
+        req.session = null;
+        res.redirect('/login');
+    },
 };
