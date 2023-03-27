@@ -11,29 +11,10 @@
         <title><%=pageName%></title>
 </head>
 
-<header>
-    <div class="barra-superior">
-        <div>
-            <img src="/img/logo.svg" />
-        </div>
-        <div id="user-menu">
-            <img src="/img/ico/user.png" id="icon-user"/>
-            <div>
-                <h2>Nome do Administrador</h2>
-                <h3>Administrador</h3>
-            </div>
-            <button>Sair</button>
-        </div>
-    </div>
-</header>
+<%- include('partials/painelHeader')%>
 
 <main>
-    <div class="barra-lateral">
-        <a> <button>Produtos</button></a>
-        <a> <button>Usuários</button></a>
-        <a> <button>Vendas</button></a>
-        <a> <button>Configurações</button></a>
-    </div>
+    <%- include('partials/lateralHeader')%>
 
     <section class="content">
         <div id="titulos">
@@ -101,7 +82,7 @@
         </div>
     </section>
 
-    <div class="pop-up">
+    <div class="pop-up" style="display: none;">
         <div id="pop-up-content">
             <span><button>X</button></span>
             <h2>Deseja realmente EXCLUIR este item?</h2>
