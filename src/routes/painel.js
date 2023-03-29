@@ -40,7 +40,8 @@ router.put('/atualiza', upload.fields([{ name: "capa" }, { name: "fundo" }]), Ad
 router.delete('/deletar', AdmControllers.deletar);
 
 //rotas de painel CLIENTES - painel-user.ejs
-router.get('/painel-user', ClienteControllers.index);
+router.get('/painel-user', userController.index);
+router.post('/painel-user', userController.update);
 
 router.get('/users/criar', AdmControllers.userFormCriar);
 router.post('/users/criar', userCriar, AdmControllers.userCriar);
