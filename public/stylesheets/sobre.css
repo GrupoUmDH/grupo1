@@ -12,19 +12,18 @@
 html {
     width: 100vw;
 }
+
 *{
     margin: 0;
     padding: 0;
 }
  
 body{
-    padding: 0;
-    margin: 0;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
     background-color: var(--background-color);
     font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
@@ -85,11 +84,3 @@ hr {
     margin-bottom: 2rem;
 }
 
-footer {
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-    font-family: 'Inter' Arial, Helvetica, sans-serif;
-    color: var(--cores-chaves);
-    align-items: center;
-    text-align: center;
-}
