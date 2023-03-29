@@ -63,6 +63,7 @@ module.exports = {
     },
 
     cadastro: async (req, res, next) => {
+        
         const { nome_usuario, email, senha } = req.body;
         const hashedPassword = await bcrypt.hash(senha, 10);
         
