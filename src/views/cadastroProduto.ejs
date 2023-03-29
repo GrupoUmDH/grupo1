@@ -107,27 +107,10 @@
                     <%= errors.descricaoUpdate %>
                 </p>
                 <select name="categoriaUpdate" id="categoria">
-                  
-                        <option value="select" selected hidden disabled>categoria</option>
-                        <% categorias.forEach(element => { %>
-                            <option value=<%= element.id %>><%= element.nome %></option>
-                            <% }); %>
-
-                    <!-- <option value="select" selected hidden disabled>categoria</option>
-                    <option value="ação">Ação</option>
-                    <option value="aventura">Aventura</option>
-                    <option value="comédia">Comédia</option>
-                    <option value="dança">Dança</option>
-                    <option value="documentário">Documentário</option>
-                    <option value="drama">Drama</option>
-                    <option value="faroeste">Faroeste</option>
-                    <option value="ficção">Ficção</option>
-                    <option value="guerra">Guerra</option>
-                    <option value="musical">Musical</option>
-                    <option value="policial">Policial</option>
-                    <option value="romance">Romance</option>
-                    <option value="suspense">Suspense</option>
-                    <option value="terror">Terror</option> -->
+                  <option value="select" selected hidden disabled>categoria</option>
+                    <% categorias.forEach(element => { %>
+                        <option value=<%= element.id %>><%= element.nome %></option>
+                    <% }); %>
                 </select>
                 <p class="erro">
                     <%= errors.categoriaUpdate %>

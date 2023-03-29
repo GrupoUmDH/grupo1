@@ -4,65 +4,64 @@
 
 <%- include('partials/header') %>
     <main>
-            <section class="content-banner">
-                <img id="bk-filme" src="">
-                <input type="hidden" value="1" id="id" name="id">
-                <div class="container">
-                    <div class="banner">
-                        <img class="cover-filme">
-                        <div class="descricao-container">
-                            <div id="descri-filme">
-                                    <h1 id="nome-filme"></h1>
-                                    <div class="genero">
-                                    <span id="ano-filme">2021</span>
+        <section class="content-banner">
+            <img id="bk-filme" src="">
+            <input type="hidden" value="1" id="id" name="id">
+            <div class="container">
+                <div class="banner">
+                    <img class="cover-filme">
+                    <div class="descricao-container">
+                        <div id="descri-filme">
+                            <h1 id="nome-filme"></h1>
+                            <div class="genero">
+                                <span id="ano-filme">2021</span>
 
-                                    <span id="genero-filme">Ação/Aventura</span>
+                                <span id="genero-filme">Ação/Aventura</span>
 
-                                    </div>
-                           
-                                <p id="descri-filme"></p>
                             </div>
-                            <!-- terceiro filho -->
-                            <div id="bts-compra">
-                                <div class="classificacao">
-                                    <img id="indicacao" src="" alt="">
-                                </div>
-                                <div class="botoes-compra">
 
-                                    <div class="assitir">
-                                        <button>Assitir</button>
-                                    </div>
-                                    <div class="comprar">
-                                        <p id="valor-compra"> R$ </p>  
-                                        <button type="submit" id="btn-comprar">Comprar</button>
-                                    </div>
+                            <p id="descri-filme"></p>
+                        </div>
+                        <!-- terceiro filho -->
+                        <div id="bts-compra">
+                            <div class="classificacao">
+                                <img id="indicacao" src="" alt="">
+                            </div>
+                            <div class="botoes-compra">
+
+                                <div class="assitir">
+                                    <button>Assitir</button>
+                                </div>
+                                <div class="comprar">
+                                    <p id="valor-compra"> R$ </p>
+                                    <button type="submit" id="btn-comprar">Comprar</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="faixas">
-                        <div class="f1">
-                            <p>8.3</p>
-                        </div>
-                        <div class="f2"></div>
                     </div>
                 </div>
-            </section>
-
-        </main>
-        <div class="pop-Up">
-            <div class="popup-content">
-                <h2>Item adicionado ao Carrinho!</h2>
-                <img src="/img/logo.svg" />
-                <div>
-                    <a href="<%= '/index' %>"><button> CONTINUAR COMPRANDO</button>  </a>
-                    <form action="/carrinho" method="get" id="montarCarrinho">
-                        <input type="hidden" name="itensCarrinho"/>
-                        <button type="submit"> VER CARRINHO </button>
-                    </form>
+                <div class="faixas">
+                    <div class="f1">
+                        <p>8.3</p>
+                    </div>
+                    <div class="f2"></div>
                 </div>
             </div>
+        </section>
+
+    </main>
+    <div class="pop-Up">
+        <div class="popup-content">
+            <h2>Item adicionado ao Carrinho!</h2>
+            <img src="/img/logo.svg" />
+            <div>
+                <a href="<%= '/index' %>"><button> CONTINUAR COMPRANDO</button> </a>
+                <form action="/carrinho" method="get" id="montarCarrinho">
+                    <input type="hidden" name="itensCarrinho" />
+                    <button type="submit"> VER CARRINHO </button>
+                </form>
+            </div>
         </div>
+    </div>
 
-<%- include('partials/footer') %>
-
+    <%- include('partials/footer') %>

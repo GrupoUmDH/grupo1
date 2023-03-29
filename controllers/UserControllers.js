@@ -17,10 +17,14 @@ const view = {
 
 module.exports = {
     index: async (req, res, next) => {
+        view.popUp = false;
         res.render("login", view);
     },
 
     login: async (req, res, next) => {
+
+        console.log(req.session);
+
         const { email, senha } = req.body;
 
         const hashedPassword = await bcrypt.hash(senha, 10);
@@ -38,17 +42,19 @@ module.exports = {
                 if(validPassword){
                     req.session.id = user.id
                     req.session.name = user.nome_usuario
-                    req.session.email = user.email
                     req.session.key = hashedPassword;
                     
+                    req.session.email = user.email
+                    req.session.tipo = user.tipo_usuario;
 
-                    res.redirect('/');
+                    res.redirect('/painel');
+                    
                 } else {
                     view.popUp = true;
                     view.mensagem = "O e-mail digitado ou a senha estão incorretos.";
                     view.aviso = "Tente novamente.";
 
-                    res.redirect("/login");
+                    res.render("login", view);
                 }
                 
             })
@@ -57,12 +63,13 @@ module.exports = {
             view.popUp = true;
             view.mensagem = "O e-mail digitado ou a senha estão incorretos.";
             view.aviso = "Tente novamente.";
-            console.log("erro de usuário")
-            res.redirect('/login');
+            res.render("login", view);
         }
     },
 
     cadastro: async (req, res, next) => {
+        console.log(req.body);
+
         const { nome_usuario, email, senha } = req.body;
         const hashedPassword = await bcrypt.hash(senha, 10);
         
@@ -79,7 +86,7 @@ module.exports = {
                     view.mensagem = "Usuário ja cadastrado com este e-mail..";
                     view.aviso = "Cadastre um novo e-mail ou faça Login.";
 
-                    res.redirect('/login');
+                    res.render("login", view);
 
                 } else {
                     const user = Usuario.create({
@@ -90,10 +97,10 @@ module.exports = {
                     });
 
                     view.popUp = true;
-                    view.mensagem = "Bem vindo a Lumiere! /n Usuário cadastrado com sucesso!";
+                    view.mensagem = "Bem vindo a Lumiere! Usuário cadastrado com sucesso!";
                     view.aviso = "Faça login para continuar.";
 
-                    res.redirect("/login");
+                    res.render("login", view);
                 }
             });
 
@@ -114,4 +121,10 @@ module.exports = {
         }
     },
 
+    
+
+    sair: async (req, res) => {
+        req.session = null;
+        res.redirect('/login');
+    },
 };

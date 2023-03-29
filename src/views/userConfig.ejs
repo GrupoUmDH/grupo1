@@ -1,0 +1,121 @@
+
+<%- include('partials/painelHeader')%>
+
+<main>
+    <%- include('partials/lateralHeader')%>
+
+    <% if(painel == '/painel/users') { %>
+        <section class="content">
+            <div id="titulos">
+                <h1>Usuários</h1>
+            </div>
+            <div id="content-itens">
+                <div id="itens">
+                    <div id="itens-titulo">
+                        <div>
+                            <img src="/img/logo.svg"/>
+                            <h4>Lista de Usuários</h2>
+                        </div>
+                        <div id="action-itens">
+                            <form method="get" action="/painel/users/criar">
+                                <button id="bt-adicionar"><img src="/img/ico/adicionar.png" /></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="lista-borda">
+                        <div id="itens-menu">
+                            <ul>
+                                <li>Nome</li>
+                                <hr>
+                                <li>Email</li>
+                                <hr>
+                                <li id="user-tipo" >Tipo</li>
+                                <hr>
+                                <li id="br-lista">Ação</li>
+                            </ul>
+                        </div>
+                        
+                        <% users.forEach(element => { %>
+                            <div id="user-lista"> 
+                                <ul>
+                                    <li> <%- element.nome_usuario %> </li>
+                                    <hr>
+                                    <li><%- element.email %></li>
+                                    <hr>
+                                    <li id="user-tipo"><%- element.tipo_usuario %></li>
+                                    <hr>
+                                    <li id="br-lista">
+                                        <form method="post" action="/painel/users/editar?:id" id="form_editar">
+                                            <input id="input-value" name="id" value=<%- element.id %> style="display: none" >
+                                            <button id="bt-editar" type="submit" ><img src="/img/ico/lapis.png" /></button>
+                                        </form>
+                                        <form>
+                                            <input id="inputDelele" name="id" value=<%- element.id %> style="display: none" >
+                                            <button id="bt-excluir" ><img src="/img/ico/icone-x.png" /></button>
+                                        </form>
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="pop-up" style="display: none;">
+            <div id="pop-up-content">
+                <span><button>X</button></span>
+                <h2>Deseja realmente EXCLUIR este usuário?</h2>
+                <h4>Esta ação é irreversível!</h4>
+                <form method="POST" action="/painel/users/delete?_method=DELETE">
+                    <input id="pup-up-inputValue" name="id" style="display: none" >
+                    <button id="pup-up-excluir" >DELETAR</button>
+                </form>
+            </div>
+        </div>
+
+    <% }  else if (painel == '/painel/users/criar') { %>
+        <section class="content">
+            <div id="titulos">
+                <h1>Usuários</h1>
+            </div>
+            <div id="content-itens">
+                <div id="itens">
+                    <div id="itens-titulo">
+                        <div>
+                            <img src="/img/logo.svg"/>
+                            <h4><%= tipoView %> Usuário</h2>
+                        </div>
+                    </div>
+                    <div id="cad-borda">
+                        <div>
+                            <img src="/img/ico/user.png" />
+                            <% if(tipoView == 'Criando') { %>
+                                <form class="form-cad" method="post" action="/painel/users/criar">
+                            <% } %>
+                            <% if( tipoView == 'Editanto') {%>
+                                <form class="form-cad" method="post" action="/painel/users/atualizar?_method=PUT">
+                            <% } %>
+                                    <input value="<%- users.nome_usuario %>" placeholder="NOME USUÁRIO.." type="text" name="nome_usuario" id="user"/>
+                                    <input value="<%- users.email %>" placeholder="EMAIL..." type="email" name="email"  />
+                                    <input placeholder="SENHA" type="password" name="senha" />
+
+                                    <select name="tipo_usuario"> 
+                                        <option selected hidden disabled>Credencial</option>
+                                        <option type="check" value="cliente" >cliente</option>
+                                        <option value="admin" >admin</option>
+                                    </select>
+
+                                    <button type="submit"><%= bt_form %></button>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <% } %>
+    <% if(error) { %>
+        <%- include('partials/popUpErro')%>
+    <% } %>
+
+</main>

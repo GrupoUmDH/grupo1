@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(favicon(path.join(__dirname, '../public/img', 'favicon.ico')));
 
 app.use(cookieSession({
-    name: 'session',
+    email: 'session',
     keys: ['key1']
 }));
 
