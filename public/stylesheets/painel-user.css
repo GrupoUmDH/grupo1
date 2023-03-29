@@ -9,131 +9,91 @@
     --cores-letra: #FFFFFF;
     --cores-objetos: #580003;
     --cor-cartao: rgba(214, 112, 112, 0.805);
-    
+
 }
 
-html {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
+main{
+    width: auto;
+    height: auto;
 }
 
 body {
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--background-color);
     font-family: 'Inter', Arial, Helvetica, sans-serif;
-}
-
-.navlogo {
-    z-index: 1;
-    display: flex;
-    width: 5rem;
-    padding-left: 10px;
-}
-/* CONTEUDO MAIN */
-
-h1 {
-    font-family: 'Jost', Arial, Helvetica, sans-serif;
-    color: white;
-    margin: 1.5rem;
-    font-size: 1.5rem;
-}
-h2{
-    font-family: 'Jost', Arial, Helvetica, sans-serif;
-}
-
-hr {
-    background-color: var(--cores-chaves);
-    color: var(--cores-chaves);
-    border: var(--cores-chaves);
-    width: 100%;
-    height: 2px;
-    display: flex;
-    flex-direction: row;
-}
-
-main {
-    max-width: 1500px;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    gap: .5rem;
-    margin-left: 5rem;
-}
-.error{
-    color: white;
-    text-align: center;
-    font-weight: 600;
-}
-
-.invisible{
-    display: none;
-}
-
-aside {
-    width: 15rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 0;
-    max-width: 25%;
-    height: 100%;
-    background-color: var(--background-2); 
-    z-index: -1;
-}
-#menu{ 
-    width: 15rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 0;
-    margin-top: 7.2rem;
-    max-width: 25%;
-    height: 100%;
-    background-color: var(--background-2); 
-}
-#menu h1{
-    font-size: 1.5rem;
-    margin-bottom: .5rem;
-}
-#menu ul li{
-    list-style: none;
-    padding: 0;
-    border-bottom:1px solid var(--cores-letra);
-}
-
-#menu ul li a {
-    font-size: 1rem;
-    line-height: 3;
+    font-size: 100%;
     color: var(--cores-letra);
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    cursor: pointer;
-    transition: .3s;
-}
 
-#menu ul li a:hover {
-    color: var(--cores-chaves);
-    text-transform: uppercase;
 }
 
 .container {
-    border-radius: 9%;
-    text-align: center;
-    align-items: stretch;
     display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    width:70%;
-    background-color: var(--background-2);
-    border-radius: 9%;
-    margin: 2rem 5rem 1rem 15rem;
+    align-items: center;
+    width: 80%;
+    height: 50%;
+    padding-left: 0px;
+    background-color: var(--background-color);
+
+}
+
+#historico h1 {
+    justify-content: center;
+    align-items: center;
+}
+
+/* HISTÓRICOS DE PEDIDOS */
+
+.comprados {
+    text-align: center;
+    display: flex;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.comprados img {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    height: 240px;
+    gap: 2rem;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cores-letra);
+}
+.titulos {
+    padding-top: 1rem;
+    text-align: center;
+}
+
+
+.alugados {
+    text-align: center;
+    display: flex;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.alugados img {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    height: 240px;
+    gap: 2rem;
 }
 
 .container p {
@@ -142,85 +102,72 @@ aside {
 }
 
 .historico {
-    display: flex;
+
     flex-direction: row;
-    height: auto;
-    width: 100%;
+    width: ;
     justify-content: space-between;
     align-items: stretch;
     flex-wrap: wrap;
     justify-content: space-around;
-    
+
 }
 
-.comprados {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 2rem;
+/* MENU LATERAL ESQUERDO */
+
+aside {
+    margin-top: 2rem;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    height: 60%;
+    background-color: var(--background-color);
+    z-index: 1;
+
 }
 
-.comprados img {
-    width: 50%;
+#menu ul li a {
+    font-size: 1rem;
+    line-height: 3;
+    color: var(--cores-letra);
+    text-decoration: none;
+    text-align:left;
+    display: block;
+    cursor: pointer;
+    transition: .2s;
 }
 
-.alugados {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    flex-direction: row;
-    justify-content:center;
-    align-items: center;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
+#menu ul li a:hover {
+    color: var(--cores-chaves);
+    text-transform:unset;
 }
 
-.alugados img {
-    width: 50%;
-}
+/* ALTERAR DADOS DO USUÁRIO */
 
 .altera-dados {
-    align-items: stretch;
+    align-items: center;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    width:70%;
-    margin-top: 1rem;
-    background-color: var(--background-2);
-    border-radius: 9%;
-    margin: 2rem 5rem 1rem 15rem;
-}
-.altera-dados #alterar{
-    text-align: center;
+    background-color: var(--background-color);
 }
 
-.titulos {
-    flex-direction: row;
-    color: var(--cores-chaves);
-    align-items: center;
-    text-transform: uppercase;
-    margin-bottom: .5rem;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    
+.dados-usuario #alterar-name {
+    margin: 0;
+    width: 5rem;
+    height: 2rem;
+    align-self: flex-end;
+    border: none;
+    background-color: var(--cores-objetos);
 }
 
-.dados-usuario{
+.dados-usuario {
     display: flex;
     flex-direction: column;
 }
-.dados-usuario #alterar-name{
-        margin: 0;
-        width: 5rem;
-        height: 2rem;
-        align-self: flex-end;
-        border: none;
-        background-color: var(--cores-objetos);
-    }
 
-.dados-usuario #alterar-email{
+.dados-usuario #alterar-email {
     margin: 0;
     width: 5rem;
     height: 2rem;
@@ -229,321 +176,143 @@ aside {
     background-color: var(--cores-objetos);
 }
 
-.dados-usuario #alterar-senha{
+.dados-usuario #alterar-senha {
     margin: 0;
     width: 5rem;
     height: 2rem;
     align-self: flex-end;
     border: none;
     background-color: var(--cores-objetos);
-}
-
-.dados-usuario button {
-    margin: 2rem;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    color: var(--cores-letra);
-    background-color: #B30006;
-    width: 10rem;
-    height: 2.5rem;
-    margin-bottom: 3rem;
 }
 
 .dados-usuario input {
     display: flex;
-    text-align: left;
+    text-align: center;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
     background-color: white;
     height: 2rem;
-    width: 30rem;
-    margin: 2rem;
+    width: 20rem;
+    margin: 1rem;
 }
 
-
-/*CARTAO DE CREDITO*/
-
-
-.credit-card{
-    margin-top: 2rem;
-    background-color: var(--background-2);
-    border-radius: 9%;
-    align-items: stretch;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    width:70%;
-    margin-top: 1rem;
-    background-color: var(--background-2);
-    border-radius: 9%;
-    margin: 2rem 5rem 1rem 15rem;
-}
-#cadastrar{
-    text-transform: uppercase;
-    text-align: center;
-}
-.card{
-    position: relative; 
-    width: 500px;
-    height: 300px;
-}
-
-.face-card{
-    margin-top: 2rem;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 1px solid;
-    border-radius: 10%;
-    background: linear-gradient(135deg, rgba(217, 127, 127, 0.89) 0%, transparent 100%);
-    backdrop-filter: blur(10px);
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-   
-}
-
-.active button {
-    margin: 2rem;
-    position: relative;
-    left: 15rem;
+.dados-usuario button {
     text-align: center;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
     color: var(--cores-letra);
     background-color: #B30006;
-    width: 10rem;
-    height: 2.5rem;
-    margin-bottom: 3rem;
-}
-    
-#chip{
-    width: 60px;
-    height: 60px;
-    top: 100px;
-	left: 50px; 
-    position: absolute;
-}
-
-
-#signal{
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    top: 115px;
-	left: 115px;
-    transform: rotate(90deg);
-}
-.label{
-    font-size: .8rem;
-    line-height: 1.2rem;
-}
-
-#value{
-    bottom: 55px;
-    left: 140px;
-    font-size: 1.35rem;
-    letter-spacing: 1px;
-    color: var(--cores-letra);
-}
-
-#card-info:not(span,card-number){
-    width: 100%; 
-    bottom: 15px;
-    padding: 0 20px;
-    position: absolute;
-	opacity: 0.75;
-    margin-left: 3rem;
-}
-
-.flex { 
-    display: flex;
-    margin: 0;
-    justify-content: space-around;
-    align-items:flex-start;
-}
-
-#card-number{
-    letter-spacing: 3px;
-    font-size: 1.5rem;
-    width: 100%;
-    color: var(--cores-letra);
-     line-height: 1.8;
-}
-
-.flex-expiration .label{
-   font-size: 0.6rem;
-   width:30px ;
-   color: var(--background-color);
-}
-.flex-expiration .value{
-  margin-left: .7rem;
-  color: var(--cores-letra);
-}  
-
-.flex-security .label{
-    font-size: 0.6rem;
-    width:30px ;
-    color: var(--background-color);
- }
- .flex-security .value{
-   margin-left: .7rem;
-   color: var(--cores-letra);
-}  
-.new-card{
-    width: 90%;
-    margin-top: 3rem;
-}
-.new-card h1{
-    text-align: center;
-    color: var(--cores-letra);
-    text-transform: uppercase;
-}
-.formulario {
-    margin: 30px;
-    font-family: 'Jost', Arial, Helvetica, sans-serif;
-}
-
-.formulario input {
-    width: 500px;
-    margin: 10px auto;
-    display: block;
-    background: var(--background-color);
-    border: 1px solid #323238;
-    border-radius: 6px;
-    height: 41px;
-    padding-inline: 1.2rem;
-    color:var(--cores-letra);
-}
-.formulario .btn-cadastrar{
-    width: 150px;
-    text-transform: uppercase;
-    background: #323238;
-}
-/*CANCELAR CONTA*/
-.cancelar{
-    border-radius: 10%;
-    align-items: center;
-    flex-wrap: wrap;
-    align-items: stretch;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    width:70%;
-    background-color: var(--background-2);
-    border-radius: 9%;
-    margin: 2rem 5rem 1rem 15rem;
-}
-
-.btn {
-    margin-top: 2rem;
-    display: inline-flex;
-    padding: 1rem;
-    background-color: var(--cores-chaves);
-    color: var(--cores-letra);
-    justify-content: center;
-    border-radius: 4px;
-    text-align: center;
-}
-.cancel{
-    align-items: center;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-.modal {
-    width: 100%;
-    height: 100%;
-    background-color: var(--background-2);
-    display: grid;
-    place-content: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: 1.3s;
-}
-
-.modal:target {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal_content {
-    background-color: var(--background-color);
-    color: var(--cores-letra);
-    width: 300px;
-    padding: 2rem 2rem 1rem;
-    border-radius: 4px;
-    font-family: 'Jost', Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-.modal_link {
-    display: flex;
-    justify-content: center;
-    background-color: var(--cores-chaves);
-    padding: 0.7rem 1rem;
-    margin-top: 1rem;
-    border-radius: 4px;
-    color: var(--cores-letra);
-}
-
-.modal_link:hover {
-    background-color: var(--cores-chaves);
-}
-
-.modal_link:active {
-    background-color: var(--cores-chaves);
-}
-
-
-/*CONFIGURAÇÃO FOOTER*/ 
-
-footer {
-    padding-top: 1rem;
-    margin-bottom: 4rem;
-    font-family: 'Inter' Arial, Helvetica, sans-serif;
-    color: var(--cores-chaves);
-
-}
-
-
-
-/* RESPONSIVE */
-
-@media (max-width: 1180px){
-    .container-side {
-        display: none;
-    }
-
-    main {
-        margin-left: auto;
-    }
-}
-
-
-/*CONFIGURAÇÃO FOOTER*/
-
-hr {
-    background-color: var(--cores-chaves);
-    color: var(--cores-chaves);
-    border: var(--cores-chaves);
-    width: 100vw;
-    height: 2px;
-    display: flex;
-    flex-direction: row;
+    height: 2rem;
+    width: 20rem;
+    margin: 1rem;
     margin-bottom: 2rem;
 }
 
-footer {
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-    font-family: 'Inter' Arial, Helvetica, sans-serif;
-    color: var(--cores-chaves);
-    align-items: center;
+/* ALTERAR DADOS DO CARTÃO*/
+
+.credit-card {
+    border-radius: 9%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-color: var(--background-color);
+}
+
+.card {
+    position: relative;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.credit-card input{
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 2rem;
+    width: 20rem;
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+
+.credit-card button{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--cores-letra);
+    background-color: #B30006;
+    height: 2rem;
+    width: 20rem;
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+
+.formulario-card{
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    display:grid;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-color: var(--background-color);
+    
+}
+
+.formulario button {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--cores-letra);
+    background-color: #B30006;
+    height: 2rem;
+    width: 20rem;
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+
+form .formulario{
+    width: 500px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: white;
+    height: 2rem;
+    width: 20rem;
+    margin: 1rem;
+}
+
+/* CANCELAR ASSINATURA */
+
+.cancelar {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+.cancel button {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--cores-letra);
+    background-color: #B30006;
+    height: 3rem;
+    width: 10rem;
+    margin: 1rem;
+    margin-bottom: 2rem;
 }

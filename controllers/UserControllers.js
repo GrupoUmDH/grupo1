@@ -17,6 +17,7 @@ const view = {
 
 module.exports = {
     index: async (req, res, next) => {
+        view.popUp = false;
         res.render("login", view);
     },
 
@@ -39,6 +40,10 @@ module.exports = {
                 const validPassword = bcrypt.compareSync(senha, user.senha);
 
                 if(validPassword){
+                    req.session.id = user.id
+                    req.session.name = user.nome_usuario
+                    req.session.key = hashedPassword;
+                    
                     req.session.email = user.email
                     req.session.tipo = user.tipo_usuario;
 
@@ -49,7 +54,7 @@ module.exports = {
                     view.mensagem = "O e-mail digitado ou a senha estão incorretos.";
                     view.aviso = "Tente novamente.";
 
-                    res.redirect("/login");
+                    res.render("login", view);
                 }
                 
             })
@@ -58,12 +63,13 @@ module.exports = {
             view.popUp = true;
             view.mensagem = "O e-mail digitado ou a senha estão incorretos.";
             view.aviso = "Tente novamente.";
-            res.redirect('/login');
+            res.render("login", view);
         }
     },
 
     cadastro: async (req, res, next) => {
-        
+        console.log(req.body);
+
         const { nome_usuario, email, senha } = req.body;
         const hashedPassword = await bcrypt.hash(senha, 10);
         
@@ -80,7 +86,7 @@ module.exports = {
                     view.mensagem = "Usuário já cadastrado com este e-mail.";
                     view.aviso = "Cadastre um novo e-mail ou faça Login.";
 
-                    res.redirect('/login');
+                    res.render("login", view);
 
                 } else {
                     const user = Usuario.create({
@@ -94,14 +100,28 @@ module.exports = {
                     view.mensagem = "Bem vindo a Lumiere! Usuário cadastrado com sucesso!";
                     view.aviso = "Faça login para continuar.";
 
-                    res.redirect("/login");
+                    res.render("login", view);
                 }
             });
 
         } catch (error) {
             res.status(400).send("Erro ao cadastrar");
         }
-    }, 
+    },
+
+    update: async (req, res, next) => {
+        const { nome_usuario, email, senha } = req.body;
+        const hashedPassword = await bcrypt.hash(senha, 10);
+        
+        try {
+            const usuarioEdit = await Usuario.update({ nome_usuario, email, senha:hashedPassword }, { where: { id:req.session.id }} )
+
+        } catch (error) {
+            res.status(400).send("Erro ao Alterar");
+        }
+    },
+
+    
 
     sair: async (req, res) => {
         req.session = null;

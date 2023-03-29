@@ -1,162 +1,106 @@
 <%- include('partials/header') %>
-<body>  
+
     <aside class="container-side">
-            <nav id="menu">
-                <h1>Minha Conta</h1>
-                <hr>
-                <ul>
-                    <li><a href="#historico">Histórico de pedidos</a></li>
-                    <li><a href="#alterar">Alterar cadastro</a></li>
-                    <li><a href="#cadastrar">Cadastrar cartão</a></li>
-                    <li><a href="#cancelar">Cancelar assinatura</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <main>
-
-        <section class="container">
-            <div class="titulos">
-                <h1 id="historico">Histórico de Pedidos</h1>
-            </div>
+        <nav id="menu">
+            <h1>Minha Conta</h1><br>
+            <hr><br>
+            <ul>
+                <li><a href="#historico">Histórico de pedidos</a></li><br>
+                <li><a href="#alterar">Alterar cadastro</a></li><br>
+                <li><a href="#cadastrar">Cadastrar cartão</a></li><br>
+                <li><a href="#cancelar">Cancelar assinatura</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <h1 id="historico">Histórico de Pedidos</h1> <br>
+        <section class="container"><br>
             <hr>
-
             <section class="historico">
                 <div class="titulos">
                     <h2>Comprados</h2>
-                </div>
-
+                </div><hr>
+                
                 <div class="comprados">
-                    <div>
-                        <img src="../img/filmes/homemAranha_01.jpg" alt="">
-                        <p>HOMEM ARANHA</p>
+                    <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                       <p>Homem Aranha</p>
                     </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>AS BRANQUELAS</p>
+                    <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                        <p>Homem Aranha</p>
                     </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>DEAD POOL 2</p>
+                    <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                        <p>Homem Aranha</p>
                     </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>TOP GUN</p>
+                    <div><img src="../img/filmes/homemAranha_01.jpg" alt="">
+                        <p>Homem Aranha</p>
                     </div>
                 </div>
-
-                <hr>
-
-
-                <div class="titulos">
-                    <h2>Alugados</h2>
-                </div>
-
-
-                <div class="alugados">
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>PANTERA NEGRA</p>
+                <!-- <div class="titulos">
+                        <h2>Alugados</h2>
                     </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>VINGADORES</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>CORINGA</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>HOMEM ARANHA</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>SORRIA</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>OBI-WAN KENOBI</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>BLONDE</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>HANNIBAL</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>THE BOYS</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>SANDMAN</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>RAIO NEGRO</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>RAIO NEGRO</p>
-                    </div>
-                </div>
+                    <hr>
+                    <div class="alugados">
+                        <div>
+                            <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                            <p>Homem Aranha</p>
+                        </div>
+                        <div>
+                            <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                            <p>Homem Aranha</p>
+                        </div>
+                        <div>
+                            <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                            <p>Homem Aranha</p>
+                        </div>
+                        <div>
+                            <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                            <p>Homem Aranha</p>
+                        </div>
+                    </div> -->
             </section>
-        </section>
-        </section>
+        </section><br>
 
         <section class="altera-dados">
             <div class="titulos">
                 <h1 id="alterar">Alterar Dados</h1>
+            </div><hr><br>
+            
+        <section class="alterar">
+            <div class="formulario">
+            <div class="dados-usuario">
+                <form method="post" id="form-email">
+                            <!-- <div class="invisible err-email">Campo obrigatório!</div> -->
+                    <input value="<%= usuario.email %>" placeholder="DIGITE NOVO E-MAIL" type="email" name="email" id="email">
+                            <!-- <div class="invisible err-email1">Confirme o novo e-mail Digitado.</div> -->
+                    <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email1" id="email1">
+                            <!-- <button id="alterar-email">Alterar</button> -->
+                </form>
+
+                <form method="post" id="form-nome">
+                            <!-- <div class="invisible err-name">Campo obrigatório!</div> -->
+                    <input value="<%= usuario.nome %>" placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text"name="name" id="name">
+                            <!-- <button id="alterar-nome">Alterar</button> -->
+                </form>
+
+                <form method="post" id="form-password">
+                    <input placeholder="DIGITE NOVA SENHA" type="password" name="password" id="password">
+                            <!-- <div class="invisible err-password1">Campo obrigatório!</div> -->
+                    <input placeholder="DIGITE NOVA SENHA NOVAMENTE" type="password" name="password1"id="password-1">
+                            <!-- <button id="alterar-senha">Alterar</button> -->
+                    <button id="confirme-alterar">Confirmar alterações</button>
+                </form>
             </div>
-            <hr>
-
-            <section class="alterar">
-                <div class="formulario">
-
-                    <div class="dados-usuario">
-
-
-                        <form method="post" id="form-email">
-
-                            <div class="invisible err-email">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVO E-MAIL" type="email" name="email" id="email">
-                            <div class="invisible err-email1">Confirme o novo e-mail Digitado.</div>
-                            <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email1" id="email1">
-                            <button id="alterar-email">Alterar</button>
-                        </form>
-                        <form method="post" id="form-nome">
-
-                            <div class="invisible err-name">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text" name="name" id="name">
-                            <button id="alterar-nome">Alterar</button>
-                        </form>
-                        <form method="post" id="form-password">
-
-                            <div class="invisible err-password">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVA SENHA" type="password" name="password" id="password">
-
-                            <div class="invisible err-password1">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVA SENHA NOVAMENTE" type="password" name="password1" id="password-1">
-                            <button id="alterar-senha">Alterar</button>
-                        </form>
-
-                        <button id="confirme-alterar">Confirmar alterações</button>
-                    </div>
-
-                </div>
-            </section>
+        </div>
         </section>
-
+        </section><br>
+        
         <!-- CARTAO DE CREDITO -->
         <section class="credit-card">
-            <h1 id="cadastrar">Cadastrar novo Cartão</h1>
-            <hr>
-            <div class="card">
+            <!-- <h1 id="cadastrar">Cadastrar novo Cartão</h1><hr><br>  -->
+            <!-- <div class="card">
                 <div class="face-card">
-                    <img src="../img/pagamento/chip.svg" alt="Chip" id="chip" class="absolute"></img>
-                    <img src="../img/pagamento/signal.svg" alt="Signal" id="signal" class="absolute"></img>
+                    <img src="../img/pagamento/chip0.svg" alt="Chip" id="chip" class="absolute"></img>
+                    <img src="../img/pagamento/signal0.svg" alt="Signal" id="signal" class="absolute"></img>
 
                     <div id="card-info" class="absolute">
                         <div id="card-number">XXXX XXXX XXXX XXXX</div>
@@ -174,45 +118,45 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            <br>
 
             <div class="new-card">
-                <h1>Dados do novo cartão</h1>
-                <hr>
+                <h1>Dados do novo cartão</h1><hr><br>
                 <div class="form-container active">
-                    <form class="formulario">
-                        <div class="invisible err-number">Campo obrigatório!</div>
-                        <input placeholder="Número do cartão" type="text" name="number">
-                        <div class="invisible err-name1">Campo obrigatório!</div>
-                        <input placeholder="Nome completo" type="text" name="name1">
-                        <div class="invisible err-expiry">Campo obrigatório!</div>
-                        <input placeholder="MM/AA" type="text" name="expiry">
-                        <div class="invisible err-cvc">Campo obrigatório!</div>
-                        <input placeholder="CVC" type="text" name="cvc">
-                        <button type="submit">Cadastrar</button>
+                    <form class="formulario-card">
+                        <!-- <div class="invisible err-number">Campo obrigatório!</div> -->
+                    <input placeholder="Número do cartão" type="text" name="number">
+                        <!-- <div class="invisible err-name1">Campo obrigatório!</div> -->
+                    <input placeholder="Nome completo" type="text" name="name1">
+                        <!-- <div class="invisible err-expiry">Campo obrigatório!</div> -->
+                    <input placeholder="MM/AA" type="text" name="expiry">
+                        <!-- <div class="invisible err-cvc">Campo obrigatório!</div> -->
+                    <input placeholder="CVC" type="text" name="cvc">
+                    <button type="submit">Cadastrar Novo Cartão</button>
                     </form>
                 </div>
             </div>
-        </section>
-
+        </section> <br><br>
 
         <!-- CANCELAR CONTA -->
         <section class="cancelar">
             <div class="titulos">
                 <h1 id="cancelar">Deseja cancelar sua assinatura?</h1>
-            </div>
-            <hr>
+            </div><hr><br>
+   
             <section class="cancel">
-                <a href="#modal" class="btn">Clique aqui para cancelar</a>
-                <div id="modal" class="modal">
-                    <div class="modal_content">
-                        <p>Assinatura cancelada com sucesso!</p>
-                        <a href="#" class="modal_link">Ok</a>
+                <button type="submit">Cancelar Assinatura</button>
+                <!-- <a href="#modal" class="btn">Clique aqui para cancelar</a>
+                    <div id="modal" class="modal">
+                        <div class="modal_content">
+                            <p>Assinatura cancelada com sucesso!</p>
+                            <a href="#" class="modal_link">Ok</a>
+                        </div>
                     </div>
-                </div>
+                </section> -->
             </section>
-        </section>
+        </section> 
     </main>
-</body>
-<%- include('partials/footer') %>
-</html>
+
+    <%- include('partials/footer') %>
