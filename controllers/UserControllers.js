@@ -18,7 +18,7 @@ const view = {
 module.exports = {
     index: async (req, res, next) => {
         view.popUp = false;
-        res.render("painel-user", view);
+        res.render("login", view);
     },
 
     login: async (req, res, next) => {

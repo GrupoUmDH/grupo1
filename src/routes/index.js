@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const userController= require('../../controllers/UserControllers')
 
 const indexControllers = require('../controllers/indexControllers');
 
@@ -16,6 +17,7 @@ router.get('/suporte', function(req, res, next) {
     res.render('suporte', { pageName: 'suporte', js:'suporte' });
 });
 
+router.get('/sair', userController.sair);
 
 
 module.exports = router;
