@@ -22,7 +22,7 @@ module.exports = {
 
     login: async (req, res, next) => {
 
-        console.log(req.session);
+        //console.log(await bcrypt.hash("123456", 10));
 
         const { email, senha } = req.body;
 
