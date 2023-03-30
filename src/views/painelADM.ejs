@@ -38,30 +38,30 @@
                 <div id="lista-borda">
                     <div id="itens-menu">
                         <ul>
-                            <li>Imagem</li>
+                            <li id="li-imagem">Imagem</li>
                             <hr>
-                            <li>Nome</li>
+                            <li id="li-nome" >Nome</li>
                             <hr>
-                            <li>Categoria</li>
+                            <li id="li-cate">Categoria</li>
                             <hr>
-                            <li>Classificação</li>
+                            <li id="li-class">Classificação</li>
                             <hr>
-                            <li>Ação</li>
+                            <li id="li-acao">Ação</li>
                         </ul>
                     </div>
                     
                     <% filme.forEach(element => { %>
                         <div id="itens-lista">
                             <ul>
-                                <li><img src="/img/filmes/<%- element.background %>.jpg"/></li>
+                                <li id="li-imagem"><img src="/img/filmes/<%- element.background %>.jpg"/></li>
                                 <hr>
-                                <li><%- element.nome %></li>
+                                <li id="li-nome"><%- element.nome %></li>
                                 <hr>
-                                <li><%- categoria[element.categorias_id -1].nome %></li>
+                                <li id="li-cate"><%- categoria[element.categorias_id -1].nome %></li>
                                 <hr>
-                                <li><%- classificacoes[element.classificacoes_id - 1].nome %></li>
+                                <li id="li-class" ><%- classificacoes[element.classificacoes_id - 1].nome %></li>
                                 <hr>
-                                <li>
+                                <li id="li-acao">
                                     <form method="POST" action="/painel/editar?_method=PUT" id="form_editar">
                                         <input id="input-value" name="id" value=<%- element.id %> style="display: none" >
                                         <button id="bt-editar" type="submit" ><img src="/img/ico/lapis.png" /></button>

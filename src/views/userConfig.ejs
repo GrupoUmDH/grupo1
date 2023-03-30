@@ -25,26 +25,26 @@
                     <div id="lista-borda">
                         <div id="itens-menu">
                             <ul>
-                                <li>Nome</li>
+                                <li id="li-nome">Nome</li>
                                 <hr>
-                                <li>Email</li>
+                                <li id="li-email">Email</li>
                                 <hr>
                                 <li id="user-tipo" >Tipo</li>
                                 <hr>
-                                <li id="br-lista">Ação</li>
+                                <li id="li-acao">Ação</li>
                             </ul>
                         </div>
                         
                         <% users.forEach(element => { %>
-                            <div id="user-lista"> 
+                            <div id="itens-lista"> 
                                 <ul>
-                                    <li> <%- element.nome_usuario %> </li>
+                                    <li id="li-nome"> <%- element.nome_usuario %> </li>
                                     <hr>
-                                    <li><%- element.email %></li>
+                                    <li id="li-email"><%- element.email %></li>
                                     <hr>
                                     <li id="user-tipo"><%- element.tipo_usuario %></li>
                                     <hr>
-                                    <li id="br-lista">
+                                    <li id="li-acao">
                                         <form method="post" action="/painel/users/editar?:id" id="form_editar">
                                             <input id="input-value" name="id" value=<%- element.id %> style="display: none" >
                                             <button id="bt-editar" type="submit" ><img src="/img/ico/lapis.png" /></button>

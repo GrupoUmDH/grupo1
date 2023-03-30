@@ -3,11 +3,7 @@
         "username": "lumiere",
         "password": "lumiere",
         "database": "lumiere",
-<<<<<<< HEAD
-        "host": "177.137. 252.222:3306",
-=======
         "host": "177.137.252.222",
->>>>>>> cf10665f3211d5bacf33a6a520f50cd073e44fe1
         "dialect": "mysql"
     }
 }
