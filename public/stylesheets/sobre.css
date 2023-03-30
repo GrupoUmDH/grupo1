@@ -10,7 +10,7 @@
 }
 
 html {
-    width: 100vw;
+    width: 100%;
 }
 
 *{
@@ -23,7 +23,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     background-color: var(--background-color);
     font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
@@ -55,9 +55,19 @@ main {
 .quem-somos > h1 {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     color: red;
+    margin-top: 1rem;
     font-size: 2rem;
+    transition: .3s;
     
 }
+
+.quem-somos > h1:hover{
+    font-size: 2.1rem;
+    text-shadow: rgba(255,0,0,1) 0px 0px 9px;
+    filter: brightness(5000%);
+}
+
+
 .quem-somos> p {
     color: white;
     text-align: justify;
@@ -69,18 +79,5 @@ main {
     flex-wrap: nowrap;
     margin: 2rem;
 
-}
-
-/*CONFIGURAÇÃO FOOTER*/
-
-hr {
-    background-color: var(--cores-chaves);
-    color: var(--cores-chaves);
-    border: var(--cores-chaves);
-    width: 100vw;
-    height: 2px;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 2rem;
 }
 

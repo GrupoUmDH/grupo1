@@ -10,11 +10,12 @@
 
             <div class="login-formulario">
                 <form class="form-login" method="post" action="/login/user">
-                    <input placeholder="E-MAIL..." type="text" name="email" />
+                    <input  class="login-email"  placeholder="E-MAIL..." type="text" name="email" />
                     <div class="invisible">
                         Campo obrigatório!
                     </div>
                     <input
+                    class="login-password"
                         placeholder="SENHA"
                         type="password"
                         name="senha"
@@ -36,6 +37,7 @@
                     <img src="/img/ico/user.png" />
                 </a>
                 <input
+                    class="cad-email"
                     placeholder="COLOQUE SEU EMAIL..."
                     type="email"
                     name="email"
@@ -44,6 +46,7 @@
                     Campo obrigatório!
                 </div>
                 <input
+                    class="cad-user"
                     placeholder="NOME USUÁRIO.."
                     type="text"
                     name="nome_usuario"
@@ -52,12 +55,18 @@
                 <div class="invisible">
                     Campo obrigatório!
                 </div>
-                <input placeholder="SENHA" type="password" name="senha" />
+                <input 
+                    class="cad-password"
+                    placeholder="SENHA" 
+                    type="password" 
+                    name="senha" />
                 <div class="invisible">
                     Campo obrigatório!
                 </div>
                 <input type="text" style="display: none" nome="tipo_usuario" value="admin"/>
-                <button type="submit">CRIAR A MINHA CONTA</button>
+                <div class="create-account">
+                    <button type="submit">CRIAR A MINHA CONTA</button>
+                </div>
             </form>
         </div>
     </div>
