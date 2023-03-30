@@ -17,6 +17,7 @@ const view = {
 
 module.exports = {
     index: async (req, res, next) => {
+        view.popUp = false;
         res.render("login", view);
     },
 
@@ -49,7 +50,7 @@ module.exports = {
                     view.mensagem = "O e-mail digitado ou a senha estão incorretos.";
                     view.aviso = "Tente novamente.";
 
-                    res.redirect("/login");
+                    res.render("login", view);
                 }
                 
             })
@@ -58,11 +59,13 @@ module.exports = {
             view.popUp = true;
             view.mensagem = "O e-mail digitado ou a senha estão incorretos.";
             view.aviso = "Tente novamente.";
-            res.redirect('/login');
+            res.render("login", view);
         }
     },
 
     cadastro: async (req, res, next) => {
+        console.log(req.body);
+
         const { nome_usuario, email, senha } = req.body;
         const hashedPassword = await bcrypt.hash(senha, 10);
         
@@ -79,7 +82,7 @@ module.exports = {
                     view.mensagem = "Usuário ja cadastrado com este e-mail..";
                     view.aviso = "Cadastre um novo e-mail ou faça Login.";
 
-                    res.redirect('/login');
+                    res.render("login", view);
 
                 } else {
                     const user = Usuario.create({
@@ -90,10 +93,10 @@ module.exports = {
                     });
 
                     view.popUp = true;
-                    view.mensagem = "Bem vindo a Lumiere! /n Usuário cadastrado com sucesso!";
+                    view.mensagem = "Bem vindo a Lumiere! Usuário cadastrado com sucesso!";
                     view.aviso = "Faça login para continuar.";
 
-                    res.redirect("/login");
+                    res.render("login", view);
                 }
             });
 
