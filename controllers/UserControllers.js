@@ -42,8 +42,7 @@ module.exports = {
                 if(validPassword){
                     req.session.id = user.id
                     req.session.name = user.nome_usuario
-                    req.session.key = hashedPassword;
-                    
+                    req.session.key = hashedPassword;      
                     req.session.email = user.email
                     req.session.tipo = user.tipo_usuario;
 

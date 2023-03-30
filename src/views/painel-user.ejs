@@ -69,19 +69,11 @@
             <div class="formulario">
             <div class="dados-usuario">
                 <form method="post" id="form-dados" action="/painel/painel-user">
-                            <!-- <div class="invisible err-email">Campo obrigatório!</div> -->
                     <input value="<%= usuario.email %>" placeholder="DIGITE NOVO E-MAIL" type="email" name="email" id="email">
-                            <!-- <div class="invisible err-email1">Confirme o novo e-mail Digitado.</div> -->
                     <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email1" id="email1">
-                            <!-- <button id="alterar-email">Alterar</button> -->
-                            <!-- <div class="invisible err-name">Campo obrigatório!</div> -->
                     <input value="<%= usuario.nome %>" placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text"name="name" id="name">
-                            <!-- <button id="alterar-nome">Alterar</button> -->
-
                     <input placeholder="DIGITE NOVA SENHA" type="password" name="password" id="password">
-                            <!-- <div class="invisible err-password1">Campo obrigatório!</div> -->
                     <input placeholder="DIGITE NOVA SENHA NOVAMENTE" type="password" name="password1"id="password-1">
-                            <!-- <button id="alterar-senha">Alterar</button> -->
                     <button id="confirme-alterar">Confirmar alterações</button>
                 </form>
             </div>
@@ -120,13 +112,9 @@
                 <h1>Dados do novo cartão</h1><hr><br>
                 <div class="form-container active">
                     <form class="formulario-card">
-                        <!-- <div class="invisible err-number">Campo obrigatório!</div> -->
                     <input placeholder="Número do cartão" type="text" name="number">
-                        <!-- <div class="invisible err-name1">Campo obrigatório!</div> -->
                     <input placeholder="Nome completo" type="text" name="name1">
-                        <!-- <div class="invisible err-expiry">Campo obrigatório!</div> -->
                     <input placeholder="MM/AA" type="text" name="expiry">
-                        <!-- <div class="invisible err-cvc">Campo obrigatório!</div> -->
                     <input placeholder="CVC" type="text" name="cvc">
                     <button type="submit">Cadastrar Novo Cartão</button>
                     </form>
