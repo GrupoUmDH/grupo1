@@ -65,9 +65,47 @@ module.exports = {
             res.render("login", view);
         }
     },
+    cadastroUsuario: async(req, res, next) => {
+        const { nome_usuario, sobrenome_usuario, cpf, email, endereco, codigo_postal, estado, cidade, senha, tipo_usuario } = req.body;
+        const hashedPassword = await bcrypt.hash(senha, 10);
+        try {
+            const user_existe = await Usuario.findOne({
+                where: {
+                    email: email
+                }
+            })
+            .then(user_existe => {
+                if(user_existe){
+                    view.popUp = true;
+                    view.mensagem = "Usuário já cadastrado com este e-mail.";
+                    view.aviso = "Cadastre um novo e-mail ou faça Login.";
 
+                    res.render("login", view);
+
+                } else {
+                    const user = Usuario.create({
+                        nome_usuario: req.body.nome_usuario,
+                        email: req.body.email,
+                        senha: hashedPassword,
+                        tipo_usuario: "cliente",
+                    });
+
+                    view.popUp = true;
+                    view.mensagem = "Bem vindo a Lumiere! Usuário cadastrado com sucesso!";
+                    view.aviso = "Faça login para continuar.";
+
+                    res.render("login", view);
+                }
+            });
+
+        } catch (error) {
+            res.status(400).send("Erro ao cadastrar");
+        }
+
+
+    },
     cadastro: async (req, res, next) => {
-        console.log(req.body);
+        console.log(req.session);
 
         const { nome_usuario, email, senha } = req.body;
         const hashedPassword = await bcrypt.hash(senha, 10);

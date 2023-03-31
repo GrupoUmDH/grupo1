@@ -38,7 +38,7 @@ const cartaoModel = (sequelize, dataTypes) => {
 
 
     cartao.associate = (models) => {
-        cartao.belongsTo(models.Usuarios, {
+        cartao.belongsTo(models.Usuario, {
             as: "user",
             foreignKey: "id_usuario",
         });
