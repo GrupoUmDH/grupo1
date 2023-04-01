@@ -1,4 +1,4 @@
-const { Usuario } = require("../models");
+const { Usuario, CadastroUsuario } = require("../models");
 const { Op } = require('sequelize');
 
 const express = require("express");
@@ -17,8 +17,45 @@ const view = {
 
 module.exports = {
     index: async (req, res, next) => {
-        view.popUp = false;
-        res.render("login", view);
+
+        const { email } = req.session;
+
+        try {
+
+            await Usuario.findOne({
+                where: { email: email}
+            }).then((response) => {
+                //console.log(response);
+                if (req.session.tipo == 'cliente') {
+                    //view.popUp = false;
+
+                    CadastroUsuario.findOne({
+                        where: {
+                            email:req.session.email
+                        }
+                    })
+                    .then(dados=>{
+                        console.log("estou carregando os dados do banco ... ")
+                        
+                        res.render('painel-user', { pageName: 'painel-user', js: '', dados });
+                    }).catch((error) => {
+                        console.log("erro ao carregar os dados do cliente.")
+                    })
+                } else {
+                    res.redirect('/login');
+                }
+            }).catch((error) => {
+                //console.log("Deu xabu");
+                setTimeout(()=>{
+                    res.redirect('/login');
+                }, 2000);
+                
+            });
+
+        } catch (err) {
+            console.log(err)
+            res.status(500).json({ mensagem: 'erro: tentativa de acesso ao Painel Administrativo' });
+        }
     },
 
     login: async (req, res, next) => {
@@ -66,7 +103,7 @@ module.exports = {
         }
     },
     cadastroUsuario: async(req, res, next) => {
-        const { nome_usuario, sobrenome_usuario, cpf, email, endereco, codigo_postal, estado, cidade, senha, tipo_usuario } = req.body;
+        //const { nome_usuario, sobrenome_usuario, cpf, email, endereco, codigo_postal, estado, cidade, senha, tipo_usuario } = req.body;
         const hashedPassword = await bcrypt.hash(senha, 10);
         try {
             const user_existe = await Usuario.findOne({
