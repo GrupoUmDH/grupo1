@@ -3,7 +3,6 @@ const router = express.Router();
 
 const userController = require('../../controllers/UserControllers');
 const loginSession = require('../middlewares/loginSession');
-const ClienteControllers = require('../../controllers/ClienteControllers');
 
 
 router.get('/', loginSession, userController.index);

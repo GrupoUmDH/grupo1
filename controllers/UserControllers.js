@@ -9,6 +9,7 @@ const Sequelize = require("sequelize");
 const view = {
     pageName: "login",
     js: "login",
+    dados: {},
     popUp: false,
     mensagem: "mensagem",
     aviso: "aviso",
@@ -21,36 +22,42 @@ module.exports = {
         const { email } = req.session;
 
         try {
+            if(!email){
+                view.pageName = 'login';
+                view.js = 'login';
+                view.popUp = false;
 
-            await Usuario.findOne({
-                where: { email: email}
-            }).then((response) => {
-                //console.log(response);
-                if (req.session.tipo == 'cliente') {
-                    //view.popUp = false;
+                res.render('login', view);
 
-                    CadastroUsuario.findOne({
-                        where: {
-                            email:req.session.email
-                        }
-                    })
-                    .then(dados=>{
-                        console.log("estou carregando os dados do banco ... ")
-                        
-                        res.render('painel-user', { pageName: 'painel-user', js: '', dados });
-                    }).catch((error) => {
-                        console.log("erro ao carregar os dados do cliente.")
-                    })
-                } else {
-                    res.redirect('/login');
-                }
-            }).catch((error) => {
-                //console.log("Deu xabu");
-                setTimeout(()=>{
-                    res.redirect('/login');
-                }, 2000);
-                
-            });
+            } else {
+                CadastroUsuario.findOne({
+                    where: {
+                        email: email
+                    }
+                })
+                .then(dados=>{
+                    console.log("estou carregando os dados do banco ... ");
+
+                    view.pageName = 'painel-user';
+                    view.js = 'login';
+                    view.popUp = false;
+                    view.dados = dados;
+    
+                    res.render('painel-user', view);
+                }).catch((error) => {
+    
+    
+                    console.log("erro ao carregar os dados do cliente.");
+    
+                    view.pageName = 'painel-user';
+                    view.js = 'login';
+                    view.popUp = true;
+                    view.mensagem = "Você precisa completar o seu cadasto...",
+                    view.aviso = 'preencha os dados de cadastro.'
+    
+                    res.render('painel-user', view);
+                })
+            }
 
         } catch (err) {
             console.log(err)
@@ -186,10 +193,10 @@ module.exports = {
     update: async (req, res, next) => {
         const { name, email1, password } = req.body;
         console.log(req.body)
-        const hashedPassword = await bcrypt.hash(password, 10);
+        //const hashedPassword = await bcrypt.hash(password, 10);
         
         try {
-            const usuarioEdit = await Usuario.update({ nome_usuario:name, email:email1, senha:hashedPassword }, { where: { id:req.session.id }} )
+            const usuarioEdit = await Usuario.update({ nome_usuario:name, email:email1,}, { where: { id:req.session.id }} )
             res.redirect("/")
         } catch (error) {
             res.status(400).send("Erro ao Alterar");
@@ -200,6 +207,6 @@ module.exports = {
 
     sair: async (req, res) => {
         req.session = null;
-        res.redirect('/login');
+        res.redirect('/');
     },
 };
