@@ -155,6 +155,17 @@
                 </section> -->
             </section>
         </section>
+
+        <% if(popUp) { %>
+            <div class="pop-up" style="display: flex">
+                <div id="pop-up-content">
+                    <span><button>X</button></span>
+                    <h2><%- mensagem%></h2>
+                    <h4><%- aviso%></h4>
+                </div>
+            </div>
+        <% } %>
+        
     </main>
 
     <%- include('partials/footer') %>
