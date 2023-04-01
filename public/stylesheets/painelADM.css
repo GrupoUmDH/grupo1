@@ -62,10 +62,12 @@ div#user-menu {
 div#user-menu h2 {
     font-size: 1rem;
     width: 12rem;
+    color: var(--cores-letra);
 }
 
 div#user-menu h3 {
     font-size: .7rem;
+    color: var(--cores-letra);
 }
 
 div#user-menu button {
@@ -90,7 +92,7 @@ header img {
 
 .barra-lateral {
     width: 220px;
-    height: 100vh;
+    height: 80%;
     padding-top: 2rem;
     background-color: var(--background-3);
     display: flex;
@@ -123,7 +125,9 @@ section.content {
     flex-wrap: nowrap;
     align-items: flex-start;
     flex-direction: column;
+    align-items: center;
     width: 60vw;
+
 }
 
 div#titulos {
@@ -155,7 +159,13 @@ div#itens-titulo h4 {
     color: var(--cores-chaves);
 }
 
-div#itens img {
+div#itens div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--background-color);
+    background-color: var(--cores-letra);
     width: 2.5rem;
     margin: .3rem;
 }
@@ -179,6 +189,7 @@ div#itens-titulo {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    background-color: var(--background-2);
 }
 
 div#lista-borda {
@@ -253,7 +264,11 @@ div#lista-borda ul li {
     justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
+    color: var(--background-color);
+
 }
+
+
 
 li#user-tipo {
     max-width: 3rem;
@@ -315,6 +330,8 @@ div#pop-up-content {
 div#pop-up-content h2 {
     text-align: center;
     color: white;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 div#pop-up-content h4 {
@@ -437,6 +454,16 @@ div.pop-up span button {
     font-size: xx-large;
     color: white;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: .5rem;
+}
+
+div.pop-up span {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    flex-direction: row;
     padding-right: .5rem;
     justify-content: space-evenly;
     flex-direction: column;

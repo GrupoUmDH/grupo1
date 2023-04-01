@@ -140,7 +140,7 @@ module.exports = {
             descricao: params.descricaoCreate
         });
         console.log(req);
-        res.render("teste", { pageName: "filmes", js:"filmes", categorias:params.categoriaCreate, classificacoes:1, filmes:[filmes] });
+        res.render("teste", { pageName: "filmes", js:"filmes", categorias:params.categoriaCreate, classificacoes:params.classificacoesCreate, filmes:[filmes] });
         
     },
 
@@ -162,15 +162,15 @@ module.exports = {
             return res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
         } 
         const params = req.body;
-        console.log(params)
+        console.log(req.files)
         const filmes = await Filme.update({
             nome: params.nomeUpdate,
-            imagem: "Alterar posterior", //params.imagemCreate
-            background: "Alterar posterior", //params.backgroundCreate
+            imagem: path.parse(req.files.imagemUpdate[0].filename).name,
+            background: path.parse(req.files.backgroundUpdate[0].filename).name,
             valor: params.valorUpdate,
             tipo: params.tipoUpdate,
             categorias_id: params.categoriaUpdate,
-            classificacoes_id: 1, //params.classificacoesCreate
+            classificacoes_id: params.classificacoesUpdate,
             descricao: params.descricaoUpdate
         },
             {

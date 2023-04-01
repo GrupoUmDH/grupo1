@@ -1,162 +1,106 @@
 <%- include('partials/header') %>
-<body>  
+
     <aside class="container-side">
-            <nav id="menu">
-                <h1>Minha Conta</h1>
-                <hr>
-                <ul>
-                    <li><a href="#historico">Histórico de pedidos</a></li>
-                    <li><a href="#alterar">Alterar cadastro</a></li>
-                    <li><a href="#cadastrar">Cadastrar cartão</a></li>
-                    <li><a href="#cancelar">Cancelar assinatura</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <main>
-
-        <section class="container">
-            <div class="titulos">
-                <h1 id="historico">Histórico de Pedidos</h1>
-            </div>
+        <nav id="menu">
+            <h1>Minha Conta</h1><br>
+            <hr><br>
+            <ul>
+                <li><a href="#historico">Histórico de pedidos</a></li><br>
+                <li><a href="#alterar">Alterar cadastro</a></li><br>
+                <li><a href="#cadastrar">Cadastrar cartão</a></li><br>
+                <li><a href="#cancelar">Cancelar assinatura</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <h1 id="historico">Histórico de Pedidos</h1> <br>
+        <section class="container"><br>
             <hr>
-
             <section class="historico">
                 <div class="titulos">
                     <h2>Comprados</h2>
                 </div>
-
-                <div class="comprados">
-                    <div>
-                        <img src="../img/filmes/homemAranha_01.jpg" alt="">
-                        <p>HOMEM ARANHA</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>AS BRANQUELAS</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>DEAD POOL 2</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>TOP GUN</p>
-                    </div>
-                </div>
-
                 <hr>
 
-
-                <div class="titulos">
-                    <h2>Alugados</h2>
-                </div>
-
-
-                <div class="alugados">
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>PANTERA NEGRA</p>
+                <div class="comprados">
+                    <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                        <p>Homem Aranha</p>
                     </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>VINGADORES</p>
+                    <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                        <p>Homem Aranha</p>
                     </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>CORINGA</p>
+                    <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                        <p>Homem Aranha</p>
                     </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>HOMEM ARANHA</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>SORRIA</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>OBI-WAN KENOBI</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>BLONDE</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>HANNIBAL</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>THE BOYS</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>SANDMAN</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>RAIO NEGRO</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>RAIO NEGRO</p>
+                    <div><img src="../img/filmes/homemAranha_01.jpg" alt="">
+                        <p>Homem Aranha</p>
                     </div>
                 </div>
+                <!-- <div class="titulos">
+                        <h2>Alugados</h2>
+                    </div>
+                    <hr>
+                    <div class="alugados">
+                        <div>
+                            <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                            <p>Homem Aranha</p>
+                        </div>
+                        <div>
+                            <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                            <p>Homem Aranha</p>
+                        </div>
+                        <div>
+                            <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                            <p>Homem Aranha</p>
+                        </div>
+                        <div>
+                            <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                            <p>Homem Aranha</p>
+                        </div>
+                    </div> -->
             </section>
-        </section>
-        </section>
+        </section><br>
 
         <section class="altera-dados">
             <div class="titulos">
                 <h1 id="alterar">Alterar Dados</h1>
             </div>
-            <hr>
+            <hr><br>
 
             <section class="alterar">
                 <div class="formulario">
-
                     <div class="dados-usuario">
-
-
-                        <form method="post" id="form-email">
-
-                            <div class="invisible err-email">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVO E-MAIL" type="email" name="email" id="email">
-                            <div class="invisible err-email1">Confirme o novo e-mail Digitado.</div>
+                        <form method="post" id="form-dados" action="/painel/painel-user">
+                            <input value="<%= usuario.nome_usuario %>" type="text" placeholder="NOME*" name="nome" minlength="3" maxlength="20">
+                            <input value="<%= usuario.sobrenome_usuario %>" type="text" placeholder="SOBRENOME*" name="sobrenome" minlength="3" maxlength="20">
+                            <input value="<%= usuario.cpf %>" type="text" placeholder="CPF/CNPJ*" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                            <input value="<%= usuario.codigo_postal %>" type="text" placeholder="CÓDIGO POSTAL*" name="codigo-postal" maxlength="8">
+                            <input value="<%= usuario.endereco %>" type="text" placeholder="ENDEREÇO*" name="endereco">
+                            <input value="<%= usuario.estado %>" type="text" placeholder="ESTADO*" name="estado">
+                            <input value="<%= usuario.cidade %>" type="text" placeholder="CIDADE*" name="cidade">
+                            <input value="<%= usuario.pais %>" type="text" placeholder="PAÍS*" name="pais">
+                            <input value="<%= usuario.email %>" placeholder="DIGITE NOVO E-MAIL" type="email"
+                                name="email" id="email">
                             <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email1" id="email1">
-                            <button id="alterar-email">Alterar</button>
-                        </form>
-                        <form method="post" id="form-nome">
-
-                            <div class="invisible err-name">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text" name="name" id="name">
-                            <button id="alterar-nome">Alterar</button>
-                        </form>
-                        <form method="post" id="form-password">
-
-                            <div class="invisible err-password">Campo obrigatório!</div>
+                            <input value="<%= usuario.nome %>" placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text"
+                                name="name" id="name">
                             <input placeholder="DIGITE NOVA SENHA" type="password" name="password" id="password">
-
-                            <div class="invisible err-password1">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVA SENHA NOVAMENTE" type="password" name="password1" id="password-1">
-                            <button id="alterar-senha">Alterar</button>
+                            <input placeholder="DIGITE NOVA SENHA NOVAMENTE" type="password" name="password1"
+                                id="password-1">
+                            <button id="confirme-alterar">Confirmar alterações</button>
                         </form>
-
-                        <button id="confirme-alterar">Confirmar alterações</button>
                     </div>
-
                 </div>
             </section>
-        </section>
+        </section><br>
 
         <!-- CARTAO DE CREDITO -->
         <section class="credit-card">
-            <h1 id="cadastrar">Cadastrar novo Cartão</h1>
-            <hr>
-            <div class="card">
+            <!-- <h1 id="cadastrar">Cadastrar novo Cartão</h1><hr><br>  -->
+            <!-- <div class="card">
                 <div class="face-card">
-                    <img src="../img/pagamento/chip.svg" alt="Chip" id="chip" class="absolute"></img>
-                    <img src="../img/pagamento/signal.svg" alt="Signal" id="signal" class="absolute"></img>
+                    <img src="../img/pagamento/chip0.svg" alt="Chip" id="chip" class="absolute"></img>
+                    <img src="../img/pagamento/signal0.svg" alt="Signal" id="signal" class="absolute"></img>
 
                     <div id="card-info" class="absolute">
                         <div id="card-number">XXXX XXXX XXXX XXXX</div>
@@ -174,45 +118,43 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            <br>
 
             <div class="new-card">
                 <h1>Dados do novo cartão</h1>
-                <hr>
+                <hr><br>
                 <div class="form-container active">
-                    <form class="formulario">
-                        <div class="invisible err-number">Campo obrigatório!</div>
+                    <form class="formulario-card">
                         <input placeholder="Número do cartão" type="text" name="number">
-                        <div class="invisible err-name1">Campo obrigatório!</div>
                         <input placeholder="Nome completo" type="text" name="name1">
-                        <div class="invisible err-expiry">Campo obrigatório!</div>
                         <input placeholder="MM/AA" type="text" name="expiry">
-                        <div class="invisible err-cvc">Campo obrigatório!</div>
                         <input placeholder="CVC" type="text" name="cvc">
-                        <button type="submit">Cadastrar</button>
+                        <button type="submit">Cadastrar Novo Cartão</button>
                     </form>
                 </div>
             </div>
-        </section>
-
+        </section> <br><br>
 
         <!-- CANCELAR CONTA -->
         <section class="cancelar">
             <div class="titulos">
                 <h1 id="cancelar">Deseja cancelar sua assinatura?</h1>
             </div>
-            <hr>
+            <hr><br>
+
             <section class="cancel">
-                <a href="#modal" class="btn">Clique aqui para cancelar</a>
-                <div id="modal" class="modal">
-                    <div class="modal_content">
-                        <p>Assinatura cancelada com sucesso!</p>
-                        <a href="#" class="modal_link">Ok</a>
+                <button type="submit">Cancelar Assinatura</button>
+                <!-- <a href="#modal" class="btn">Clique aqui para cancelar</a>
+                    <div id="modal" class="modal">
+                        <div class="modal_content">
+                            <p>Assinatura cancelada com sucesso!</p>
+                            <a href="#" class="modal_link">Ok</a>
+                        </div>
                     </div>
-                </div>
+                </section> -->
             </section>
         </section>
     </main>
-</body>
-<%- include('partials/footer') %>
-</html>
+
+    <%- include('partials/footer') %>
