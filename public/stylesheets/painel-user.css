@@ -319,9 +319,9 @@ form .formulario{
 /* popup */
 
 .pop-up {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: none;
@@ -330,6 +330,7 @@ form .formulario{
     align-items: center;
     background-color: rgba(0, 0, 0, .6);
     justify-content: space-evenly;
+    z-index: 100;
 }
 
 div#pop-up-content {

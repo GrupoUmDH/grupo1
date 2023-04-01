@@ -36,27 +36,24 @@ module.exports = {
                     }
                 })
                 .then(dados=>{
-                    console.log("estou carregando os dados do banco ... ");
 
-                    view.pageName = 'painel-user';
-                    view.js = 'login';
-                    view.popUp = false;
-                    view.dados = dados;
+                    if(!dados){
+                        view.pageName = 'painel-user';
+                        view.js = 'login';
+                        view.popUp = true;
+                        view.mensagem = "Você precisa completar o seu cadasto...",
+                        view.aviso = 'preencha os dados de cadastro.'
     
-                    res.render('painel-user', view);
-                }).catch((error) => {
+                        res.render('painel-user', view);
+                    } else {
+                        view.pageName = 'painel-user';
+                        view.js = 'login';
+                        view.popUp = false;
+                        view.dados = dados;
     
-    
-                    console.log("erro ao carregar os dados do cliente.");
-    
-                    view.pageName = 'painel-user';
-                    view.js = 'login';
-                    view.popUp = true;
-                    view.mensagem = "Você precisa completar o seu cadasto...",
-                    view.aviso = 'preencha os dados de cadastro.'
-    
-                    res.render('painel-user', view);
-                })
+                        res.render('painel-user', view);
+                    }
+                });
             }
 
         } catch (err) {
