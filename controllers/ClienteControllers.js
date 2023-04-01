@@ -1,5 +1,6 @@
 
 
+
 module.exports = {
     index: async (req, res, next) => {
         console.log(req.session);
@@ -9,4 +10,6 @@ module.exports = {
             js: "painel-user",
         });
     },
+
+
 }
