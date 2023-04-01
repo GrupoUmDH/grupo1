@@ -71,18 +71,18 @@
                 <div class="formulario">
                     <div class="dados-usuario">
                         <form method="post" id="form-dados" action="/painel/painel-user">
-                            <input value="<%= usuario.nome_usuario %>" type="text" placeholder="NOME*" name="nome" minlength="3" maxlength="20">
-                            <input value="<%= usuario.sobrenome_usuario %>" type="text" placeholder="SOBRENOME*" name="sobrenome" minlength="3" maxlength="20">
-                            <input value="<%= usuario.cpf %>" type="text" placeholder="CPF/CNPJ*" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
-                            <input value="<%= usuario.codigo_postal %>" type="text" placeholder="CÓDIGO POSTAL*" name="codigo-postal" maxlength="8">
-                            <input value="<%= usuario.endereco %>" type="text" placeholder="ENDEREÇO*" name="endereco">
-                            <input value="<%= usuario.estado %>" type="text" placeholder="ESTADO*" name="estado">
-                            <input value="<%= usuario.cidade %>" type="text" placeholder="CIDADE*" name="cidade">
-                            <input value="<%= usuario.pais %>" type="text" placeholder="PAÍS*" name="pais">
-                            <input value="<%= usuario.email %>" placeholder="DIGITE NOVO E-MAIL" type="email"
+                            <input value="<%- dados.nome_usuario %>" type="text" placeholder="NOME*" name="nome" minlength="3" maxlength="20">
+                            <input value="<%- dados.sobrenome_usuario %>" type="text" placeholder="SOBRENOME*" name="sobrenome" minlength="3" maxlength="20">
+                            <input value="<%- dados.cpf %>" type="text" placeholder="CPF/CNPJ*" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                            <input value="<%- dados.codigo_postal %>" type="text" placeholder="CÓDIGO POSTAL*" name="codigo-postal" maxlength="8">
+                            <input value="<%- dados.endereco %>" type="text" placeholder="ENDEREÇO*" name="endereco">
+                            <input value="<%- dados.estado %>" type="text" placeholder="ESTADO*" name="estado">
+                            <input value="<%- dados.cidade %>" type="text" placeholder="CIDADE*" name="cidade">
+                            <input value="<%- dados.pais %>" type="text" placeholder="PAÍS*" name="pais">
+                            <input value="<%- dados.email %>" placeholder="DIGITE NOVO E-MAIL" type="email"
                                 name="email" id="email">
                             <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email1" id="email1">
-                            <input value="<%= usuario.nome %>" placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text"
+                            <input value="<%- dados.nome %>" placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text"
                                 name="name" id="name">
                             <input placeholder="DIGITE NOVA SENHA" type="password" name="password" id="password">
                             <input placeholder="DIGITE NOVA SENHA NOVAMENTE" type="password" name="password1"
@@ -155,6 +155,17 @@
                 </section> -->
             </section>
         </section>
+
+        <% if(popUp) { %>
+            <div class="pop-up" style="display: flex">
+                <div id="pop-up-content">
+                    <span><button>X</button></span>
+                    <h2><%- mensagem%></h2>
+                    <h4><%- aviso%></h4>
+                </div>
+            </div>
+        <% } %>
+        
     </main>
 
     <%- include('partials/footer') %>

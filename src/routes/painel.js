@@ -8,7 +8,6 @@ const validadorForm = require("../middlewares/validadorForm");
 const userCriar = require('../middlewares/userCriar');
 
 const AdmControllers = require('../../controllers/AdmControllers');
-const ClienteControllers = require('../../controllers/ClienteControllers');
 const userController = require('../../controllers/UserControllers');
 
 router.use(bodyParse.urlencoded({ extended: true }));

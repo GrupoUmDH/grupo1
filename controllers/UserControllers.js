@@ -1,4 +1,4 @@
-const { Usuario } = require("../models");
+const { Usuario, CadastroUsuario } = require("../models");
 const { Op } = require('sequelize');
 
 const express = require("express");
@@ -9,6 +9,7 @@ const Sequelize = require("sequelize");
 const view = {
     pageName: "login",
     js: "login",
+    dados: {},
     popUp: false,
     mensagem: "mensagem",
     aviso: "aviso",
@@ -17,13 +18,56 @@ const view = {
 
 module.exports = {
     index: async (req, res, next) => {
-        view.popUp = false;
-        res.render("login", view);
+
+        const { email } = req.session;
+
+        try {
+            if(!email){
+                view.pageName = 'login';
+                view.js = 'login';
+                view.popUp = false;
+
+                res.render('login', view);
+
+            } else {
+                CadastroUsuario.findOne({
+                    where: {
+                        email: email
+                    }
+                })
+                .then(dados=>{
+                    console.log("estou carregando os dados do banco ... ");
+
+                    view.pageName = 'painel-user';
+                    view.js = 'login';
+                    view.popUp = false;
+                    view.dados = dados;
+    
+                    res.render('painel-user', view);
+                }).catch((error) => {
+    
+    
+                    console.log("erro ao carregar os dados do cliente.");
+    
+                    view.pageName = 'painel-user';
+                    view.js = 'login';
+                    view.popUp = true;
+                    view.mensagem = "Você precisa completar o seu cadasto...",
+                    view.aviso = 'preencha os dados de cadastro.'
+    
+                    res.render('painel-user', view);
+                })
+            }
+
+        } catch (err) {
+            console.log(err)
+            res.status(500).json({ mensagem: 'erro: tentativa de acesso ao Painel Administrativo' });
+        }
     },
 
     login: async (req, res, next) => {
 
-        console.log(req.session);
+        //console.log(await bcrypt.hash("123456", 10));
 
         const { email, senha } = req.body;
 
@@ -65,8 +109,8 @@ module.exports = {
             res.render("login", view);
         }
     },
-    cadastroUsuario: async (req, res, next) => {
-        const { nome_usuario, sobrenome_usuario, cpf, email, endereco, codigo_postal, estado, cidade, senha, tipo_usuario } = req.body;
+    cadastroUsuario: async(req, res, next) => {
+        //const { nome_usuario, sobrenome_usuario, cpf, email, endereco, codigo_postal, estado, cidade, senha, tipo_usuario } = req.body;
         const hashedPassword = await bcrypt.hash(senha, 10);
         try {
             const user_existe = await Usuario.findOne({
@@ -149,13 +193,10 @@ module.exports = {
     update: async (req, res, next) => {
         const { name, email1, password } = req.body;
         console.log(req.body)
-        const hashedPassword = await bcrypt.hash(password, 10);
-
+        //const hashedPassword = await bcrypt.hash(password, 10);
+        
         try {
-            const usuarioEdit = await Usuario.update({
-                nome_usuario: name, email: email1, senha: hashedPassword
-            },
-                { where: { id: req.session.id } })
+            const usuarioEdit = await Usuario.update({ nome_usuario:name, email:email1,}, { where: { id:req.session.id }} )
             res.redirect("/")
         } catch (error) {
             res.status(400).send("Erro ao Alterar");
@@ -166,6 +207,6 @@ module.exports = {
 
     sair: async (req, res) => {
         req.session = null;
-        res.redirect('/login');
+        res.redirect('/');
     },
 };

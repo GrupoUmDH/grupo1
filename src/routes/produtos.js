@@ -17,6 +17,8 @@ router.use(bodyParse.urlencoded({extended: true}));
 
 router.get('/', ProdutosController.produto);
 
+//router.get('/filmes', FilmesControllers.filmes);
+
 
 router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
