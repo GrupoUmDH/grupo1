@@ -50,7 +50,7 @@ module.exports = {
                     user: req.session.nome,
                 });
             } else {
-                res.redirect('/');
+                res.redirect('/painel/painel-user');
             }
 
         } catch (err) {

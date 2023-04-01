@@ -104,7 +104,7 @@ h1 {
 .historico {
 
     flex-direction: row;
-    width: ;
+    width: 100%;
     justify-content: space-between;
     align-items: stretch;
     flex-wrap: wrap;
