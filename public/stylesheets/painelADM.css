@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow: auto; */
 }
 
 body {
@@ -34,6 +35,19 @@ header {
 main {
     margin-top: 4rem;
     margin-left: 10rem;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: darkred;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
 }
 
 .barra-superior {
@@ -147,7 +161,7 @@ div#titulos h3 {
 div#itens {
     width: 60vw;
     height: 70vh;
-    overflow: auto;
+    /* overflow: auto; */
     margin: .6rem;
 }
 
@@ -161,16 +175,10 @@ div#itens img {
 }
 
 
-/* div#itens div {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--background-color);
-    background-color: var(--cores-letra);
-    width: 2.5rem;
-    margin: .3rem;
-} */
+div#content-itens-lista {
+    overflow: auto;
+    height: 60vh;
+}
 
 div#filtro {
     border: 1px solid gray;
@@ -198,10 +206,6 @@ div#lista-borda {
     /* width: 96%; */
     height: 88%;
     margin: .5rem;
-    overflow: initial;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
 }
 
 div#itens-menu {
@@ -521,7 +525,7 @@ div#endereco div {
 }
 
 div.dados-completos button {
-    width: 5rem;
+    width: 15rem;
     height: 2rem;
     background-color: var(--cores-chaves);
     color: var(

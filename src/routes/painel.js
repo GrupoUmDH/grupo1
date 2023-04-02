@@ -38,7 +38,7 @@ router.put('/editar', AdmControllers.editar);
 router.put('/atualiza', upload.fields([{ name: "capa" }, { name: "fundo" }]), AdmControllers.atualiza);
 router.delete('/deletar', AdmControllers.deletar);
 
-//rotas de painel CLIENTES - painel-user.ejs
+//rotas de painel CLIENTES - painel-user.ejs 
 router.get('/painel-user', userController.index);
 router.post('/painel-user', userController.update);
 
@@ -47,6 +47,8 @@ router.post('/users/criar', userCriar, AdmControllers.userCriar);
 
 router.post('/users/editar', AdmControllers.userEditar);
 router.put('/users/atualizar', userCriar, AdmControllers.userUpdate);
+
+router.put('/users/atualizaDados', AdmControllers.dadosUpdate);
 
 router.delete('/users/delete', AdmControllers.userDelete);
 

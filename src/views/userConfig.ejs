@@ -112,47 +112,53 @@
                                     <button type="submit"><%= bt_form %></button>
                                 </form>
                         </div>
+                        
                         <div class="dados-completos">
                             <div> <h1>Dados completos do usuário: </h1></div>
-                            <div> 
-                                <h4>Nome</h4>
-                                <p>NOME</p>
-                                <h4>Sobrenome</h4>
-                                <p>SOBRENOME</p>
-                            </div>
-                            <div>
-                                <h4>CPF: </h4>
-                                <p>111.222.333-00</p>
-                                <h4>e-mail: </h4>
-                                <p>EMAIL@EMAIL.COM.BR</p>
-                            </div>
-                            <div>
-                                <h4>Endereço:</h4>
+                            <% if (!dados) { %>
+                                <div> <h4> Usuário nao preencheu os dados</h4> </div>
+                                <div id="bt-dados">
+                                    <button>Preencher</button>
+                                </div>
+                            <% } else { %>
+                                <div> 
+                                    <h4>Nome</h4>
+                                    <p><%- dados.nome_usuario %></p>
+                                    <h4>Sobrenome</h4>
+                                    <p><%- dados.sobrenome%></p>
+                                </div>
                                 <div>
-                                    <h5>Logradouro:</h5>
-                                    <p>RUA PRIMEIRO DE JANEIRO - 14</p>
+                                    <h4>CPF: </h4>
+                                    <p><%- dados.cpf %></p>
                                 </div>
-                                <div id="endereco">
+                                <div>
+                                    <h4>Endereço:</h4>
                                     <div>
-                                        <h5>Bairro: </h5>
-                                        <p>JANEIRO</p>
-                                        <h5>Cidade: </h5>
-                                        <p>CIDADE DE TAL</p>
+                                        <h5>Logradouro:</h5>
+                                        <p><%- dados.endereco %></p>
                                     </div>
-                                    <div>
-                                        <h5>Estado: </h5>
-                                        <p>MG</p>
-                                        <h5>CEP: </h5>
-                                        <p>33.333-000</p>
+                                    <div id="endereco">
+                                        <div>
+                                            <h5>Bairro: </h5>
+                                            <p><%- dados.bairro %></p>
+                                            <h5>Cidade: </h5>
+                                            <p><%- dados.cidade %></p>
+                                        </div>
+                                        <div>
+                                            <h5>Estado: </h5>
+                                            <p><%- dados.estado %></p>
+                                            <h5>CEP: </h5>
+                                            <p><%- dados.codigo_postal %></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div>
-                                <h4>Formas de pagamento cadastrados:</h4>
-                            </div>
-                            <div id="bt-dados">
-                                <button>Editar</button>
-                            </div>
+                                <div>
+                                    <h4>Formas de pagamento cadastrados:</h4>
+                                </div>
+                                <div id="bt-dados">
+                                    <button>Editar</button>
+                                </div>
+                            <% } %>
                         </div>
                     </div>
                     <%- include('cadastroUsuario')%>
@@ -163,7 +169,5 @@
     <% if(error) { %>
         <%- include('partials/popUpErro')%>
     <% } %>
-
     
-
 </main>
