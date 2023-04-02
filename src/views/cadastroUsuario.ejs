@@ -1,88 +1,59 @@
-<%- include('partials/header') %>
+<head>
+    <link rel="stylesheet" href="/stylesheets/cadastroUsuario.css" />
+    <script src="/javascripts/cadastroUsuario.js" defer></script>
+</head>
 
-    <main>
-
-        <section class="content-1">
-
-            <div class="content-form">
-                <h1>Dados Cadastrais</h1>
-                <form action="">
-
-                    <div>
-                        <div class="invisible err-nome error">Campo obrigatório!</div>
-                        <input class="content-input" type="text" placeholder="NOME*" name="nome" minlength="3"
-                            maxlength="20">
-                    </div>
-
-                    <div>
-                        <div class="invisible err-sobrenome error">Campo obrigatório!</div>
-                        <input class="content-input" type="text" placeholder="SOBRENOME*" name="sobrenome" minlength="3"
-                            maxlength="20">
-                    </div>
-
-                    <div>
-                        <div class="invisible err-cpf error">Campo obrigatório!</div>
-                        <input class="content-input" type="text" placeholder="CPF/CNPJ*" name="cpf"
-                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
-                    </div>
-
-                    <div>
-                        <div class="invisible err-email error">Campo obrigatório!</div>
-                        <input class="content-input" type="email" placeholder="EMAIL*" name="email">
-                    </div>
-
-                    <div>
-                        <div class="invisible err-endereco error">Campo obrigatório!</div>
-                        <input class="content-input" type="text" placeholder="ENDEREÇO*" name="endereco">
-                    </div>
-
-                    <div>
-                        <div class="invisible err-codigo-postal error">Campo obrigatório!</div>
-                        <input class="content-input" type="text" placeholder="CÓDIGO POSTAL*" name="codigo-postal"
-                            maxlength="8">
-                    </div>
-
-                    <div>
-                        <div class="invisible err-estado error">Campo obrigatório!</div>
-                        <input class="content-input" type="text" placeholder="ESTADO*" name="estado">
-                    </div>
-
-                    <div>
-                        <div class="invisible err-cidade error">Campo obrigatório!</div>
-                        <input class="content-input" type="text" placeholder="CIDADE*" name="cidade">
-                    </div>
-
-                    <div>
-                        <div class="invisible err-pais error">Campo obrigatório!</div>
-                        <input class="content-input" type="text" placeholder="PAÍS*" name="pais">
-                    </div>
-                    <div class="pay-button">
-                        <button type="submit">Confirmar</button>
-                    </div>
+<div class="popUp-dados">
+    <div class="content-form">
+        <div id="popUP-top">
+            <h1>Dados Cadastrais</h1>
+            <button>Sair</button>
+        </div>
+        <form action="">
+    
+            <div>
+                <div class="invisible err-nome error">Campo obrigatório!</div>
+                <input class="content-input" type="text" placeholder="NOME*" name="nome" minlength="3" maxlength="20">
             </div>
-
-
-            <!-- <div class="cartao de credito">
-                <section class="resumo">
-                    <div class="new-card">
-                        <h1>Dados do novo cartão</h1>
-                        <hr>
-                        <div class="form-container active">
-                            <form class="formulario">
-                                <div class="invisible err-number">Campo obrigatório!</div>
-                                <input placeholder="Número do cartão" type="text" name="number">
-                                <div class="invisible err-name1">Campo obrigatório!</div>
-                                <input placeholder="Nome completo" type="text" name="name1">
-                                <div class="invisible err-expiry">Campo obrigatório!</div>
-                                <input placeholder="MM/AA" type="text" name="expiry">
-                                <div class="invisible err-cvc">Campo obrigatório!</div>
-                                <input placeholder="CVC" type="text" name="cvc">
-                                <button type="submit">Cadastrar</button>
-                            </form>
-                        </div>
-                    </div>
-                </section>
+    
+            <div>
+                <div class="invisible err-sobrenome error">Campo obrigatório!</div>
+                <input class="content-input" type="text" placeholder="SOBRENOME*" name="sobrenome" minlength="3"
+                    maxlength="20">
             </div>
-        </section> -->
-    </main>
-    <%- include('partials/footer') %>
+    
+            <div>
+                <div class="invisible err-cpf error">Campo obrigatório!</div>
+                <input class="content-input" type="text" placeholder="CPF/CNPJ*" name="cpf"
+                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+            </div>
+            
+            <div>
+                <div class="invisible err-codigo-postal error">Campo obrigatório!</div>
+                <input class="content-input" type="text" placeholder="CÓDIGO POSTAL*" name="codigo-postal" maxlength="8">
+            </div>
+    
+            <div>
+                <div class="invisible err-endereco error">Campo obrigatório!</div>
+                <input class="content-input" type="text" placeholder="ENDEREÇO*" name="endereco">
+            </div>
+    
+            <div>
+                <div class="invisible err-estado error">Campo obrigatório!</div>
+                <input class="content-input" type="text" placeholder="ESTADO*" name="estado">
+            </div>
+    
+            <div>
+                <div class="invisible err-cidade error">Campo obrigatório!</div>
+                <input class="content-input" type="text" placeholder="CIDADE*" name="cidade">
+            </div>
+    
+            <div>
+                <div class="invisible err-pais error">Campo obrigatório!</div>
+                <input class="content-input" type="text" placeholder="PAÍS*" name="pais">
+            </div>
+            <div class="bt-enviarDados">
+                <button type="submit">Confirmar</button>
+            </div>
+    </div>
+</div>

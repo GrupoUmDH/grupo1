@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <div id="cad-borda">
-                        <div>
+                        <div class="dados-user">
                             <img src="/img/ico/user.png" />
                             <% if(tipoView == 'Criando') { %>
                                 <form class="form-cad" method="post" action="/painel/users/criar">
@@ -96,10 +96,13 @@
                             <% if( tipoView == 'Editanto') {%>
                                 <form class="form-cad" method="post" action="/painel/users/atualizar?_method=PUT">
                             <% } %>
+                                    <label for="nome_usuario" >Usuário:</label>
                                     <input value="<%- users.nome_usuario %>" placeholder="NOME USUÁRIO.." type="text" name="nome_usuario" id="user"/>
+                                    <label for="email" >e-mail:</label>
                                     <input value="<%- users.email %>" placeholder="EMAIL..." type="email" name="email"  />
+                                    <label for="senha" >Senha:</label>
                                     <input placeholder="SENHA" type="password" name="senha" />
-
+                                    <label for="tipo_usuario" >Tido de usuário:</label>
                                     <select name="tipo_usuario"> 
                                         <option selected hidden disabled>Credencial</option>
                                         <option type="check" value="cliente" >cliente</option>
@@ -109,7 +112,50 @@
                                     <button type="submit"><%= bt_form %></button>
                                 </form>
                         </div>
+                        <div class="dados-completos">
+                            <div> <h1>Dados completos do usuário: </h1></div>
+                            <div> 
+                                <h4>Nome</h4>
+                                <p>NOME</p>
+                                <h4>Sobrenome</h4>
+                                <p>SOBRENOME</p>
+                            </div>
+                            <div>
+                                <h4>CPF: </h4>
+                                <p>111.222.333-00</p>
+                                <h4>e-mail: </h4>
+                                <p>EMAIL@EMAIL.COM.BR</p>
+                            </div>
+                            <div>
+                                <h4>Endereço:</h4>
+                                <div>
+                                    <h5>Logradouro:</h5>
+                                    <p>RUA PRIMEIRO DE JANEIRO - 14</p>
+                                </div>
+                                <div id="endereco">
+                                    <div>
+                                        <h5>Bairro: </h5>
+                                        <p>JANEIRO</p>
+                                        <h5>Cidade: </h5>
+                                        <p>CIDADE DE TAL</p>
+                                    </div>
+                                    <div>
+                                        <h5>Estado: </h5>
+                                        <p>MG</p>
+                                        <h5>CEP: </h5>
+                                        <p>33.333-000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4>Formas de pagamento cadastrados:</h4>
+                            </div>
+                            <div id="bt-dados">
+                                <button>Editar</button>
+                            </div>
+                        </div>
                     </div>
+                    <%- include('cadastroUsuario')%>
                 </div>
             </div>
         </section>
@@ -117,5 +163,7 @@
     <% if(error) { %>
         <%- include('partials/popUpErro')%>
     <% } %>
+
+    
 
 </main>

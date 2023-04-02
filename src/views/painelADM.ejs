@@ -37,8 +37,8 @@
     <section class="content">
         <div id="titulos">
             <h1>Produtos</h1>
-            <a><h3>Filmes \</h3></a>
-            <a><h3>Series</h3></a>
+            <a href="<%= '/painel?tipo=filme' %>" ><h3>Filmes \</h3></a>
+            <a href="<%= '/painel?tipo=serie' %>" ><h3>Series</h3></a>
         </div>
         <div id="content-itens">
             <div id="itens">
@@ -71,7 +71,11 @@
                     <% filme.forEach(element => { %>
                         <div id="itens-lista">
                             <ul>
-                                <li id="li-imagem"><img src="/img/filmes/<%- element.background %>.jpg"/></li>
+                                <% if(tipo == 'serie') { %>
+                                    <li id="li-imagem"><img src="/img/series/<%- element.background %>.jpg"/></li>
+                                <% } else { %>
+                                    <li id="li-imagem"><img src="/img/filmes/<%- element.background %>.jpg"/></li>
+                                <% } %>
                                 <hr>
                                 <li id="li-nome"><%- element.nome %></li>
                                 <hr>

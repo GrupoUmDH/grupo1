@@ -34,13 +34,17 @@ module.exports = {
 
                 req.session.nome = user.nome_usuario;
 
-                const filme = await Filme.findAll({});
+                const filme = await Filme.findAll({
+                    where: { tipo : req.query.tipo } 
+                });
+
                 const categoria = await Categorias.findAll({
                     order: ["nome"],
                 });
                 const classificacoes = await Classificacao.findAll({
                 });
                 //console.log(filme);
+
                 res.render("painelADM", {
                     pageName: "painelADM",
                     js: "painelADM",
@@ -48,6 +52,7 @@ module.exports = {
                     categoria,
                     classificacoes,
                     user: req.session.nome,
+                    tipo: req.query.tipo,
                 });
             } else {
                 res.redirect('/painel/painel-user');
@@ -55,7 +60,16 @@ module.exports = {
 
         } catch (err) {
             console.log(err)
-            return res.status(500).json({ mensagem: 'erro: tentativa de acesso ao Painel Administrativo' });
+            //return res.status(500).json({ mensagem: 'erro: tentativa de acesso ao Painel Administrativo' });
+            res.render("painelADM", {
+                pageName: "painelADM",
+                js: "painelADM",
+                filme: [],
+                categoria: [],
+                classificacoes: [],
+                user: req.session.nome,
+                tipo: req.query.tipo,
+            });
         }
     },
 

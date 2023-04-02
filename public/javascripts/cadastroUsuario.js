@@ -49,6 +49,24 @@ form.addEventListener('submit', function(event){
     err_form(event, cvc);
 });
 
+
+const bt_editarDados = document.querySelector('div#bt-dados button');
+const popUp_editarDados = document.querySelector('div.popUp-dados');
+const sair_editarDados = document.querySelector('div#popUP-top button');
+
+popUp_editarDados.style.display = "none";
+
+bt_editarDados.addEventListener('click', (event) =>{
+    event.preventDefault();
+    popUp_editarDados.style.display = "flex";
+});
+
+sair_editarDados.addEventListener('click', (event) =>{
+    //event.preventDefault();
+    popUp_editarDados.style.display = "none";
+    console.log("Testando");
+})
+
 //ALTERAR DADOS//
 
 
