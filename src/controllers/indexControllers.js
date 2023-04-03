@@ -34,10 +34,9 @@ module.exports = {
                             pageName: "home",
                             js: "index",
                         });
-                    }).catch((error) => console.log(error));
+                    })
                     
                 })
-                .catch((error) => console.log(error));
         } catch (error) {
             const filmes = ProdutosModel.filme();
             const series = ProdutosModel.series();
