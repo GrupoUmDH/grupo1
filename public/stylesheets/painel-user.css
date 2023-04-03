@@ -12,32 +12,49 @@
 
 }
 
-main{
-    width: auto;
-    height: auto;
-}
-
 body {
     width: 100%;
     min-height: 100vh;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     background-color: var(--background-color);
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     font-size: 100%;
     color: var(--cores-letra);
-
+    flex-wrap: nowrap;
 }
 
 .container {
     display: flex;
-    align-items: center;
-    width: 80%;
-    height: 50%;
+    /* width: 80%; */
+    /* height: 50%; */
     padding-left: 0px;
     background-color: var(--background-color);
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
 
+nav#menu {
+    margin-top: 5rem;
+}
+
+main.main-painelUser {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 5rem;
+}
+
+div#section-content {
+    position: relative;
+    left: 15rem;
+    height: 80vh;
+    overflow: hidden;
 }
 
 #historico h1 {
@@ -51,10 +68,13 @@ body {
     text-align: center;
     display: flex;
     gap: 2rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     flex-direction: row;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+    align-content: space-around;
 }
 
 .comprados img {
@@ -65,12 +85,22 @@ body {
     height: 240px;
     gap: 2rem;
 }
+
 h1 {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     color: var(--cores-letra);
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
+
+h1#historico {
+    margin-left: 1rem;
+    margin-top: .5rem;
+    color: var(--cores-chaves);
+}
+
 .titulos {
     padding-top: 1rem;
     text-align: center;
@@ -102,28 +132,29 @@ h1 {
 }
 
 .historico {
-
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
     flex-wrap: wrap;
+    align-items: stretch;
     justify-content: space-around;
-
 }
 
 /* MENU LATERAL ESQUERDO */
 
 aside {
-    margin-top: 2rem;
     position: fixed;
-    top: 80px;
     left: 0;
+    top: 0;
     bottom: 0;
     padding: 10px;
-    height: 60%;
-    background-color: var(--background-color);
+    height: 100vh;
+    background-color: var(--background-2);
     z-index: 1;
-
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
 }
 
 #menu ul li a {

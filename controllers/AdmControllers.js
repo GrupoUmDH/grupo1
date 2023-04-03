@@ -1,4 +1,4 @@
-const { Categorias, Classificacao, Filme, Usuario } = require("../models");
+const { Categorias, Classificacao, Filme, Usuario, CadastroUsuario } = require("../models");
 const Op = require("sequelize");
 const { validationResult } = require("express-validator");
 const path = require("path");
@@ -12,6 +12,7 @@ const view = {
     error: false,
     user: "user",
     users: {},
+    dados: {},
     mensagem: "mensagem",
     aviso: "aviso",
     tipoView: "cadastro",
@@ -34,13 +35,17 @@ module.exports = {
 
                 req.session.nome = user.nome_usuario;
 
-                const filme = await Filme.findAll({});
+                const filme = await Filme.findAll({
+                    where: { tipo : req.query.tipo } 
+                });
+
                 const categoria = await Categorias.findAll({
                     order: ["nome"],
                 });
                 const classificacoes = await Classificacao.findAll({
                 });
                 //console.log(filme);
+
                 res.render("painelADM", {
                     pageName: "painelADM",
                     js: "painelADM",
@@ -48,6 +53,7 @@ module.exports = {
                     categoria,
                     classificacoes,
                     user: req.session.nome,
+                    tipo: req.query.tipo,
                 });
             } else {
                 res.redirect('/painel/painel-user');
@@ -55,7 +61,16 @@ module.exports = {
 
         } catch (err) {
             console.log(err)
-            return res.status(500).json({ mensagem: 'erro: tentativa de acesso ao Painel Administrativo' });
+            //return res.status(500).json({ mensagem: 'erro: tentativa de acesso ao Painel Administrativo' });
+            res.render("painelADM", {
+                pageName: "painelADM",
+                js: "painelADM",
+                filme: [],
+                categoria: [],
+                classificacoes: [],
+                user: req.session.nome,
+                tipo: req.query.tipo,
+            });
         }
     },
 
@@ -292,6 +307,7 @@ module.exports = {
     },
 
     userEditar: async (req, res) => {
+        console.log(req.body);
         const {id} = req.body;
 
         view.user = req.session.nome; 
@@ -300,7 +316,10 @@ module.exports = {
         view.bt_form = 'ATUALIZAR USUÁRIO';
         view.userId = id;
 
-        //console.log(req.query);
+        const dados = await CadastroUsuario.findOne({
+            where: { id_usuario: id},
+        });
+        view.dados = dados;
 
         await Usuario.findByPk(id)
             .then((response) => {
@@ -329,7 +348,6 @@ module.exports = {
             }).catch((error) => {
                 res.redirect('/painel/users');
             })
-        
     },
 
     userUpdate: async (req, res) => {
@@ -346,7 +364,6 @@ module.exports = {
 
             res.render('userConfig', view);
         } else {
-            //console.log(req.query.id);
 
             const { nome_usuario, email, senha, tipo_usuario} = req.body;
             const hasedSenha = await bcrypt.hash(senha, 10);
@@ -357,7 +374,6 @@ module.exports = {
                 senha: hasedSenha,
                 tipo_usuario: tipo_usuario
             };
-
            
             await Usuario.update(novoUser, {
                 where: { id },
@@ -372,11 +388,64 @@ module.exports = {
                 view.aviso = 'Tente novamente mais tarde.';
                 res.render('userConfig', view);
             })
+        }
+    },
 
-            
+    dadosUpdate: async (req, res) => {
+        //console.log(req.body);
+        const { id_usuario, nome_usuario, sobrenome, cpf, codigo_postal, endereco, bairro, cidade,  estado, pais } = req.body;
 
+        view.user = req.session.nome; 
+        view.painel = '/painel/users/criar';
+        view.tipoView = "Editanto";
+        view.bt_form = 'ATUALIZAR USUÁRIO';
+        view.userId = id_usuario;
+
+        const novoCadastro = {
+            id_usuario: id_usuario,
+            nome_usuario: nome_usuario,
+            sobrenome: sobrenome, 
+            cpf: cpf, 
+            codigo_postal: codigo_postal, 
+            endereco: endereco, 
+            bairro: bairro,
+            cidade: cidade,
+            estado: estado , 
+            pais: pais ,
         }
 
+        try {
+            await CadastroUsuario.findOne({
+                where: { id_usuario: id_usuario},
+            }).then((response) => {
+                if(!response){
+                    CadastroUsuario.create(novoCadastro)
+                        .then((response) => {
+                            view.error = true;
+                            view.mensagem = 'Dados preenchidos com sucesso';
+                            view.aviso = '';
+                            res.render('userConfig', view);
+                        });
+    
+                } else {
+                    if(!req.body.nome_usuario || req.body.nome_usuario == ""){
+                        res.redirect('/painel/users');
+                    } else {
+                        CadastroUsuario.update(novoCadastro, {
+                            where: { id_usuario: id_usuario},
+                        }).then((response) => {
+                            view.error = true;
+                            view.mensagem = 'Usuário atualizado com sucesso';
+                            view.aviso = '';
+                            res.render('userConfig', view);
+                        })
+                    }
+                }
+            });
+        } catch (error) {
+            console.log(error);
+            res.send("Erro ao acessar o banco!");
+        }
     },
 
 };

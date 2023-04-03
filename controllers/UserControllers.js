@@ -9,6 +9,7 @@ const Sequelize = require("sequelize");
 const view = {
     pageName: "login",
     js: "login",
+    users: {},
     dados: {},
     popUp: false,
     mensagem: "mensagem",
@@ -19,7 +20,7 @@ const view = {
 module.exports = {
     index: async (req, res, next) => {
 
-        const { email } = req.session;
+        const { id , email } = req.session;
 
         try {
             if(!email){
@@ -32,7 +33,7 @@ module.exports = {
             } else {
                 CadastroUsuario.findOne({
                     where: {
-                        email: email
+                        id_usuario: id,
                     }
                 })
                 .then(dados=>{

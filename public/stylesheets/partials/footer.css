@@ -13,9 +13,10 @@ hr {
 }
 
 footer {
-    margin-top: 3rem;
-    margin-bottom: 4rem;
     color: var(--cores-chaves);
     width: 100%;
     text-align: center;
+    z-index: 3;
+    background: var(--background-color);
+    height: 12vh;
 }

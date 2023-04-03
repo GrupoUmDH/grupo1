@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow: auto; */
 }
 
 body {
@@ -34,6 +35,19 @@ header {
 main {
     margin-top: 4rem;
     margin-left: 10rem;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: darkred;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
 }
 
 .barra-superior {
@@ -145,10 +159,9 @@ div#titulos h3 {
 }
 
 div#itens {
-    border: 1px solid var(--cores-chaves);
     width: 60vw;
-    height: 80vh;
-    overflow: auto;
+    height: 70vh;
+    /* overflow: auto; */
     margin: .6rem;
 }
 
@@ -157,21 +170,15 @@ div#itens-titulo h4 {
 }
 
 div#itens img {
-    width: 2.5rem;
+    width: 5rem;
     margin: .3rem;
 }
 
 
-/* div#itens div {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--background-color);
-    background-color: var(--cores-letra);
-    width: 2.5rem;
-    margin: .3rem;
-} */
+div#content-itens-lista {
+    overflow: auto;
+    height: 60vh;
+}
 
 div#filtro {
     border: 1px solid gray;
@@ -199,10 +206,6 @@ div#lista-borda {
     /* width: 96%; */
     height: 88%;
     margin: .5rem;
-    overflow: initial;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
 }
 
 div#itens-menu {
@@ -389,19 +392,21 @@ li#user-tipo {
     width: 8rem;
 }
 
-div#cad-borda div {
+div#cad-borda div.dados-user {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: space-around;
     justify-content: center;
     align-items: center;
+    width: 50%;
 }
 
 form.form-cad {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    width: 80%;
 }
 
 form.form-cad input {
@@ -410,6 +415,10 @@ form.form-cad input {
     height: 2rem;
     margin: .5rem;
     padding-left: 1rem;
+}
+
+form.form-cad label {
+    color: var(--cores-chaves);
 }
 
 form.form-cad select {
@@ -426,15 +435,34 @@ form.form-cad button {
     border: var(--cores-chaves);
     background-color: var(--cores-chaves);
     /* width: 80%; */
+    cursor: pointer;
     height: 2.5rem;
 }
 
 div#cad-borda {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    margin-top: 2rem;
+}
+
+.dados-completos {
+    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    align-content: space-around;
+    align-items: stretch;
+    width: 50%;
+}
+
+div.dados-completos form {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: flex-start;
 }
 
 div#user-lista button {
@@ -464,4 +492,57 @@ div.pop-up span button {
     flex-direction: column;
     align-items: flex-end;
     align-content: flex-end;
+}
+
+
+div.dados-completos h1 {
+    color: red;
+    opacity: .7;
+    margin-bottom: 2rem;
+    text-decoration: underline;
+}
+
+div.dados-completos h4 {
+    color: darkred;
+    font-size: small;
+}
+
+div.dados-completos p {
+    border: .3rem gray;
+    color: white;
+    opacity: .4;
+}
+
+div#endereco {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div#endereco div {
+    margin-right: 3rem;
+    background: border-box;
+}
+
+div.dados-completos button {
+    width: 15rem;
+    height: 2rem;
+    background-color: var(--cores-chaves);
+    color: var(
+    --cores-letra);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+    border-radius: .5rem;
+    margin-top: 2rem;
+}
+
+div.dados-completos div#bt-dados {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
 }
