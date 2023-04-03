@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow: auto; */
 }
 
 body {
@@ -34,6 +35,19 @@ header {
 main {
     margin-top: 4rem;
     margin-left: 10rem;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: darkred;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
 }
 
 .barra-superior {
@@ -90,7 +104,7 @@ header img {
 
 .barra-lateral {
     width: 220px;
-    height: 100vh;
+    height: 80%;
     padding-top: 2rem;
     background-color: var(--background-3);
     display: flex;
@@ -116,6 +130,7 @@ header img {
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     border: 0;
+    cursor: pointer;
 }
 
 section.content {
@@ -144,10 +159,9 @@ div#titulos h3 {
 }
 
 div#itens {
-    border: 1px solid var(--cores-chaves);
     width: 60vw;
-    height: 80vh;
-    overflow: auto;
+    height: 70vh;
+    /* overflow: auto; */
     margin: .6rem;
 }
 
@@ -156,8 +170,14 @@ div#itens-titulo h4 {
 }
 
 div#itens img {
-    width: 2.5rem;
+    width: 5rem;
     margin: .3rem;
+}
+
+
+div#content-itens-lista {
+    overflow: auto;
+    height: 60vh;
 }
 
 div#filtro {
@@ -179,16 +199,13 @@ div#itens-titulo {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    /* background-color: var(--background-2); */
 }
 
 div#lista-borda {
     /* width: 96%; */
     height: 88%;
     margin: .5rem;
-    overflow: initial;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
 }
 
 div#itens-menu {
@@ -253,7 +270,11 @@ div#lista-borda ul li {
     justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
+    color: var(--cores-letra);
+
 }
+
+
 
 li#user-tipo {
     max-width: 3rem;
@@ -265,7 +286,7 @@ li#br-lista {
 
 div#itens-lista ul li img {
     width: 3rem;
-}
+} 
 
 div#action-itens button {
     background-color: rgba(0, 0, 0, 0);
@@ -315,6 +336,8 @@ div#pop-up-content {
 div#pop-up-content h2 {
     text-align: center;
     color: white;
+    padding-left: 3rem;
+    padding-right: 3rem; 
 }
 
 div#pop-up-content h4 {
@@ -369,19 +392,21 @@ li#user-tipo {
     width: 8rem;
 }
 
-div#cad-borda div {
+div#cad-borda div.dados-user {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: space-around;
     justify-content: center;
     align-items: center;
+    width: 50%;
 }
 
 form.form-cad {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    width: 80%;
 }
 
 form.form-cad input {
@@ -390,6 +415,10 @@ form.form-cad input {
     height: 2rem;
     margin: .5rem;
     padding-left: 1rem;
+}
+
+form.form-cad label {
+    color: var(--cores-chaves);
 }
 
 form.form-cad select {
@@ -406,15 +435,34 @@ form.form-cad button {
     border: var(--cores-chaves);
     background-color: var(--cores-chaves);
     /* width: 80%; */
+    cursor: pointer;
     height: 2.5rem;
 }
 
 div#cad-borda {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    margin-top: 2rem;
+}
+
+.dados-completos {
+    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    align-content: space-around;
+    align-items: stretch;
+    width: 50%;
+}
+
+div.dados-completos form {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: flex-start;
 }
 
 div#user-lista button {
@@ -437,9 +485,64 @@ div.pop-up span button {
     font-size: xx-large;
     color: white;
     display: flex;
-    padding-right: .5rem;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: .5rem; 
     justify-content: space-evenly;
     flex-direction: column;
     align-items: flex-end;
     align-content: flex-end;
+}
+
+
+div.dados-completos h1 {
+    color: red;
+    opacity: .7;
+    margin-bottom: 2rem;
+    text-decoration: underline;
+}
+
+div.dados-completos h4 {
+    color: darkred;
+    font-size: small;
+}
+
+div.dados-completos p {
+    border: .3rem gray;
+    color: white;
+    opacity: .4;
+}
+
+div#endereco {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div#endereco div {
+    margin-right: 3rem;
+    background: border-box;
+}
+
+div.dados-completos button {
+    width: 15rem;
+    height: 2rem;
+    background-color: var(--cores-chaves);
+    color: var(
+    --cores-letra);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+    border-radius: .5rem;
+    margin-top: 2rem;
+}
+
+div.dados-completos div#bt-dados {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
 }

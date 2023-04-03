@@ -8,7 +8,6 @@ const validadorForm = require("../middlewares/validadorForm");
 const userCriar = require('../middlewares/userCriar');
 
 const AdmControllers = require('../../controllers/AdmControllers');
-const ClienteControllers = require('../../controllers/ClienteControllers');
 const userController = require('../../controllers/UserControllers');
 
 router.use(bodyParse.urlencoded({ extended: true }));
@@ -39,14 +38,17 @@ router.put('/editar', AdmControllers.editar);
 router.put('/atualiza', upload.fields([{ name: "capa" }, { name: "fundo" }]), AdmControllers.atualiza);
 router.delete('/deletar', AdmControllers.deletar);
 
-//rotas de painel CLIENTES - painel-user.ejs
-router.get('/painel-user', ClienteControllers.index);
+//rotas de painel CLIENTES - painel-user.ejs 
+router.get('/painel-user', userController.index);
+router.post('/painel-user', userController.update);
 
 router.get('/users/criar', AdmControllers.userFormCriar);
 router.post('/users/criar', userCriar, AdmControllers.userCriar);
 
 router.post('/users/editar', AdmControllers.userEditar);
 router.put('/users/atualizar', userCriar, AdmControllers.userUpdate);
+
+router.put('/users/atualizaDados', AdmControllers.dadosUpdate);
 
 router.delete('/users/delete', AdmControllers.userDelete);
 

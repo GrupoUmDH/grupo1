@@ -48,7 +48,7 @@ router.get('/teste', FilmesControllers.index);
 router.delete('/remove', validadorFormDelete, FilmesControllers.deletaProduto);
 
 // atualiza produto
-router.put('/edit', validadorFormUpdate, FilmesControllers.atualizaProduto);
+router.put('/edit', upload.fields([{name:'backgroundUpdate'},{name:'imagemUpdate'}]), validadorFormUpdate, FilmesControllers.atualizaProduto);
 
 // BUSCA O FILME NA API EXTERNA.
 router.get('/search', FilmesControllers.buscar);
