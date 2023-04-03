@@ -19,7 +19,6 @@ router.get('/', ProdutosController.produto);
 
 //router.get('/filmes', FilmesControllers.filmes);
 
-
 router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
 router.get('/categorias', ProdutosController.listar);
@@ -43,9 +42,6 @@ router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
 //criar produto
 router.post('/create', upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), validadorFormCreate, FilmesControllers.createProduto);
 
-//buscar produto
-// router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
-
 router.get('/teste', FilmesControllers.index);
  
 // deletar produto
@@ -54,12 +50,8 @@ router.delete('/remove', validadorFormDelete, FilmesControllers.deletaProduto);
 // atualiza produto
 router.put('/edit', validadorFormUpdate, FilmesControllers.atualizaProduto);
 
-// SEQUELIZE
+// BUSCA O FILME NA API EXTERNA.
 router.get('/search', FilmesControllers.buscar);
-
-router.get('/pesquisa', (req, res) => {
-    res.render('pesquisa', {pageName: 'pesquisa', js: ''});
-})
 
 
 module.exports = router;
