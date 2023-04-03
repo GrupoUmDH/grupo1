@@ -8,6 +8,7 @@
     --cores-letra:  #FFFFFF;
     --cores-objetos: #580003;
 }
+
 header {
     justify-content: center;
     align-items: center;
@@ -15,7 +16,9 @@ header {
     width: 100%;
     font-size: 1.5rem;
     height: 5rem;
-    
+    position: relative;
+    z-index: 2;
+    background: var(--background-color);
 }
 
 *{
@@ -23,10 +26,8 @@ header {
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    display: flex;
-    flex-direction: column;
-}
+
+
 
 /* NAVBAR */
 
