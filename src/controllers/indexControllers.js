@@ -1,4 +1,5 @@
 const ProdutosModel = require('../models/ProdutosModel');
+const { Filme } = require('../../models');
 
 const api = require("../request/search");
 
@@ -12,38 +13,34 @@ const modelaFilmes = (apiResposta) =>{
             imagem: itens.backdrop_path,
         };
     });
-
     return saida;
-
 }
 
 module.exports = {
     index: async (req, res) => {
 
         try {
-            api.getTopFilmes()
-                .then((response) => {
-                    let configFIlmes = modelaFilmes(response.data.results);
-                    //console.log(configFIlmes)
-                    api.getTopSeries().then((resposta) => {
-                        let configSeries = modelaFilmes(resposta.data.results);
+            const filmes = await Filme.findAll(
+                { where:{ tipo: "filme" }, limit: 6  }
+            );
 
-                        return res.render("index", {
-                            listaFilmes: configFIlmes,
-                            listaSeries: configSeries,
-                            pageName: "home",
-                            js: "index",
-                        });
-                    })
-                    
-                })
-        } catch (error) {
-            const filmes = ProdutosModel.filme();
-            const series = ProdutosModel.series();
+            const series = await Filme.findAll(
+                { where:{ tipo: "serie" }, limit: 6  }
+            );
 
             return res.render("index", {
-                listaFilmes: configFIlmes,
-                listaSeries: configSeries,
+                filmes, series,
+                pageName: "home",
+                js: "index",
+            });
+        
+        } catch (error) {
+            const listaFilmes = ProdutosModel.filme();
+            const listaSeries = ProdutosModel.series();
+
+            return res.render("index", {
+                listaFilmes,
+                listaSeries,
                 pageName: "home",
                 js: "index",
             });
