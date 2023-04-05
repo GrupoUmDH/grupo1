@@ -1,218 +1,181 @@
 <%- include('partials/header') %>
-<body>  
+
     <aside class="container-side">
-            <nav id="menu">
-                <h1>Minha Conta</h1>
-                <hr>
-                <ul>
-                    <li><a href="#historico">Histórico de pedidos</a></li>
-                    <li><a href="#alterar">Alterar cadastro</a></li>
-                    <li><a href="#cadastrar">Cadastrar cartão</a></li>
-                    <li><a href="#cancelar">Cancelar assinatura</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <main>
+        <nav id="menu">
+            <h1>Minha Conta</h1><br>
+            <hr><br>
+            <ul>
+                <li><a href="#historico">Histórico de pedidos</a></li><br>
+                <li><a href="#alterar">Alterar cadastro</a></li><br>
+                <li><a href="#cadastrar">Cadastrar cartão</a></li><br>
+                <li><a href="#cancelar">Cancelar assinatura</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="main-painelUser">
+        <div id="section-content">
+            <section id="section-historico">
+                <h1 id="historico">Histórico de Pedidos</h1> <br>
+                <section class="container"><br>
+                    <hr>
+                    <section class="historico">
+                        <div class="titulos">
+                            <h2>Comprados</h2>
+                        </div>
+                        <hr>
 
-        <section class="container">
-            <div class="titulos">
-                <h1 id="historico">Histórico de Pedidos</h1>
-            </div>
-            <hr>
-
-            <section class="historico">
-                <div class="titulos">
-                    <h2>Comprados</h2>
-                </div>
-
-                <div class="comprados">
-                    <div>
-                        <img src="../img/filmes/homemAranha_01.jpg" alt="">
-                        <p>HOMEM ARANHA</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>AS BRANQUELAS</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>DEAD POOL 2</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>TOP GUN</p>
-                    </div>
-                </div>
-
-                <hr>
-
-
-                <div class="titulos">
-                    <h2>Alugados</h2>
-                </div>
-
-
-                <div class="alugados">
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>PANTERA NEGRA</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>VINGADORES</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>CORINGA</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg" alt="">
-                        <p>HOMEM ARANHA</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>SORRIA</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>OBI-WAN KENOBI</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>BLONDE</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>HANNIBAL</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>THE BOYS</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>SANDMAN</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>RAIO NEGRO</p>
-                    </div>
-                    <div>
-                        <img src="../img/filmes/asBranquelas_01.jpg"alt="">
-                        <p>RAIO NEGRO</p>
-                    </div>
-                </div>
-            </section>
-        </section>
-        </section>
-
-        <section class="altera-dados">
-            <div class="titulos">
-                <h1 id="alterar">Alterar Dados</h1>
-            </div>
-            <hr>
-
-            <section class="alterar">
-                <div class="formulario">
-
-                    <div class="dados-usuario">
-
-
-                        <form method="post" id="form-email">
-
-                            <div class="invisible err-email">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVO E-MAIL" type="email" name="email" id="email">
-                            <div class="invisible err-email1">Confirme o novo e-mail Digitado.</div>
-                            <input placeholder="DIGITE NOVO E-MAIL NOVAMENTE" type="email" name="email1" id="email1">
-                            <button id="alterar-email">Alterar</button>
-                        </form>
-                        <form method="post" id="form-nome">
-
-                            <div class="invisible err-name">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVO NOME DE USUÁRIO" type="text" name="name" id="name">
-                            <button id="alterar-nome">Alterar</button>
-                        </form>
-                        <form method="post" id="form-password">
-
-                            <div class="invisible err-password">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVA SENHA" type="password" name="password" id="password">
-
-                            <div class="invisible err-password1">Campo obrigatório!</div>
-                            <input placeholder="DIGITE NOVA SENHA NOVAMENTE" type="password" name="password1" id="password-1">
-                            <button id="alterar-senha">Alterar</button>
-                        </form>
-
-                        <button id="confirme-alterar">Confirmar alterações</button>
-                    </div>
-
-                </div>
-            </section>
-        </section>
-
-        <!-- CARTAO DE CREDITO -->
-        <section class="credit-card">
-            <h1 id="cadastrar">Cadastrar novo Cartão</h1>
-            <hr>
-            <div class="card">
-                <div class="face-card">
-                    <img src="../img/pagamento/chip.svg" alt="Chip" id="chip" class="absolute"></img>
-                    <img src="../img/pagamento/signal.svg" alt="Signal" id="signal" class="absolute"></img>
-
-                    <div id="card-info" class="absolute">
-                        <div id="card-number">XXXX XXXX XXXX XXXX</div>
-                        <div class="label">Nome do Titular</div>
-                        <div id="value">JOAO DA SILVA</div>
-                        <div class="flex">
-                            <div class="flex-expiration">
-                                <div class="label">VALIDADE</div>
-                                <div class="value">XX/XX</div>
+                        <div class="comprados">
+                            <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                                <p>Homem Aranha</p>
                             </div>
-                            <div class="flex-security">
-                                <div class="label">CVC</div>
-                                <div class="value">XXX</div>
+                            <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                                <p>Homem Aranha</p>
+                            </div>
+                            <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                                <p>Homem Aranha</p>
+                            </div>
+                            <div><img src="../img/filmes/homemAranha_01.jpg" alt="">
+                                <p>Homem Aranha</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="new-card">
-                <h1>Dados do novo cartão</h1>
-                <hr>
-                <div class="form-container active">
-                    <form class="formulario">
-                        <div class="invisible err-number">Campo obrigatório!</div>
-                        <input placeholder="Número do cartão" type="text" name="number">
-                        <div class="invisible err-name1">Campo obrigatório!</div>
-                        <input placeholder="Nome completo" type="text" name="name1">
-                        <div class="invisible err-expiry">Campo obrigatório!</div>
-                        <input placeholder="MM/AA" type="text" name="expiry">
-                        <div class="invisible err-cvc">Campo obrigatório!</div>
-                        <input placeholder="CVC" type="text" name="cvc">
-                        <button type="submit">Cadastrar</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- CANCELAR CONTA -->
-        <section class="cancelar">
-            <div class="titulos">
-                <h1 id="cancelar">Deseja cancelar sua assinatura?</h1>
-            </div>
-            <hr>
-            <section class="cancel">
-                <a href="#modal" class="btn">Clique aqui para cancelar</a>
-                <div id="modal" class="modal">
-                    <div class="modal_content">
-                        <p>Assinatura cancelada com sucesso!</p>
-                        <a href="#" class="modal_link">Ok</a>
-                    </div>
-                </div>
+                    </section>
+                </section><br>
             </section>
-        </section>
+            <section id="section-dados">
+                <section class="altera-dados">
+                    <div class="titulos">
+                        <h1 id="alterar">Alterar Dados</h1>
+                    </div>
+                    <br>
+
+                    <section class="alterar">
+                        <div class="formulario">
+                            <div class="dados-usuario">
+                                <div>
+                                    <form class="form-cad" method="post"
+                                        action="/painel/users/atualizar?_method=PUT">
+
+                                        <label for="nome_usuario">Usuário:</label>
+                                        <input value="<%- users.nome_usuario %>" placeholder="NOME USUÁRIO.."
+                                            type="text" name="nome_usuario" id="user" />
+                                        <label for="email">e-mail:</label>
+                                        <input value="<%- users.email %>" placeholder="EMAIL..." type="email"
+                                            name="email" />
+                                        <label for="senha">Senha:</label>
+                                        <input placeholder="SENHA" type="password" name="senha" />
+                                        <label for="tipo_usuario">Tido de usuário:</label>
+                                        <select name="tipo_usuario">
+                                            <option selected hidden disabled>Credencial</option>
+                                            <option type="check" value="cliente">cliente</option>
+                                            <option value="admin">admin</option>
+                                        </select>
+
+                                        <button type="submit">Atualizar</button>
+                                    </form>
+                                </div>
+
+                                <div class="dados-completos">
+                                    <div>
+                                        <h1>Dados completos do usuário: </h1>
+                                    </div>
+                                    <% if (!dados) { %>
+                                        <div>
+                                            <h4> Usuário nao preencheu os dados</h4>
+                                        </div>
+                                        <div id="bt-dados">
+                                            <button>Preencher</button>
+                                        </div>
+                                        <% } else { %>
+                                            <div>
+                                                <h4>Nome</h4>
+                                                <p><%- dados.nome_usuario %></p>
+                                                <h4>Sobrenome</h4>
+                                                <p><%- dados.sobrenome%></p>
+                                            </div>
+                                            <div>
+                                                <h4>CPF: </h4>
+                                                <p><%- dados.cpf %></p>
+                                            </div>
+                                            <div>
+                                                <h4>Endereço:</h4>
+                                                <div>
+                                                    <h5>Logradouro:</h5>
+                                                    <p><%- dados.endereco %></p>
+                                                </div>
+                                                <div id="endereco">
+                                                    <div>
+                                                        <h5>Bairro: </h5>
+                                                        <p><%- dados.bairro %></p>
+                                                        <h5>Cidade: </h5>
+                                                        <p><%- dados.cidade %></p>
+                                                    </div>
+                                                    <div>
+                                                        <h5>Estado: </h5>
+                                                        <p><%- dados.estado %></p>
+                                                        <h5>CEP: </h5>
+                                                        <p><%- dados.codigo_postal %></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h4>Formas de pagamento cadastrados:</h4>
+                                            </div>
+                                            <div id="bt-dados">
+                                                <button>Editar</button>
+                                            </div>
+                                            <% } %>
+                                </div>
+                            </div>
+                            <%- include('cadastroUsuario')%>
+                        </div>
+                    </section>
+                </section><br>
+            </section>
+
+            <section id="section-pay">
+                <!-- CARTAO DE CREDITO -->
+                <section class="credit-card">
+                    <br>
+                    <div class="new-card">
+                        <h1>Dados do novo cartão</h1>
+                        <hr><br>
+                        <div class="form-container active">
+                            <form class="formulario-card">
+                                <input placeholder="Número do cartão" type="text" name="number">
+                                <input placeholder="Nome completo" type="text" name="name1">
+                                <input placeholder="MM/AA" type="text" name="expiry">
+                                <input placeholder="CVC" type="text" name="cvc">
+                                <button type="submit">Cadastrar Novo Cartão</button>
+                            </form>
+                        </div>
+                    </div>
+                </section> <br>
+            </section>
+            <section id="section-cancelar">
+                <!-- CANCELAR CONTA -->
+                <section class="cancelar">
+                    <div class="titulos">
+                        <h1 id="cancelar">Deseja cancelar sua assinatura?</h1>
+                    </div>
+                    <hr><br>
+
+                    <section class="cancel">
+                        <button type="submit">Cancelar Assinatura</button>
+                    </section>
+                </section>
+            </section>
+        </div>
+
+        <% if(popUp) { %>
+            <div class="pop-up" style="display: flex">
+                <div id="pop-up-content">
+                    <span><button>X</button></span>
+                    <h2><%- mensagem%></h2>
+                    <h4><%- aviso%></h4>
+                </div>
+            </div>
+        <% } %>
+
     </main>
-</body>
-<%- include('partials/footer') %>
-</html>
+
+    <%- include('partials/footer') %>

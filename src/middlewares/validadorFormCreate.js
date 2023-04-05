@@ -14,7 +14,7 @@ module.exports = [
     check('descricaoCreate')
     .notEmpty().withMessage('Campo obrigatório').bail(),
     
-    check('classificacaoCreate')
+    check('classificacoesCreate')
     .notEmpty().withMessage('Campo obrigatório').bail(),
 
     check('categoriaCreate')

@@ -4,6 +4,7 @@
 :root {
     --background-color: #0C0C0C;
     --background-2: #131313;
+    --background-3: #444444;
     --cores-chaves: #B30006;
     --cores-letra: #FFFFFF;
     --cores-objetos: #580003;
@@ -13,6 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow: auto; */
 }
 
 body {
@@ -20,7 +22,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--cores-letra);
+    background-color: var(--background-2);
     font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
 
@@ -33,6 +35,19 @@ header {
 main {
     margin-top: 4rem;
     margin-left: 10rem;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: darkred;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
 }
 
 .barra-superior {
@@ -69,8 +84,12 @@ div#user-menu h3 {
 
 div#user-menu button {
     margin-right: 1rem;
-    background-color: 0;
+    background-color: var(--cores-chaves);
     color: var(--cores-letra);
+    width: 3rem;
+    height: 2rem;
+    border: 0;
+    border-radius: 5px;
 }
 
 header img {
@@ -85,19 +104,20 @@ header img {
 
 .barra-lateral {
     width: 220px;
-    height: 100vh;
+    height: 80%;
     padding-top: 2rem;
-    background-color: var(--background-2);
+    background-color: var(--background-3);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: flex-start;
     align-items: center;
-     position: fixed;
+    position: fixed;
     top: 4rem;
     left: 0;
 }
+
 .barra-lateral img {
     width: 20px;
 }
@@ -110,6 +130,7 @@ header img {
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     border: 0;
+    cursor: pointer;
 }
 
 section.content {
@@ -129,23 +150,34 @@ div#titulos {
     align-items: flex-end;
     margin-left: 2rem;
     padding-top: 1rem;
+    color: var(--cores-chaves);
 }
 
-div#titulos h3{
+div#titulos h3 {
     margin-left: .8rem;
-    opacity: .5;
+    color: var(--cores-chaves);
 }
 
 div#itens {
-    border: 1px solid gray;
-    width: 50vw;
+    width: 60vw;
     height: 70vh;
-    overflow: auto;
+    /* overflow: auto; */
+    margin: .6rem;
+}
+
+div#itens-titulo h4 {
+    color: var(--cores-chaves);
 }
 
 div#itens img {
-    width: 2.5rem;
+    width: 5rem;
     margin: .3rem;
+}
+
+
+div#content-itens-lista {
+    overflow: auto;
+    height: 60vh;
 }
 
 div#filtro {
@@ -167,26 +199,50 @@ div#itens-titulo {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    /* background-color: var(--background-2); */
 }
 
 div#lista-borda {
-    width: 96%;
+    /* width: 96%; */
     height: 88%;
-    border: .7px solid gray;
     margin: .5rem;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
 }
 
 div#itens-menu {
     display: flex;
-    border: .5px solid gray;
-    /* height: 2rem; */
-    justify-content: space-around;
-    align-items: stretch;
+    /* border: .5px solid gray; */
+    height: 3rem;
     flex-direction: column;
-    align-content: stretch;
+    background: darkred;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-items: stretch;
+}
+
+li#li-imagem {
+    width: 5rem;
+}
+
+li#li-nome {
+    width: 20rem;
+    min-width: 8rem;
+    max-width: 25rem;
+}
+
+li#li-cate {
+    width: 6rem;
+}
+
+li#li-class {
+    width: 8rem;
+}
+
+li#li-acao {
+    width: 8rem;
 }
 
 input[type="checkbox"] {
@@ -202,17 +258,23 @@ div#lista-borda ul {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-content: stretch;
+    align-items: stretch;
 }
 
 div#lista-borda ul li {
     text-align: center;
-    min-width: 11rem;
     font-size: .8rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
+    color: var(--cores-letra);
+
 }
+
+
 
 li#user-tipo {
     max-width: 3rem;
@@ -224,13 +286,14 @@ li#br-lista {
 
 div#itens-lista ul li img {
     width: 3rem;
-}
+} 
 
-div#action-itens button{
-    background-color: rgba(0,0,0,0);
+div#action-itens button {
+    background-color: rgba(0, 0, 0, 0);
     border: 0;
 }
-div#action-itens button img{
+
+div#action-itens button img {
     width: 2rem;
     height: 2rem;
 }
@@ -239,6 +302,7 @@ div#itens-lista button {
     background-color: rgba(0, 0, 0, 0);
     border: 0;
 }
+
 div#itens-lista ul li button img {
     width: 2rem;
 }
@@ -247,12 +311,13 @@ div#itens-lista ul li button img {
     width: 100%;
     height: 100vh;
     position: absolute;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0, 0, 0, .6);
     justify-content: space-evenly;
 }
 
@@ -271,6 +336,8 @@ div#pop-up-content {
 div#pop-up-content h2 {
     text-align: center;
     color: white;
+    padding-left: 3rem;
+    padding-right: 3rem; 
 }
 
 div#pop-up-content h4 {
@@ -293,12 +360,18 @@ button#pup-up-excluir {
 div#itens-lista {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: stretch;
     flex-direction: column;
     width: 100%;
-    border: .5px solid gray;
+    background: var(--background-3);
+    color: white;
+    margin: 2px 0;
+    align-items: center;
     align-content: space-around;
+    align-items: stretch;
+}
+
+div#itens-lista hr {
+    opacity: .3;
 }
 
 div#itens-titulo div {
@@ -311,30 +384,29 @@ div#itens-titulo div {
 
 /* configurações de users/criar - formulario */
 
-div#user-lista {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: stretch;
-    flex-direction: column;
-    width: 100%;
-    border: .5px solid gray;
-    align-content: space-around;
+li#li-email {
+    width: 11rem;
 }
 
-div#cad-borda div {
+li#user-tipo {
+    width: 8rem;
+}
+
+div#cad-borda div.dados-user {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: space-around;
     justify-content: center;
     align-items: center;
+    width: 50%;
 }
 
 form.form-cad {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    width: 80%;
 }
 
 form.form-cad input {
@@ -343,6 +415,10 @@ form.form-cad input {
     height: 2rem;
     margin: .5rem;
     padding-left: 1rem;
+}
+
+form.form-cad label {
+    color: var(--cores-chaves);
 }
 
 form.form-cad select {
@@ -359,15 +435,34 @@ form.form-cad button {
     border: var(--cores-chaves);
     background-color: var(--cores-chaves);
     /* width: 80%; */
+    cursor: pointer;
     height: 2.5rem;
 }
 
 div#cad-borda {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    margin-top: 2rem;
+}
+
+.dados-completos {
+    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    align-content: space-around;
+    align-items: stretch;
+    width: 50%;
+}
+
+div.dados-completos form {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: flex-start;
 }
 
 div#user-lista button {
@@ -390,9 +485,64 @@ div.pop-up span button {
     font-size: xx-large;
     color: white;
     display: flex;
-    padding-right: .5rem;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: .5rem; 
     justify-content: space-evenly;
     flex-direction: column;
     align-items: flex-end;
     align-content: flex-end;
+}
+
+
+div.dados-completos h1 {
+    color: red;
+    opacity: .7;
+    margin-bottom: 2rem;
+    text-decoration: underline;
+}
+
+div.dados-completos h4 {
+    color: darkred;
+    font-size: small;
+}
+
+div.dados-completos p {
+    border: .3rem gray;
+    color: white;
+    opacity: .4;
+}
+
+div#endereco {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div#endereco div {
+    margin-right: 3rem;
+    background: border-box;
+}
+
+div.dados-completos button {
+    width: 15rem;
+    height: 2rem;
+    background-color: var(--cores-chaves);
+    color: var(
+    --cores-letra);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+    border-radius: .5rem;
+    margin-top: 2rem;
+}
+
+div.dados-completos div#bt-dados {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
 }
