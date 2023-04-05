@@ -17,17 +17,8 @@ const bkFilme = document.querySelector('#bk-filme');
 let id = document.getElementById('id').value ;
 
 let carrinho = []
-let produto = sessionStorage.getItem('filme');
-let data = JSON.parse(produto);
 
 id = (JSON.parse(localStorage.carrinho).length) + 1 ;
-
-nomeFilme.innerText = data[0].nome;
-descrFilme.innerText = data[0].descri_Filme;
-classificacao.src = data[0].categoria;
-valor.innerText = data[0].valor;
-coverFilme.src = data[0].background;
-bkFilme.src = data[0].img;
 
 const filme = {
     id,

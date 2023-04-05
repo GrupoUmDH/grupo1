@@ -3,10 +3,8 @@ const series = require("../database/series.json");
 const fs = require("fs");
 const path = require("path");
 
-const api = require("../request/search");
-
 module.exports = {
-    filmes: async () => {
+    filmes: () => {
         return produtos;
     },
     series: () => {

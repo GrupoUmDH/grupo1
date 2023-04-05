@@ -5,27 +5,24 @@
 <%- include('partials/header') %>
     <main>
         <section class="content-banner">
-            <img id="bk-filme" src="">
-            <input type="hidden" value="1" id="id" name="id">
+            <img id="bk-filme" src="/img/<%= produto.tipo %>s/<%= produto.imagem %>.jpg">
+            <input type="hidden" value="<%= produto.id %>" id="id" name="id">
             <div class="container">
                 <div class="banner">
-                    <img class="cover-filme">
+                    <img class="cover-filme" src="/img/<%= produto.tipo %>s/<%= produto.background %>.jpg">
                     <div class="descricao-container">
                         <div id="descri-filme">
-                            <h1 id="nome-filme"></h1>
+                            <h1 id="nome-filme"><%= produto.nome %></h1>
                             <div class="genero">
-                                <span id="ano-filme">2021</span>
-
-                                <span id="genero-filme">Ação/Aventura</span>
-
+                                <span id="genero-filme"><%-categoria.nome  %></span>
                             </div>
 
-                            <p id="descri-filme"></p>
+                            <p id="descri-filme"><%= produto.descricao %></p>
                         </div>
                         <!-- terceiro filho -->
                         <div id="bts-compra">
                             <div class="classificacao">
-                                <img id="indicacao" src="" alt="">
+                                <img id="indicacao" src="/img/indicativa/<%= classificacao.imagem%>">
                             </div>
                             <div class="botoes-compra">
 
@@ -33,7 +30,7 @@
                                     <button>Assitir</button>
                                 </div>
                                 <div class="comprar">
-                                    <p id="valor-compra"> R$ </p>
+                                    <p id="valor-compra"> R$ <%-produto.valor  %></p>
                                     <button type="submit" id="btn-comprar">Comprar</button>
                                 </div>
                             </div>
