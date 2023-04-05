@@ -140,11 +140,11 @@
                         <h1>Dados do novo cartão</h1>
                         <hr><br>
                         <div class="form-container active">
-                            <form class="formulario-card">
-                                <input placeholder="Número do cartão" type="text" name="number">
-                                <input placeholder="Nome completo" type="text" name="name1">
-                                <input placeholder="MM/AA" type="text" name="expiry">
-                                <input placeholder="CVC" type="text" name="cvc">
+                            <form class="formulario-card" action="" method="post">
+                                <input placeholder="Número do cartão" type="text" name="number" value="<%- dados.cartao[0].numero_cartao %>"></input>
+                                <input placeholder="Nome completo" type="text" name="name1"><%- dados.cartao.nome_completo %></input>
+                                <input placeholder="MM/AA" type="text" name="expiry"><%- dados.cartao.vencimento %></input>
+                                <input placeholder="CVC" type="text" name="cvc"><%- dados.cartao.cvc %></input>
                                 <button type="submit">Cadastrar Novo Cartão</button>
                             </form>
                         </div>
