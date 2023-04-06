@@ -1,4 +1,4 @@
-const { Categorias, Classificacao, Filme} = require('../models');
+const { Categorias, Classificacao, Filme } = require('../models');
 const Op = require('sequelize');
 const { validationResult } = require('express-validator');
 const path = require('path');
@@ -16,7 +16,7 @@ module.exports = {
                 },
             ],
         });
-
+        console.log(filmes)
         const categoria = await Categorias.findAll({});
 
         const classificacao = await Classificacao.findAll({
@@ -32,6 +32,31 @@ module.exports = {
         });
     },
 
+    maisFilmes: async (req, res) => {
+        console.log(req.query)
+        const {tipo} = req.query
+
+        const filmes = await Filme.findAll({
+             where: {
+                tipo:tipo,
+            }
+        });           
+
+        console.log(filmes)
+        const categoria = await Categorias.findAll({});
+
+        const classificacao = await Classificacao.findAll({
+            order: ["nome"],
+        });
+
+        res.render("filmes", {
+            pageName: "filmes",
+            js: "filmes",
+            filmes,
+            categoria,
+            classificacao,
+        });
+    },
     buscar: async (req, res) => {
 
         /*
@@ -44,21 +69,21 @@ module.exports = {
                 .then((response) => {
                     console.log(response.data)
                     const resultado = response.data.results;
-                    res.render('search', {pageName:'pesquisa', js:'', resultado})
+                    res.render('search', { pageName: 'pesquisa', js: '', resultado })
                 });
         } catch (error) {
             res.render("search", {
                 pageName: "pesquisa",
                 js: "",
                 mensagem: "Não foi encontrato filmes/series",
-            }); 
+            });
         }
-        
+
 
     },
 
     criar: async (req, res) => {
-        
+
         const id = req.query.idRead;
         const filmes = await Filme.findOne({
             where: { id: id },
@@ -82,10 +107,11 @@ module.exports = {
             return res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
         }
 
-        Filme.destroy({where: {
-            id: req.body.idDelete
-        }
-        
+        Filme.destroy({
+            where: {
+                id: req.body.idDelete
+            }
+
         })
         res.send(`O produto de id ${req.body.idDelete} foi deletado com sucesso`)
     },
@@ -113,19 +139,19 @@ module.exports = {
     tipoCategoriaFilme: async (req, res) => {
         const { tipo, categoria } = req.query;
         const categorias = await Categorias.findAll();
-       console.log(tipo)
-       console.log(categoria)
+        console.log(tipo)
+        console.log(categoria)
         const filmes = await Filme.findAll(
-            {where:{categorias_id:categoria ? categoria : 1, tipo:tipo ? tipo : 'filme'}},
+            { where: { categorias_id: categoria ? categoria : 1, tipo: tipo ? tipo : 'filme' } },
             {
-            include: [
-                {
-                    model: Categorias,
-                    as: "genero",
-                    require: true,
-                },   
-            ],
-        });
+                include: [
+                    {
+                        model: Categorias,
+                        as: "genero",
+                        require: true,
+                    },
+                ],
+            });
         console.log(filmes)
         res.render("categorias", {
             pageName: "categorias",
@@ -152,7 +178,7 @@ module.exports = {
             );
 
             return res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
-        } 
+        }
         const params = req.body;
         const filmes = await Filme.create({
             nome: params.nomeCreate,
@@ -165,8 +191,8 @@ module.exports = {
             descricao: params.descricaoCreate
         });
         console.log(req);
-        res.render("teste", { pageName: "filmes", js:"filmes", categorias:params.categoriaCreate, classificacoes:params.classificacoesCreate, filmes:[filmes] });
-        
+        res.render("teste", { pageName: "filmes", js: "filmes", categorias: params.categoriaCreate, classificacoes: params.classificacoesCreate, filmes: [filmes] });
+
     },
 
     atualizaProduto: async (req, res) => {
@@ -185,7 +211,7 @@ module.exports = {
             );
 
             return res.render('cadastroProduto', { pageName: 'cadastroProduto', js: 'montarCarrinho', errors: errosFormatados, produtos: null });
-        } 
+        }
         const params = req.body;
         console.log(req.files)
         const filmes = await Filme.update({
@@ -199,13 +225,13 @@ module.exports = {
             descricao: params.descricaoUpdate
         },
             {
-                where: { id:params.idUpdate } 
+                where: { id: params.idUpdate }
             }
-           
+
         );
         console.log(req);
-        res.render("teste", { pageName: "filmes", js:"filmes", categorias:params.categoriaCreate, classificacoes:1, filmes:[req.params] });
-        
+        res.render("teste", { pageName: "filmes", js: "filmes", categorias: params.categoriaCreate, classificacoes: 1, filmes: [req.params] });
+
     },
 
 };

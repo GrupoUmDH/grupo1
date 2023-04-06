@@ -49,7 +49,9 @@ router.post('/create', upload.fields([{name:'backgroundCreate'},{name:'imagemCre
 // router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
 
 router.get('/teste', FilmesControllers.index);
- 
+
+router.get('/maisFilmes', FilmesControllers.maisFilmes); 
+router.get('/maisSeries', FilmesControllers.maisFilmes); 
 // deletar produto
 router.delete('/remove', validadorFormDelete, FilmesControllers.deletaProduto);
 
