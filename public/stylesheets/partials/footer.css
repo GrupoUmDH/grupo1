@@ -6,10 +6,6 @@
     --cores-objetos: #580003;
 }
 
-p {
-    margin-top: 2rem;
-}
-
 hr {
     background-color: var(--cores-chaves);
     color: var(--cores-chaves);

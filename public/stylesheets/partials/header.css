@@ -16,6 +16,7 @@ header {
     font-size: 1.5rem;
     height: 5rem;
 }
+ 
 
 *{
     margin: 0;
@@ -25,6 +26,7 @@ header {
 body {
     display: flex;
     flex-direction: column;
+   
 }
 
 /* NAVBAR */
@@ -42,7 +44,13 @@ body {
 .navlogo {
     display: flex;
     width: 6rem;
-    padding-left: 10px;
+    margin-left: 2rem;
+    padding: .1rem;
+}
+
+.navlogo:hover {
+    text-shadow: rgba(255,0,0,1) 0px 0px 9px;
+    filter: brightness(200%);
 }
 
 .paginas ul {
