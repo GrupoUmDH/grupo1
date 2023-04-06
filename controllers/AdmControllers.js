@@ -24,7 +24,6 @@ module.exports = {
     // CRUD - Painel administrativo - Configurando Filmes/Séries
 
     index: async (req, res) => {
-
         try {
 
             if (req.session.tipo == 'admin') {
@@ -140,7 +139,6 @@ module.exports = {
     },
 
     criar: async (req, res) => {
-
         const novofilme = {
             nome: req.body.nome,
             imagem: path.parse(req.files.fundo[0].filename).name,
@@ -174,6 +172,7 @@ module.exports = {
     userConfig: async (req, res) => {
 
         const { email } = req.session;
+        view.user = req.session.nome;
 
         try {
 
@@ -269,6 +268,7 @@ module.exports = {
 
     userDelete: async (req, res) => {
         const { id } = req.body;
+        view.user = req.session.nome;
 
         await Usuario.findByPk(id)
             .then((response) => {
@@ -307,6 +307,7 @@ module.exports = {
     },
 
     userEditar: async (req, res) => {
+        view.user = req.session.nome;
         console.log(req.body);
         const {id} = req.body;
 
@@ -351,6 +352,7 @@ module.exports = {
     },
 
     userUpdate: async (req, res) => {
+        view.user = req.session.nome;
 
         const { errors } = validationResult(req);
         const  id  = view.userId;
@@ -392,6 +394,7 @@ module.exports = {
     },
 
     dadosUpdate: async (req, res) => {
+        view.user = req.session.nome;
         //console.log(req.body);
         const { id_usuario, nome_usuario, sobrenome, cpf, codigo_postal, endereco, bairro, cidade,  estado, pais } = req.body;
 

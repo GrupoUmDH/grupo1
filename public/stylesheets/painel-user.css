@@ -27,6 +27,7 @@ body {
 }
 
 .container {
+    width: 84vw;
     display: flex;
     position: fixed;
     height: 80%;
@@ -34,6 +35,7 @@ body {
     padding-left: 0px;
     flex-direction: column;
     align-items: stretch;
+    align-content: stretch;
 }
 
 nav#menu {
@@ -54,6 +56,7 @@ div#section-content {
     position: relative;
     left: 15rem;
     height: 80vh;
+    width: 100%;
 }
 
 #historico h1 {
@@ -64,25 +67,22 @@ div#section-content {
 /* HISTÓRICOS DE PEDIDOS */
 
 .comprados {
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     gap: 2rem;
-    flex-direction: row;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    width: 100%;
     flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-around;
-    align-content: space-around;
 }
 
 .comprados img {
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
+    border-radius: 5px;
+    /* padding: 10px; */
+    /* margin: 10px; */
     width: 150px;
-    height: 240px;
-    gap: 2rem;
+    /* height: 240px; */
+    /* gap: 2rem; */
 }
 
 h1 {

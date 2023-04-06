@@ -131,10 +131,12 @@
                                 <hr><br>
                                 <div class="form-container active">
                                     <form class="formulario-card">
-                                        <input placeholder="Número do cartão" type="text" name="number">
-                                        <input placeholder="Nome completo" type="text" name="name1">
-                                        <input placeholder="MM/AA" type="text" name="expiry">
-                                        <input placeholder="CVC" type="text" name="cvc">
+                                        <% for(const cartao of dados.cartao) { %>
+                                            <input placeholder="Número do cartão" type="text" name="number" value="<%- cartao.numero_cartao %>" >
+                                            <input placeholder="Nome completo" type="text" name="name1" value="<%- cartao.nome_completo %>" >
+                                            <input placeholder="MM/AA" type="text" name="expiry" value="<%- cartao.vencimento %>" >
+                                            <input placeholder="CVC" type="text" name="cvc" value="<%- cartao.cvc %>" >
+                                        <% } %>
                                         <button type="submit">Cadastrar Novo Cartão</button>
                                     </form>
                                 </div>
@@ -149,38 +151,11 @@
                             <div class="titulos">
                                 <h1>Deseja cancelar sua assinatura?</h1>
                             </div>
-                            <hr><br>
-
- <!-- CARTAO DE CREDITO -->
-            <section id="section-pay">
-               
-                <section class="credit-card">
-                    <br>
-                    <div class="new-card">
-                        <h1>Dados do novo cartão</h1>
-                        <hr><br>
-                        <div class="form-container active">
-                            <form class="formulario-card" action="" method="post">
-                                <input placeholder="Número do cartão" type="text" name="number" value="<%- dados.cartao[0].numero_cartao %>"></input>
-                                <input placeholder="Nome completo" type="text" name="name1"><%- dados.cartao.nome_completo %></input>
-                                <input placeholder="MM/AA" type="text" name="expiry"><%- dados.cartao.vencimento %></input>
-                                <input placeholder="CVC" type="text" name="cvc"><%- dados.cartao.cvc %></input>
-                                <button type="submit">Cadastrar Novo Cartão</button>
-                            </form>
-                        </div>
-                    </div>
-                </section> <br>
-            </section>
-            <section id="section-cancelar">
-                <!-- CANCELAR CONTA -->
-                <section class="cancelar">
-                    <div class="titulos">
-                        <h1 id="cancelar">Deseja cancelar sua assinatura?</h1>
-                    </div>
-                    <hr><br>
-
-                    <section class="cancel">
-                        <button type="submit">Cancelar Assinatura</button>
+                            <br>
+                            <section class="cancel">
+                                <button type="submit">Cancelar Assinatura</button>
+                            </section>
+                        </section>
                     </section>
                 </div>
             </section>
