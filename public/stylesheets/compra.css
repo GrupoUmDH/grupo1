@@ -25,15 +25,15 @@
     margin-top: 2rem;
 }
 
-.content-form{
+.content-form {
     display: flex;
     flex-direction: column;
-    width: 53%;
-    height: 90%;
-    border-radius: 3rem;
+    border-radius: 1rem;
     background-color: var(--background-2);
     margin-bottom: 0.8rem;
 }
+
+
 .content-form h1{
     font-weight: 600;
     font-size: 2rem;
@@ -119,4 +119,13 @@ padding: 2rem 3rem 3rem 3rem;
 .pay-button button:hover{
     transition-duration: .5s;
     background-color: var(--cores-chaves);
+}
+
+/*  */
+div#input-linha {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
 }

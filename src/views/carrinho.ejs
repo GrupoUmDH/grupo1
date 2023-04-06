@@ -74,22 +74,24 @@
                     <div>
                         <h1>Dados: </h1>
                     </div>
-                    <form action="">
-                        <div>
-                            <div class="invisible err-nome error">Campo obrigatório!</div>
-                            <input class="content-input" type="text" placeholder="NOME*" name="nome" minlength="3"
-                                maxlength="20">
-                        </div>
-                        <div>
-                            <div class="invisible err-sobrenome error">Campo obrigatório!</div>
-                            <input class="content-input" type="text" placeholder="SOBRENOME*" name="sobrenome"
-                                minlength="3" maxlength="20">
-                        </div>
-                        <div>
-                            <div class="invisible err-cpf error">Campo obrigatório!</div>
+                    <form id="form-dados" action="">
+                        <div id="input-linha">
+                            <div>
+                                <div class="invisible err-nome error">Campo obrigatório!</div>
+                                <input class="content-input" type="text" placeholder="NOME*" name="nome" minlength="3" maxlength="20">
+                            </div>
+                            <div>
+                                <div class="invisible err-sobrenome error">Campo obrigatório!</div>
+                                <input class="content-input" type="text" placeholder="SOBRENOME*" name="sobrenome" minlength="3" maxlength="20">
+                            </div>
+                            <div>
+                                <div class="invisible err-cpf error">Campo obrigatório!</div>
                                 <input class="content-input" type="text" placeholder="CPF/CNPJ*" name="cpf" 
                                 pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
                             </div>
+                        </div>
+                        <div>
+                            
                             <div>
                                 <div class="invisible err-email error">Campo obrigatório!</div>
                                 <input class="content-input" type="email" placeholder="EMAIL*" name="email">

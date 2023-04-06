@@ -24,12 +24,14 @@ body {
 
 /* CONFIGURAÇÃO IMAGEM CENTRAL*/
 main {
+    width: 100vw;
     display: flex;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    align-items: stretch;
+    align-items: center;
     flex-direction: column;
     flex-wrap: nowrap;
+    align-content: center;
 }
 
 /*SECTION CARRINHO*/
