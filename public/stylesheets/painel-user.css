@@ -28,15 +28,14 @@ body {
 
 .container {
     display: flex;
-    /* width: 80%; */
-    /* height: 50%; */
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    overflow: scroll;
     padding-left: 0px;
-    background-color: var(--background-color);
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: space-around;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: stretch;
 }
 
 nav#menu {
@@ -54,7 +53,6 @@ div#section-content {
     position: relative;
     left: 15rem;
     height: 80vh;
-    overflow: hidden;
 }
 
 #historico h1 {
@@ -409,4 +407,17 @@ div.pop-up span {
     justify-content: flex-end;
     width: 100%;
     flex-direction: row;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: darkred;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
 }
