@@ -1,4 +1,4 @@
-const { Categorias, Classificacao, Filme } = require('../models');
+const { Categorias, Classificacao, Filme} = require('../models');
 const Op = require('sequelize');
 const { validationResult } = require('express-validator');
 const path = require('path');
@@ -108,6 +108,31 @@ module.exports = {
             js: "cadastroProduto",
             categorias,
             classificacao,
+        });
+    },
+    tipoCategoriaFilme: async (req, res) => {
+        const { tipo, categoria } = req.query;
+        const categorias = await Categorias.findAll();
+       console.log(tipo)
+       console.log(categoria)
+        const filmes = await Filme.findAll(
+            {where:{categorias_id:categoria ? categoria : 1, tipo:tipo ? tipo : 'filme'}},
+            {
+            include: [
+                {
+                    model: Categorias,
+                    as: "genero",
+                    require: true,
+                },   
+            ],
+        });
+        console.log(filmes)
+        res.render("categorias", {
+            pageName: "categorias",
+            errors: [],
+            js: " ",
+            filmes,
+            categorias,
         });
     },
 

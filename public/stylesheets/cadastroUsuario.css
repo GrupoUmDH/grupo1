@@ -56,12 +56,11 @@ div#popUP-top button{
 }
 
 .formulario {
-    margin: 30px;
+    /* margin: 30px; */
     font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
 
 .formulario input {
-    width: 500px;
     margin: 10px auto;
     display: block;
     background: var(--cores-letra);

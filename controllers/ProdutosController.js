@@ -1,8 +1,26 @@
-const ProdutosModel = require('../models/ProdutosModel');
+const { Categorias, Classificacao, Filme} = require('../models');
+const ProdutosModel = require('../src/models/ProdutosModel');
 const { validationResult } = require('express-validator');
 
 
 module.exports = {
+
+    produto: async (req, res) => {
+        const produto = await Filme.findOne({
+            where: {nome : req.query.nome}
+        });
+
+        const categoria = await Categorias.findByPk(produto.categorias_id);
+        const classificacao = await Classificacao.findByPk(produto.classificacoes_id);
+
+        return res.render('produtos', { 
+            pageName: 'produtos', 
+            js: 'adicionarAoCarrinho', 
+            produto, categoria, classificacao,
+        });
+    },
+
+
     filmes: (req, res) => {
         const filmes = ProdutosModel.filmes();
         return res.render("filmes", {
@@ -34,10 +52,9 @@ module.exports = {
         console.log(produtos);
         return res.render('categorias', { pageName: 'categorias', produtos, tipo, categoria, js: 'categorias' });
     },
-    produto: (req, res) => {
-        console.log(req.body);
-        return res.render('produtos', { pageName: 'produtos', js: 'adicionarAoCarrinho' });
-    },
+
+    
+
     //criar produto
     createProduto: (req, res) => {
 
@@ -120,6 +137,4 @@ module.exports = {
         ProdutosModel.updateOne(req)
         res.send(`O produto de id ${req.body.idUpdate} foi atualizado com sucesso`)
     }
-
-
 }

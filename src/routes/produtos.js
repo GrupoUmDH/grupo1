@@ -8,8 +8,9 @@ const validadorFormCreate = require('../middlewares/validadorFormCreate');
 const validadorFormDelete = require('../middlewares/validadorFormDelete');
 const validadorFormRead = require('../middlewares/validadorFormRead');
 const validadorFormUpdate = require('../middlewares/validadorFormUpdate');
-
-const ProdutosController = require('../controllers/ProdutosController');
+const CategoriasController= require('../../controllers/CategoriasController')
+const ProdutosController = require('../../controllers/ProdutosController');
+const CategoriaController = require('../../controllers/CategoriasController');
 
 const FilmesControllers = require('../../controllers/FilmesControllers');
 
@@ -21,7 +22,8 @@ router.get('/', ProdutosController.produto);
 
 router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
-router.get('/categorias', ProdutosController.listar);
+
+router.get('/categorias', FilmesControllers.tipoCategoriaFilme);
 router.get('/cadastroProduto', FilmesControllers.categoriaclassificacaoFilme);
 
 //implementar multer
@@ -53,5 +55,8 @@ router.put('/edit', upload.fields([{name:'backgroundUpdate'},{name:'imagemUpdate
 // BUSCA O FILME NA API EXTERNA.
 router.get('/search', FilmesControllers.buscar);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d0d00f33048911c0a195a78fdeee428dd6f9857d
 module.exports = router;
