@@ -15,10 +15,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-    padding: 0;
-    margin: 0;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,29 +25,18 @@ body{
     font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
-body{
-    font-family: 'Jost', Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    color: #B30006;
-}
-main {
-    width: 100%;
+main{
+    margin: 0 2rem;
 }
 
-h1{ 
-    font-family: 'Jost', Arial, Helvetica, sans-serif;
-    color: var(--cores-letra) ;
-    margin:  2rem;
-    font-size: 2rem;
-}
 
 /* CONFIGURAÇÃO SERIES*/
 
 .container {
      justify-content: space-around;
-    align-items: stretch;
-    width: 100%;
-    display: flex;
+     align-items: stretch;
+     width: 100%;
+     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     margin-bottom: 0.2rem;
@@ -70,28 +57,8 @@ h1{
     justify-content: center;
 }
 
-h1 {
-    color: white;
-    margin: 1rem;
-    font-size: 2rem;
-}
-
-h1 .container {
-    align-self: flex-start;
-    text-align: center;
-}
-
-hr {
-    background-color: var(--cores-chaves);
-    color: var(--cores-chaves);
-    border: var(--cores-chaves);
-    width: 100%;
-    height: 2px;
-    display: flex;
-    flex-direction: row;}
-
 .series-home img {
-    width: 15rem;
+    width: 16rem;
 }
 
 .series-home p {
@@ -168,7 +135,7 @@ div #dados-filme {
 .filme-show:hover img {
     opacity: 0.3;
 }
- 
+
 
 .filme-show .descri #descri-filme {
     font-weight: bold;
@@ -183,6 +150,20 @@ div #dados-filme {
     text-transform:uppercase;
 }
 
+.titulos{
+    background-color: var(--background-2);
+    margin-top: 3rem;
+    border-radius: 1rem;
+    border-bottom: .16rem solid var(--cores-chaves);
+}
+
+h1{ 
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+    color: var(--cores-letra);
+    margin: 1rem;
+    font-size: 2rem;
+}
+
 /*CONFIGURAÇÃO FOOTER*/
 
 hr {
@@ -194,15 +175,6 @@ hr {
     display: flex;
     flex-direction: row;
     margin-bottom: 2rem;
-}
-
-footer {
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-    font-family: 'Inter' Arial, Helvetica, sans-serif;
-    color: var(--cores-chaves);
-    align-items: center;
-    text-align: center;
 }
 
 
