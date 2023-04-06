@@ -22,7 +22,7 @@ const cartaoModel = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false
         },
-        id_usuario: {
+        id_cadastrousuario: {
             type: dataTypes.INTEGER,
             allowNull: false
         },
@@ -38,9 +38,9 @@ const cartaoModel = (sequelize, dataTypes) => {
 
 
     cartao.associate = (models) => {
-        cartao.belongsTo(models.Usuario, {
-            as: "user",
-            foreignKey: "id_usuario",
+        cartao.belongsTo(models.CadastroUsuario, {
+            as: "cadastroUsuario",
+            foreignKey: "id_cadastroUsuario",
         });
     }
 
