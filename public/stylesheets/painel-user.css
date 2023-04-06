@@ -29,12 +29,10 @@ body {
 .container {
     display: flex;
     position: fixed;
-    width: 80%;
     height: 80%;
     overflow: scroll;
     padding-left: 0px;
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: stretch;
 }
 
@@ -47,6 +45,9 @@ main.main-painelUser {
     overflow: hidden;
     position: absolute;
     top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
 }
 
 div#section-content {
@@ -148,7 +149,7 @@ aside {
     height: 100vh;
     background-color: var(--background-2);
     z-index: 1;
-    width: 15rem;
+    width: 14rem;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -174,11 +175,12 @@ aside {
 /* ALTERAR DADOS DO USUÁRIO */
 
 .altera-dados {
-    align-items: center;
+    align-items: stretch;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     background-color: var(--background-color);
+    align-content: stretch;
 }
 
 .dados-usuario #alterar-name {
@@ -192,7 +194,12 @@ aside {
 
 .dados-usuario {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    margin-top: 2rem;
 }
 
 .dados-usuario #alterar-email {
@@ -220,9 +227,9 @@ aside {
     justify-content: center;
     border-radius: 10px;
     background-color: white;
-    height: 2rem;
+    /* height: 2rem; */
     width: 20rem;
-    margin: 1rem;
+    /* margin: 1rem; */
 }
 
 .dados-usuario button {
@@ -234,8 +241,8 @@ aside {
     background-color: #B30006;
     height: 2rem;
     width: 20rem;
-    margin: 1rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    /* margin-bottom: 2rem; */
 }
 
 /* ALTERAR DADOS DO CARTÃO*/
@@ -305,8 +312,8 @@ aside {
     background-color: #B30006;
     height: 2rem;
     width: 20rem;
-    margin: 1rem;
-    margin-bottom: 2rem;
+    /* margin: 1rem; */
+    /* margin-bottom: 2rem; */
 }
 
 form .formulario{
@@ -325,11 +332,14 @@ form .formulario{
 /* CANCELAR ASSINATURA */
 
 .cancelar {
+    width: 35rem;
     align-items: center;
     display: flex;
     flex-direction: column;
     background-color: var(--background-color);
     border-radius: 10px;
+    align-content: space-around;
+    flex-wrap: nowrap;
 }
 
 .cancel button {
@@ -420,4 +430,74 @@ div.pop-up span {
 
 ::-webkit-scrollbar-track {
     background: white;
+}
+
+
+div.dados-completos h1 {
+    color: red;
+    opacity: .7;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    font-size: x-large;
+}
+
+div.dados-completos h4 {
+    color: darkred;
+    font-size: small;
+}
+
+div.dados-completos p {
+    border: .3rem gray;
+    color: white;
+    opacity: .4;
+    margin-bottom: .2rem;
+    margin-top: .1rem;
+}
+
+div#endereco {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div#endereco div {
+    margin-right: 3rem;
+    background: border-box;
+}
+
+div.dados-completos button {
+    width: 15rem;
+    height: 2rem;
+    background-color: var(--cores-chaves);
+    color: var(
+    --cores-letra);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+    border-radius: .5rem;
+    margin-top: 2rem;
+}
+
+div.dados-completos div#bt-dados {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dados-completos {
+    width: auto;
+}
+
+div.dados-completos h5 {
+    margin-top: .3rem;
+}
+
+section#section-cancelar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
