@@ -27,28 +27,48 @@ main {
     display: flex;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    align-items: baseline;
+    align-items: stretch;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 /*SECTION CARRINHO*/
+
+section#section-carrinho {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 2rem;
+}
 
 .content-carrinho {
     display: flex;
     flex-direction: column;
 }
 
+div#itens-carrinho {
+    height: 27rem;
+    overflow: overlay;
+    margin-right: 2rem;
+}
+
 .item {
     margin: 0 1.2rem;
-    align-items: center;
+    align-items: stretch;
     display: flex;
     max-width: 35rem;
     margin-bottom: 1rem;
+    justify-content: space-evenly;
+    align-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .imagem-produto {
-    height: 15rem;
-    border-radius: 2rem;
-    width: auto;
+    width: 7rem;
+    border-radius: .5rem;
 }
 
 .descricao-produto {
@@ -94,7 +114,6 @@ main {
 }
 
 .descricao-produto button {
-    background-color: var(--cores-objetos);
     border: none;
     border-radius: 2rem;
     font-weight: 600;
@@ -118,6 +137,7 @@ main {
     display: flex;
     flex-direction: column;
     padding-right: 1rem;
+    
 }
 
 .resumo {
@@ -177,6 +197,29 @@ button {
 button a {
     text-decoration: none;
     color: var(--cores-letra);
+}
+
+input[name="cupom"] {
+    height: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    border: 0;
+}
+
+form#valida-cupom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+button#bt-valida {
+    background-color: var(--cores-chaves);
+    height: 2rem;
+    width: 5rem;
+    border-radius: .5rem;
+    margin: .3rem;
 }
 
 /*CONFIGURAÇÃO FOOTER*/

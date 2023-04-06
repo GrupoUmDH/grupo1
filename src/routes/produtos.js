@@ -55,8 +55,4 @@ router.put('/edit', upload.fields([{name:'backgroundUpdate'},{name:'imagemUpdate
 // BUSCA O FILME NA API EXTERNA.
 router.get('/search', FilmesControllers.buscar);
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d0d00f33048911c0a195a78fdeee428dd6f9857d
 module.exports = router;

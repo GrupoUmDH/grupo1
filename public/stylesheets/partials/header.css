@@ -27,6 +27,18 @@ header {
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: darkred;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
 
 
 /* NAVBAR */
@@ -166,7 +178,6 @@ button  {
 button {
     background-color: transparent;
     border: 0;
-    padding: .6rem;
     font: 0.7em 'Inter';
     color: var(--cores-letra);
 }
