@@ -20,14 +20,18 @@ header {
     z-index: 2;
     background: var(--background-color);
 }
+ 
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
+body {
+    display: flex;
+    flex-direction: column;
+   
+}
 
 /* NAVBAR */
 
@@ -38,12 +42,19 @@ header {
     height: 5rem;
     margin-right: 1rem;
     margin-left: 1rem;
+    
 }
 
 .navlogo {
     display: flex;
-    width: 5rem;
-    padding-left: 10px;
+    width: 6rem;
+    margin-left: 2rem;
+    padding: .1rem;
+}
+
+.navlogo:hover {
+    text-shadow: rgba(255,0,0,1) 0px 0px 9px;
+    filter: brightness(200%);
 }
 
 .paginas ul {
