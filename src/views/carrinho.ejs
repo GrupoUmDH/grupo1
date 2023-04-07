@@ -16,10 +16,10 @@
                         <h3>Itens: </h3>
                     </div>
                     <div id="itens-carrinho">
-                        <% for(const filme of Itens) { %>
+                        <% for(const filme of itens) { %>
                             <section class="item">
                                 <input type="hidden" value="<%=filme.id%>" id="id" name="id">
-                                <img class="imagem-produto" src="<%=filme.imagem%>" />
+                                <img class="imagem-produto" src="/img/<%= filme.tipo %>s/<%=filme.background%>.jpg" />
                                 <div class="descricao-produto">
                                     <div>
                                         <h2 class="filme-nome">
@@ -27,7 +27,7 @@
                                         </h2>
                                         <br>
                                         <p class="filme-valor">
-                                            <%=filme.valor%>
+                                            R$ <%=filme.valor%>
                                         </p>
                                     </div>
                                     <div>
@@ -53,7 +53,7 @@
                         <div>
                             <h3>CARRINHO: <%= qtd %> itens</h3>
                             <span>
-                                <%= valor %>
+                                R$ <%= valor%>
                             </span>
                         </div>
                         <hr>
@@ -68,7 +68,7 @@
                         <div>
                             <h2>TOTAL</h2>
                             <span>
-                                <%= valor %>
+                                R$ <%= valor%>
                             </span>
                         </div>
                         <br>
@@ -163,5 +163,17 @@
             <button type="submit">Confirmar</button>
         </div>
 
+        <% if(popUp) { %>
+            <div class="pop-up" style="display: flex">
+                <div id="pop-up-content">
+                    <span><button>X</button></span>
+                    <h2><%- mensagem%></h2>
+                    <h4><%- aviso%></h4>
+                </div>
+            </div>
+        <% } %>
+
     </main>
+
+
     <%- include('partials/footer') %>

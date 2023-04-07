@@ -1,29 +1,54 @@
+const { Filme, Usuario, CadastroUsuario} = require("../../models");
 const CarrinhoModel = require('../models/CarrinhoModel');
 
-module.exports = {
-    carrinho: (req, res) => {  
+const view = {
+    pageName: "carrinho",
+    js: "carrinho",
+    users: {},
+    dados: {},
+    itens: {},
+    qtd: 0,
+    valor: 0,
+    popUp: false,
+    mensagem: "mensagem",
+    aviso: "aviso",
+};
 
-        let item = CarrinhoModel.itens(req.query.itensCarrinho);
-        
-        if(!req.query.itensCarrinho){
-            itens = [{}];
+module.exports = {
+    carrinho: async (req, res) => {  
+
+        if(!req.session) {
+            view.popUp = true;
+            view.mensagem = "Você nao esta logado.";
+            view.aviso = "Para finalizar a compra, faça login ou cadastre-se!!!";
+        } else {
+            view.popUp = false;
         }
 
-        let qtd = item.length;
+        const { itensCarrinho } = req.query;
+        //console.log(itensCarrinho);
 
-        let valor = "R$ "+CarrinhoModel.valores(req.query.itensCarrinho);
+        const produtos = [];
 
-        let desconto = "R$ 0,00";
-
-        //console.log(item);
-
-        res.render("carrinho", {
-            pageName: "carrinho",
-            js: "paginaDoCarrinho",
-            Itens: item,
-            qtd,
-            valor,
+        for(const id of JSON.parse(itensCarrinho)){
+            produtos.push(id.id);
+        };
+        
+        const filme = await Filme.findAll({
+            where: {id: produtos}
         });
+
+        view.itens = filme;
+        view.qtd = produtos.length;
+
+        let soma = 0;
+        filme.forEach((element) => {
+            soma += parseFloat(element.valor.replace(",", "."));
+        });
+        view.valor = soma.toFixed(2).replace(".", ",");
+        
+
+        res.render("carrinho", view);
     },
     compra: (req, res) => {
         // const compras = CarrinhoModel.compra();

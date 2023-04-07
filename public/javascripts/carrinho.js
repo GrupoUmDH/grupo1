@@ -3,6 +3,14 @@ const filmesNoCariinho = document.querySelector("form input#itensCarrinho");
 const removeBtns = document.querySelectorAll("main form#montarCarrinho");
 //let delCarrinho = document.querySelectorAll("main form input");
 
+const popUp = document.querySelector("div.pop-up");
+const popUp_sair = document.querySelector("div.pop-up span button");
+
+//SAIR DO POP-UP
+popUp_sair.addEventListener("click", (event) => {
+    popUp.style.display = "none";
+});
+
 //console.log(filmesNoCariinho.value);
 
 //console.log(filme.id);

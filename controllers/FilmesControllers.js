@@ -4,43 +4,52 @@ const { validationResult } = require('express-validator');
 const path = require('path');
 
 const search = require('../src/request/search');
+const { response } = require('express');
 
 module.exports = {
     index: async (req, res) => {
-        const filmes = await Filme.findAll({
-            include: [
-                {
-                    model: Classificacao,
-                    as: "indicacao",
-                    require: true,
-                },
-            ],
-        });
-        console.log(filmes)
-        const categoria = await Categorias.findAll({});
+        const { nome } = req.query;
 
-        const classificacao = await Classificacao.findAll({
-            order: ["nome"],
-        });
+        try {
+            await Filme.findOne({
+                where: { nome: nome }
+            }).then(response => {
+                console.log(response);
 
-        res.render("teste", {
-            pageName: "filmes",
-            js: "filmes",
-            filmes,
-            categoria,
-            classificacao,
-        });
+                const categoria = Categorias.findOne({
+                    where: { id: response.categorias_id }
+                });
+
+                const classificacao = Classificacao.findOne({
+                    where: { id: response.classificacoes_id }
+                });
+
+                res.render("produtos", {
+                    pageName: "produtos",
+                    js: "adicionarAoCarrinho",
+                    produto: response,
+                    categoria,
+                    classificacao,
+                })
+            })
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
+    produto: async (req, res) => {
+
     },
 
     maisFilmes: async (req, res) => {
         console.log(req.query)
-        const {tipo} = req.query
+        const { tipo } = req.query
 
         const filmes = await Filme.findAll({
-             where: {
-                tipo:tipo,
+            where: {
+                tipo: tipo,
             }
-        });           
+        });
 
         console.log(filmes)
         const categoria = await Categorias.findAll({});

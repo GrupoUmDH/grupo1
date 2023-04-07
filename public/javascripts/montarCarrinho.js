@@ -6,6 +6,6 @@ formMontarCarrinho.forEach((montaCarrinho, index) => {
         const itensCarrinho = document.querySelectorAll('[name="itensCarrinho"]');
         itensCarrinho[index].value = localStorage.getItem("carrinho");
         //console.log(itensCarrinho)
-        this.submit()
+        this.submit();
     })
 })

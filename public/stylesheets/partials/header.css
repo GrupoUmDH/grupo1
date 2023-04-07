@@ -20,6 +20,19 @@ header {
     z-index: 2;
     background: var(--background-color);
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: darkred;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
  
 
 *{
