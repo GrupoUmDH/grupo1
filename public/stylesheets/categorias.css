@@ -75,16 +75,17 @@ h5 {
 }
 
 .content-genero {
-    width: 100%;
-    opacity: 1;
-    transition-duration: 150ms;
-    padding-left: 4rem;
-    height: 9rem;
-    text-align: center;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
+    margin-top: 4.5rem;
     padding: 1.8rem;
+    width: 100%;
+    
+    opacity: 1;
+    transition-duration: 150ms;
+    height: 9rem;
+    text-align: center;
 
 }
 

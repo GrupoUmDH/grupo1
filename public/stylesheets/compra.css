@@ -341,6 +341,12 @@ padding: 2rem 3rem 3rem 3rem;
     text-transform: uppercase;
     margin-left: 3rem;
 }
+
+.content-pagamento >button:hover{
+    box-shadow: rgba(255,0,0,1) 0px 0px 9px;
+    filter: brightness(110%);
+}
+
 button{
     color: var(--cores-letra);
     background-color: var(--cores-chaves);

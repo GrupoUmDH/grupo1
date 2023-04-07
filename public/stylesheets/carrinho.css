@@ -11,9 +11,6 @@
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,7 +22,7 @@ body {
 /* CONFIGURAÇÃO IMAGEM CENTRAL*/
 main {
     display: flex;
-    margin-top: 3rem;
+    margin-top: 7rem;
     margin-bottom: 3rem;
     align-items: baseline;
 }
@@ -48,13 +45,14 @@ main {
 .imagem-produto {
     height: 15rem;
     border-radius: 2rem;
-    width: auto;
+    width: 10rem;
 }
 
 .descricao-produto {
-    border-radius: 0 1rem 1rem 0;
-    padding: 1rem;
+    border-radius: 1rem;
+    padding: .9rem;
     width: 100%;
+    margin-left: .5rem;
     display: flex;
     justify-content: space-between;
     background-color: var(--background-2);
@@ -98,8 +96,21 @@ main {
     border: none;
     border-radius: 2rem;
     font-weight: 600;
-    padding: .5rem 1rem;
     color: var(--cores-letra);
+    transition: all .2s;
+}
+.descricao-produto button:hover {
+    text-shadow: rgba(255,0,0,1) 0px 0px 9px;
+    filter: brightness(110%);
+}
+.remover{
+    width: 1.5rem;
+    transition: all .2s;
+}
+
+.remover:hover{
+    text-shadow: rgba(255,0,0,1) 0px 0px 20px;
+    filter: brightness(400%);
 }
 
 .descricao-produto p {
@@ -164,6 +175,12 @@ main {
     height: 50px;
     text-transform: uppercase;
     background: var(--cores-chaves);
+    transition: all .3s;
+}
+
+.pagamento>button:hover {
+    box-shadow: rgba(255,0,0,1) 0px 0px 9px;
+    filter: brightness(200%);
 }
 
 button {
@@ -190,19 +207,6 @@ hr {
     display: flex;
     flex-direction: row;
     margin-bottom: 2rem;
-}
-
-.footer > hr {
-    width: 100vw;
-}
-
-footer {
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-    font-family: 'Inter' Arial, Helvetica, sans-serif;
-    color: var(--cores-chaves);
-    align-items: center;
-    text-align: center;
 }
 
 @media (max-width: 820px) {
