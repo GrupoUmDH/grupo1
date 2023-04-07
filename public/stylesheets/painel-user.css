@@ -39,7 +39,25 @@ body {
 }
 
 nav#menu {
-    margin-top: 5rem;
+    margin-top: 6rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+nav#menu > h1 {
+    border-radius: 1rem;
+    background-color: var(--background-2);
+    margin-bottom: 1rem;
+    border-bottom: .16rem solid red;
+  
+    padding: 0.6rem;
+}
+
+nav#menu ul li {
+    list-style: none;
+    text-align: center;
 }
 
 main.main-painelUser {
@@ -74,6 +92,7 @@ div#section-content {
     margin-top: 2rem;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .comprados img {
@@ -88,10 +107,12 @@ div#section-content {
 h1 {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     color: var(--cores-letra);
     flex-direction: column;
     flex-wrap: nowrap;
+    margin-left: 1rem;
+
 }
 
 h1#historico {
@@ -103,6 +124,13 @@ h1#historico {
 .titulos {
     padding-top: 1rem;
     text-align: center;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-radius: 1rem;
+    background-color: var(--background-2);
+    margin-bottom: 1rem;
+    border-bottom: .16rem solid red;
+
 }
 
 
@@ -161,7 +189,7 @@ aside {
     line-height: 3;
     color: var(--cores-letra);
     text-decoration: none;
-    text-align:left;
+    text-align: center;
     display: block;
     cursor: pointer;
     transition: .2s;
@@ -169,7 +197,7 @@ aside {
 
 #menu ul li a:hover {
     color: var(--cores-chaves);
-    text-transform:unset;
+    text-transform: unset;
 }
 
 /* ALTERAR DADOS DO USUÁRIO */
@@ -262,10 +290,10 @@ aside {
     text-align: center;
     align-items: center;
     justify-content: center;
-    
+
 }
 
-.credit-card input{
+.credit-card input {
     border-radius: 10px;
     text-align: center;
     align-items: center;
@@ -277,7 +305,7 @@ aside {
     margin-bottom: 2rem;
 }
 
-.credit-card button{
+.credit-card button {
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -290,17 +318,26 @@ aside {
     margin-bottom: 2rem;
 }
 
-.formulario-card{
+.new-card>h1 {
+    border-radius: 1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    background-color: var(--background-2);
+    margin-bottom: 1rem;
+    border-bottom: .16rem solid red;
+}
+
+.formulario-card {
     border-radius: 10px;
     text-align: center;
     align-items: center;
-    display:grid;
+    display: grid;
     justify-content: space-around;
     flex-direction: column;
     margin-top: 1rem;
     border-radius: 20px;
     background-color: var(--background-color);
-    
+
 }
 
 .formulario button {
@@ -316,7 +353,7 @@ aside {
     /* margin-bottom: 2rem; */
 }
 
-form .formulario{
+form .formulario {
     width: 500px;
     display: flex;
     text-align: center;
@@ -331,8 +368,9 @@ form .formulario{
 
 /* CANCELAR ASSINATURA */
 
+
 .cancelar {
-    width: 35rem;
+    width: 100%;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -469,8 +507,7 @@ div.dados-completos button {
     width: 15rem;
     height: 2rem;
     background-color: var(--cores-chaves);
-    color: var(
-    --cores-letra);
+    color: var(--cores-letra);
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     border: 0;
