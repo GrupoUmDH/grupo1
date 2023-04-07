@@ -10,11 +10,17 @@
 }
 header {
     justify-content: center;
+    background-color: var(--background-2);
     align-items: center;
     flex-direction: row;
     width: 100%;
     font-size: 1.5rem;
     height: 5rem;
+    border-bottom: .16rem solid var(--cores-chaves);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
 }
  
 

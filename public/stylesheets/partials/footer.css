@@ -18,9 +18,11 @@ hr {
 
 footer {
     margin-top: 3rem;
-    padding-bottom: 2rem;
+    padding: 2rem;
     background-color: var(--background-2);
     color: var(--cores-chaves);
+    border-top: .16rem solid var(--cores-chaves);
     width: 100%;
     text-align: center;
+    z-index: 9998;
 }
