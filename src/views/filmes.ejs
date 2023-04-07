@@ -8,9 +8,8 @@
             <div class="titulos">
             <h1><%= filmes[0].tipo %>S</h1>
         </div>
-
-                <hr>
-                <section class="filmes-home">
+        
+              <section class="filmes-home">
                     <% for (const listafilmes of filmes) { %>
                         <div class="filme-show">
                             <a href="<%= '/produtos' %>/?nome=<%- listafilmes.nome  %>">
