@@ -68,6 +68,7 @@ main {
     font-size: x-large;
     font-weight: bold;
     font-weight: 900;
+    transition: .3s;
 }
 
 .perguntas {
@@ -84,16 +85,14 @@ main {
 }
 .container-perguntas>button {
     text-align: center;
-    align-items: center;
-    justify-content: center;
     border-radius: 10px;
+    border-bottom: .16rem solid var(--cores-chaves);
     height: 4rem;
     margin-top: 2rem;
     width: 95%;
     color: var(--cores-letra);
     background: var(--background-2);
     display: block;
-    border: 2px;
     cursor: pointer;
     z-index: 10;
     font-size: 1.8rem;
@@ -118,13 +117,12 @@ main {
 
 .respostas p {
     display: flex;
-    width: 90%;
+    width: 100%;
     text-align: justify;
     align-items: center;
-    justify-content: center;
     line-height: 1.8rem;
     font-size: 1.5rem;
-    padding: 1rem 0;
+    padding: 1rem 1.5rem;
 }
 
 /*CONFIGURAÇÃO FOOTER*/
@@ -138,15 +136,6 @@ hr {
     display: flex;
     flex-direction: row;
     margin-bottom: 2rem;
-}
-
-footer {
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-    font-family: 'Inter' Arial, Helvetica, sans-serif;
-    color: var(--cores-chaves);
-    align-items: center;
-    text-align: center;
 }
 
 @media (max-width: 770px) {

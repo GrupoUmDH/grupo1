@@ -45,6 +45,7 @@ h1 {
     color: white;
     margin: 1rem;
     font-size: 2rem;
+    text-transform: uppercase;
 }
 
 h1 .container {

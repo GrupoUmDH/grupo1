@@ -45,7 +45,9 @@ router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
 router.post('/create', upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), validadorFormCreate, FilmesControllers.createProduto);
 
 router.get('/teste', FilmesControllers.index);
- 
+
+router.get('/maisFilmes', FilmesControllers.maisFilmes); 
+router.get('/maisSeries', FilmesControllers.maisFilmes); 
 // deletar produto
 router.delete('/remove', validadorFormDelete, FilmesControllers.deletaProduto);
 
