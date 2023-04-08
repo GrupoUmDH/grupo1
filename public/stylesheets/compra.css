@@ -27,20 +27,19 @@
 
 .content-form {
     display: flex;
-    flex-direction: column;
     border-radius: 1rem;
     background-color: var(--background-2);
     margin-bottom: 0.8rem;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 .content-form h1{
-    font-weight: 600;
     font-size: 2rem;
     display: flex;
     color: var(--cores-chaves);
     position: relative;
-    padding-left: 3rem;
     padding-top: 1rem;
     font-family: var(--font-family_1);
 } 

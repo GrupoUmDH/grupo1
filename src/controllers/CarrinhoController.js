@@ -1,10 +1,11 @@
-const { Filme, Usuario, CadastroUsuario, Cupom} = require("../../models");
+const { Filme, Usuario, CadastroUsuario, Cartao, Cupom} = require("../../models");
 
 const view = {
     pageName: "carrinho",
     js: "carrinho",
     users: {},
     dados: {},
+    cartão: {},
     itens: {},
     qtd: 0,
     valor: 0,
@@ -18,20 +19,27 @@ const view = {
 
 module.exports = {
     carrinho: async (req, res) => {  
+        const { itensCarrinho, cupom } = req.query;
+        const { nome, email } = req.session;
+        const produtos = [];
 
-        //console.log(req.query);
+        console.log(req.session);
 
-        if(!req.session) {
+        if(!req.session.email) {
             view.popUp = true;
             view.mensagem = "Você nao esta logado.";
             view.aviso = "Para finalizar a compra, faça login ou cadastre-se!!!";
         } else {
             view.popUp = false;
+
+            view.users = await Usuario.findOne({
+                where : { email: email },
+            });
+
+            view.dados = await CadastroUsuario.findOne({
+                where: { id_usuario : view.users.id},
+            });
         }
-
-        const { itensCarrinho, cupom } = req.query;
-
-        const produtos = [];
 
         for(const id of JSON.parse(itensCarrinho)){
             produtos.push(id.id);
@@ -50,13 +58,10 @@ module.exports = {
         });
         view.valor = soma.toFixed(2).replace(".", ",");
 
-        //view.total = view.valor;
-
         if(!cupom){
             view.total = view.valor;
             view.desconto = 0;
         } else {
-           
             const aplicaCupom = await Cupom.findOne({
                 where: { cupom : cupom},
             });
@@ -80,32 +85,4 @@ module.exports = {
         res.render("carrinho", view);
     },
 
-    compra: (req, res) => {
-        // const compras = CarrinhoModel.compra();
-        return res.render("compra", {
-            pageName: "compra",
-            js: "finalizaCompra",
-        });
-    },
-    addCarrinho: (req, res) => {
-        //const listafilme = FilmesCarrinho.index();
-        //console.log(listafilme)
-        return res.render("carrinho", {
-            pageName: "carrinho",
-            js: "adicionarAoCarrinho",
-        });
-    },
-    adiciona: (req, res) => {
-        //console.log("ADICIONANDO: "+req.body.itensCarrinho)
-        //CarrinhoModel.attCarrinho(JSON.parse(req.body.itensCarrinho));
-    },
-    deletaItem: (req, res) => {  
-        const ref  = req.body.itensCarrinho;
-
-        //console.log(ref);
-
-        //CarrinhoModel.attCarrinho(ref);
-
-        return res.redirect("/carrinho");
-    }, 
 };

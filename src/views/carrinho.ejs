@@ -86,66 +86,51 @@
                     </section>
                 </section>
             </section>
+            <% if(dados.nome_usuario) {%>
             <section id="section-dados">
                 <div class="content-form">
                     <div>
                         <h1>Dados: </h1>
                     </div>
-                    <form id="form-dados" action="" disabled="disabled">
-                        <div id="input-linha">
-                            <div>
-                                <div class="invisible err-nome error">Campo obrigatório!</div>
-                                <input class="content-input" type="text" placeholder="NOME*" name="nome" minlength="3" maxlength="20">
+                    <div class="dados-completos">
+                            <div> 
+                                <h4>Nome</h4>
+                                <p><%- dados.nome_usuario %></p>
+                                <h4>Sobrenome</h4>
+                                <p><%- dados.sobrenome%></p>
                             </div>
                             <div>
-                                <div class="invisible err-sobrenome error">Campo obrigatório!</div>
-                                <input class="content-input" type="text" placeholder="SOBRENOME*" name="sobrenome" minlength="3" maxlength="20">
+                                <h4>CPF: </h4>
+                                <p><%- dados.cpf %></p>
                             </div>
                             <div>
-                                <div class="invisible err-cpf error">Campo obrigatório!</div>
-                                <input class="content-input" type="text" placeholder="CPF/CNPJ*" name="cpf" 
-                                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
-                            </div>
-                        </div>
-                        <div id="input-linha"> 
-                            <div>
-                                <div class="invisible err-email error">Campo obrigatório!</div>
-                                <input class="content-input" type="email" placeholder="EMAIL*" name="email">
-                            </div>
-                        </div>
-                        <div id="input-linha">
-                            <div>
-                                <div class="invisible err-codigo-postal error">Campo obrigatório!</div>
-                                <input class="content-input" type="text" placeholder="CEP:*"
-                                    name="codigo-postal" maxlength="8">
-                            </div>
-                            <div>
-                                <div class="invisible err-endereco error">Campo obrigatório!</div>
-                                <input class="content-input" type="text" placeholder="ENDEREÇO*" name="endereco">
-                            </div>
-                        </div>
-                        <div id="input-linha">
-                            <div>
-                                <div class="invisible err-cidade error">Campo obrigatório!</div>
-                                <input class="content-input" type="text" placeholder="BAIRRO*" name="bairro">
+                                <h4>Endereço:</h4>
+                                <div>
+                                    <h5>Logradouro:</h5>
+                                    <p><%- dados.endereco %></p>
+                                </div>
+                                <div id="endereco">
+                                    <div>
+                                        <h5>Bairro: </h5>
+                                        <p><%- dados.bairro %></p>
+                                        <h5>Cidade: </h5>
+                                        <p><%- dados.cidade %></p>
+                                    </div>
+                                    <div>
+                                        <h5>Estado: </h5>
+                                        <p><%- dados.estado %></p>
+                                        <h5>CEP: </h5>
+                                        <p><%- dados.codigo_postal %></p>
+                                    </div>
+                                </div>
                             </div>
                             <div>
-                                <div class="invisible err-cidade error">Campo obrigatório!</div>
-                                <input class="content-input" type="text" placeholder="CIDADE*" name="cidade">
+                                <h4>Formas de pagamento cadastrados:</h4>
                             </div>
-                            <div>
-                                <div class="invisible err-estado error">Campo obrigatório!</div>
-                                <input class="content-input" type="text" placeholder="ESTADO*" name="estado">
+                            <div id="bt-dados">
+                                <button>Editar</button>
                             </div>
-                            <div>
-                                <div class="invisible err-pais error">Campo obrigatório!</div>
-                                <input class="content-input" type="text" placeholder="PAÍS*" name="pais">
-                            </div>
-                        </div>
-                        <div class="pay-button">
-                            <button type="submit">Atualizar</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </section>
             <section id="section-pagamento">
@@ -167,9 +152,9 @@
                         <img src="/img/pagamento/boleto.svg " alt="">
                     </div>
                 </div>
-
             </section>
         </div>
+        <% } %>
         <div class="pay-button">
             <button type="submit">Confirmar</button>
         </div>

@@ -349,3 +349,67 @@ div.pop-up span {
     width: 100%;
     flex-direction: row;
 }
+
+
+
+div.dados-completos h1 {
+    color: red;
+    opacity: .7;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    font-size: x-large;
+}
+
+div.dados-completos h4 {
+    color: darkred;
+    font-size: small;
+}
+
+div.dados-completos p {
+    border: .3rem gray;
+    color: white;
+    opacity: .4;
+    margin-bottom: .2rem;
+    margin-top: .1rem;
+}
+
+div#endereco {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div#endereco div {
+    margin-right: 3rem;
+    background: border-box;
+}
+
+div.dados-completos button {
+    width: 15rem;
+    height: 2rem;
+    background-color: var(--cores-chaves);
+    color: var(--cores-letra);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+    border-radius: .5rem;
+    margin-top: 2rem;
+}
+
+div.dados-completos div#bt-dados {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dados-completos {
+    width: auto;
+}
+
+div.dados-completos h5 {
+    margin-top: .3rem;
+}
