@@ -20,7 +20,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--cores-letra);
+    background-color: var(--background-color);
     font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
 
@@ -189,18 +189,33 @@ div#titulos h3{
     margin-left: .8rem;
     opacity: .5;
 }
-
+#content-itens{
+    width:65vw;
+    height: 60vh;
+}
+   
+#itens{
+    width:96%;
+    height: 60vh;
+}
 div#itens {
     border: 1px solid gray;
-    width: 50vw;
-    height: 70vh;
+    
     overflow: auto;
+    background-color: var(--background-2);
+    border-radius: 9px;
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-items: stretch;
+   
+    border: 0;
 }
 
 div#itens div {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    background-color: var(--background-2);
 }
 
 div#itens img {
@@ -215,7 +230,7 @@ button#bt-confirmar {
 
 div#content-itens {
     display: flex;
-    padding-left: 13rem;
+    padding-left: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -225,26 +240,31 @@ div#itens-titulo {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    /* background-color: var(--background-2); */
+}
+
+h1, h4{
+    color: var(--cores-chaves);
 }
 
 div#lista-borda {
-    width: 96%;
     height: 88%;
     border: .7px solid gray;
     margin: .5rem;
-    overflow: auto;
+    overflow: initial;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
 }
 
 
 
 div#carregar-img {
     display: flex;
-    width: 90%;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
     align-content: flex-end;
+      margin-left: 1rem;
     flex-wrap: nowrap;
     flex-direction: row;
 }
@@ -255,6 +275,8 @@ div#carregar-img div {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 1rem;
+    width: 17rem;
+    height: 15rem;
 }
 
 div#carregar-img label {
@@ -263,7 +285,7 @@ div#carregar-img label {
     font-size: .8rem;
     background-color: var(--cores-chaves);
     border-radius: 1rem;
-    color: #FFF;
+    color: var(--cores-letra);
     text-transform: uppercase;
     text-align: center;
     display: block;
@@ -271,6 +293,12 @@ div#carregar-img label {
     cursor: pointer;
 }
 
+label{
+    color: var(--cores-letra);
+}
+p{
+     color: var(--cores-letra);
+}
 
 
 div#carregar-img #previa-capa {
@@ -280,7 +308,7 @@ div#carregar-img #previa-capa {
 }
 
 div#carregar-img #previa-fundo {
-    width: 14rem;
+    width: 12rem;
     height: 10rem;
     border: .5px solid gray;
 }

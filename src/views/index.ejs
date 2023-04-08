@@ -21,74 +21,46 @@
             </div>
             <button id="next">&rArr;</button>
         </section>
-
-        <!-- <h1 class="mais-populares">OS MAIS POPULARES</h1>
-
-        <div id="items-wrapper">
-            <div id="items">
-                <div class="item"><img src="/img/carrossel-populares/scrool1.jpg"></div>
-                <div class="item"><img src="/img/carrossel-populares/scrool2.jpg"></div>
-                <div class="item"><img src="/img/carrossel-populares/scrool3.jpg"></div>
-                <div class="item"><img src="/img/carrossel-populares/scrool4.jpg"></div>
-                <div class="item"><img src="/img/carrossel-populares/scrool5.jpg"></div>
-                <div class="item"><img src="/img/carrossel-populares/scrool6.jpg"></div>
-            </div>
-        </div> -->
-
-
-        <!-- Inicia Filmes -->
+        <hr>
         <section class="container">
             <div class="titulos">
                 <h1>FILMES</h1>
-                <a href="<%= '/produtos/filmes' %>"><span class="plus">+</span> <span class="seeMore">Ver mais</span></a>
-            </div>
-                <section class="filmes-home">
-                    <% for (var i=0; i<6; i++) { %>
-                        <div class="filme-show">
-                            <a href="<%= '/produtos' %>\">
-                                <img src="https://image.tmdb.org/t/p/w500/<%= listaFilmes[i].background%>" alt="" id="back-filme">
-                                <div class="descri">
-                                    <div>
-                                        <h3 id="nome-filme">
-                                            <%= listaFilmes[i].nome %>
-                                        </h3>
-                                        <p id="descri-filme">
-                                            <%= listaFilmes[i].descricao %>
-                                        </p>
-                                    </div>
-                                    <div id="dados-filmes">
-                                        <img src="https://image.tmdb.org/t/p/w500/<%= listaFilmes[i].imagem %>" id="img-filmes">
-                                        <%= listaFilmes[i].imagem %>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <% } %>
-                </section>
-                
-            <!-- Inicia Series -->
-            <div class="titulos">
-                <h1>SÉRIES</h1>
-                <a href="<%= '/produtos/series' %>"><span class="plus">+</span> <span class="seeMore">Ver mais</span></a>
+                <a href="<%= '/produtos/maisFilmes?tipo=filme' %>">Mais Filmes...</a>
             </div>
 
-            <section class="series-home">
-                <% for (var i=0; i<6; i++) { %>
+       
+            <section class="filmes-home">
+                <% for (const listafilmes of filmes) { %>
                     <div class="filme-show">
-                        <a href="<%= '/produtos' %>\">
-                            <img src="https://image.tmdb.org/t/p/w500/<%= listaSeries[i].background %>" alt="" id="back-filme">
+                        <a href="<%= '/produtos' %>/?nome=<%- listafilmes.nome  %>">
+                            <img src="/img/filmes/<%= listafilmes.background%>.jpg" alt="" id="back-filme">
                             <div class="descri">
                                 <div>
                                     <h3 id="nome-filme">
-                                        <%= listaSeries[i].nome %>
+                                        <%= listafilmes.nome %>
                                     </h3>
-                                    <p id="descri-filme">
-                                        <%= listaSeries[i].descricao %>
-                                    </p>
                                 </div>
-                                <div id="dados-filmes">
-                                    <img src="https://image.tmdb.org/t/p/w500/<%= listaSeries[i].imagem %>" id="img-filmes">
-                                    <%= listaFilmes[i].imagem %>
+                            </div>
+                        </a>
+                    </div>
+                    <% } %>
+            </section>
+            <hr>
+            <div class="titulos">
+                <h1>SÉRIES</h1>
+                <a href="<%= '/produtos/maisSeries?tipo=serie' %>">Mais Séries...</a>
+            </div>
+
+            <section class="series-home">
+                <% for (const listaSeries of series) { %>
+                    <div class="filme-show">
+                        <a href="<%= '/produtos' %>/?nome=<%- listaSeries.nome  %>">
+                            <img src="/img/series/<%= listaSeries.background %>.jpg" alt="" id="back-filme">
+                            <div class="descri">
+                                <div>
+                                    <h3 id="nome-filme">
+                                        <%= listaSeries.nome %>
+                                    </h3>
                                 </div>
                             </div>
                         </a>

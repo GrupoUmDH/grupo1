@@ -25,26 +25,26 @@
                     <div id="lista-borda">
                         <div id="itens-menu">
                             <ul>
-                                <li>Nome</li>
+                                <li id="li-nome">Nome</li>
                                 <hr>
-                                <li>Email</li>
+                                <li id="li-email">Email</li>
                                 <hr>
                                 <li id="user-tipo" >Tipo</li>
                                 <hr>
-                                <li id="br-lista">Ação</li>
+                                <li id="li-acao">Ação</li>
                             </ul>
                         </div>
                         
                         <% users.forEach(element => { %>
-                            <div id="user-lista"> 
+                            <div id="itens-lista"> 
                                 <ul>
-                                    <li> <%- element.nome_usuario %> </li>
+                                    <li id="li-nome"> <%- element.nome_usuario %> </li>
                                     <hr>
-                                    <li><%- element.email %></li>
+                                    <li id="li-email"><%- element.email %></li>
                                     <hr>
                                     <li id="user-tipo"><%- element.tipo_usuario %></li>
                                     <hr>
-                                    <li id="br-lista">
+                                    <li id="li-acao">
                                         <form method="post" action="/painel/users/editar?:id" id="form_editar">
                                             <input id="input-value" name="id" value=<%- element.id %> style="display: none" >
                                             <button id="bt-editar" type="submit" ><img src="/img/ico/lapis.png" /></button>
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <div id="cad-borda">
-                        <div>
+                        <div class="dados-user">
                             <img src="/img/ico/user.png" />
                             <% if(tipoView == 'Criando') { %>
                                 <form class="form-cad" method="post" action="/painel/users/criar">
@@ -96,10 +96,13 @@
                             <% if( tipoView == 'Editanto') {%>
                                 <form class="form-cad" method="post" action="/painel/users/atualizar?_method=PUT">
                             <% } %>
+                                    <label for="nome_usuario" >Usuário:</label>
                                     <input value="<%- users.nome_usuario %>" placeholder="NOME USUÁRIO.." type="text" name="nome_usuario" id="user"/>
+                                    <label for="email" >e-mail:</label>
                                     <input value="<%- users.email %>" placeholder="EMAIL..." type="email" name="email"  />
+                                    <label for="senha" >Senha:</label>
                                     <input placeholder="SENHA" type="password" name="senha" />
-
+                                    <label for="tipo_usuario" >Tido de usuário:</label>
                                     <select name="tipo_usuario"> 
                                         <option selected hidden disabled>Credencial</option>
                                         <option type="check" value="cliente" >cliente</option>
@@ -109,7 +112,56 @@
                                     <button type="submit"><%= bt_form %></button>
                                 </form>
                         </div>
+                        
+                        <div class="dados-completos">
+                            <div> <h1>Dados completos do usuário: </h1></div>
+                            <% if (!dados) { %>
+                                <div> <h4> Usuário nao preencheu os dados</h4> </div>
+                                <div id="bt-dados">
+                                    <button>Preencher</button>
+                                </div>
+                            <% } else { %>
+                                <div> 
+                                    <h4>Nome</h4>
+                                    <p><%- dados.nome_usuario %></p>
+                                    <h4>Sobrenome</h4>
+                                    <p><%- dados.sobrenome%></p>
+                                </div>
+                                <div>
+                                    <h4>CPF: </h4>
+                                    <p><%- dados.cpf %></p>
+                                </div>
+                                <div>
+                                    <h4>Endereço:</h4>
+                                    <div>
+                                        <h5>Logradouro:</h5>
+                                        <p><%- dados.endereco %></p>
+                                    </div>
+                                    <div id="endereco">
+                                        <div>
+                                            <h5>Bairro: </h5>
+                                            <p><%- dados.bairro %></p>
+                                            <h5>Cidade: </h5>
+                                            <p><%- dados.cidade %></p>
+                                        </div>
+                                        <div>
+                                            <h5>Estado: </h5>
+                                            <p><%- dados.estado %></p>
+                                            <h5>CEP: </h5>
+                                            <p><%- dados.codigo_postal %></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4>Formas de pagamento cadastrados:</h4>
+                                </div>
+                                <div id="bt-dados">
+                                    <button>Editar</button>
+                                </div>
+                            <% } %>
+                        </div>
                     </div>
+                    <%- include('cadastroUsuario')%>
                 </div>
             </div>
         </section>
@@ -117,5 +169,5 @@
     <% if(error) { %>
         <%- include('partials/popUpErro')%>
     <% } %>
-
+    
 </main>

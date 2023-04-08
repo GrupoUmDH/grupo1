@@ -4,6 +4,7 @@
 
 <%- include('partials/header') %>
     <main>
+<<<<<<< HEAD
             <section class="content-banner">
                 <img id="bk-filme" src="">
                 <input type="hidden" value="1" id="id" name="id">
@@ -21,21 +22,36 @@
                                 </div>
     
                                 <p id="descri-filme"></p>
+=======
+        <section class="content-banner">
+            <img id="bk-filme" src="/img/<%= produto.tipo %>s/<%= produto.imagem %>.jpg">
+            <input type="hidden" value="<%= produto.id %>" id="id" name="id">
+            <div class="container">
+                <div class="banner">
+                    <img class="cover-filme" src="/img/<%= produto.tipo %>s/<%= produto.background %>.jpg">
+                    <div class="descricao-container">
+                        <div id="descri-filme">
+                            <h1 id="nome-filme"><%= produto.nome %></h1>
+                            <div class="genero">
+                                <span id="genero-filme"><%-categoria.nome  %></span>
+>>>>>>> 73d7932016a44e8420f7a1eb5bf5aed67d13f4c0
                             </div>
-                            <!-- terceiro filho -->
-                            <div id="bts-compra">
-                                <div class="classificacao">
-                                    <img id="indicacao" src="" alt="">
+
+                            <p id="descri-filme"><%= produto.descricao %></p>
+                        </div>
+                        <!-- terceiro filho -->
+                        <div id="bts-compra">
+                            <div class="classificacao">
+                                <img id="indicacao" src="/img/indicativa/<%= classificacao.imagem%>">
+                            </div>
+                            <div class="botoes-compra">
+
+                                <div class="assitir">
+                                    <button>Assitir</button>
                                 </div>
-                                <div class="botoes-compra">
-    
-                                    <div class="assitir">
-                                        <button>Assitir</button>
-                                    </div>
-                                    <div class="comprar">
-                                        <p id="valor-compra"> R$ </p>
-                                        <button type="submit" id="btn-comprar">Comprar</button>
-                                    </div>
+                                <div class="comprar">
+                                    <p id="valor-compra"> R$ <%-produto.valor  %></p>
+                                    <button type="submit" id="btn-comprar">Comprar</button>
                                 </div>
                             </div>
                         </div>

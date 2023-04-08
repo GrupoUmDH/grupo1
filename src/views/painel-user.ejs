@@ -1,4 +1,5 @@
 <%- include('partials/header') %>
+<<<<<<< HEAD
 <body>  
     <main>
         <div class="sideA">
@@ -217,7 +218,179 @@
                 </section>
             </section>
         </div>
+=======
+
+    <aside class="container-side">
+        <nav id="menu">
+            <h1>Minha Conta</h1>
+            <ul>
+                <li><a href="#section-historico">Histórico de pedidos</a></li>
+                <li><a href="#alterar">Alterar cadastro</a></li>
+                <li><a href="#section-pay">Cadastrar cartão</a></li>
+                <li><a href="#section-cancelar">Cancelar assinatura</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="main-painelUser">
+        <div id="section-content">
+            <section class="container">
+                <div>
+                    <section id="section-historico">
+                        <div class="titulos">
+                            <h1>Histórico de Pedidos</h1>
+                        </div>
+                       
+                        <div class="comprados">
+                            <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                                <p>Homem Aranha</p>
+                            </div>
+                            <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                                <p>Homem Aranha</p>
+                            </div>
+                            <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
+                                <p>Homem Aranha</p>
+                            </div>
+                            <div><img src="../img/filmes/homemAranha_01.jpg" alt="">
+                                <p>Homem Aranha</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div>
+                    <section id="section-dados">
+                        <section class="altera-dados">
+                            <div class="titulos">
+                                <h1 id="alterar">Alterar Dados</h1>
+                            </div>
+                           
+                            <section class="alterar">
+                                <div class="formulario">
+                                    <div class="dados-usuario">
+                                        <div>
+                                            <form class="form-cad" method="post"
+                                                action="/painel/users/atualizar?_method=PUT">
+
+                                                <label for="nome_usuario">Usuário:</label>
+                                                <input value="<%- users.nome_usuario %>" placeholder="NOME USUÁRIO.."
+                                                    type="text" name="nome_usuario" id="user" />
+                                                <label for="email">e-mail:</label>
+                                                <input value="<%- users.email %>" placeholder="EMAIL..." type="email"
+                                                    name="email" />
+                                                <label for="senha">Senha:</label>
+                                                <input placeholder="SENHA" type="password" name="senha" />
+                                                <button type="submit">Atualizar</button>
+                                            </form>
+                                        </div>
+
+                                        <div class="dados-completos">
+                                            <div>
+                                                <h1>Dados completos do usuário: </h1>
+                                            </div>
+                                            <% if (!dados) { %>
+                                                <div>
+                                                    <h4> Usuário nao preencheu os dados</h4>
+                                                </div>
+                                                <div id="bt-dados">
+                                                    <button>Preencher</button>
+                                                </div>
+                                                <% } else { %>
+                                                    <div>
+                                                        <h4>Nome</h4>
+                                                        <p><%- dados.nome_usuario %></p>
+                                                        <h4>Sobrenome</h4>
+                                                        <p><%- dados.sobrenome%></p>
+                                                    </div>
+                                                    <div>
+                                                        <h4>CPF: </h4>
+                                                        <p><%- dados.cpf %></p>
+                                                    </div>
+                                                    <div>
+                                                        <h4>Endereço:</h4>
+                                                        <div>
+                                                            <h5>Logradouro:</h5>
+                                                            <p><%- dados.endereco %></p>
+                                                        </div>
+                                                        <div id="endereco">
+                                                            <div>
+                                                                <h5>Bairro: </h5>
+                                                                <p><%- dados.bairro %></p>
+                                                                <h5>Cidade: </h5>
+                                                                <p><%- dados.cidade %></p>
+                                                            </div>
+                                                            <div>
+                                                                <h5>Estado: </h5>
+                                                                <p><%- dados.estado %></p>
+                                                                <h5>CEP: </h5>
+                                                                <p><%- dados.codigo_postal %></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h4>Formas de pagamento cadastrados:</h4>
+                                                    </div>
+                                                    <div id="bt-dados">
+                                                        <button>Editar</button>
+                                                    </div>
+                                                    <% } %>
+                                        </div>
+                                    </div>
+                                    <%- include('cadastroUsuario')%>
+                                </div>
+                            </section>
+                        </section><br>
+                    </section>
+                </div>
+                <div>
+                    <section id="section-pay">
+                        <!-- CARTAO DE CREDITO -->
+                        <section class="credit-card">
+                            <br>
+                            <div class="new-card">
+                                <h1>Dados do novo cartão</h1>
+                                <br>
+                                <div class="form-container active">
+                                    <form class="formulario-card">
+                                        <% for(const cartao of dados.cartao) { %>
+                                            <input placeholder="Número do cartão" type="text" name="number" value="<%- cartao.numero_cartao %>" >
+                                            <input placeholder="Nome completo" type="text" name="name1" value="<%- cartao.nome_completo %>" >
+                                            <input placeholder="MM/AA" type="text" name="expiry" value="<%- cartao.vencimento %>" >
+                                            <input placeholder="CVC" type="text" name="cvc" value="<%- cartao.cvc %>" >
+                                        <% } %>
+                                        <button type="submit">Cadastrar Novo Cartão</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </section> <br>
+                    </section>
+                </div>
+                <div>
+                    <section id="section-cancelar">
+                        <!-- CANCELAR CONTA -->
+                        <section class="cancelar">
+                            <div class="titulos">
+                                <h1>Deseja cancelar sua assinatura?</h1>
+                            </div>
+                            <br>
+                            <section class="cancel">
+                                <button type="submit">Cancelar Assinatura</button>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+            </section>
+        </div>
+
+        <% if(popUp) { %>
+            <div class="pop-up" style="display: flex">
+                <div id="pop-up-content">
+                    <span><button>X</button></span>
+                    <h2><%- mensagem%></h2>
+                    <h4><%- aviso%></h4>
+                </div>
+            </div>
+        <% } %>
+
+>>>>>>> 73d7932016a44e8420f7a1eb5bf5aed67d13f4c0
     </main>
-</body>
-<%- include('partials/footer') %>
-</html>
+
+    <%- include('partials/footer') %>

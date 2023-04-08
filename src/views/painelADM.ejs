@@ -1,5 +1,6 @@
 <head>
     <link rel="stylesheet" href="/stylesheets/<%= pageName %>.css" />
+    <!-- <link rel="stylesheet" href="/stylesheets/partials/footer.css" /> -->
         <script src="/javascripts/<%=js%>.js" defer></script>
 
         <link
@@ -19,8 +20,8 @@
     <section class="content">
         <div id="titulos">
             <h1>Produtos</h1>
-            <a><h3>Filmes \</h3></a>
-            <a><h3>Series</h3></a>
+            <a href="<%= '/painel?tipo=filme' %>" ><h3>Filmes \</h3></a>
+            <a href="<%= '/painel?tipo=serie' %>" ><h3>Series</h3></a>
         </div>
         <div id="content-itens">
             <div id="itens">
@@ -38,44 +39,48 @@
                 <div id="lista-borda">
                     <div id="itens-menu">
                         <ul>
-                            <li>Imagem</li>
+                            <li id="li-imagem">Imagem</li>
                             <hr>
-                            <li>Nome</li>
+                            <li id="li-nome" >Nome</li>
                             <hr>
-                            <li>Categoria</li>
+                            <li id="li-cate">Categoria</li>
                             <hr>
-                            <li>Classificação</li>
+                            <li id="li-class">Classificação</li>
                             <hr>
-                            <li>Ação</li>
+                            <li id="li-acao">Ação</li>
                         </ul>
                     </div>
-                    
-                    <% filme.forEach(element => { %>
-                        <div id="itens-lista">
-                            <ul>
-                                <li><img src="/img/filmes/<%- element.background %>.jpg"/></li>
-                                <hr>
-                                <li><%- element.nome %></li>
-                                <hr>
-                                <li><%- categoria[element.categorias_id -1].nome %></li>
-                                <hr>
-                                <li><%- classificacoes[element.classificacoes_id - 1].nome %></li>
-                                <hr>
-                                <li>
-                                    <form method="POST" action="/painel/editar?_method=PUT" id="form_editar">
-                                        <input id="input-value" name="id" value=<%- element.id %> style="display: none" >
-                                        <button id="bt-editar" type="submit" ><img src="/img/ico/lapis.png" /></button>
-                                    </form>
-                                    <form>
-                                        <input id="inputDelele" name="id" value=<%- element.id %> style="display: none" >
-                                        <button id="bt-excluir" ><img src="/img/ico/icone-x.png" /></button>
-                                    </form>
-                                    
-                                </li>
-                            </ul>
-                        </div>
-                    <% }) %>
-                   
+                    <div id="content-itens-lista">
+                        <% filme.forEach(element => { %>
+                            <div id="itens-lista">
+                                <ul>
+                                    <% if(tipo == 'serie') { %>
+                                        <li id="li-imagem"><img src="/img/series/<%- element.background %>.jpg"/></li>
+                                    <% } else { %>
+                                        <li id="li-imagem"><img src="/img/filmes/<%- element.background %>.jpg"/></li>
+                                    <% } %>
+                                    <hr>
+                                    <li id="li-nome"><%- element.nome %></li>
+                                    <hr>
+                                    <li id="li-cate"><%- categoria[element.categorias_id -1].nome %></li>
+                                    <hr>
+                                    <li id="li-class" ><%- classificacoes[element.classificacoes_id - 1].nome %></li>
+                                    <hr>
+                                    <li id="li-acao">
+                                        <form method="POST" action="/painel/editar?_method=PUT" id="form_editar">
+                                            <input id="input-value" name="id" value=<%- element.id %> style="display: none" >
+                                            <button id="bt-editar" type="submit" ><img src="/img/ico/lapis.png" /></button>
+                                        </form>
+                                        <form>
+                                            <input id="inputDelele" name="id" value=<%- element.id %> style="display: none" >
+                                            <button id="bt-excluir" ><img src="/img/ico/icone-x.png" /></button>
+                                        </form>
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+                        <% }) %>
+                    </div>
                 </div>
             </div>
             <!-- <div id="filtro"></div> -->
@@ -95,4 +100,4 @@
     </div>
 
 </main>
-<%- include('partials/footer')%>
+<!-- <%- include('partials/footer')%> -->

@@ -8,6 +8,7 @@
     --cores-letra:  #FFFFFF;
     --cores-objetos: #580003;
 }
+
 header {
     justify-content: center;
     background-color: var(--background-2);
@@ -154,6 +155,7 @@ body {
     gap: .8rem;
     align-items: baseline;
 }
+
 
 
 button  {

@@ -1,4 +1,4 @@
-const criarTipoModel = (sequelize, dataTypes) => {
+const tipoModel = (sequelize, dataTypes) => {
     const colunas = {
         id: {
             type: dataTypes.INTEGER,
@@ -15,13 +15,13 @@ const criarTipoModel = (sequelize, dataTypes) => {
     };
 
     const opcoes = {
-        tableName: 'tipo_produtos',
+        tableName: 'Tipo_produtos',
         timestamps: false
     };
 
-    const Tipo = sequelize.define('tipo_produtos', colunas, opcoes)
+    const Tipo = sequelize.define('Tipo_produtos', colunas, opcoes)
 
     return Tipo
 };
 
-module.exports = criarTipoModel;
+module.exports = tipoModel;

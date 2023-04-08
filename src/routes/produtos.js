@@ -8,8 +8,9 @@ const validadorFormCreate = require('../middlewares/validadorFormCreate');
 const validadorFormDelete = require('../middlewares/validadorFormDelete');
 const validadorFormRead = require('../middlewares/validadorFormRead');
 const validadorFormUpdate = require('../middlewares/validadorFormUpdate');
-
-const ProdutosController = require('../controllers/ProdutosController');
+const CategoriasController= require('../../controllers/CategoriasController')
+const ProdutosController = require('../../controllers/ProdutosController');
+const CategoriaController = require('../../controllers/CategoriasController');
 
 const FilmesControllers = require('../../controllers/FilmesControllers');
 
@@ -17,10 +18,13 @@ router.use(bodyParse.urlencoded({extended: true}));
 
 router.get('/', ProdutosController.produto);
 
+//router.get('/filmes', FilmesControllers.filmes);
+
 
 router.get('/filmes', ProdutosController.filmes);
 router.get('/series', ProdutosController.series);
-router.get('/categorias', ProdutosController.listar);
+
+router.get('/categorias', FilmesControllers.tipoCategoriaFilme);
 router.get('/cadastroProduto', FilmesControllers.categoriaclassificacaoFilme);
 
 //implementar multer
@@ -45,19 +49,16 @@ router.post('/create', upload.fields([{name:'backgroundCreate'},{name:'imagemCre
 // router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
 
 router.get('/teste', FilmesControllers.index);
- 
+
+router.get('/maisFilmes', FilmesControllers.maisFilmes); 
+router.get('/maisSeries', FilmesControllers.maisFilmes); 
 // deletar produto
 router.delete('/remove', validadorFormDelete, FilmesControllers.deletaProduto);
 
 // atualiza produto
-router.put('/edit', validadorFormUpdate, FilmesControllers.atualizaProduto);
+router.put('/edit', upload.fields([{name:'backgroundUpdate'},{name:'imagemUpdate'}]), validadorFormUpdate, FilmesControllers.atualizaProduto);
 
 // SEQUELIZE
 router.get('/search', FilmesControllers.buscar);
-
-router.get('/pesquisa', (req, res) => {
-    res.render('pesquisa', {pageName: 'pesquisa', js: ''});
-})
-
 
 module.exports = router;
