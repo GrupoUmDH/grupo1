@@ -16,6 +16,9 @@
                         <h3>Itens: </h3>
                     </div>
                     <div id="itens-carrinho">
+                        <% if(!itens[0]) { %>
+                            <h3>SEU CARRINHO ESTA VAZIO</h3>
+                        <% } %>
                         <% for(const filme of itens) { %>
                             <section class="item">
                                 <input type="hidden" value="<%=filme.id%>" id="id" name="id">
@@ -31,8 +34,8 @@
                                         </p>
                                     </div>
                                     <div>
-                                        <form action="/carrinho" method="GET" id="montarCarrinho">
-                                            <input type="hidden" name="itensCarrinho" id="itensCarrinho" />
+                                        <form action="/carrinho" method="GET" id="deletaItem">
+                                            <input type="hidden" name="itensCarrinho" id="deletaItem"/>
                                             <button type="submit">
                                                 <img class="remover" src="/img/ico/lixo.png" />
                                             </button>
@@ -57,18 +60,26 @@
                             </span>
                         </div>
                         <hr>
-                        <div>
+                        <div id="div-cupom">
                             <h3>CUPOM DE DESCONTO</h3>
-                            <form id="valida-cupom">
-                                <input name="cupom" type="text" placeholder="CUPOM" maxlength="12">
-                                <button id="bt-valida">Validar</button>
+                            <form action="/carrinho" method="GET" id="montarCarrinho">
+                                <input type="hidden" name="itensCarrinho" id="itensCarrinho" />
+                                <input name="cupom" type="text" placeholder="CUPOM" maxlength="12" value="<%= dadosCupom.cupom %>">
+                                <button type="submit" id="bt-valida">Validar</button>
+                                <h5 id="span-desconto"
+                                    <% if(desconto == 0) { %>
+                                        style="display: none;"
+                                    <% } else { %>
+                                        style="display: block;"
+                                    <% } %>
+                                >O desconto de R$ <%= desconto %> foi aplicado!</h5>
                             </form>
                         </div>
                         <hr>
                         <div>
                             <h2>TOTAL</h2>
                             <span>
-                                R$ <%= valor%>
+                                R$ <%= total%>
                             </span>
                         </div>
                         <br>

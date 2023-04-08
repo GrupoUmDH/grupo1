@@ -9,7 +9,8 @@ const cupomModel = (sequelize, dataTypes) => {
 
         cupom: {
             type: dataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            unique: true,
         },
 
         valor: {
@@ -27,7 +28,9 @@ const cupomModel = (sequelize, dataTypes) => {
         timestamps: false
     };
 
-    const cupom = sequelize.define('Cupons', colunas, opcoes)
+    const cupom = sequelize.define('Cupom', colunas, opcoes)
 
     return cupom
 };
+
+module.exports = cupomModel;

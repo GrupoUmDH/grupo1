@@ -65,6 +65,8 @@ section#section-carrinho {
     flex-direction: column;
     background-color: var(--background-2);
     margin-right: 2rem;
+    /* width: 30rem; */
+    max-width: 37rem;
 }
 
 div#itens-carrinho {
@@ -72,6 +74,13 @@ div#itens-carrinho {
     overflow: overlay;
     margin-right: 2rem;
     
+}
+
+div#itens-carrinho h3 {
+    color: red;
+    text-align: center;
+    padding-top: 5rem;
+    padding-left: 3rem;
 }
 
 .item {
@@ -148,7 +157,8 @@ div#itens-carrinho {
 }
 
 .pagamento {
-    max-height: 30rem;
+    max-height: 37rem;
+    height: 30rem;
     font-size: 1.5rem;
     color: var(--cores-chaves);
     display: flex;
@@ -224,9 +234,16 @@ input[name="cupom"] {
     border: 0;
 }
 
-form#valida-cupom {
+h5#span-desconto {
+    text-align: center;
+    font-size: 0.75rem;
+    color: white;
+}
+
+div#div-cupom form#montarCarrinho {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: flex-end;
 }
 

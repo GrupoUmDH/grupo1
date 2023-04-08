@@ -145,6 +145,7 @@ module.exports = {
             classificacao,
         });
     },
+    
     tipoCategoriaFilme: async (req, res) => {
         const { tipo, categoria } = req.query;
         const categorias = await Categorias.findAll();

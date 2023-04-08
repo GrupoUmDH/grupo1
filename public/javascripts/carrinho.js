@@ -1,7 +1,6 @@
 const sectionFilme = document.querySelectorAll("section.item");
 const filmesNoCariinho = document.querySelector("form input#itensCarrinho");
 const removeBtns = document.querySelectorAll("main form#montarCarrinho");
-//let delCarrinho = document.querySelectorAll("main form input");
 
 const popUp = document.querySelector("div.pop-up");
 const popUp_sair = document.querySelector("div.pop-up span button");
@@ -11,9 +10,6 @@ popUp_sair.addEventListener("click", (event) => {
     popUp.style.display = "none";
 });
 
-//console.log(filmesNoCariinho.value);
-
-//console.log(filme.id);
 removeBtns.forEach((btn, index) => {
     btn.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -31,3 +27,4 @@ removeBtns.forEach((btn, index) => {
         this.submit();
     });
 });
+

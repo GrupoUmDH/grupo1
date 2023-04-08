@@ -1,5 +1,4 @@
-const { Filme, Usuario, CadastroUsuario} = require("../../models");
-const CarrinhoModel = require('../models/CarrinhoModel');
+const { Filme, Usuario, CadastroUsuario, Cupom} = require("../../models");
 
 const view = {
     pageName: "carrinho",
@@ -9,6 +8,9 @@ const view = {
     itens: {},
     qtd: 0,
     valor: 0,
+    desconto: 0,
+    total: 0,
+    dadosCupom: {},
     popUp: false,
     mensagem: "mensagem",
     aviso: "aviso",
@@ -16,6 +18,8 @@ const view = {
 
 module.exports = {
     carrinho: async (req, res) => {  
+
+        //console.log(req.query);
 
         if(!req.session) {
             view.popUp = true;
@@ -25,8 +29,7 @@ module.exports = {
             view.popUp = false;
         }
 
-        const { itensCarrinho } = req.query;
-        //console.log(itensCarrinho);
+        const { itensCarrinho, cupom } = req.query;
 
         const produtos = [];
 
@@ -46,10 +49,37 @@ module.exports = {
             soma += parseFloat(element.valor.replace(",", "."));
         });
         view.valor = soma.toFixed(2).replace(".", ",");
-        
 
+        //view.total = view.valor;
+
+        if(!cupom){
+            view.total = view.valor;
+            view.desconto = 0;
+        } else {
+           
+            const aplicaCupom = await Cupom.findOne({
+                where: { cupom : cupom},
+            });
+    
+            if(aplicaCupom != ""){
+                if(view.valor == 0){
+                    view.total = view.soma;
+                    view.desconto = 0;
+                } else {
+                    view.dadosCupom = aplicaCupom;
+                    console.log(view.dadosCupom);
+                    view.desconto = (aplicaCupom.valor * soma )/100; 
+                    view.total = (soma - view.desconto).toFixed(2).replace(".", ",");
+                }
+            } else {
+                view.total = view.soma;
+                view.desconto = 0;
+            }
+        }
+        
         res.render("carrinho", view);
     },
+
     compra: (req, res) => {
         // const compras = CarrinhoModel.compra();
         return res.render("compra", {
@@ -67,14 +97,14 @@ module.exports = {
     },
     adiciona: (req, res) => {
         //console.log("ADICIONANDO: "+req.body.itensCarrinho)
-        CarrinhoModel.attCarrinho(JSON.parse(req.body.itensCarrinho));
+        //CarrinhoModel.attCarrinho(JSON.parse(req.body.itensCarrinho));
     },
     deletaItem: (req, res) => {  
         const ref  = req.body.itensCarrinho;
 
         //console.log(ref);
 
-        CarrinhoModel.attCarrinho(ref);
+        //CarrinhoModel.attCarrinho(ref);
 
         return res.redirect("/carrinho");
     }, 
