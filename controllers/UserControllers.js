@@ -12,6 +12,7 @@ const view = {
     js: "login",
     users: {},
     dados: {},
+    cartao: {},
     popUp: false,
     mensagem: "mensagem",
     aviso: "aviso",
@@ -31,8 +32,7 @@ module.exports = {
                 res.render('login', view);
 
             } else {
-                const idUsuario = 
-                CadastroUsuario.findOne({
+                const idUsuario = CadastroUsuario.findOne({
                     where: {
                         id_usuario: id,
                     },

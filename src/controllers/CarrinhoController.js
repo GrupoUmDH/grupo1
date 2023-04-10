@@ -62,6 +62,8 @@ module.exports = {
 
                 view.cartao = await Cartao.findAll({
                      where: { id_cadastrousuario: view.dados.id}
+                }).catch(erro => {
+                    
                 });
             }
             
