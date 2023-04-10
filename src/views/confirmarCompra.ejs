@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+
+<main>
+    <div>
+        <img src="/img/ico/confirmarcao.png" />
+        <h2><%- mensagem %></h2>
+        <div>
+            <% if(metodo-pagamento == "cartao") { %>
+                <div></div>
+            <% } %>
+
+            <% if(metodo-pagamento=="pix" ) { %>
+                <div>
+                    <img src="/img/pagamento/PixLumiereQR.jpg"> 
+                </div>
+            <% } %>
+
+            <% if(metodo-pagamento=="boleto" ) { %>
+                <div></div>
+            <% } %>
+            
+        </div>
+        
+        <div>
+            <button>Painel Usuário</button>
+        </div>
+    </div>
+</main>
+
+<%- include('partials/footer') %>

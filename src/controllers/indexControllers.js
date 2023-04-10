@@ -1,6 +1,4 @@
-const ProdutosModel = require('../models/ProdutosModel');
 const { Filme } = require('../../models');
-
 const api = require("../request/search");
 
 const modelaFilmes = (apiResposta) =>{
@@ -35,15 +33,8 @@ module.exports = {
             });
         
         } catch (error) {
-            const listaFilmes = ProdutosModel.filme();
-            const listaSeries = ProdutosModel.series();
-
-            return res.render("index", {
-                listaFilmes,
-                listaSeries,
-                pageName: "home",
-                js: "index",
-            });
+            console.log(error);
+            res.send("Erro de servidor..");
         }
 
     },

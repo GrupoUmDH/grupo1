@@ -9,25 +9,16 @@ const refer = document.querySelectorAll("section div.filme-show a");
 div_popUp.style.display = "none";
 
 const nomeFilme = document.getElementById('nome-filme');
-const descrFilme = document.querySelector('#descri-filme>p');
-const coverFilme = document.querySelector('.cover-filme')
-const classificacao = document.querySelector('.classificacao>img');
-const valor = document.querySelector(".comprar>p");
-const bkFilme = document.querySelector('#bk-filme');
 let id = document.getElementById('id').value ;
 
-let carrinho = []
+let produto = document.querySelector('input#itensCarrinho');
 
-id = (JSON.parse(localStorage.carrinho).length) + 1 ;
+let carrinho = []
 
 const filme = {
     id,
     nome: nomeFilme.innerText,
-    descricao: descrFilme.innerText,
-    classificacao: classificacao.src,
-    valor: valor.innerText,
-    imagem: coverFilme.src,
-};
+}
 
 btnComprar.addEventListener('click', () => {
     carrinhoLocal();

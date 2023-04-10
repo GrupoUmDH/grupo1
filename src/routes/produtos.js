@@ -8,21 +8,19 @@ const validadorFormCreate = require('../middlewares/validadorFormCreate');
 const validadorFormDelete = require('../middlewares/validadorFormDelete');
 const validadorFormRead = require('../middlewares/validadorFormRead');
 const validadorFormUpdate = require('../middlewares/validadorFormUpdate');
-const CategoriasController= require('../../controllers/CategoriasController')
-const ProdutosController = require('../../controllers/ProdutosController');
+const CategoriasController= require('../../controllers/CategoriasController');
 const CategoriaController = require('../../controllers/CategoriasController');
 
 const FilmesControllers = require('../../controllers/FilmesControllers');
 
 router.use(bodyParse.urlencoded({extended: true}));
 
-router.get('/', ProdutosController.produto);
+router.get('/', FilmesControllers.index);
 
 //router.get('/filmes', FilmesControllers.filmes);
 
-
-router.get('/filmes', ProdutosController.filmes);
-router.get('/series', ProdutosController.series);
+router.get('/filmes', FilmesControllers.maisFilmes);
+router.get('/series', FilmesControllers.maisFilmes);
 
 router.get('/categorias', FilmesControllers.tipoCategoriaFilme);
 router.get('/cadastroProduto', FilmesControllers.categoriaclassificacaoFilme);
@@ -40,13 +38,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage: storage, limits: {fileSize: 10000000}});
 
-router.get('/produtos/:id/:nome?', ProdutosController.listaProduto);
-
 //criar produto
 router.post('/create', upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), validadorFormCreate, FilmesControllers.createProduto);
-
-//buscar produto
-// router.get('/search', validadorFormRead, ProdutosController.buscaProduto);
 
 router.get('/teste', FilmesControllers.index);
 
@@ -58,7 +51,7 @@ router.delete('/remove', validadorFormDelete, FilmesControllers.deletaProduto);
 // atualiza produto
 router.put('/edit', upload.fields([{name:'backgroundUpdate'},{name:'imagemUpdate'}]), validadorFormUpdate, FilmesControllers.atualizaProduto);
 
-// SEQUELIZE
+// BUSCA O FILME NA API EXTERNA.
 router.get('/search', FilmesControllers.buscar);
 
 module.exports = router;

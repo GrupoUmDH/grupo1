@@ -6,6 +6,7 @@ const loginSession = require('../middlewares/loginSession');
 
 
 router.get('/', loginSession, userController.index);
+router.post('/', loginSession, userController.index);
 
 
 router.post('/user', userController.login);

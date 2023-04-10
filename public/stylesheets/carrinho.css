@@ -13,7 +13,6 @@
 body {
     padding: 0;
     margin: 0;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,31 +23,81 @@ body {
 
 /* CONFIGURAÇÃO IMAGEM CENTRAL*/
 main {
+    width: 95vw;
     display: flex;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    align-items: baseline;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* align-content: center; */
+}
+
+div#titulo {
+    margin-left: 3rem;
+}
+
+div#titulo h1 {
+    color: var(--cores-chaves);
+    margin-bottom: .5rem;
+    
+}
+
+div#titulo h3 {
+    color: var(--cores-chaves);
+    margin-bottom: .5rem;
+    margin-top: .5rem;
 }
 
 /*SECTION CARRINHO*/
 
+section#section-carrinho {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 1rem;
+}
+
 .content-carrinho {
     display: flex;
     flex-direction: column;
+    background-color: var(--background-2);
+    margin-right: 2rem;
+    /* width: 30rem; */
+    max-width: 37rem;
+}
+
+div#itens-carrinho {
+    max-height: 27rem;
+    overflow: overlay;
+    margin-right: 2rem;
+    
+}
+
+div#itens-carrinho h3 {
+    color: red;
+    text-align: center;
+    padding-top: 5rem;
+    padding-left: 3rem;
 }
 
 .item {
     margin: 0 1.2rem;
-    align-items: center;
+    align-items: stretch;
     display: flex;
     max-width: 35rem;
     margin-bottom: 1rem;
+    justify-content: space-evenly;
+    align-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .imagem-produto {
-    height: 15rem;
-    border-radius: 2rem;
-    width: auto;
+    width: 7rem;
+    border-radius: .5rem;
 }
 
 .descricao-produto {
@@ -57,7 +106,7 @@ main {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--background-2);
+    background-color: var(--background-color);
 }
 
 .descricao-produto .container-preco {
@@ -94,7 +143,6 @@ main {
 }
 
 .descricao-produto button {
-    background-color: var(--cores-objetos);
     border: none;
     border-radius: 2rem;
     font-weight: 600;
@@ -109,22 +157,20 @@ main {
 }
 
 .pagamento {
-    align-self: flex-start;
-    width: 25rem;
+    max-height: 37rem;
+    height: 30rem;
     font-size: 1.5rem;
-    gap: 2rem;
-    flex-shrink: 0;
     color: var(--cores-chaves);
     display: flex;
-    flex-direction: column;
-    padding-right: 1rem;
 }
 
 .resumo {
-    gap: 3rem;
     background-color: var(--background-2);
-    border-radius: 1rem;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: nowrap;
 }
 
 .resumo h3 {
@@ -179,107 +225,355 @@ button a {
     color: var(--cores-letra);
 }
 
-/*CONFIGURAÇÃO FOOTER*/
+input[name="cupom"] {
+    height: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    border: 0;
+}
 
-hr {
+h5#span-desconto {
+    text-align: center;
+    font-size: 0.75rem;
+    color: white;
+}
+
+div#div-cupom form#montarCarrinho {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+button#bt-valida {
     background-color: var(--cores-chaves);
-    color: var(--cores-chaves);
-    border: var(--cores-chaves);
+    height: 2rem;
+    width: 5rem;
+    border-radius: .5rem;
+    margin: .3rem;
+}
+
+/* TRATAMENTO DOS INPUTS */
+
+input[name="nome"] {
+    width: 25rem;
+}
+input[name="sobrenome"] {
+    width: 25rem;
+}
+input[name="email"] {
+    width: 25rem;
+}
+input[name="cpf"] {
+    width: 15rem;
+}
+input[name="codigo-postal"] {
+    width: 10rem;
+}
+input[name="endereco"] {
+    width: 50rem;
+}
+input[name="bairro"] {
+    width: 18rem;
+}
+input[name="cidade"] {
+    width: 15rem;
+}
+input[name="estado"] {
+    width: 15rem;
+}
+input[name="pais"] {
+    width: 10rem;
+}
+
+/* POPUP */
+.pop-up {
     width: 100%;
-    height: 2px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .6);
+    justify-content: space-evenly;
+    z-index: 10;
+}
+
+div#pop-up-content {
+    width: 25rem;
+    height: 18rem;
+    background-color: darkred;
+    padding: .7rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div#pop-up-content h2 {
+    text-align: center;
+    color: white;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+div#pop-up-content h4 {
+    padding-bottom: 1rem;
+    text-decoration: overline;
+    font-size: small;
+    color: darkgray;
+}
+
+div#aviso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div#aviso a {
+    color: white;
+    font-size: larger;
+    text-decoration: none;
+}
+
+
+div.pop-up span button {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: xx-large;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: .5rem;
+}
+
+div.pop-up span {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    flex-direction: row;
+}
+
+
+
+div.dados-completos h1 {
+    color: red;
+    opacity: .7;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    font-size: x-large;
+}
+
+div.dados-completos h4 {
+    color: darkred;
+    font-size: small;
+}
+
+div.dados-completos p {
+    border: .3rem gray;
+    color: white;
+    opacity: .4;
+    margin-bottom: .2rem;
+    margin-top: .1rem;
+}
+
+div#endereco {
     display: flex;
     flex-direction: row;
-    margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
-.footer > hr {
-    width: 100vw;
+div#endereco div {
+    margin-right: 3rem;
+    background: border-box;
 }
 
-footer {
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-    font-family: 'Inter' Arial, Helvetica, sans-serif;
-    color: var(--cores-chaves);
+div.dados-completos button {
+    width: 15rem;
+    height: 2rem;
+    background-color: var(--cores-chaves);
+    color: var(--cores-letra);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+    border-radius: .5rem;
+    margin-top: 2rem;
+}
+
+div.dados-completos div#bt-dados {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
     align-items: center;
+}
+
+.dados-completos {
+    width: auto;
+}
+
+div.dados-completos h5 {
+    margin-top: .3rem;
+}
+
+
+/* FORMAS DE PAGAMENTO */
+section#section-pagamento {
+    width: 100%;
+    background-color: var(--background-2);
+    padding: 1rem;
+}
+
+section#section-pagamento h2{
+    color: var(--cores-chaves);
+}
+
+.menu-pagamento {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.pay-button {
+    width: 100%;
+}
+
+form#finalizaCompra {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-pagamento {
+    width: 100%;
+}
+
+.metodo-pagamento {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.metodo-pagamento ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+
+li.nav-item {
+    border: 0;
+    font-size: unset;
+    font-weight: bold;
+    padding: .5rem 2rem .5rem .5rem;
+    color: var(--cores-letra);
+    list-style-type: none;
+}
+
+li.nav-item a {
+    text-decoration: none;
+}
+
+div.cartao img {
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+div.cartao {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-bottom: .6rem;
+    padding-top: .3rem;
+    border-top: 2px solid darkred;
+}
+
+div.content-item div.cartao div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+div.cartao div h5 {
+    padding-left: 2rem;
+    padding-right: 2rem;
     text-align: center;
 }
 
-@media (max-width: 820px) {
-    main {
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        margin-top: 2rem;
-    }
-
-    .pagamento {
-        align-self: center;
-        width: 80%;
-        align-items: center;
-        padding-right: 0;
-    }
-    .pagamento > button {
-        width: 100%;
-    }
-
+.content-tipo-pay {
+    display: flex;
+    padding-top: 2rem;
+    color: white;
+    justify-content: space-between;
 }
 
-@media (max-width: 680px) {
-    .itens {
-        width: 100%;
-        margin: 0;
-    }
-    .item {
-        width: 100%;
-        margin: 0;
-        gap: 0;
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 1rem;
-        justify-content: center;
-    }
-    .imagem-produto{
-        width: auto;
-        height: 7rem;
-        border-radius: 10px;
-    }
+input[name="cvv"] {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    margin-right: 2rem;
+}
 
-    .descricao-produto {
-        width: 70%;
-        height: 7rem;
-        align-items: center;
-    }
+input[name="numero_cartao"] , input[id= "numero_cartao"]{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    margin-right: 2rem;
+}
 
-    .descricao-produto p {
-        display: none;
-    }
+input[name="nome_completo"] , input[id= "nome_completo"] {
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    margin-right: 2rem;
+}
 
-    .descricao-produto h2 {
-        font-size: 1rem;
-    }
+input[name="vencimento"] , input[id= "vencimento"] {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    margin-right: 2rem;
+}
 
-    .descricao-produto .container-preco {
-        gap: 0;
-    }
+input:disabled {
+    background-color: transparent;
+    color: white;
+    border: 0;
+}
 
-    .descricao-produto span {
-        font-size: 1rem;
-    }
+.content-item {
+    width: 100%;
+}
 
-    #indicacao {
-        display: none;
-    }
+div.cad-cartao a {
+    color: var(--cores-chaves);
+    text-decoration: blink;
+}
 
-    .resumo>div h2 {
-        font-size: 1rem;
-    }
+.cad-cartao {
+    padding-bottom: 2rem;
+}
 
-    .resumo h3 {
-        font-size: 1rem;
-    }
-
-    .resumo div span {
-        font-size: 1.3rem;
-    }
+div.content-tipo-pay form.formulario{
+    display: flex;
 }
