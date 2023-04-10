@@ -52,6 +52,7 @@ module.exports = {
                 view.cartao = null;
             } else {
                 const { nome, email } = req.session;
+
                 view.users = await Usuario.findOne({
                     where : { email: email },
                 });
@@ -59,12 +60,13 @@ module.exports = {
                 view.dados = await CadastroUsuario.findOne({
                     where: { id_usuario : view.users.id},
                 });
-
-                view.cartao = await Cartao.findAll({
-                     where: { id_cadastrousuario: view.dados.id}
-                }).catch(erro => {
-                    
-                });
+                
+                if (view.dados) {
+                    view.cartao = await Cartao.findAll({
+                        where: { id_cadastrousuario: view.dados.id },
+                    });
+                } 
+                
             }
             
         }
