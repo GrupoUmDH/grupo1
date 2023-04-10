@@ -12,6 +12,7 @@ const view = {
     desconto: 0,
     total: 0,
     dadosCupom: {},
+    metodo_pagamento: "",
     popUp: false,
     mensagem: "mensagem",
     aviso: "aviso",
@@ -45,6 +46,7 @@ module.exports = {
 
                 view.users = {};
                 view.dados = {};
+                view.cartao = null;
             } else {
                 const { nome, email } = req.session;
                 view.users = await Usuario.findOne({
@@ -114,6 +116,7 @@ module.exports = {
             });
 
             if(metodo_pagamento == "cartao"){
+                view.metodo_pagamento = "cartao";
                 if(numero_cartao.length >= 16 && vencimento.length >=4 && cvv.length >= 3 && nome_completo != ""){
                     
                     const novoCard = {
@@ -136,11 +139,13 @@ module.exports = {
             }
 
             if(metodo_pagamento == "pix"){
-                res.send("PIX");
+                view.metodo_pagamento = "pix";
+                res.render("confirmarCompra", view);
             }
     
             if(metodo_pagamento == "boleto"){
-                res.send("BOLETO");
+                view.metodo_pagamento = "boleto";
+                res.render("confirmarCompra", view);
             }
 
         } else {
