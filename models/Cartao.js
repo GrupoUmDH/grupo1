@@ -18,7 +18,7 @@ const cartaoModel = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false
         },
-        cvc: {
+        cvv: {
             type: dataTypes.STRING,
             allowNull: false
         },

@@ -1,6 +1,4 @@
-
 const { Filme } = require('../../models');
-
 const api = require("../request/search");
 
 const modelaFilmes = (apiResposta) =>{

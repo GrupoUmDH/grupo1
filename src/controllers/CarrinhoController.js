@@ -5,7 +5,7 @@ const view = {
     js: "carrinho",
     users: {},
     dados: {},
-    cartão: {},
+    cartao: {},
     itens: {},
     qtd: 0,
     valor: 0,
@@ -17,34 +17,50 @@ const view = {
     aviso: "aviso",
 };
 
+function idItens(itensCarrinho){
+    const index = [];
+    for(const id of JSON.parse(itensCarrinho)){
+        index.push(id.id);
+    };
+    return index;
+};
+
 module.exports = {
     carrinho: async (req, res) => {  
+
         const { itensCarrinho, cupom } = req.query;
-        const { nome, email } = req.session;
-        const produtos = [];
+        const produtos = idItens(itensCarrinho);
 
-        console.log(req.session);
-
-        if(!req.session.email) {
+        if(!req.session) {
             view.popUp = true;
-            view.mensagem = "Você nao esta logado.";
-            view.aviso = "Para finalizar a compra, faça login ou cadastre-se!!!";
+            view.mensagem = "Você nao esta logado!!!";
+            view.aviso = "para fazer login/cadastro e continuar suas compras...";
         } else {
             view.popUp = false;
 
-            view.users = await Usuario.findOne({
-                where : { email: email },
-            });
+            if(!req.session.email){
+                view.popUp = true;
+                view.mensagem = "Você nao esta logado!!!";
+                view.aviso = "para fazer login/cadastro e continuar suas compras...";
 
-            view.dados = await CadastroUsuario.findOne({
-                where: { id_usuario : view.users.id},
-            });
+                view.users = {};
+                view.dados = {};
+            } else {
+                const { nome, email } = req.session;
+                view.users = await Usuario.findOne({
+                    where : { email: email },
+                });
+    
+                view.dados = await CadastroUsuario.findOne({
+                    where: { id_usuario : view.users.id},
+                });
+
+                view.cartao = await Cartao.findAll({
+                     where: { id_cadastrousuario: view.dados.id}
+                });
+            }
+            
         }
-
-        for(const id of JSON.parse(itensCarrinho)){
-            produtos.push(id.id);
-        };
-        
         const filme = await Filme.findAll({
             where: {id: produtos}
         });
@@ -60,7 +76,7 @@ module.exports = {
 
         if(!cupom){
             view.total = view.valor;
-            view.desconto = 0;
+            view.desconto = 0; 
         } else {
             const aplicaCupom = await Cupom.findOne({
                 where: { cupom : cupom},
@@ -83,6 +99,53 @@ module.exports = {
         }
         
         res.render("carrinho", view);
+    },
+
+    confirmaCompra: async (req, res) => {
+
+        console.log(req.query);
+        const { cupom, itens, total } = req.body;
+        const { metodo_pagamento ,numero_cartao, nome_completo, vencimento, cvv, salvar, id_usuario} = req.body;
+        const { email } = req.session;
+
+        if(email){
+            view.dados = await CadastroUsuario.findOne({
+                where: { id_usuario: id_usuario}
+            });
+
+            if(metodo_pagamento == "cartao"){
+                if(numero_cartao.length >= 16 && vencimento.length >=4 && cvv.length >= 3 && nome_completo != ""){
+                    
+                    const novoCard = {
+                        numero_cartao: numero_cartao,
+                        nome_completo: nome_completo,
+                        vencimento: vencimento,
+                        cvv: cvv,
+                        id_cadastrousuario: view.dados.id,
+                    };
+
+                    // if(salvar){
+                    //     await Cartao.create(novoCard);
+                    // }
+                    console.log(req.body);
+                    res.render('confirmarCompra', view);
+
+                } else {
+                    res.send("varifique os dados do cartão");
+                }
+            }
+
+            if(metodo_pagamento == "pix"){
+                res.send("PIX");
+            }
+    
+            if(metodo_pagamento == "boleto"){
+                res.send("BOLETO");
+            }
+
+        } else {
+            res.redirect('/login')
+        }
     },
 
 };

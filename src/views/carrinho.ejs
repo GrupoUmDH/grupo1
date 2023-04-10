@@ -133,30 +133,88 @@
                     </div>
                 </div>
             </section>
-            <section id="section-pagamento">
-                <div class="payment">
-                    <div class="input-pay">
-                        <input class="check" type="radio" name="pay">
-                        <img src="/img/pagamento/credit-card.svg " alt="">
-                    </div>
-                    <div class="input-pay">
-                        <input class="check" type="radio" name="pay">
-                        <img src="/img/pagamento/pag-seguro.svg " alt="">
-                    </div>
-                    <div class="input-pay">
-                        <input class="check" type="radio" name="pay">
-                        <img src="/img/pagamento/pix.svg " alt="">
-                    </div>
-                    <div class="input-pay">
-                        <input class="check" type="radio" name="pay">
-                        <img src="/img/pagamento/boleto.svg " alt="">
-                    </div>
-                </div>
-            </section>
-        </div>
+       
         <% } %>
-        <div class="pay-button">
-            <button type="submit">Confirmar</button>
+        <section id="section-pagamento">
+            <div class="pay-button">
+                <form id="finalizaCompra" method="post" action="/carrinho/confirmaCompra">
+                    <div class="content-pagamento">
+                        <div class="menu-pagamento">
+                            <h2>Formas de Pagamento</h2>
+                            <div class="metodo-pagamento">
+                                <ul>
+                                    <li class="nav-item"><a class="nav-link">Cartão de Crédito</a></li>
+                                    <li class="nav-item"><a class="nav-link">Pix</a></li>
+                                    <li class="nav-item"><a class="nav-link">Boleto Bancário</a></li>
+                                </ul>
+                                <div class="content-tipo-pay">
+                                    <div class="content-item">
+                                        <% if(!cartao) {%>
+                                            <h5> PAGAMENTO COM CARTÃO: Preencha os dados</h5>
+                                            <div class="cartao">
+                                                <img src="/img/pagamento/credit-card.svg"/>
+                                                <input placeholder="Número do cartão" type="text" name="numero_cartao" maxlength="19">
+                                                <input placeholder="Nome como no cartão" type="text" name="nome_completo">
+                                                <input placeholder="MM/AA" type="text" name="vencimento" maxlength="5">
+                                                <input placeholder="CVV" type="text" name="cvv" maxlength="3"/>
+                                            </div>
+                                            <input type="checkbox" name="salvar" checked />
+                                            <label for="salvar"> *Salver este cartão para comprar futuras.</label>
+                                        <% } else { %>
+                                            <% for(const card of cartao) { %>
+                                                <div class="cartao">
+                                                    <img src="/img/pagamento/credit-card.svg"/>
+                                                    <div>
+                                                        <div style="display: none;"> 
+                                                            <input name="nome_completo" value="<%= card.nome_completo %>"/>
+                                                            <input name="numero_cartao" value="<%= card.numero_cartao %>"/>
+                                                            <input name="vencimento" value="<%= card.vencimento %>" />
+                                                        </div>
+                                                        <input name="nome_completo" value="<%= card.nome_completo %>" disabled />
+                                                        <input name="numero_cartao" value="<%= card.numero_cartao %>" disabled />
+                                                        <input name="vencimento" value="<%= card.vencimento %>" disabled/>
+                                                        <input name="cvv" type="text" placeholder="CVV" maxlength="3" value="<%= card.cvv %>"/>
+                                                        <input name="selectCartao" type="radio" value="<%= card.id %>" /> 
+                                                        <label for="selectCartao">  Selecionar</label>
+                                                    </div>
+                                                </div>
+                                            <% }%>
+                                            <div class="cad-cartao">
+                                                <a>Cadastrar novo cartão</a>
+                                            </div>
+                                        <% } %>
+                                        
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="pix">
+                                            UM CODIGO DE PIX SERA GERADO AO CONFIRMAR A COMPRA.
+                                        </div>
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="boleto">
+                                            <h5>UM BOLETO SERÁ GERADO E ENVIADO PARA O E-MAIL CADASTRADO,</h5>
+                                            <h5>OU PODERÁ ACESSAR-LO NO PAINEL DO USUÁRIOS, AO CONFIRMAR A COMPRA.</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="display: none;">
+                        <input name="data" value="<%- new Date() %>">
+                        <input name="metodo_pagamento" value="">
+                        <input name="id_usuario" value="<%= users.id %>">
+                        <% for(const filme of itens) { %>
+                            <input name="itens" value="<%= filme.id %>">
+                        <% } %>
+                        <input name="cupom" value="<%= dadosCupom.id %>">
+                        <input name="total" value="<%= total %>">
+                    </div>
+                    <button type="submit">Confirmar</button>
+                </form>
+            </div>
+        </section>
         </div>
 
         <% if(popUp) { %>
@@ -164,7 +222,10 @@
                 <div id="pop-up-content">
                     <span><button>X</button></span>
                     <h2><%- mensagem%></h2>
-                    <h4><%- aviso%></h4>
+                    <div id="aviso">
+                        <a href="<%- '/login' %>"><h4>CLIQUE AQUI</h4></a>
+                        <h4><%- aviso%></h4>
+                    </div>
                 </div>
             </div>
         <% } %>

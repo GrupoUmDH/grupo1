@@ -291,8 +291,8 @@ input[name="pais"] {
 /* POPUP */
 .pop-up {
     width: 100%;
-    height: 100vh;
-    position: absolute;
+    height: 100%;
+    position: fixed;
     top: 0;
     left: 0;
     display: none;
@@ -301,6 +301,7 @@ input[name="pais"] {
     align-items: center;
     background-color: rgba(0, 0, 0, .6);
     justify-content: space-evenly;
+    z-index: 10;
 }
 
 div#pop-up-content {
@@ -323,10 +324,22 @@ div#pop-up-content h2 {
 }
 
 div#pop-up-content h4 {
-    padding: 1rem;
+    padding-bottom: 1rem;
     text-decoration: overline;
     font-size: small;
     color: darkgray;
+}
+
+div#aviso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div#aviso a {
+    color: white;
+    font-size: larger;
+    text-decoration: none;
 }
 
 
@@ -412,4 +425,155 @@ div.dados-completos div#bt-dados {
 
 div.dados-completos h5 {
     margin-top: .3rem;
+}
+
+
+/* FORMAS DE PAGAMENTO */
+section#section-pagamento {
+    width: 100%;
+    background-color: var(--background-2);
+    padding: 1rem;
+}
+
+section#section-pagamento h2{
+    color: var(--cores-chaves);
+}
+
+.menu-pagamento {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.pay-button {
+    width: 100%;
+}
+
+form#finalizaCompra {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-pagamento {
+    width: 100%;
+}
+
+.metodo-pagamento {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.metodo-pagamento ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+
+li.nav-item {
+    border: 0;
+    font-size: unset;
+    font-weight: bold;
+    padding: .5rem 2rem .5rem .5rem;
+    color: var(--cores-letra);
+    list-style-type: none;
+}
+
+li.nav-item a {
+    text-decoration: none;
+}
+
+div.cartao img {
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+div.cartao {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-bottom: .6rem;
+    padding-top: .3rem;
+    border-top: 2px solid darkred;
+}
+
+div.content-item div.cartao div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+div.cartao div h5 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+}
+
+.content-tipo-pay {
+    display: flex;
+    padding-top: 2rem;
+    color: white;
+    justify-content: space-between;
+}
+
+input[name="cvv"] {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    margin-right: 2rem;
+}
+
+input[name="numero_cartao"] , input[id= "numero_cartao"]{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    margin-right: 2rem;
+}
+
+input[name="nome_completo"] , input[id= "nome_completo"] {
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    margin-right: 2rem;
+}
+
+input[name="vencimento"] , input[id= "vencimento"] {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    margin-right: 2rem;
+}
+
+input:disabled {
+    background-color: transparent;
+    color: white;
+    border: 0;
+}
+
+.content-item {
+    width: 100%;
+}
+
+div.cad-cartao a {
+    color: var(--cores-chaves);
+    text-decoration: blink;
+}
+
+.cad-cartao {
+    padding-bottom: 2rem;
+}
+
+div.content-tipo-pay form.formulario{
+    display: flex;
 }

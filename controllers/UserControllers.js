@@ -20,7 +20,6 @@ const view = {
 
 module.exports = {
     index: async (req, res, next) => {
-
         const { id, email } = req.session;
 
         try {
@@ -151,7 +150,6 @@ module.exports = {
 
     },
     cadastro: async (req, res, next) => {
-        console.log(req.session);
 
         const { nome_usuario, email, senha } = req.body;
         const hashedPassword = await bcrypt.hash(senha, 10);
@@ -194,12 +192,12 @@ module.exports = {
 
     update: async (req, res, next) => {
         const { name, email1, password } = req.body;
-        console.log(req.body)
+        //console.log(req.body)
         //const hashedPassword = await bcrypt.hash(password, 10);
 
         try {
-            const usuarioEdit = await Usuario.update({ nome_usuario: name, email: email1, }, { where: { id: req.session.id } })
-            res.redirect("/")
+            const usuarioEdit = await Usuario.update({ nome_usuario: name, email: email1, }, { where: { id: req.session.id } });
+            res.redirect("/");
         } catch (error) {
             res.status(400).send("Erro ao Alterar");
         }
@@ -209,6 +207,7 @@ module.exports = {
 
     sair: async (req, res) => {
         req.session = null;
+        console.log(res.session);
         res.redirect('/');
     },
 };
