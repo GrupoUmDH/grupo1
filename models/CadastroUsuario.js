@@ -14,7 +14,7 @@ const cadastroUsuarioModel = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false
         },
-        sobrenome_usuario: {
+        sobrenome: {
             type: dataTypes.STRING,
             allowNull: false
         },
@@ -22,11 +22,11 @@ const cadastroUsuarioModel = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false
         },
-        email: {
+        codigo_postal: {
             type: dataTypes.STRING,
             allowNull: false
         },
-        codigo_postal: {
+        bairro: {
             type: dataTypes.STRING,
             allowNull: false
         },
@@ -46,10 +46,6 @@ const cadastroUsuarioModel = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false
         },
-        tipo_usuario: {
-            type: dataTypes.STRING,
-            allowNull: false
-        },
 
     };
 
@@ -65,6 +61,12 @@ const cadastroUsuarioModel = (sequelize, dataTypes) => {
         cadastradoUser.belongsTo(models.Usuario, {
             as: "user",
             foreignKey: "id_usuario",
+        });
+    },
+    cadastradoUser.associate = (models) => {
+        cadastradoUser.hasMany(models.Cartao, {
+            as: "cartao",
+            foreignKey: "id_cadastroUsuario",
         });
     }
 

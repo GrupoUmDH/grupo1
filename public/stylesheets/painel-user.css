@@ -12,32 +12,69 @@
 
 }
 
-main{
-    width: auto;
-    height: auto;
-}
-
 body {
     width: 100%;
     min-height: 100vh;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     background-color: var(--background-color);
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     font-size: 100%;
     color: var(--cores-letra);
-
+    flex-wrap: nowrap;
 }
 
 .container {
+    width: 84vw;
     display: flex;
-    align-items: center;
-    width: 80%;
-    height: 50%;
+    position: fixed;
+    height: 80%;
+    overflow: scroll;
     padding-left: 0px;
-    background-color: var(--background-color);
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+}
 
+nav#menu {
+    margin-top: 6rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+nav#menu > h1 {
+    border-radius: 1rem;
+    background-color: var(--background-2);
+    margin-bottom: 1rem;
+    border-bottom: .16rem solid red;
+  
+    padding: 0.6rem;
+}
+
+nav#menu ul li {
+    list-style: none;
+    text-align: center;
+}
+
+main.main-painelUser {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+}
+
+div#section-content {
+    position: relative;
+    left: 15rem;
+    height: 80vh;
+    width: 100%;
 }
 
 #historico h1 {
@@ -48,32 +85,52 @@ body {
 /* HISTÓRICOS DE PEDIDOS */
 
 .comprados {
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     gap: 2rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    flex-direction: row;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .comprados img {
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
+    border-radius: 5px;
+    /* padding: 10px; */
+    /* margin: 10px; */
     width: 150px;
-    height: 240px;
-    gap: 2rem;
+    /* height: 240px; */
+    /* gap: 2rem; */
 }
+
 h1 {
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--cores-letra);
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: 1rem;
+
 }
+
+h1#historico {
+    margin-left: 1rem;
+    margin-top: .5rem;
+    color: var(--cores-chaves);
+}
+
 .titulos {
     padding-top: 1rem;
     text-align: center;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-radius: 1rem;
+    background-color: var(--background-2);
+    margin-bottom: 1rem;
+    border-bottom: .16rem solid red;
+
 }
 
 
@@ -102,28 +159,29 @@ h1 {
 }
 
 .historico {
-
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
     flex-wrap: wrap;
+    align-items: stretch;
     justify-content: space-around;
-
 }
 
 /* MENU LATERAL ESQUERDO */
 
 aside {
-    margin-top: 2rem;
     position: fixed;
-    top: 80px;
     left: 0;
+    top: 0;
     bottom: 0;
     padding: 10px;
-    height: 60%;
-    background-color: var(--background-color);
+    height: 100vh;
+    background-color: var(--background-2);
     z-index: 1;
-
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
 }
 
 #menu ul li a {
@@ -131,7 +189,7 @@ aside {
     line-height: 3;
     color: var(--cores-letra);
     text-decoration: none;
-    text-align:left;
+    text-align: center;
     display: block;
     cursor: pointer;
     transition: .2s;
@@ -139,17 +197,18 @@ aside {
 
 #menu ul li a:hover {
     color: var(--cores-chaves);
-    text-transform:unset;
+    text-transform: unset;
 }
 
 /* ALTERAR DADOS DO USUÁRIO */
 
 .altera-dados {
-    align-items: center;
+    align-items: stretch;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     background-color: var(--background-color);
+    align-content: stretch;
 }
 
 .dados-usuario #alterar-name {
@@ -163,7 +222,12 @@ aside {
 
 .dados-usuario {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    margin-top: 2rem;
 }
 
 .dados-usuario #alterar-email {
@@ -191,9 +255,9 @@ aside {
     justify-content: center;
     border-radius: 10px;
     background-color: white;
-    height: 2rem;
+    /* height: 2rem; */
     width: 20rem;
-    margin: 1rem;
+    /* margin: 1rem; */
 }
 
 .dados-usuario button {
@@ -205,8 +269,8 @@ aside {
     background-color: #B30006;
     height: 2rem;
     width: 20rem;
-    margin: 1rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    /* margin-bottom: 2rem; */
 }
 
 /* ALTERAR DADOS DO CARTÃO*/
@@ -226,10 +290,10 @@ aside {
     text-align: center;
     align-items: center;
     justify-content: center;
-    
+
 }
 
-.credit-card input{
+.credit-card input {
     border-radius: 10px;
     text-align: center;
     align-items: center;
@@ -241,7 +305,7 @@ aside {
     margin-bottom: 2rem;
 }
 
-.credit-card button{
+.credit-card button {
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -254,17 +318,26 @@ aside {
     margin-bottom: 2rem;
 }
 
-.formulario-card{
+.new-card>h1 {
+    border-radius: 1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    background-color: var(--background-2);
+    margin-bottom: 1rem;
+    border-bottom: .16rem solid red;
+}
+
+.formulario-card {
     border-radius: 10px;
     text-align: center;
     align-items: center;
-    display:grid;
+    display: grid;
     justify-content: space-around;
     flex-direction: column;
     margin-top: 1rem;
     border-radius: 20px;
     background-color: var(--background-color);
-    
+
 }
 
 .formulario button {
@@ -276,11 +349,11 @@ aside {
     background-color: #B30006;
     height: 2rem;
     width: 20rem;
-    margin: 1rem;
-    margin-bottom: 2rem;
+    /* margin: 1rem; */
+    /* margin-bottom: 2rem; */
 }
 
-form .formulario{
+form .formulario {
     width: 500px;
     display: flex;
     text-align: center;
@@ -295,12 +368,16 @@ form .formulario{
 
 /* CANCELAR ASSINATURA */
 
+
 .cancelar {
+    width: 100%;
     align-items: center;
     display: flex;
     flex-direction: column;
     background-color: var(--background-color);
     border-radius: 10px;
+    align-content: space-around;
+    flex-wrap: nowrap;
 }
 
 .cancel button {
@@ -319,9 +396,9 @@ form .formulario{
 /* popup */
 
 .pop-up {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: none;
@@ -330,6 +407,7 @@ form .formulario{
     align-items: center;
     background-color: rgba(0, 0, 0, .6);
     justify-content: space-evenly;
+    z-index: 100;
 }
 
 div#pop-up-content {
@@ -377,4 +455,86 @@ div.pop-up span {
     justify-content: flex-end;
     width: 100%;
     flex-direction: row;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: darkred;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+
+div.dados-completos h1 {
+    color: red;
+    opacity: .7;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    font-size: x-large;
+}
+
+div.dados-completos h4 {
+    color: darkred;
+    font-size: small;
+}
+
+div.dados-completos p {
+    border: .3rem gray;
+    color: white;
+    opacity: .4;
+    margin-bottom: .2rem;
+    margin-top: .1rem;
+}
+
+div#endereco {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div#endereco div {
+    margin-right: 3rem;
+    background: border-box;
+}
+
+div.dados-completos button {
+    width: 15rem;
+    height: 2rem;
+    background-color: var(--cores-chaves);
+    color: var(--cores-letra);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+    border-radius: .5rem;
+    margin-top: 2rem;
+}
+
+div.dados-completos div#bt-dados {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dados-completos {
+    width: auto;
+}
+
+div.dados-completos h5 {
+    margin-top: .3rem;
+}
+
+section#section-cancelar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -12,22 +12,7 @@
         <title><%=pageName%></title>
 </head>
 
-<header>
-    <div class="barra-superior">
-        <div>
-            <img src="/img/logo.svg" />
-            
-        </div>
-        <div id="user-menu">
-            <img src="/img/ico/user.png" id="icon-user"/>
-            <div>
-                <h2>Nome do Administrador</h2>
-                <h3>Administrador</h3>
-            </div>
-            <button>Sair</button>
-        </div>
-    </div>
-</header>
+<%- include('partials/painelHeader')%>
 
 <main>
     <%- include('partials/lateralHeader')%>
@@ -35,8 +20,8 @@
     <section class="content">
         <div id="titulos">
             <h1>Produtos</h1>
-            <a><h3>Filmes \</h3></a>
-            <a><h3>Series</h3></a>
+            <a href="<%= '/painel?tipo=filme' %>" ><h3>Filmes \</h3></a>
+            <a href="<%= '/painel?tipo=serie' %>" ><h3>Series</h3></a>
         </div>
         <div id="content-itens">
             <div id="itens">
@@ -65,33 +50,37 @@
                             <li id="li-acao">Ação</li>
                         </ul>
                     </div>
-                    
-                    <% filme.forEach(element => { %>
-                        <div id="itens-lista">
-                            <ul>
-                                <li id="li-imagem"><img src="/img/filmes/<%- element.background %>.jpg"/></li>
-                                <hr>
-                                <li id="li-nome"><%- element.nome %></li>
-                                <hr>
-                                <li id="li-cate"><%- categoria[element.categorias_id -1].nome %></li>
-                                <hr>
-                                <li id="li-class" ><%- classificacoes[element.classificacoes_id - 1].nome %></li>
-                                <hr>
-                                <li id="li-acao">
-                                    <form method="POST" action="/painel/editar?_method=PUT" id="form_editar">
-                                        <input id="input-value" name="id" value=<%- element.id %> style="display: none" >
-                                        <button id="bt-editar" type="submit" ><img src="/img/ico/lapis.png" /></button>
-                                    </form>
-                                    <form>
-                                        <input id="inputDelele" name="id" value=<%- element.id %> style="display: none" >
-                                        <button id="bt-excluir" ><img src="/img/ico/icone-x.png" /></button>
-                                    </form>
-                                    
-                                </li>
-                            </ul>
-                        </div>
-                    <% }) %>
-                   
+                    <div id="content-itens-lista">
+                        <% filme.forEach(element => { %>
+                            <div id="itens-lista">
+                                <ul>
+                                    <% if(tipo == 'serie') { %>
+                                        <li id="li-imagem"><img src="/img/series/<%- element.background %>.jpg"/></li>
+                                    <% } else { %>
+                                        <li id="li-imagem"><img src="/img/filmes/<%- element.background %>.jpg"/></li>
+                                    <% } %>
+                                    <hr>
+                                    <li id="li-nome"><%- element.nome %></li>
+                                    <hr>
+                                    <li id="li-cate"><%- categoria[element.categorias_id -1].nome %></li>
+                                    <hr>
+                                    <li id="li-class" ><%- classificacoes[element.classificacoes_id - 1].nome %></li>
+                                    <hr>
+                                    <li id="li-acao">
+                                        <form method="POST" action="/painel/editar?_method=PUT" id="form_editar">
+                                            <input id="input-value" name="id" value=<%- element.id %> style="display: none" >
+                                            <button id="bt-editar" type="submit" ><img src="/img/ico/lapis.png" /></button>
+                                        </form>
+                                        <form>
+                                            <input id="inputDelele" name="id" value=<%- element.id %> style="display: none" >
+                                            <button id="bt-excluir" ><img src="/img/ico/icone-x.png" /></button>
+                                        </form>
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+                        <% }) %>
+                    </div>
                 </div>
             </div>
             <!-- <div id="filtro"></div> -->

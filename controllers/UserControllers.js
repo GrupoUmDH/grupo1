@@ -1,14 +1,16 @@
-const { Usuario, CadastroUsuario } = require("../models");
+const { Usuario, CadastroUsuario, Cartao } = require("../models");
 const { Op } = require('sequelize');
 
 const express = require("express");
 const session = require("express-session");
 const bcrypt = require("bcrypt");
 const Sequelize = require("sequelize");
+const { includes } = require("../src/middlewares/loginSession");
 
 const view = {
     pageName: "login",
     js: "login",
+    users: {},
     dados: {},
     popUp: false,
     mensagem: "mensagem",
@@ -19,10 +21,10 @@ const view = {
 module.exports = {
     index: async (req, res, next) => {
 
-        const { email } = req.session;
+        const { id, email } = req.session;
 
         try {
-            if(!email){
+            if (!email) {
                 view.pageName = 'login';
                 view.js = 'login';
                 view.popUp = false;
@@ -30,33 +32,33 @@ module.exports = {
                 res.render('login', view);
 
             } else {
+                const idUsuario = 
                 CadastroUsuario.findOne({
                     where: {
-                        email: email
-                    }
+                        id_usuario: id,
+                    },
+                    include: [{ model: Cartao, as: 'cartao' }]
                 })
-                .then(dados=>{
-                    console.log("estou carregando os dados do banco ... ");
+                    .then(dados => {
 
-                    view.pageName = 'painel-user';
-                    view.js = 'login';
-                    view.popUp = false;
-                    view.dados = dados;
-    
-                    res.render('painel-user', view);
-                }).catch((error) => {
-    
-    
-                    console.log("erro ao carregar os dados do cliente.");
-    
-                    view.pageName = 'painel-user';
-                    view.js = 'login';
-                    view.popUp = true;
-                    view.mensagem = "Você precisa completar o seu cadasto...",
-                    view.aviso = 'preencha os dados de cadastro.'
-    
-                    res.render('painel-user', view);
-                })
+                        if (!dados) {
+                            view.pageName = 'painel-user';
+                            view.js = 'login';
+                            view.popUp = true;
+                            view.mensagem = "Você precisa completar o seu cadasto...",
+                                view.aviso = 'preencha os dados de cadastro.'
+
+                            res.render('painel-user', view);
+                        } else {
+                            view.pageName = 'painel-user';
+                            view.js = 'login';
+                            view.popUp = false;
+                            view.dados = dados;
+                            console.log(view.dados)
+                            res.render('painel-user', view);
+                        }
+
+                    });
             }
 
         } catch (err) {
@@ -72,35 +74,35 @@ module.exports = {
         const { email, senha } = req.body;
 
         const hashedPassword = await bcrypt.hash(senha, 10);
-        
+
         try {
             const user = await Usuario.findOne({
                 where: {
                     email: req.body.email,
                 },
             })
-            .then( user => {
+                .then(user => {
 
-                const validPassword = bcrypt.compareSync(senha, user.senha);
+                    const validPassword = bcrypt.compareSync(senha, user.senha);
 
-                if(validPassword){
-                    req.session.id = user.id
-                    req.session.name = user.nome_usuario
-                    req.session.key = hashedPassword;      
-                    req.session.email = user.email
-                    req.session.tipo = user.tipo_usuario;
+                    if (validPassword) {
+                        req.session.id = user.id
+                        req.session.name = user.nome_usuario
+                        req.session.key = hashedPassword;
+                        req.session.email = user.email
+                        req.session.tipo = user.tipo_usuario;
 
-                    res.redirect('/painel');
-                    
-                } else {
-                    view.popUp = true;
-                    view.mensagem = "O e-mail digitado ou a senha estão incorretos.";
-                    view.aviso = "Tente novamente.";
+                        res.redirect('/painel');
 
-                    res.render("login", view);
-                }
-                
-            })
+                    } else {
+                        view.popUp = true;
+                        view.mensagem = "O e-mail digitado ou a senha estão incorretos.";
+                        view.aviso = "Tente novamente.";
+
+                        res.render("login", view);
+                    }
+
+                })
 
         } catch (error) {
             view.popUp = true;
@@ -109,7 +111,7 @@ module.exports = {
             res.render("login", view);
         }
     },
-    cadastroUsuario: async(req, res, next) => {
+    cadastroUsuario: async (req, res, next) => {
         //const { nome_usuario, sobrenome_usuario, cpf, email, endereco, codigo_postal, estado, cidade, senha, tipo_usuario } = req.body;
         const hashedPassword = await bcrypt.hash(senha, 10);
         try {
@@ -118,29 +120,29 @@ module.exports = {
                     email: email
                 }
             })
-            .then(user_existe => {
-                if(user_existe){
-                    view.popUp = true;
-                    view.mensagem = "Usuário já cadastrado com este e-mail.";
-                    view.aviso = "Cadastre um novo e-mail ou faça Login.";
+                .then(user_existe => {
+                    if (user_existe) {
+                        view.popUp = true;
+                        view.mensagem = "Usuário já cadastrado com este e-mail.";
+                        view.aviso = "Cadastre um novo e-mail ou faça Login.";
 
-                    res.render("login", view);
+                        res.render("login", view);
 
-                } else {
-                    const user = Usuario.create({
-                        nome_usuario: req.body.nome_usuario,
-                        email: req.body.email,
-                        senha: hashedPassword,
-                        tipo_usuario: "cliente",
-                    });
+                    } else {
+                        const user = Usuario.create({
+                            nome_usuario: req.body.nome_usuario,
+                            email: req.body.email,
+                            senha: hashedPassword,
+                            tipo_usuario: "cliente",
+                        });
 
-                    view.popUp = true;
-                    view.mensagem = "Bem vindo a Lumiere! Usuário cadastrado com sucesso!";
-                    view.aviso = "Faça login para continuar.";
+                        view.popUp = true;
+                        view.mensagem = "Bem vindo a Lumiere! Usuário cadastrado com sucesso!";
+                        view.aviso = "Faça login para continuar.";
 
-                    res.render("login", view);
-                }
-            });
+                        res.render("login", view);
+                    }
+                });
 
         } catch (error) {
             res.status(400).send("Erro ao cadastrar");
@@ -153,7 +155,7 @@ module.exports = {
 
         const { nome_usuario, email, senha } = req.body;
         const hashedPassword = await bcrypt.hash(senha, 10);
-        
+
         try {
 
             const user_existe = await Usuario.findOne({
@@ -161,29 +163,29 @@ module.exports = {
                     email: email
                 }
             })
-            .then(user_existe => {
-                if(user_existe){
-                    view.popUp = true;
-                    view.mensagem = "Usuário já cadastrado com este e-mail.";
-                    view.aviso = "Cadastre um novo e-mail ou faça Login.";
+                .then(user_existe => {
+                    if (user_existe) {
+                        view.popUp = true;
+                        view.mensagem = "Usuário já cadastrado com este e-mail.";
+                        view.aviso = "Cadastre um novo e-mail ou faça Login.";
 
-                    res.render("login", view);
+                        res.render("login", view);
 
-                } else {
-                    const user = Usuario.create({
-                        nome_usuario: req.body.nome_usuario,
-                        email: req.body.email,
-                        senha: hashedPassword,
-                        tipo_usuario: "cliente",
-                    });
+                    } else {
+                        const user = Usuario.create({
+                            nome_usuario: req.body.nome_usuario,
+                            email: req.body.email,
+                            senha: hashedPassword,
+                            tipo_usuario: "cliente",
+                        });
 
-                    view.popUp = true;
-                    view.mensagem = "Bem vindo a Lumiere! Usuário cadastrado com sucesso!";
-                    view.aviso = "Faça login para continuar.";
+                        view.popUp = true;
+                        view.mensagem = "Bem vindo a Lumiere! Usuário cadastrado com sucesso!";
+                        view.aviso = "Faça login para continuar.";
 
-                    res.render("login", view);
-                }
-            });
+                        res.render("login", view);
+                    }
+                });
 
         } catch (error) {
             res.status(400).send("Erro ao cadastrar");
@@ -194,16 +196,16 @@ module.exports = {
         const { name, email1, password } = req.body;
         console.log(req.body)
         //const hashedPassword = await bcrypt.hash(password, 10);
-        
+
         try {
-            const usuarioEdit = await Usuario.update({ nome_usuario:name, email:email1,}, { where: { id:req.session.id }} )
+            const usuarioEdit = await Usuario.update({ nome_usuario: name, email: email1, }, { where: { id: req.session.id } })
             res.redirect("/")
         } catch (error) {
             res.status(400).send("Erro ao Alterar");
         }
     },
 
-    
+
 
     sair: async (req, res) => {
         req.session = null;

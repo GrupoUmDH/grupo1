@@ -1,5 +1,9 @@
-p {
-    margin-top: 2rem;
+:root {
+    --background-color: #0C0C0C;
+    --background-2: #131313;
+    --cores-chaves: #B30006;
+    --cores-letra: #FFFFFF;
+    --cores-objetos: #580003;
 }
 
 hr {
@@ -14,8 +18,12 @@ hr {
 
 footer {
     margin-top: 3rem;
-    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    background-color: var(--background-2);
     color: var(--cores-chaves);
     width: 100%;
     text-align: center;
+    z-index: 3;
+    background: var(--background-color);
+    height: 12vh;
 }

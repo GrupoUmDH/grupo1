@@ -8,6 +8,7 @@
     --cores-letra:  #FFFFFF;
     --cores-objetos: #580003;
 }
+
 header {
     justify-content: center;
     align-items: center;
@@ -15,8 +16,11 @@ header {
     width: 100%;
     font-size: 1.5rem;
     height: 5rem;
-    
+    position: relative;
+    z-index: 2;
+    background: var(--background-color);
 }
+ 
 
 *{
     margin: 0;
@@ -26,6 +30,7 @@ header {
 body {
     display: flex;
     flex-direction: column;
+   
 }
 
 /* NAVBAR */
@@ -37,12 +42,19 @@ body {
     height: 5rem;
     margin-right: 1rem;
     margin-left: 1rem;
+    
 }
 
 .navlogo {
     display: flex;
-    width: 5rem;
-    padding-left: 10px;
+    width: 6rem;
+    margin-left: 2rem;
+    padding: .1rem;
+}
+
+.navlogo:hover {
+    text-shadow: rgba(255,0,0,1) 0px 0px 9px;
+    filter: brightness(200%);
 }
 
 .paginas ul {

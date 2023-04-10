@@ -4,30 +4,23 @@
 
 <%- include('partials/header') %>
     <main>
+        <hr>
         <div class="sub-header">
             <form action="/produtos/categorias/" class="content-genero" method="get">
                 <select name="tipo" id="tipo">
-                    <option value="filmes" selected>Filmes</option>
-                    <option value="series">Series</option>
+                    <option value="filme" selected>Filmes</option>
+                    <option value="serie">Series</option>
+                            
                 </select>
                 <div>
                     <select name="categoria" id="genero">
-                        <option value="ação" selected>Ação</option>
-                        <option value="aventura">Aventura</option>
-                        <option value="comédia" >Comédia</option>
-                        <option value="dança">Dança</option>
-                        <option value="documentário">Documentário</option>
-                        <option value="drama">Drama</option>
-                        <option value="faroeste">Faroeste</option>
-                        <option value="ficção">Ficção</option>
-                        <option value="guerra">Guerra</option>
-                        <option value="musical">Musical</option>
-                        <option value="policial">Policial</option>
-                        <option value="romance">Romance</option>
-                        <option value="suspense">Suspense</option>
-                        <option value="terror">Terror</option>
+                        <% categorias.forEach(element=> { %>
+                            <option value=<%=element.id %>><%= element.nome %>
+                            </option>
+                            <% }); %>
                     </select>
-                    <button id="busca" type="submit"><img src="/img/ico/lupa.svg"/></button>
+
+                    <button id="busca" type="submit"><img src="/img/ico/lupa.svg" /></button>
                 </div>
             </form>
         </div>
@@ -35,47 +28,47 @@
         <section class="container">
             <div class="titulos">
                 <h1>
-                    <%= tipo%> - <%= categoria%>
+                    <%= filmes[0].tipo%>S <%= filmes[0].categorias%>
                 </h1>
             </div>
 
-            <hr>
-        </div>
+            
+            </div>
             <section class="filmes">
 
-                <% for(const produto of produtos) { %>
+                <% for(const produto of filmes) { %>
                     <div class="filme-show">
-                            <a href="<%= '/produtos' %>\">
-                                <img src="/img/<%= tipo%>/<%= produto.background %>.jpg" alt="" id="back-filme">
-                                <div class="descri">
-                                    <div>
-                                        <h3 id="nome-filme">
-                                            <%= produto.nome %>
-                                        </h3>
-                                        <p id="descri-filme">
-                                            <%= produto.descricao %>
-                                        </p>
-                                    </div>
-                                    
-                                    <div id="dados-filmes">
-                                        <h1 id="id-filmes">
-                                            <%= produto.id %>
-                                        </h1>
-                                        <h1 id="categoria-filmes">
-                                            <%= produto.id %>
-                                        </h1>
-                                        <h1 id="tipo-filmes">
-                                            <%= produto.tipo %>
-                                        </h1>
-                                        <h1 id="compra-filmes"> 
-                                            <%= produto.valor%>
-                                        </h1>
-                                        <img src="/img/<%= tipo%>/<%= produto.imagem %>.jpg" id="img-filmes">
-                                        <%= produto.imagem %>
-                                    </div>
+                        <a href="<%= '/produtos' %>\">
+                            <img src="/img/<%- filmes[0].tipo%>s/<%- produto.background %>.jpg" alt="" id="back-filme">
+                            <div class="descri">
+                                <div>
+                                    <h3 id="nome-filme">
+                                        <%= produto.nome %>
+                                    </h3>
+                                    <p id="descri-filme">
+                                        <%= produto.descricao %>
+                                    </p>
                                 </div>
-                            </a>
-                        </div>
+
+                                <div id="dados-filmes">
+                                    <h1 id="id-filmes">
+                                        <%= produto.id %>
+                                    </h1>
+                                    <h1 id="categoria-filmes">
+                                        <%= produto.id %>
+                                    </h1>
+                                    <h1 id="tipo-filmes">
+                                        <%= produto.tipo %>
+                                    </h1>
+                                    <h1 id="compra-filmes">
+                                        <%= produto.valor%>
+                                    </h1>
+                                    <img src="/img/<%- produto.tipo%>/<%- produto.imagem %>.jpg" id="img-filmes">
+                                    <%= produto.imagem %>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                     <% }%>
             </section>
         </section>
