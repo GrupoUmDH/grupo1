@@ -577,3 +577,71 @@ div.cad-cartao a {
 div.content-tipo-pay form.formulario{
     display: flex;
 }
+
+/* CONFIRMAÇÃO DE COMPRA */
+
+.content-confirma {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    color: white;
+}
+
+button#painel-user {
+    width: 15rem;
+    height: 2rem;
+    background-color: var(--cores-chaves);
+    color: var(--cores-letra);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+    border-radius: .5rem;
+    margin-top: 2rem;
+}
+
+div.content-confirma h1#titulo {
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+div.content-confirma img {
+    width: 15rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-right: .5rem;
+}
+
+div.content-confirma h1#titulo div {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-detalhes {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+.card-itens {
+    width: 30rem;
+    overflow: hidden;
+    border: 1px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+img#card-img {
+    padding: 0;
+    width: 5rem;
+    border-radius: 10px;
+    border: 0;
+    overflow: hidden;
+}

@@ -161,24 +161,19 @@
                                             <input type="checkbox" name="salvar" checked />
                                             <label for="salvar"> *Salver este cartão para comprar futuras.</label>
                                         <% } else { %>
-                                            <% for(const card of cartao) { %>
+                                            <% cartao.forEach((card, i) => { %>
                                                 <div class="cartao">
                                                     <img src="/img/pagamento/credit-card.svg"/>
                                                     <div>
-                                                        <div style="display: none;"> 
-                                                            <input name="nome_completo" value="<%= card.nome_completo %>"/>
-                                                            <input name="numero_cartao" value="<%= card.numero_cartao %>"/>
-                                                            <input name="vencimento" value="<%= card.vencimento %>" />
-                                                        </div>
-                                                        <input name="nome_completo" value="<%= card.nome_completo %>" disabled />
-                                                        <input name="numero_cartao" value="<%= card.numero_cartao %>" disabled />
-                                                        <input name="vencimento" value="<%= card.vencimento %>" disabled/>
-                                                        <input name="cvv" type="text" placeholder="CVV" maxlength="3" value="<%= card.cvv %>"/>
-                                                        <input name="selectCartao" type="radio" value="<%= card.id %>" /> 
-                                                        <label for="selectCartao">  Selecionar</label>
+                                                        <input name="selectCartao" type="radio" value="<%= card.id %>">
+                                                            <input name="nome_completo" value="<%= card.nome_completo %>" disabled />
+                                                            <input name="numero_cartao" value="<%= card.numero_cartao %>" disabled />
+                                                            <input name="vencimento" value="<%= card.vencimento %>" disabled />
+                                                            <input name="cvv" type="text" placeholder="CVV" maxlength="3" value="<%= card.cvv %>" />
+                                                        </input>
                                                     </div>
                                                 </div>
-                                            <% }%>
+                                            <% })%>
                                             <div class="cad-cartao">
                                                 <a>Cadastrar novo cartão</a>
                                             </div>
@@ -202,7 +197,8 @@
                     </div>
                     
                     <div style="display: none;">
-                        <input name="data" value="<%- new Date() %>">
+                        <% const now = new Date(); %>
+                        <input name="data" value=" <%- now.getDate() %>/<%- now.getMonth() +1 %>/<%- now.getFullYear() %>" >
                         <input name="metodo_pagamento" value="">
                         <input name="id_usuario" value="<%= users.id %>">
                         <% for(const filme of itens) { %>
@@ -223,7 +219,9 @@
                     <span><button>X</button></span>
                     <h2><%- mensagem%></h2>
                     <div id="aviso">
-                        <a href="<%- '/login' %>"><h4>CLIQUE AQUI</h4></a>
+                        <% if(popUp_login) { %>
+                            <a href="<%- '/login' %>"><h4>CLIQUE AQUI</h4></a>
+                        <% } %>
                         <h4><%- aviso%></h4>
                     </div>
                 </div>
