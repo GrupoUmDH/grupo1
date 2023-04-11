@@ -649,3 +649,15 @@ button#bt-confirmar {
     justify-content: center;
     font-size: larger;
 }
+
+@media(max-width: 1024px) {
+    section#section-carrinho {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resumo {
+        margin-top: 1rem;
+    }
+}
