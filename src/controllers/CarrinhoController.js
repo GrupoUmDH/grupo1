@@ -1,4 +1,4 @@
-const { Filme, Usuario, CadastroUsuario, Cartao, Cupom} = require("../../models");
+const { Filme, Usuario, CadastroUsuario, Cartao, Cupom, Historico} = require("../../models");
 
 const view = {
     pageName: "carrinho",
@@ -14,6 +14,7 @@ const view = {
     dadosCupom: {},
     metodo_pagamento: "",
     popUp: false,
+    popUp_login: true,
     mensagem: "mensagem",
     aviso: "aviso",
 };
@@ -29,7 +30,9 @@ function idItens(itensCarrinho){
 module.exports = {
     carrinho: async (req, res) => {  
 
+        console.log(req.body);
         const { itensCarrinho, cupom } = req.query;
+
         const produtos = idItens(itensCarrinho);
 
         if(!req.session) {
@@ -49,17 +52,25 @@ module.exports = {
                 view.cartao = null;
             } else {
                 const { nome, email } = req.session;
+
                 view.users = await Usuario.findOne({
                     where : { email: email },
                 });
     
                 view.dados = await CadastroUsuario.findOne({
                     where: { id_usuario : view.users.id},
+                }).then((result) => {
+                    return result;
+                }).catch((err) => {
+                    res.redirect('/login');
                 });
-
-                view.cartao = await Cartao.findAll({
-                     where: { id_cadastrousuario: view.dados.id}
-                });
+                
+                if (view.dados) {
+                    view.cartao = await Cartao.findAll({
+                        where: { id_cadastrousuario: view.dados.id },
+                    });
+                } 
+                
             }
             
         }
@@ -105,9 +116,9 @@ module.exports = {
 
     confirmaCompra: async (req, res) => {
 
-        console.log(req.query);
-        const { cupom, itens, total } = req.body;
-        const { metodo_pagamento ,numero_cartao, nome_completo, vencimento, cvv, salvar, id_usuario} = req.body;
+        const { itensCarrinho } = req.query
+        const { cupom, itens, total, data, selectCartao,  
+                 metodo_pagamento , cvv, salvar, id_usuario } = req.body;
         const { email } = req.session;
 
         if(email){
@@ -115,41 +126,70 @@ module.exports = {
                 where: { id_usuario: id_usuario}
             });
 
+            view.itens = await Filme.findAll({
+                where: {id: itens},
+            });
+
+            view.cupom = cupom;
+            view.total = total;
+            view.mensagem = "Conirmação de Compra";
+
+
             if(metodo_pagamento == "cartao"){
                 view.metodo_pagamento = "cartao";
-                if(numero_cartao.length >= 16 && vencimento.length >=4 && cvv.length >= 3 && nome_completo != ""){
-                    
-                    const novoCard = {
-                        numero_cartao: numero_cartao,
-                        nome_completo: nome_completo,
-                        vencimento: vencimento,
-                        cvv: cvv,
-                        id_cadastrousuario: view.dados.id,
-                    };
 
-                    // if(salvar){
-                    //     await Cartao.create(novoCard);
-                    // }
-                    console.log(req.body);
-                    res.render('confirmarCompra', view);
+                if(selectCartao){
+
+                    console.log(selectCartao);
+
+                    view.cartao = await Cartao.findOne({
+                        where: { id: selectCartao},
+                    });
+
+                    console.log(view.cartao);
+
+                    novoHistorico();
 
                 } else {
-                    res.send("varifique os dados do cartão");
+                    view.popUp_login = false;
+                    view.popUp = true;
+                    view.mensagem = "Nâo esqueça de cadastrar ou selecionar um cartão";
+                    view.aviso ="Selecione ou cadastre um novo cartão.";
+                    console.log(req.body);
+                    res.render("carrinho", view);
                 }
+
             }
 
             if(metodo_pagamento == "pix"){
                 view.metodo_pagamento = "pix";
-                res.render("confirmarCompra", view);
+                 novoHistorico();
             }
     
             if(metodo_pagamento == "boleto"){
                 view.metodo_pagamento = "boleto";
-                res.render("confirmarCompra", view);
+                 novoHistorico();
             }
 
+            res.render("confirmarCompra", view);
+
+            function novoHistorico(){
+                const novaCompra = {
+                    id_usuario: view.dados.id,
+                    itens: itens,
+                    data: data,
+                    valor: total,
+                    metodo_pay: metodo_pagamento,
+                    id_cartao: view.cartao.id,
+                };
+
+                //await Historico.create(novaCompra);
+
+                console.log(novaCompra);
+            };
+
         } else {
-            res.redirect('/login')
+            res.redirect('/login');
         }
     },
 

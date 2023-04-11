@@ -4,7 +4,7 @@ var router = express.Router();
 
 const CarrinhoController = require('../controllers/CarrinhoController');
 
-const validaCard = require('../middlewares/cardCadastro');
+const validaCard = require('../middlewares/validaCard');
 
 router.get('/', CarrinhoController.carrinho);
 router.post('/confirmaCompra', CarrinhoController.confirmaCompra)
