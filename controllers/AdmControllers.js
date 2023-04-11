@@ -354,10 +354,12 @@ module.exports = {
     userUpdate: async (req, res) => {
         view.user = req.session.nome;
 
+        const { nome, email, tipo } = req.session;
+
         const { errors } = validationResult(req);
         const  id  = view.userId;
 
-        view.user = req.session.nome; 
+        view.user = nome; 
 
         if(errors.length){
             view.error = true;
@@ -384,6 +386,7 @@ module.exports = {
                 view.mensagem = 'Usuário atualizado com sucesso';
                 view.aviso = '';
                 res.render('userConfig', view);
+               
             }).catch((reason) => {
                 view.error = true;
                 view.mensagem = 'Erro ao atualizar dados.';
@@ -427,7 +430,11 @@ module.exports = {
                             view.error = true;
                             view.mensagem = 'Dados preenchidos com sucesso';
                             view.aviso = '';
-                            res.render('userConfig', view);
+                            if (req.session.tipo == 'admin'){
+                                res.render('userConfig', view);
+                            } else {
+                                res.redirect('/login');
+                            }
                         });
     
                 } else {
@@ -440,7 +447,11 @@ module.exports = {
                             view.error = true;
                             view.mensagem = 'Usuário atualizado com sucesso';
                             view.aviso = '';
-                            res.render('userConfig', view);
+                            if (req.session.tipo == 'admin'){
+                                res.render('userConfig', view);
+                            } else {
+                                res.redirect('/login');
+                            }
                         })
                     }
                 }

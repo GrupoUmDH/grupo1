@@ -10,14 +10,7 @@
     --cores-objetos: #580003;
 }
 
-html {
-    width: 100vw;
-}
-
 body {
-    padding: 0;
-    margin: 0;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +23,6 @@ body {
 /* CONFIGURAÇÃO MAIN*/
 
 main {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,7 +33,7 @@ main {
 .centralizar {
     padding-top: 20px;
     flex-direction: column;
-    width: 80%;
+    margin-top: 7rem;
 }
 
 .centralizar>h1 {
@@ -74,6 +66,7 @@ main {
 .perguntas {
     display: flex;
     flex-direction: column;
+    padding: 0 8rem;
     
 }
 .container-perguntas{
@@ -84,32 +77,39 @@ main {
 
 }
 .container-perguntas>button {
-    text-align: center;
-    border-radius: 10px;
-    border-bottom: .16rem solid var(--cores-chaves);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 4rem;
+    text-align: center;
     margin-top: 2rem;
-    width: 95%;
+    border-bottom: .16rem solid var(--cores-chaves);
+    border-radius: 10px;
     color: var(--cores-letra);
     background: var(--background-2);
-    display: block;
     cursor: pointer;
-    z-index: 10;
     font-size: 1.8rem;
-    position: relative;
+    transition: all .3s;
+    z-index: 10;
+}
+
+.container-perguntas>button:hover {
+    box-shadow: rgba(255,0,0,1) 0px 7px 11px;
 }
 
 .respostas {
-    text-align: justify;
+    display: block;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
     height: 100%;
-    padding: 0;
+    margin-top: 1rem;
+    text-align: justify;
+    border-radius: 10px;
     color: var(--cores-letra);
+    box-shadow: rgba(255,0,0,1) 0px -7px 10px;
+    filter: brightness(200%);
     background-color: var(--cores-chaves);
-    width: 95%;
-    display: block;
     transition: max-height .2s ease-out;  
     max-height: 0;
     z-index: 2;
