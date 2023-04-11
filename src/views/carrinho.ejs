@@ -1,6 +1,5 @@
 <head>
     <script src="/javascripts/carrinho.js" defer></script>
-    <link rel="stylesheet" href="/stylesheets/compra.css" />
 </head>
 
 <%- include('partials/header') %>
@@ -128,9 +127,7 @@
                             </div>
                         </div>
                     <% }  else { %>
-                        <div id="bt-dados">
-                            <button>Cadastrar Dados</button>
-                        </div>
+                        <a href="<%- '/login' %>"><button id="bt-confirmar" >Cadastrar Dados</button></a>
                     <% } %>
                 </div>
             </section>
@@ -150,7 +147,7 @@
                                     <div class="content-item">
                                         <h5> PAGAMENTO COM CARTÃO:</h5>
                                         <br>
-                                        <% if(!dados) {%>
+                                        <% if(!dados || cartao.length <= 0) {%>
                                             <div class="cartao">
                                                 <img src="/img/pagamento/credit-card.svg"/>
                                                 <input placeholder="Número do cartão" type="text" name="numero_cartao" maxlength="19">

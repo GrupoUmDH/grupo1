@@ -23,6 +23,8 @@ module.exports = {
     index: async (req, res, next) => {
         const { id, email } = req.session;
 
+        view.users = req.session;
+
         try {
             if (!email) {
                 view.pageName = 'login';
@@ -32,7 +34,7 @@ module.exports = {
                 res.render('login', view);
 
             } else {
-                const idUsuario = CadastroUsuario.findOne({
+                const idUsuario = await CadastroUsuario.findOne({
                     where: {
                         id_usuario: id,
                     },
@@ -46,6 +48,8 @@ module.exports = {
                             view.popUp = true;
                             view.mensagem = "Você precisa completar o seu cadasto...",
                             view.aviso = 'preencha os dados de cadastro.'
+                            view.dados = null;
+                            view.cartao = null;
 
                             res.render('painel-user', view);
                         } else {
@@ -53,7 +57,14 @@ module.exports = {
                             view.js = 'login';
                             view.popUp = false;
                             view.dados = dados;
-                            console.log(view.dados)
+
+                            console.log(dados);
+
+                            view.cartao = Cartao.findAll({
+                                where: { id_cadastroUsuario: dados.id }
+                            });
+
+
                             res.render('painel-user', view);
                         }
 
@@ -196,14 +207,20 @@ module.exports = {
         //const hashedPassword = await bcrypt.hash(password, 10);
 
         try {
-            const usuarioEdit = await Usuario.update({ nome_usuario: name, email: email1, }, { where: { id: req.session.id } });
+            const usuarioEdit = await Usuario.update({ 
+                nome_usuario: name, email: email1, }, 
+            { where: { id: req.session.id } 
+        });
             res.redirect("/");
         } catch (error) {
             res.status(400).send("Erro ao Alterar");
         }
     },
 
+    novoCartao: async (req, res) => {
+        res.send(req.body);
 
+    },
 
     sair: async (req, res) => {
         req.session = null;
