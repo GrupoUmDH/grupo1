@@ -43,15 +43,15 @@ nav#menu {
     align-items: center;
     display: flex;
     flex-direction: column;
-    
+
 }
 
-nav#menu > h1 {
+nav#menu>h1 {
     border-radius: 1rem;
     background-color: var(--background-2);
     margin-bottom: 1rem;
     border-bottom: .16rem solid red;
-  
+
     padding: 0.6rem;
 }
 

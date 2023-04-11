@@ -12,6 +12,7 @@ const view = {
     js: "login",
     users: {},
     dados: {},
+    cartao: {},
     popUp: false,
     mensagem: "mensagem",
     aviso: "aviso",
@@ -31,8 +32,7 @@ module.exports = {
                 res.render('login', view);
 
             } else {
-                const idUsuario = 
-                CadastroUsuario.findOne({
+                const idUsuario = CadastroUsuario.findOne({
                     where: {
                         id_usuario: id,
                     },
@@ -45,7 +45,7 @@ module.exports = {
                             view.js = 'login';
                             view.popUp = true;
                             view.mensagem = "Você precisa completar o seu cadasto...",
-                                view.aviso = 'preencha os dados de cadastro.'
+                            view.aviso = 'preencha os dados de cadastro.'
 
                             res.render('painel-user', view);
                         } else {

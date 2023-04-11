@@ -87,15 +87,17 @@ section.container{
     font-size: 1.5rem;
 }
 .content-genero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4.5rem;
+    padding: 1.8rem;
     width: 100%;
+    
     opacity: 1;
     transition-duration: 150ms;
     height: 9rem;
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    padding: 0.8rem;
 
 }
 

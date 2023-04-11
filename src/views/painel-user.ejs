@@ -73,7 +73,7 @@
                                                 <div id="bt-dados">
                                                     <button>Preencher</button>
                                                 </div>
-                                                <% } else { %>
+                                            <% } else { %>
                                                     <div>
                                                         <h4>Nome</h4>
                                                         <p><%- dados.nome_usuario %></p>
@@ -111,10 +111,10 @@
                                                     <div id="bt-dados">
                                                         <button>Editar</button>
                                                     </div>
-                                                    <% } %>
+                                            <% } %>
                                         </div>
                                     </div>
-                                    <%- include('cadastroUsuario')%>
+                                    
                                 </div>
                             </section>
                         </section><br>
@@ -130,12 +130,13 @@
                                 <br>
                                 <div class="form-container active">
                                     <form class="formulario-card">
+                                        <% if(dados.cartao) { %>
                                         <% for(const cartao of dados.cartao) { %>
                                             <input placeholder="Número do cartão" type="text" name="number" value="<%- cartao.numero_cartao %>" >
                                             <input placeholder="Nome completo" type="text" name="name1" value="<%- cartao.nome_completo %>" >
                                             <input placeholder="MM/AA" type="text" name="expiry" value="<%- cartao.vencimento %>" >
                                             <input placeholder="CVC" type="text" name="cvc" value="<%- cartao.cvv %>" >
-                                        <% } %>
+                                        <% } } %>
                                         <button type="submit">Cadastrar Novo Cartão</button>
                                     </form>
                                 </div>
@@ -169,6 +170,8 @@
                 </div>
             </div>
         <% } %>
+
+        <%- include('cadastroUsuario')%>
 
     </main>
 
