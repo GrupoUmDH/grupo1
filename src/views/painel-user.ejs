@@ -73,7 +73,7 @@
                                                 <div id="bt-dados">
                                                     <button>Preencher</button>
                                                 </div>
-                                                <% } else { %>
+                                            <% } else { %>
                                                     <div>
                                                         <h4>Nome</h4>
                                                         <p><%- dados.nome_usuario %></p>
@@ -111,10 +111,10 @@
                                                     <div id="bt-dados">
                                                         <button>Editar</button>
                                                     </div>
-                                                    <% } %>
+                                            <% } %>
                                         </div>
                                     </div>
-                                    <%- include('cadastroUsuario')%>
+                                    
                                 </div>
                             </section>
                         </section><br>
@@ -170,6 +170,8 @@
                 </div>
             </div>
         <% } %>
+
+        <%- include('cadastroUsuario')%>
 
     </main>
 

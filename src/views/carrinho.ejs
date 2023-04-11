@@ -86,12 +86,13 @@
                     </section>
                 </section>
             </section>
-            <% if(dados.nome_usuario) {%>
+            
             <section id="section-dados">
                 <div class="content-form">
                     <div>
                         <h1>Dados: </h1>
                     </div>
+                    <% if(dados) {%>
                     <div class="dados-completos">
                             <div> 
                                 <h4>Nome</h4>
@@ -124,17 +125,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <h4>Formas de pagamento cadastrados:</h4>
-                            </div>
                             <div id="bt-dados">
                                 <button>Editar</button>
                             </div>
-                    </div>
+                        </div>
+                    <% }  else { %>
+                        <div id="bt-dados">
+                            <button>Cadastrar Dados</button>
+                        </div>
+                    <% } %>
                 </div>
             </section>
-       
-        <% } %>
         <section id="section-pagamento">
             <div class="pay-button">
                 <form id="finalizaCompra" method="post" action="/carrinho/confirmaCompra">
@@ -149,8 +150,9 @@
                                 </ul>
                                 <div class="content-tipo-pay">
                                     <div class="content-item">
-                                        <% if(!cartao) {%>
-                                            <h5> PAGAMENTO COM CARTÃO: Preencha os dados</h5>
+                                        <h5> PAGAMENTO COM CARTÃO:</h5>
+                                        <br>
+                                        <% if(!dados) {%>
                                             <div class="cartao">
                                                 <img src="/img/pagamento/credit-card.svg"/>
                                                 <input placeholder="Número do cartão" type="text" name="numero_cartao" maxlength="19">
@@ -161,7 +163,7 @@
                                             <input type="checkbox" name="salvar" checked />
                                             <label for="salvar"> *Salver este cartão para comprar futuras.</label>
                                         <% } else { %>
-                                            <% cartao.forEach((card, i) => { %>
+                                            <% for(const card of cartao) { %>
                                                 <div class="cartao">
                                                     <img src="/img/pagamento/credit-card.svg"/>
                                                     <div>
@@ -173,9 +175,9 @@
                                                         </input>
                                                     </div>
                                                 </div>
-                                            <% })%>
+                                            <% }%>
                                             <div class="cad-cartao">
-                                                <a>Cadastrar novo cartão</a>
+                                                <a id="cadastrarCard">Cadastrar novo cartão</a>
                                             </div>
                                         <% } %>
                                         
@@ -227,6 +229,8 @@
                 </div>
             </div>
         <% } %>
+
+        <%- include('cadastroUsuario')%>
 
     </main>
 

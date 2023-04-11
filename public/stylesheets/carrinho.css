@@ -255,39 +255,6 @@ button#bt-valida {
     margin: .3rem;
 }
 
-/* TRATAMENTO DOS INPUTS */
-
-input[name="nome"] {
-    width: 25rem;
-}
-input[name="sobrenome"] {
-    width: 25rem;
-}
-input[name="email"] {
-    width: 25rem;
-}
-input[name="cpf"] {
-    width: 15rem;
-}
-input[name="codigo-postal"] {
-    width: 10rem;
-}
-input[name="endereco"] {
-    width: 50rem;
-}
-input[name="bairro"] {
-    width: 18rem;
-}
-input[name="cidade"] {
-    width: 15rem;
-}
-input[name="estado"] {
-    width: 15rem;
-}
-input[name="pais"] {
-    width: 10rem;
-}
-
 /* POPUP */
 .pop-up {
     width: 100%;
@@ -576,6 +543,16 @@ div.cad-cartao a {
 
 div.content-tipo-pay form.formulario{
     display: flex;
+}
+
+button#cadastrarCard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-bottom: .6rem;
+    padding-top: .3rem;
+    border-top: 2px solid darkred;
 }
 
 /* CONFIRMAÇÃO DE COMPRA */

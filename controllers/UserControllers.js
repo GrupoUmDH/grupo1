@@ -45,7 +45,7 @@ module.exports = {
                             view.js = 'login';
                             view.popUp = true;
                             view.mensagem = "Você precisa completar o seu cadasto...",
-                                view.aviso = 'preencha os dados de cadastro.'
+                            view.aviso = 'preencha os dados de cadastro.'
 
                             res.render('painel-user', view);
                         } else {

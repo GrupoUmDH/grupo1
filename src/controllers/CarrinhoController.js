@@ -59,6 +59,10 @@ module.exports = {
     
                 view.dados = await CadastroUsuario.findOne({
                     where: { id_usuario : view.users.id},
+                }).then((result) => {
+                    return result;
+                }).catch((err) => {
+                    res.redirect('/login');
                 });
                 
                 if (view.dados) {
@@ -149,8 +153,9 @@ module.exports = {
                 } else {
                     view.popUp_login = false;
                     view.popUp = true;
-                    view.mensagem = "Nâo esqueça de selecionar um cartão";
-                    view.aviso ="Selecione ou cadastre um cartão.";
+                    view.mensagem = "Nâo esqueça de cadastrar ou selecionar um cartão";
+                    view.aviso ="Selecione ou cadastre um novo cartão.";
+                    console.log(req.body);
                     res.render("carrinho", view);
                 }
 

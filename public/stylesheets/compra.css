@@ -99,6 +99,22 @@
     justify-content: center;
 }
 
+div#bt-dados > button {
+    display: flex;
+    align-items: center;
+    color: var(--cores-letra);
+    background-color: var(--cores-objetos);
+    border: none;
+    border-radius: .4rem;
+    height: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 15rem;
+    flex-direction: column;
+    justify-content: center;
+    font-size: larger;
+}
+
 .pay-button button{
     display: flex;
     justify-content: center;
