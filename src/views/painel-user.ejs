@@ -1,3 +1,8 @@
+<head>
+    <link rel="stylesheet" href="/stylesheets/cadastroUsuario.css" />
+    <script src="/javascripts/cadastroUsuario.js" defer></script>
+</head>
+
 <%- include('partials/header') %>
 
     <aside class="container-side">
@@ -126,18 +131,38 @@
                         <section class="credit-card">
                             <br>
                             <div class="new-card">
-                                <h1>Dados do novo cartão</h1>
+                                <div class="titulos">
+                                    <h1>Dados do novo cartão</h1>
+                                </div>
                                 <br>
                                 <div class="form-container active">
-                                    <form class="formulario-card">
-                                        <% if(dados.cartao) { %>
-                                        <% for(const cartao of dados.cartao) { %>
-                                            <input placeholder="Número do cartão" type="text" name="number" value="<%- cartao.numero_cartao %>" >
-                                            <input placeholder="Nome completo" type="text" name="name1" value="<%- cartao.nome_completo %>" >
-                                            <input placeholder="MM/AA" type="text" name="expiry" value="<%- cartao.vencimento %>" >
-                                            <input placeholder="CVC" type="text" name="cvc" value="<%- cartao.cvv %>" >
+                                    <form class="formulario-card" action="/painel/novoCartao" method="post">
+                                        <% if(dados.cartao.length <= 0) {%>
+                                            <div class="cartao">
+                                                <img src="/img/pagamento/credit-card.svg" />
+                                                <input placeholder="Número do cartão" type="text" name="numero_cartao" maxlength="19">
+                                                <input placeholder="Nome como no cartão" type="text" name="nome_completo">
+                                                <input placeholder="MM/AA" type="text" name="vencimento" maxlength="5">
+                                                <input placeholder="CVV" type="text" name="cvv" maxlength="3" />
+                                            </div>
+                                            
+                                        <% } else { %>
+                                            <% for(const card of dados.cartao) { %>
+                                                <div class="cartao">
+                                                    <img src="/img/pagamento/credit-card.svg" />
+                                                    <div>
+                                                        <input name="selectCartao" type="radio" value="<%= card.id %>">
+                                                        <input name="nome_completo" value="<%= card.nome_completo %>" disabled />
+                                                        <input name="numero_cartao" value="<%= card.numero_cartao %>" disabled />
+                                                        <input name="vencimento" value="<%= card.vencimento %>" disabled />
+                                                        <input name="cvv" type="text" placeholder="CVV" maxlength="3" value="<%= card.cvv %>" />
+                                                        </input>
+                                                    </div>
+                                                </div>       
                                         <% } } %>
-                                        <button type="submit">Cadastrar Novo Cartão</button>
+                                        <div class="cad-cartao">
+                                            <button type="submit">Cadastrar novo cartão </button>
+                                        </div>
                                     </form>
                                 </div>
                             </div>

@@ -58,14 +58,14 @@ const sair_editarDados = document.querySelector('div#popUP-top button');
 popUp_editarDados.style.display = "none";
 
 bt_editarDados.addEventListener('click', (event) =>{
-    event.preventDefault();
     popUp_editarDados.style.display = "flex";
+    console.log("editando.... ")
 });
 
 sair_editarDados.addEventListener('click', (event) =>{
     //event.preventDefault();
     popUp_editarDados.style.display = "none";
-    console.log("Testando");
+    //console.log("Testando");
 })
 
 //ALTERAR DADOS//

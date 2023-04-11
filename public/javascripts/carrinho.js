@@ -18,17 +18,7 @@ const inputCard = document.querySelectorAll('input[name="selectCartao"]');
 
 const popUp_login = document.querySelector('div [id="aviso"]');
 
-const btEditaDados = document.querySelector('div#bt-dados button');
-
 const popUpDados = document.querySelector('div.popUp-dados');
-
-
-
-btEditaDados.addEventListener('click', (event) => {
-    //event.preventDefault();
-    popUpDados.style.display = "flex"
-});
-
 
 if(numeroCard != null || dataCard != null){
     numeroCard.addEventListener("keyup", () => {

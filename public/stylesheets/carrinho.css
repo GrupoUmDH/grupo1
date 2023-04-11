@@ -622,3 +622,30 @@ img#card-img {
     border: 0;
     overflow: hidden;
 }
+
+
+section#section-dados {
+    margin-bottom: 1rem;
+    display: flex;
+    width: 100%;
+    background-color: var(--background-2);
+    color: var(--cores-chaves);
+    justify-content: center;
+    padding-top: .5rem;
+}
+
+button#bt-confirmar {
+    display: flex;
+    align-items: center;
+    color: var(--cores-letra);
+    background-color: var(--cores-objetos);
+    border: none;
+    border-radius: .4rem;
+    height: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 15rem;
+    flex-direction: column;
+    justify-content: center;
+    font-size: larger;
+}

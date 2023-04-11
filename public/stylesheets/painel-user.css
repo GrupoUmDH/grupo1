@@ -275,95 +275,80 @@ aside {
 
 /* ALTERAR DADOS DO CARTÃO*/
 
-.credit-card {
-    border-radius: 9%;
+div.cartao img {
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+div.cartao {
     display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    margin-top: 1rem;
-    border-radius: 20px;
-    background-color: var(--background-color);
-}
-
-.card {
-    position: relative;
-    text-align: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
-
+    padding-bottom: .6rem;
+    padding-top: .3rem;
+    border-top: 2px solid darkred;
 }
 
-.credit-card input {
-    border-radius: 10px;
-    text-align: center;
+div.content-item div.cartao div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    height: 2rem;
-    width: 20rem;
-    margin: 1rem;
-    margin-bottom: 2rem;
 }
 
-.credit-card button {
+div.cartao div h5 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+}
+
+div.cad-cartao button {
     text-align: center;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
     color: var(--cores-letra);
     background-color: #B30006;
-    height: 2rem;
-    width: 20rem;
+    height: 3rem;
+    width: 10rem;
     margin: 1rem;
     margin-bottom: 2rem;
 }
 
-.new-card>h1 {
-    border-radius: 1rem;
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
-    background-color: var(--background-2);
-    margin-bottom: 1rem;
-    border-bottom: .16rem solid red;
+input[name="cvv"] {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    margin-right: 2rem;
 }
 
-.formulario-card {
-    border-radius: 10px;
+input[name="numero_cartao"],
+input[id="numero_cartao"] {
+    width: 200px;
+    height: 40px;
     text-align: center;
-    align-items: center;
-    display: grid;
-    justify-content: space-around;
-    flex-direction: column;
-    margin-top: 1rem;
-    border-radius: 20px;
-    background-color: var(--background-color);
-
+    font-size: larger;
+    margin-right: 2rem;
 }
 
-.formulario button {
+input[name="nome_completo"],
+input[id="nome_completo"] {
+    width: 200px;
+    height: 40px;
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    color: var(--cores-letra);
-    background-color: #B30006;
-    height: 2rem;
-    width: 20rem;
-    /* margin: 1rem; */
-    /* margin-bottom: 2rem; */
+    font-size: larger;
+    margin-right: 2rem;
 }
 
-form .formulario {
-    width: 500px;
-    display: flex;
+input[name="vencimento"],
+input[id="vencimento"] {
+    width: 80px;
+    height: 40px;
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    background-color: white;
-    height: 2rem;
-    width: 20rem;
-    margin: 1rem;
+    font-size: larger;
+    margin-right: 2rem;
 }
 
 /* CANCELAR ASSINATURA */
@@ -538,3 +523,4 @@ section#section-cancelar {
     flex-direction: column;
     align-items: center;
 }
+

@@ -48,7 +48,7 @@ module.exports = {
                 view.aviso = "para fazer login/cadastro e continuar suas compras...";
 
                 view.users = {};
-                view.dados = {};
+                view.dados = null;
                 view.cartao = null;
             } else {
                 const { nome, email } = req.session;
@@ -95,15 +95,17 @@ module.exports = {
                 where: { cupom : cupom},
             });
     
-            if(aplicaCupom != ""){
-                if(view.valor == 0){
+            if (aplicaCupom != "") {
+                if (view.valor == 0) {
                     view.total = view.soma;
                     view.desconto = 0;
                 } else {
                     view.dadosCupom = aplicaCupom;
                     console.log(view.dadosCupom);
-                    view.desconto = (aplicaCupom.valor * soma )/100; 
-                    view.total = (soma - view.desconto).toFixed(2).replace(".", ",");
+                    view.desconto = (aplicaCupom.valor * soma) / 100;
+                    view.total = (soma - view.desconto)
+                        .toFixed(2)
+                        .replace(".", ",");
                 }
             } else {
                 view.total = view.soma;
