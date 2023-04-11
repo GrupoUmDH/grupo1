@@ -45,7 +45,7 @@
 
                 <% for(const produto of filmes) { %>
                     <div class="filme-show">
-                        <a href="<%= '/produtos' %>\">
+                        <a href="/produtos/<%= produto.id %>">
                             <img src="/img/<%- filmes[0].tipo%>s/<%- produto.background %>.jpg" alt="" id="back-filme">
                             <div class="descri">
                                 <div>

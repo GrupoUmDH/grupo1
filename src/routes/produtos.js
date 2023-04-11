@@ -17,6 +17,10 @@ router.use(bodyParse.urlencoded({extended: true}));
 
 router.get('/', FilmesControllers.index);
 
+
+
+
+
 //router.get('/filmes', FilmesControllers.filmes);
 
 router.get('/filmes', FilmesControllers.maisFilmes);
@@ -55,5 +59,7 @@ router.put('/edit', upload.fields([{name:'backgroundUpdate'},{name:'imagemUpdate
 
 // BUSCA O FILME NA API EXTERNA.
 router.get('/search', FilmesControllers.buscar);
+
+router.get('/:id', FilmesControllers.produto);
 
 module.exports = router;
