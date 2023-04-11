@@ -12,8 +12,13 @@
 
 }
 
+html {
+    display: flex;
+    justify-content: center;
+    scroll-behavior: smooth;
+}
+
 body {
-    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -45,36 +50,24 @@ nav#menu {
     flex-direction: column;
     
 }
+/* CONTEUDO MAIN */
 
-nav#menu > h1 {
-    border-radius: 1rem;
-    background-color: var(--background-2);
-    margin-bottom: 1rem;
-    border-bottom: .16rem solid red;
-  
-    padding: 0.6rem;
+.sideB{
+    margin-top: 5rem;
 }
 
-nav#menu ul li {
-    list-style: none;
-    text-align: center;
+h2{
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
 
-main.main-painelUser {
-    width: 100%;
-    overflow: hidden;
-    position: absolute;
-    top: 5rem;
+main {
     display: flex;
     flex-direction: column;
-    align-content: flex-end;
-}
-
-div#section-content {
-    position: relative;
-    left: 15rem;
-    height: 80vh;
-    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    height: 100%;
+    gap: .5rem;
+    margin-left: 5rem;
 }
 
 #historico h1 {
@@ -95,13 +88,41 @@ div#section-content {
     justify-content: space-evenly;
 }
 
-.comprados img {
-    border-radius: 5px;
-    /* padding: 10px; */
-    /* margin: 10px; */
-    width: 150px;
-    /* height: 240px; */
-    /* gap: 2rem; */
+aside {
+    width: 14rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 25%;
+    height: 100%;
+    border-right: .16rem solid var(--cores-chaves);
+    background-color: var(--background-2); 
+    color: var(--cores-letra);
+    
+}
+#menu{ 
+    width: inherit;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin-top: 7.2rem;
+    max-width: 25%;
+    height: 100%;
+    border-right: .16rem solid var(--cores-chaves);
+    background-color: var(--background-2); 
+}
+#menu h1{
+    font-size: 1.5rem;
+    width: 100%;
+    padding-left: 1rem;
+    border-bottom: .16rem solid var(--cores-chaves);
+    margin-bottom: .5rem;
+}
+
+#menu ul li{
+    list-style: none;
+    padding-left: 1rem;
 }
 
 h1 {
@@ -109,52 +130,44 @@ h1 {
     justify-content: center;
     align-items: center;
     color: var(--cores-letra);
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin-left: 1rem;
-
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    cursor: pointer;
+    transition: .3s;
 }
 
 h1#historico {
     margin-left: 1rem;
     margin-top: .5rem;
     color: var(--cores-chaves);
+    
 }
 
-.titulos {
-    padding-top: 1rem;
+.h1-t{
+    color: var(--cores-letra);
+    margin: 1rem 0;
+    width: 100%;
+    font-size: 2rem;
     text-align: center;
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+    padding-bottom: 1rem;
+    border-bottom: .16rem solid var(--cores-chaves);
+}
+
+.container {
     border-radius: 1rem;
-    background-color: var(--background-2);
-    margin-bottom: 1rem;
-    border-bottom: .16rem solid red;
-
-}
-
-
-.alugados {
     text-align: center;
+    align-items: stretch;
     display: flex;
-    gap: 2rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    flex-direction: row;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-}
-
-.alugados img {
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    width: 150px;
-    height: 240px;
-    gap: 2rem;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: var(--background-2);
+    margin: 2rem 5rem 1rem 15rem;
 }
 
 .container p {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: .8rem;
     color: var(--cores-letra);
 }
 
@@ -164,6 +177,7 @@ h1#historico {
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: space-around;
+    margin: 2rem 0;
 }
 
 /* MENU LATERAL ESQUERDO */
@@ -200,147 +214,106 @@ aside {
     text-transform: unset;
 }
 
-/* ALTERAR DADOS DO USUÁRIO */
-
+.alugados img {
+    width: 50%;
+}
+/* ALTERAR DADOS */
 .altera-dados {
     align-items: stretch;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    background-color: var(--background-color);
-    align-content: stretch;
+    margin-top: 1rem;
+    background-color: var(--background-2);
+    border-radius: 1rem;
+    margin: 2rem 5rem 1rem 15rem;
+}
+.altera-dados #alterar{
+    text-align: center;
 }
 
-.dados-usuario #alterar-name {
-    margin: 0;
-    width: 5rem;
-    height: 2rem;
-    align-self: flex-end;
-    border: none;
-    background-color: var(--cores-objetos);
-}
-
-.dados-usuario {
-    display: flex;
+.titulos {
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    align-content: space-around;
+    color: var(--cores-letra);
+    width: 90%;
+    padding: .5rem;
+    background-color: var(--background-color);
+    border-bottom: .16rem solid var(--cores-chaves);
+    border-radius: 1rem;
+    align-items: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.dados-usuario{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.btn-form {
+    margin: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    color: var(--cores-letra);
+    background-color: #B30006;
+    width: 10rem;
+    height: 2.5rem;
+}
+
+.cf-bnt{
     margin-top: 2rem;
 }
 
-.dados-usuario #alterar-email {
-    margin: 0;
-    width: 5rem;
-    height: 2rem;
-    align-self: flex-end;
-    border: none;
-    background-color: var(--cores-objetos);
-}
 
-.dados-usuario #alterar-senha {
-    margin: 0;
-    width: 5rem;
-    height: 2rem;
-    align-self: flex-end;
-    border: none;
-    background-color: var(--cores-objetos);
-}
 
-.dados-usuario input {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    background-color: white;
-    /* height: 2rem; */
-    width: 20rem;
-    /* margin: 1rem; */
-}
 
-.dados-usuario button {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    color: var(--cores-letra);
-    background-color: #B30006;
-    height: 2rem;
-    width: 20rem;
-    margin-top: 1rem;
-    /* margin-bottom: 2rem; */
-}
+/*CARTAO DE CREDITO*/
 
-/* ALTERAR DADOS DO CARTÃO*/
 
-.credit-card {
-    border-radius: 9%;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    margin-top: 1rem;
-    border-radius: 20px;
-    background-color: var(--background-color);
-}
-
-.card {
-    position: relative;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.credit-card input {
-    border-radius: 10px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    height: 2rem;
-    width: 20rem;
-    margin: 1rem;
-    margin-bottom: 2rem;
-}
-
-.credit-card button {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    color: var(--cores-letra);
-    background-color: #B30006;
-    height: 2rem;
-    width: 20rem;
-    margin: 1rem;
-    margin-bottom: 2rem;
-}
-
-.new-card>h1 {
-    border-radius: 1rem;
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+.credit-card{
+    margin-top: 2rem;
     background-color: var(--background-2);
-    margin-bottom: 1rem;
-    border-bottom: .16rem solid red;
-}
-
-.formulario-card {
-    border-radius: 10px;
-    text-align: center;
     align-items: center;
-    display: grid;
+    display: flex;
     justify-content: space-around;
     flex-direction: column;
     margin-top: 1rem;
-    border-radius: 20px;
-    background-color: var(--background-color);
+    background-color: var(--background-2);
+    border-radius: 1rem;
+    margin: 2rem 5rem 1rem 15rem;
+}
+#cadastrar{
+    text-transform: uppercase;
+    text-align: center;
+}
+.card{
+    position: relative; 
+    width: 35rem;
+    height: 20rem;
+}
+
+.face-card{
+    margin-top: 2rem;
+    height: 100%;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, rgba(195, 0, 0, 0.89) 0%, rgba(129, 3, 3, 0.89) 100%);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 
 }
 
-.formulario button {
+.active button {
+    margin: 2rem;
+    position: relative;
+    
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -349,38 +322,155 @@ aside {
     background-color: #B30006;
     height: 2rem;
     width: 20rem;
-    /* margin: 1rem; */
-    /* margin-bottom: 2rem; */
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+    
+#chip{
+    width: 75px;
+    top: 60px;
+	left: 45px; 
+    position: absolute;
+}
+
+
+#signal{
+    position: absolute;
+    width: 37px;
+    top: 80px;
+	left: 135px;
+    transform: rotate(90deg);
+}
+
+.label-titular{
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    line-height: 1.2rem;
+    font-weight: bold;
+}
+
+#value{
+    position: absolute;
+    top: 5.2rem;
+    left: -1.8px;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    color: var(--cores-letra);
+}
+
+#card-info:not(span,card-number){
+    width: 100%; 
+    bottom: 15px;
+    padding: 0 20px;
+    position: absolute;
+	opacity: 0.75;
+    margin-left: 3rem;
+}
+
+.flex { 
+    display: flex;
+    padding-left: 3rem;
+    margin-bottom: 5rem;
+    gap: 3rem;
+    
+}
+
+#card-number{
+    letter-spacing: 3px;
+    font-size: 2.4rem;
+    width: 100%;
+    position: absolute;
+    top: -55px;
+    left: -38px;
+    color: var(--cores-letra);
+}
+
+.flex-expiration .label{
+   font-size: .8rem;
+   font-weight: bold;
+   width:30px ;
+   color: var(--background-color);
+}
+.flex-expiration .value{
+  margin-left: .7rem;
+  color: var(--cores-letra);
+}  
+
+.flex-security .label{
+    font-size: .8rem;
+    font-weight: bold;
+    width:30px ;
+    color: var(--background-color);
+ }
+ .flex-security .value{
+   margin-left: .7rem;
+   color: var(--cores-letra);
+}  
+.new-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-top: 3rem;
+}
+.new-card h1{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--cores-letra);
+    text-transform: uppercase;
+}
+.formulario {
+    margin: 30px;
+    text-align: center;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
 }
 
 form .formulario {
     width: 500px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    background-color: white;
-    height: 2rem;
-    width: 20rem;
-    margin: 1rem;
+    margin: 10px auto;
+    display: block;
+    background: var(--background-color);
+    outline: 0;
+    border: 0;
+    border-radius: 1rem;
+    height: 41px;
+    padding-inline: 1.2rem;
+    color:var(--cores-letra);
 }
-
-/* CANCELAR ASSINATURA */
-
-
-.cancelar {
-    width: 100%;
+.formulario input:focus {
+    background-color: white;
+    color: black;
+}
+.formulario .btn-cadastrar{
+    width: 150px;
+    text-transform: uppercase;
+    background: #323238;
+}
+/*CANCELAR CONTA*/
+.cancelar{
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-color: var(--background-color);
-    border-radius: 10px;
-    align-content: space-around;
-    flex-wrap: nowrap;
+    background-color: var(--background-2);
+    border-radius: 1rem;
+    margin: 2rem 5rem 1rem 15rem;
 }
 
-.cancel button {
+.btn {
+    position: relative;
+    top: 4rem;
+    padding: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--cores-chaves);
+    color: var(--cores-letra);
+    border-radius: 1rem;
+}
+.cancel{
+    align-items: center;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -462,23 +552,6 @@ div.pop-up span {
     background: white;
 }
 
-::-webkit-scrollbar-thumb {
-    background: darkred;
-}
-
-::-webkit-scrollbar-track {
-    background: white;
-}
-
-
-div.dados-completos h1 {
-    color: red;
-    opacity: .7;
-    margin-bottom: 1rem;
-    text-decoration: underline;
-    font-size: x-large;
-}
-
 div.dados-completos h4 {
     color: darkred;
     font-size: small;
@@ -531,10 +604,4 @@ div.dados-completos div#bt-dados {
 
 div.dados-completos h5 {
     margin-top: .3rem;
-}
-
-section#section-cancelar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
