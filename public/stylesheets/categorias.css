@@ -80,6 +80,12 @@ main>hr{
     display: flex;
 }
 
+section.container{
+    color: var(--cores-letra);
+    text-align: center;
+
+    font-size: 1.5rem;
+}
 .content-genero {
     width: 100%;
     opacity: 1;

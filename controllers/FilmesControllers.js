@@ -1,4 +1,4 @@
-const { Categorias, Classificacao, Filme } = require('../models');
+const { Categorias, Classificacao, Filme, Tipo} = require('../models');
 const Op = require('sequelize');
 const { validationResult } = require('express-validator');
 const path = require('path');

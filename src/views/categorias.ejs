@@ -27,9 +27,16 @@
 
         <section class="container">
             <div class="titulos">
-                <h1>
-                    <%= filmes[0].tipo%>S <%= filmes[0].categorias%>
-                </h1>
+                    <% if(filmes && filmes.length > 0 && filmes[0].tipo) { %>
+                        <div class="titulos">
+                            <h1>
+                                <%= filmes[0].tipo %>S <%= filmes[0].categorias %>
+                            </h1>
+                        </div>
+                        <% } else { %>
+                            <p>Não localizamos nada!</p>
+                            <p> Faça uma nova pesquisa!</p>
+                    <% } %>
             </div>
 
             
