@@ -24,7 +24,7 @@
                         <div class="titulos">
                             <h1>Histórico de Pedidos</h1>
                         </div>
-                       
+
                         <div class="comprados">
                             <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
                                 <p>Homem Aranha</p>
@@ -47,7 +47,7 @@
                             <div class="titulos">
                                 <h1 id="alterar">Alterar Dados</h1>
                             </div>
-                           
+
                             <section class="alterar">
                                 <div class="formulario">
                                     <div class="dados-usuario">
@@ -78,7 +78,7 @@
                                                 <div id="bt-dados">
                                                     <button>Preencher</button>
                                                 </div>
-                                            <% } else { %>
+                                                <% } else { %>
                                                     <div>
                                                         <h4>Nome</h4>
                                                         <p><%- dados.nome_usuario %></p>
@@ -116,10 +116,10 @@
                                                     <div id="bt-dados">
                                                         <button>Editar</button>
                                                     </div>
-                                            <% } %>
+                                                    <% } %>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </section>
                         </section><br>
@@ -134,36 +134,42 @@
                                 <div class="titulos">
                                     <h1>Dados do novo cartão</h1>
                                 </div>
-                                <br>
                                 <div class="form-container active">
                                     <form class="formulario-card" action="/painel/novoCartao" method="post">
                                         <% if(!cartao) {%>
                                             <div class="cartao">
                                                 <img src="/img/pagamento/credit-card.svg" />
-                                                <input placeholder="Número do cartão" type="text" name="numero_cartao" maxlength="19">
-                                                <input placeholder="Nome como no cartão" type="text" name="nome_completo">
+                                                <input placeholder="Número do cartão" type="text" name="numero_cartao"
+                                                    maxlength="19">
+                                                <input placeholder="Nome como no cartão" type="text"
+                                                    name="nome_completo">
                                                 <input placeholder="MM/AA" type="text" name="vencimento" maxlength="5">
                                                 <input placeholder="CVV" type="text" name="cvv" maxlength="3" />
                                             </div>
-                                            
-                                        <% } else { %>
-                                            <% for(const card of dados.cartao) { %>
-                                                <div class="cartao">
-                                                    <img src="/img/pagamento/credit-card.svg" />
-                                                    <div>
-                                                        <input name="selectCartao" type="radio" value="<%= card.id %>">
-                                                        <input name="nome_completo" value="<%= card.nome_completo %>" disabled />
-                                                        <input name="numero_cartao" value="<%= card.numero_cartao %>" disabled />
-                                                        <input name="vencimento" value="<%= card.vencimento %>" disabled />
-                                                        <input name="cvv" type="text" placeholder="CVV" maxlength="3" value="<%= card.cvv %>" />
-                                                        </input>
+
+                                            <% } else { %>
+                                                <% for(const card of dados.cartao) { %>
+                                                    <div class="cartao">
+                                                        <img src="/img/pagamento/credit-card.svg" />
+                                                        <div>
+                                                            <input name="selectCartao" type="radio"
+                                                                value="<%= card.id %>">
+                                                            <input name="nome_completo"
+                                                                value="<%= card.nome_completo %>" disabled />
+                                                            <input name="numero_cartao"
+                                                                value="<%= card.numero_cartao %>" disabled />
+                                                            <input name="vencimento" value="<%= card.vencimento %>"
+                                                                disabled />
+                                                            <input name="cvv" type="text" placeholder="CVV"
+                                                                maxlength="3" value="<%= card.cvv %>" />
+                                                            </input>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            <% }%>
-                                        <% }%>
-                                        <div class="cad-cartao">
-                                            <button type="submit">Cadastrar novo cartão </button>
-                                        </div>
+                                                    <% }%>
+                                                        <% }%>
+                                                            <div class="cad-cartao">
+                                                                <button type="submit">Cadastrar novo cartão </button>
+                                                            </div>
                                     </form>
                                 </div>
                             </div>
@@ -195,9 +201,9 @@
                     <h4><%- aviso%></h4>
                 </div>
             </div>
-        <% } %>
+            <% } %>
 
-        <%- include('cadastroUsuario')%>
+                <%- include('cadastroUsuario')%>
 
     </main>
 

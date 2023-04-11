@@ -32,7 +32,7 @@
             <section class="filmes-home">
                 <% for (const listafilmes of filmes) { %>
                     <div class="filme-show">
-                        <a href="<%= '/produtos' %>/?nome=<%- listafilmes.nome  %>">
+                        <a href=" /produtos/<%- listafilmes.id  %>">
                             <img src="/img/filmes/<%= listafilmes.background%>.jpg" alt="" id="back-filme">
                             <div class="descri">
                                 <div>
@@ -54,7 +54,7 @@
             <section class="series-home">
                 <% for (const listaSeries of series) { %>
                     <div class="filme-show">
-                        <a href="<%= '/produtos' %>/?nome=<%- listaSeries.nome  %>">
+                        <a href="/produtos/<%- listaSeries.id  %>">
                             <img src="/img/series/<%= listaSeries.background %>.jpg" alt="" id="back-filme">
                             <div class="descri">
                                 <div>
