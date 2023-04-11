@@ -137,7 +137,7 @@
                                 <br>
                                 <div class="form-container active">
                                     <form class="formulario-card" action="/painel/novoCartao" method="post">
-                                        <% if(dados.cartao.length <= 0) {%>
+                                        <% if(!cartao) {%>
                                             <div class="cartao">
                                                 <img src="/img/pagamento/credit-card.svg" />
                                                 <input placeholder="Número do cartão" type="text" name="numero_cartao" maxlength="19">
@@ -158,8 +158,9 @@
                                                         <input name="cvv" type="text" placeholder="CVV" maxlength="3" value="<%= card.cvv %>" />
                                                         </input>
                                                     </div>
-                                                </div>       
-                                        <% } } %>
+                                                </div>
+                                            <% }%>
+                                        <% }%>
                                         <div class="cad-cartao">
                                             <button type="submit">Cadastrar novo cartão </button>
                                         </div>

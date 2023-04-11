@@ -49,6 +49,7 @@ module.exports = {
                             view.mensagem = "Você precisa completar o seu cadasto...",
                             view.aviso = 'preencha os dados de cadastro.'
                             view.dados = null;
+                            view.cartao = null;
 
                             res.render('painel-user', view);
                         } else {
