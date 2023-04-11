@@ -25,8 +25,6 @@
 body {
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
     background-color: var(--background-color);
@@ -37,10 +35,10 @@ body {
 }
 
 .container {
-    width: 84vw;
+    width: 80vw;
     display: flex;
-    position: fixed;
-    height: 80%;
+    margin-top: 6rem;
+    height: 70vh;
     overflow: scroll;
     padding-left: 0px;
     flex-direction: column;
@@ -49,10 +47,10 @@ body {
 }
 
 nav#menu {
-    margin-top: 6rem;
-    align-items: center;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    margin-top: 6rem;
 
 }
 
@@ -61,7 +59,7 @@ nav#menu>h1 {
     background-color: var(--background-2);
     margin-bottom: 1rem;
     border-bottom: .16rem solid red;
-
+    width: 100%;
     padding: 0.6rem;
 }
 
@@ -73,8 +71,6 @@ nav#menu ul li {
 main.main-painelUser {
     width: 100%;
     overflow: hidden;
-    position: absolute;
-    top: 5rem;
     display: flex;
     flex-direction: column;
     align-content: flex-end;
@@ -121,7 +117,6 @@ h1 {
     color: var(--cores-letra);
     flex-direction: column;
     flex-wrap: nowrap;
-    margin-left: 1rem;
 
 }
 
@@ -181,16 +176,16 @@ h1#historico {
 aside {
     left: 0;
     top: 0;
-    bottom: 0;
     padding: 10px;
-    height: 100vh;
-    background-color: var(--background-2);
+    height: 50%;
+    border-right: .16rem solid var(--cores-chaves);
+    background-color: var(--background-color);
     z-index: 1;
-    width: 14rem;
+    width: 12rem;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: stretch;
+    align-items: center;
 }
 
 #menu ul li a {
@@ -198,7 +193,7 @@ aside {
     line-height: 3;
     color: var(--cores-letra);
     text-decoration: none;
-    text-align: center;
+    text-align: left;
     display: block;
     cursor: pointer;
     transition: .2s;
@@ -263,10 +258,15 @@ aside {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    background-color: white;
+    background-color: rgb(190, 190, 190);
+    color: var(--background-color);
     /* height: 2rem; */
     width: 20rem;
     /* margin: 1rem; */
+}
+
+.dados-usuario input:focus {
+    background-color: var(--cores-letra);
 }
 
 .dados-usuario button {
@@ -284,6 +284,7 @@ aside {
 
 /* ALTERAR DADOS DO CARTÃO*/
 
+
 div.cartao img {
     width: 2rem;
     margin-right: 1rem;
@@ -294,9 +295,9 @@ div.cartao {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: center;
     padding-bottom: .6rem;
     padding-top: .3rem;
-    
 }
 
 div.content-item div.cartao div {
@@ -325,12 +326,18 @@ div.cad-cartao button {
     margin-bottom: 2rem;
 }
 
+.cad-cartao{
+    display: flex;
+    justify-content: center;
+}
+
 input[name="cvv"] {
     width: 60px;
     height: 40px;
     text-align: center;
     font-size: larger;
     margin-right: 2rem;
+    border-radius: 1rem;
 }
 
 input[name="numero_cartao"],
@@ -340,6 +347,7 @@ input[id="numero_cartao"] {
     text-align: center;
     font-size: larger;
     margin-right: 2rem;
+    border-radius: 1rem;
 }
 
 input[name="nome_completo"],
@@ -349,6 +357,7 @@ input[id="nome_completo"] {
     text-align: center;
     font-size: larger;
     margin-right: 2rem;
+    border-radius: 1rem;
 }
 
 input[name="vencimento"],
@@ -358,6 +367,7 @@ input[id="vencimento"] {
     text-align: center;
     font-size: larger;
     margin-right: 2rem;
+    border-radius: 1rem;
 }
 
 /* CANCELAR ASSINATURA */
@@ -408,6 +418,7 @@ div#pop-up-content {
     width: 25rem;
     height: 18rem;
     background-color: darkred;
+    border-radius: 1rem;
     padding: .7rem;
     display: flex;
     flex-direction: column;
@@ -476,6 +487,7 @@ div.dados-completos h1 {
 div.dados-completos h4 {
     color: darkred;
     font-size: small;
+    margin-left: 1rem;
 }
 
 div.dados-completos p {
