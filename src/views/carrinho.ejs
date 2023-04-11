@@ -51,7 +51,6 @@
                         <div>
                             <h3>Detalhes de pagamento</h3>
                         </div>
-                        <br>
                         <hr>
                         <div>
                             <h3>CARRINHO: <%= qtd %> itens</h3>
@@ -82,7 +81,6 @@
                                 R$ <%= total%>
                             </span>
                         </div>
-                        <br>
                     </section>
                 </section>
             </section>
@@ -211,7 +209,7 @@
                         <input name="cupom" value="<%= dadosCupom.id %>">
                         <input name="total" value="<%= total %>">
                     </div>
-                    <button type="submit">Confirmar</button>
+                    <button id="bt-confirmar" type="submit">Confirmar</button>
                 </form>
             </div>
         </section>
