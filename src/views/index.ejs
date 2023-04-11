@@ -25,14 +25,14 @@
         <section class="container">
             <div class="titulos">
                 <h1>FILMES</h1>
-                <a href="<%= '/produtos/filmes' %>">Mais Filmes...</a>
+                <a href="<%= '/produtos/maisFilmes?tipo=filme' %>">Mais Filmes...</a>
             </div>
 
-            <hr>
+       
             <section class="filmes-home">
                 <% for (const listafilmes of filmes) { %>
                     <div class="filme-show">
-                        <a href="<%= '/produtos' %>/?nome=<%- listafilmes.nome  %>">
+                        <a href=" /produtos/<%- listafilmes.id  %>">
                             <img src="/img/filmes/<%= listafilmes.background%>.jpg" alt="" id="back-filme">
                             <div class="descri">
                                 <div>
@@ -48,13 +48,13 @@
             <hr>
             <div class="titulos">
                 <h1>SÉRIES</h1>
-                <a href="<%= '/produtos/series' %>">Mais Séries...</a>
+                <a href="<%= '/produtos/maisSeries?tipo=serie' %>">Mais Séries...</a>
             </div>
-            <hr>
+
             <section class="series-home">
                 <% for (const listaSeries of series) { %>
                     <div class="filme-show">
-                        <a href="<%= '/produtos' %>/?nome=<%- listaSeries.nome  %>">
+                        <a href="/produtos/<%- listaSeries.id  %>">
                             <img src="/img/series/<%= listaSeries.background %>.jpg" alt="" id="back-filme">
                             <div class="descri">
                                 <div>
@@ -69,5 +69,5 @@
             </section>
         </section>
     </main>
-
+    <!-- Inicia footer -->
     <%- include('partials/footer')%>

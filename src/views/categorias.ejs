@@ -4,6 +4,7 @@
 
 <%- include('partials/header') %>
     <main>
+        <hr>
         <div class="sub-header">
             <form action="/produtos/categorias/" class="content-genero" method="get">
                 <select name="tipo" id="tipo">
@@ -26,18 +27,25 @@
 
         <section class="container">
             <div class="titulos">
-                <h1>
-                    <%= filmes[0].tipo%> <%= filmes[0].categorias%>
-                </h1>
+                    <% if(filmes && filmes.length > 0 && filmes[0].tipo) { %>
+                        <div class="titulos">
+                            <h1>
+                                <%= filmes[0].tipo %>S <%= filmes[0].categorias %>
+                            </h1>
+                        </div>
+                        <% } else { %>
+                            <p>Não localizamos nada!</p>
+                            <p> Faça uma nova pesquisa!</p>
+                    <% } %>
             </div>
 
-            <hr>
+            
             </div>
             <section class="filmes">
 
                 <% for(const produto of filmes) { %>
                     <div class="filme-show">
-                        <a href="<%= '/produtos' %>\">
+                        <a href="/produtos/<%= produto.id %>">
                             <img src="/img/<%- filmes[0].tipo%>s/<%- produto.background %>.jpg" alt="" id="back-filme">
                             <div class="descri">
                                 <div>

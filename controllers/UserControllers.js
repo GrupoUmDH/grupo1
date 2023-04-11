@@ -1,16 +1,18 @@
-const { Usuario, CadastroUsuario } = require("../models");
+const { Usuario, CadastroUsuario, Cartao } = require('../models');
 const { Op } = require('sequelize');
 
 const express = require("express");
 const session = require("express-session");
 const bcrypt = require("bcrypt");
 const Sequelize = require("sequelize");
+const { includes } = require("../src/middlewares/loginSession");
 
 const view = {
     pageName: "login",
     js: "login",
     users: {},
     dados: {},
+    cartao: {},
     popUp: false,
     mensagem: "mensagem",
     aviso: "aviso",
@@ -19,11 +21,12 @@ const view = {
 
 module.exports = {
     index: async (req, res, next) => {
+        const { id, email } = req.session;
 
-        const { id , email } = req.session;
+        view.users = req.session;
 
         try {
-            if(!email){
+            if (!email) {
                 view.pageName = 'login';
                 view.js = 'login';
                 view.popUp = false;
@@ -31,30 +34,41 @@ module.exports = {
                 res.render('login', view);
 
             } else {
-                CadastroUsuario.findOne({
+                const idUsuario = await CadastroUsuario.findOne({
                     where: {
                         id_usuario: id,
-                    }
+                    },
+                    include: [{ model: Cartao, as: 'cartao' }]
                 })
-                .then(dados=>{
+                    .then(dados => {
 
-                    if(!dados){
-                        view.pageName = 'painel-user';
-                        view.js = 'login';
-                        view.popUp = true;
-                        view.mensagem = "Você precisa completar o seu cadasto...",
-                        view.aviso = 'preencha os dados de cadastro.'
-    
-                        res.render('painel-user', view);
-                    } else {
-                        view.pageName = 'painel-user';
-                        view.js = 'login';
-                        view.popUp = false;
-                        view.dados = dados;
-    
-                        res.render('painel-user', view);
-                    }
-                });
+                        if (!dados) {
+                            view.pageName = 'painel-user';
+                            view.js = 'login';
+                            view.popUp = true;
+                            view.mensagem = "Você precisa completar o seu cadasto...",
+                            view.aviso = 'preencha os dados de cadastro.'
+                            view.dados = null;
+                            view.cartao = null;
+
+                            res.render('painel-user', view);
+                        } else {
+                            view.pageName = 'painel-user';
+                            view.js = 'login';
+                            view.popUp = false;
+                            view.dados = dados;
+
+                            console.log(dados);
+
+                            view.cartao = Cartao.findAll({
+                                where: { id_cadastroUsuario: dados.id }
+                            });
+
+
+                            res.render('painel-user', view);
+                        }
+
+                    });
             }
 
         } catch (err) {
@@ -107,7 +121,7 @@ module.exports = {
             res.render("login", view);
         }
     },
-    cadastroUsuario: async(req, res, next) => {
+    cadastroUsuario: async (req, res, next) => {
         //const { nome_usuario, sobrenome_usuario, cpf, email, endereco, codigo_postal, estado, cidade, senha, tipo_usuario } = req.body;
         const hashedPassword = await bcrypt.hash(senha, 10);
         try {
@@ -147,7 +161,6 @@ module.exports = {
 
     },
     cadastro: async (req, res, next) => {
-        console.log(req.session);
 
         const { nome_usuario, email, senha } = req.body;
         const hashedPassword = await bcrypt.hash(senha, 10);
@@ -190,21 +203,28 @@ module.exports = {
 
     update: async (req, res, next) => {
         const { name, email1, password } = req.body;
-        console.log(req.body)
+        //console.log(req.body)
         //const hashedPassword = await bcrypt.hash(password, 10);
-        
+
         try {
-            const usuarioEdit = await Usuario.update({ nome_usuario:name, email:email1,}, { where: { id:req.session.id }} )
-            res.redirect("/")
+            const usuarioEdit = await Usuario.update({ 
+                nome_usuario: name, email: email1, }, 
+            { where: { id: req.session.id } 
+        });
+            res.redirect("/");
         } catch (error) {
             res.status(400).send("Erro ao Alterar");
         }
     },
 
+    novoCartao: async (req, res) => {
+        res.send(req.body);
 
+    },
 
     sair: async (req, res) => {
         req.session = null;
+        console.log(res.session);
         res.redirect('/');
     },
 };

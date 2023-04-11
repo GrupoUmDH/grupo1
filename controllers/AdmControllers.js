@@ -24,7 +24,6 @@ module.exports = {
     // CRUD - Painel administrativo - Configurando Filmes/Séries
 
     index: async (req, res) => {
-
         try {
 
             if (req.session.tipo == 'admin') {
@@ -140,7 +139,6 @@ module.exports = {
     },
 
     criar: async (req, res) => {
-
         const novofilme = {
             nome: req.body.nome,
             imagem: path.parse(req.files.fundo[0].filename).name,
@@ -174,6 +172,7 @@ module.exports = {
     userConfig: async (req, res) => {
 
         const { email } = req.session;
+        view.user = req.session.nome;
 
         try {
 
@@ -269,6 +268,7 @@ module.exports = {
 
     userDelete: async (req, res) => {
         const { id } = req.body;
+        view.user = req.session.nome;
 
         await Usuario.findByPk(id)
             .then((response) => {
@@ -307,6 +307,7 @@ module.exports = {
     },
 
     userEditar: async (req, res) => {
+        view.user = req.session.nome;
         console.log(req.body);
         const {id} = req.body;
 
@@ -351,11 +352,14 @@ module.exports = {
     },
 
     userUpdate: async (req, res) => {
+        view.user = req.session.nome;
+
+        const { nome, email, tipo } = req.session;
 
         const { errors } = validationResult(req);
         const  id  = view.userId;
 
-        view.user = req.session.nome; 
+        view.user = nome; 
 
         if(errors.length){
             view.error = true;
@@ -382,6 +386,7 @@ module.exports = {
                 view.mensagem = 'Usuário atualizado com sucesso';
                 view.aviso = '';
                 res.render('userConfig', view);
+               
             }).catch((reason) => {
                 view.error = true;
                 view.mensagem = 'Erro ao atualizar dados.';
@@ -392,6 +397,7 @@ module.exports = {
     },
 
     dadosUpdate: async (req, res) => {
+        view.user = req.session.nome;
         //console.log(req.body);
         const { id_usuario, nome_usuario, sobrenome, cpf, codigo_postal, endereco, bairro, cidade,  estado, pais } = req.body;
 
@@ -424,7 +430,11 @@ module.exports = {
                             view.error = true;
                             view.mensagem = 'Dados preenchidos com sucesso';
                             view.aviso = '';
-                            res.render('userConfig', view);
+                            if (req.session.tipo == 'admin'){
+                                res.render('userConfig', view);
+                            } else {
+                                res.redirect('/login');
+                            }
                         });
     
                 } else {
@@ -437,7 +447,11 @@ module.exports = {
                             view.error = true;
                             view.mensagem = 'Usuário atualizado com sucesso';
                             view.aviso = '';
-                            res.render('userConfig', view);
+                            if (req.session.tipo == 'admin'){
+                                res.render('userConfig', view);
+                            } else {
+                                res.redirect('/login');
+                            }
                         })
                     }
                 }

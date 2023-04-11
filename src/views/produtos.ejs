@@ -19,7 +19,6 @@
 
                             <p id="descri-filme"><%= produto.descricao %></p>
                         </div>
-                        <!-- terceiro filho -->
                         <div id="bts-compra">
                             <div class="classificacao">
                                 <img id="indicacao" src="/img/indicativa/<%= classificacao.imagem%>">
@@ -36,15 +35,15 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="faixas">
-                    <div class="f1">
-                        <p>8.3</p>
+                    <div class="faixas">
+                        <div class="f1">
+                            <p>8.3</p>
+                        </div>
+                        <div class="f2"></div>
                     </div>
-                    <div class="f2"></div>
-                </div>
-            </div>
-        </section>
+                    </div>
+            </section>
+
 
     </main>
     <div class="pop-Up">
@@ -54,7 +53,7 @@
             <div>
                 <a href="<%= '/index' %>"><button> CONTINUAR COMPRANDO</button> </a>
                 <form action="/carrinho" method="get" id="montarCarrinho">
-                    <input type="hidden" name="itensCarrinho" />
+                    <input type="hidden" name="itensCarrinho"/>
                     <button type="submit"> VER CARRINHO </button>
                 </form>
             </div>

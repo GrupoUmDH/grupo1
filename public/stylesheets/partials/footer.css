@@ -1,5 +1,9 @@
-p {
-    margin-top: 2rem;
+:root {
+    --background-color: #0C0C0C;
+    --background-2: #131313;
+    --cores-chaves: #B30006;
+    --cores-letra: #FFFFFF;
+    --cores-objetos: #580003;
 }
 
 hr {
@@ -13,10 +17,20 @@ hr {
 }
 
 footer {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: var(--background-2);
     color: var(--cores-chaves);
+    border-top: .16rem solid var(--cores-chaves);
     width: 100%;
     text-align: center;
-    z-index: 3;
-    background: var(--background-color);
-    height: 12vh;
+    z-index: 9998;
+}
+
+footer p{
+    transition: all .2s;
+}
+footer p:hover {
+    text-shadow: rgba(255,0,0,1) 0px 0px 9px;
+    filter: brightness(500%);
 }

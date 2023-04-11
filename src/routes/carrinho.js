@@ -2,17 +2,16 @@ const { json, query } = require('express');
 var express = require('express');
 var router = express.Router();
 
-const CarrinhoController=require('../controllers/CarrinhoController')
-let imgPagamento = require('../models/CarrinhoModel')
+const CarrinhoController = require('../controllers/CarrinhoController');
+
+const validaCard = require('../middlewares/validaCard');
 
 router.get('/', CarrinhoController.carrinho);
-//router.post('/adiciona/:id', CarrinhoController.adiciona);
-router.delete('/deletar/:id', CarrinhoController.deletaItem);
+router.post('/confirmaCompra', CarrinhoController.confirmaCompra)
 
-/* GET COMPRA - FINALIZA COMPRA */
-router.get('/compra', function(req, res, next) {
-    let img=imgPagamento.index();
-    res.render('compra', { pageName: 'compra' , js:"compra", compra:img })
-});
+//router.get('/cupom', CarrinhoController.cupom);
+//router.post('/adiciona/:id', CarrinhoController.adiciona);
+//router.delete('/deletar/:id', CarrinhoController.deletaItem);
+
     
 module.exports = router;

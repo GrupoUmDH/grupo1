@@ -1,28 +1,29 @@
+<head>
+    <link rel="stylesheet" href="/stylesheets/cadastroUsuario.css" />
+    <script src="/javascripts/cadastroUsuario.js" defer></script>
+</head>
+
 <%- include('partials/header') %>
 
     <aside class="container-side">
         <nav id="menu">
-            <h1>Minha Conta</h1><br>
-            <hr><br>
+            <h1>Minha Conta</h1>
             <ul>
-                <li><a href="#historico">Histórico de pedidos</a></li><br>
-                <li><a href="#alterar">Alterar cadastro</a></li><br>
-                <li><a href="#cadastrar">Cadastrar cartão</a></li><br>
-                <li><a href="#cancelar">Cancelar assinatura</a></li>
+                <li><a href="#section-historico">Histórico de pedidos</a></li>
+                <li><a href="#alterar">Alterar cadastro</a></li>
+                <li><a href="#section-pay">Cadastrar cartão</a></li>
+                <li><a href="#section-cancelar">Cancelar assinatura</a></li>
             </ul>
         </nav>
     </aside>
     <main class="main-painelUser">
         <div id="section-content">
-            <section id="section-historico">
-                <h1 id="historico">Histórico de Pedidos</h1> <br>
-                <section class="container"><br>
-                    <hr>
-                    <section class="historico">
+            <section class="container">
+                <div>
+                    <section id="section-historico">
                         <div class="titulos">
-                            <h2>Comprados</h2>
+                            <h1>Histórico de Pedidos</h1>
                         </div>
-                        <hr>
 
                         <div class="comprados">
                             <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
@@ -39,130 +40,156 @@
                             </div>
                         </div>
                     </section>
-                </section><br>
-            </section>
-            <section id="section-dados">
-                <section class="altera-dados">
-                    <div class="titulos">
-                        <h1 id="alterar">Alterar Dados</h1>
-                    </div>
-                    <br>
+                </div>
+                <div>
+                    <section id="section-dados">
+                        <section class="altera-dados">
+                            <div class="titulos">
+                                <h1 id="alterar">Alterar Dados</h1>
+                            </div>
 
-                    <section class="alterar">
-                        <div class="formulario">
-                            <div class="dados-usuario">
-                                <div>
-                                    <form class="form-cad" method="post"
-                                        action="/painel/users/atualizar?_method=PUT">
+                            <section class="alterar">
+                                <div class="formulario">
+                                    <div class="dados-usuario">
+                                        <div>
+                                            <form class="form-cad" method="post"
+                                                action="/painel/users/atualizar?_method=PUT">
 
-                                        <label for="nome_usuario">Usuário:</label>
-                                        <input value="<%- users.nome_usuario %>" placeholder="NOME USUÁRIO.."
-                                            type="text" name="nome_usuario" id="user" />
-                                        <label for="email">e-mail:</label>
-                                        <input value="<%- users.email %>" placeholder="EMAIL..." type="email"
-                                            name="email" />
-                                        <label for="senha">Senha:</label>
-                                        <input placeholder="SENHA" type="password" name="senha" />
-                                        <label for="tipo_usuario">Tido de usuário:</label>
-                                        <select name="tipo_usuario">
-                                            <option selected hidden disabled>Credencial</option>
-                                            <option type="check" value="cliente">cliente</option>
-                                            <option value="admin">admin</option>
-                                        </select>
+                                                <label for="nome_usuario">Usuário:</label>
+                                                <input value="<%- users.nome_usuario %>" placeholder="NOME USUÁRIO.."
+                                                    type="text" name="nome_usuario" id="user" />
+                                                <label for="email">e-mail:</label>
+                                                <input value="<%- users.email %>" placeholder="EMAIL..." type="email"
+                                                    name="email" />
+                                                <label for="senha">Senha:</label>
+                                                <input placeholder="SENHA" type="password" name="senha" />
+                                                <button type="submit">Atualizar</button>
+                                            </form>
+                                        </div>
 
-                                        <button type="submit">Atualizar</button>
+                                        <div class="dados-completos">
+                                            <div>
+                                                <h1>Dados completos do usuário: </h1>
+                                            </div>
+                                            <% if (!dados) { %>
+                                                <div>
+                                                    <h4> Usuário nao preencheu os dados</h4>
+                                                </div>
+                                                <div id="bt-dados">
+                                                    <button>Preencher</button>
+                                                </div>
+                                                <% } else { %>
+                                                    <div>
+                                                        <h4>Nome</h4>
+                                                        <p><%- dados.nome_usuario %></p>
+                                                        <h4>Sobrenome</h4>
+                                                        <p><%- dados.sobrenome%></p>
+                                                    </div>
+                                                    <div>
+                                                        <h4>CPF: </h4>
+                                                        <p><%- dados.cpf %></p>
+                                                    </div>
+                                                    <div>
+                                                        <h4>Endereço:</h4>
+                                                        <div>
+                                                            <h5>Logradouro:</h5>
+                                                            <p><%- dados.endereco %></p>
+                                                        </div>
+                                                        <div id="endereco">
+                                                            <div>
+                                                                <h5>Bairro: </h5>
+                                                                <p><%- dados.bairro %></p>
+                                                                <h5>Cidade: </h5>
+                                                                <p><%- dados.cidade %></p>
+                                                            </div>
+                                                            <div>
+                                                                <h5>Estado: </h5>
+                                                                <p><%- dados.estado %></p>
+                                                                <h5>CEP: </h5>
+                                                                <p><%- dados.codigo_postal %></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h4>Formas de pagamento cadastrados:</h4>
+                                                    </div>
+                                                    <div id="bt-dados">
+                                                        <button>Editar</button>
+                                                    </div>
+                                                    <% } %>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </section>
+                        </section><br>
+                    </section>
+                </div>
+                <div>
+                    <section id="section-pay">
+                        <!-- CARTAO DE CREDITO -->
+                        <section class="credit-card">
+                            <br>
+                            <div class="new-card">
+                                <div class="titulos">
+                                    <h1>Dados do novo cartão</h1>
+                                </div>
+                                <div class="form-container active">
+                                    <form class="formulario-card" action="/painel/novoCartao" method="post">
+                                        <% if(!cartao) {%>
+                                            <div class="cartao">
+                                                <img src="/img/pagamento/credit-card.svg" />
+                                                <input placeholder="Número do cartão" type="text" name="numero_cartao"
+                                                    maxlength="19">
+                                                <input placeholder="Nome como no cartão" type="text"
+                                                    name="nome_completo">
+                                                <input placeholder="MM/AA" type="text" name="vencimento" maxlength="5">
+                                                <input placeholder="CVV" type="text" name="cvv" maxlength="3" />
+                                            </div>
+
+                                            <% } else { %>
+                                                <% for(const card of dados.cartao) { %>
+                                                    <div class="cartao">
+                                                        <img src="/img/pagamento/credit-card.svg" />
+                                                        <div>
+                                                            <input name="selectCartao" type="radio"
+                                                                value="<%= card.id %>">
+                                                            <input name="nome_completo"
+                                                                value="<%= card.nome_completo %>" disabled />
+                                                            <input name="numero_cartao"
+                                                                value="<%= card.numero_cartao %>" disabled />
+                                                            <input name="vencimento" value="<%= card.vencimento %>"
+                                                                disabled />
+                                                            <input name="cvv" type="text" placeholder="CVV"
+                                                                maxlength="3" value="<%= card.cvv %>" />
+                                                            </input>
+                                                        </div>
+                                                    </div>
+                                                    <% }%>
+                                                        <% }%>
+                                                            <div class="cad-cartao">
+                                                                <button type="submit">Cadastrar novo cartão </button>
+                                                            </div>
                                     </form>
                                 </div>
-
-                                <div class="dados-completos">
-                                    <div>
-                                        <h1>Dados completos do usuário: </h1>
-                                    </div>
-                                    <% if (!dados) { %>
-                                        <div>
-                                            <h4> Usuário nao preencheu os dados</h4>
-                                        </div>
-                                        <div id="bt-dados">
-                                            <button>Preencher</button>
-                                        </div>
-                                        <% } else { %>
-                                            <div>
-                                                <h4>Nome</h4>
-                                                <p><%- dados.nome_usuario %></p>
-                                                <h4>Sobrenome</h4>
-                                                <p><%- dados.sobrenome%></p>
-                                            </div>
-                                            <div>
-                                                <h4>CPF: </h4>
-                                                <p><%- dados.cpf %></p>
-                                            </div>
-                                            <div>
-                                                <h4>Endereço:</h4>
-                                                <div>
-                                                    <h5>Logradouro:</h5>
-                                                    <p><%- dados.endereco %></p>
-                                                </div>
-                                                <div id="endereco">
-                                                    <div>
-                                                        <h5>Bairro: </h5>
-                                                        <p><%- dados.bairro %></p>
-                                                        <h5>Cidade: </h5>
-                                                        <p><%- dados.cidade %></p>
-                                                    </div>
-                                                    <div>
-                                                        <h5>Estado: </h5>
-                                                        <p><%- dados.estado %></p>
-                                                        <h5>CEP: </h5>
-                                                        <p><%- dados.codigo_postal %></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <h4>Formas de pagamento cadastrados:</h4>
-                                            </div>
-                                            <div id="bt-dados">
-                                                <button>Editar</button>
-                                            </div>
-                                            <% } %>
-                                </div>
                             </div>
-                            <%- include('cadastroUsuario')%>
-                        </div>
+                        </section> <br>
                     </section>
-                </section><br>
-            </section>
-
-            <section id="section-pay">
-                <!-- CARTAO DE CREDITO -->
-                <section class="credit-card">
-                    <br>
-                    <div class="new-card">
-                        <h1>Dados do novo cartão</h1>
-                        <hr><br>
-                        <div class="form-container active">
-                            <form class="formulario-card">
-                                <input placeholder="Número do cartão" type="text" name="number">
-                                <input placeholder="Nome completo" type="text" name="name1">
-                                <input placeholder="MM/AA" type="text" name="expiry">
-                                <input placeholder="CVC" type="text" name="cvc">
-                                <button type="submit">Cadastrar Novo Cartão</button>
-                            </form>
-                        </div>
-                    </div>
-                </section> <br>
-            </section>
-            <section id="section-cancelar">
-                <!-- CANCELAR CONTA -->
-                <section class="cancelar">
-                    <div class="titulos">
-                        <h1 id="cancelar">Deseja cancelar sua assinatura?</h1>
-                    </div>
-                    <hr><br>
-
-                    <section class="cancel">
-                        <button type="submit">Cancelar Assinatura</button>
+                </div>
+                <div>
+                    <section id="section-cancelar">
+                        <!-- CANCELAR CONTA -->
+                        <section class="cancelar">
+                            <div class="titulos">
+                                <h1>Deseja cancelar sua assinatura?</h1>
+                            </div>
+                            <br>
+                            <section class="cancel">
+                                <button type="submit">Cancelar Assinatura</button>
+                            </section>
+                        </section>
                     </section>
-                </section>
+                </div>
             </section>
         </div>
 
@@ -174,7 +201,9 @@
                     <h4><%- aviso%></h4>
                 </div>
             </div>
-        <% } %>
+            <% } %>
+
+                <%- include('cadastroUsuario')%>
 
     </main>
 

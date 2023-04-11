@@ -52,4 +52,7 @@ router.put('/users/atualizaDados', AdmControllers.dadosUpdate);
 
 router.delete('/users/delete', AdmControllers.userDelete);
 
+// CADASTRADO E EXCLUINDO CARTÕES
+router.post('/novoCartao', userController.novoCartao);
+
 module.exports = router;

@@ -5,56 +5,229 @@
 <%- include('partials/header') %>
     <!--CONTEÚDO MAIN -->
     <main>
-        <div class="content-carrinho">
-        <% for(const filme of Itens) { %>
-            <section class="item">
-                <input type="hidden" value="<%=filme.id%>" id="id" name="id">
-                    <img class="imagem-produto" src="<%=filme.imagem%>"/>
-                    <div class="descricao-produto">
+        <div>
+            <div id="titulo">
+                <h1>Finalizar Pedido</h1>
+            </div>
+            <section id="section-carrinho">
+                <div class="content-carrinho">
+                    <div id="titulo">
+                        <h3>Itens: </h3>
+                    </div>
+                    <div id="itens-carrinho">
+                        <% if(!itens[0]) { %>
+                            <h3>SEU CARRINHO ESTA VAZIO</h3>
+                        <% } %>
+                        <% for(const filme of itens) { %>
+                            <section class="item">
+                                <input type="hidden" value="<%=filme.id%>" id="id" name="id">
+                                <img class="imagem-produto" src="/img/<%= filme.tipo %>s/<%=filme.background%>.jpg" />
+                                <div class="descricao-produto">
+                                    <div>
+                                        <h2 class="filme-nome">
+                                            <%=filme.nome%>
+                                        </h2>
+                                        <br>
+                                        <p class="filme-valor">
+                                            R$ <%=filme.valor%>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <form action="/carrinho" method="GET" id="deletaItem">
+                                            <input type="hidden" name="itensCarrinho" id="deletaItem"/>
+                                            <button type="submit">
+                                                <img class="remover" src="/img/ico/lixo.png" />
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </section>
+                            <% } %>
+                    </div>
+                </div>
+                <section class="pagamento">
+                    <section class="resumo">
                         <div>
-                            <h2 class="filme-nome"> <%=filme.nome%></h2>
-                            <br>
-                            <p class="filme-descricao"> <%=filme.descricao%></p>
+                            <h3>Detalhes de pagamento</h3>
                         </div>
+                        <hr>
                         <div>
+                            <h3>CARRINHO: <%= qtd %> itens</h3>
+                            <span>
+                                R$ <%= valor%>
+                            </span>
+                        </div>
+                        <hr>
+                        <div id="div-cupom">
+                            <h3>CUPOM DE DESCONTO</h3>
                             <form action="/carrinho" method="GET" id="montarCarrinho">
-                                <input type="hidden" name="itensCarrinho" id="itensCarrinho"/>
-                                <button type="submit">
-                                    <img class="remover" src="/img/ico/lixo.png"/>
-                                </button>
+                                <input type="hidden" name="itensCarrinho" id="itensCarrinho" />
+                                <input name="cupom" type="text" placeholder="CUPOM" maxlength="12" value="<%= dadosCupom.cupom %>">
+                                <button type="submit" id="bt-valida">Validar</button>
+                                <h5 id="span-desconto"
+                                    <% if(desconto == 0) { %>
+                                        style="display: none;"
+                                    <% } else { %>
+                                        style="display: block;"
+                                    <% } %>
+                                >O desconto de R$ <%= desconto %> foi aplicado!</h5>
                             </form>
                         </div>
+                        <hr>
+                        <div>
+                            <h2>TOTAL</h2>
+                            <span>
+                                R$ <%= total%>
+                            </span>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            
+            <section id="section-dados">
+                <div class="content-form">
+                    <div>
+                        <h1>Dados: </h1>
                     </div>
+                    <% if(dados) {%>
+                    <div class="dados-completos">
+                            <div> 
+                                <h4>Nome</h4>
+                                <p><%- dados.nome_usuario %></p>
+                                <h4>Sobrenome</h4>
+                                <p><%- dados.sobrenome%></p>
+                            </div>
+                            <div>
+                                <h4>CPF: </h4>
+                                <p><%- dados.cpf %></p>
+                            </div>
+                            <div>
+                                <h4>Endereço:</h4>
+                                <div>
+                                    <h5>Logradouro:</h5>
+                                    <p><%- dados.endereco %></p>
+                                </div>
+                                <div id="endereco">
+                                    <div>
+                                        <h5>Bairro: </h5>
+                                        <p><%- dados.bairro %></p>
+                                        <h5>Cidade: </h5>
+                                        <p><%- dados.cidade %></p>
+                                    </div>
+                                    <div>
+                                        <h5>Estado: </h5>
+                                        <p><%- dados.estado %></p>
+                                        <h5>CEP: </h5>
+                                        <p><%- dados.codigo_postal %></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="bt-dados">
+                                <button>Editar</button>
+                            </div>
+                        </div>
+                    <% }  else { %>
+                        <a href="<%- '/login' %>"><button id="bt-confirmar" >Cadastrar Dados</button></a>
+                    <% } %>
+                </div>
             </section>
-        <% } %>
-        </div>
-        <section class="pagamento">
-
-            <section class="resumo">
-                <div>
-                    <h2>RESUMO DO PEDIDO</h2>                 
-                </div>
-                <br>
-                <hr>
-                <div>
-                    <h3>CARRINHO: <%= qtd %> itens</h3>
-                    <span> <%= valor %></span>                   
-                </div>
-
-                <hr>
-                <div>
-                    <h3>DESCONTO</h3>
-                    <span>R$ 0,00</span>                  
-                </div>
-
-                <hr>
-                <div>
-                    <h2>TOTAL</h2>
-                    <span> <%= valor %> </span>               
-                </div>
-                <br>
-            </section>
-           <button ><a href="<%= '/carrinho/compra' %>">finalizar pedido</a></button> 
+        <section id="section-pagamento">
+            <div class="pay-button">
+                <form id="finalizaCompra" method="post" action="/carrinho/confirmaCompra">
+                    <div class="content-pagamento">
+                        <div class="menu-pagamento">
+                            <h2>Formas de Pagamento</h2>
+                            <div class="metodo-pagamento">
+                                <ul>
+                                    <li class="nav-item"><a class="nav-link">Cartão de Crédito</a></li>
+                                    <li class="nav-item"><a class="nav-link">Pix</a></li>
+                                    <li class="nav-item"><a class="nav-link">Boleto Bancário</a></li>
+                                </ul>
+                                <div class="content-tipo-pay">
+                                    <div class="content-item">
+                                        <h5> PAGAMENTO COM CARTÃO:</h5>
+                                        <br>
+                                        <% if(!dados || cartao.length <= 0) {%>
+                                            <div class="cartao">
+                                                <img src="/img/pagamento/credit-card.svg"/>
+                                                <input placeholder="Número do cartão" type="text" name="numero_cartao" maxlength="19">
+                                                <input placeholder="Nome como no cartão" type="text" name="nome_completo">
+                                                <input placeholder="MM/AA" type="text" name="vencimento" maxlength="5">
+                                                <input placeholder="CVV" type="text" name="cvv" maxlength="3"/>
+                                            </div>
+                                            <input type="checkbox" name="salvar" checked />
+                                            <label for="salvar"> *Salver este cartão para comprar futuras.</label>
+                                        <% } else { %>
+                                            <% for(const card of cartao) { %>
+                                                <div class="cartao">
+                                                    <img src="/img/pagamento/credit-card.svg"/>
+                                                    <div>
+                                                        <input name="selectCartao" type="radio" value="<%= card.id %>">
+                                                            <input name="nome_completo" value="<%= card.nome_completo %>" disabled />
+                                                            <input name="numero_cartao" value="<%= card.numero_cartao %>" disabled />
+                                                            <input name="vencimento" value="<%= card.vencimento %>" disabled />
+                                                            <input name="cvv" type="text" placeholder="CVV" maxlength="3" value="<%= card.cvv %>" />
+                                                        </input>
+                                                    </div>
+                                                </div>
+                                            <% }%>
+                                            <div class="cad-cartao">
+                                                <a id="cadastrarCard">Cadastrar novo cartão</a>
+                                            </div>
+                                        <% } %>
+                                        
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="pix">
+                                            UM CODIGO DE PIX SERA GERADO AO CONFIRMAR A COMPRA.
+                                        </div>
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="boleto">
+                                            <h5>UM BOLETO SERÁ GERADO E ENVIADO PARA O E-MAIL CADASTRADO,</h5>
+                                            <h5>OU PODERÁ ACESSAR-LO NO PAINEL DO USUÁRIOS, AO CONFIRMAR A COMPRA.</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="display: none;">
+                        <% const now = new Date(); %>
+                        <input name="data" value=" <%- now.getDate() %>/<%- now.getMonth() +1 %>/<%- now.getFullYear() %>" >
+                        <input name="metodo_pagamento" value="">
+                        <input name="id_usuario" value="<%= users.id %>">
+                        <% for(const filme of itens) { %>
+                            <input name="itens" value="<%= filme.id %>">
+                        <% } %>
+                        <input name="cupom" value="<%= dadosCupom.id %>">
+                        <input name="total" value="<%= total %>">
+                    </div>
+                    <button id="bt-confirmar" type="submit">Confirmar</button>
+                </form>
+            </div>
         </section>
+        </div>
+
+        <% if(popUp) { %>
+            <div class="pop-up" style="display: flex">
+                <div id="pop-up-content">
+                    <span><button>X</button></span>
+                    <h2><%- mensagem%></h2>
+                    <div id="aviso">
+                        <% if(popUp_login) { %>
+                            <a href="<%- '/login' %>"><h4>CLIQUE AQUI</h4></a>
+                        <% } %>
+                        <h4><%- aviso%></h4>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+
+        <%- include('cadastroUsuario')%>
+
     </main>
-<%- include('partials/footer') %>
+
+
+    <%- include('partials/footer') %>

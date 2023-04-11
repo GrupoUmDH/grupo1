@@ -1,62 +1,66 @@
-<head>
-    <link rel="stylesheet" href="/stylesheets/cadastroUsuario.css" />
-    <script src="/javascripts/cadastroUsuario.js" defer></script>
-</head>
-
-<div class="popUp-dados">
+<div class="popUp-dados" style="display: none;">
     <div class="content-form">
         <div id="popUP-top">
             <h1>Dados Cadastrais</h1>
             <button>Sair</button>
         </div>
         <form method="post" action="/painel/users/atualizaDados?_method=PUT">
-            <input id="pup-up-inputValue" name="id_usuario" value=<%- users.id %> style="display: none" >
+            <input id="pup-up-inputValue" name="id_usuario" value="<%- users.id %>" style="display: none;" />
+
             <div>
-                <div class="invisible err-nome error">Campo obrigatório!</div>
-                <input class="content-input" type="text" placeholder="NOME*" name="nome_usuario" minlength="3" maxlength="20">
+                <div>
+                    <div class="invisible err-nome error">Campo obrigatório!</div>
+                    <input class="content-input" type="text" placeholder="NOME*" name="nome_usuario" minlength="3" maxlength="20">
+                </div>
+        
+                <div>
+                    <div class="invisible err-sobrenome error">Campo obrigatório!</div>
+                    <input class="content-input" type="text" placeholder="SOBRENOME*" name="sobrenome" minlength="3"
+                        maxlength="20">
+                </div>
             </div>
-    
             <div>
-                <div class="invisible err-sobrenome error">Campo obrigatório!</div>
-                <input class="content-input" type="text" placeholder="SOBRENOME*" name="sobrenome" minlength="3"
-                    maxlength="20">
-            </div>
-    
-            <div>
-                <div class="invisible err-cpf error">Campo obrigatório!</div>
-                <input class="content-input" type="text" placeholder="CPF: 111.555.444-00*" name="cpf"
-                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                <div>
+                    <div class="invisible err-cpf error">Campo obrigatório!</div>
+                    <input class="content-input" type="text" placeholder="CPF: 000.000.000-00*" name="cpf"
+                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                </div>
+                
+                <div>
+                    <div class="invisible err-codigo-postal error">Campo obrigatório!</div>
+                    <input class="content-input" type="text" placeholder="CÓDIGO POSTAL*" name="codigo_postal" maxlength="9">
+                </div>
             </div>
             
-            <div>
-                <div class="invisible err-codigo-postal error">Campo obrigatório!</div>
-                <input class="content-input" type="text" placeholder="CÓDIGO POSTAL*" name="codigo_postal" maxlength="9">
-            </div>
-    
             <div>
                 <div class="invisible err-endereco error">Campo obrigatório!</div>
                 <input class="content-input" type="text" placeholder="ENDEREÇO*" name="endereco">
             </div>
-    
+
             <div>
-                <div class="invisible err-endereco error">Campo obrigatório!</div>
-                <input class="content-input" type="text" placeholder="BAIRRO*" name="bairro">
+                <div>
+                    <div class="invisible err-endereco error">Campo obrigatório!</div>
+                    <input class="content-input" type="text" placeholder="BAIRRO*" name="bairro">
+                </div>
+                
+                <div>
+                    <div class="invisible err-cidade error">Campo obrigatório!</div>
+                    <input class="content-input" type="text" placeholder="CIDADE*" name="cidade">
+                </div>
             </div>
 
             <div>
-                <div class="invisible err-estado error">Campo obrigatório!</div>
-                <input class="content-input" type="text" placeholder="ESTADO*" name="estado">
+                <div>
+                    <div class="invisible err-estado error">Campo obrigatório!</div>
+                    <input class="content-input" type="text" placeholder="ESTADO*" name="estado">
+                </div>
+        
+                <div>
+                    <div class="invisible err-pais error">Campo obrigatório!</div>
+                    <input class="content-input" type="text" placeholder="PAÍS*" name="pais">
+                </div>
             </div>
     
-            <div>
-                <div class="invisible err-cidade error">Campo obrigatório!</div>
-                <input class="content-input" type="text" placeholder="CIDADE*" name="cidade">
-            </div>
-    
-            <div>
-                <div class="invisible err-pais error">Campo obrigatório!</div>
-                <input class="content-input" type="text" placeholder="PAÍS*" name="pais">
-            </div>
             <div class="bt-enviarDados">
                 <button type="submit">Confirmar</button>
             </div>
