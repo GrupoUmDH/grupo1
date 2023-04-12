@@ -20,10 +20,10 @@
                 </div>
                 <br>
                 <% switch (metodo_pagamento) { case "cartao": %>
-                        <p>Pagamento confirmado sucesso!!!</p>
+                        <p>Pagamento confirmado com sucesso!!!</p>
                         <img src="/img/ico/confirmarcao.png" />
                     <% break; case "pix": %>
-                        <p>Leia o QR com seu aplicativo de cardeita digital.</p>
+                        <p>Leia o QR com seu aplicativo de carteira digital.</p>
                         <img src="/img/pagamento/PixLumiereQR.jpg">
                     <% break; case "boleto": %>
                         <p>Pagamento com boletos, podem levar até 2 dias úteis para confirmação.</p>
@@ -32,7 +32,7 @@
             </div>
 
             <div class="bt_painel">
-                <button id="painel-user">Painel Usuário</button>
+                <button src+='/painel-user'id="painel-user">Painel Usuário</button>
             </div>
     </main>
 
