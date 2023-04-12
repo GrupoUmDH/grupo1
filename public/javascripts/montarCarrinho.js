@@ -25,9 +25,13 @@ formDeletaItem.forEach((item, i)=> {
 
 formMontarCarrinho.forEach((montaCarrinho, index) => {
     montaCarrinho.addEventListener('submit', function (event) {
+
         event.preventDefault();
+        
         const itensCarrinho = document.querySelectorAll('[id="itensCarrinho"]');
         itensCarrinho[index].value = localStorage.getItem("carrinho");
+        
+        
         this.submit();
     })
 });

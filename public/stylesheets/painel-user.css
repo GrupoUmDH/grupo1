@@ -38,8 +38,8 @@ body {
     width: 80vw;
     display: flex;
     margin-top: 6rem;
-    height: 70vh;
-    overflow: scroll;
+    /* height: 100vh; */
+    /* overflow: scroll; */
     padding-left: 0px;
     flex-direction: column;
     align-items: stretch;
@@ -79,8 +79,9 @@ main.main-painelUser {
 div#section-content {
     position: relative;
     left: 15rem;
-    height: 80vh;
+    /* height: 80vh; */
     width: 100%;
+    /* overflow: scroll; */
 }
 
 #historico h1 {
@@ -174,7 +175,7 @@ h1#historico {
 /* MENU LATERAL ESQUERDO */
 
 aside {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     padding: 10px;
@@ -299,6 +300,7 @@ div.cartao {
     justify-content: center;
     padding-bottom: .6rem;
     padding-top: .3rem;
+    /* color: white; */
 }
 
 div.content-item div.cartao div {
@@ -349,6 +351,7 @@ input[id="numero_cartao"] {
     font-size: larger;
     margin-right: 2rem;
     border-radius: 1rem;
+    color: white;
 }
 
 input[name="nome_completo"],
@@ -359,6 +362,7 @@ input[id="nome_completo"] {
     font-size: larger;
     margin-right: 2rem;
     border-radius: 1rem;
+    color: white;
 }
 
 input[name="vencimento"],
@@ -369,6 +373,7 @@ input[id="vencimento"] {
     font-size: larger;
     margin-right: 2rem;
     border-radius: 1rem;
+    color: white;
 }
 
 /* CANCELAR ASSINATURA */
