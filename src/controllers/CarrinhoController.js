@@ -220,7 +220,7 @@ module.exports = {
 
         async function novoHistorico (){
             const novaCompra = {
-                id_usuario: view.dados.id,
+                id_cadastroUsuario : view.dados.id,
                 itens: itens,
                 data: data,
                 valor: total,
