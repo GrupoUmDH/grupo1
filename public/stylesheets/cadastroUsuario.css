@@ -14,44 +14,46 @@
 div.popUp-dados div.content-form{
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 20rem;
+    height: 30rem;
     border-radius: 1rem;
     background-color: var(--background-2);
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: stretch;
     flex-wrap: nowrap;
 }
 div.popUp-dados div.content-form h1{
     display: flex;
+    font-size: 1.5rem;
     color: var(--cores-chaves);
     position: relative;
-    padding-left: 3rem;
-    padding-top: 1rem;
     font-family: var(--font-family_1);
 } 
 
-div.popUp-dados div.content-form form{padding: 2rem;}
+div.popUp-dados div.content-form form{
+    padding: 1rem;
+}
 
 
 .content-input{
     display: flex;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 1rem;
     outline: none;
-    margin-bottom: .8rem;
-    height: 2rem;
-    padding: 0 2rem;
+    margin-bottom: .4rem;
+    height: 1.7rem;
+    padding: 0 1rem;
 }
 
 div#popUP-top button{
     color: var(--cores-letra);
-    width: 4rem;
+    width: 2rem;
     height: 2rem;
     background-color: var(--cores-chaves);
     border: 0;
     border-radius: 1rem;
     cursor: pointer;
-    margin-top: 1rem;
+   font-size: .7rem;
     margin-right: 2rem;
 }
 
@@ -99,15 +101,20 @@ div#popUP-top {
     align-items: center;
 }
 
+.bt-enviarDados{
+    display: flex;
+    justify-content: center;
+}
+
 .bt-enviarDados button {
     margin: 1rem;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 1rem;
     color: var(--cores-letra);
     border: var(--cores-chaves);
     background-color: var(--cores-chaves);
-    width: 15rem;
+    width: 9rem;
     cursor: pointer;
-    height: 2.5rem;
+    height: 2rem;
     font-size: larger;
 }

@@ -9,20 +9,7 @@
     --cores-objetos: #580003;
 }
 
-header {
-    justify-content: center;
-    background-color: var(--background-2);
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    font-size: 1.5rem;
-    height: 5rem;
-    border-bottom: .16rem solid var(--cores-chaves);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-}
+
 
 ::-webkit-scrollbar {
     width: 5px;
@@ -43,12 +30,33 @@ header {
     padding: 0;
     box-sizing: border-box;
 }
+
+html{
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100%;
+    position: relative;
    
 }
 
+header {
+    justify-content: center;
+    background-color: var(--background-2);
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    font-size: 1.5rem;
+    height: 5rem;
+    border-bottom: .16rem solid var(--cores-chaves);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
 /* NAVBAR */
 
 #navbar {
@@ -437,4 +445,3 @@ button {
         transform: translateX(0%);
     }
 }
-

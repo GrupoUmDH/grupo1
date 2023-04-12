@@ -25,7 +25,7 @@
                         </div>
                         <div id="bts-compra">
                             <div class="classificacao">
-                                <img id="indicacao" src="/img/indicativa/<%= classificacao.imagem%>">
+                                <img id="indicacao" src="/img/indicativa/<%= produto.indicacao.imagem%>">
                             </div>
                             <div class="botoes-compra">
 
@@ -40,10 +40,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
- </main>
- 
+            </section>
+
+
+    </main>
     <div class="pop-Up">
         <div class="popup-content">
             <h2>Item adicionado ao Carrinho!</h2>
@@ -51,7 +51,7 @@
             <div>
                 <a href="<%= '/index' %>"><button> CONTINUAR COMPRANDO</button> </a>
                 <form action="/carrinho" method="get" id="montarCarrinho">
-                    <input type="hidden" name="itensCarrinho" />
+                    <input type="hidden" name="itensCarrinho" id="itensCarrinho" />
                     <button type="submit"> VER CARRINHO </button>
                 </form>
             </div>

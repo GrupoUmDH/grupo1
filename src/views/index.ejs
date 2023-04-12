@@ -21,18 +21,18 @@
             </div>
             <button id="next">&rArr;</button>
         </section>
-        <hr>
+
         <section class="container">
             <div class="titulos">
                 <h1>FILMES</h1>
-                <a href="<%= '/produtos/maisFilmes?tipo=filme' %>">Mais Filmes...</a>
+                <a href="<%= '/produtos/maisFilmes?tipo=filme' %>"><h1>+</h1><p>Ver mais</p></a>
             </div>
 
        
             <section class="filmes-home">
                 <% for (const listafilmes of filmes) { %>
                     <div class="filme-show">
-                        <a href=" /produtos/<%- listafilmes.id  %>">
+                        <a href="/produtos?id=<%- listafilmes.id %>" >
                             <img src="/img/filmes/<%= listafilmes.background%>.jpg" alt="" id="back-filme">
                             <div class="descri">
                                 <div>
@@ -45,16 +45,16 @@
                     </div>
                     <% } %>
             </section>
-            <hr>
+            
             <div class="titulos">
                 <h1>SÉRIES</h1>
-                <a href="<%= '/produtos/maisSeries?tipo=serie' %>">Mais Séries...</a>
+                <a href="<%= '/produtos/maisSeries?tipo=serie' %>"><h1>+</h1><p>Ver mais</p></a>
             </div>
 
             <section class="series-home">
                 <% for (const listaSeries of series) { %>
                     <div class="filme-show">
-                        <a href="/produtos/<%- listaSeries.id  %>">
+                        <a href="/produtos?id=<%- listaSeries.id  %>">
                             <img src="/img/series/<%= listaSeries.background %>.jpg" alt="" id="back-filme">
                             <div class="descri">
                                 <div>
