@@ -133,7 +133,11 @@ module.exports = {
 
         if(email && itens){
             view.dados = await CadastroUsuario.findOne({
-                where: { id_usuario: id_usuario}
+                where: { id_usuario: id_usuario}, 
+                include: [
+                    { model: Cartao, as: 'cartao'},
+                    { model: Historico, as: 'historico'}
+                ]
             });
 
             view.itens = await Filme.findAll({

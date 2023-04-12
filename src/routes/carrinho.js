@@ -7,11 +7,6 @@ const CarrinhoController = require('../controllers/CarrinhoController');
 const validaCard = require('../middlewares/validaCard');
 
 router.get('/', CarrinhoController.carrinho);
-router.post('/confirmaCompra', CarrinhoController.confirmaCompra)
-
-//router.get('/cupom', CarrinhoController.cupom);
-//router.post('/adiciona/:id', CarrinhoController.adiciona);
-//router.delete('/deletar/:id', CarrinhoController.deletaItem);
-
+router.post('/confirmaCompra', CarrinhoController.confirmaCompra);
     
 module.exports = router;

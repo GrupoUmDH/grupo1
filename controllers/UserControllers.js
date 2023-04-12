@@ -7,22 +7,27 @@ const bcrypt = require("bcrypt");
 const Sequelize = require("sequelize");
 const { includes } = require("../src/middlewares/loginSession");
 
+const { validationResult } = require('express-validator'); 
+
 const view = {
     pageName: "login",
     js: "login",
     users: {},
     dados: {},
+    historico: {},
     cartao: {},
     historico: {},
     popUp: false,
     mensagem: "mensagem",
     aviso: "aviso",
+    error: [],
 };
 
 
 module.exports = {
     index: async (req, res, next) => {
         const { id, email } = req.session;
+
 
         view.users = req.session;
 
@@ -31,6 +36,7 @@ module.exports = {
                 view.pageName = 'login';
                 view.js = 'login';
                 view.popUp = false;
+                
 
                 res.render('login', view);
 
@@ -39,43 +45,36 @@ module.exports = {
                     where: {
                         id_usuario: id,
                     },
-                    include: [{ model: Cartao, as: 'cartao' }]
-                })
-                    .then(dados => {
+                    include: [
+                        { model: Historico, as: "historico" },
+                        { model: Cartao, as: 'cartao'},
+                    ],
+                }).then((dados) => {
+                    if (!dados) {
+                        view.pageName = "painel-user";
+                        view.js = "login";
+                        view.popUp = true;
+                        (view.mensagem =
+                            "Você precisa completar o seu cadasto..."),
+                            (view.aviso = "preencha os dados de cadastro.");
+                        view.dados = null;
 
-                        if (!dados) {
-                            view.pageName = 'painel-user';
-                            view.js = 'login';
-                            view.popUp = true;
-                            view.mensagem = "Você precisa completar o seu cadasto...",
-                            view.aviso = 'preencha os dados de cadastro.'
-                            view.dados = null;
-                            view.cartao = null;
-                            view.historico = {};
+                        res.render("painel-user", view);
+                    } else {
+                        view.pageName = "painel-user";
+                        view.js = "login";
+                        view.popUp = false;
+                        view.dados = dados;
 
-                            res.render('painel-user', view);
-                        } else {
-                            view.pageName = 'painel-user';
-                            view.js = 'login';
-                            view.popUp = false;
-                            view.dados = dados;
+                        console.log(dados);
 
-                            console.log(dados);
+                        view.historico = dados.historico;
 
-                            view.cartao = Cartao.findAll({
-                                where: { id_cadastroUsuario: dados.id }
-                            });
+                        view.cartao = dados.cartao;
 
-                            view.historico = Historico.findAll({
-                                where: { id_usuario: dados.id },
-                            });
-
-                            console.log(view.historico);
-
-                            res.render('painel-user', view);
-                        }
-
-                    });
+                        res.render("painel-user", view);
+                    }
+                });
             }
 
         } catch (err) {
@@ -175,6 +174,24 @@ module.exports = {
         const hashedPassword = await bcrypt.hash(senha, 10);
 
         try {
+            const { errors } = validationResult(req);
+            console.log("errors", errors)
+    
+            if (errors.length) {
+                const erroFormatado = {
+    
+                }
+                errors.forEach(erro =>
+                    erroFormatado[erro.param] = erro.msg
+                );
+                console.log(erroFormatado)
+
+                view.pageName = 'login';
+                view.js = 'login';
+                view.error = erroFormatado;
+                
+                return res.render('login', view);
+            }
 
             const user_existe = await Usuario.findOne({
                 where: {
