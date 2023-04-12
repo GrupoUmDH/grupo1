@@ -37,15 +37,15 @@ module.exports = {
 
         if(!req.session) {
             view.popUp = true;
-            view.mensagem = "Você nao esta logado!!!";
-            view.aviso = "para fazer login/cadastro e continuar suas compras...";
+            view.mensagem = "Você não está logado!!!";
+            view.aviso = "Fazer login/cadastro para continuar suas compras...";
         } else {
             view.popUp = false;
 
             if(!req.session.email){
                 view.popUp = true;
-                view.mensagem = "Você nao esta logado!!!";
-                view.aviso = "para fazer login/cadastro e continuar suas compras...";
+                view.mensagem = "Você não está logado!!!";
+                view.aviso = "Fazer login/cadastro para continuar suas compras...";
 
                 view.users = {};
                 view.dados = null;
@@ -146,7 +146,7 @@ module.exports = {
 
             view.cupom = cupom;
             view.total = total;
-            view.mensagem = "Conirmação de Compra";
+            view.mensagem = "Confirmação de Compra";
 
 
             if(metodo_pagamento == "cartao"){
@@ -179,7 +179,7 @@ module.exports = {
                     if(numero_cartao == "" && nome_completo == "" && vencimento == "" && cvv ==""){
                         view.popUp_login = false;
                         view.popUp = true;
-                        view.mensagem ="Nâo esqueça de cadastrar ou selecionar um cartão";
+                        view.mensagem ="Não esqueça de cadastrar ou selecionar um cartão";
                         view.aviso = "Selecione ou cadastre um novo cartão.";
                         //console.log(req.body);
                         res.render("carrinho", view);
@@ -209,8 +209,8 @@ module.exports = {
             if(!itens){
                 view.popUp_login = false;
                 view.popUp = true;
-                view.mensagem ="Seu Carrinho esta vazio!";
-                view.aviso = "Adicione itens para concluir uma compra.";
+                view.mensagem ="Seu Carrinho está vazio!";
+                view.aviso = "Adicione itens para concluir sua compra.";
 
                 res.render("carrinho", view);
             } else {
