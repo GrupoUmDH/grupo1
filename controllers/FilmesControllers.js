@@ -8,12 +8,13 @@ const { response } = require('express');
 
 module.exports = {
     index: async (req, res) => {
-        const { nome } = req.query;
+        const { id } = req.query;
         console.log(req.query);
 
         try {
             await Filme.findOne({
-                where: { nome: nome }
+                where: { id: id },
+                include:[{model:Classificacao, as:"indicacao"}]
             }).then(response => {
                 console.log(response);
 
@@ -56,7 +57,7 @@ module.exports = {
         const categoria = await Categorias.findAll({});
 
         const classificacao = await Classificacao.findAll({
-            order: ["nome"],
+            order: ["id"],
         });
 
         res.render("filmes", {

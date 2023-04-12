@@ -41,8 +41,6 @@ const upload = multer({storage: storage, limits: {fileSize: 10000000}});
 //criar produto
 router.post('/create', upload.fields([{name:'backgroundCreate'},{name:'imagemCreate'}]), validadorFormCreate, FilmesControllers.createProduto);
 
-router.get('/teste', FilmesControllers.index);
-
 router.get('/maisFilmes', FilmesControllers.maisFilmes); 
 router.get('/maisSeries', FilmesControllers.maisFilmes); 
 // deletar produto
