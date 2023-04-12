@@ -101,53 +101,6 @@ div#section-content {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-table {
-    text-align: center;
-    font-size: 14px;
-    width: 900px;
-    height: 150;
-    border: 2rem;
-    border-collapse: collapse;
-    /* cellspacing:5rem;
-    cellpadding:8rem; */
-    background-color: var(--background-2);
-}
-
-td{
-    border:  1px solid var(--cores-chaves);
-    display: flex;
-    flex-direction: column;
-
-}
-tr {
-    text-align: center;
-    color: var(--cores-chaves);
- 
-}
-
-table {
-    text-align: center;
-    font-size: 14px;
-    width: 900px;
-    height: 150;
-    border: 2rem;
-    border-collapse: collapse;
-    /* cellspacing:5rem;
-    cellpadding:8rem; */
-    background-color: var(--background-2);
-}
-
-td{
-    border:  1px solid var(--cores-chaves);
-    display: flex;
-    flex-direction: column;
-
-}
-tr {
-    text-align: center;
-    color: var(--cores-chaves);
- 
-}
 
 .comprados img {
     border-radius: 5px;
@@ -185,6 +138,26 @@ h1#historico {
     border-bottom: .16rem solid red;
 
 }
+
+/* 
+.alugados {
+    text-align: center;
+    display: flex;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.alugados img {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    height: 240px;
+    gap: 2rem;
+} */
 
 .container p {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
@@ -582,7 +555,7 @@ div.dados-completos h5 {
     margin-top: .3rem;
 }
 
-div#section-cancelar {
+section#section-cancelar {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -596,7 +569,6 @@ div#section-cancelar {
 .cancelar .titulos {
     width: 100%;
 }
-
 /* RESPONSIVE */
 
 @media (max-width: 1180px) {
@@ -632,6 +604,12 @@ div#section-cancelar {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .form-container :active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     div.cartao {
         display: flex;
