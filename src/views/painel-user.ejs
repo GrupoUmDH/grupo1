@@ -25,14 +25,20 @@
                             <h1>Histórico de Pedidos</h1>
                         </div>
                         <div class="comprados">
-                            <table style="text-align: center;font-size: 14px;" width="900" height="150" border="2" cellspacing="5" cellpadding="8" style="background-color: #4d0c0c;">
+                            <table style="text-align: center;font-size: 14px;" width="900" height="150" border="2"
+                                cellspacing="5" cellpadding="8" style="background-color: #4d0c0c;">
                                 <tr style="text-align: center; color:#ff0000">
                                     <td>Item</td>
                                     <td>Data da Compra</td>
                                     <td>Forma de Pagamento</td>
                                     <td>Valor</td>
                                 </tr>
-                               
+                                <% for(const lista of dados.historico) { %>
+                                    <td>
+                                        <%= dados.itens %>
+                                    </td>
+                                    <% } %>
+
                             </table>
 
                         </div>
@@ -137,7 +143,7 @@
                                 <br>
                                 <div class="form-container active">
                                     <form class="formulario-card" action="/painel/novoCartao" method="post">
-                                        <% if(dados.cartao.length <=0) {%>
+                                        <% if(cartao.length <=0) {%>
                                             <div class="cartao">
                                                 <img src="/img/pagamento/credit-card.svg" />
                                                 <input placeholder="Número do cartão" type="text" name="numero_cartao"
@@ -149,7 +155,7 @@
                                             </div>
 
                                             <% } else { %>
-                                                <% for(const card of dados.cartao) { %>
+                                                <% for(const card of cartao) { %>
                                                     <div class="cartao">
                                                         <img src="/img/pagamento/credit-card.svg" />
                                                         <div>
