@@ -1,6 +1,5 @@
 <head>
     <script src="/javascripts/carrinho.js" defer></script>
-    <link rel="stylesheet" href="/stylesheets/compra.css" />
 </head>
 
 <%- include('partials/header') %>
@@ -51,6 +50,7 @@
                         <div>
                             <h3>Detalhes de pagamento</h3>
                         </div>
+                        <br>
                         <hr>
                         <div>
                             <h3>CARRINHO: <%= qtd %> itens</h3>
@@ -81,6 +81,7 @@
                                 R$ <%= total%>
                             </span>
                         </div>
+                        <br>
                     </section>
                 </section>
             </section>
@@ -148,7 +149,7 @@
                                     <div class="content-item">
                                         <h5> PAGAMENTO COM CARTÃO:</h5>
                                         <br>
-                                        <% if(!dados) {%>
+                                        <% if(!dados || cartao.length <= 0) {%>
                                             <div class="cartao">
                                                 <img src="/img/pagamento/credit-card.svg"/>
                                                 <input placeholder="Número do cartão" type="text" name="numero_cartao" maxlength="19">

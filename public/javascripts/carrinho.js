@@ -23,12 +23,12 @@ const popUpDados = document.querySelector('div.popUp-dados');
 if(numeroCard != null || dataCard != null){
     numeroCard.addEventListener("keyup", () => {
         let value = numeroCard.value.replace(/[^0-9]/g, "").replace(/^([\d]{4})([\d]{4})([\d]{4})?([\d]{4})/, "$1-$2-$3-$4");
-        numeroCard.value = value;
+        numeroCard.value = value.replace(/-/gi, "");
     });
 
     dataCard.addEventListener("keyup", () => {
         let value = dataCard.value.replace(/[^0-9]/g, "").replace(/([\d]{2})?([\d]{2})/,"$1/$2");
-        dataCard.value = value;
+        dataCard.value = value.replace(/-/gi, "");
     });
 };
 
@@ -89,6 +89,3 @@ removeBtns.forEach((btn, index) => {
         this.submit();
     });
 });
-
-
-
