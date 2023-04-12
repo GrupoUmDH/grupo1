@@ -28,7 +28,7 @@ body {
     align-items: center;
     background-color: var(--background-color);
     font-family: 'Inter', Arial, Helvetica, sans-serif;
-    
+
 }
 
 /* CONFIGURAÇÃO CONTAINER-CENTRAL*/
@@ -90,7 +90,7 @@ main {
     border: .5 solid var(--cores-chaves);
     margin: 0 0 4rem 0;
 
-    
+
 }
 
 /* CONFIGURAÇÃO OS MAIS POPULARES*/
@@ -117,12 +117,12 @@ main {
     font-size: 1.2rem;
 }
 
-.plus{
+.plus {
     font-size: 2.5rem;
     color: var(--cores-chaves);
 }
 
-.seeMore{
+.seeMore {
     color: var(--cores-letra);
     position: relative;
     bottom: -.1rem;
@@ -142,7 +142,7 @@ main {
     margin-top: 2rem;
     align-items: stretch;
     justify-content: space-between;
-    
+
 }
 
 /* CONFIGURAÇÃO CONTAINER*/
@@ -154,7 +154,7 @@ main {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    
+
 }
 
 .container>h1 {
@@ -179,7 +179,7 @@ h1 .container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     margin: 3rem 0;
 }
@@ -305,7 +305,7 @@ div #dados-filme {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     margin: 3rem 0;
 }
@@ -416,15 +416,13 @@ div #dados-series {
 /* RESPONSIVE */
 
 @media (max-width: 1300px) {
-    .container-central{
-        width: 100%; 
+    .container-central {
+        width: 100%;
     }
 
-    .carrossel-container{
+    .carrossel-container {
         width: 100vw;
     }
-
-
 
 }
 
@@ -436,19 +434,39 @@ div #dados-series {
     .mais-populares {
         display: none;
     }
-   
-  
+
+    .container .filmes-home {
+        justify-content: center;
+        width: 90%;
+    }
+
+    .container .series-home {
+        justify-content: center;
+        width: 90%;
+    }
+
 }
 
-
- @media (max-width: 760px) {
-           
-    .container-central{
-        width: 100%; 
+@media (max-width: 1024px) {
+  
+    .container .filmes-home {
+        width: 85%;
+    }
+    .container .series-home {
+        width: 85%;
     }
 
-    .carrossel-container{
+}
+
+@media (max-width: 760px) {
+
+    .container-central {
+        width: 100%;
+    }
+
+    .carrossel-container {
         width: 100vw;
     }
-          
+
+  
 }
