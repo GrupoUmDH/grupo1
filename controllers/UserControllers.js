@@ -7,6 +7,8 @@ const bcrypt = require("bcrypt");
 const Sequelize = require("sequelize");
 const { includes } = require("../src/middlewares/loginSession");
 
+const { validationResult } = require('express-validator'); 
+
 const view = {
     pageName: "login",
     js: "login",
@@ -16,6 +18,7 @@ const view = {
     popUp: false,
     mensagem: "mensagem",
     aviso: "aviso",
+    error: [],
 };
 
 
@@ -30,6 +33,7 @@ module.exports = {
                 view.pageName = 'login';
                 view.js = 'login';
                 view.popUp = false;
+                
 
                 res.render('login', view);
 
@@ -165,6 +169,24 @@ module.exports = {
         const hashedPassword = await bcrypt.hash(senha, 10);
 
         try {
+            const { errors } = validationResult(req);
+            console.log("errors", errors)
+    
+            if (errors.length) {
+                const erroFormatado = {
+    
+                }
+                errors.forEach(erro =>
+                    erroFormatado[erro.param] = erro.msg
+                );
+                console.log(erroFormatado)
+
+                view.pageName = 'login';
+                view.js = 'login';
+                view.error = erroFormatado;
+                
+                return res.render('login', view);
+            }
 
             const user_existe = await Usuario.findOne({
                 where: {

@@ -18,6 +18,7 @@ const view = {
     tipoView: "cadastro",
     bt_form: "",
     userId: 0,
+    error:[],
 };
 
 module.exports = {
@@ -406,7 +407,7 @@ module.exports = {
         view.tipoView = "Editanto";
         view.bt_form = 'ATUALIZAR USUÁRIO';
         view.userId = id_usuario;
-
+        
         const novoCadastro = {
             id_usuario: id_usuario,
             nome_usuario: nome_usuario,
@@ -421,6 +422,25 @@ module.exports = {
         }
 
         try {
+            const { errors } = validationResult(req);
+            console.log("errors", errors)
+    
+            if (errors.length) {
+                const erroFormatado = {
+    
+                }
+                errors.forEach(erro =>
+                    erroFormatado[erro.param] = erro.msg
+                );
+                console.log(erroFormatado)
+
+                view.pageName = 'cadastroUsuario';
+                view.js = 'cadastroUsuario';
+                view.error = erroFormatado;
+                
+                return res.render('cadastroUsuario', view);
+            }
+
             await CadastroUsuario.findOne({
                 where: { id_usuario: id_usuario},
             }).then((response) => {
