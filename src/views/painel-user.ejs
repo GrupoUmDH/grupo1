@@ -34,9 +34,7 @@
                                 </tr>
                                 <% for(const lista of dados.historico) { %>
                                     <tr>
-                                        <td>
-                                            <%= lista.itens %>
-                                        </td>
+                                        <td><%= lista.itens %></td>
                                         <td>
                                             <%= lista.data %>
                                         </td>
@@ -47,8 +45,8 @@
                                             <%= lista.valor %>
                                         </td>
                                     </tr>
+                                <% } %>
 
-                                    <% } %>
                             </table>
                         </div>
                     </section>
