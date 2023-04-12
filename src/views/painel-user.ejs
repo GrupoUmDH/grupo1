@@ -48,19 +48,24 @@
                                 <div class="formulario">
                                     <div class="dados-usuario">
                                         <div id="atualiza">
-                                            <form class="form-cad" method="post"
-                                                action="/painel/users/atualizar?_method=PUT">
+                                            <div class="dados-completos">
+                                                <div>
+                                                    <h1>Dados de Login: </h1>
+                                                </div>
 
-                                                <label for="nome_usuario">Usuário:</label>
-                                                <input value="<%- users.nome_usuario %>" placeholder="NOME USUÁRIO.."
-                                                    type="text" name="nome_usuario" id="user" />
-                                                <label for="email">e-mail:</label>
-                                                <input value="<%- users.email %>" placeholder="EMAIL..." type="email"
-                                                    name="email" />
-                                                <label for="senha">Senha:</label>
-                                                <input placeholder="SENHA" type="password" name="senha" />
-                                                <button type="submit">Atualizar</button>
-                                            </form>
+                                                <form class="form-cad" method="post"
+                                                    action="/painel/users/atualizar?_method=PUT">
+
+                                                    <label for="email">Alterar e-mail:</label>
+                                                    <input value="<%- users.email %>" placeholder="EMAIL..."
+                                                        type="email" name="novo_email" />
+                                                    <label for="senha">Senha Atual:</label>
+                                                    <input placeholder="SENHA" type="password" name="senha" />
+                                                    <label for="senha">Alterar Senha:</label>
+                                                    <input placeholder="SENHA" type="password" name="nova_senha" />
+                                                    <button type="submit">Atualizar</button>
+                                                </form>
+                                            </div>
                                         </div>
 
                                         <div class="dados-completos">

@@ -7,7 +7,7 @@ const historicoModel = (sequelize, dataTypes) => {
             allowNull: false,
         },
 
-        id_usuario: {
+        id_cadastroUsuario: {
             type: dataTypes.INTEGER,
             allowNull: false,
         },
