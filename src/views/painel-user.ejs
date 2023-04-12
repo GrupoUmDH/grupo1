@@ -34,10 +34,19 @@
                                     <td>Valor</td>
                                 </tr>
                                 <% for(const lista of dados.historico) { %>
-                                    <td>
-                                        <%= dados.itens %>
-                                    </td>
-                                    <% } %>
+                                    <tr>
+                                        <td><%= lista.itens %></td>
+                                        <td>
+                                            <%= lista.data %>
+                                        </td>
+                                        <td>
+                                            <%= lista.metodo_pay %>
+                                        </td>
+                                        <td>
+                                            <%= lista.valor %>
+                                        </td>
+                                    </tr>
+                                <% } %>
 
                             </table>
 
