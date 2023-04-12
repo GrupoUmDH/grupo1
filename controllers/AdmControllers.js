@@ -7,6 +7,7 @@ const {
     Historico,
     Cartao,
 } = require("../models");
+
 const Op = require("sequelize");
 const { validationResult } = require("express-validator");
 const path = require("path");
@@ -312,7 +313,7 @@ module.exports = {
 
     userEditar: async (req, res) => {
         view.user = req.session.nome;
-        console.log(req.body);
+        //console.log(req.body);
         const { id } = req.body;
 
         view.user = req.session.nome;
@@ -333,7 +334,7 @@ module.exports = {
                     if (response.email == req.session.email) {
                         //console.log("Editando");
                         view.users = response;
-                        console.log(req.body);
+                        //console.log(req.body);
                         res.render("userConfig", view);
                     } else {
                         //console.log("Aqui nao");
@@ -358,45 +359,41 @@ module.exports = {
     },
 
     userUpdate: async (req, res) => {
-        const { nome, email, tipo } = req.session;
-        const { novo_email, senha, nova_senha} = req.body;
-
-        const id = "";
-        const hasedSenha = '';
-
-        const hasedNovaSenha = await bcrypt.hash(nova_senha, 10);
-
-        const validPassword = false;
-
-        view.users = await Usuario.findByPk(this.id);
-
-        view.dados = await CadastroUsuario.findOne({
-            where: { id_usuario: view.users.id },
-            include: [{ model: Cartao, as: "cartao" }],
-        });
-
-        view.cartao = view.dados.cartao;
+        const {nome, email, } = req.session;
+        const {id, novo_email, senha, nova_senha, tipo} = req.body;
 
         console.log(req.body);
 
-        if (tipo == "admin") {
-            this.id = req.body.id;
-        } else {
-            this.id = req.session.id;
-            
-            hasedSenha = await bcrypt.hash(senha, 10);
+        const hasedSenha = await bcrypt.hash(senha, 10);;
 
-            validPassword = await bcrypt.compareSync(
-                senha,
-                view.users.senha
-            );
+        const hasedNovaSenha = await bcrypt.hash(nova_senha, 10);
+
+        async function validPassword(){
+            if(!senha) {
+                return false;
+            } else {
+                return await bcrypt.compareSync(senha,view.users.senha );
+            }
         }
+
+        view.users = await Usuario.findByPk(id);
+
+        view.dados = await CadastroUsuario.findOne({
+            where: { id_usuario: view.users.id },
+            include: [
+                { model: Cartao, as: "cartao" },
+                { model: Historico, as: "historico" },
+            ],
+        });
+
+        view.cartao = view.dados.cartao;
+        view.historico = view.dados.historico;
 
         const attUser = {
             nome_usuario: nome,
             email: novo_email,
             senha: hasedSenha,
-            tipo: users.tipo,
+            tipo: tipo,
         };
 
         if (!validPassword) {
@@ -407,8 +404,18 @@ module.exports = {
             console.log("senha atual errada");
         } else {
             if (!nova_senha || nova_senha == "") {
+                view.popUp = true;
+                if (email != novo_email) {
+                    view.mensagem =
+                        "E-mail alterado com sucesso!!";
+                    view.aviso = "alteração de e-mail";
+                    req.session.email = novo_email;
+                } else {
+                    view.mensagem = "Nenhua alteração realizada";
+                    view.aviso = "alteração de e-mail";
+                }
                 attUser.senha = hasedSenha;
-                view.popUp = false;
+                
             } else {
                 attUser.senha = hasedNovaSenha;
                 view.popUp = true;

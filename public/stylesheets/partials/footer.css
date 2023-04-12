@@ -17,7 +17,7 @@ hr {
 }
 
 footer {
-    bottom: 5rem;
+    bottom: 0;
     position: absolute;
     display: flex;
     flex-direction: column;
