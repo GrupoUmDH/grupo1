@@ -1,4 +1,4 @@
-const { Usuario, CadastroUsuario, Cartao } = require('../models');
+const { Usuario, CadastroUsuario, Cartao, Historico } = require('../models');
 const { Op } = require('sequelize');
 
 const express = require("express");
@@ -13,6 +13,7 @@ const view = {
     users: {},
     dados: {},
     cartao: {},
+    historico: {},
     popUp: false,
     mensagem: "mensagem",
     aviso: "aviso",
@@ -50,6 +51,7 @@ module.exports = {
                             view.aviso = 'preencha os dados de cadastro.'
                             view.dados = null;
                             view.cartao = null;
+                            view.historico = {};
 
                             res.render('painel-user', view);
                         } else {
@@ -64,6 +66,11 @@ module.exports = {
                                 where: { id_cadastroUsuario: dados.id }
                             });
 
+                            view.historico = Historico.findAll({
+                                where: { id_usuario: dados.id },
+                            });
+
+                            console.log(view.historico);
 
                             res.render('painel-user', view);
                         }
@@ -121,6 +128,7 @@ module.exports = {
             res.render("login", view);
         }
     },
+
     cadastroUsuario: async (req, res, next) => {
         //const { nome_usuario, sobrenome_usuario, cpf, email, endereco, codigo_postal, estado, cidade, senha, tipo_usuario } = req.body;
         const hashedPassword = await bcrypt.hash(senha, 10);
@@ -160,6 +168,7 @@ module.exports = {
 
 
     },
+
     cadastro: async (req, res, next) => {
 
         const { nome_usuario, email, senha } = req.body;
