@@ -299,6 +299,7 @@ div.cartao {
     justify-content: center;
     padding-bottom: .6rem;
     padding-top: .3rem;
+    /* color: white; */
 }
 
 div.content-item div.cartao div {
@@ -349,6 +350,7 @@ input[id="numero_cartao"] {
     font-size: larger;
     margin-right: 2rem;
     border-radius: 1rem;
+    color: white;
 }
 
 input[name="nome_completo"],
@@ -359,6 +361,7 @@ input[id="nome_completo"] {
     font-size: larger;
     margin-right: 2rem;
     border-radius: 1rem;
+    color: white;
 }
 
 input[name="vencimento"],
@@ -369,6 +372,7 @@ input[id="vencimento"] {
     font-size: larger;
     margin-right: 2rem;
     border-radius: 1rem;
+    color: white;
 }
 
 /* CANCELAR ASSINATURA */

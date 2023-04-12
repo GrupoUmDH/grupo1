@@ -1,4 +1,4 @@
-const { Categorias, Classificacao, Filme, Tipo } = require('../models');
+const { Categorias, Classificacao, Filme } = require('../models');
 const Op = require('sequelize');
 const { validationResult } = require('express-validator');
 const path = require('path');
@@ -9,9 +9,11 @@ const { response } = require('express');
 module.exports = {
     index: async (req, res) => {
         const { nome } = req.query;
+        console.log(req.query);
+
         try {
             await Filme.findOne({
-
+                where: { nome: nome }
             }).then(response => {
                 console.log(response);
 
@@ -36,34 +38,8 @@ module.exports = {
         }
     },
 
-
     produto: async (req, res) => {
-        const { id } = req.params;
-        try {
-            await Filme.findOne({
-                where :{ id:id }
-            }).then(response => {
-                console.log(response);
 
-                const categoria = Categorias.findOne({
-                    where: { id: response.categorias_id }
-                });
-
-                const classificacao = Classificacao.findOne({
-                    where: { id: response.classificacoes_id }
-                });
-
-                res.render("produtos", {
-                    pageName: "produtos",
-                    js: " ",
-                    produto: response,
-                    categoria,
-                    classificacao,
-                })
-            })
-        } catch (error) {
-            console.log(error);
-        }
     },
 
     maisFilmes: async (req, res) => {
@@ -170,7 +146,7 @@ module.exports = {
             classificacao,
         });
     },
-
+    
     tipoCategoriaFilme: async (req, res) => {
         const { tipo, categoria } = req.query;
         const categorias = await Categorias.findAll();
