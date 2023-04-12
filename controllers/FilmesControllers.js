@@ -42,17 +42,17 @@ module.exports = {
         try {
             await Filme.findOne({
                 where :{ id:id }
-            }).then(response => {
+            ,include:[{model:Classificacao, as:"indicacao"}]}).then(response => {
                 console.log(response);
 
                 const categoria = Categorias.findOne({
                     where: { id: response.categorias_id }
                 });
-
+                console.log(response.classificacoes_id)
                 const classificacao = Classificacao.findOne({
                     where: { id: response.classificacoes_id }
                 });
-
+                console.log(classificacao)
                 res.render("produtos", {
                     pageName: "produtos",
                     js: " ",
