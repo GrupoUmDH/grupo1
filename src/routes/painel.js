@@ -5,6 +5,8 @@ const multer = require("multer");
 const path = require("path");
 
 const validadorForm = require("../middlewares/validadorForm");
+const validadorUser = require("../middlewares/validadorUser");
+const validadorDadosUser = require("../middlewares/validadorDadosUser");
 const userCriar = require('../middlewares/userCriar');
 
 const AdmControllers = require('../../controllers/AdmControllers');

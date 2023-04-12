@@ -24,20 +24,32 @@
                         <div class="titulos">
                             <h1>Histórico de Pedidos</h1>
                         </div>
-
                         <div class="comprados">
-                            <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
-                                <p>Homem Aranha</p>
-                            </div>
-                            <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
-                                <p>Homem Aranha</p>
-                            </div>
-                            <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
-                                <p>Homem Aranha</p>
-                            </div>
-                            <div><img src="../img/filmes/homemAranha_01.jpg" alt="">
-                                <p>Homem Aranha</p>
-                            </div>
+                            <table style="text-align: center;font-size: 14px;" width="900" height="150" border="2"
+                                cellspacing="5" cellpadding="8" style="background-color: #4d0c0c;">
+                                <tr style="text-align: center; color:#ff0000">
+                                    <td>Item</td>
+                                    <td>Data da Compra</td>
+                                    <td>Forma de Pagamento</td>
+                                    <td>Valor</td>
+                                </tr>
+                                <% for(const lista of dados.historico) { %>
+                                    <tr>
+                                        <td><%= lista.itens %></td>
+                                        <td>
+                                            <%= lista.data %>
+                                        </td>
+                                        <td>
+                                            <%= lista.metodo_pay %>
+                                        </td>
+                                        <td>
+                                            <%= lista.valor %>
+                                        </td>
+                                    </tr>
+                                <% } %>
+
+                            </table>
+
                         </div>
                     </section>
                 </div>
@@ -153,7 +165,7 @@
                                             </div>
 
                                             <% } else { %>
-                                                <% for(const card of dados.cartao) { %>
+                                                <% for(const card of cartao) { %>
                                                     <div class="cartao">
                                                         <img src="/img/pagamento/credit-card.svg" />
                                                         <div>
@@ -170,11 +182,10 @@
                                                             </input>
                                                         </div>
                                                     </div>
-                                                    <% }%>
-                                                        <% }%>
-                                                            <div class="cad-cartao">
-                                                                <button type="submit">Cadastrar novo cartão </button>
-                                                            </div>
+                                                    <% } } %>
+                                                        <div class="cad-cartao">
+                                                            <button type="submit">Cadastrar novo cartão </button>
+                                                        </div>
                                     </form>
                                 </div>
                             </div>
