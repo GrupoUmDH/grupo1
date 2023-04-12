@@ -101,6 +101,29 @@ div#section-content {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+table {
+    text-align: center;
+    font-size: 14px;
+    width: 900px;
+    height: 150;
+    border: 2rem;
+    border-collapse: collapse;
+    /* cellspacing:5rem;
+    cellpadding:8rem; */
+    background-color: var(--background-2);
+}
+
+td{
+    border:  1px solid var(--cores-chaves);
+    display: flex;
+    flex-direction: column;
+
+}
+tr {
+    text-align: center;
+    color: var(--cores-chaves);
+ 
+}
 
 table {
     text-align: center;
@@ -340,7 +363,7 @@ div.cad-cartao button {
     margin-bottom: 2rem;
 }
 
-.cad-cartao {
+.cad-cartao{
     display: flex;
     justify-content: center;
 }

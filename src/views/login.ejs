@@ -41,26 +41,21 @@
                     placeholder="COLOQUE SEU EMAIL..."
                     type="email"
                     name="email" 
-                    required
                 />
-                <div class="invisible">
-                    Campo obrigatório!
-                </div>
+                <p class="erro"> <%= error?.email %> </p>
+
                 <input
                     class="cad-user"
                     placeholder="NOME USUÁRIO.."
                     type="text"
                     name="nome_usuario"
                     id="user"
-                    required
                 />
-                <div class="invisible">
-                    Campo obrigatório!
-                </div>
-                <input placeholder="SENHA" type="password" name="senha" required/>
-                <div class="invisible">
-                    Campo obrigatório!
-                </div>
+                <p class="erro"> <%= error?.nome_usuario %> </p>
+
+                <input placeholder="SENHA" type="password" name="senha" />
+                <p class="erro"> <%= error?.senha %> </p>
+
                 <input type="text" style="display: none" nome="tipo_usuario" value="admin"/>
                 <div class="create-account">
                     <button type="submit">CRIAR A MINHA CONTA</button>

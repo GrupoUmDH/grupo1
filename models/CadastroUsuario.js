@@ -62,14 +62,17 @@ const cadastroUsuarioModel = (sequelize, dataTypes) => {
             as: "user",
             foreignKey: "id_usuario",
         });
-    },
+    }
     cadastradoUser.associate = (models) => {
         cadastradoUser.hasMany(models.Cartao, {
             as: "cartao",
             foreignKey: "id_cadastroUsuario",
         });
+        cadastradoUser.hasMany(models.Historico, {
+            as: "historico",
+            foreignKey: "id_cadastroUsuario",
+        });
     }
-
 
     return cadastradoUser;
 };

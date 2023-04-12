@@ -30,6 +30,7 @@ module.exports = {
                 filmes, series,
                 pageName: "home",
                 js: "index",
+                erro: [],
             });
         
         } catch (error) {

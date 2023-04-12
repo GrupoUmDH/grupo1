@@ -43,9 +43,16 @@ const historicoModel = (sequelize, dataTypes) => {
         timestamps: false,
     };
 
-    const Tipo = sequelize.define("Historico", colunas, opcoes);
+    const historico = sequelize.define("Historico", colunas, opcoes);
 
-    return Tipo;
+    historico.associate = (models) => {
+        historico.belongsTo(models.CadastroUsuario,{
+            as: "cadastroUsuario",
+            foreignKey: "id_cadastroUsuario",
+        })
+    }
+
+    return historico;
 };
 
 module.exports = historicoModel;
