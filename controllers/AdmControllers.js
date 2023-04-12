@@ -1,4 +1,4 @@
-const { Categorias, Classificacao, Filme, Usuario, CadastroUsuario } = require("../models");
+const { Categorias, Classificacao, Filme, Usuario, CadastroUsuario, Historico, Cartao } = require("../models");
 const Op = require("sequelize");
 const { validationResult } = require("express-validator");
 const path = require("path");
@@ -13,6 +13,8 @@ const view = {
     user: "user",
     users: {},
     dados: {},
+    cartao: {},
+    historico: {},
     mensagem: "mensagem",
     aviso: "aviso",
     tipoView: "cadastro",
@@ -352,47 +354,75 @@ module.exports = {
     },
 
     userUpdate: async (req, res) => {
-        view.user = req.session.nome;
+        const { id, nome, email, tipo } = req.session;
+        const { novo_email, senha, nova_senha } = req.body;
 
-        const { nome, email, tipo } = req.session;
+        //console.log(req.body);
 
-        const { errors } = validationResult(req);
-        const  id  = view.userId;
+        view.users = await Usuario.findByPk(id);
 
-        view.user = nome; 
+        view.dados = await CadastroUsuario.findOne({
+            where: { id_usuario: view.users.id },
+            include: [{ model: Cartao, as: "cartao" }],
+        });
 
-        if(errors.length){
-            view.error = true;
-            view.mensagem = 'Foram encontrador erros ao preencher os dados.';
-            view.aviso = 'Verifique se todos os dados foram digitados corretamente e tente novamente.';
+        view.cartao = view.dados.cartao;
 
-            res.render('userConfig', view);
-        } else {
+        req.session.key = view.users.senha;
 
-            const { nome_usuario, email, senha, tipo_usuario} = req.body;
+        console.log(view.users);
+        console.log(req.session);
+
+        
             const hasedSenha = await bcrypt.hash(senha, 10);
+            const hasedNovaSenha = await bcrypt.hash(nova_senha, 10);
 
-            const novoUser = {
-                nome_usuario: nome_usuario,
-                email: email,
+            const validPassword = await bcrypt.compareSync(senha, view.users.senha);
+
+            const attUser = {
+                nome_usuario: nome,
+                email: novo_email,
                 senha: hasedSenha,
-                tipo_usuario: tipo_usuario
+                tipo: tipo,
             };
-           
-            await Usuario.update(novoUser, {
-                where: { id },
-            }).then((response) => {
-                view.error = true;
-                view.mensagem = 'Usuário atualizado com sucesso';
-                view.aviso = '';
-                res.render('userConfig', view);
-               
-            }).catch((reason) => {
-                view.error = true;
-                view.mensagem = 'Erro ao atualizar dados.';
-                view.aviso = 'Tente novamente mais tarde.';
-                res.render('userConfig', view);
-            })
+
+            if (!validPassword) {
+                view.popUp = true;
+                view.mensagem =
+                    "Para alterar os dados de acesso, digite sua senha corretamente!";
+                view.aviso = "Digite sua SENHA ATUAL ";
+                console.log("senha atual errada");
+            } else {
+                if (!nova_senha || nova_senha == '') {
+                    attUser.senha = hasedSenha;
+                    view.popUp = false;
+                } else {
+                    attUser.senha = hasedNovaSenha;
+                    view.popUp = true;
+                    view.mensagem = "Dados de Login Alterados com Sucesso!!!";
+                    view.aviso = "Dados atualizados";
+                }
+                atualizando(attUser);
+                
+                console.log("senha atual esta correta ... ");
+            }
+        
+
+        // alteração das view de acordo com o tipo de usuário logado
+        if (tipo == "admin") {
+            view.pageName = "painelADM";
+            view.js = "painelADM";
+            res.render("userConfig", view);
+        } else {
+            view.pageName = "painel-user";
+            view.js = "login";
+            res.render("painel-user", view);
+        }
+
+        async function atualizando(att) {
+            await Usuario.update(att, {
+                where: { id: view.users.id },
+            });
         }
     },
 
