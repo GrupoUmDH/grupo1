@@ -44,42 +44,36 @@ module.exports = {
                     where: {
                         id_usuario: id,
                     },
-                    include: [{ model: Cartao, as: 'cartao' }]
-                })
+                    include: [
+                        { model: Historico, as: "historico" },
+                        { model: Cartao, as: 'cartao'},
+                    ],
+                }).then((dados) => {
+                    if (!dados) {
+                        view.pageName = "painel-user";
+                        view.js = "login";
+                        view.popUp = true;
+                        (view.mensagem =
+                            "Você precisa completar o seu cadasto..."),
+                            (view.aviso = "preencha os dados de cadastro.");
+                        view.dados = null;
 
-                    .then(dados => {
-                       
+                        res.render("painel-user", view);
+                    } else {
+                        view.pageName = "painel-user";
+                        view.js = "login";
+                        view.popUp = false;
+                        view.dados = dados;
 
+                        console.log(dados);
 
-                        if (!dados) {
-                            view.pageName = 'painel-user';
-                            view.js = 'login';
-                            view.popUp = true;
-                            view.mensagem = "Você precisa completar o seu cadasto...",
-                            view.aviso = 'preencha os dados de cadastro.'
-                            view.dados = null;
+                        view.historico = dados.historico;
 
-                            res.render('painel-user', view);
-                        } else {
-                            view.pageName = 'painel-user';
-                            view.js = 'login';
-                            view.popUp = false;
-                            view.dados = dados;
+                        view.cartao = dados.cartao;
 
-                            view.historico = Historico.findAll({
-                                where: {  id_cadastroUsuario: dados.id },
-                            });
-
-                            console.log(view.historico)
-                            view.cartao = Cartao.findAll({
-                                where: { id_cadastroUsuario: dados.id }
-                            });
-
-
-                            res.render('painel-user', view);
-                        }
-
-                    });
+                        res.render("painel-user", view);
+                    }
+                });
             }
 
         } catch (err) {
