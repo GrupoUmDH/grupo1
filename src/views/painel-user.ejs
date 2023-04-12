@@ -24,20 +24,17 @@
                         <div class="titulos">
                             <h1>Histórico de Pedidos</h1>
                         </div>
-
                         <div class="comprados">
-                            <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
-                                <p>Homem Aranha</p>
-                            </div>
-                            <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
-                                <p>Homem Aranha</p>
-                            </div>
-                            <div> <img src="../img/filmes/homemAranha_01.jpg" alt="">
-                                <p>Homem Aranha</p>
-                            </div>
-                            <div><img src="../img/filmes/homemAranha_01.jpg" alt="">
-                                <p>Homem Aranha</p>
-                            </div>
+                            <table style="text-align: center;font-size: 14px;" width="900" height="150" border="2" cellspacing="5" cellpadding="8" style="background-color: #4d0c0c;">
+                                <tr style="text-align: center; color:#ff0000">
+                                    <td>Item</td>
+                                    <td>Data da Compra</td>
+                                    <td>Forma de Pagamento</td>
+                                    <td>Valor</td>
+                                </tr>
+                               
+                            </table>
+
                         </div>
                     </section>
                 </div>
@@ -56,14 +53,16 @@
                                                 action="/painel/users/atualizar?_method=PUT">
 
                                                 <label for="nome_usuario">Usuário:</label>
-                                                <input value="<%- users.nome_usuario %>" placeholder="NOME USUÁRIO.." type="text" name="nome_usuario" id="user" />
+                                                <input value="<%- users.nome_usuario %>" placeholder="NOME USUÁRIO.."
+                                                    type="text" name="nome_usuario" id="user" />
 
                                                 <label for="email">e-mail:</label>
-                                                <input value="<%- users.email %>" placeholder="EMAIL.." type="email" name="email" />
-                              
+                                                <input value="<%- users.email %>" placeholder="EMAIL.." type="email"
+                                                    name="email" />
+
                                                 <label for="senha">Senha:</label>
                                                 <input placeholder="SENHA" type="password" name="senha" />
-           
+
                                                 <button type="submit">Atualizar</button>
                                             </form>
                                         </div>

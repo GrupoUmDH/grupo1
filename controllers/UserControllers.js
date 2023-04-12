@@ -1,4 +1,4 @@
-const { Usuario, CadastroUsuario, Cartao } = require('../models');
+const { Usuario, CadastroUsuario, Cartao, Historico } = require('../models');
 const { Op } = require('sequelize');
 
 const express = require("express");
@@ -14,6 +14,7 @@ const view = {
     js: "login",
     users: {},
     dados: {},
+    historico: {},
     cartao: {},
     popUp: false,
     mensagem: "mensagem",
@@ -25,6 +26,7 @@ const view = {
 module.exports = {
     index: async (req, res, next) => {
         const { id, email } = req.session;
+
 
         view.users = req.session;
 
@@ -44,7 +46,10 @@ module.exports = {
                     },
                     include: [{ model: Cartao, as: 'cartao' }]
                 })
+
                     .then(dados => {
+                       
+
 
                         if (!dados) {
                             view.pageName = 'painel-user';
@@ -61,8 +66,11 @@ module.exports = {
                             view.popUp = false;
                             view.dados = dados;
 
-                            console.log(dados);
+                            view.historico = Historico.findAll({
+                                where: {  id_cadastroUsuario: dados.id },
+                            });
 
+                            console.log(view.historico)
                             view.cartao = Cartao.findAll({
                                 where: { id_cadastroUsuario: dados.id }
                             });
