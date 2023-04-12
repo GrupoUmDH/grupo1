@@ -10,13 +10,12 @@
 }
  
 body{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
     font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
+
 
 
 /* <CONTEUDO MAIN> */
@@ -208,4 +207,3 @@ body{
 .popup-content div form {
     margin-left: 1rem;
 }
-

@@ -13,6 +13,7 @@ const view = {
     users: {},
     dados: {},
     cartao: {},
+    historico: {},
     popUp: false,
     mensagem: "mensagem",
     aviso: "aviso",
@@ -121,6 +122,7 @@ module.exports = {
             res.render("login", view);
         }
     },
+
     cadastroUsuario: async (req, res, next) => {
         //const { nome_usuario, sobrenome_usuario, cpf, email, endereco, codigo_postal, estado, cidade, senha, tipo_usuario } = req.body;
         const hashedPassword = await bcrypt.hash(senha, 10);
@@ -160,6 +162,7 @@ module.exports = {
 
 
     },
+
     cadastro: async (req, res, next) => {
 
         const { nome_usuario, email, senha } = req.body;

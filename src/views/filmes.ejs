@@ -12,7 +12,7 @@
               <section class="filmes-home">
                     <% for (const listafilmes of filmes) { %>
                         <div class="filme-show">
-                            <a href="<%= '/produtos' %>/?nome=<%- listafilmes.nome  %>">
+                            <a href="/produtos?id=<%- listafilmes.id  %>">
                                 <img src="/img/<%= listafilmes.tipo %>s/<%= listafilmes.background%>.jpg" alt="" id="back-filme">
                                 <div class="descri">
                                     <div>

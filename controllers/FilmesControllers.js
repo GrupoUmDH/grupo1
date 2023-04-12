@@ -8,10 +8,20 @@ const { response } = require('express');
 
 module.exports = {
     index: async (req, res) => {
+<<<<<<< HEAD
         const { nome } = req.query;
         try {
             await Filme.findOne({
 
+=======
+        const { id } = req.query;
+        console.log(req.query);
+
+        try {
+            await Filme.findOne({
+                where: { id: id },
+                include:[{model:Classificacao, as:"indicacao"}]
+>>>>>>> 9abaa14a154e49e61acf19954f6a23a2b6652c5c
             }).then(response => {
                 console.log(response);
 
@@ -80,7 +90,7 @@ module.exports = {
         const categoria = await Categorias.findAll({});
 
         const classificacao = await Classificacao.findAll({
-            order: ["nome"],
+            order: ["id"],
         });
 
         res.render("filmes", {

@@ -48,7 +48,7 @@ router.get('/users/criar', AdmControllers.userFormCriar);
 router.post('/users/criar', userCriar, AdmControllers.userCriar);
 
 router.post('/users/editar', AdmControllers.userEditar);
-router.put('/users/atualizar', userCriar, AdmControllers.userUpdate);
+router.put('/users/atualizar', AdmControllers.userUpdate);
 
 router.put('/users/atualizaDados', AdmControllers.dadosUpdate);
 

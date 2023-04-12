@@ -12,12 +12,16 @@
                     <img class="cover-filme" src="/img/<%= produto.tipo %>s/<%= produto.background %>.jpg">
                     <div class="descricao-container">
                         <div id="descri-filme">
-                            <h1 id="nome-filme"><%= produto.nome %></h1>
+                            <h1 id="nome-filme">
+                                <%= produto.nome %>
+                            </h1>
                             <div class="genero">
-                                <span id="genero-filme"><%-categoria.nome  %></span>
+                                <span id="genero-filme"><%-categoria.nome %></span>
                             </div>
 
-                            <p id="descri-filme"><%= produto.descricao %></p>
+                            <p id="descri-filme">
+                                <%= produto.descricao %>
+                            </p>
                         </div>
                         <div id="bts-compra">
                             <div class="classificacao">
@@ -29,19 +33,13 @@
                                     <button>Assitir</button>
                                 </div>
                                 <div class="comprar">
-                                    <p id="valor-compra"> R$ <%-produto.valor  %></p>
+                                    <p id="valor-compra"> R$ <%-produto.valor %></p>
                                     <button type="submit" id="btn-comprar">Comprar</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="faixas">
-                        <div class="f1">
-                            <p>8.3</p>
-                        </div>
-                        <div class="f2"></div>
-                    </div>
-                    </div>
+                </div>
             </section>
 
 
@@ -53,7 +51,7 @@
             <div>
                 <a href="<%= '/index' %>"><button> CONTINUAR COMPRANDO</button> </a>
                 <form action="/carrinho" method="get" id="montarCarrinho">
-                    <input type="hidden" name="itensCarrinho"/>
+                    <input type="hidden" name="itensCarrinho" id="itensCarrinho" />
                     <button type="submit"> VER CARRINHO </button>
                 </form>
             </div>

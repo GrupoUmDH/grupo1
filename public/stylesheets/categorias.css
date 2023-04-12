@@ -52,9 +52,7 @@ main>hr{
     display: flex;
     align-items: center;
     flex-direction: column;
-    border-radius: 1rem;
     margin-bottom: 1rem;
-    border-bottom: .16rem solid red;
 }
 
 .sub-header button > img {
@@ -80,6 +78,12 @@ main>hr{
     display: flex;
 }
 
+section.container{
+    color: var(--cores-letra);
+    text-align: center;
+
+    font-size: 1.5rem;
+}
 .content-genero {
     display: flex;
     justify-content: center;
