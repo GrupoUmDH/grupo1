@@ -6,7 +6,7 @@
     --cores-objetos: #580003;
 }
 
-hr {
+footer hr {
     background-color: var(--cores-chaves);
     color: var(--cores-chaves);
     border: var(--cores-chaves);

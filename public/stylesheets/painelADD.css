@@ -123,6 +123,7 @@ form {
     flex-wrap: nowrap;
     width: 90%;
     margin: 1rem;
+    /* height: 100%; */
 }
 
 .check {
@@ -215,7 +216,8 @@ div#itens div {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    background-color: var(--background-2);
+    /* background-color: black; */
+    overflow: auto;
 }
 
 div#itens img {
@@ -249,7 +251,7 @@ h1, h4{
 
 div#lista-borda {
     height: 88%;
-    border: .7px solid gray;
+    /* border: .7px solid gray; */
     margin: .5rem;
     overflow: initial;
     display: flex;
@@ -264,9 +266,11 @@ div#carregar-img {
     justify-content: space-around;
     align-items: flex-end;
     align-content: flex-end;
-      margin-left: 1rem;
+    margin-left: 1rem;
     flex-wrap: nowrap;
     flex-direction: row;
+    width: 90%;
+    /* height: 1020; */
 }
 
 div#carregar-img div {
@@ -311,4 +315,9 @@ div#carregar-img #previa-fundo {
     width: 12rem;
     height: 10rem;
     border: .5px solid gray;
+}
+
+input[type='file'] {
+    color: var(--background-2);
+    font-size: .7rem;
 }

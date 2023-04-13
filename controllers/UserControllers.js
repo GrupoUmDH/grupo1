@@ -50,6 +50,9 @@ module.exports = {
                         { model: Cartao, as: 'cartao'},
                     ],
                 }).then((dados) => {
+
+
+
                     if (!dados) {
                         view.pageName = "painel-user";
                         view.js = "login";
